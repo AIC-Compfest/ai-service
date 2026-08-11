@@ -16,7 +16,7 @@ Service ini **hanya** menangani:
 
 Service ini **stateless** — tidak menyimpan data bisnis, tidak melakukan
 pricing/reconciliation/keputusan finansial apapun (itu tanggung jawab
-`backend-api`). Lihat PRD §70 poin 1 & 3: jangan ganti deterministic pricing
+`backend-api`). PRD poin 1 & 3: jangan ganti deterministic pricing
 dengan LLM, jangan anggap confidence tinggi = business truth.
 
 ## Kontrak
