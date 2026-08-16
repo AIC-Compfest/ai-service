@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 from app.schemas.document_type import DocumentType
-from app.schemas.evidence import ExtractedField
+from app.schemas.evidence import ExtractedField, BoundingBox
 
 
 class ExtractionResponse(BaseModel):
@@ -21,4 +21,4 @@ class SignatureDetectionResponse(BaseModel):
     document_id: str
     signature_present: bool
     confidence: float
-    bbox: dict[str, float] | None = None
+    bbox: BoundingBox | dict[str, float] | None = None

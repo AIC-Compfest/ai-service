@@ -1,0 +1,186 @@
+[
+  {
+    "document_id": "EVAL-0017-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000001\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0020-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000002\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0023-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000003\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0026-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000004\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0029-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000005\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0032-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000006\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0035-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000007\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0038-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000008\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0039-rate_agreement",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000008\\rate_agreement.pdf",
+    "expected_type": "RATE_AGREEMENT",
+    "predicted_type": "INVOICE",
+    "confidence": 0.636,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0041-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000009\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0042-rate_agreement",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000009\\rate_agreement.pdf",
+    "expected_type": "RATE_AGREEMENT",
+    "predicted_type": "INVOICE",
+    "confidence": 0.636,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0044-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000010\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0047-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000011\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0050-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000012\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0053-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000013\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0056-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000014\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0059-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000015\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0062-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000016\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0065-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000017\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0068-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000018\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0069-rate_agreement",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000018\\rate_agreement.pdf",
+    "expected_type": "RATE_AGREEMENT",
+    "predicted_type": "INVOICE",
+    "confidence": 0.636,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0071-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000019\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  },
+  {
+    "document_id": "EVAL-0074-pod",
+    "file_path": "..\\synthetic-data\\dataset\\v4_pilot_20\\transactions\\TXN-000020\\pod.jpg",
+    "expected_type": "POD",
+    "predicted_type": "UNKNOWN",
+    "confidence": 0.0,
+    "reason": "Classification mismatch"
+  }
+]

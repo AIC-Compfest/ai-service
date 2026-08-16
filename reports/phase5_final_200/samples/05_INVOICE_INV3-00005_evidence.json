@@ -1,0 +1,5129 @@
+{
+  "document_id": "EVAL-0005-INV3-00005",
+  "source_file": "INV3-00005.pdf",
+  "source_sha256": "490a2a3597aadc96c1e7eacd4ab424252b01215b3b28143c19154279cfd2d476",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "classification": {
+    "document_type": "INVOICE",
+    "confidence": 0.846,
+    "requires_human_review": false
+  },
+  "signature_detection": {
+    "signature_present": true,
+    "confidence": 0.92,
+    "bbox": {
+      "x1": 178.1,
+      "y1": 555.9,
+      "x2": 229.7,
+      "y2": 564.4
+    }
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 595,
+      "height": 841,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.99,
+      "quality": {
+        "blur_score": 2347.4,
+        "brightness": 241.8,
+        "contrast": 45.38,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": false
+      },
+      "lines": [
+        {
+          "text": "PT Cepat Logistik Nusantara",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            36.4,
+            149.4,
+            48.1
+          ],
+          "bbox_norm": [
+            56.5,
+            43.2,
+            250.9,
+            57.1
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                36.4,
+                44.5,
+                48.1
+              ],
+              "bbox_norm": [
+                56.5,
+                43.2,
+                74.8,
+                57.1
+              ]
+            },
+            {
+              "text": "Cepat",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                46.9,
+                36.4,
+                70.5,
+                48.1
+              ],
+              "bbox_norm": [
+                78.7,
+                43.2,
+                118.4,
+                57.1
+              ]
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                72.8,
+                36.4,
+                105.4,
+                48.1
+              ],
+              "bbox_norm": [
+                122.4,
+                43.2,
+                177.1,
+                57.1
+              ]
+            },
+            {
+              "text": "Nusantara",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                107.8,
+                36.4,
+                149.4,
+                48.1
+              ],
+              "bbox_norm": [
+                181.1,
+                43.2,
+                250.9,
+                57.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Jl. Logistik Industri Raya Kav. 18, Cakung, Jakarta Timur 13910",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            47.4,
+            273.6,
+            59.0
+          ],
+          "bbox_norm": [
+            56.5,
+            56.3,
+            459.7,
+            70.1
+          ],
+          "tokens": [
+            {
+              "text": "Jl.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                47.4,
+                42.1,
+                59.0
+              ],
+              "bbox_norm": [
+                56.5,
+                56.3,
+                70.8,
+                70.1
+              ]
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                44.5,
+                47.4,
+                73.3,
+                59.0
+              ],
+              "bbox_norm": [
+                74.8,
+                56.3,
+                123.2,
+                70.1
+              ]
+            },
+            {
+              "text": "Industri",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                75.7,
+                47.4,
+                103.6,
+                59.0
+              ],
+              "bbox_norm": [
+                127.1,
+                56.3,
+                174.0,
+                70.1
+              ]
+            },
+            {
+              "text": "Raya",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                105.9,
+                47.4,
+                125.8,
+                59.0
+              ],
+              "bbox_norm": [
+                177.9,
+                56.3,
+                211.3,
+                70.1
+              ]
+            },
+            {
+              "text": "Kav.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                128.1,
+                47.4,
+                145.1,
+                59.0
+              ],
+              "bbox_norm": [
+                215.2,
+                56.3,
+                243.8,
+                70.1
+              ]
+            },
+            {
+              "text": "18,",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                147.5,
+                47.4,
+                159.3,
+                59.0
+              ],
+              "bbox_norm": [
+                247.8,
+                56.3,
+                267.6,
+                70.1
+              ]
+            },
+            {
+              "text": "Cakung,",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                161.7,
+                47.4,
+                193.3,
+                59.0
+              ],
+              "bbox_norm": [
+                271.6,
+                56.3,
+                324.8,
+                70.1
+              ]
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                195.7,
+                47.4,
+                223.6,
+                59.0
+              ],
+              "bbox_norm": [
+                328.7,
+                56.3,
+                375.5,
+                70.1
+              ]
+            },
+            {
+              "text": "Timur",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                225.9,
+                47.4,
+                247.6,
+                59.0
+              ],
+              "bbox_norm": [
+                379.5,
+                56.3,
+                416.0,
+                70.1
+              ]
+            },
+            {
+              "text": "13910",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                250.0,
+                47.4,
+                273.6,
+                59.0
+              ],
+              "bbox_norm": [
+                420.0,
+                56.3,
+                459.7,
+                70.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Telp: (021) 8901-2345 | NPWP: 01.234.567.8-012.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            58.4,
+            238.1,
+            70.0
+          ],
+          "bbox_norm": [
+            56.5,
+            69.3,
+            399.9,
+            83.2
+          ],
+          "tokens": [
+            {
+              "text": "Telp:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                58.4,
+                52.5,
+                70.0
+              ],
+              "bbox_norm": [
+                56.5,
+                69.3,
+                88.3,
+                83.2
+              ]
+            },
+            {
+              "text": "(021)",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                54.9,
+                58.4,
+                74.7,
+                70.0
+              ],
+              "bbox_norm": [
+                92.2,
+                69.3,
+                125.5,
+                83.2
+              ]
+            },
+            {
+              "text": "8901-2345",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                77.1,
+                58.4,
+                117.7,
+                70.0
+              ],
+              "bbox_norm": [
+                129.5,
+                69.3,
+                197.8,
+                83.2
+              ]
+            },
+            {
+              "text": "|",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                120.1,
+                58.4,
+                122.3,
+                70.0
+              ],
+              "bbox_norm": [
+                201.8,
+                69.3,
+                205.5,
+                83.2
+              ]
+            },
+            {
+              "text": "NPWP:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                124.7,
+                58.4,
+                152.5,
+                70.0
+              ],
+              "bbox_norm": [
+                209.4,
+                69.3,
+                256.2,
+                83.2
+              ]
+            },
+            {
+              "text": "01.234.567.8-012.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                154.9,
+                58.4,
+                238.1,
+                70.0
+              ],
+              "bbox_norm": [
+                260.2,
+                69.3,
+                399.9,
+                83.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "NO. FAKTUR",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            475.3,
+            36.0,
+            561.6,
+            55.3
+          ],
+          "bbox_norm": [
+            798.5,
+            42.8,
+            943.5,
+            65.7
+          ],
+          "tokens": [
+            {
+              "text": "NO.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                475.3,
+                36.0,
+                500.2,
+                55.3
+              ],
+              "bbox_norm": [
+                798.5,
+                42.8,
+                840.3,
+                65.7
+              ]
+            },
+            {
+              "text": "FAKTUR",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                504.1,
+                36.0,
+                561.6,
+                55.3
+              ],
+              "bbox_norm": [
+                846.8,
+                42.8,
+                943.5,
+                65.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "INV3-00005",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            502.9,
+            56.2,
+            561.6,
+            71.4
+          ],
+          "bbox_norm": [
+            844.9,
+            66.8,
+            943.5,
+            84.8
+          ],
+          "tokens": [
+            {
+              "text": "INV3-00005",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                502.9,
+                56.2,
+                561.6,
+                71.4
+              ],
+              "bbox_norm": [
+                844.9,
+                66.8,
+                943.5,
+                84.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Layout: table_first_a",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            493.2,
+            77.5,
+            561.6,
+            87.1
+          ],
+          "bbox_norm": [
+            828.5,
+            92.1,
+            943.5,
+            103.5
+          ],
+          "tokens": [
+            {
+              "text": "Layout:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                493.2,
+                77.5,
+                518.5,
+                87.1
+              ],
+              "bbox_norm": [
+                828.5,
+                92.1,
+                870.9,
+                103.5
+              ]
+            },
+            {
+              "text": "table_first_a",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                520.4,
+                77.5,
+                561.6,
+                87.1
+              ],
+              "bbox_norm": [
+                874.2,
+                92.1,
+                943.5,
+                103.5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ditagihkan Kepada (Bill To):",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            115.4,
+            147.0,
+            127.1
+          ],
+          "bbox_norm": [
+            56.5,
+            137.1,
+            246.9,
+            151.0
+          ],
+          "tokens": [
+            {
+              "text": "Ditagihkan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                115.4,
+                77.1,
+                127.1
+              ],
+              "bbox_norm": [
+                56.5,
+                137.1,
+                129.5,
+                151.0
+              ]
+            },
+            {
+              "text": "Kepada",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                79.5,
+                115.4,
+                110.2,
+                127.1
+              ],
+              "bbox_norm": [
+                133.5,
+                137.1,
+                185.0,
+                151.0
+              ]
+            },
+            {
+              "text": "(Bill",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                112.5,
+                115.4,
+                128.6,
+                127.1
+              ],
+              "bbox_norm": [
+                189.0,
+                137.1,
+                216.0,
+                151.0
+              ]
+            },
+            {
+              "text": "To):",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                130.9,
+                115.4,
+                147.0,
+                127.1
+              ],
+              "bbox_norm": [
+                220.0,
+                137.1,
+                246.9,
+                151.0
+              ]
+            }
+          ]
+        },
+        {
+          "text": "PT Maju Terus Retailindo Tbk",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            126.4,
+            152.7,
+            138.1
+          ],
+          "bbox_norm": [
+            56.5,
+            150.1,
+            256.5,
+            164.0
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                126.4,
+                44.5,
+                138.1
+              ],
+              "bbox_norm": [
+                56.5,
+                150.1,
+                74.8,
+                164.0
+              ]
+            },
+            {
+              "text": "Maju",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                46.9,
+                126.4,
+                66.2,
+                138.1
+              ],
+              "bbox_norm": [
+                78.7,
+                150.1,
+                111.3,
+                164.0
+              ]
+            },
+            {
+              "text": "Terus",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                68.6,
+                126.4,
+                91.7,
+                138.1
+              ],
+              "bbox_norm": [
+                115.2,
+                150.1,
+                154.1,
+                164.0
+              ]
+            },
+            {
+              "text": "Retailindo",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                94.1,
+                126.4,
+                135.2,
+                138.1
+              ],
+              "bbox_norm": [
+                158.1,
+                150.1,
+                227.1,
+                164.0
+              ]
+            },
+            {
+              "text": "Tbk",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                137.6,
+                126.4,
+                152.7,
+                138.1
+              ],
+              "bbox_norm": [
+                231.1,
+                150.1,
+                256.5,
+                164.0
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Jl. M.H. Thamrin No. 28-30, Jakarta Pusat 10350",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            137.4,
+            218.4,
+            149.0
+          ],
+          "bbox_norm": [
+            56.5,
+            163.2,
+            366.8,
+            177.0
+          ],
+          "tokens": [
+            {
+              "text": "Jl.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                137.4,
+                42.1,
+                149.0
+              ],
+              "bbox_norm": [
+                56.5,
+                163.2,
+                70.8,
+                177.0
+              ]
+            },
+            {
+              "text": "M.H.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                44.5,
+                137.4,
+                62.4,
+                149.0
+              ],
+              "bbox_norm": [
+                74.8,
+                163.2,
+                104.9,
+                177.0
+              ]
+            },
+            {
+              "text": "Thamrin",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                64.8,
+                137.4,
+                96.0,
+                149.0
+              ],
+              "bbox_norm": [
+                108.9,
+                163.2,
+                161.2,
+                177.0
+              ]
+            },
+            {
+              "text": "No.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                98.3,
+                137.4,
+                111.6,
+                149.0
+              ],
+              "bbox_norm": [
+                165.2,
+                163.2,
+                187.4,
+                177.0
+              ]
+            },
+            {
+              "text": "28-30,",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                113.9,
+                137.4,
+                138.0,
+                149.0
+              ],
+              "bbox_norm": [
+                191.4,
+                163.2,
+                231.9,
+                177.0
+              ]
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                140.4,
+                137.4,
+                168.3,
+                149.0
+              ],
+              "bbox_norm": [
+                235.8,
+                163.2,
+                282.7,
+                177.0
+              ]
+            },
+            {
+              "text": "Pusat",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                137.4,
+                192.4,
+                149.0
+              ],
+              "bbox_norm": [
+                286.6,
+                163.2,
+                323.1,
+                177.0
+              ]
+            },
+            {
+              "text": "10350",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                194.7,
+                137.4,
+                218.4,
+                149.0
+              ],
+              "bbox_norm": [
+                327.1,
+                163.2,
+                366.8,
+                177.0
+              ]
+            }
+          ]
+        },
+        {
+          "text": "NPWP: 01.999.888.7-011.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            148.4,
+            147.0,
+            160.0
+          ],
+          "bbox_norm": [
+            56.5,
+            176.2,
+            247.0,
+            190.1
+          ],
+          "tokens": [
+            {
+              "text": "NPWP:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                148.4,
+                61.5,
+                160.0
+              ],
+              "bbox_norm": [
+                56.5,
+                176.2,
+                103.3,
+                190.1
+              ]
+            },
+            {
+              "text": "01.999.888.7-011.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                63.9,
+                148.4,
+                147.0,
+                160.0
+              ],
+              "bbox_norm": [
+                107.3,
+                176.2,
+                247.0,
+                190.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "No. Invoice: INV3-00005",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            363.6,
+            115.4,
+            459.5,
+            127.1
+          ],
+          "bbox_norm": [
+            610.9,
+            137.0,
+            772.0,
+            151.0
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                363.6,
+                115.4,
+                377.3,
+                127.1
+              ],
+              "bbox_norm": [
+                610.9,
+                137.1,
+                633.9,
+                151.0
+              ]
+            },
+            {
+              "text": "Invoice:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                379.7,
+                115.4,
+                411.8,
+                127.1
+              ],
+              "bbox_norm": [
+                637.8,
+                137.1,
+                691.8,
+                151.0
+              ]
+            },
+            {
+              "text": "INV3-00005",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                414.2,
+                115.4,
+                459.5,
+                127.0
+              ],
+              "bbox_norm": [
+                695.8,
+                137.0,
+                772.0,
+                150.9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Tanggal: 18/08/2026",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            363.6,
+            126.4,
+            444.0,
+            138.1
+          ],
+          "bbox_norm": [
+            610.9,
+            150.1,
+            745.8,
+            164.0
+          ],
+          "tokens": [
+            {
+              "text": "Tanggal:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                363.6,
+                126.4,
+                399.1,
+                138.1
+              ],
+              "bbox_norm": [
+                610.9,
+                150.1,
+                670.4,
+                164.0
+              ]
+            },
+            {
+              "text": "18/08/2026",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                401.4,
+                126.4,
+                444.0,
+                138.0
+              ],
+              "bbox_norm": [
+                674.3,
+                150.1,
+                745.8,
+                164.0
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Jatuh Tempo: 17/09/2026",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            363.6,
+            137.4,
+            464.3,
+            149.1
+          ],
+          "bbox_norm": [
+            610.9,
+            163.2,
+            779.9,
+            177.1
+          ],
+          "tokens": [
+            {
+              "text": "Jatuh",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                363.6,
+                137.4,
+                386.3,
+                149.1
+              ],
+              "bbox_norm": [
+                610.9,
+                163.2,
+                649.0,
+                177.1
+              ]
+            },
+            {
+              "text": "Tempo:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                388.7,
+                137.4,
+                419.4,
+                149.1
+              ],
+              "bbox_norm": [
+                652.9,
+                163.2,
+                704.5,
+                177.1
+              ]
+            },
+            {
+              "text": "17/09/2026",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                421.7,
+                137.4,
+                464.3,
+                149.0
+              ],
+              "bbox_norm": [
+                708.5,
+                163.2,
+                779.9,
+                177.0
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Syarat: Net 30 Hari",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            363.6,
+            148.4,
+            437.8,
+            160.1
+          ],
+          "bbox_norm": [
+            610.9,
+            176.2,
+            735.5,
+            190.2
+          ],
+          "tokens": [
+            {
+              "text": "Syarat:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                363.6,
+                148.4,
+                392.5,
+                160.1
+              ],
+              "bbox_norm": [
+                610.9,
+                176.3,
+                659.3,
+                190.2
+              ]
+            },
+            {
+              "text": "Net",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                394.8,
+                148.4,
+                408.0,
+                160.0
+              ],
+              "bbox_norm": [
+                663.2,
+                176.2,
+                685.5,
+                190.1
+              ]
+            },
+            {
+              "text": "30",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                410.4,
+                148.4,
+                419.9,
+                160.0
+              ],
+              "bbox_norm": [
+                689.4,
+                176.2,
+                705.3,
+                190.1
+              ]
+            },
+            {
+              "text": "Hari",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                422.2,
+                148.4,
+                437.8,
+                160.0
+              ],
+              "bbox_norm": [
+                709.3,
+                176.2,
+                735.5,
+                190.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "N",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            180.4,
+            39.4,
+            191.5
+          ],
+          "bbox_norm": [
+            56.5,
+            214.3,
+            66.2,
+            227.4
+          ],
+          "tokens": [
+            {
+              "text": "N",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                180.4,
+                39.4,
+                191.5
+              ],
+              "bbox_norm": [
+                56.5,
+                214.3,
+                66.2,
+                227.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "o",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            190.4,
+            38.5,
+            201.5
+          ],
+          "bbox_norm": [
+            56.5,
+            226.2,
+            64.7,
+            239.3
+          ],
+          "tokens": [
+            {
+              "text": "o",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                190.4,
+                38.5,
+                201.5
+              ],
+              "bbox_norm": [
+                56.5,
+                226.2,
+                64.7,
+                239.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "No. Resi / AWB",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            185.4,
+            113.4,
+            196.5
+          ],
+          "bbox_norm": [
+            93.5,
+            220.3,
+            190.5,
+            233.4
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                185.4,
+                68.5,
+                196.5
+              ],
+              "bbox_norm": [
+                93.5,
+                220.3,
+                115.1,
+                233.4
+              ]
+            },
+            {
+              "text": "Resi",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                70.7,
+                185.4,
+                87.6,
+                196.5
+              ],
+              "bbox_norm": [
+                118.9,
+                220.3,
+                147.2,
+                233.4
+              ]
+            },
+            {
+              "text": "/",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                89.9,
+                185.4,
+                92.1,
+                196.5
+              ],
+              "bbox_norm": [
+                151.0,
+                220.3,
+                154.7,
+                233.4
+              ]
+            },
+            {
+              "text": "AWB",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                94.3,
+                185.4,
+                113.4,
+                196.5
+              ],
+              "bbox_norm": [
+                158.4,
+                220.3,
+                190.5,
+                233.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rute & Layanan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            185.4,
+            231.1,
+            196.5
+          ],
+          "bbox_norm": [
+            286.7,
+            220.3,
+            388.2,
+            233.4
+          ],
+          "tokens": [
+            {
+              "text": "Rute",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                185.4,
+                188.4,
+                196.5
+              ],
+              "bbox_norm": [
+                286.7,
+                220.3,
+                316.5,
+                233.4
+              ]
+            },
+            {
+              "text": "&",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                190.6,
+                185.4,
+                196.4,
+                196.5
+              ],
+              "bbox_norm": [
+                320.3,
+                220.3,
+                330.0,
+                233.4
+              ]
+            },
+            {
+              "text": "Layanan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                198.6,
+                185.4,
+                231.1,
+                196.5
+              ],
+              "bbox_norm": [
+                333.7,
+                220.3,
+                388.2,
+                233.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Berat Tagih",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            289.6,
+            185.4,
+            333.6,
+            196.5
+          ],
+          "bbox_norm": [
+            486.5,
+            220.3,
+            560.5,
+            233.4
+          ],
+          "tokens": [
+            {
+              "text": "Berat",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                289.6,
+                185.4,
+                310.1,
+                196.5
+              ],
+              "bbox_norm": [
+                486.5,
+                220.3,
+                520.9,
+                233.4
+              ]
+            },
+            {
+              "text": "Tagih",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                312.3,
+                185.4,
+                333.6,
+                196.5
+              ],
+              "bbox_norm": [
+                524.6,
+                220.3,
+                560.5,
+                233.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Tarif Dasar",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            366.8,
+            185.4,
+            408.6,
+            196.5
+          ],
+          "bbox_norm": [
+            616.3,
+            220.3,
+            686.5,
+            233.4
+          ],
+          "tokens": [
+            {
+              "text": "Tarif",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                366.8,
+                185.4,
+                384.2,
+                196.5
+              ],
+              "bbox_norm": [
+                616.3,
+                220.3,
+                645.4,
+                233.4
+              ]
+            },
+            {
+              "text": "Dasar",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                386.4,
+                185.4,
+                408.6,
+                196.5
+              ],
+              "bbox_norm": [
+                649.1,
+                220.3,
+                686.5,
+                233.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Biaya Bahan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            428.6,
+            180.4,
+            476.6,
+            191.5
+          ],
+          "bbox_norm": [
+            720.0,
+            214.3,
+            800.7,
+            227.4
+          ],
+          "tokens": [
+            {
+              "text": "Biaya",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                428.6,
+                180.4,
+                450.0,
+                191.5
+              ],
+              "bbox_norm": [
+                720.0,
+                214.3,
+                755.9,
+                227.4
+              ]
+            },
+            {
+              "text": "Bahan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                452.2,
+                180.4,
+                476.6,
+                191.5
+              ],
+              "bbox_norm": [
+                759.6,
+                214.3,
+                800.7,
+                227.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Bakar",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            454.4,
+            190.4,
+            476.6,
+            201.5
+          ],
+          "bbox_norm": [
+            763.4,
+            226.2,
+            800.7,
+            239.3
+          ],
+          "tokens": [
+            {
+              "text": "Bakar",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                454.4,
+                190.4,
+                476.6,
+                201.5
+              ],
+              "bbox_norm": [
+                763.4,
+                226.2,
+                800.7,
+                239.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Total Tagihan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            509.6,
+            185.4,
+            561.6,
+            196.5
+          ],
+          "bbox_norm": [
+            856.1,
+            220.3,
+            943.5,
+            233.4
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                509.6,
+                185.4,
+                528.7,
+                196.5
+              ],
+              "bbox_norm": [
+                856.1,
+                220.3,
+                888.2,
+                233.4
+              ]
+            },
+            {
+              "text": "Tagihan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                531.0,
+                185.4,
+                561.6,
+                196.5
+              ],
+              "bbox_norm": [
+                892.0,
+                220.3,
+                943.5,
+                233.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            215.9,
+            38.4,
+            227.5
+          ],
+          "bbox_norm": [
+            56.5,
+            256.4,
+            64.4,
+            270.3
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                215.9,
+                38.4,
+                227.5
+              ],
+              "bbox_norm": [
+                56.5,
+                256.4,
+                64.4,
+                270.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "AWB-10000059",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            210.4,
+            116.6,
+            222.1
+          ],
+          "bbox_norm": [
+            93.5,
+            249.9,
+            195.8,
+            263.8
+          ],
+          "tokens": [
+            {
+              "text": "AWB-10000059",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                210.4,
+                116.6,
+                222.1
+              ],
+              "bbox_norm": [
+                93.5,
+                249.9,
+                195.8,
+                263.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ref: SHP-2026-000059",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            223.5,
+            123.2,
+            232.4
+          ],
+          "bbox_norm": [
+            93.5,
+            265.5,
+            207.0,
+            276.1
+          ],
+          "tokens": [
+            {
+              "text": "Ref:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                223.5,
+                67.6,
+                232.4
+              ],
+              "bbox_norm": [
+                93.5,
+                265.5,
+                113.5,
+                276.1
+              ]
+            },
+            {
+              "text": "SHP-2026-000059",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                69.4,
+                223.5,
+                123.2,
+                232.4
+              ],
+              "bbox_norm": [
+                116.5,
+                265.5,
+                207.0,
+                276.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "JAKARTA → BANDUNG",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            210.4,
+            264.5,
+            222.0
+          ],
+          "bbox_norm": [
+            286.7,
+            249.9,
+            444.4,
+            263.7
+          ],
+          "tokens": [
+            {
+              "text": "JAKARTA",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                210.4,
+                208.9,
+                222.0
+              ],
+              "bbox_norm": [
+                286.7,
+                249.9,
+                350.9,
+                263.7
+              ]
+            },
+            {
+              "text": "→",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                211.3,
+                210.9,
+                219.6,
+                222.0
+              ],
+              "bbox_norm": [
+                354.9,
+                250.5,
+                369.0,
+                263.7
+              ]
+            },
+            {
+              "text": "BANDUNG",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                222.0,
+                210.4,
+                264.5,
+                222.0
+              ],
+              "bbox_norm": [
+                373.0,
+                249.9,
+                444.4,
+                263.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "REGULAR",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            223.5,
+            202.1,
+            232.4
+          ],
+          "bbox_norm": [
+            286.7,
+            265.5,
+            339.4,
+            276.1
+          ],
+          "tokens": [
+            {
+              "text": "REGULAR",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                223.5,
+                202.1,
+                232.4
+              ],
+              "bbox_norm": [
+                286.7,
+                265.5,
+                339.4,
+                276.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "150.0 kg",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            301.0,
+            215.9,
+            333.6,
+            227.5
+          ],
+          "bbox_norm": [
+            505.7,
+            256.4,
+            560.5,
+            270.3
+          ],
+          "tokens": [
+            {
+              "text": "150.0",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                301.0,
+                215.9,
+                322.3,
+                227.5
+              ],
+              "bbox_norm": [
+                505.7,
+                256.4,
+                541.4,
+                270.3
+              ]
+            },
+            {
+              "text": "kg",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                324.7,
+                215.9,
+                333.6,
+                227.5
+              ],
+              "bbox_norm": [
+                545.4,
+                256.4,
+                560.5,
+                270.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 250.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            364.7,
+            215.9,
+            408.6,
+            227.5
+          ],
+          "bbox_norm": [
+            612.6,
+            256.4,
+            686.5,
+            270.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                364.7,
+                215.9,
+                375.6,
+                227.5
+              ],
+              "bbox_norm": [
+                612.6,
+                256.4,
+                630.9,
+                270.3
+              ]
+            },
+            {
+              "text": "250.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                377.9,
+                215.9,
+                408.6,
+                227.5
+              ],
+              "bbox_norm": [
+                634.9,
+                256.4,
+                686.5,
+                270.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 35.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            437.4,
+            215.9,
+            476.6,
+            227.5
+          ],
+          "bbox_norm": [
+            734.8,
+            256.4,
+            800.7,
+            270.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                437.4,
+                215.9,
+                448.3,
+                227.5
+              ],
+              "bbox_norm": [
+                734.8,
+                256.4,
+                753.1,
+                270.3
+              ]
+            },
+            {
+              "text": "35.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                450.6,
+                215.9,
+                476.6,
+                227.5
+              ],
+              "bbox_norm": [
+                757.0,
+                256.4,
+                800.7,
+                270.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 285.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            215.9,
+            561.6,
+            227.6
+          ],
+          "bbox_norm": [
+            868.9,
+            256.5,
+            943.5,
+            270.4
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                215.9,
+                528.6,
+                227.6
+              ],
+              "bbox_norm": [
+                868.9,
+                256.5,
+                887.9,
+                270.4
+              ]
+            },
+            {
+              "text": "285.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                215.9,
+                561.6,
+                227.6
+              ],
+              "bbox_norm": [
+                891.9,
+                256.5,
+                943.5,
+                270.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I Tambahan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            242.5,
+            96.4,
+            252.1
+          ],
+          "bbox_norm": [
+            93.5,
+            288.0,
+            161.9,
+            299.4
+          ],
+          "tokens": [
+            {
+              "text": "I",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                244.0,
+                61.0,
+                251.0
+              ],
+              "bbox_norm": [
+                93.5,
+                289.9,
+                102.4,
+                298.2
+              ]
+            },
+            {
+              "text": "Tambahan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                62.9,
+                242.5,
+                96.4,
+                252.1
+              ],
+              "bbox_norm": [
+                105.7,
+                288.0,
+                161.9,
+                299.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Biaya Tol",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            242.5,
+            199.8,
+            252.1
+          ],
+          "bbox_norm": [
+            286.7,
+            288.0,
+            335.7,
+            299.4
+          ],
+          "tokens": [
+            {
+              "text": "Biaya",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                242.5,
+                188.1,
+                252.1
+              ],
+              "bbox_norm": [
+                286.7,
+                288.0,
+                316.1,
+                299.4
+              ]
+            },
+            {
+              "text": "Tol",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                190.1,
+                242.5,
+                199.8,
+                252.1
+              ],
+              "bbox_norm": [
+                319.3,
+                288.0,
+                335.7,
+                299.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            330.8,
+            242.4,
+            333.6,
+            254.0
+          ],
+          "bbox_norm": [
+            555.7,
+            287.9,
+            560.5,
+            301.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                330.8,
+                242.4,
+                333.6,
+                254.0
+              ],
+              "bbox_norm": [
+                555.7,
+                287.9,
+                560.5,
+                301.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            405.8,
+            242.4,
+            408.6,
+            254.0
+          ],
+          "bbox_norm": [
+            681.7,
+            287.9,
+            686.5,
+            301.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                405.8,
+                242.4,
+                408.6,
+                254.0
+              ],
+              "bbox_norm": [
+                681.7,
+                287.9,
+                686.5,
+                301.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            473.8,
+            242.4,
+            476.6,
+            254.0
+          ],
+          "bbox_norm": [
+            795.9,
+            287.9,
+            800.7,
+            301.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                473.8,
+                242.4,
+                476.6,
+                254.0
+              ],
+              "bbox_norm": [
+                795.9,
+                287.9,
+                800.7,
+                301.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 45.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            522.0,
+            242.4,
+            561.6,
+            254.1
+          ],
+          "bbox_norm": [
+            876.8,
+            287.9,
+            943.5,
+            301.8
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                522.0,
+                242.4,
+                533.3,
+                254.1
+              ],
+              "bbox_norm": [
+                876.8,
+                287.9,
+                895.9,
+                301.8
+              ]
+            },
+            {
+              "text": "45.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                535.6,
+                242.4,
+                561.6,
+                254.1
+              ],
+              "bbox_norm": [
+                899.8,
+                287.9,
+                943.5,
+                301.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            268.9,
+            38.4,
+            280.5
+          ],
+          "bbox_norm": [
+            56.5,
+            319.4,
+            64.4,
+            333.2
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                268.9,
+                38.4,
+                280.5
+              ],
+              "bbox_norm": [
+                56.5,
+                319.4,
+                64.4,
+                333.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "AWB10000020",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            263.4,
+            113.7,
+            275.1
+          ],
+          "bbox_norm": [
+            93.5,
+            312.9,
+            191.1,
+            326.8
+          ],
+          "tokens": [
+            {
+              "text": "AWB10000020",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                263.4,
+                113.7,
+                275.1
+              ],
+              "bbox_norm": [
+                93.5,
+                312.9,
+                191.1,
+                326.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ref: SHP-2026-000020",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            276.5,
+            123.2,
+            285.4
+          ],
+          "bbox_norm": [
+            93.5,
+            328.4,
+            207.0,
+            339.1
+          ],
+          "tokens": [
+            {
+              "text": "Ref:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                276.5,
+                67.6,
+                285.4
+              ],
+              "bbox_norm": [
+                93.5,
+                328.4,
+                113.5,
+                339.1
+              ]
+            },
+            {
+              "text": "SHP-2026-000020",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                69.4,
+                276.5,
+                123.2,
+                285.4
+              ],
+              "bbox_norm": [
+                116.5,
+                328.4,
+                207.0,
+                339.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "JAKARTA → BANDUNG",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            263.4,
+            264.5,
+            275.0
+          ],
+          "bbox_norm": [
+            286.7,
+            312.8,
+            444.4,
+            326.7
+          ],
+          "tokens": [
+            {
+              "text": "JAKARTA",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                263.4,
+                208.9,
+                275.0
+              ],
+              "bbox_norm": [
+                286.7,
+                312.8,
+                350.9,
+                326.7
+              ]
+            },
+            {
+              "text": "→",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                211.3,
+                263.9,
+                219.6,
+                275.0
+              ],
+              "bbox_norm": [
+                354.9,
+                313.5,
+                369.0,
+                326.6
+              ]
+            },
+            {
+              "text": "BANDUNG",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                222.0,
+                263.4,
+                264.5,
+                275.0
+              ],
+              "bbox_norm": [
+                373.0,
+                312.8,
+                444.4,
+                326.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "REGULAR",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            276.5,
+            202.1,
+            285.4
+          ],
+          "bbox_norm": [
+            286.7,
+            328.4,
+            339.4,
+            339.1
+          ],
+          "tokens": [
+            {
+              "text": "REGULAR",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                276.5,
+                202.1,
+                285.4
+              ],
+              "bbox_norm": [
+                286.7,
+                328.4,
+                339.4,
+                339.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "150.0 kg",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            301.0,
+            268.9,
+            333.6,
+            280.5
+          ],
+          "bbox_norm": [
+            505.7,
+            319.4,
+            560.5,
+            333.2
+          ],
+          "tokens": [
+            {
+              "text": "150.0",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                301.0,
+                268.9,
+                322.3,
+                280.5
+              ],
+              "bbox_norm": [
+                505.7,
+                319.4,
+                541.4,
+                333.2
+              ]
+            },
+            {
+              "text": "kg",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                324.7,
+                268.9,
+                333.6,
+                280.5
+              ],
+              "bbox_norm": [
+                545.4,
+                319.4,
+                560.5,
+                333.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 250.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            364.7,
+            268.9,
+            408.6,
+            280.5
+          ],
+          "bbox_norm": [
+            612.6,
+            319.4,
+            686.5,
+            333.2
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                364.7,
+                268.9,
+                375.6,
+                280.5
+              ],
+              "bbox_norm": [
+                612.6,
+                319.4,
+                630.9,
+                333.2
+              ]
+            },
+            {
+              "text": "250.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                377.9,
+                268.9,
+                408.6,
+                280.5
+              ],
+              "bbox_norm": [
+                634.9,
+                319.4,
+                686.5,
+                333.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 35.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            437.4,
+            268.9,
+            476.6,
+            280.5
+          ],
+          "bbox_norm": [
+            734.8,
+            319.4,
+            800.7,
+            333.2
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                437.4,
+                268.9,
+                448.3,
+                280.5
+              ],
+              "bbox_norm": [
+                734.8,
+                319.4,
+                753.1,
+                333.2
+              ]
+            },
+            {
+              "text": "35.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                450.6,
+                268.9,
+                476.6,
+                280.5
+              ],
+              "bbox_norm": [
+                757.0,
+                319.4,
+                800.7,
+                333.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 285.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            268.9,
+            561.6,
+            280.6
+          ],
+          "bbox_norm": [
+            868.9,
+            319.4,
+            943.5,
+            333.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                268.9,
+                528.6,
+                280.6
+              ],
+              "bbox_norm": [
+                868.9,
+                319.4,
+                887.9,
+                333.3
+              ]
+            },
+            {
+              "text": "285.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                268.9,
+                561.6,
+                280.6
+              ],
+              "bbox_norm": [
+                891.9,
+                319.4,
+                943.5,
+                333.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "3",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            300.9,
+            38.4,
+            312.5
+          ],
+          "bbox_norm": [
+            56.5,
+            357.4,
+            64.4,
+            371.2
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                300.9,
+                38.4,
+                312.5
+              ],
+              "bbox_norm": [
+                56.5,
+                357.4,
+                64.4,
+                371.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "AWB/10000024",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            295.4,
+            116.1,
+            307.1
+          ],
+          "bbox_norm": [
+            93.5,
+            350.9,
+            195.0,
+            364.8
+          ],
+          "tokens": [
+            {
+              "text": "AWB/10000024",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                295.4,
+                116.1,
+                307.1
+              ],
+              "bbox_norm": [
+                93.5,
+                350.9,
+                195.0,
+                364.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ref: SHP-2026-000024",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            308.5,
+            123.2,
+            317.4
+          ],
+          "bbox_norm": [
+            93.5,
+            366.5,
+            207.0,
+            377.1
+          ],
+          "tokens": [
+            {
+              "text": "Ref:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                308.5,
+                67.6,
+                317.4
+              ],
+              "bbox_norm": [
+                93.5,
+                366.5,
+                113.5,
+                377.1
+              ]
+            },
+            {
+              "text": "SHP-2026-000024",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                69.4,
+                308.5,
+                123.2,
+                317.4
+              ],
+              "bbox_norm": [
+                116.5,
+                366.5,
+                207.0,
+                377.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "JAKARTA → BANDUNG",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            295.4,
+            264.5,
+            307.0
+          ],
+          "bbox_norm": [
+            286.7,
+            350.8,
+            444.4,
+            364.7
+          ],
+          "tokens": [
+            {
+              "text": "JAKARTA",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                295.4,
+                208.9,
+                307.0
+              ],
+              "bbox_norm": [
+                286.7,
+                350.8,
+                350.9,
+                364.7
+              ]
+            },
+            {
+              "text": "→",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                211.3,
+                295.9,
+                219.6,
+                307.0
+              ],
+              "bbox_norm": [
+                354.9,
+                351.5,
+                369.0,
+                364.6
+              ]
+            },
+            {
+              "text": "BANDUNG",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                222.0,
+                295.4,
+                264.5,
+                307.0
+              ],
+              "bbox_norm": [
+                373.0,
+                350.8,
+                444.4,
+                364.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "REGULAR",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            308.5,
+            202.1,
+            317.4
+          ],
+          "bbox_norm": [
+            286.7,
+            366.5,
+            339.4,
+            377.1
+          ],
+          "tokens": [
+            {
+              "text": "REGULAR",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                308.5,
+                202.1,
+                317.4
+              ],
+              "bbox_norm": [
+                286.7,
+                366.5,
+                339.4,
+                377.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "151.9 kg",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            301.0,
+            300.9,
+            333.6,
+            312.5
+          ],
+          "bbox_norm": [
+            505.7,
+            357.4,
+            560.5,
+            371.2
+          ],
+          "tokens": [
+            {
+              "text": "151.9",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                301.0,
+                300.9,
+                322.3,
+                312.5
+              ],
+              "bbox_norm": [
+                505.7,
+                357.4,
+                541.4,
+                371.2
+              ]
+            },
+            {
+              "text": "kg",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                324.7,
+                300.9,
+                333.6,
+                312.5
+              ],
+              "bbox_norm": [
+                545.4,
+                357.4,
+                560.5,
+                371.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 650.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            364.7,
+            300.9,
+            408.6,
+            312.5
+          ],
+          "bbox_norm": [
+            612.6,
+            357.4,
+            686.5,
+            371.2
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                364.7,
+                300.9,
+                375.6,
+                312.5
+              ],
+              "bbox_norm": [
+                612.6,
+                357.4,
+                630.9,
+                371.2
+              ]
+            },
+            {
+              "text": "650.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                377.9,
+                300.9,
+                408.6,
+                312.5
+              ],
+              "bbox_norm": [
+                634.9,
+                357.4,
+                686.5,
+                371.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 91.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            437.4,
+            300.9,
+            476.6,
+            312.5
+          ],
+          "bbox_norm": [
+            734.8,
+            357.4,
+            800.7,
+            371.2
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                437.4,
+                300.9,
+                448.3,
+                312.5
+              ],
+              "bbox_norm": [
+                734.8,
+                357.4,
+                753.1,
+                371.2
+              ]
+            },
+            {
+              "text": "91.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                450.6,
+                300.9,
+                476.6,
+                312.5
+              ],
+              "bbox_norm": [
+                757.0,
+                357.4,
+                800.7,
+                371.2
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 741.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            300.9,
+            561.6,
+            312.6
+          ],
+          "bbox_norm": [
+            868.9,
+            357.4,
+            943.5,
+            371.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                300.9,
+                528.6,
+                312.6
+              ],
+              "bbox_norm": [
+                868.9,
+                357.4,
+                887.9,
+                371.3
+              ]
+            },
+            {
+              "text": "741.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                300.9,
+                561.6,
+                312.6
+              ],
+              "bbox_norm": [
+                891.9,
+                357.4,
+                943.5,
+                371.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "4",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            338.4,
+            38.4,
+            350.0
+          ],
+          "bbox_norm": [
+            56.5,
+            401.9,
+            64.4,
+            415.8
+          ],
+          "tokens": [
+            {
+              "text": "4",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                338.4,
+                38.4,
+                350.0
+              ],
+              "bbox_norm": [
+                56.5,
+                401.9,
+                64.4,
+                415.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "AWB/10000144",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            332.9,
+            116.1,
+            344.6
+          ],
+          "bbox_norm": [
+            93.5,
+            395.4,
+            195.0,
+            409.3
+          ],
+          "tokens": [
+            {
+              "text": "AWB/10000144",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                332.9,
+                116.1,
+                344.6
+              ],
+              "bbox_norm": [
+                93.5,
+                395.4,
+                195.0,
+                409.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ref: SHP-2026-000144",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            346.0,
+            123.2,
+            354.9
+          ],
+          "bbox_norm": [
+            93.5,
+            411.0,
+            207.0,
+            421.6
+          ],
+          "tokens": [
+            {
+              "text": "Ref:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                346.0,
+                67.6,
+                354.9
+              ],
+              "bbox_norm": [
+                93.5,
+                411.0,
+                113.5,
+                421.6
+              ]
+            },
+            {
+              "text": "SHP-2026-000144",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                69.4,
+                346.0,
+                123.2,
+                354.9
+              ],
+              "bbox_norm": [
+                116.5,
+                411.0,
+                207.0,
+                421.6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "SEMARANG →",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            327.4,
+            230.0,
+            339.0
+          ],
+          "bbox_norm": [
+            286.7,
+            388.8,
+            386.4,
+            402.7
+          ],
+          "tokens": [
+            {
+              "text": "SEMARANG",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                327.4,
+                219.3,
+                339.0
+              ],
+              "bbox_norm": [
+                286.7,
+                388.8,
+                368.4,
+                402.7
+              ]
+            },
+            {
+              "text": "→",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                221.6,
+                327.9,
+                230.0,
+                339.0
+              ],
+              "bbox_norm": [
+                372.3,
+                389.5,
+                386.4,
+                402.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "SURABAYA",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            338.4,
+            216.9,
+            350.0
+          ],
+          "bbox_norm": [
+            286.7,
+            401.9,
+            364.4,
+            415.8
+          ],
+          "tokens": [
+            {
+              "text": "SURABAYA",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                338.4,
+                216.9,
+                350.0
+              ],
+              "bbox_norm": [
+                286.7,
+                401.9,
+                364.4,
+                415.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "EXPRESS",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            351.5,
+            201.3,
+            360.4
+          ],
+          "bbox_norm": [
+            286.7,
+            417.5,
+            338.2,
+            428.1
+          ],
+          "tokens": [
+            {
+              "text": "EXPRESS",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                351.5,
+                201.3,
+                360.4
+              ],
+              "bbox_norm": [
+                286.7,
+                417.5,
+                338.2,
+                428.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "28.2 kg",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            305.8,
+            338.4,
+            333.6,
+            350.0
+          ],
+          "bbox_norm": [
+            513.6,
+            401.9,
+            560.5,
+            415.8
+          ],
+          "tokens": [
+            {
+              "text": "28.2",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                305.8,
+                338.4,
+                322.3,
+                350.0
+              ],
+              "bbox_norm": [
+                513.6,
+                401.9,
+                541.4,
+                415.8
+              ]
+            },
+            {
+              "text": "kg",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                324.7,
+                338.4,
+                333.6,
+                350.0
+              ],
+              "bbox_norm": [
+                545.4,
+                401.9,
+                560.5,
+                415.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 264.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            364.7,
+            338.4,
+            408.6,
+            350.0
+          ],
+          "bbox_norm": [
+            612.6,
+            401.9,
+            686.5,
+            415.8
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                364.7,
+                338.4,
+                375.6,
+                350.0
+              ],
+              "bbox_norm": [
+                612.6,
+                401.9,
+                630.9,
+                415.8
+              ]
+            },
+            {
+              "text": "264.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                377.9,
+                338.4,
+                408.6,
+                350.0
+              ],
+              "bbox_norm": [
+                634.9,
+                401.9,
+                686.5,
+                415.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 36.960",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            437.4,
+            338.4,
+            476.6,
+            350.0
+          ],
+          "bbox_norm": [
+            734.8,
+            401.9,
+            800.7,
+            415.8
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                437.4,
+                338.4,
+                448.3,
+                350.0
+              ],
+              "bbox_norm": [
+                734.8,
+                401.9,
+                753.1,
+                415.8
+              ]
+            },
+            {
+              "text": "36.960",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                450.6,
+                338.4,
+                476.6,
+                350.0
+              ],
+              "bbox_norm": [
+                757.0,
+                401.9,
+                800.7,
+                415.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 300.960",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            338.4,
+            561.6,
+            350.1
+          ],
+          "bbox_norm": [
+            868.9,
+            402.0,
+            943.5,
+            415.9
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                338.4,
+                528.6,
+                350.1
+              ],
+              "bbox_norm": [
+                868.9,
+                402.0,
+                887.9,
+                415.9
+              ]
+            },
+            {
+              "text": "300.960",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                338.4,
+                561.6,
+                350.1
+              ],
+              "bbox_norm": [
+                891.9,
+                402.0,
+                943.5,
+                415.9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "5",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            375.9,
+            38.4,
+            387.5
+          ],
+          "bbox_norm": [
+            56.5,
+            446.5,
+            64.4,
+            460.3
+          ],
+          "tokens": [
+            {
+              "text": "5",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                375.9,
+                38.4,
+                387.5
+              ],
+              "bbox_norm": [
+                56.5,
+                446.5,
+                64.4,
+                460.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "10000170",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            370.4,
+            93.4,
+            382.1
+          ],
+          "bbox_norm": [
+            93.5,
+            440.0,
+            157.0,
+            453.9
+          ],
+          "tokens": [
+            {
+              "text": "10000170",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                370.4,
+                93.4,
+                382.1
+              ],
+              "bbox_norm": [
+                93.5,
+                440.0,
+                157.0,
+                453.9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Ref: SHP-2026-000170",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            383.5,
+            123.2,
+            392.4
+          ],
+          "bbox_norm": [
+            93.5,
+            455.5,
+            207.0,
+            466.1
+          ],
+          "tokens": [
+            {
+              "text": "Ref:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                383.5,
+                67.6,
+                392.4
+              ],
+              "bbox_norm": [
+                93.5,
+                455.5,
+                113.5,
+                466.1
+              ]
+            },
+            {
+              "text": "SHP-2026-000170",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                69.4,
+                383.5,
+                123.2,
+                392.4
+              ],
+              "bbox_norm": [
+                116.5,
+                455.5,
+                207.0,
+                466.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "JAKARTA → BANDUNG",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            370.4,
+            264.5,
+            382.0
+          ],
+          "bbox_norm": [
+            286.7,
+            439.9,
+            444.4,
+            453.8
+          ],
+          "tokens": [
+            {
+              "text": "JAKARTA",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                370.4,
+                208.9,
+                382.0
+              ],
+              "bbox_norm": [
+                286.7,
+                439.9,
+                350.9,
+                453.8
+              ]
+            },
+            {
+              "text": "→",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                211.3,
+                370.9,
+                219.6,
+                382.0
+              ],
+              "bbox_norm": [
+                354.9,
+                440.6,
+                369.0,
+                453.7
+              ]
+            },
+            {
+              "text": "BANDUNG",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                222.0,
+                370.4,
+                264.5,
+                382.0
+              ],
+              "bbox_norm": [
+                373.0,
+                439.9,
+                444.4,
+                453.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "REGULAR",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            383.5,
+            202.1,
+            392.4
+          ],
+          "bbox_norm": [
+            286.7,
+            455.5,
+            339.4,
+            466.1
+          ],
+          "tokens": [
+            {
+              "text": "REGULAR",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                383.5,
+                202.1,
+                392.4
+              ],
+              "bbox_norm": [
+                286.7,
+                455.5,
+                339.4,
+                466.1
+              ]
+            }
+          ]
+        },
+        {
+          "text": "24.2 kg",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            305.8,
+            375.9,
+            333.6,
+            387.5
+          ],
+          "bbox_norm": [
+            513.6,
+            446.5,
+            560.5,
+            460.3
+          ],
+          "tokens": [
+            {
+              "text": "24.2",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                305.8,
+                375.9,
+                322.3,
+                387.5
+              ],
+              "bbox_norm": [
+                513.6,
+                446.5,
+                541.4,
+                460.3
+              ]
+            },
+            {
+              "text": "kg",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                324.7,
+                375.9,
+                333.6,
+                387.5
+              ],
+              "bbox_norm": [
+                545.4,
+                446.5,
+                560.5,
+                460.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 140.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            364.7,
+            375.9,
+            408.6,
+            387.5
+          ],
+          "bbox_norm": [
+            612.6,
+            446.5,
+            686.5,
+            460.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                364.7,
+                375.9,
+                375.6,
+                387.5
+              ],
+              "bbox_norm": [
+                612.6,
+                446.5,
+                630.9,
+                460.3
+              ]
+            },
+            {
+              "text": "140.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                377.9,
+                375.9,
+                408.6,
+                387.5
+              ],
+              "bbox_norm": [
+                634.9,
+                446.5,
+                686.5,
+                460.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 19.600",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            437.4,
+            375.9,
+            476.6,
+            387.5
+          ],
+          "bbox_norm": [
+            734.8,
+            446.5,
+            800.7,
+            460.3
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                437.4,
+                375.9,
+                448.3,
+                387.5
+              ],
+              "bbox_norm": [
+                734.8,
+                446.5,
+                753.1,
+                460.3
+              ]
+            },
+            {
+              "text": "19.600",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                450.6,
+                375.9,
+                476.6,
+                387.5
+              ],
+              "bbox_norm": [
+                757.0,
+                446.5,
+                800.7,
+                460.3
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 159.600",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            375.9,
+            561.6,
+            387.6
+          ],
+          "bbox_norm": [
+            868.9,
+            446.5,
+            943.5,
+            460.4
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                375.9,
+                528.6,
+                387.6
+              ],
+              "bbox_norm": [
+                868.9,
+                446.5,
+                887.9,
+                460.4
+              ]
+            },
+            {
+              "text": "159.600",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                375.9,
+                561.6,
+                387.6
+              ],
+              "bbox_norm": [
+                891.9,
+                446.5,
+                943.5,
+                460.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I Tambahan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            402.5,
+            96.4,
+            412.1
+          ],
+          "bbox_norm": [
+            93.5,
+            478.1,
+            161.9,
+            489.5
+          ],
+          "tokens": [
+            {
+              "text": "I",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                404.0,
+                61.0,
+                411.0
+              ],
+              "bbox_norm": [
+                93.5,
+                479.9,
+                102.4,
+                488.2
+              ]
+            },
+            {
+              "text": "Tambahan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                62.9,
+                402.5,
+                96.4,
+                412.1
+              ],
+              "bbox_norm": [
+                105.7,
+                478.1,
+                161.9,
+                489.5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Biaya Tol",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            402.5,
+            199.8,
+            412.1
+          ],
+          "bbox_norm": [
+            286.7,
+            478.1,
+            335.7,
+            489.5
+          ],
+          "tokens": [
+            {
+              "text": "Biaya",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                402.5,
+                188.1,
+                412.1
+              ],
+              "bbox_norm": [
+                286.7,
+                478.1,
+                316.1,
+                489.5
+              ]
+            },
+            {
+              "text": "Tol",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                190.1,
+                402.5,
+                199.8,
+                412.1
+              ],
+              "bbox_norm": [
+                319.3,
+                478.1,
+                335.7,
+                489.5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            330.8,
+            402.4,
+            333.6,
+            414.0
+          ],
+          "bbox_norm": [
+            555.7,
+            477.9,
+            560.5,
+            491.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                330.8,
+                402.4,
+                333.6,
+                414.0
+              ],
+              "bbox_norm": [
+                555.7,
+                477.9,
+                560.5,
+                491.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            405.8,
+            402.4,
+            408.6,
+            414.0
+          ],
+          "bbox_norm": [
+            681.7,
+            477.9,
+            686.5,
+            491.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                405.8,
+                402.4,
+                408.6,
+                414.0
+              ],
+              "bbox_norm": [
+                681.7,
+                477.9,
+                686.5,
+                491.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            473.8,
+            402.4,
+            476.6,
+            414.0
+          ],
+          "bbox_norm": [
+            795.9,
+            477.9,
+            800.7,
+            491.8
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                473.8,
+                402.4,
+                476.6,
+                414.0
+              ],
+              "bbox_norm": [
+                795.9,
+                477.9,
+                800.7,
+                491.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 80.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            522.0,
+            402.4,
+            561.6,
+            414.1
+          ],
+          "bbox_norm": [
+            876.8,
+            478.0,
+            943.5,
+            491.9
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                522.0,
+                402.4,
+                533.3,
+                414.1
+              ],
+              "bbox_norm": [
+                876.8,
+                478.0,
+                895.9,
+                491.9
+              ]
+            },
+            {
+              "text": "80.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                535.6,
+                402.4,
+                561.6,
+                414.1
+              ],
+              "bbox_norm": [
+                899.8,
+                478.0,
+                943.5,
+                491.9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I Tambahan",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            55.6,
+            423.5,
+            96.4,
+            433.1
+          ],
+          "bbox_norm": [
+            93.5,
+            503.0,
+            161.9,
+            514.4
+          ],
+          "tokens": [
+            {
+              "text": "I",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.6,
+                425.0,
+                61.0,
+                432.0
+              ],
+              "bbox_norm": [
+                93.5,
+                504.9,
+                102.4,
+                513.2
+              ]
+            },
+            {
+              "text": "Tambahan",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                62.9,
+                423.5,
+                96.4,
+                433.1
+              ],
+              "bbox_norm": [
+                105.7,
+                503.0,
+                161.9,
+                514.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Asuransi Pengiriman",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            170.6,
+            423.5,
+            235.2,
+            433.1
+          ],
+          "bbox_norm": [
+            286.7,
+            503.0,
+            395.1,
+            514.4
+          ],
+          "tokens": [
+            {
+              "text": "Asuransi",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                170.6,
+                423.5,
+                197.9,
+                433.1
+              ],
+              "bbox_norm": [
+                286.7,
+                503.0,
+                332.4,
+                514.4
+              ]
+            },
+            {
+              "text": "Pengiriman",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                199.8,
+                423.5,
+                235.2,
+                433.1
+              ],
+              "bbox_norm": [
+                335.7,
+                503.0,
+                395.1,
+                514.4
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            330.8,
+            423.4,
+            333.6,
+            435.0
+          ],
+          "bbox_norm": [
+            555.7,
+            502.9,
+            560.5,
+            516.7
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                330.8,
+                423.4,
+                333.6,
+                435.0
+              ],
+              "bbox_norm": [
+                555.7,
+                502.9,
+                560.5,
+                516.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            405.8,
+            423.4,
+            408.6,
+            435.0
+          ],
+          "bbox_norm": [
+            681.7,
+            502.9,
+            686.5,
+            516.7
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                405.8,
+                423.4,
+                408.6,
+                435.0
+              ],
+              "bbox_norm": [
+                681.7,
+                502.9,
+                686.5,
+                516.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            473.8,
+            423.4,
+            476.6,
+            435.0
+          ],
+          "bbox_norm": [
+            795.9,
+            502.9,
+            800.7,
+            516.7
+          ],
+          "tokens": [
+            {
+              "text": "-",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                473.8,
+                423.4,
+                476.6,
+                435.0
+              ],
+              "bbox_norm": [
+                795.9,
+                502.9,
+                800.7,
+                516.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 15.000",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            522.0,
+            423.4,
+            561.6,
+            435.1
+          ],
+          "bbox_norm": [
+            876.8,
+            502.9,
+            943.5,
+            516.8
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                522.0,
+                423.4,
+                533.3,
+                435.1
+              ],
+              "bbox_norm": [
+                876.8,
+                502.9,
+                895.9,
+                516.8
+              ]
+            },
+            {
+              "text": "15.000",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                535.6,
+                423.4,
+                561.6,
+                435.1
+              ],
+              "bbox_norm": [
+                899.8,
+                502.9,
+                943.5,
+                516.8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Pembayaran Transfer:",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            454.4,
+            123.4,
+            466.1
+          ],
+          "bbox_norm": [
+            56.5,
+            539.7,
+            207.3,
+            553.6
+          ],
+          "tokens": [
+            {
+              "text": "Pembayaran",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                454.4,
+                84.2,
+                466.1
+              ],
+              "bbox_norm": [
+                56.5,
+                539.7,
+                141.4,
+                553.6
+              ]
+            },
+            {
+              "text": "Transfer:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                86.6,
+                454.4,
+                123.4,
+                466.1
+              ],
+              "bbox_norm": [
+                145.4,
+                539.7,
+                207.3,
+                553.6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Bank Mandiri | No. Rekening: 123-00-9876543-2",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            465.4,
+            216.3,
+            477.1
+          ],
+          "bbox_norm": [
+            56.5,
+            552.8,
+            363.4,
+            566.7
+          ],
+          "tokens": [
+            {
+              "text": "Bank",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                465.4,
+                53.0,
+                477.0
+              ],
+              "bbox_norm": [
+                56.5,
+                552.8,
+                89.1,
+                566.6
+              ]
+            },
+            {
+              "text": "Mandiri",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                55.4,
+                465.4,
+                83.2,
+                477.0
+              ],
+              "bbox_norm": [
+                93.0,
+                552.8,
+                139.8,
+                566.6
+              ]
+            },
+            {
+              "text": "|",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                85.6,
+                465.4,
+                87.8,
+                477.0
+              ],
+              "bbox_norm": [
+                143.8,
+                552.8,
+                147.5,
+                566.6
+              ]
+            },
+            {
+              "text": "No.",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                90.2,
+                465.4,
+                103.4,
+                477.0
+              ],
+              "bbox_norm": [
+                151.5,
+                552.8,
+                173.7,
+                566.6
+              ]
+            },
+            {
+              "text": "Rekening:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                105.8,
+                465.4,
+                144.0,
+                477.0
+              ],
+              "bbox_norm": [
+                177.7,
+                552.8,
+                242.0,
+                566.6
+              ]
+            },
+            {
+              "text": "123-00-9876543-2",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                146.4,
+                465.4,
+                216.3,
+                477.1
+              ],
+              "bbox_norm": [
+                245.9,
+                552.8,
+                363.4,
+                566.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "A/N: PT Cepat Logistik Nusantara",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            33.6,
+            476.4,
+            161.2,
+            488.0
+          ],
+          "bbox_norm": [
+            56.5,
+            565.8,
+            270.8,
+            579.7
+          ],
+          "tokens": [
+            {
+              "text": "A/N:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                33.6,
+                476.4,
+                50.2,
+                488.0
+              ],
+              "bbox_norm": [
+                56.5,
+                565.8,
+                84.3,
+                579.7
+              ]
+            },
+            {
+              "text": "PT",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                52.5,
+                476.4,
+                63.4,
+                488.0
+              ],
+              "bbox_norm": [
+                88.3,
+                565.8,
+                106.5,
+                579.7
+              ]
+            },
+            {
+              "text": "Cepat",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                65.8,
+                476.4,
+                88.4,
+                488.0
+              ],
+              "bbox_norm": [
+                110.5,
+                565.8,
+                148.6,
+                579.7
+              ]
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                90.8,
+                476.4,
+                119.6,
+                488.0
+              ],
+              "bbox_norm": [
+                152.5,
+                565.8,
+                200.9,
+                579.7
+              ]
+            },
+            {
+              "text": "Nusantara",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                122.0,
+                476.4,
+                161.2,
+                488.0
+              ],
+              "bbox_norm": [
+                204.9,
+                565.8,
+                270.8,
+                579.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Subtotal:",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            323.6,
+            454.4,
+            357.2,
+            466.0
+          ],
+          "bbox_norm": [
+            543.7,
+            539.7,
+            600.0,
+            553.6
+          ],
+          "tokens": [
+            {
+              "text": "Subtotal:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                323.6,
+                454.4,
+                357.2,
+                466.0
+              ],
+              "bbox_norm": [
+                543.7,
+                539.7,
+                600.0,
+                553.6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 1.645.654",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            510.1,
+            454.4,
+            561.6,
+            466.1
+          ],
+          "bbox_norm": [
+            857.0,
+            539.7,
+            943.5,
+            553.6
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                510.1,
+                454.4,
+                521.5,
+                466.1
+              ],
+              "bbox_norm": [
+                857.0,
+                539.7,
+                876.0,
+                553.6
+              ]
+            },
+            {
+              "text": "1.645.654",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                523.8,
+                454.4,
+                561.6,
+                466.1
+              ],
+              "bbox_norm": [
+                880.0,
+                539.7,
+                943.5,
+                553.6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "PPN (11%):",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            323.6,
+            497.4,
+            368.5,
+            509.0
+          ],
+          "bbox_norm": [
+            543.7,
+            590.8,
+            619.1,
+            604.6
+          ],
+          "tokens": [
+            {
+              "text": "PPN",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                323.6,
+                497.4,
+                341.1,
+                509.0
+              ],
+              "bbox_norm": [
+                543.7,
+                590.8,
+                573.0,
+                604.6
+              ]
+            },
+            {
+              "text": "(11%):",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                343.5,
+                497.4,
+                368.5,
+                509.0
+              ],
+              "bbox_norm": [
+                577.0,
+                590.8,
+                619.1,
+                604.6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 160.112",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            517.2,
+            497.4,
+            561.6,
+            509.1
+          ],
+          "bbox_norm": [
+            868.9,
+            590.8,
+            943.5,
+            604.7
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                517.2,
+                497.4,
+                528.6,
+                509.1
+              ],
+              "bbox_norm": [
+                868.9,
+                590.8,
+                887.9,
+                604.7
+              ]
+            },
+            {
+              "text": "160.112",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                530.9,
+                497.4,
+                561.6,
+                509.1
+              ],
+              "bbox_norm": [
+                891.9,
+                590.8,
+                943.5,
+                604.7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "TOTAL TAGIHAN:",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            323.6,
+            519.4,
+            395.9,
+            531.1
+          ],
+          "bbox_norm": [
+            543.7,
+            617.0,
+            665.0,
+            630.9
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                323.6,
+                519.4,
+                352.0,
+                531.1
+              ],
+              "bbox_norm": [
+                543.7,
+                617.0,
+                591.3,
+                630.9
+              ]
+            },
+            {
+              "text": "TAGIHAN:",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                354.3,
+                519.4,
+                395.9,
+                531.1
+              ],
+              "bbox_norm": [
+                595.2,
+                617.0,
+                665.0,
+                630.9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Rp 1.805.766",
+          "confidence": 0.99,
+          "bbox_pixel": [
+            510.1,
+            519.4,
+            561.6,
+            531.1
+          ],
+          "bbox_norm": [
+            857.0,
+            617.0,
+            943.5,
+            630.9
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                510.1,
+                519.4,
+                521.5,
+                531.1
+              ],
+              "bbox_norm": [
+                857.0,
+                617.0,
+                876.0,
+                630.9
+              ]
+            },
+            {
+              "text": "1.805.766",
+              "confidence": 0.99,
+              "bbox_pixel": [
+                523.8,
+                519.4,
+                561.6,
+                531.1
+              ],
+              "bbox_norm": [
+                880.0,
+                617.0,
+                943.5,
+                630.9
+              ]
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            56.5,
+            42.8,
+            943.5,
+            190.2
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT Cepat Logistik Nusantara Jl. Logistik Industri Raya Kav. 18, Cakung, Jakarta Timur 13910 Telp: (0"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            56.5,
+            150.1,
+            943.5,
+            377.1
+          ],
+          "confidence": 0.92,
+          "text_snippet": "PT Maju Terus Retailindo Tbk Jl. M.H. Thamrin No. 28-30, Jakarta Pusat 10350 NPWP: 01.999.888.7-011."
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            56.5,
+            366.5,
+            943.5,
+            630.9
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Ref: SHP-2026-000024 REGULAR 4 AWB/10000144 Ref: SHP-2026-000144 SEMARANG → SURABAYA EXPRESS 28.2 kg"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            56.5,
+            350.8,
+            444.4,
+            579.7
+          ],
+          "headers": [
+            "JAKARTA",
+            "→",
+            "BANDUNG"
+          ],
+          "rows": [
+            [
+              "JAKARTA",
+              "→",
+              "BANDUNG"
+            ],
+            [
+              "Bank",
+              "Mandiri",
+              "|",
+              "No.",
+              "Rekening:",
+              "123-00-9876543-2"
+            ],
+            [
+              "A/N:",
+              "PT",
+              "Cepat",
+              "Logistik",
+              "Nusantara"
+            ]
+          ],
+          "row_count": 3,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v1",
+    "processing_time_ms": 320.9
+  }
+}

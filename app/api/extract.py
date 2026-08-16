@@ -43,8 +43,19 @@ async def extract_document(document_type: DocumentType, file: UploadFile) -> Ext
         document_id=document_id,
         document_type=document_type,
         fields=fields,
-        ocr_engine_used=ocr_result["engine_used"],
-        fallback_triggered=ocr_result["fallback_triggered"],
+        ocr_engine_used=ocr_result.get("engine_used", "pymupdf_vector"),
+        fallback_triggered=ocr_result.get("fallback_triggered", False),
         status="SUCCESS",
-        requires_human_review=True,  # stub: selalu true sampai model asli aktif
+        requires_human_review=True,
     )
+
+
+@router.post("/understand/evidence")
+async def understand_document_evidence(file: UploadFile) -> dict:
+    """Phase 5 Document Understanding Endpoint: Returns full structured evidence with bboxes and regions."""
+    from app.services.pipeline import Phase5DocumentPipeline
+    document_id = str(uuid.uuid4())
+    file_bytes = await file.read()
+    pipeline = Phase5DocumentPipeline()
+    return pipeline.process_document(file_bytes, filename=file.filename or "doc.pdf", document_id=document_id)
+
