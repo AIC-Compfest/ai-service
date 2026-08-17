@@ -16,9 +16,19 @@ class ExtractionResponse(BaseModel):
 
 
 class SignatureDetectionResponse(BaseModel):
-    """PRD §33 — hanya presence detection, bukan verifikasi identitas."""
+    """
+    PRD §33, §70 — Visual Presence Detection for POD/Surat Jalan.
+    Strictly answers: 'Apakah terdapat tanda tangan dan/atau stempel fisik pada area dokumen?'
+    Never asserts identity, authenticity, ownership, or biometrics.
+    """
 
     document_id: str
     signature_present: bool
     confidence: float
     bbox: BoundingBox | dict[str, float] | None = None
+    stamp_present: bool = False
+    stamp_confidence: float = 0.0
+    stamp_bbox: BoundingBox | dict[str, float] | None = None
+    requires_human_review: bool = False
+    is_unknown: bool = False
+
