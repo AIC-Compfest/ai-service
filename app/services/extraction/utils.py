@@ -23,10 +23,35 @@ from app.schemas.evidence import BoundingBox, EvidenceSource, ExtractedField, Ex
 # ---------------------------------------------------------------------------
 
 def _bbox_norm_to_model(bbox_norm: list[float] | None) -> BoundingBox | None:
-    """Convert [x1, y1, x2, y2] list from OCR evidence to BoundingBox model."""
+    """Convert [x1, y1, x2, y2] list from OCR evidence to BoundingBox model normalized to [0.0, 1.0]."""
     if bbox_norm and len(bbox_norm) == 4:
-        return BoundingBox(x1=bbox_norm[0], y1=bbox_norm[1], x2=bbox_norm[2], y2=bbox_norm[3])
+        x1, y1, x2, y2 = float(bbox_norm[0]), float(bbox_norm[1]), float(bbox_norm[2]), float(bbox_norm[3])
+        if max(x1, y1, x2, y2) > 1.0:
+            x1, y1, x2, y2 = x1 / 1000.0, y1 / 1000.0, x2 / 1000.0, y2 / 1000.0
+        return BoundingBox(
+            x1=max(0.0, min(1.0, round(x1, 4))),
+            y1=max(0.0, min(1.0, round(y1, 4))),
+            x2=max(0.0, min(1.0, round(x2, 4))),
+            y2=max(0.0, min(1.0, round(y2, 4))),
+        )
     return None
+
+
+def find_token_bbox_for_value(line: dict, value_substr: str) -> list[float] | None:
+    """Extract precise token-level bounding box matching value substring from OCR rather than entire cluster."""
+    tokens = line.get("tokens", [])
+    if not tokens or not value_substr:
+        return line.get("bbox_norm")
+
+    val_clean = re.sub(r'[^a-zA-Z0-9]', '', str(value_substr)).lower()
+    if not val_clean:
+        return line.get("bbox_norm")
+
+    for t in tokens:
+        t_text = re.sub(r'[^a-zA-Z0-9]', '', t.get("text", "")).lower()
+        if t_text and (val_clean in t_text or t_text in val_clean):
+            return t.get("bbox_norm") or line.get("bbox_norm")
+    return line.get("bbox_norm")
 
 
 def _midpoint_y(bbox_norm: list[float]) -> float:
