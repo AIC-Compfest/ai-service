@@ -9,26 +9,35 @@ Distinguishes between:
 - RATE_AGREEMENT
 - UNKNOWN
 
-Multi-signal evidence-based classifier using layout cues, OCR keywords,
-and structural markers without hardcoding specific vendor identities.
+Architecture:
+- Primary: Supervised ML Model (TF-IDF 1-2 N-grams + Calibrated Logistic Regression)
+- Secondary: Structural & Keyword Signal Evidence Verification
+- Outputs full class probability distribution + model version metadata.
 """
 
 from __future__ import annotations
+import os
+from pathlib import Path
 import re
-from typing import List, Dict, Tuple
+from typing import Dict, List, Optional, Tuple
+import joblib
+import numpy as np
+
 from app.core.logging import get_logger
 from app.schemas.classify import ClassifyResponse
 from app.schemas.document_type import DocumentType
 
 logger = get_logger(__name__)
 
+MODELS_DIR = Path(__file__).resolve().parent.parent.parent / "models"
+
 
 class DocumentClassifier:
-    """Evidence-based document classifier."""
+    """Production ML-powered document classifier with structural validation."""
 
     CONFIDENCE_THRESHOLD = 0.70
+    MODEL_VERSION = "doc-classifier-v1"
 
-    # Keyword signal weights for each document type with OCR noise resilience
     SIGNALS_INVOICE = {
         "invoice": 4.0, "faktur": 4.0, "tax invoice": 5.0, "faktur pajak": 5.0,
         "tagihan": 3.0, "due date": 3.0, "jatuh tempo": 3.0, "subtotal": 3.5,
@@ -73,68 +82,141 @@ class DocumentClassifier:
         "syarat dan ketentuan tarif": 5.0, "biaya minimum": 4.5,
     }
 
+    def __init__(self):
+        self._clf = None
+        self._vectorizer = None
+        self._load_or_train_model()
+
+    def _load_or_train_model(self):
+        clf_file = MODELS_DIR / "doc_classifier_v1.joblib"
+        vec_file = MODELS_DIR / "tfidf_v1.joblib"
+
+        if clf_file.exists() and vec_file.exists():
+            try:
+                self._clf = joblib.load(clf_file)
+                self._vectorizer = joblib.load(vec_file)
+                logger.info("ml_classifier_loaded", model_version=self.MODEL_VERSION)
+                return
+            except Exception as e:
+                logger.warning("failed_to_load_saved_model", error=str(e))
+
+        # Train on-demand if artifact missing
+        try:
+            from scripts.train_classifier import train_and_save_model
+            train_and_save_model()
+            self._clf = joblib.load(clf_file)
+            self._vectorizer = joblib.load(vec_file)
+            logger.info("ml_classifier_trained_and_loaded", model_version=self.MODEL_VERSION)
+        except Exception as e:
+            logger.warning("ml_classifier_bootstrap_failed", error=str(e))
+            self._clf = None
+            self._vectorizer = None
+
     def classify_text(self, text: str, document_id: str = "DOC-001") -> ClassifyResponse:
-        """Classify document based on extracted text content and structure."""
-        # Clean text for robust matching (normalize symbols and multiple spaces)
-        text_lower = text.lower()
+        """Classify document using ML classifier with calibrated probabilities."""
+        text_clean = text.strip()
+        if not text_clean:
+            return ClassifyResponse(
+                document_id=document_id,
+                document_type=DocumentType.UNKNOWN,
+                confidence=0.0,
+                requires_human_review=True,
+                probabilities={d.value: 0.0 for d in DocumentType},
+                model_version=self.MODEL_VERSION,
+                classification_method="empty_input_fallback",
+            )
+
+        probabilities: dict[str, float] = {
+            DocumentType.INVOICE.value: 0.0,
+            DocumentType.SURAT_JALAN.value: 0.0,
+            DocumentType.POD.value: 0.0,
+            DocumentType.RATE_AGREEMENT.value: 0.0,
+            DocumentType.UNKNOWN.value: 0.0,
+        }
+
+        classification_method = "keyword_heuristic_fallback"
+        best_type = DocumentType.UNKNOWN
+        confidence = 0.0
+
+        # Step 1: ML Model Inference if available
+        if self._clf is not None and self._vectorizer is not None:
+            try:
+                X_vec = self._vectorizer.transform([text_clean])
+                probs = self._clf.predict_proba(X_vec)[0]
+                classes = self._clf.classes_
+
+                for cls_name, p in zip(classes, probs):
+                    if cls_name in probabilities:
+                        probabilities[cls_name] = round(float(p), 4)
+
+                ml_best_idx = int(np.argmax(probs))
+                ml_best_class = str(classes[ml_best_idx])
+                ml_confidence = float(probs[ml_best_idx])
+
+                try:
+                    best_type = DocumentType(ml_best_class)
+                except ValueError:
+                    best_type = DocumentType.UNKNOWN
+
+                confidence = round(ml_confidence, 4)
+                classification_method = "ml_tfidf_logistic_regression"
+            except Exception as e:
+                logger.warning("ml_inference_failed_falling_back_to_rules", error=str(e))
+
+        # Step 2: Structural / Keyword Signal Verification (Ensemble Verification)
+        text_lower = text_clean.lower()
         cleaned_text = re.sub(r'[^a-z0-9\s/_-]', ' ', text_lower)
         cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
 
-        scores = {
+        rule_scores = {
             DocumentType.INVOICE: 0.0,
             DocumentType.SURAT_JALAN: 0.0,
             DocumentType.POD: 0.0,
             DocumentType.RATE_AGREEMENT: 0.0,
         }
-        detected_signals: list[str] = []
 
         def match_signal(keyword: str, target_text: str) -> bool:
             if " " in keyword:
                 return keyword in target_text
             return bool(re.search(r'(?:\b|[^a-z0-9])' + re.escape(keyword) + r'(?:\b|[^a-z0-9])', target_text))
 
-        # Evaluate Invoice signals
         for kw, wt in self.SIGNALS_INVOICE.items():
             if match_signal(kw, text_lower) or match_signal(kw, cleaned_text):
-                scores[DocumentType.INVOICE] += wt
-                detected_signals.append(f"INVOICE:{kw}")
+                rule_scores[DocumentType.INVOICE] += wt
 
-        # Evaluate Surat Jalan signals
         for kw, wt in self.SIGNALS_SURAT_JALAN.items():
             if match_signal(kw, text_lower) or match_signal(kw, cleaned_text):
-                scores[DocumentType.SURAT_JALAN] += wt
-                detected_signals.append(f"SJ:{kw}")
+                rule_scores[DocumentType.SURAT_JALAN] += wt
 
-        # Evaluate POD signals
         for kw, wt in self.SIGNALS_POD.items():
             if match_signal(kw, text_lower) or match_signal(kw, cleaned_text):
-                scores[DocumentType.POD] += wt
-                detected_signals.append(f"POD:{kw}")
+                rule_scores[DocumentType.POD] += wt
 
-        # Evaluate Rate Agreement signals
         for kw, wt in self.SIGNALS_RATE_AGREEMENT.items():
             if match_signal(kw, text_lower) or match_signal(kw, cleaned_text):
-                scores[DocumentType.RATE_AGREEMENT] += wt
-                detected_signals.append(f"RA:{kw}")
+                rule_scores[DocumentType.RATE_AGREEMENT] += wt
 
-        # Disambiguation heuristics
-        if scores[DocumentType.POD] >= 5.0 and ("tanda tangan" in text_lower or "penerima" in text_lower or "received" in text_lower or "pod" in text_lower or "bukti" in text_lower):
-            # Boost POD when delivery/receiver/signature markers are present
-            scores[DocumentType.POD] += 4.0
+        # Disambiguation boost for POD
+        if rule_scores[DocumentType.POD] >= 5.0 and any(k in text_lower for k in ["tanda tangan", "penerima", "received", "pod", "bukti"]):
+            rule_scores[DocumentType.POD] += 4.0
 
-        best_type = DocumentType.UNKNOWN
-        best_score = 0.0
-        for dtype, score in scores.items():
-            if score > best_score:
-                best_score = score
-                best_type = dtype
+        rule_best_type = DocumentType.UNKNOWN
+        rule_best_score = 0.0
+        for dtype, score in rule_scores.items():
+            if score > rule_best_score:
+                rule_best_score = score
+                rule_best_type = dtype
 
-        total_score = sum(scores.values())
-        if total_score > 0 and best_score >= 3.5:
-            confidence = min(0.99, max(0.50, round(best_score / (best_score + 2.5), 3)))
-        else:
-            confidence = 0.0
-            best_type = DocumentType.UNKNOWN
+        # Step 3: Ensemble ML prediction with structural signal confirmation
+        if best_type != DocumentType.UNKNOWN and rule_best_type == best_type and rule_best_score >= 3.0:
+            confidence = round(min(0.99, max(confidence, 0.72 + (rule_best_score / (rule_best_score + 5.0)) * 0.26)), 4)
+            classification_method = "ml_structural_ensemble"
+
+        # If ML predicted UNKNOWN but rules strongly suggest known type, or vice-versa
+        if best_type == DocumentType.UNKNOWN and rule_best_score >= 8.0:
+            best_type = rule_best_type
+            confidence = min(0.95, round(rule_best_score / (rule_best_score + 3.0), 3))
+            classification_method = "ml_rule_ensemble"
 
         requires_review = confidence < self.CONFIDENCE_THRESHOLD or best_type == DocumentType.UNKNOWN
 
@@ -143,7 +225,8 @@ class DocumentClassifier:
             document_id=document_id,
             best_type=best_type.value,
             confidence=confidence,
-            scores={k.value: round(v, 1) for k, v in scores.items()},
+            method=classification_method,
+            probabilities=probabilities,
         )
 
         return ClassifyResponse(
@@ -151,6 +234,9 @@ class DocumentClassifier:
             document_type=best_type,
             confidence=confidence,
             requires_human_review=requires_review,
+            probabilities=probabilities,
+            model_version=self.MODEL_VERSION,
+            classification_method=classification_method,
         )
 
     def classify(self, document_id: str, file_bytes: bytes, text_hint: str | None = None) -> ClassifyResponse:
@@ -158,7 +244,6 @@ class DocumentClassifier:
         if text_hint:
             return self.classify_text(text_hint, document_id=document_id)
 
-        # Fallback quick text extraction via PyMuPDF if PDF
         text = ""
         if file_bytes.startswith(b"%PDF"):
             import fitz
@@ -174,3 +259,4 @@ class DocumentClassifier:
 
 def get_classifier() -> DocumentClassifier:
     return DocumentClassifier()
+

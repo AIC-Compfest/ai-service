@@ -87,7 +87,7 @@ class SignatureDetector:
         # Check for very low resolution image
         is_low_res = (w < 150 or h < 150)
 
-        # Crop to target region if specified, else focus on bottom 50% signature zone
+        # Crop to target region if specified, else focus on bottom 65% signature zone
         if target_region:
             y1 = max(0, int(target_region[0] * h))
             x1 = max(0, int(target_region[1] * w))
@@ -100,7 +100,7 @@ class SignatureDetector:
                 roi = cv_img[y1:y2, x1:x2]
                 offset_x, offset_y = x1, y1
         else:
-            y1 = int(0.50 * h)
+            y1 = int(0.35 * h)
             x1 = 0
             y2 = h
             x2 = w
@@ -143,16 +143,20 @@ class SignatureDetector:
             requires_human_review=requires_review,
         )
 
+        final_presence = sig_present or stamp_present
+        final_conf = max(sig_conf, stamp_conf)
+        final_bbox = sig_bbox_norm if sig_present else stamp_bbox_norm
+
         return SignatureDetectionResponse(
             document_id=document_id,
-            signature_present=sig_present,
-            confidence=sig_conf,
-            bbox=sig_bbox_norm,
+            signature_present=final_presence,
+            confidence=final_conf,
+            bbox=final_bbox,
             stamp_present=stamp_present,
             stamp_confidence=stamp_conf,
             stamp_bbox=stamp_bbox_norm,
             requires_human_review=requires_review,
-            is_unknown=is_low_res and not sig_present and not stamp_present,
+            is_unknown=is_low_res and not final_presence,
         )
 
     # -----------------------------------------------------------------------
@@ -173,21 +177,26 @@ class SignatureDetector:
         hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
 
         # A. Blue/Purple Ink Mask (Common Indonesian 3PL Stamps & Seals)
-        lower_blue = np.array([90, 35, 35])
+        lower_blue = np.array([90, 30, 30])
         upper_blue = np.array([135, 255, 255])
         blue_mask = cv2.inRange(hsv, lower_blue, upper_blue)
 
         # B. Red/Magenta/Orange Ink Mask (Official Company Seals)
-        lower_red1 = np.array([0, 45, 45])
-        upper_red1 = np.array([12, 255, 255])
-        lower_red2 = np.array([155, 45, 45])
+        lower_red1 = np.array([0, 35, 35])
+        upper_red1 = np.array([15, 255, 255])
+        lower_red2 = np.array([150, 35, 35])
         upper_red2 = np.array([180, 255, 255])
         red_mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
         red_mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
         red_mask = cv2.bitwise_or(red_mask1, red_mask2)
 
+        # C. Green Ink Mask (Logistics Receiving Stamps: TERIMA GUDANG, GOOD RECEIPT)
+        lower_green = np.array([35, 25, 25])
+        upper_green = np.array([88, 255, 255])
+        green_mask = cv2.inRange(hsv, lower_green, upper_green)
+
         # Combined Stamp Color Mask
-        color_mask = cv2.bitwise_or(blue_mask, red_mask)
+        color_mask = cv2.bitwise_or(cv2.bitwise_or(blue_mask, red_mask), green_mask)
 
         # Morphological Closing to connect stamped letters and outer rings
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
@@ -198,7 +207,7 @@ class SignatureDetector:
 
         best_stamp_bbox = None
         best_score = 0.0
-        min_stamp_area = max(200, int(roi_h * roi_w * 0.005))
+        min_stamp_area = max(50, int(roi_h * roi_w * 0.0003))
         max_stamp_area = int(roi_h * roi_w * 0.45)
 
         for c in contours:
@@ -207,27 +216,25 @@ class SignatureDetector:
                 cx, cy, cw, ch = cv2.boundingRect(c)
                 aspect = cw / float(ch) if ch > 0 else 0.0
 
-                # Stamps are typically circular / square / moderately elliptical (aspect 0.5 to 2.2)
-                if 0.45 <= aspect <= 2.5:
+                # Stamps are typically circular / square / moderately elliptical (aspect 0.4 to 3.5)
+                if 0.35 <= aspect <= 3.5:
                     # Spatial density: ratio of colored pixels inside the bounding box
                     stamp_crop = color_mask[cy : cy + ch, cx : cx + cw]
                     pixel_count = cv2.countNonZero(stamp_crop)
                     density = pixel_count / float(cw * ch) if (cw * ch) > 0 else 0.0
 
-                    # Stamps have distributed ink density (0.08 to 0.75) unlike solid blocks or thin noise
-                    if 0.06 <= density <= 0.85:
-                        # Solidity / Roundness heuristic
+                    # Stamps have distributed ink density (0.04 to 0.85) unlike solid blocks or thin noise
+                    if 0.03 <= density <= 0.90:
                         hull = cv2.convexHull(c)
                         hull_area = cv2.contourArea(hull)
                         solidity = area / float(hull_area) if hull_area > 0 else 0.0
 
-                        # Calculate score based on area, density, and aspect balance
                         score = min(0.95, 0.70 + (density * 0.20) + (solidity * 0.10))
                         if score > best_score:
                             best_score = score
                             best_stamp_bbox = (offset_x + cx, offset_y + cy, offset_x + cx + cw, offset_y + cy + ch)
 
-        if best_stamp_bbox and best_score >= 0.70:
+        if best_stamp_bbox and best_score >= 0.65:
             bx1, by1, bx2, by2 = best_stamp_bbox
             bbox_model = BoundingBox(
                 x1=round(max(0.0, min(1.0, bx1 / float(doc_w))), 4),
@@ -289,45 +296,39 @@ class SignatureDetector:
         max_sig_score = 0.0
         has_uncertain_strokes = False
 
-        min_sig_area = max(100, int(roi_pixel_area * 0.003))
+        min_sig_area = max(80, int(roi_pixel_area * 0.002))
         max_sig_area = int(roi_pixel_area * 0.40)
 
         for c in contours:
             area = cv2.contourArea(c)
-            if area >= min_sig_area:
-                cx, cy, cw, ch = cv2.boundingRect(c)
-                aspect = cw / float(ch) if ch > 0 else 0.0
+            peri = cv2.arcLength(c, True)
+            cx, cy, cw, ch = cv2.boundingRect(c)
+            aspect = cw / float(ch) if ch > 0 else 0.0
 
-                # Printed Text Rejection Criteria:
-                # 1. Regular short rectangular characters (cw < 15, ch < 15, area < 180)
-                # 2. Straight horizontal bounding lines (aspect > 8.0 with minimal height)
-                # 3. Grid-aligned text lines
-                if cw < 18 and ch < 18 and area < 200:
-                    continue
+            # 1. Printed Text Rejection Criteria:
+            # - Short regular characters
+            # - Horizontal text line fragments with very low height
+            if cw < 18 and ch < 18 and area < 180:
+                continue
 
-                if aspect > 7.0 and ch < 8:
-                    continue
+            if aspect > 6.5 or aspect < 0.7:
+                continue
 
-                # Signatures are typically wider than tall, dynamic curves (aspect 1.0 to 6.0)
-                if 0.9 <= aspect <= 6.5 and area <= max_sig_area:
-                    # Stroke complexity / curvature analysis: perimeter vs area
-                    peri = cv2.arcLength(c, True)
-                    # Hand-drawn curves have high perimeter-to-area ratio
-                    complexity = (peri * peri) / (area + 1e-5)
+            # 2. Handwritten Curve Analysis:
+            if area >= min_sig_area and area <= max_sig_area:
+                complexity = (peri * peri) / (area + 1e-5)
+                # Handwritten dynamic signatures have high perimeter-to-area complexity (> 16.0)
+                if complexity > 16.0:
+                    confidence = 0.75 + min(0.20, (area / float(min_sig_area * 6)) * 0.15)
+                    if aspect >= 1.2:
+                        confidence += 0.05
+                    confidence = min(0.95, confidence)
 
-                    if complexity > 18.0:
-                        # Calculate calibrated confidence
-                        # Scale based on edge density and stroke continuity
-                        confidence = 0.75 + min(0.20, (area / float(min_sig_area * 8)) * 0.15)
-                        if aspect >= 1.3:
-                            confidence += 0.05
-                        confidence = min(0.95, confidence)
-
-                        if confidence > max_sig_score:
-                            max_sig_score = confidence
-                            best_sig_bbox = (offset_x + cx, offset_y + cy, offset_x + cx + cw, offset_y + cy + ch)
-                    else:
-                        has_uncertain_strokes = True
+                    if confidence > max_sig_score:
+                        max_sig_score = confidence
+                        best_sig_bbox = (offset_x + cx, offset_y + cy, offset_x + cx + cw, offset_y + cy + ch)
+                else:
+                    has_uncertain_strokes = True
 
         # Blue pen stroke detection in ROI (for wet blue ink handwriting)
         hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)

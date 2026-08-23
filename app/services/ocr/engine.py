@@ -128,34 +128,63 @@ class PageOCREvidence:
         }
 
 
+_GLOBAL_EASYOCR_READER = None
+
 class OCREngine:
     """Cascaded OCR and Layout Understanding Engine."""
 
     def __init__(self, confidence_threshold: float = 0.85):
         self.confidence_threshold = confidence_threshold
-        self._reader = None
 
     @property
     def reader(self):
-        if self._reader is None:
+        global _GLOBAL_EASYOCR_READER
+        if _GLOBAL_EASYOCR_READER is None:
             try:
                 import easyocr
                 import torch
                 use_gpu = torch.cuda.is_available()
                 logger.info("initializing_easyocr_reader", use_gpu=use_gpu)
-                self._reader = easyocr.Reader(["en"], gpu=use_gpu, verbose=False)
+                try:
+                    _GLOBAL_EASYOCR_READER = easyocr.Reader(["en", "id"], gpu=use_gpu, verbose=False)
+                except Exception:
+                    _GLOBAL_EASYOCR_READER = easyocr.Reader(["en"], gpu=use_gpu, verbose=False)
             except Exception as e:
                 logger.warning("easyocr_init_failed", error=str(e))
-                self._reader = None
-        return self._reader
+                _GLOBAL_EASYOCR_READER = None
+        return _GLOBAL_EASYOCR_READER
+
+    def _estimate_vector_token_confidence(self, token_text: str) -> float:
+        """Estimate confidence for digital PDF vector token based on character validity."""
+        if not token_text:
+            return 0.50
+        printable_chars = sum(1 for c in token_text if c.isprintable())
+        ratio = printable_chars / len(token_text)
+        if ratio < 0.8:
+            return round(0.50 + ratio * 0.3, 3)
+        has_alphanumeric = any(c.isalnum() for c in token_text)
+        if not has_alphanumeric:
+            return 0.88
+        return round(min(0.98, 0.90 + (ratio * 0.08)), 3)
 
     def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict) -> PageOCREvidence:
-        """Extract high-precision vector text, coordinates and layout from PDF page."""
+        """Extract high-precision vector text, coordinates and layout from PDF page.
+        Falls back to EasyOCR if page is scanned/image-based with insufficient digital text."""
         rect = page.rect
         w = float(rect.width)
         h = float(rect.height)
 
         words_data = page.get_text("words")
+
+        # Fallback to EasyOCR for scanned / image-only PDF pages (PRD Hybrid OCR requirement)
+        if len(words_data) < 5:
+            logger.info("ocr.fallback_to_easyocr", page_number=page_number, words_found=len(words_data))
+            pix = page.get_pixmap(dpi=150)
+            img_bytes = pix.tobytes("png")
+            ocr_res = self.process_image(img_bytes, page_number, quality)
+            ocr_res.fallback_used = True
+            return ocr_res
+
         lines_by_key: dict[tuple[int, int], list] = {}
         for item in words_data:
             x0, y0, x1, y1, word, b_no, l_no, w_no = item
@@ -181,15 +210,20 @@ class OCREngine:
             )
 
             tokens: list[OCRToken] = []
+            token_confs: list[float] = []
             for item in w_items:
                 tx0, ty0, tx1, ty1, tw = item
                 t_norm = (tx0 / w * 1000, ty0 / h * 1000, tx1 / w * 1000, ty1 / h * 1000)
-                tokens.append(OCRToken(text=tw, confidence=0.99, bbox_pixel=(tx0, ty0, tx1, ty1), bbox_norm=t_norm))
+                t_conf = self._estimate_vector_token_confidence(tw)
+                token_confs.append(t_conf)
+                tokens.append(OCRToken(text=tw, confidence=t_conf, bbox_pixel=(tx0, ty0, tx1, ty1), bbox_norm=t_norm))
+
+            line_conf = float(np.mean(token_confs)) if token_confs else 0.95
 
             ocr_lines.append(
                 OCRLine(
                     text=line_text,
-                    confidence=0.99,
+                    confidence=round(line_conf, 3),
                     bbox_pixel=(lx0, ly0, lx1, ly1),
                     bbox_norm=norm_bbox,
                     tokens=tokens,
@@ -221,12 +255,19 @@ class OCREngine:
 
         if self.reader is not None:
             try:
-                raw_results = self.reader.readtext(cv_img)
+                # Fast CPU inference scaling if image is large
+                scale = 1.0
+                ocr_input = cv_img
+                if max(h, w) > 960:
+                    scale = 960.0 / max(h, w)
+                    ocr_input = cv2.resize(cv_img, (int(w * scale), int(h * scale)), interpolation=cv2.INTER_AREA)
+
+                raw_results = self.reader.readtext(ocr_input)
                 for box, text, prob in raw_results:
                     if not text.strip():
                         continue
-                    xs = [pt[0] for pt in box]
-                    ys = [pt[1] for pt in box]
+                    xs = [pt[0] / scale for pt in box]
+                    ys = [pt[1] / scale for pt in box]
                     lx0, ly0 = float(min(xs)), float(min(ys))
                     lx1, ly1 = float(max(xs)), float(max(ys))
                     norm_bbox = (lx0 / w * 1000, ly0 / h * 1000, lx1 / w * 1000, ly1 / h * 1000)

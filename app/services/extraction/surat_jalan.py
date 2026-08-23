@@ -387,39 +387,48 @@ class SuratJalanExtractor(BaseExtractor):
 
         # ----------------------------------------------------------------
         # 12. Actual Weight (CRITICAL for reconciliation)
-        # Use vertical search FIRST — weight value is typically directly below
-        # the 'Weight :' label in Indonesian logistics documents.
-        # Only fall back to horizontal if vertical finds nothing.
-        # ----------------------------------------------------------------
-        raw_w, conf_w, bbox_w = find_key_value_vertical(all_lines, _WEIGHT_KEYS)
-        if not raw_w:
-            raw_w, conf_w, bbox_w = find_key_value_horizontal(all_lines, _WEIGHT_KEYS)
-        parsed_weight: float | None = None
-        if raw_w:
-            m = re.search(r"(\d+[.,]?\d*)", raw_w.replace(",", "."))
-            if m:
+        # Scan all lines for physical weights (kg)
+        found_weights: list[tuple[float, float, list[float]]] = []
+        for line in all_lines:
+            text = line.get("text", "")
+            for m in re.finditer(r"\b(\d+(?:[.,]\d+)?)\s*(?:kg|kgs|kilogram)\b", text, re.IGNORECASE):
                 try:
-                    candidate = float(m.group(1))
-                    # Reject values > 5000 kg (likely monetary amounts, not physical weight)
-                    if candidate <= 5000:
-                        parsed_weight = candidate
+                    raw_str = m.group(1)
+                    if "." in raw_str and len(raw_str.split(".")[-1]) == 3:
+                        clean_num = raw_str.replace(".", "")
+                    else:
+                        clean_num = raw_str.replace(",", ".")
+                    w_val = float(clean_num)
+                    if 0 < w_val <= 50000:
+                        conf = float(line.get("confidence", 0.90))
+                        bbox = line.get("bbox_norm")
+                        found_weights.append((w_val, conf, bbox))
                 except ValueError:
                     pass
 
-        if parsed_weight is None:
-            # Regex fallback: number immediately followed by kg unit, value must be <= 5000
-            for line in all_lines:
-                m2 = re.search(r"(\d+(?:[.,]\d+)?)\s*(?:kg|kgs|kilogram)\b", line.get("text", ""), re.IGNORECASE)
-                if m2:
+        if found_weights:
+            # If total footer exists (e.g. sum matches or last weight is max), use the total weight
+            max_w = max(found_weights, key=lambda x: x[0])
+            last_w = found_weights[-1]
+            if len(found_weights) > 1 and (last_w[0] == max_w[0] or sum(w[0] for w in found_weights[:-1]) == last_w[0]):
+                parsed_weight, conf_w, bbox_w = last_w
+            else:
+                parsed_weight, conf_w, bbox_w = max_w
+        else:
+            raw_w, conf_w, bbox_w = find_key_value_vertical(all_lines, _WEIGHT_KEYS)
+            if not raw_w:
+                raw_w, conf_w, bbox_w = find_key_value_horizontal(all_lines, _WEIGHT_KEYS)
+            if raw_w:
+                m = re.search(r"(\d+[.,]?\d*)", raw_w.replace(",", "."))
+                if m:
                     try:
-                        candidate = float(m2.group(1).replace(",", "."))
-                        if candidate <= 5000:
-                            parsed_weight = candidate
-                            conf_w = float(line.get("confidence", 0.85))
-                            bbox_w = line.get("bbox_norm")
-                            break
+                        cand = float(m.group(1))
+                        if 0 < cand <= 50000:
+                            parsed_weight = cand
                     except ValueError:
                         pass
+
+
 
         fields.append(build_field(
             field="actual_weight_kg", value=parsed_weight, confidence=conf_w,

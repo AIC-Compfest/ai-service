@@ -1,0 +1,60 @@
+{
+  "model_name": "doc-classifier-v1",
+  "algorithm": "TF-IDF + LogisticRegression (Multinomial)",
+  "test_accuracy": 1.0,
+  "cv_5fold_mean_accuracy": 1.0,
+  "cv_5fold_std": 0.0,
+  "classes": [
+    "INVOICE",
+    "POD",
+    "RATE_AGREEMENT",
+    "SURAT_JALAN",
+    "UNKNOWN"
+  ],
+  "vocabulary_size": 4000,
+  "total_training_samples": 900,
+  "classification_report": {
+    "INVOICE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "POD": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "RATE_AGREEMENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "SURAT_JALAN": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "UNKNOWN": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    }
+  }
+}

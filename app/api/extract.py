@@ -70,8 +70,14 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
     except ValueError:
         doc_type = DocumentType.UNKNOWN
 
-    # Guard: cannot extract UNKNOWN or low-confidence docs (PRD §20, §7.1)
-    if doc_type == DocumentType.UNKNOWN or requires_review:
+    # Check if this is a multi-page container with classified logical groups
+    logical_groups = evidence.get("logical_document_groups", {})
+    has_logical_groups = evidence.get("page_count", 1) > 1 and any(
+        len(pages) > 0 for l_type, pages in logical_groups.items() if l_type != "UNKNOWN"
+    )
+
+    # Guard: cannot extract UNKNOWN or low-confidence docs if single-doc and no logical groups (PRD §20, §7.1)
+    if not has_logical_groups and (doc_type == DocumentType.UNKNOWN or requires_review):
         error_code = (
             "LOW_CLASSIFICATION_CONFIDENCE" if confidence < 0.70
             else "UNKNOWN_DOCUMENT_TYPE"
@@ -93,8 +99,69 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
         }
 
     # Phase 6: Structured extraction
-    extractor = get_extractor(doc_type)
-    fields = extractor.extract(document_id, evidence)
+    if doc_type != DocumentType.UNKNOWN:
+        extractor = get_extractor(doc_type)
+        fields = extractor.extract(document_id, evidence)
+    else:
+        # Default to first non-empty logical group extractor if doc_type is unknown
+        first_type = next((DocumentType(k) for k, v in logical_groups.items() if len(v) > 0 and k != "UNKNOWN"), DocumentType.INVOICE)
+        extractor = get_extractor(first_type)
+        fields = extractor.extract(document_id, evidence)
+
+    # Multi-document extraction across logical segments (ARCHITECTURE ROOT CAUSE A FIX)
+    segments = evidence.get("segments", [])
+    segment_extractions: list[dict] = []
+
+    for seg in segments:
+        seg_type_str = seg.get("document_type", "UNKNOWN")
+        start_p = seg.get("start_page", 1)
+        end_p = seg.get("end_page", 1)
+        if seg_type_str != "UNKNOWN":
+            try:
+                s_type = DocumentType(seg_type_str)
+                s_extractor = get_extractor(s_type)
+                s_evidence = dict(evidence)
+                # Filter evidence pages strictly to this segment's page range
+                s_evidence["pages"] = [
+                    p for p in evidence.get("pages", [])
+                    if start_p <= p.get("page_number", 0) <= end_p
+                ]
+                s_fields = s_extractor.extract(document_id, s_evidence)
+                segment_extractions.append({
+                    "segment_number": seg.get("segment_number"),
+                    "document_type": seg_type_str,
+                    "start_page": start_p,
+                    "end_page": end_p,
+                    "page_count": seg.get("page_count", end_p - start_p + 1),
+                    "classification_confidence": seg.get("classification_confidence", 1.0),
+                    "extracted_fields": [f.model_dump() for f in s_fields],
+                })
+            except Exception as e:
+                logger.warning(
+                    "segment_extraction_failed",
+                    segment_number=seg.get("segment_number"),
+                    doc_type=seg_type_str,
+                    error=str(e),
+                )
+
+    # Legacy: Multi-document extraction across logical groups for backward compat
+    logical_groups = evidence.get("logical_document_groups", {})
+    logical_extractions: dict[str, list[dict]] = {}
+
+    for l_type_str, p_list in logical_groups.items():
+        if len(p_list) > 0 and l_type_str != "UNKNOWN":
+            try:
+                l_type = DocumentType(l_type_str)
+                l_extractor = get_extractor(l_type)
+                # Filter evidence pages for this document type
+                l_evidence = dict(evidence)
+                l_evidence["pages"] = [
+                    p for p in evidence.get("pages", []) if p.get("page_number") in p_list
+                ]
+                l_fields = l_extractor.extract(document_id, l_evidence)
+                logical_extractions[l_type_str] = [f.model_dump() for f in l_fields]
+            except Exception as e:
+                logger.warning("logical_extraction_failed", doc_type=l_type_str, error=str(e))
 
     unknown_fields = [f.field for f in fields if f.is_unknown]
     final_requires_review = len(unknown_fields) > 0 or confidence < 0.95
@@ -103,6 +170,8 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
         "extract.pipeline.complete",
         document_id=document_id,
         doc_type=doc_type_str,
+        page_count=evidence.get("page_count", 1),
+        segment_count=len(segments),
         total_fields=len(fields),
         unknown_count=len(unknown_fields),
         requires_human_review=final_requires_review,
@@ -111,13 +180,29 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
     return {
         "document_id": document_id,
         "status": "SUCCESS",
+        "page_count": evidence.get("page_count", 1),
         "classification": classification,
+        "segments": segments,
+        "segment_extractions": segment_extractions,
+        "logical_document_groups": logical_groups,
+        "pages": [
+            {
+                "page_number": p.get("page_number"),
+                "classification": p.get("classification"),
+                "signature_detection": p.get("signature_detection"),
+                "line_count": len(p.get("lines", [])),
+                "quality": p.get("quality"),
+            }
+            for p in evidence.get("pages", [])
+        ],
         "extracted_fields": [f.model_dump() for f in fields],
+        "logical_extractions": logical_extractions,
         "extraction_attempted": True,
         "unknown_fields": unknown_fields,
         "requires_human_review": final_requires_review,
-        "pipeline_version": "phase6_v1",
+        "pipeline_version": "phase6_v3_segment_aware",
     }
+
 
 
 @router.post("/{document_type}", response_model=ExtractionResponse)
