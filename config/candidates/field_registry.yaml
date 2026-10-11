@@ -1,0 +1,25 @@
+fields:
+  - {doc_type: INVOICE, field: invoice_number, cand_type: id}
+  - {doc_type: INVOICE, field: invoice_date, cand_type: date}
+  - {doc_type: INVOICE, field: vendor_name, cand_type: party}
+  - {doc_type: INVOICE, field: vendor_id, cand_type: id}
+  - {doc_type: INVOICE, field: customer_name, cand_type: party}
+  - {doc_type: INVOICE, field: due_date, cand_type: date}
+  - {doc_type: INVOICE, field: currency, cand_type: enum}
+  - {doc_type: INVOICE, field: subtotal, cand_type: amount}
+  - {doc_type: INVOICE, field: tax_amount, cand_type: amount}
+  - {doc_type: INVOICE, field: grand_total, cand_type: amount}
+  - {doc_type: SURAT_JALAN, field: shipment_id, cand_type: id}
+  - {doc_type: SURAT_JALAN, field: shipment_date, cand_type: date}
+  - {doc_type: SURAT_JALAN, field: sender_name, cand_type: party}
+  - {doc_type: SURAT_JALAN, field: receiver_name, cand_type: party}
+  - {doc_type: POD, field: pod_number, cand_type: id}
+  - {doc_type: POD, field: delivery_date, cand_type: date}
+  - {doc_type: POD, field: delivery_time, cand_type: time}
+  - {doc_type: POD, field: receiver_name, cand_type: party}
+  - {doc_type: RATE_AGREEMENT, field: agreement_id, cand_type: id}
+  - {doc_type: RATE_AGREEMENT, field: effective_from, cand_type: date}
+  - {doc_type: RATE_AGREEMENT, field: effective_to, cand_type: date}
+  - {doc_type: RATE_AGREEMENT, field: minimum_charge, cand_type: amount}
+  - {doc_type: RATE_AGREEMENT, field: dispute_window_days, cand_type: days}
+  - {doc_type: RATE_AGREEMENT, field: surcharge_percent, cand_type: percent}
