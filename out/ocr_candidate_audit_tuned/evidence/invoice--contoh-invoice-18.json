@@ -1,0 +1,2573 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 783,
+      "height": 508,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.706,
+      "quality": {},
+      "lines": [
+        {
+          "text": "PI.SANPLE SARANA ABADI",
+          "confidence": 0.503,
+          "bbox_norm": [
+            0.049808,
+            0.041339,
+            0.272031,
+            0.076772
+          ],
+          "tokens": [
+            {
+              "text": "PI.SANPLE",
+              "confidence": 0.503,
+              "bbox_norm": [
+                0.049808,
+                0.041339,
+                0.141901,
+                0.076772
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SARANA",
+              "confidence": 0.503,
+              "bbox_norm": [
+                0.145588,
+                0.041339,
+                0.216396,
+                0.076772
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ABADI",
+              "confidence": 0.503,
+              "bbox_norm": [
+                0.220084,
+                0.041339,
+                0.272031,
+                0.076772
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "INVOICE",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.446999,
+            0.043307,
+            0.60281,
+            0.090551
+          ],
+          "tokens": [
+            {
+              "text": "INVOICE",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.446999,
+                0.043307,
+                0.60281,
+                0.090551
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Number",
+          "confidence": 0.992,
+          "bbox_norm": [
+            0.655172,
+            0.057087,
+            0.711367,
+            0.088583
+          ],
+          "tokens": [
+            {
+              "text": "Number",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.655172,
+                0.057087,
+                0.711367,
+                0.088583
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "0ooooj45",
+          "confidence": 0.277,
+          "bbox_norm": [
+            0.767561,
+            0.05315,
+            0.836526,
+            0.084646
+          ],
+          "tokens": [
+            {
+              "text": "0ooooj45",
+              "confidence": 0.277,
+              "bbox_norm": [
+                0.767561,
+                0.05315,
+                0.836526,
+                0.084646
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Ruko Graha Arteri Nas",
+          "confidence": 0.679,
+          "bbox_norm": [
+            0.054917,
+            0.076772,
+            0.208174,
+            0.104331
+          ],
+          "tokens": [
+            {
+              "text": "Ruko",
+              "confidence": 0.679,
+              "bbox_norm": [
+                0.054917,
+                0.076772,
+                0.088185,
+                0.104331
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Graha",
+              "confidence": 0.679,
+              "bbox_norm": [
+                0.091011,
+                0.076772,
+                0.132353,
+                0.104331
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Arteri",
+              "confidence": 0.679,
+              "bbox_norm": [
+                0.135179,
+                0.076772,
+                0.180155,
+                0.104331
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Nas",
+              "confidence": 0.679,
+              "bbox_norm": [
+                0.182981,
+                0.076772,
+                0.208174,
+                0.104331
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Blok 101 No.! , Jakarta 12223",
+          "confidence": 0.496,
+          "bbox_norm": [
+            0.123883,
+            0.096457,
+            0.312899,
+            0.13189
+          ],
+          "tokens": [
+            {
+              "text": "Blok",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.123883,
+                0.096457,
+                0.154541,
+                0.13189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "101",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.157547,
+                0.096457,
+                0.173434,
+                0.13189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.!",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.17644,
+                0.096457,
+                0.202375,
+                0.13189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.20538,
+                0.096457,
+                0.209245,
+                0.13189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.212251,
+                0.096457,
+                0.273395,
+                0.13189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12223",
+              "confidence": 0.496,
+              "bbox_norm": [
+                0.276401,
+                0.096457,
+                0.312899,
+                0.13189
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Inv. Date",
+          "confidence": 0.973,
+          "bbox_norm": [
+            0.655172,
+            0.088583,
+            0.719029,
+            0.120079
+          ],
+          "tokens": [
+            {
+              "text": "Inv.",
+              "confidence": 0.973,
+              "bbox_norm": [
+                0.655172,
+                0.088583,
+                0.680299,
+                0.120079
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Date",
+              "confidence": 0.973,
+              "bbox_norm": [
+                0.683332,
+                0.088583,
+                0.719029,
+                0.120079
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "11 Febtuay 2013",
+          "confidence": 0.866,
+          "bbox_norm": [
+            0.765006,
+            0.084646,
+            0.882503,
+            0.124016
+          ],
+          "tokens": [
+            {
+              "text": "11",
+              "confidence": 0.866,
+              "bbox_norm": [
+                0.765006,
+                0.084646,
+                0.773804,
+                0.124016
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Febtuay",
+              "confidence": 0.866,
+              "bbox_norm": [
+                0.777225,
+                0.084646,
+                0.846824,
+                0.124016
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2013",
+              "confidence": 0.866,
+              "bbox_norm": [
+                0.850245,
+                0.084646,
+                0.882503,
+                0.124016
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Phone",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.054917,
+            0.127953,
+            0.09834,
+            0.159449
+          ],
+          "tokens": [
+            {
+              "text": "Phone",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.054917,
+                0.127953,
+                0.09834,
+                0.159449
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "(62-21) 58305578 (Hunting)",
+          "confidence": 0.62,
+          "bbox_norm": [
+            0.11622,
+            0.129921,
+            0.295019,
+            0.167323
+          ],
+          "tokens": [
+            {
+              "text": "(62-21)",
+              "confidence": 0.62,
+              "bbox_norm": [
+                0.11622,
+                0.129921,
+                0.164836,
+                0.167323
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "58305578",
+              "confidence": 0.62,
+              "bbox_norm": [
+                0.167537,
+                0.129921,
+                0.226185,
+                0.167323
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(Hunting)",
+              "confidence": 0.62,
+              "bbox_norm": [
+                0.228886,
+                0.129921,
+                0.295019,
+                0.167323
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Payment Ierm",
+          "confidence": 0.559,
+          "bbox_norm": [
+            0.657727,
+            0.116142,
+            0.754789,
+            0.151575
+          ],
+          "tokens": [
+            {
+              "text": "Payment",
+              "confidence": 0.559,
+              "bbox_norm": [
+                0.657727,
+                0.116142,
+                0.721013,
+                0.151575
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ierm",
+              "confidence": 0.559,
+              "bbox_norm": [
+                0.724124,
+                0.116142,
+                0.754789,
+                0.151575
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Cash Iunai",
+          "confidence": 0.813,
+          "bbox_norm": [
+            0.770115,
+            0.120079,
+            0.846743,
+            0.151575
+          ],
+          "tokens": [
+            {
+              "text": "Cash",
+              "confidence": 0.813,
+              "bbox_norm": [
+                0.770115,
+                0.120079,
+                0.807834,
+                0.151575
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Iunai",
+              "confidence": 0.813,
+              "bbox_norm": [
+                0.811038,
+                0.120079,
+                0.846743,
+                0.151575
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Fux",
+          "confidence": 0.45,
+          "bbox_norm": [
+            0.052363,
+            0.155512,
+            0.083014,
+            0.187008
+          ],
+          "tokens": [
+            {
+              "text": "Fux",
+              "confidence": 0.45,
+              "bbox_norm": [
+                0.052363,
+                0.155512,
+                0.083014,
+                0.187008
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "(62-21) 58453581",
+          "confidence": 0.968,
+          "bbox_norm": [
+            0.113665,
+            0.155512,
+            0.231162,
+            0.190945
+          ],
+          "tokens": [
+            {
+              "text": "(62-21)",
+              "confidence": 0.968,
+              "bbox_norm": [
+                0.113665,
+                0.155512,
+                0.1675,
+                0.190945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "58453581",
+              "confidence": 0.968,
+              "bbox_norm": [
+                0.170491,
+                0.155512,
+                0.231162,
+                0.190945
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Due Date",
+          "confidence": 0.964,
+          "bbox_norm": [
+            0.657727,
+            0.151575,
+            0.721584,
+            0.183071
+          ],
+          "tokens": [
+            {
+              "text": "Due",
+              "confidence": 0.964,
+              "bbox_norm": [
+                0.657727,
+                0.151575,
+                0.683976,
+                0.183071
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Date",
+              "confidence": 0.964,
+              "bbox_norm": [
+                0.686921,
+                0.151575,
+                0.721584,
+                0.183071
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "11 February 2013",
+          "confidence": 0.649,
+          "bbox_norm": [
+            0.770115,
+            0.147638,
+            0.885057,
+            0.183071
+          ],
+          "tokens": [
+            {
+              "text": "11",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.770115,
+                0.147638,
+                0.77806,
+                0.183071
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "February",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.78115,
+                0.147638,
+                0.852835,
+                0.183071
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2013",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.855925,
+                0.147638,
+                0.885057,
+                0.183071
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Salesman",
+          "confidence": 0.974,
+          "bbox_norm": [
+            0.657727,
+            0.183071,
+            0.719029,
+            0.21063
+          ],
+          "tokens": [
+            {
+              "text": "Salesman",
+              "confidence": 0.974,
+              "bbox_norm": [
+                0.657727,
+                0.183071,
+                0.719029,
+                0.21063
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "DINAS IYO",
+          "confidence": 0.398,
+          "bbox_norm": [
+            0.767561,
+            0.175197,
+            0.862069,
+            0.214567
+          ],
+          "tokens": [
+            {
+              "text": "DINAS",
+              "confidence": 0.398,
+              "bbox_norm": [
+                0.767561,
+                0.175197,
+                0.826021,
+                0.214567
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "IYO",
+              "confidence": 0.398,
+              "bbox_norm": [
+                0.830171,
+                0.175197,
+                0.862069,
+                0.214567
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Customer",
+          "confidence": 0.917,
+          "bbox_norm": [
+            0.054917,
+            0.206693,
+            0.121328,
+            0.238189
+          ],
+          "tokens": [
+            {
+              "text": "Customer",
+              "confidence": 0.917,
+              "bbox_norm": [
+                0.054917,
+                0.206693,
+                0.121328,
+                0.238189
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "SAMPLE IDONESIA PI.",
+          "confidence": 0.379,
+          "bbox_norm": [
+            0.164751,
+            0.202756,
+            0.356322,
+            0.238189
+          ],
+          "tokens": [
+            {
+              "text": "SAMPLE",
+              "confidence": 0.379,
+              "bbox_norm": [
+                0.164751,
+                0.202756,
+                0.242415,
+                0.238189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "IDONESIA",
+              "confidence": 0.379,
+              "bbox_norm": [
+                0.24627,
+                0.202756,
+                0.330214,
+                0.238189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PI.",
+              "confidence": 0.379,
+              "bbox_norm": [
+                0.334069,
+                0.202756,
+                0.356322,
+                0.238189
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Currency",
+          "confidence": 0.969,
+          "bbox_norm": [
+            0.65645,
+            0.212598,
+            0.721584,
+            0.246063
+          ],
+          "tokens": [
+            {
+              "text": "Currency",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.65645,
+                0.212598,
+                0.721584,
+                0.246063
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "SGD",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.767561,
+            0.206693,
+            0.805875,
+            0.242126
+          ],
+          "tokens": [
+            {
+              "text": "SGD",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.767561,
+                0.206693,
+                0.805875,
+                0.242126
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Phone : 021-3985656 Fax:35425521",
+          "confidence": 0.648,
+          "bbox_norm": [
+            0.167305,
+            0.234252,
+            0.409962,
+            0.269685
+          ],
+          "tokens": [
+            {
+              "text": "Phone",
+              "confidence": 0.648,
+              "bbox_norm": [
+                0.167305,
+                0.234252,
+                0.212831,
+                0.269685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.648,
+              "bbox_norm": [
+                0.215943,
+                0.234252,
+                0.219945,
+                0.269685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "021-3985656",
+              "confidence": 0.648,
+              "bbox_norm": [
+                0.223057,
+                0.234252,
+                0.311974,
+                0.269685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Fax:35425521",
+              "confidence": 0.648,
+              "bbox_norm": [
+                0.315086,
+                0.234252,
+                0.409962,
+                0.269685
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Discount Detail",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.670498,
+            0.32874,
+            0.775223,
+            0.360236
+          ],
+          "tokens": [
+            {
+              "text": "Discount",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.670498,
+                0.32874,
+                0.731763,
+                0.360236
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Detail",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.734596,
+                0.32874,
+                0.775223,
+                0.360236
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No. Product Description",
+          "confidence": 0.659,
+          "bbox_norm": [
+            0.057471,
+            0.34252,
+            0.223499,
+            0.379921
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.659,
+              "bbox_norm": [
+                0.057471,
+                0.34252,
+                0.078377,
+                0.379921
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Product",
+              "confidence": 0.659,
+              "bbox_norm": [
+                0.081224,
+                0.34252,
+                0.139143,
+                0.379921
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Description",
+              "confidence": 0.659,
+              "bbox_norm": [
+                0.14199,
+                0.34252,
+                0.223499,
+                0.379921
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Quantity UOM",
+          "confidence": 0.886,
+          "bbox_norm": [
+            0.330779,
+            0.340551,
+            0.435504,
+            0.379921
+          ],
+          "tokens": [
+            {
+              "text": "Quantity",
+              "confidence": 0.886,
+              "bbox_norm": [
+                0.330779,
+                0.340551,
+                0.399063,
+                0.379921
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "UOM",
+              "confidence": 0.886,
+              "bbox_norm": [
+                0.40222,
+                0.340551,
+                0.435504,
+                0.379921
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Unit Price",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.455939,
+            0.344488,
+            0.524904,
+            0.375984
+          ],
+          "tokens": [
+            {
+              "text": "Unit",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.455939,
+                0.344488,
+                0.484938,
+                0.375984
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Price",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.487781,
+                0.344488,
+                0.524904,
+                0.375984
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Gross Amt.",
+          "confidence": 0.914,
+          "bbox_norm": [
+            0.55811,
+            0.348425,
+            0.637292,
+            0.379921
+          ],
+          "tokens": [
+            {
+              "text": "Gross",
+              "confidence": 0.914,
+              "bbox_norm": [
+                0.55811,
+                0.348425,
+                0.602957,
+                0.379921
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Amt.",
+              "confidence": 0.914,
+              "bbox_norm": [
+                0.606022,
+                0.348425,
+                0.637292,
+                0.379921
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Net Amount",
+          "confidence": 0.905,
+          "bbox_norm": [
+            0.826309,
+            0.344488,
+            0.913155,
+            0.375984
+          ],
+          "tokens": [
+            {
+              "text": "Net",
+              "confidence": 0.905,
+              "bbox_norm": [
+                0.826309,
+                0.344488,
+                0.854563,
+                0.375984
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Amount",
+              "confidence": 0.905,
+              "bbox_norm": [
+                0.857733,
+                0.344488,
+                0.913155,
+                0.375984
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Amount",
+          "confidence": 0.984,
+          "bbox_norm": [
+            0.721584,
+            0.364173,
+            0.780332,
+            0.391732
+          ],
+          "tokens": [
+            {
+              "text": "Amount",
+              "confidence": 0.984,
+              "bbox_norm": [
+                0.721584,
+                0.364173,
+                0.780332,
+                0.391732
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "GOLD-RING, ( 749X.133)",
+          "confidence": 0.483,
+          "bbox_norm": [
+            0.090677,
+            0.403543,
+            0.266922,
+            0.438976
+          ],
+          "tokens": [
+            {
+              "text": "GOLD-RING,",
+              "confidence": 0.483,
+              "bbox_norm": [
+                0.090677,
+                0.403543,
+                0.180038,
+                0.438976
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(",
+              "confidence": 0.483,
+              "bbox_norm": [
+                0.183249,
+                0.403543,
+                0.192424,
+                0.438976
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "749X.133)",
+              "confidence": 0.483,
+              "bbox_norm": [
+                0.195635,
+                0.403543,
+                0.266922,
+                0.438976
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pcs",
+          "confidence": 0.993,
+          "bbox_norm": [
+            0.389527,
+            0.403543,
+            0.417625,
+            0.435039
+          ],
+          "tokens": [
+            {
+              "text": "Pcs",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.389527,
+                0.403543,
+                0.417625,
+                0.435039
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "19.04",
+          "confidence": 0.927,
+          "bbox_norm": [
+            0.494253,
+            0.403543,
+            0.535121,
+            0.435039
+          ],
+          "tokens": [
+            {
+              "text": "19.04",
+              "confidence": 0.927,
+              "bbox_norm": [
+                0.494253,
+                0.403543,
+                0.535121,
+                0.435039
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "11424",
+          "confidence": 0.698,
+          "bbox_norm": [
+            0.604087,
+            0.40748,
+            0.652618,
+            0.435039
+          ],
+          "tokens": [
+            {
+              "text": "11424",
+              "confidence": 0.698,
+              "bbox_norm": [
+                0.604087,
+                0.40748,
+                0.652618,
+                0.435039
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "114.24",
+          "confidence": 0.435,
+          "bbox_norm": [
+            0.879949,
+            0.399606,
+            0.931034,
+            0.435039
+          ],
+          "tokens": [
+            {
+              "text": "114.24",
+              "confidence": 0.435,
+              "bbox_norm": [
+                0.879949,
+                0.399606,
+                0.931034,
+                0.435039
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "RING",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.090677,
+            0.442913,
+            0.1341,
+            0.474409
+          ],
+          "tokens": [
+            {
+              "text": "RING",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.090677,
+                0.442913,
+                0.1341,
+                0.474409
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Pcs",
+          "confidence": 0.953,
+          "bbox_norm": [
+            0.389527,
+            0.438976,
+            0.417625,
+            0.470472
+          ],
+          "tokens": [
+            {
+              "text": "Pcs",
+              "confidence": 0.953,
+              "bbox_norm": [
+                0.389527,
+                0.438976,
+                0.417625,
+                0.470472
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "325.86",
+          "confidence": 0.989,
+          "bbox_norm": [
+            0.48659,
+            0.438976,
+            0.535121,
+            0.470472
+          ],
+          "tokens": [
+            {
+              "text": "325.86",
+              "confidence": 0.989,
+              "bbox_norm": [
+                0.48659,
+                0.438976,
+                0.535121,
+                0.470472
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "1,955.16",
+          "confidence": 0.946,
+          "bbox_norm": [
+            0.588761,
+            0.438976,
+            0.652618,
+            0.474409
+          ],
+          "tokens": [
+            {
+              "text": "1,955.16",
+              "confidence": 0.946,
+              "bbox_norm": [
+                0.588761,
+                0.438976,
+                0.652618,
+                0.474409
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "1,955.16",
+          "confidence": 0.75,
+          "bbox_norm": [
+            0.869732,
+            0.435039,
+            0.931034,
+            0.470472
+          ],
+          "tokens": [
+            {
+              "text": "1,955.16",
+              "confidence": 0.75,
+              "bbox_norm": [
+                0.869732,
+                0.435039,
+                0.931034,
+                0.470472
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "VALTE",
+          "confidence": 0.706,
+          "bbox_norm": [
+            0.088123,
+            0.470472,
+            0.146871,
+            0.509843
+          ],
+          "tokens": [
+            {
+              "text": "VALTE",
+              "confidence": 0.706,
+              "bbox_norm": [
+                0.088123,
+                0.470472,
+                0.146871,
+                0.509843
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "1 Pcs",
+          "confidence": 0.938,
+          "bbox_norm": [
+            0.374202,
+            0.474409,
+            0.417625,
+            0.505906
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.938,
+              "bbox_norm": [
+                0.374202,
+                0.474409,
+                0.379187,
+                0.505906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pcs",
+              "confidence": 0.938,
+              "bbox_norm": [
+                0.383064,
+                0.474409,
+                0.417625,
+                0.505906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "672.08",
+          "confidence": 0.991,
+          "bbox_norm": [
+            0.484036,
+            0.470472,
+            0.535121,
+            0.505906
+          ],
+          "tokens": [
+            {
+              "text": "672.08",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.484036,
+                0.470472,
+                0.535121,
+                0.505906
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "672.08",
+          "confidence": 0.959,
+          "bbox_norm": [
+            0.604087,
+            0.478346,
+            0.652618,
+            0.509843
+          ],
+          "tokens": [
+            {
+              "text": "672.08",
+              "confidence": 0.959,
+              "bbox_norm": [
+                0.604087,
+                0.478346,
+                0.652618,
+                0.509843
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "672.08",
+          "confidence": 0.991,
+          "bbox_norm": [
+            0.879949,
+            0.470472,
+            0.931034,
+            0.505906
+          ],
+          "tokens": [
+            {
+              "text": "672.08",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.879949,
+                0.470472,
+                0.931034,
+                0.505906
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "BALL",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.088123,
+            0.509843,
+            0.136654,
+            0.545276
+          ],
+          "tokens": [
+            {
+              "text": "BALL",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.088123,
+                0.509843,
+                0.136654,
+                0.545276
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "12 Pcs",
+          "confidence": 0.954,
+          "bbox_norm": [
+            0.363985,
+            0.505906,
+            0.417625,
+            0.541339
+          ],
+          "tokens": [
+            {
+              "text": "12",
+              "confidence": 0.954,
+              "bbox_norm": [
+                0.363985,
+                0.505906,
+                0.379405,
+                0.541339
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pcs",
+              "confidence": 0.954,
+              "bbox_norm": [
+                0.38326,
+                0.505906,
+                0.417625,
+                0.541339
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "37.72",
+          "confidence": 0.485,
+          "bbox_norm": [
+            0.491699,
+            0.505906,
+            0.535121,
+            0.541339
+          ],
+          "tokens": [
+            {
+              "text": "37.72",
+              "confidence": 0.485,
+              "bbox_norm": [
+                0.491699,
+                0.505906,
+                0.535121,
+                0.541339
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "452.64",
+          "confidence": 0.807,
+          "bbox_norm": [
+            0.601533,
+            0.51378,
+            0.652618,
+            0.541339
+          ],
+          "tokens": [
+            {
+              "text": "452.64",
+              "confidence": 0.807,
+              "bbox_norm": [
+                0.601533,
+                0.51378,
+                0.652618,
+                0.541339
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "452.64",
+          "confidence": 0.618,
+          "bbox_norm": [
+            0.882503,
+            0.509843,
+            0.931034,
+            0.541339
+          ],
+          "tokens": [
+            {
+              "text": "452.64",
+              "confidence": 0.618,
+              "bbox_norm": [
+                0.882503,
+                0.509843,
+                0.931034,
+                0.541339
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Inord",
+          "confidence": 0.582,
+          "bbox_norm": [
+            0.057471,
+            0.55315,
+            0.108557,
+            0.580709
+          ],
+          "tokens": [
+            {
+              "text": "Inord",
+              "confidence": 0.582,
+              "bbox_norm": [
+                0.057471,
+                0.55315,
+                0.108557,
+                0.580709
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Iiga Ribu Lima Ratus Iiga Belas Singapore",
+          "confidence": 0.607,
+          "bbox_norm": [
+            0.11622,
+            0.549213,
+            0.386973,
+            0.588583
+          ],
+          "tokens": [
+            {
+              "text": "Iiga",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.11622,
+                0.549213,
+                0.139799,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ribu",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.142645,
+                0.549213,
+                0.171671,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lima",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.174517,
+                0.549213,
+                0.203544,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ratus",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.20639,
+                0.549213,
+                0.248019,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Iiga",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.250865,
+                0.549213,
+                0.274444,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Belas",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.27729,
+                0.549213,
+                0.314447,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Singapore",
+              "confidence": 0.607,
+              "bbox_norm": [
+                0.317293,
+                0.549213,
+                0.386973,
+                0.588583
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Sincerely ,",
+          "confidence": 0.774,
+          "bbox_norm": [
+            0.46871,
+            0.557087,
+            0.532567,
+            0.588583
+          ],
+          "tokens": [
+            {
+              "text": "Sincerely",
+              "confidence": 0.774,
+              "bbox_norm": [
+                0.46871,
+                0.557087,
+                0.526775,
+                0.588583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",",
+              "confidence": 0.774,
+              "bbox_norm": [
+                0.529309,
+                0.557087,
+                0.532567,
+                0.588583
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Gross Iotal",
+          "confidence": 0.448,
+          "bbox_norm": [
+            0.706258,
+            0.55315,
+            0.787995,
+            0.584646
+          ],
+          "tokens": [
+            {
+              "text": "Gross",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.706258,
+                0.55315,
+                0.750921,
+                0.584646
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Iotal",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.753974,
+                0.55315,
+                0.787995,
+                0.584646
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "3,194.12",
+          "confidence": 0.742,
+          "bbox_norm": [
+            0.872286,
+            0.55315,
+            0.933589,
+            0.584646
+          ],
+          "tokens": [
+            {
+              "text": "3,194.12",
+              "confidence": 0.742,
+              "bbox_norm": [
+                0.872286,
+                0.55315,
+                0.933589,
+                0.584646
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Dollar Koma Lima Ratus Tizz Puluh Dua",
+          "confidence": 0.474,
+          "bbox_norm": [
+            0.11622,
+            0.580709,
+            0.374202,
+            0.612205
+          ],
+          "tokens": [
+            {
+              "text": "Dollar",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.11622,
+                0.580709,
+                0.157742,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Koma",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.160637,
+                0.580709,
+                0.194714,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lima",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.197609,
+                0.580709,
+                0.227138,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ratus",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.230033,
+                0.580709,
+                0.272382,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tizz",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.275277,
+                0.580709,
+                0.304806,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Puluh",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.3077,
+                0.580709,
+                0.3455,
+                0.612205
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dua",
+              "confidence": 0.474,
+              "bbox_norm": [
+                0.348395,
+                0.580709,
+                0.374202,
+                0.612205
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Discount Total",
+          "confidence": 0.513,
+          "bbox_norm": [
+            0.688378,
+            0.584646,
+            0.787995,
+            0.616142
+          ],
+          "tokens": [
+            {
+              "text": "Discount",
+              "confidence": 0.513,
+              "bbox_norm": [
+                0.688378,
+                0.584646,
+                0.748754,
+                0.616142
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Total",
+              "confidence": 0.513,
+              "bbox_norm": [
+                0.751546,
+                0.584646,
+                0.787995,
+                0.616142
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "0.0o",
+          "confidence": 0.321,
+          "bbox_norm": [
+            0.902937,
+            0.588583,
+            0.936143,
+            0.620079
+          ],
+          "tokens": [
+            {
+              "text": "0.0o",
+              "confidence": 0.321,
+              "bbox_norm": [
+                0.902937,
+                0.588583,
+                0.936143,
+                0.620079
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Remark :",
+          "confidence": 0.969,
+          "bbox_norm": [
+            0.057471,
+            0.616142,
+            0.118774,
+            0.647638
+          ],
+          "tokens": [
+            {
+              "text": "Remark",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.057471,
+                0.616142,
+                0.111687,
+                0.647638
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.114788,
+                0.616142,
+                0.118774,
+                0.647638
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Doun Payment",
+          "confidence": 0.654,
+          "bbox_norm": [
+            0.683269,
+            0.620079,
+            0.787995,
+            0.651575
+          ],
+          "tokens": [
+            {
+              "text": "Doun",
+              "confidence": 0.654,
+              "bbox_norm": [
+                0.683269,
+                0.620079,
+                0.720497,
+                0.651575
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Payment",
+              "confidence": 0.654,
+              "bbox_norm": [
+                0.72366,
+                0.620079,
+                0.787995,
+                0.651575
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "3,244",
+          "confidence": 0.037,
+          "bbox_norm": [
+            0.867178,
+            0.616142,
+            0.933589,
+            0.655512
+          ],
+          "tokens": [
+            {
+              "text": "3,244",
+              "confidence": 0.037,
+              "bbox_norm": [
+                0.867178,
+                0.616142,
+                0.933589,
+                0.655512
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Iu",
+          "confidence": 0.439,
+          "bbox_norm": [
+            0.757344,
+            0.655512,
+            0.787995,
+            0.683071
+          ],
+          "tokens": [
+            {
+              "text": "Iu",
+              "confidence": 0.439,
+              "bbox_norm": [
+                0.757344,
+                0.655512,
+                0.787995,
+                0.683071
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "319.41",
+          "confidence": 0.718,
+          "bbox_norm": [
+            0.882503,
+            0.651575,
+            0.931034,
+            0.683071
+          ],
+          "tokens": [
+            {
+              "text": "319.41",
+              "confidence": 0.718,
+              "bbox_norm": [
+                0.882503,
+                0.651575,
+                0.931034,
+                0.683071
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "IRANSFER VA",
+          "confidence": 0.481,
+          "bbox_norm": [
+            0.057471,
+            0.67126,
+            0.172414,
+            0.71063
+          ],
+          "tokens": [
+            {
+              "text": "IRANSFER",
+              "confidence": 0.481,
+              "bbox_norm": [
+                0.057471,
+                0.67126,
+                0.145052,
+                0.71063
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "VA",
+              "confidence": 0.481,
+              "bbox_norm": [
+                0.148749,
+                0.67126,
+                0.172414,
+                0.71063
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Freicht",
+          "confidence": 0.887,
+          "bbox_norm": [
+            0.690932,
+            0.687008,
+            0.742018,
+            0.718504
+          ],
+          "tokens": [
+            {
+              "text": "Freicht",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.690932,
+                0.687008,
+                0.742018,
+                0.718504
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "-000_",
+          "confidence": 0.169,
+          "bbox_norm": [
+            0.895275,
+            0.683071,
+            0.936143,
+            0.722441
+          ],
+          "tokens": [
+            {
+              "text": "-000_",
+              "confidence": 0.169,
+              "bbox_norm": [
+                0.895275,
+                0.683071,
+                0.936143,
+                0.722441
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "BC4-DR",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.057471,
+            0.702756,
+            0.128991,
+            0.738189
+          ],
+          "tokens": [
+            {
+              "text": "BC4-DR",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.057471,
+                0.702756,
+                0.128991,
+                0.738189
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Yuda Hananto",
+          "confidence": 0.73,
+          "bbox_norm": [
+            0.453384,
+            0.702756,
+            0.565773,
+            0.734252
+          ],
+          "tokens": [
+            {
+              "text": "Yuda",
+              "confidence": 0.73,
+              "bbox_norm": [
+                0.453384,
+                0.702756,
+                0.493336,
+                0.734252
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hananto",
+              "confidence": 0.73,
+              "bbox_norm": [
+                0.49673,
+                0.702756,
+                0.565773,
+                0.734252
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Net Iotal",
+          "confidence": 0.666,
+          "bbox_norm": [
+            0.719029,
+            0.714567,
+            0.785441,
+            0.75
+          ],
+          "tokens": [
+            {
+              "text": "Net",
+              "confidence": 0.666,
+              "bbox_norm": [
+                0.719029,
+                0.714567,
+                0.747144,
+                0.75
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Iotal",
+              "confidence": 0.666,
+              "bbox_norm": [
+                0.750298,
+                0.714567,
+                0.785441,
+                0.75
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "3313",
+          "confidence": 0.064,
+          "bbox_norm": [
+            0.8659,
+            0.704724,
+            0.932312,
+            0.751969
+          ],
+          "tokens": [
+            {
+              "text": "3313",
+              "confidence": 0.064,
+              "bbox_norm": [
+                0.8659,
+                0.704724,
+                0.932312,
+                0.751969
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "164-800-3321",
+          "confidence": 0.737,
+          "bbox_norm": [
+            0.095785,
+            0.734252,
+            0.187739,
+            0.765748
+          ],
+          "tokens": [
+            {
+              "text": "164-800-3321",
+              "confidence": 0.737,
+              "bbox_norm": [
+                0.095785,
+                0.734252,
+                0.187739,
+                0.765748
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "AN:PI. SANPLE SARANA ABADI",
+          "confidence": 0.359,
+          "bbox_norm": [
+            0.057471,
+            0.757874,
+            0.312899,
+            0.793307
+          ],
+          "tokens": [
+            {
+              "text": "AN:PI.",
+              "confidence": 0.359,
+              "bbox_norm": [
+                0.057471,
+                0.757874,
+                0.107329,
+                0.793307
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SANPLE",
+              "confidence": 0.359,
+              "bbox_norm": [
+                0.111034,
+                0.757874,
+                0.182168,
+                0.793307
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SARANA",
+              "confidence": 0.359,
+              "bbox_norm": [
+                0.185873,
+                0.757874,
+                0.257008,
+                0.793307
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ABADI",
+              "confidence": 0.359,
+              "bbox_norm": [
+                0.260713,
+                0.757874,
+                0.312899,
+                0.793307
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PENBAYARANDENGANCHECUE BGDLANGGAPLUNAS APABLA SUDAHDAPAIDIGANGKAN",
+          "confidence": 0.258,
+          "bbox_norm": [
+            0.241379,
+            0.931102,
+            0.798212,
+            0.968504
+          ],
+          "tokens": [
+            {
+              "text": "PENBAYARANDENGANCHECUE",
+              "confidence": 0.258,
+              "bbox_norm": [
+                0.241379,
+                0.931102,
+                0.439794,
+                0.968504
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BGDLANGGAPLUNAS",
+              "confidence": 0.258,
+              "bbox_norm": [
+                0.442612,
+                0.931102,
+                0.577895,
+                0.968504
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "APABLA",
+              "confidence": 0.258,
+              "bbox_norm": [
+                0.580713,
+                0.931102,
+                0.634826,
+                0.968504
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SUDAHDAPAIDIGANGKAN",
+              "confidence": 0.258,
+              "bbox_norm": [
+                0.637644,
+                0.931102,
+                0.798212,
+                0.968504
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Panjarg E",
+          "confidence": 0.221,
+          "bbox_norm": [
+            0.066461,
+            0.094871,
+            0.128941,
+            0.143318
+          ],
+          "tokens": [
+            {
+              "text": "Panjarg",
+              "confidence": 0.221,
+              "bbox_norm": [
+                0.066461,
+                0.094871,
+                0.118249,
+                0.143318
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "E",
+              "confidence": 0.221,
+              "bbox_norm": [
+                0.120795,
+                0.094871,
+                0.128941,
+                0.143318
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Charre",
+          "confidence": 0.336,
+          "bbox_norm": [
+            0.735733,
+            0.681555,
+            0.789171,
+            0.725925
+          ],
+          "tokens": [
+            {
+              "text": "Charre",
+              "confidence": 0.336,
+              "bbox_norm": [
+                0.735733,
+                0.681555,
+                0.789171,
+                0.725925
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "4c:",
+          "confidence": 0.555,
+          "bbox_norm": [
+            0.057113,
+            0.7301,
+            0.099975,
+            0.7699
+          ],
+          "tokens": [
+            {
+              "text": "4c:",
+              "confidence": 0.555,
+              "bbox_norm": [
+                0.057113,
+                0.7301,
+                0.099975,
+                0.7699
+              ],
+              "_estimated": false
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.049808,
+            0.041339,
+            0.885057,
+            0.214567
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PI.SANPLE SARANA ABADI INVOICE Number 0ooooj45 Ruko Graha Arteri Nas Blok 101 No.! , Jakarta 12223 I"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.052363,
+            0.088583,
+            0.913155,
+            0.391732
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Blok 101 No.! , Jakarta 12223 Inv. Date Fux (62-21) 58453581 Due Date Salesman DINAS IYO Customer SA"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.057113,
+            0.340551,
+            0.936143,
+            0.7699
+          ],
+          "confidence": 0.94,
+          "text_snippet": "No. Product Description Quantity UOM Amount GOLD-RING, ( 749X.133) Pcs 19.04 11424 114.24 RING Pcs 3"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.057471,
+            0.757874,
+            0.798212,
+            0.968504
+          ],
+          "confidence": 0.9,
+          "text_snippet": "AN:PI. SANPLE SARANA ABADI PENBAYARANDENGANCHECUE BGDLANGGAPLUNAS APABLA SUDAHDAPAIDIGANGKAN"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.057471,
+            0.34252,
+            0.386973,
+            0.793307
+          ],
+          "headers": [
+            "No.",
+            "Product",
+            "Description"
+          ],
+          "rows": [
+            [
+              "GOLD-RING,",
+              "(",
+              "749X.133)"
+            ],
+            [
+              "Iiga",
+              "Ribu",
+              "Lima",
+              "Ratus",
+              "Iiga",
+              "Belas",
+              "Singapore"
+            ],
+            [
+              "Dollar",
+              "Koma",
+              "Lima",
+              "Ratus",
+              "Tizz",
+              "Puluh",
+              "Dua"
+            ],
+            [
+              "AN:PI.",
+              "SANPLE",
+              "SARANA",
+              "ABADI"
+            ]
+          ],
+          "row_count": 4,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

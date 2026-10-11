@@ -1,0 +1,3246 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 388,
+      "height": 521,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.277,
+      "quality": {},
+      "lines": [
+        {
+          "text": "PT TANI WAJU Sc_AHTERA",
+          "confidence": 0.239,
+          "bbox_norm": [
+            0.363402,
+            0.040307,
+            0.657216,
+            0.067179
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.363402,
+                0.040307,
+                0.393662,
+                0.067179
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "TANI",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.39839,
+                0.040307,
+                0.449858,
+                0.067179
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "WAJU",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.454586,
+                0.040307,
+                0.519563,
+                0.067179
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sc_AHTERA",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.524291,
+                0.040307,
+                0.657216,
+                0.067179
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ray Krbun Hij2J No. 12,Subang; Wcs: Java Irrnrsa",
+          "confidence": 0.106,
+          "bbox_norm": [
+            0.25,
+            0.059501,
+            0.796392,
+            0.090211
+          ],
+          "tokens": [
+            {
+              "text": "Ray",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.25,
+                0.059501,
+                0.291793,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Krbun",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.296481,
+                0.059501,
+                0.365065,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hij2J",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.369753,
+                0.059501,
+                0.431907,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.436596,
+                0.059501,
+                0.471021,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12,Subang;",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.47571,
+                0.059501,
+                0.588498,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Wcs:",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.593186,
+                0.059501,
+                0.645427,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Java",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.650116,
+                0.059501,
+                0.705304,
+                0.090211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Irrnrsa",
+              "confidence": 0.106,
+              "bbox_norm": [
+                0.709992,
+                0.059501,
+                0.796392,
+                0.090211
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Phoro",
+          "confidence": 0.322,
+          "bbox_norm": [
+            0.247423,
+            0.084453,
+            0.319588,
+            0.099808
+          ],
+          "tokens": [
+            {
+              "text": "Phoro",
+              "confidence": 0.322,
+              "bbox_norm": [
+                0.247423,
+                0.084453,
+                0.319588,
+                0.099808
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "+62-21-5551234 | Email: expsoeuqimaoo",
+          "confidence": 0.086,
+          "bbox_norm": [
+            0.31701,
+            0.082534,
+            0.770619,
+            0.109405
+          ],
+          "tokens": [
+            {
+              "text": "+62-21-5551234",
+              "confidence": 0.086,
+              "bbox_norm": [
+                0.31701,
+                0.082534,
+                0.499952,
+                0.109405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "|",
+              "confidence": 0.086,
+              "bbox_norm": [
+                0.505095,
+                0.082534,
+                0.511708,
+                0.109405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Email:",
+              "confidence": 0.086,
+              "bbox_norm": [
+                0.516851,
+                0.082534,
+                0.582534,
+                0.109405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "expsoeuqimaoo",
+              "confidence": 0.086,
+              "bbox_norm": [
+                0.587676,
+                0.082534,
+                0.770619,
+                0.109405
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "COMMEECIAL INVOICE",
+          "confidence": 0.438,
+          "bbox_norm": [
+            0.384021,
+            0.120921,
+            0.636598,
+            0.151631
+          ],
+          "tokens": [
+            {
+              "text": "COMMEECIAL",
+              "confidence": 0.438,
+              "bbox_norm": [
+                0.384021,
+                0.120921,
+                0.540691,
+                0.151631
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "INVOICE",
+              "confidence": 0.438,
+              "bbox_norm": [
+                0.545592,
+                0.120921,
+                0.636598,
+                0.151631
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Exportershppcr",
+          "confidence": 0.32,
+          "bbox_norm": [
+            0.054124,
+            0.166987,
+            0.286082,
+            0.190019
+          ],
+          "tokens": [
+            {
+              "text": "Exportershppcr",
+              "confidence": 0.32,
+              "bbox_norm": [
+                0.054124,
+                0.166987,
+                0.286082,
+                0.190019
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "InvoICc No",
+          "confidence": 0.196,
+          "bbox_norm": [
+            0.53866,
+            0.163148,
+            0.677835,
+            0.190019
+          ],
+          "tokens": [
+            {
+              "text": "InvoICc",
+              "confidence": 0.196,
+              "bbox_norm": [
+                0.53866,
+                0.163148,
+                0.637345,
+                0.190019
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.196,
+              "bbox_norm": [
+                0.643082,
+                0.163148,
+                0.677835,
+                0.190019
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "rinvizoze 07/0045",
+          "confidence": 0.219,
+          "bbox_norm": [
+            0.744845,
+            0.166987,
+            0.945876,
+            0.190019
+          ],
+          "tokens": [
+            {
+              "text": "rinvizoze",
+              "confidence": 0.219,
+              "bbox_norm": [
+                0.744845,
+                0.166987,
+                0.851076,
+                0.190019
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "07/0045",
+              "confidence": 0.219,
+              "bbox_norm": [
+                0.855782,
+                0.166987,
+                0.945876,
+                0.190019
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PT Tani Meju Scjaharra",
+          "confidence": 0.205,
+          "bbox_norm": [
+            0.048969,
+            0.18618,
+            0.291237,
+            0.213052
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.205,
+              "bbox_norm": [
+                0.048969,
+                0.18618,
+                0.075532,
+                0.213052
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tani",
+              "confidence": 0.205,
+              "bbox_norm": [
+                0.079682,
+                0.18618,
+                0.122017,
+                0.213052
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Meju",
+              "confidence": 0.205,
+              "bbox_norm": [
+                0.126168,
+                0.18618,
+                0.178938,
+                0.213052
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Scjaharra",
+              "confidence": 0.205,
+              "bbox_norm": [
+                0.183088,
+                0.18618,
+                0.291237,
+                0.213052
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Invoicc DaTZ",
+          "confidence": 0.193,
+          "bbox_norm": [
+            0.53866,
+            0.18618,
+            0.698454,
+            0.213052
+          ],
+          "tokens": [
+            {
+              "text": "Invoicc",
+              "confidence": 0.193,
+              "bbox_norm": [
+                0.53866,
+                0.18618,
+                0.627518,
+                0.213052
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "DaTZ",
+              "confidence": 0.193,
+              "bbox_norm": [
+                0.632789,
+                0.18618,
+                0.698454,
+                0.213052
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2 Jun",
+          "confidence": 0.183,
+          "bbox_norm": [
+            0.747423,
+            0.191939,
+            0.804124,
+            0.207294
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.183,
+              "bbox_norm": [
+                0.747423,
+                0.191939,
+                0.75961,
+                0.207294
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jun",
+              "confidence": 0.183,
+              "bbox_norm": [
+                0.764099,
+                0.191939,
+                0.804124,
+                0.207294
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "202e",
+          "confidence": 0.622,
+          "bbox_norm": [
+            0.82732,
+            0.18618,
+            0.889175,
+            0.213052
+          ],
+          "tokens": [
+            {
+              "text": "202e",
+              "confidence": 0.622,
+              "bbox_norm": [
+                0.82732,
+                0.18618,
+                0.889175,
+                0.213052
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Reya Kcrun Hjal N2 12,",
+          "confidence": 0.256,
+          "bbox_norm": [
+            0.079897,
+            0.209213,
+            0.332474,
+            0.232246
+          ],
+          "tokens": [
+            {
+              "text": "Reya",
+              "confidence": 0.256,
+              "bbox_norm": [
+                0.079897,
+                0.209213,
+                0.137295,
+                0.232246
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kcrun",
+              "confidence": 0.256,
+              "bbox_norm": [
+                0.142171,
+                0.209213,
+                0.2135,
+                0.232246
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hjal",
+              "confidence": 0.256,
+              "bbox_norm": [
+                0.218376,
+                0.209213,
+                0.268111,
+                0.232246
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "N2",
+              "confidence": 0.256,
+              "bbox_norm": [
+                0.272987,
+                0.209213,
+                0.301825,
+                0.232246
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12,",
+              "confidence": 0.256,
+              "bbox_norm": [
+                0.306701,
+                0.209213,
+                0.332474,
+                0.232246
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ExPortREFNo",
+          "confidence": 0.175,
+          "bbox_norm": [
+            0.53866,
+            0.209213,
+            0.724227,
+            0.232246
+          ],
+          "tokens": [
+            {
+              "text": "ExPortREFNo",
+              "confidence": 0.175,
+              "bbox_norm": [
+                0.53866,
+                0.209213,
+                0.724227,
+                0.232246
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "ExP-Pti8e92",
+          "confidence": 0.128,
+          "bbox_norm": [
+            0.760309,
+            0.209213,
+            0.904639,
+            0.232246
+          ],
+          "tokens": [
+            {
+              "text": "ExP-Pti8e92",
+              "confidence": 0.128,
+              "bbox_norm": [
+                0.760309,
+                0.209213,
+                0.904639,
+                0.232246
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "West_a12, Indooese",
+          "confidence": 0.145,
+          "bbox_norm": [
+            0.046392,
+            0.226488,
+            0.260309,
+            0.253359
+          ],
+          "tokens": [
+            {
+              "text": "West_a12,",
+              "confidence": 0.145,
+              "bbox_norm": [
+                0.046392,
+                0.226488,
+                0.156672,
+                0.253359
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Indooese",
+              "confidence": 0.145,
+              "bbox_norm": [
+                0.161323,
+                0.226488,
+                0.260309,
+                0.253359
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "REG No.1di22256709",
+          "confidence": 0.098,
+          "bbox_norm": [
+            0.054124,
+            0.25144,
+            0.286082,
+            0.274472
+          ],
+          "tokens": [
+            {
+              "text": "REG",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.054124,
+                0.25144,
+                0.103514,
+                0.274472
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.1di22256709",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.108659,
+                0.25144,
+                0.286082,
+                0.274472
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "IPORTER/CONSIGNEE",
+          "confidence": 0.318,
+          "bbox_norm": [
+            0.048969,
+            0.289827,
+            0.32732,
+            0.316699
+          ],
+          "tokens": [
+            {
+              "text": "IPORTER/CONSIGNEE",
+              "confidence": 0.318,
+              "bbox_norm": [
+                0.048969,
+                0.289827,
+                0.32732,
+                0.316699
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "ShIPpngoetails:",
+          "confidence": 0.084,
+          "bbox_norm": [
+            0.53866,
+            0.293666,
+            0.75,
+            0.316699
+          ],
+          "tokens": [
+            {
+              "text": "ShIPpngoetails:",
+              "confidence": 0.084,
+              "bbox_norm": [
+                0.53866,
+                0.293666,
+                0.75,
+                0.316699
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "el-b;",
+          "confidence": 0.113,
+          "bbox_norm": [
+            0.056701,
+            0.314779,
+            0.113402,
+            0.330134
+          ],
+          "tokens": [
+            {
+              "text": "el-b;",
+              "confidence": 0.113,
+              "bbox_norm": [
+                0.056701,
+                0.314779,
+                0.113402,
+                0.330134
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Froz Logsacs",
+          "confidence": 0.202,
+          "bbox_norm": [
+            0.121134,
+            0.31286,
+            0.265464,
+            0.335893
+          ],
+          "tokens": [
+            {
+              "text": "Froz",
+              "confidence": 0.202,
+              "bbox_norm": [
+                0.121134,
+                0.31286,
+                0.17244,
+                0.335893
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Logsacs",
+              "confidence": 0.202,
+              "bbox_norm": [
+                0.176799,
+                0.31286,
+                0.265464,
+                0.335893
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Impcrters LIc.",
+          "confidence": 0.297,
+          "bbox_norm": [
+            0.257732,
+            0.31094,
+            0.399485,
+            0.337812
+          ],
+          "tokens": [
+            {
+              "text": "Impcrters",
+              "confidence": 0.297,
+              "bbox_norm": [
+                0.257732,
+                0.31094,
+                0.359069,
+                0.337812
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LIc.",
+              "confidence": 0.297,
+              "bbox_norm": [
+                0.363267,
+                0.31094,
+                0.399485,
+                0.337812
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Colnty € Origin",
+          "confidence": 0.434,
+          "bbox_norm": [
+            0.53866,
+            0.31286,
+            0.713918,
+            0.339731
+          ],
+          "tokens": [
+            {
+              "text": "Colnty",
+              "confidence": 0.434,
+              "bbox_norm": [
+                0.53866,
+                0.31286,
+                0.618089,
+                0.339731
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "€",
+              "confidence": 0.434,
+              "bbox_norm": [
+                0.62308,
+                0.31286,
+                0.63734,
+                0.339731
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Origin",
+              "confidence": 0.434,
+              "bbox_norm": [
+                0.642331,
+                0.31286,
+                0.713918,
+                0.339731
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2Inconcss",
+          "confidence": 0.087,
+          "bbox_norm": [
+            0.747423,
+            0.318618,
+            0.85567,
+            0.333973
+          ],
+          "tokens": [
+            {
+              "text": "2Inconcss",
+              "confidence": 0.087,
+              "bbox_norm": [
+                0.747423,
+                0.318618,
+                0.85567,
+                0.333973
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "252Hartolr Vilw Doulevard, Suite 103",
+          "confidence": 0.212,
+          "bbox_norm": [
+            0.054124,
+            0.332054,
+            0.440722,
+            0.355086
+          ],
+          "tokens": [
+            {
+              "text": "252Hartolr",
+              "confidence": 0.212,
+              "bbox_norm": [
+                0.054124,
+                0.332054,
+                0.176412,
+                0.355086
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Vilw",
+              "confidence": 0.212,
+              "bbox_norm": [
+                0.180956,
+                0.332054,
+                0.220161,
+                0.355086
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Doulevard,",
+              "confidence": 0.212,
+              "bbox_norm": [
+                0.224705,
+                0.332054,
+                0.3418,
+                0.355086
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Suite",
+              "confidence": 0.212,
+              "bbox_norm": [
+                0.346344,
+                0.332054,
+                0.405671,
+                0.355086
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "103",
+              "confidence": 0.212,
+              "bbox_norm": [
+                0.410214,
+                0.332054,
+                0.440722,
+                0.355086
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jesonv on",
+          "confidence": 0.074,
+          "bbox_norm": [
+            0.541237,
+            0.337812,
+            0.654639,
+            0.353167
+          ],
+          "tokens": [
+            {
+              "text": "Jesonv",
+              "confidence": 0.074,
+              "bbox_norm": [
+                0.541237,
+                0.337812,
+                0.623176,
+                0.353167
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "on",
+              "confidence": 0.074,
+              "bbox_norm": [
+                0.627862,
+                0.337812,
+                0.654639,
+                0.353167
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "= Jaran",
+          "confidence": 0.163,
+          "bbox_norm": [
+            0.747423,
+            0.337812,
+            0.824742,
+            0.353167
+          ],
+          "tokens": [
+            {
+              "text": "=",
+              "confidence": 0.163,
+              "bbox_norm": [
+                0.747423,
+                0.337812,
+                0.759373,
+                0.353167
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jaran",
+              "confidence": 0.163,
+              "bbox_norm": [
+                0.763556,
+                0.337812,
+                0.824742,
+                0.353167
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Tokyo; 135 0084 Jarar",
+          "confidence": 0.345,
+          "bbox_norm": [
+            0.054124,
+            0.355086,
+            0.286082,
+            0.378119
+          ],
+          "tokens": [
+            {
+              "text": "Tokyo;",
+              "confidence": 0.345,
+              "bbox_norm": [
+                0.054124,
+                0.355086,
+                0.126343,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "135",
+              "confidence": 0.345,
+              "bbox_norm": [
+                0.130881,
+                0.355086,
+                0.161351,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "0084",
+              "confidence": 0.345,
+              "bbox_norm": [
+                0.165889,
+                0.355086,
+                0.215159,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jarar",
+              "confidence": 0.345,
+              "bbox_norm": [
+                0.219697,
+                0.355086,
+                0.286082,
+                0.378119
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pcto Lraring",
+          "confidence": 0.195,
+          "bbox_norm": [
+            0.53866,
+            0.355086,
+            0.698454,
+            0.378119
+          ],
+          "tokens": [
+            {
+              "text": "Pcto",
+              "confidence": 0.195,
+              "bbox_norm": [
+                0.53866,
+                0.355086,
+                0.598293,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lraring",
+              "confidence": 0.195,
+              "bbox_norm": [
+                0.603359,
+                0.355086,
+                0.698454,
+                0.378119
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Tanjung Pnok; Jkt",
+          "confidence": 0.42,
+          "bbox_norm": [
+            0.755155,
+            0.355086,
+            0.940722,
+            0.378119
+          ],
+          "tokens": [
+            {
+              "text": "Tanjung",
+              "confidence": 0.42,
+              "bbox_norm": [
+                0.755155,
+                0.355086,
+                0.840341,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pnok;",
+              "confidence": 0.42,
+              "bbox_norm": [
+                0.844528,
+                0.355086,
+                0.899205,
+                0.378119
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jkt",
+              "confidence": 0.42,
+              "bbox_norm": [
+                0.903393,
+                0.355086,
+                0.940722,
+                0.378119
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Al Ne",
+          "confidence": 0.061,
+          "bbox_norm": [
+            0.051546,
+            0.3762,
+            0.134021,
+            0.391555
+          ],
+          "tokens": [
+            {
+              "text": "Al",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.051546,
+                0.3762,
+                0.083597,
+                0.391555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ne",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.090742,
+                0.3762,
+                0.134021,
+                0.391555
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "0Discharge",
+          "confidence": 0.261,
+          "bbox_norm": [
+            0.585052,
+            0.37428,
+            0.719072,
+            0.401152
+          ],
+          "tokens": [
+            {
+              "text": "0Discharge",
+              "confidence": 0.261,
+              "bbox_norm": [
+                0.585052,
+                0.37428,
+                0.719072,
+                0.401152
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": ":Portof Tzkyo Jeoen",
+          "confidence": 0.217,
+          "bbox_norm": [
+            0.744845,
+            0.37428,
+            0.96134,
+            0.401152
+          ],
+          "tokens": [
+            {
+              "text": ":Portof",
+              "confidence": 0.217,
+              "bbox_norm": [
+                0.744845,
+                0.37428,
+                0.826077,
+                0.401152
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tzkyo",
+              "confidence": 0.217,
+              "bbox_norm": [
+                0.830405,
+                0.37428,
+                0.893709,
+                0.401152
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jeoen",
+              "confidence": 0.217,
+              "bbox_norm": [
+                0.898036,
+                0.37428,
+                0.96134,
+                0.401152
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Carner / Verzel",
+          "confidence": 0.35,
+          "bbox_norm": [
+            0.53866,
+            0.397313,
+            0.698454,
+            0.420345
+          ],
+          "tokens": [
+            {
+              "text": "Carner",
+              "confidence": 0.35,
+              "bbox_norm": [
+                0.53866,
+                0.397313,
+                0.611695,
+                0.420345
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/",
+              "confidence": 0.35,
+              "bbox_norm": [
+                0.615872,
+                0.397313,
+                0.627805,
+                0.420345
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Verzel",
+              "confidence": 0.35,
+              "bbox_norm": [
+                0.631982,
+                0.397313,
+                0.698454,
+                0.420345
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ocan Star V.OZ4N",
+          "confidence": 0.708,
+          "bbox_norm": [
+            0.760309,
+            0.397313,
+            0.956186,
+            0.420345
+          ],
+          "tokens": [
+            {
+              "text": "Ocan",
+              "confidence": 0.708,
+              "bbox_norm": [
+                0.760309,
+                0.397313,
+                0.814763,
+                0.420345
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Star",
+              "confidence": 0.708,
+              "bbox_norm": [
+                0.819389,
+                0.397313,
+                0.873844,
+                0.420345
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "V.OZ4N",
+              "confidence": 0.708,
+              "bbox_norm": [
+                0.878469,
+                0.397313,
+                0.956186,
+                0.420345
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Notify PaRTY:",
+          "confidence": 0.534,
+          "bbox_norm": [
+            0.054124,
+            0.416507,
+            0.224227,
+            0.443378
+          ],
+          "tokens": [
+            {
+              "text": "Notify",
+              "confidence": 0.534,
+              "bbox_norm": [
+                0.054124,
+                0.416507,
+                0.134079,
+                0.443378
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PaRTY:",
+              "confidence": 0.534,
+              "bbox_norm": [
+                0.139103,
+                0.416507,
+                0.224227,
+                0.443378
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Si5 Laono ND",
+          "confidence": 0.154,
+          "bbox_norm": [
+            0.541237,
+            0.422265,
+            0.701031,
+            0.43762
+          ],
+          "tokens": [
+            {
+              "text": "Si5",
+              "confidence": 0.154,
+              "bbox_norm": [
+                0.541237,
+                0.422265,
+                0.579298,
+                0.43762
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Laono",
+              "confidence": 0.154,
+              "bbox_norm": [
+                0.584584,
+                0.422265,
+                0.661913,
+                0.43762
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ND",
+              "confidence": 0.154,
+              "bbox_norm": [
+                0.667199,
+                0.422265,
+                0.701031,
+                0.43762
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "OSTRJKt77210",
+          "confidence": 0.43,
+          "bbox_norm": [
+            0.760309,
+            0.416507,
+            0.930412,
+            0.443378
+          ],
+          "tokens": [
+            {
+              "text": "OSTRJKt77210",
+              "confidence": 0.43,
+              "bbox_norm": [
+                0.760309,
+                0.416507,
+                0.930412,
+                0.443378
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "S2me 25 Consigrec",
+          "confidence": 0.189,
+          "bbox_norm": [
+            0.048969,
+            0.439539,
+            0.255155,
+            0.462572
+          ],
+          "tokens": [
+            {
+              "text": "S2me",
+              "confidence": 0.189,
+              "bbox_norm": [
+                0.048969,
+                0.439539,
+                0.104033,
+                0.462572
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "25",
+              "confidence": 0.189,
+              "bbox_norm": [
+                0.108768,
+                0.439539,
+                0.134474,
+                0.462572
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Consigrec",
+              "confidence": 0.189,
+              "bbox_norm": [
+                0.139209,
+                0.439539,
+                0.255155,
+                0.462572
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Bil 2 Ladng No",
+          "confidence": 0.294,
+          "bbox_norm": [
+            0.53866,
+            0.439539,
+            0.708763,
+            0.466411
+          ],
+          "tokens": [
+            {
+              "text": "Bil",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.53866,
+                0.439539,
+                0.569176,
+                0.466411
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.574463,
+                0.439539,
+                0.588815,
+                0.466411
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ladng",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.594102,
+                0.439539,
+                0.671449,
+                0.466411
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.676736,
+                0.439539,
+                0.708763,
+                0.466411
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "OSTRJKT77210",
+          "confidence": 0.617,
+          "bbox_norm": [
+            0.760309,
+            0.439539,
+            0.930412,
+            0.462572
+          ],
+          "tokens": [
+            {
+              "text": "OSTRJKT77210",
+              "confidence": 0.617,
+              "bbox_norm": [
+                0.760309,
+                0.439539,
+                0.930412,
+                0.462572
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Peyteni",
+          "confidence": 0.337,
+          "bbox_norm": [
+            0.53866,
+            0.458733,
+            0.631443,
+            0.481766
+          ],
+          "tokens": [
+            {
+              "text": "Peyteni",
+              "confidence": 0.337,
+              "bbox_norm": [
+                0.53866,
+                0.458733,
+                0.631443,
+                0.481766
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "2 10096 Irevccablelc",
+          "confidence": 0.251,
+          "bbox_norm": [
+            0.744845,
+            0.454894,
+            0.96134,
+            0.483685
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.251,
+              "bbox_norm": [
+                0.744845,
+                0.454894,
+                0.757502,
+                0.483685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "10096",
+              "confidence": 0.251,
+              "bbox_norm": [
+                0.762165,
+                0.454894,
+                0.818787,
+                0.483685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Irevccablelc",
+              "confidence": 0.251,
+              "bbox_norm": [
+                0.82345,
+                0.454894,
+                0.96134,
+                0.483685
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "REGULATORY",
+          "confidence": 0.56,
+          "bbox_norm": [
+            0.054124,
+            0.50096,
+            0.208763,
+            0.527831
+          ],
+          "tokens": [
+            {
+              "text": "REGULATORY",
+              "confidence": 0.56,
+              "bbox_norm": [
+                0.054124,
+                0.50096,
+                0.208763,
+                0.527831
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Food SAFETY COMPLIANCE",
+          "confidence": 0.47,
+          "bbox_norm": [
+            0.224227,
+            0.50096,
+            0.533505,
+            0.527831
+          ],
+          "tokens": [
+            {
+              "text": "Food",
+              "confidence": 0.47,
+              "bbox_norm": [
+                0.224227,
+                0.50096,
+                0.281112,
+                0.527831
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SAFETY",
+              "confidence": 0.47,
+              "bbox_norm": [
+                0.285944,
+                0.50096,
+                0.378728,
+                0.527831
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "COMPLIANCE",
+              "confidence": 0.47,
+              "bbox_norm": [
+                0.38356,
+                0.50096,
+                0.533505,
+                0.527831
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Phylosunilary Ccrt No 0iKti202600124",
+          "confidence": 0.175,
+          "bbox_norm": [
+            0.064433,
+            0.523992,
+            0.476804,
+            0.547025
+          ],
+          "tokens": [
+            {
+              "text": "Phylosunilary",
+              "confidence": 0.175,
+              "bbox_norm": [
+                0.064433,
+                0.523992,
+                0.218101,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ccrt",
+              "confidence": 0.175,
+              "bbox_norm": [
+                0.22279,
+                0.523992,
+                0.277987,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.175,
+              "bbox_norm": [
+                0.282676,
+                0.523992,
+                0.311079,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "0iKti202600124",
+              "confidence": 0.175,
+              "bbox_norm": [
+                0.315768,
+                0.523992,
+                0.476804,
+                0.547025
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Storagc Troo : Rrefer Ccolainer (18 C)",
+          "confidence": 0.078,
+          "bbox_norm": [
+            0.554124,
+            0.523992,
+            0.945876,
+            0.547025
+          ],
+          "tokens": [
+            {
+              "text": "Storagc",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.554124,
+                0.523992,
+                0.64008,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Troo",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.644305,
+                0.523992,
+                0.694044,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.698269,
+                0.523992,
+                0.703702,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rrefer",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.707927,
+                0.523992,
+                0.781811,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ccolainer",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.786036,
+                0.523992,
+                0.882858,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(18",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.887083,
+                0.523992,
+                0.916057,
+                0.547025
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "C)",
+              "confidence": 0.078,
+              "bbox_norm": [
+                0.920283,
+                0.523992,
+                0.945876,
+                0.547025
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Origin No",
+          "confidence": 0.603,
+          "bbox_norm": [
+            0.136598,
+            0.543186,
+            0.234536,
+            0.566219
+          ],
+          "tokens": [
+            {
+              "text": "Origin",
+              "confidence": 0.603,
+              "bbox_norm": [
+                0.136598,
+                0.543186,
+                0.202239,
+                0.566219
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.603,
+              "bbox_norm": [
+                0.206815,
+                0.543186,
+                0.234536,
+                0.566219
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2026 Coo-99012",
+          "confidence": 0.208,
+          "bbox_norm": [
+            0.311856,
+            0.543186,
+            0.492268,
+            0.570058
+          ],
+          "tokens": [
+            {
+              "text": "2026",
+              "confidence": 0.208,
+              "bbox_norm": [
+                0.311856,
+                0.543186,
+                0.366613,
+                0.570058
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Coo-99012",
+              "confidence": 0.208,
+              "bbox_norm": [
+                0.371657,
+                0.543186,
+                0.492268,
+                0.570058
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JP-Maffn2 : JP-MAff 90422",
+          "confidence": 0.058,
+          "bbox_norm": [
+            0.548969,
+            0.543186,
+            0.873711,
+            0.570058
+          ],
+          "tokens": [
+            {
+              "text": "JP-Maffn2",
+              "confidence": 0.058,
+              "bbox_norm": [
+                0.548969,
+                0.543186,
+                0.681058,
+                0.570058
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.058,
+              "bbox_norm": [
+                0.685854,
+                0.543186,
+                0.69202,
+                0.570058
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JP-MAff",
+              "confidence": 0.058,
+              "bbox_norm": [
+                0.696816,
+                0.543186,
+                0.80383,
+                0.570058
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "90422",
+              "confidence": 0.058,
+              "bbox_norm": [
+                0.808626,
+                0.543186,
+                0.873711,
+                0.570058
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "MaRks",
+          "confidence": 0.141,
+          "bbox_norm": [
+            0.06701,
+            0.59501,
+            0.149485,
+            0.610365
+          ],
+          "tokens": [
+            {
+              "text": "MaRks",
+              "confidence": 0.141,
+              "bbox_norm": [
+                0.06701,
+                0.59501,
+                0.149485,
+                0.610365
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "deScRIPTION OF",
+          "confidence": 0.133,
+          "bbox_norm": [
+            0.255155,
+            0.59309,
+            0.445876,
+            0.619962
+          ],
+          "tokens": [
+            {
+              "text": "deScRIPTION",
+              "confidence": 0.133,
+              "bbox_norm": [
+                0.255155,
+                0.59309,
+                0.408483,
+                0.619962
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "OF",
+              "confidence": 0.133,
+              "bbox_norm": [
+                0.413536,
+                0.59309,
+                0.445876,
+                0.619962
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "quentiTy",
+          "confidence": 0.112,
+          "bbox_norm": [
+            0.474227,
+            0.59501,
+            0.582474,
+            0.610365
+          ],
+          "tokens": [
+            {
+              "text": "quentiTy",
+              "confidence": 0.112,
+              "bbox_norm": [
+                0.474227,
+                0.59501,
+                0.582474,
+                0.610365
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "NETWT [KG}",
+          "confidence": 0.597,
+          "bbox_norm": [
+            0.615979,
+            0.59309,
+            0.765464,
+            0.619962
+          ],
+          "tokens": [
+            {
+              "text": "NETWT",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.615979,
+                0.59309,
+                0.700242,
+                0.619962
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "[KG}",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.705215,
+                0.59309,
+                0.765464,
+                0.619962
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "TOTAL (UsD)",
+          "confidence": 0.624,
+          "bbox_norm": [
+            0.796392,
+            0.59309,
+            0.940722,
+            0.619962
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.624,
+              "bbox_norm": [
+                0.796392,
+                0.59309,
+                0.868621,
+                0.619962
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(UsD)",
+              "confidence": 0.624,
+              "bbox_norm": [
+                0.873136,
+                0.59309,
+                0.940722,
+                0.619962
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "contAINER",
+          "confidence": 0.349,
+          "bbox_norm": [
+            0.085052,
+            0.612284,
+            0.224227,
+            0.635317
+          ],
+          "tokens": [
+            {
+              "text": "contAINER",
+              "confidence": 0.349,
+              "bbox_norm": [
+                0.085052,
+                0.612284,
+                0.224227,
+                0.635317
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "GooD;",
+          "confidence": 0.164,
+          "bbox_norm": [
+            0.306701,
+            0.612284,
+            0.399485,
+            0.635317
+          ],
+          "tokens": [
+            {
+              "text": "GooD;",
+              "confidence": 0.164,
+              "bbox_norm": [
+                0.306701,
+                0.612284,
+                0.399485,
+                0.635317
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "(BAGs)",
+          "confidence": 0.296,
+          "bbox_norm": [
+            0.487113,
+            0.612284,
+            0.574742,
+            0.635317
+          ],
+          "tokens": [
+            {
+              "text": "(BAGs)",
+              "confidence": 0.296,
+              "bbox_norm": [
+                0.487113,
+                0.612284,
+                0.574742,
+                0.635317
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "CONT:",
+          "confidence": 0.588,
+          "bbox_norm": [
+            0.064433,
+            0.666027,
+            0.136598,
+            0.68906
+          ],
+          "tokens": [
+            {
+              "text": "CONT:",
+              "confidence": 0.588,
+              "bbox_norm": [
+                0.064433,
+                0.666027,
+                0.136598,
+                0.68906
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Crgrnic @2vo Cofer",
+          "confidence": 0.181,
+          "bbox_norm": [
+            0.244845,
+            0.666027,
+            0.456186,
+            0.68906
+          ],
+          "tokens": [
+            {
+              "text": "Crgrnic",
+              "confidence": 0.181,
+              "bbox_norm": [
+                0.244845,
+                0.666027,
+                0.327544,
+                0.68906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@2vo",
+              "confidence": 0.181,
+              "bbox_norm": [
+                0.331949,
+                0.666027,
+                0.387333,
+                0.68906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Cofer",
+              "confidence": 0.181,
+              "bbox_norm": [
+                0.391739,
+                0.666027,
+                0.456186,
+                0.68906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "19 200",
+          "confidence": 0.736,
+          "bbox_norm": [
+            0.652062,
+            0.666027,
+            0.729381,
+            0.68906
+          ],
+          "tokens": [
+            {
+              "text": "19",
+              "confidence": 0.736,
+              "bbox_norm": [
+                0.652062,
+                0.666027,
+                0.675594,
+                0.68906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "200",
+              "confidence": 0.736,
+              "bbox_norm": [
+                0.681477,
+                0.666027,
+                0.729381,
+                0.68906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "5124 Q00",
+          "confidence": 0.394,
+          "bbox_norm": [
+            0.847938,
+            0.666027,
+            0.951031,
+            0.68906
+          ],
+          "tokens": [
+            {
+              "text": "5124",
+              "confidence": 0.394,
+              "bbox_norm": [
+                0.847938,
+                0.666027,
+                0.898944,
+                0.68906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Q00",
+              "confidence": 0.394,
+              "bbox_norm": [
+                0.904353,
+                0.666027,
+                0.951031,
+                0.68906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "UxXU 12345",
+          "confidence": 0.44,
+          "bbox_norm": [
+            0.064433,
+            0.681382,
+            0.198454,
+            0.704415
+          ],
+          "tokens": [
+            {
+              "text": "UxXU",
+              "confidence": 0.44,
+              "bbox_norm": [
+                0.064433,
+                0.681382,
+                0.129648,
+                0.704415
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12345",
+              "confidence": 0.44,
+              "bbox_norm": [
+                0.134884,
+                0.681382,
+                0.198454,
+                0.704415
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Bcans Grade",
+          "confidence": 0.324,
+          "bbox_norm": [
+            0.239691,
+            0.681382,
+            0.378866,
+            0.704415
+          ],
+          "tokens": [
+            {
+              "text": "Bcans",
+              "confidence": 0.324,
+              "bbox_norm": [
+                0.239691,
+                0.681382,
+                0.306978,
+                0.704415
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Grade",
+              "confidence": 0.324,
+              "bbox_norm": [
+                0.311578,
+                0.681382,
+                0.378866,
+                0.704415
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SGald-005843",
+          "confidence": 0.073,
+          "bbox_norm": [
+            0.06701,
+            0.702495,
+            0.221649,
+            0.71785
+          ],
+          "tokens": [
+            {
+              "text": "SGald-005843",
+              "confidence": 0.073,
+              "bbox_norm": [
+                0.06701,
+                0.702495,
+                0.221649,
+                0.71785
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Wot",
+          "confidence": 0.005,
+          "bbox_norm": [
+            0.247423,
+            0.706334,
+            0.376289,
+            0.71785
+          ],
+          "tokens": [
+            {
+              "text": "Wot",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.247423,
+                0.706334,
+                0.376289,
+                0.71785
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Lo: : A-2026",
+          "confidence": 0.347,
+          "bbox_norm": [
+            0.064433,
+            0.71977,
+            0.193299,
+            0.742802
+          ],
+          "tokens": [
+            {
+              "text": "Lo:",
+              "confidence": 0.347,
+              "bbox_norm": [
+                0.064433,
+                0.71977,
+                0.098788,
+                0.742802
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.347,
+              "bbox_norm": [
+                0.103467,
+                0.71977,
+                0.109483,
+                0.742802
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A-2026",
+              "confidence": 0.347,
+              "bbox_norm": [
+                0.114161,
+                0.71977,
+                0.193299,
+                0.742802
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "CONT:",
+          "confidence": 0.599,
+          "bbox_norm": [
+            0.064433,
+            0.754319,
+            0.136598,
+            0.777351
+          ],
+          "tokens": [
+            {
+              "text": "CONT:",
+              "confidence": 0.599,
+              "bbox_norm": [
+                0.064433,
+                0.754319,
+                0.136598,
+                0.777351
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Drird Crgrnic @ngrr",
+          "confidence": 0.294,
+          "bbox_norm": [
+            0.239691,
+            0.754319,
+            0.451031,
+            0.777351
+          ],
+          "tokens": [
+            {
+              "text": "Drird",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.239691,
+                0.754319,
+                0.295551,
+                0.777351
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Crgrnic",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.299829,
+                0.754319,
+                0.380136,
+                0.777351
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@ngrr",
+              "confidence": 0.294,
+              "bbox_norm": [
+                0.384414,
+                0.754319,
+                0.451031,
+                0.777351
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "5,Ol0",
+          "confidence": 0.275,
+          "bbox_norm": [
+            0.652062,
+            0.754319,
+            0.719072,
+            0.777351
+          ],
+          "tokens": [
+            {
+              "text": "5,Ol0",
+              "confidence": 0.275,
+              "bbox_norm": [
+                0.652062,
+                0.754319,
+                0.719072,
+                0.777351
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "521 Ooo",
+          "confidence": 0.115,
+          "bbox_norm": [
+            0.863402,
+            0.754319,
+            0.951031,
+            0.777351
+          ],
+          "tokens": [
+            {
+              "text": "521",
+              "confidence": 0.115,
+              "bbox_norm": [
+                0.863402,
+                0.754319,
+                0.898785,
+                0.777351
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ooo",
+              "confidence": 0.115,
+              "bbox_norm": [
+                0.904055,
+                0.754319,
+                0.951031,
+                0.777351
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "UXXV12345",
+          "confidence": 0.081,
+          "bbox_norm": [
+            0.064433,
+            0.773512,
+            0.198454,
+            0.796545
+          ],
+          "tokens": [
+            {
+              "text": "UXXV12345",
+              "confidence": 0.081,
+              "bbox_norm": [
+                0.064433,
+                0.773512,
+                0.198454,
+                0.796545
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Sfces Wzistur 1036",
+          "confidence": 0.11,
+          "bbox_norm": [
+            0.239691,
+            0.773512,
+            0.451031,
+            0.796545
+          ],
+          "tokens": [
+            {
+              "text": "Sfces",
+              "confidence": 0.11,
+              "bbox_norm": [
+                0.239691,
+                0.773512,
+                0.307235,
+                0.796545
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Wzistur",
+              "confidence": 0.11,
+              "bbox_norm": [
+                0.311852,
+                0.773512,
+                0.402879,
+                0.796545
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "1036",
+              "confidence": 0.11,
+              "bbox_norm": [
+                0.407496,
+                0.773512,
+                0.451031,
+                0.796545
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SGald-005843",
+          "confidence": 0.073,
+          "bbox_norm": [
+            0.06701,
+            0.790787,
+            0.221649,
+            0.806142
+          ],
+          "tokens": [
+            {
+              "text": "SGald-005843",
+              "confidence": 0.073,
+              "bbox_norm": [
+                0.06701,
+                0.790787,
+                0.221649,
+                0.806142
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "ue",
+          "confidence": 0.219,
+          "bbox_norm": [
+            0.128866,
+            0.81382,
+            0.185567,
+            0.825336
+          ],
+          "tokens": [
+            {
+              "text": "ue",
+              "confidence": 0.219,
+              "bbox_norm": [
+                0.128866,
+                0.81382,
+                0.185567,
+                0.825336
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Total",
+          "confidence": 0.199,
+          "bbox_norm": [
+            0.06701,
+            0.84453,
+            0.134021,
+            0.859885
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.199,
+              "bbox_norm": [
+                0.06701,
+                0.84453,
+                0.134021,
+                0.859885
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "24,200 *g",
+          "confidence": 0.383,
+          "bbox_norm": [
+            0.631443,
+            0.84261,
+            0.739691,
+            0.865643
+          ],
+          "tokens": [
+            {
+              "text": "24,200",
+              "confidence": 0.383,
+              "bbox_norm": [
+                0.631443,
+                0.84261,
+                0.705998,
+                0.865643
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "*g",
+              "confidence": 0.383,
+              "bbox_norm": [
+                0.711016,
+                0.84261,
+                0.739691,
+                0.865643
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "8145,800",
+          "confidence": 0.546,
+          "bbox_norm": [
+            0.847938,
+            0.84261,
+            0.951031,
+            0.869482
+          ],
+          "tokens": [
+            {
+              "text": "8145,800",
+              "confidence": 0.546,
+              "bbox_norm": [
+                0.847938,
+                0.84261,
+                0.951031,
+                0.869482
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "TotaL SaY IN Words:",
+          "confidence": 0.232,
+          "bbox_norm": [
+            0.054124,
+            0.888676,
+            0.296392,
+            0.915547
+          ],
+          "tokens": [
+            {
+              "text": "TotaL",
+              "confidence": 0.232,
+              "bbox_norm": [
+                0.054124,
+                0.888676,
+                0.128799,
+                0.915547
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SaY",
+              "confidence": 0.232,
+              "bbox_norm": [
+                0.133787,
+                0.888676,
+                0.179961,
+                0.915547
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "IN",
+              "confidence": 0.232,
+              "bbox_norm": [
+                0.184948,
+                0.888676,
+                0.207323,
+                0.915547
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Words:",
+              "confidence": 0.232,
+              "bbox_norm": [
+                0.21231,
+                0.888676,
+                0.296392,
+                0.915547
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "'Cne Hunco Fory-five Tnousano Ex?r: Huinoro Us Dowars Ony*",
+          "confidence": 0.069,
+          "bbox_norm": [
+            0.059278,
+            0.911708,
+            0.719072,
+            0.93858
+          ],
+          "tokens": [
+            {
+              "text": "'Cne",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.059278,
+                0.911708,
+                0.104856,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hunco",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.109325,
+                0.911708,
+                0.174691,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Fory-five",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.17916,
+                0.911708,
+                0.288572,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tnousano",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.29304,
+                0.911708,
+                0.396708,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ex?r:",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.401176,
+                0.911708,
+                0.459521,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Huinoro",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.463989,
+                0.911708,
+                0.547868,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Us",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.552336,
+                0.911708,
+                0.579402,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dowars",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.583871,
+                0.911708,
+                0.662004,
+                0.93858
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ony*",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.666473,
+                0.911708,
+                0.719072,
+                0.93858
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Sufarg",
+          "confidence": 0.331,
+          "bbox_norm": [
+            0.329979,
+            0.205732,
+            0.414867,
+            0.235727
+          ],
+          "tokens": [
+            {
+              "text": "Sufarg",
+              "confidence": 0.331,
+              "bbox_norm": [
+                0.329979,
+                0.205732,
+                0.414867,
+                0.235727
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Kerj sao",
+          "confidence": 0.185,
+          "bbox_norm": [
+            0.134388,
+            0.371725,
+            0.239323,
+            0.397949
+          ],
+          "tokens": [
+            {
+              "text": "Kerj",
+              "confidence": 0.185,
+              "bbox_norm": [
+                0.134388,
+                0.371725,
+                0.192264,
+                0.397949
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sao",
+              "confidence": 0.185,
+              "bbox_norm": [
+                0.197181,
+                0.371725,
+                0.239323,
+                0.397949
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Cenci",
+          "confidence": 0.329,
+          "bbox_norm": [
+            0.061928,
+            0.541712,
+            0.141681,
+            0.567693
+          ],
+          "tokens": [
+            {
+              "text": "Cenci",
+              "confidence": 0.329,
+              "bbox_norm": [
+                0.061928,
+                0.541712,
+                0.141681,
+                0.567693
+              ],
+              "_estimated": false
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.054124,
+            0.040307,
+            0.945876,
+            0.190019
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT TANI WAJU Sc_AHTERA Ray Krbun Hij2J No. 12,Subang; Wcs: Java Irrnrsa Phoro +62-21-5551234 | Email"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.046392,
+            0.059501,
+            0.96134,
+            0.401152
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Ray Krbun Hij2J No. 12,Subang; Wcs: Java Irrnrsa Exportershppcr InvoICc No rinvizoze 07/0045 PT Tani"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.048969,
+            0.355086,
+            0.96134,
+            0.742802
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Tokyo; 135 0084 Jarar Pcto Lraring Tanjung Pnok; Jkt Al Ne 0Discharge :Portof Tzkyo Jeoen Carner / V"
+        },
+        {
+          "region_type": "totals",
+          "bbox_norm": [
+            0.054124,
+            0.84453,
+            0.296392,
+            0.915547
+          ],
+          "confidence": 0.95,
+          "text_snippet": "Total TotaL SaY IN Words:"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.054124,
+            0.754319,
+            0.951031,
+            0.93858
+          ],
+          "confidence": 0.9,
+          "text_snippet": "CONT: Drird Crgrnic @ngrr 5,Ol0 521 Ooo UXXV12345 Sfces Wzistur 1036 SGald-005843 ue Total 24,200 *g"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.048969,
+            0.332054,
+            0.96134,
+            0.777351
+          ],
+          "headers": [
+            "252Hartolr",
+            "Vilw",
+            "Doulevard,",
+            "Suite",
+            "103"
+          ],
+          "rows": [
+            [
+              "Tokyo;",
+              "135",
+              "0084",
+              "Jarar"
+            ],
+            [
+              "Tanjung",
+              "Pnok;",
+              "Jkt"
+            ],
+            [
+              ":Portof",
+              "Tzkyo",
+              "Jeoen"
+            ],
+            [
+              "Carner",
+              "/",
+              "Verzel"
+            ],
+            [
+              "Ocan",
+              "Star",
+              "V.OZ4N"
+            ],
+            [
+              "Si5",
+              "Laono",
+              "ND"
+            ],
+            [
+              "S2me",
+              "25",
+              "Consigrec"
+            ],
+            [
+              "Bil",
+              "2",
+              "Ladng",
+              "No"
+            ],
+            [
+              "2",
+              "10096",
+              "Irevccablelc"
+            ],
+            [
+              "Food",
+              "SAFETY",
+              "COMPLIANCE"
+            ],
+            [
+              "Phylosunilary",
+              "Ccrt",
+              "No",
+              "0iKti202600124"
+            ],
+            [
+              "Storagc",
+              "Troo",
+              ":",
+              "Rrefer",
+              "Ccolainer",
+              "(18",
+              "C)"
+            ],
+            [
+              "JP-Maffn2",
+              ":",
+              "JP-MAff",
+              "90422"
+            ],
+            [
+              "Crgrnic",
+              "@2vo",
+              "Cofer"
+            ],
+            [
+              "Lo:",
+              ":",
+              "A-2026"
+            ],
+            [
+              "Drird",
+              "Crgrnic",
+              "@ngrr"
+            ]
+          ],
+          "row_count": 16,
+          "col_count": 5,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

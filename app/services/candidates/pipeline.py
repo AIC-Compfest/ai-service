@@ -54,6 +54,10 @@ class CandidatePipeline:
             return self._party_candidates(page)
         if cand_type == "enum":
             return [self._candidate("enum", page, [token], "IDR" if norm_text(token.text) in {"rp", "rp.", "idr", "rupiah"} else token.text.upper()) for token in page.tokens if norm_text(token.text) in {"rp", "rp.", "idr", "usd", "sgd", "eur", "$", "rupiah"}]
+        if cand_type == "percent":
+            return self._percent_candidates(page)
+        if cand_type == "days":
+            return self._days_candidates(page)
         return []
 
     def _number_candidates(self, page: Page, cand_type: str, amount: bool) -> list[Candidate]:
@@ -89,6 +93,24 @@ class CandidatePipeline:
             if parsed:
                 result.append(self._candidate("time", page, [token], parsed["value"], parsed["value"]))
         return result
+
+    def _percent_candidates(self, page: Page) -> list[Candidate]:
+        result = []
+        for token in page.tokens:
+            match = re.fullmatch(r"(\d+(?:[.,]\d+)?)\s*%", token.text.strip())
+            if match:
+                result.append(self._candidate("percent", page, [token], match.group(1).replace(",", ".")))
+        return self._dedupe(result)
+
+    def _days_candidates(self, page: Page) -> list[Candidate]:
+        result = []
+        for index, token in enumerate(page.tokens):
+            if not re.fullmatch(r"\d{1,3}", token.text.strip()):
+                continue
+            next_token = page.tokens[index + 1] if index + 1 < len(page.tokens) else None
+            if next_token and norm_text(next_token.text) in {"day", "days", "hari"}:
+                result.append(self._candidate("days", page, [token, next_token], token.text.strip()))
+        return self._dedupe(result)
 
     def _id_candidates(self, page: Page) -> list[Candidate]:
         result = []

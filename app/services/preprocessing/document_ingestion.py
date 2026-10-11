@@ -58,16 +58,15 @@ class DocumentIngestionService:
             doc = fitz.open(stream=raw_bytes, filetype="pdf")
             for pno in range(len(doc)):
                 page = doc[pno]
-                rect = page.rect
-                w, h = int(rect.width), int(rect.height)
-                # Render 2x resolution pixmap for image-based OCR / visual inspection
-                pix = page.get_pixmap(dpi=150)
+                # Canonical evidence is always based on the exact raster sent to OCR.
+                # 300 DPI preserves small invoice text and handwritten pen strokes.
+                pix = page.get_pixmap(dpi=300, alpha=False)
                 img_bytes = pix.tobytes("png")
                 pages.append(
                     DocumentPageAsset(
                         page_number=pno + 1,
-                        width=w,
-                        height=h,
+                        width=pix.width,
+                        height=pix.height,
                         image_bytes=img_bytes,
                         is_pdf_page=True,
                         pdf_page=page,

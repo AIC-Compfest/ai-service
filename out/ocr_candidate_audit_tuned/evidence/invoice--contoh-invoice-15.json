@@ -1,0 +1,2385 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1024,
+      "height": 1536,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.891,
+      "quality": {},
+      "lines": [
+        {
+          "text": "PT Sentosa Jaya Makmur",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.171875,
+            0.068359,
+            0.570312,
+            0.102214
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.171875,
+                0.068359,
+                0.214416,
+                0.102214
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sentosa",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.221062,
+                0.068359,
+                0.356281,
+                0.102214
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jaya",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.362927,
+                0.068359,
+                0.441172,
+                0.102214
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Makmur",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.447819,
+                0.068359,
+                0.570312,
+                0.102214
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "INVOICE",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.702148,
+            0.057943,
+            0.930664,
+            0.097005
+          ],
+          "tokens": [
+            {
+              "text": "INVOICE",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.702148,
+                0.057943,
+                0.930664,
+                0.097005
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "PENJUALAN",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.723633,
+            0.095703,
+            0.924805,
+            0.123047
+          ],
+          "tokens": [
+            {
+              "text": "PENJUALAN",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.723633,
+                0.095703,
+                0.924805,
+                0.123047
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JI. Raya Merdeka No.123, Surabaya 60234",
+          "confidence": 0.822,
+          "bbox_norm": [
+            0.068359,
+            0.154948,
+            0.443359,
+            0.174479
+          ],
+          "tokens": [
+            {
+              "text": "JI.",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.068359,
+                0.154948,
+                0.090917,
+                0.174479
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Raya",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.094826,
+                0.154948,
+                0.140836,
+                0.174479
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Merdeka",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.144744,
+                0.154948,
+                0.227941,
+                0.174479
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.123,",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.23185,
+                0.154948,
+                0.291818,
+                0.174479
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Surabaya",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.295727,
+                0.154948,
+                0.386406,
+                0.174479
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "60234",
+              "confidence": 0.822,
+              "bbox_norm": [
+                0.390314,
+                0.154948,
+                0.443359,
+                0.174479
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Invoice No:",
+          "confidence": 0.944,
+          "bbox_norm": [
+            0.580078,
+            0.157552,
+            0.685547,
+            0.173177
+          ],
+          "tokens": [
+            {
+              "text": "Invoice",
+              "confidence": 0.944,
+              "bbox_norm": [
+                0.580078,
+                0.157552,
+                0.65063,
+                0.173177
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No:",
+              "confidence": 0.944,
+              "bbox_norm": [
+                0.654815,
+                0.157552,
+                0.685547,
+                0.173177
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "INV-2024-0321",
+          "confidence": 0.775,
+          "bbox_norm": [
+            0.730469,
+            0.15625,
+            0.892578,
+            0.173177
+          ],
+          "tokens": [
+            {
+              "text": "INV-2024-0321",
+              "confidence": 0.775,
+              "bbox_norm": [
+                0.730469,
+                0.15625,
+                0.892578,
+                0.173177
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Email: sales@sentosajaya.com",
+          "confidence": 0.943,
+          "bbox_norm": [
+            0.070312,
+            0.18099,
+            0.34375,
+            0.202474
+          ],
+          "tokens": [
+            {
+              "text": "Email:",
+              "confidence": 0.943,
+              "bbox_norm": [
+                0.070312,
+                0.18099,
+                0.118873,
+                0.202474
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sales@sentosajaya.com",
+              "confidence": 0.943,
+              "bbox_norm": [
+                0.122675,
+                0.18099,
+                0.34375,
+                0.202474
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Order No:",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.580078,
+            0.183594,
+            0.673828,
+            0.199219
+          ],
+          "tokens": [
+            {
+              "text": "Order",
+              "confidence": 0.947,
+              "bbox_norm": [
+                0.580078,
+                0.183594,
+                0.63978,
+                0.199219
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No:",
+              "confidence": 0.947,
+              "bbox_norm": [
+                0.643861,
+                0.183594,
+                0.673828,
+                0.199219
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ORD-2024-0099",
+          "confidence": 0.811,
+          "bbox_norm": [
+            0.729492,
+            0.181641,
+            0.905273,
+            0.198568
+          ],
+          "tokens": [
+            {
+              "text": "ORD-2024-0099",
+              "confidence": 0.811,
+              "bbox_norm": [
+                0.729492,
+                0.181641,
+                0.905273,
+                0.198568
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Website: www.sentosajaya.com",
+          "confidence": 0.889,
+          "bbox_norm": [
+            0.070312,
+            0.208333,
+            0.355469,
+            0.226562
+          ],
+          "tokens": [
+            {
+              "text": "Website:",
+              "confidence": 0.889,
+              "bbox_norm": [
+                0.070312,
+                0.208333,
+                0.152184,
+                0.226562
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "www.sentosajaya.com",
+              "confidence": 0.889,
+              "bbox_norm": [
+                0.156082,
+                0.208333,
+                0.355469,
+                0.226562
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Tanggal:",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.580078,
+            0.209635,
+            0.658203,
+            0.227865
+          ],
+          "tokens": [
+            {
+              "text": "Tanggal:",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.580078,
+                0.209635,
+                0.658203,
+                0.227865
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25 April 2024",
+          "confidence": 0.958,
+          "bbox_norm": [
+            0.730469,
+            0.208333,
+            0.871094,
+            0.226562
+          ],
+          "tokens": [
+            {
+              "text": "25",
+              "confidence": 0.958,
+              "bbox_norm": [
+                0.730469,
+                0.208333,
+                0.756111,
+                0.226562
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "April",
+              "confidence": 0.958,
+              "bbox_norm": [
+                0.760834,
+                0.208333,
+                0.815087,
+                0.226562
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2024",
+              "confidence": 0.958,
+              "bbox_norm": [
+                0.81981,
+                0.208333,
+                0.871094,
+                0.226562
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Telp: 031-98765432",
+          "confidence": 0.975,
+          "bbox_norm": [
+            0.068359,
+            0.232422,
+            0.25,
+            0.251953
+          ],
+          "tokens": [
+            {
+              "text": "Telp:",
+              "confidence": 0.975,
+              "bbox_norm": [
+                0.068359,
+                0.232422,
+                0.116022,
+                0.251953
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "031-98765432",
+              "confidence": 0.975,
+              "bbox_norm": [
+                0.120172,
+                0.232422,
+                0.25,
+                0.251953
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jatuh Tempo:",
+          "confidence": 0.946,
+          "bbox_norm": [
+            0.577148,
+            0.233724,
+            0.705078,
+            0.251953
+          ],
+          "tokens": [
+            {
+              "text": "Jatuh",
+              "confidence": 0.946,
+              "bbox_norm": [
+                0.577148,
+                0.233724,
+                0.636478,
+                0.251953
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tempo:",
+              "confidence": 0.946,
+              "bbox_norm": [
+                0.640534,
+                0.233724,
+                0.705078,
+                0.251953
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2 Mei 2024",
+          "confidence": 0.739,
+          "bbox_norm": [
+            0.730469,
+            0.233073,
+            0.851562,
+            0.251302
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.739,
+              "bbox_norm": [
+                0.730469,
+                0.233073,
+                0.744246,
+                0.251302
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mei",
+              "confidence": 0.739,
+              "bbox_norm": [
+                0.749322,
+                0.233073,
+                0.791378,
+                0.251302
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2024",
+              "confidence": 0.739,
+              "bbox_norm": [
+                0.796454,
+                0.233073,
+                0.851562,
+                0.251302
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Bill To:",
+          "confidence": 0.942,
+          "bbox_norm": [
+            0.068359,
+            0.278646,
+            0.148438,
+            0.296875
+          ],
+          "tokens": [
+            {
+              "text": "Bill",
+              "confidence": 0.942,
+              "bbox_norm": [
+                0.068359,
+                0.278646,
+                0.105056,
+                0.296875
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To:",
+              "confidence": 0.942,
+              "bbox_norm": [
+                0.110256,
+                0.278646,
+                0.148438,
+                0.296875
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Muhammad Firdaus",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.067383,
+            0.309896,
+            0.285156,
+            0.328125
+          ],
+          "tokens": [
+            {
+              "text": "Muhammad",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.067383,
+                0.309896,
+                0.187109,
+                0.328125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Firdaus",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.192068,
+                0.309896,
+                0.285156,
+                0.328125
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JI. Cendana Raya No. 56",
+          "confidence": 0.815,
+          "bbox_norm": [
+            0.066406,
+            0.333984,
+            0.300781,
+            0.353516
+          ],
+          "tokens": [
+            {
+              "text": "JI.",
+              "confidence": 0.815,
+              "bbox_norm": [
+                0.066406,
+                0.333984,
+                0.091155,
+                0.353516
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Cendana",
+              "confidence": 0.815,
+              "bbox_norm": [
+                0.095443,
+                0.333984,
+                0.182675,
+                0.353516
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Raya",
+              "confidence": 0.815,
+              "bbox_norm": [
+                0.186963,
+                0.333984,
+                0.23744,
+                0.353516
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.",
+              "confidence": 0.815,
+              "bbox_norm": [
+                0.241728,
+                0.333984,
+                0.273215,
+                0.353516
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "56",
+              "confidence": 0.815,
+              "bbox_norm": [
+                0.277503,
+                0.333984,
+                0.300781,
+                0.353516
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Malang 65123",
+          "confidence": 0.701,
+          "bbox_norm": [
+            0.068359,
+            0.355469,
+            0.203125,
+            0.376302
+          ],
+          "tokens": [
+            {
+              "text": "Malang",
+              "confidence": 0.701,
+              "bbox_norm": [
+                0.068359,
+                0.355469,
+                0.144085,
+                0.376302
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "65123",
+              "confidence": 0.701,
+              "bbox_norm": [
+                0.148577,
+                0.355469,
+                0.203125,
+                0.376302
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Email: muhammad firdaus@email.com",
+          "confidence": 0.776,
+          "bbox_norm": [
+            0.070312,
+            0.380208,
+            0.419922,
+            0.395833
+          ],
+          "tokens": [
+            {
+              "text": "Email:",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.070312,
+                0.380208,
+                0.1253,
+                0.395833
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "muhammad",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.129606,
+                0.380208,
+                0.228018,
+                0.395833
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "firdaus@email.com",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.232324,
+                0.380208,
+                0.419922,
+                0.395833
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No.",
+          "confidence": 0.968,
+          "bbox_norm": [
+            0.072266,
+            0.423177,
+            0.113281,
+            0.440104
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.968,
+              "bbox_norm": [
+                0.072266,
+                0.423177,
+                0.113281,
+                0.440104
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Description",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.146484,
+            0.423177,
+            0.271484,
+            0.441406
+          ],
+          "tokens": [
+            {
+              "text": "Description",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.146484,
+                0.423177,
+                0.271484,
+                0.441406
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Qty",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.514648,
+            0.421224,
+            0.566406,
+            0.445312
+          ],
+          "tokens": [
+            {
+              "text": "Qty",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.514648,
+                0.421224,
+                0.566406,
+                0.445312
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Unit Price",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.59375,
+            0.423177,
+            0.699219,
+            0.440104
+          ],
+          "tokens": [
+            {
+              "text": "Unit",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.59375,
+                0.423177,
+                0.638099,
+                0.440104
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Price",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.642447,
+                0.423177,
+                0.699219,
+                0.440104
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.789062,
+            0.423177,
+            0.847656,
+            0.440104
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.789062,
+                0.423177,
+                0.847656,
+                0.440104
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Epson EcoTank L3250",
+          "confidence": 0.991,
+          "bbox_norm": [
+            0.142578,
+            0.453125,
+            0.355469,
+            0.471354
+          ],
+          "tokens": [
+            {
+              "text": "Epson",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.142578,
+                0.453125,
+                0.203201,
+                0.471354
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "EcoTank",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.207345,
+                0.453125,
+                0.29307,
+                0.471354
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "L3250",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.297214,
+                0.453125,
+                0.355469,
+                0.471354
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 2700.000",
+          "confidence": 0.756,
+          "bbox_norm": [
+            0.577148,
+            0.451823,
+            0.703125,
+            0.471354
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.756,
+              "bbox_norm": [
+                0.577148,
+                0.451823,
+                0.605055,
+                0.471354
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2700.000",
+              "confidence": 0.756,
+              "bbox_norm": [
+                0.609663,
+                0.451823,
+                0.703125,
+                0.471354
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 2,700.000",
+          "confidence": 0.819,
+          "bbox_norm": [
+            0.738281,
+            0.453125,
+            0.894531,
+            0.473958
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.819,
+              "bbox_norm": [
+                0.738281,
+                0.453125,
+                0.77134,
+                0.473958
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2,700.000",
+              "confidence": 0.819,
+              "bbox_norm": [
+                0.776798,
+                0.453125,
+                0.894531,
+                0.473958
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "A4 Photocopier Paper (1 rim)",
+          "confidence": 0.949,
+          "bbox_norm": [
+            0.142578,
+            0.483073,
+            0.418945,
+            0.503255
+          ],
+          "tokens": [
+            {
+              "text": "A4",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.142578,
+                0.483073,
+                0.166355,
+                0.503255
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Photocopier",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.170376,
+                0.483073,
+                0.291789,
+                0.503255
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Paper",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.295809,
+                0.483073,
+                0.35462,
+                0.503255
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(1",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.358641,
+                0.483073,
+                0.375296,
+                0.503255
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "rim)",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.379317,
+                0.483073,
+                0.418945,
+                0.503255
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 550.000",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.589844,
+            0.484375,
+            0.701172,
+            0.502604
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.589844,
+                0.484375,
+                0.617224,
+                0.502604
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "550.000",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.621744,
+                0.484375,
+                0.701172,
+                0.502604
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 275.000",
+          "confidence": 0.764,
+          "bbox_norm": [
+            0.759766,
+            0.483724,
+            0.892578,
+            0.503906
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.764,
+              "bbox_norm": [
+                0.759766,
+                0.483724,
+                0.792429,
+                0.503906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "275.000",
+              "confidence": 0.764,
+              "bbox_norm": [
+                0.797822,
+                0.483724,
+                0.892578,
+                0.503906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Stapler MAX HD-1O",
+          "confidence": 0.717,
+          "bbox_norm": [
+            0.140625,
+            0.514323,
+            0.330078,
+            0.532552
+          ],
+          "tokens": [
+            {
+              "text": "Stapler",
+              "confidence": 0.717,
+              "bbox_norm": [
+                0.140625,
+                0.514323,
+                0.219554,
+                0.532552
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "MAX",
+              "confidence": 0.717,
+              "bbox_norm": [
+                0.223759,
+                0.514323,
+                0.268088,
+                0.532552
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "HD-1O",
+              "confidence": 0.717,
+              "bbox_norm": [
+                0.272293,
+                0.514323,
+                0.330078,
+                0.532552
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 350.000",
+          "confidence": 0.561,
+          "bbox_norm": [
+            0.589844,
+            0.514323,
+            0.701172,
+            0.53125
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.561,
+              "bbox_norm": [
+                0.589844,
+                0.514323,
+                0.617224,
+                0.53125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "350.000",
+              "confidence": 0.561,
+              "bbox_norm": [
+                0.621744,
+                0.514323,
+                0.701172,
+                0.53125
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.759766,
+            0.514323,
+            0.794922,
+            0.533854
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.759766,
+                0.514323,
+                0.794922,
+                0.533854
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "70.000",
+          "confidence": 0.802,
+          "bbox_norm": [
+            0.806641,
+            0.513021,
+            0.892578,
+            0.53125
+          ],
+          "tokens": [
+            {
+              "text": "70.000",
+              "confidence": 0.802,
+              "bbox_norm": [
+                0.806641,
+                0.513021,
+                0.892578,
+                0.53125
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JNE Reguler Shipping Cost",
+          "confidence": 0.997,
+          "bbox_norm": [
+            0.139648,
+            0.542318,
+            0.395508,
+            0.567057
+          ],
+          "tokens": [
+            {
+              "text": "JNE",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.139648,
+                0.542318,
+                0.178513,
+                0.567057
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Reguler",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.182562,
+                0.542318,
+                0.258556,
+                0.567057
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Shipping",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.262604,
+                0.542318,
+                0.343804,
+                0.567057
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Cost",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.347852,
+                0.542318,
+                0.395508,
+                0.567057
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 250.000",
+          "confidence": 0.626,
+          "bbox_norm": [
+            0.589844,
+            0.545573,
+            0.701172,
+            0.563802
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.626,
+              "bbox_norm": [
+                0.589844,
+                0.545573,
+                0.617224,
+                0.563802
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "250.000",
+              "confidence": 0.626,
+              "bbox_norm": [
+                0.621744,
+                0.545573,
+                0.701172,
+                0.563802
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.759766,
+            0.545573,
+            0.794922,
+            0.565104
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.759766,
+                0.545573,
+                0.794922,
+                0.565104
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25.000",
+          "confidence": 0.935,
+          "bbox_norm": [
+            0.804688,
+            0.544271,
+            0.892578,
+            0.561198
+          ],
+          "tokens": [
+            {
+              "text": "25.000",
+              "confidence": 0.935,
+              "bbox_norm": [
+                0.804688,
+                0.544271,
+                0.892578,
+                0.561198
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Subtotal",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.578125,
+            0.582031,
+            0.662109,
+            0.597656
+          ],
+          "tokens": [
+            {
+              "text": "Subtotal",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.578125,
+                0.582031,
+                0.662109,
+                0.597656
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Rp 3.070.000",
+          "confidence": 0.917,
+          "bbox_norm": [
+            0.736328,
+            0.580729,
+            0.892578,
+            0.601562
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.917,
+              "bbox_norm": [
+                0.736328,
+                0.580729,
+                0.769387,
+                0.601562
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "3.070.000",
+              "confidence": 0.917,
+              "bbox_norm": [
+                0.774845,
+                0.580729,
+                0.892578,
+                0.601562
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PPN (10%)",
+          "confidence": 0.864,
+          "bbox_norm": [
+            0.578125,
+            0.609375,
+            0.675781,
+            0.626302
+          ],
+          "tokens": [
+            {
+              "text": "PPN",
+              "confidence": 0.864,
+              "bbox_norm": [
+                0.578125,
+                0.609375,
+                0.616457,
+                0.626302
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(10%)",
+              "confidence": 0.864,
+              "bbox_norm": [
+                0.62045,
+                0.609375,
+                0.675781,
+                0.626302
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 307.000",
+          "confidence": 0.936,
+          "bbox_norm": [
+            0.757812,
+            0.609375,
+            0.892578,
+            0.627604
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.936,
+              "bbox_norm": [
+                0.757812,
+                0.609375,
+                0.790957,
+                0.627604
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "307.000",
+              "confidence": 0.936,
+              "bbox_norm": [
+                0.796429,
+                0.609375,
+                0.892578,
+                0.627604
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PPN (109)",
+          "confidence": 0.906,
+          "bbox_norm": [
+            0.578125,
+            0.638021,
+            0.675781,
+            0.654948
+          ],
+          "tokens": [
+            {
+              "text": "PPN",
+              "confidence": 0.906,
+              "bbox_norm": [
+                0.578125,
+                0.638021,
+                0.618835,
+                0.654948
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(109)",
+              "confidence": 0.906,
+              "bbox_norm": [
+                0.623076,
+                0.638021,
+                0.675781,
+                0.654948
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 5.33.000",
+          "confidence": 0.992,
+          "bbox_norm": [
+            0.75,
+            0.638021,
+            0.892578,
+            0.658854
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.75,
+                0.638021,
+                0.783326,
+                0.658854
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "5.33.000",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.788828,
+                0.638021,
+                0.892578,
+                0.658854
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "GRAND TOTAL",
+          "confidence": 0.945,
+          "bbox_norm": [
+            0.564453,
+            0.669271,
+            0.708984,
+            0.686198
+          ],
+          "tokens": [
+            {
+              "text": "GRAND",
+              "confidence": 0.945,
+              "bbox_norm": [
+                0.564453,
+                0.669271,
+                0.634529,
+                0.686198
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "TOTAL",
+              "confidence": 0.945,
+              "bbox_norm": [
+                0.638909,
+                0.669271,
+                0.708984,
+                0.686198
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 3,377.000",
+          "confidence": 0.989,
+          "bbox_norm": [
+            0.732422,
+            0.669271,
+            0.894531,
+            0.690104
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.989,
+              "bbox_norm": [
+                0.732422,
+                0.669271,
+                0.76672,
+                0.690104
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "3,377.000",
+              "confidence": 0.989,
+              "bbox_norm": [
+                0.772383,
+                0.669271,
+                0.894531,
+                0.690104
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Payment Method:",
+          "confidence": 0.986,
+          "bbox_norm": [
+            0.068359,
+            0.71875,
+            0.253906,
+            0.736979
+          ],
+          "tokens": [
+            {
+              "text": "Payment",
+              "confidence": 0.986,
+              "bbox_norm": [
+                0.068359,
+                0.71875,
+                0.160294,
+                0.736979
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Method:",
+              "confidence": 0.986,
+              "bbox_norm": [
+                0.164813,
+                0.71875,
+                0.253906,
+                0.736979
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Authorized Signature",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.677734,
+            0.726562,
+            0.886719,
+            0.744792
+          ],
+          "tokens": [
+            {
+              "text": "Authorized",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.677734,
+                0.726562,
+                0.7859,
+                0.744792
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Signature",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.789856,
+                0.726562,
+                0.886719,
+                0.744792
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Transfer Bank: BCA",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.068359,
+            0.744792,
+            0.253906,
+            0.760417
+          ],
+          "tokens": [
+            {
+              "text": "Transfer",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.068359,
+                0.744792,
+                0.158308,
+                0.760417
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bank:",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.162185,
+                0.744792,
+                0.212809,
+                0.760417
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BCA",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.216686,
+                0.744792,
+                0.253906,
+                0.760417
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No. Rek: 345 678 9010",
+          "confidence": 0.759,
+          "bbox_norm": [
+            0.068359,
+            0.764323,
+            0.28125,
+            0.78125
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.759,
+              "bbox_norm": [
+                0.068359,
+                0.764323,
+                0.101439,
+                0.78125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rek:",
+              "confidence": 0.759,
+              "bbox_norm": [
+                0.105943,
+                0.764323,
+                0.151894,
+                0.78125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "345",
+              "confidence": 0.759,
+              "bbox_norm": [
+                0.156399,
+                0.764323,
+                0.193082,
+                0.78125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "678",
+              "confidence": 0.759,
+              "bbox_norm": [
+                0.197587,
+                0.764323,
+                0.23427,
+                0.78125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "9010",
+              "confidence": 0.759,
+              "bbox_norm": [
+                0.238775,
+                0.764323,
+                0.28125,
+                0.78125
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jutufjpn",
+          "confidence": 0.034,
+          "bbox_norm": [
+            0.700195,
+            0.752604,
+            0.875977,
+            0.794922
+          ],
+          "tokens": [
+            {
+              "text": "Jutufjpn",
+              "confidence": 0.034,
+              "bbox_norm": [
+                0.700195,
+                0.752604,
+                0.875977,
+                0.794922
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "a.n. PT Sentosa Jaya MAakmur",
+          "confidence": 0.91,
+          "bbox_norm": [
+            0.068359,
+            0.786458,
+            0.355469,
+            0.803385
+          ],
+          "tokens": [
+            {
+              "text": "a.n.",
+              "confidence": 0.91,
+              "bbox_norm": [
+                0.068359,
+                0.786458,
+                0.101204,
+                0.803385
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PT",
+              "confidence": 0.91,
+              "bbox_norm": [
+                0.105168,
+                0.786458,
+                0.130538,
+                0.803385
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sentosa",
+              "confidence": 0.91,
+              "bbox_norm": [
+                0.134502,
+                0.786458,
+                0.215142,
+                0.803385
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jaya",
+              "confidence": 0.91,
+              "bbox_norm": [
+                0.219106,
+                0.786458,
+                0.265768,
+                0.803385
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "MAakmur",
+              "confidence": 0.91,
+              "bbox_norm": [
+                0.269732,
+                0.786458,
+                0.355469,
+                0.803385
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Aditya WiJaya",
+          "confidence": 0.973,
+          "bbox_norm": [
+            0.71582,
+            0.79362,
+            0.873047,
+            0.819661
+          ],
+          "tokens": [
+            {
+              "text": "Aditya",
+              "confidence": 0.973,
+              "bbox_norm": [
+                0.71582,
+                0.79362,
+                0.789166,
+                0.819661
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "WiJaya",
+              "confidence": 0.973,
+              "bbox_norm": [
+                0.793775,
+                0.79362,
+                0.873047,
+                0.819661
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Manager",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.750977,
+            0.815104,
+            0.832031,
+            0.833984
+          ],
+          "tokens": [
+            {
+              "text": "Manager",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.750977,
+                0.815104,
+                0.832031,
+                0.833984
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Catatan:",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.067383,
+            0.826172,
+            0.160156,
+            0.845052
+          ],
+          "tokens": [
+            {
+              "text": "Catatan:",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.067383,
+                0.826172,
+                0.160156,
+                0.845052
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Mohon melakukan pernbayaran tepat waktu sesuai dengan total yang tertera.",
+          "confidence": 0.695,
+          "bbox_norm": [
+            0.068359,
+            0.859375,
+            0.763672,
+            0.879557
+          ],
+          "tokens": [
+            {
+              "text": "Mohon",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.068359,
+                0.859375,
+                0.126302,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "melakukan",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.130023,
+                0.859375,
+                0.219861,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "pernbayaran",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.223582,
+                0.859375,
+                0.340531,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "tepat",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.344252,
+                0.859375,
+                0.39741,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "waktu",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.401131,
+                0.859375,
+                0.45429,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sesuai",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.458011,
+                0.859375,
+                0.515954,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.519675,
+                0.859375,
+                0.583465,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "total",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.587186,
+                0.859375,
+                0.634497,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "yang",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.638218,
+                0.859375,
+                0.680745,
+                0.879557
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "tertera.",
+              "confidence": 0.695,
+              "bbox_norm": [
+                0.684466,
+                0.859375,
+                0.763672,
+                0.879557
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Terima kasih atas kepercayaan Anda berbelanja di PT Sentosa Jaya Makmurı",
+          "confidence": 0.918,
+          "bbox_norm": [
+            0.066406,
+            0.882812,
+            0.769531,
+            0.902995
+          ],
+          "tokens": [
+            {
+              "text": "Terima",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.066406,
+                0.882812,
+                0.127154,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "kasih",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.130971,
+                0.882812,
+                0.179504,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "atas",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.183321,
+                0.882812,
+                0.226946,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "kepercayaan",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.230763,
+                0.882812,
+                0.350732,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Anda",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.354549,
+                0.882812,
+                0.399483,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "berbelanja",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.4033,
+                0.882812,
+                0.506364,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "di",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.510181,
+                0.882812,
+                0.525995,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PT",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.529812,
+                0.882812,
+                0.554242,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sentosa",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.558059,
+                0.882812,
+                0.635712,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jaya",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.639529,
+                0.882812,
+                0.684463,
+                0.902995
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Makmurı",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.68828,
+                0.882812,
+                0.769531,
+                0.902995
+              ],
+              "_estimated": true
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.068359,
+            0.057943,
+            0.930664,
+            0.174479
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT Sentosa Jaya Makmur INVOICE PENJUALAN JI. Raya Merdeka No.123, Surabaya 60234 Invoice No: INV-202"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.066406,
+            0.154948,
+            0.905273,
+            0.78125
+          ],
+          "confidence": 0.92,
+          "text_snippet": "JI. Raya Merdeka No.123, Surabaya 60234 Invoice No: INV-2024-0321 Email: sales@sentosajaya.com Order"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.068359,
+            0.355469,
+            0.894531,
+            0.760417
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Malang 65123 Email: muhammad firdaus@email.com No. Description Qty Unit Price Total Epson EcoTank L3"
+        },
+        {
+          "region_type": "totals",
+          "bbox_norm": [
+            0.068359,
+            0.609375,
+            0.763672,
+            0.879557
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PPN (10%) PPN (109) GRAND TOTAL Mohon melakukan pernbayaran tepat waktu sesuai dengan total yang ter"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.066406,
+            0.726562,
+            0.886719,
+            0.902995
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Authorized Signature No. Rek: 345 678 9010 Jutufjpn a.n. PT Sentosa Jaya MAakmur Aditya WiJaya Manag"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.066406,
+            0.333984,
+            0.419922,
+            0.760417
+          ],
+          "headers": [
+            "JI.",
+            "Cendana",
+            "Raya",
+            "No.",
+            "56"
+          ],
+          "rows": [
+            [
+              "Email:",
+              "muhammad",
+              "firdaus@email.com"
+            ],
+            [
+              "Epson",
+              "EcoTank",
+              "L3250"
+            ],
+            [
+              "A4",
+              "Photocopier",
+              "Paper",
+              "(1",
+              "rim)"
+            ],
+            [
+              "Stapler",
+              "MAX",
+              "HD-1O"
+            ],
+            [
+              "JNE",
+              "Reguler",
+              "Shipping",
+              "Cost"
+            ],
+            [
+              "Transfer",
+              "Bank:",
+              "BCA"
+            ]
+          ],
+          "row_count": 6,
+          "col_count": 5,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1523 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 827,
+      "height": 724,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.837,
+      "quality": {},
+      "lines": [
+        {
+          "text": "HASHMICRO",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.443773,
+            0.04558,
+            0.683192,
+            0.100829
+          ],
+          "tokens": [
+            {
+              "text": "HASHMICRO",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.443773,
+                0.04558,
+                0.683192,
+                0.100829
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "TH/n K Fo R W A R D",
+          "confidence": 0.293,
+          "bbox_norm": [
+            0.446191,
+            0.092541,
+            0.678356,
+            0.120166
+          ],
+          "tokens": [
+            {
+              "text": "TH/n",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.446191,
+                0.092541,
+                0.508258,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "K",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.513381,
+                0.092541,
+                0.529776,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Fo",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.5349,
+                0.092541,
+                0.565933,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "R",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.571056,
+                0.092541,
+                0.587451,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "W",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.592575,
+                0.092541,
+                0.6138,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.618924,
+                0.092541,
+                0.635319,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "R",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.640442,
+                0.092541,
+                0.656837,
+                0.120166
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "D",
+              "confidence": 0.293,
+              "bbox_norm": [
+                0.661961,
+                0.092541,
+                0.678356,
+                0.120166
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SURAT TANDA TERIMA BARANG",
+          "confidence": 0.843,
+          "bbox_norm": [
+            0.319226,
+            0.151934,
+            0.703748,
+            0.190608
+          ],
+          "tokens": [
+            {
+              "text": "SURAT",
+              "confidence": 0.843,
+              "bbox_norm": [
+                0.319226,
+                0.151934,
+                0.40417,
+                0.190608
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "TANDA",
+              "confidence": 0.843,
+              "bbox_norm": [
+                0.409479,
+                0.151934,
+                0.494423,
+                0.190608
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.843,
+              "bbox_norm": [
+                0.499732,
+                0.151934,
+                0.596507,
+                0.190608
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BARANG",
+              "confidence": 0.843,
+              "bbox_norm": [
+                0.601816,
+                0.151934,
+                0.703748,
+                0.190608
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Nomor; STTB/09I2025/001",
+          "confidence": 0.718,
+          "bbox_norm": [
+            0.396614,
+            0.185083,
+            0.623942,
+            0.218232
+          ],
+          "tokens": [
+            {
+              "text": "Nomor;",
+              "confidence": 0.718,
+              "bbox_norm": [
+                0.396614,
+                0.185083,
+                0.457199,
+                0.218232
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "STTB/09I2025/001",
+              "confidence": 0.718,
+              "bbox_norm": [
+                0.461006,
+                0.185083,
+                0.623942,
+                0.218232
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Yang bertanda tangan di bawah ini:",
+          "confidence": 0.891,
+          "bbox_norm": [
+            0.055623,
+            0.226519,
+            0.360339,
+            0.262431
+          ],
+          "tokens": [
+            {
+              "text": "Yang",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.055623,
+                0.226519,
+                0.099412,
+                0.262431
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "bertanda",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.103132,
+                0.226519,
+                0.188159,
+                0.262431
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "tangan",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.191879,
+                0.226519,
+                0.255649,
+                0.262431
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "di",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.259369,
+                0.226519,
+                0.27478,
+                0.262431
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "bawah",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.2785,
+                0.226519,
+                0.331642,
+                0.262431
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ini:",
+              "confidence": 0.891,
+              "bbox_norm": [
+                0.335362,
+                0.226519,
+                0.360339,
+                0.262431
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Nama",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.061669,
+            0.283149,
+            0.114873,
+            0.310773
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.061669,
+                0.283149,
+                0.114873,
+                0.310773
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Budi Santoso",
+          "confidence": 0.828,
+          "bbox_norm": [
+            0.218863,
+            0.283149,
+            0.332527,
+            0.310773
+          ],
+          "tokens": [
+            {
+              "text": "Budi",
+              "confidence": 0.828,
+              "bbox_norm": [
+                0.218863,
+                0.283149,
+                0.255619,
+                0.310773
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Santoso",
+              "confidence": 0.828,
+              "bbox_norm": [
+                0.259222,
+                0.283149,
+                0.332527,
+                0.310773
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jabatan",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.061669,
+            0.319061,
+            0.131802,
+            0.346685
+          ],
+          "tokens": [
+            {
+              "text": "Jabatan",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.061669,
+                0.319061,
+                0.131802,
+                0.346685
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Staff Gudang",
+          "confidence": 0.997,
+          "bbox_norm": [
+            0.217654,
+            0.314917,
+            0.331318,
+            0.350829
+          ],
+          "tokens": [
+            {
+              "text": "Staff",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.217654,
+                0.314917,
+                0.267866,
+                0.350829
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Gudang",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.271299,
+                0.314917,
+                0.331318,
+                0.350829
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Alamat",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.061669,
+            0.357735,
+            0.124547,
+            0.385359
+          ],
+          "tokens": [
+            {
+              "text": "Alamat",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.061669,
+                0.357735,
+                0.124547,
+                0.385359
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JI Merdeka Raya No. 45, Jakarta",
+          "confidence": 0.723,
+          "bbox_norm": [
+            0.217654,
+            0.353591,
+            0.490931,
+            0.38674
+          ],
+          "tokens": [
+            {
+              "text": "JI",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.217654,
+                0.353591,
+                0.233586,
+                0.38674
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Merdeka",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.237138,
+                0.353591,
+                0.312738,
+                0.38674
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Raya",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.31629,
+                0.353591,
+                0.358098,
+                0.38674
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No.",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.36165,
+                0.353591,
+                0.387729,
+                0.38674
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "45,",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.391281,
+                0.353591,
+                0.415128,
+                0.38674
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.723,
+              "bbox_norm": [
+                0.41868,
+                0.353591,
+                0.490931,
+                0.38674
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No. Telp",
+          "confidence": 0.835,
+          "bbox_norm": [
+            0.058041,
+            0.392265,
+            0.135429,
+            0.425414
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.835,
+              "bbox_norm": [
+                0.058041,
+                0.392265,
+                0.088686,
+                0.425414
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Telp",
+              "confidence": 0.835,
+              "bbox_norm": [
+                0.09286,
+                0.392265,
+                0.135429,
+                0.425414
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "0812-3456-7890",
+          "confidence": 0.731,
+          "bbox_norm": [
+            0.217654,
+            0.392265,
+            0.355502,
+            0.425414
+          ],
+          "tokens": [
+            {
+              "text": "0812-3456-7890",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.217654,
+                0.392265,
+                0.355502,
+                0.425414
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Telah menerima barang dari PT Sejahtera Abadi dengan rincian sebagai berikut:",
+          "confidence": 0.725,
+          "bbox_norm": [
+            0.060459,
+            0.469613,
+            0.730351,
+            0.506906
+          ],
+          "tokens": [
+            {
+              "text": "Telah",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.060459,
+                0.469613,
+                0.106739,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "menerima",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.110284,
+                0.469613,
+                0.185729,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "barang",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.189273,
+                0.469613,
+                0.250034,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dari",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.253579,
+                0.469613,
+                0.288516,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PT",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.292061,
+                0.469613,
+                0.314745,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sejahtera",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.318289,
+                0.469613,
+                0.410646,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Abadi",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.41419,
+                0.469613,
+                0.46047,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.464014,
+                0.469613,
+                0.524776,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "rincian",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.52832,
+                0.469613,
+                0.588068,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.591613,
+                0.469613,
+                0.656931,
+                0.506906
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "berikut:",
+              "confidence": 0.725,
+              "bbox_norm": [
+                0.660475,
+                0.469613,
+                0.730351,
+                0.506906
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.060459,
+            0.524862,
+            0.094317,
+            0.558011
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.060459,
+                0.524862,
+                0.094317,
+                0.558011
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Nama Barang",
+          "confidence": 0.867,
+          "bbox_norm": [
+            0.128174,
+            0.523481,
+            0.251511,
+            0.560773
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 0.867,
+              "bbox_norm": [
+                0.128174,
+                0.523481,
+                0.176158,
+                0.560773
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Barang",
+              "confidence": 0.867,
+              "bbox_norm": [
+                0.180234,
+                0.523481,
+                0.251511,
+                0.560773
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Oty",
+          "confidence": 0.604,
+          "bbox_norm": [
+            0.561064,
+            0.527624,
+            0.599758,
+            0.560773
+          ],
+          "tokens": [
+            {
+              "text": "Oty",
+              "confidence": 0.604,
+              "bbox_norm": [
+                0.561064,
+                0.527624,
+                0.599758,
+                0.560773
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Keterangan",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.668682,
+            0.523481,
+            0.778718,
+            0.560773
+          ],
+          "tokens": [
+            {
+              "text": "Keterangan",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.668682,
+                0.523481,
+                0.778718,
+                0.560773
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Laptop Lenovo ThinkPad",
+          "confidence": 0.987,
+          "bbox_norm": [
+            0.124547,
+            0.56768,
+            0.333736,
+            0.603591
+          ],
+          "tokens": [
+            {
+              "text": "Laptop",
+              "confidence": 0.987,
+              "bbox_norm": [
+                0.124547,
+                0.56768,
+                0.186604,
+                0.603591
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lenovo",
+              "confidence": 0.987,
+              "bbox_norm": [
+                0.190153,
+                0.56768,
+                0.25221,
+                0.603591
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ThinkPad",
+              "confidence": 0.987,
+              "bbox_norm": [
+                0.255759,
+                0.56768,
+                0.333736,
+                0.603591
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "5 Unit",
+          "confidence": 0.509,
+          "bbox_norm": [
+            0.562273,
+            0.570442,
+            0.615478,
+            0.598066
+          ],
+          "tokens": [
+            {
+              "text": "5",
+              "confidence": 0.509,
+              "bbox_norm": [
+                0.562273,
+                0.570442,
+                0.572652,
+                0.598066
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.509,
+              "bbox_norm": [
+                0.576476,
+                0.570442,
+                0.615478,
+                0.598066
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Baru",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.6711,
+            0.570442,
+            0.71705,
+            0.598066
+          ],
+          "tokens": [
+            {
+              "text": "Baru",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.6711,
+                0.570442,
+                0.71705,
+                0.598066
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Printer Epson L3150",
+          "confidence": 0.863,
+          "bbox_norm": [
+            0.125756,
+            0.610497,
+            0.297461,
+            0.643646
+          ],
+          "tokens": [
+            {
+              "text": "Printer",
+              "confidence": 0.863,
+              "bbox_norm": [
+                0.125756,
+                0.610497,
+                0.192865,
+                0.643646
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Epson",
+              "confidence": 0.863,
+              "bbox_norm": [
+                0.19644,
+                0.610497,
+                0.248738,
+                0.643646
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "L3150",
+              "confidence": 0.863,
+              "bbox_norm": [
+                0.252313,
+                0.610497,
+                0.297461,
+                0.643646
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2 Unit",
+          "confidence": 0.728,
+          "bbox_norm": [
+            0.562273,
+            0.611878,
+            0.615478,
+            0.639503
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.728,
+              "bbox_norm": [
+                0.562273,
+                0.611878,
+                0.572652,
+                0.639503
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.728,
+              "bbox_norm": [
+                0.576476,
+                0.611878,
+                0.615478,
+                0.639503
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Baru",
+          "confidence": 0.989,
+          "bbox_norm": [
+            0.6711,
+            0.611878,
+            0.71705,
+            0.639503
+          ],
+          "tokens": [
+            {
+              "text": "Baru",
+              "confidence": 0.989,
+              "bbox_norm": [
+                0.6711,
+                0.611878,
+                0.71705,
+                0.639503
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Dokumen ini dibuat sebagai bukti serah terima barang yang sah dan dapat digunakan sesuai",
+          "confidence": 0.597,
+          "bbox_norm": [
+            0.058041,
+            0.664365,
+            0.831923,
+            0.698895
+          ],
+          "tokens": [
+            {
+              "text": "Dokumen",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.058041,
+                0.664365,
+                0.131245,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ini",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.134843,
+                0.664365,
+                0.154378,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dibuat",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.157976,
+                0.664365,
+                0.21401,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.217609,
+                0.664365,
+                0.283924,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "bukti",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.287522,
+                0.664365,
+                0.333274,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "serah",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.336873,
+                0.664365,
+                0.38828,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "terima",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.391878,
+                0.664365,
+                0.447912,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "barang",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.451511,
+                0.664365,
+                0.513199,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "yang",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.516797,
+                0.664365,
+                0.557923,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sah",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.561522,
+                0.664365,
+                0.592366,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dan",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.595964,
+                0.664365,
+                0.626809,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dapat",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.630407,
+                0.664365,
+                0.681814,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "digunakan",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.685413,
+                0.664365,
+                0.77229,
+                0.698895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "sesuai",
+              "confidence": 0.597,
+              "bbox_norm": [
+                0.775889,
+                0.664365,
+                0.831923,
+                0.698895
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ketentuan  yang berlaku:",
+          "confidence": 0.613,
+          "bbox_norm": [
+            0.058041,
+            0.69337,
+            0.263603,
+            0.726519
+          ],
+          "tokens": [
+            {
+              "text": "ketentuan",
+              "confidence": 0.613,
+              "bbox_norm": [
+                0.058041,
+                0.69337,
+                0.146349,
+                0.726519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "yang",
+              "confidence": 0.613,
+              "bbox_norm": [
+                0.153218,
+                0.69337,
+                0.192466,
+                0.726519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "berlaku:",
+              "confidence": 0.613,
+              "bbox_norm": [
+                0.1959,
+                0.69337,
+                0.263603,
+                0.726519
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Penerima",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.250302,
+            0.763812,
+            0.334946,
+            0.791436
+          ],
+          "tokens": [
+            {
+              "text": "Penerima",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.250302,
+                0.763812,
+                0.334946,
+                0.791436
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Yang Menyerahkan",
+          "confidence": 0.978,
+          "bbox_norm": [
+            0.646917,
+            0.763812,
+            0.811366,
+            0.791436
+          ],
+          "tokens": [
+            {
+              "text": "Yang",
+              "confidence": 0.978,
+              "bbox_norm": [
+                0.646917,
+                0.763812,
+                0.689475,
+                0.791436
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Menyerahkan",
+              "confidence": 0.978,
+              "bbox_norm": [
+                0.693091,
+                0.763812,
+                0.811366,
+                0.791436
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Budi Santoso",
+          "confidence": 0.912,
+          "bbox_norm": [
+            0.233374,
+            0.868785,
+            0.349456,
+            0.896409
+          ],
+          "tokens": [
+            {
+              "text": "Budi",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.233374,
+                0.868785,
+                0.270911,
+                0.896409
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Santoso",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.274591,
+                0.868785,
+                0.349456,
+                0.896409
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PT Sejahtera_Abadi",
+          "confidence": 0.866,
+          "bbox_norm": [
+            0.640871,
+            0.867403,
+            0.812576,
+            0.900552
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.866,
+              "bbox_norm": [
+                0.640871,
+                0.867403,
+                0.663129,
+                0.900552
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sejahtera_Abadi",
+              "confidence": 0.866,
+              "bbox_norm": [
+                0.666606,
+                0.867403,
+                0.812576,
+                0.900552
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jakarta; 17 September 2025",
+          "confidence": 0.84,
+          "bbox_norm": [
+            0.723096,
+            0.939227,
+            0.964933,
+            0.972376
+          ],
+          "tokens": [
+            {
+              "text": "Jakarta;",
+              "confidence": 0.84,
+              "bbox_norm": [
+                0.723096,
+                0.939227,
+                0.8029,
+                0.972376
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "17",
+              "confidence": 0.84,
+              "bbox_norm": [
+                0.80659,
+                0.939227,
+                0.821349,
+                0.972376
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "September",
+              "confidence": 0.84,
+              "bbox_norm": [
+                0.825039,
+                0.939227,
+                0.921183,
+                0.972376
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2025",
+              "confidence": 0.84,
+              "bbox_norm": [
+                0.924873,
+                0.939227,
+                0.964933,
+                0.972376
+              ],
+              "_estimated": true
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.319226,
+            0.04558,
+            0.703748,
+            0.190608
+          ],
+          "confidence": 0.95,
+          "text_snippet": "HASHMICRO TH/n K Fo R W A R D SURAT TANDA TERIMA BARANG"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.055623,
+            0.151934,
+            0.703748,
+            0.425414
+          ],
+          "confidence": 0.92,
+          "text_snippet": "SURAT TANDA TERIMA BARANG Nomor; STTB/09I2025/001 Yang bertanda tangan di bawah ini: Nama Budi Santo"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.058041,
+            0.353591,
+            0.831923,
+            0.726519
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Alamat JI Merdeka Raya No. 45, Jakarta No. Telp 0812-3456-7890 Telah menerima barang dari PT Sejahte"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.233374,
+            0.763812,
+            0.964933,
+            0.972376
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Penerima Yang Menyerahkan Budi Santoso PT Sejahtera_Abadi Jakarta; 17 September 2025"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.058041,
+            0.353591,
+            0.831923,
+            0.726519
+          ],
+          "headers": [
+            "JI",
+            "Merdeka",
+            "Raya",
+            "No.",
+            "45,",
+            "Jakarta"
+          ],
+          "rows": [
+            [
+              "Telah",
+              "menerima",
+              "barang",
+              "dari",
+              "PT",
+              "Sejahtera",
+              "Abadi",
+              "dengan",
+              "rincian",
+              "sebagai",
+              "berikut:"
+            ],
+            [
+              "Laptop",
+              "Lenovo",
+              "ThinkPad"
+            ],
+            [
+              "Printer",
+              "Epson",
+              "L3150"
+            ],
+            [
+              "Dokumen",
+              "ini",
+              "dibuat",
+              "sebagai",
+              "bukti",
+              "serah",
+              "terima",
+              "barang",
+              "yang",
+              "sah",
+              "dan",
+              "dapat",
+              "digunakan",
+              "sesuai"
+            ],
+            [
+              "ketentuan",
+              "yang",
+              "berlaku:"
+            ]
+          ],
+          "row_count": 5,
+          "col_count": 6,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

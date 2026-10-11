@@ -1,0 +1,2087 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 800,
+      "height": 857,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.587,
+      "quality": {},
+      "lines": [
+        {
+          "text": "@@R rg",
+          "confidence": 0.107,
+          "bbox_norm": [
+            0.69625,
+            0.001167,
+            0.91625,
+            0.080513
+          ],
+          "tokens": [
+            {
+              "text": "@@R",
+              "confidence": 0.107,
+              "bbox_norm": [
+                0.69625,
+                0.001167,
+                0.835088,
+                0.080513
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "rg",
+              "confidence": 0.107,
+              "bbox_norm": [
+                0.847176,
+                0.001167,
+                0.91625,
+                0.080513
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jar parner @busress]",
+          "confidence": 0.108,
+          "bbox_norm": [
+            0.6925,
+            0.063011,
+            0.8425,
+            0.091015
+          ],
+          "tokens": [
+            {
+              "text": "Jar",
+              "confidence": 0.108,
+              "bbox_norm": [
+                0.6925,
+                0.063011,
+                0.716786,
+                0.091015
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "parner",
+              "confidence": 0.108,
+              "bbox_norm": [
+                0.719511,
+                0.063011,
+                0.766216,
+                0.091015
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@busress]",
+              "confidence": 0.108,
+              "bbox_norm": [
+                0.76894,
+                0.063011,
+                0.8425,
+                0.091015
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Account o1",
+          "confidence": 0.576,
+          "bbox_norm": [
+            0.02375,
+            0.087515,
+            0.11625,
+            0.110852
+          ],
+          "tokens": [
+            {
+              "text": "Account",
+              "confidence": 0.576,
+              "bbox_norm": [
+                0.02375,
+                0.087515,
+                0.097584,
+                0.110852
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "o1",
+              "confidence": 0.576,
+              "bbox_norm": [
+                0.101214,
+                0.087515,
+                0.11625,
+                0.110852
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "IBC SOLUTIOHS IND .",
+          "confidence": 0.691,
+          "bbox_norm": [
+            0.02375,
+            0.117853,
+            0.20625,
+            0.138856
+          ],
+          "tokens": [
+            {
+              "text": "IBC",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.02375,
+                0.117853,
+                0.053887,
+                0.138856
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SOLUTIOHS",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.057808,
+                0.117853,
+                0.16323,
+                0.138856
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "IND",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.167151,
+                0.117853,
+                0.197287,
+                0.138856
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ".",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.201209,
+                0.117853,
+                0.20625,
+                0.138856
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Invoice",
+          "confidence": 0.918,
+          "bbox_norm": [
+            0.60375,
+            0.12252,
+            0.66125,
+            0.14119
+          ],
+          "tokens": [
+            {
+              "text": "Invoice",
+              "confidence": 0.918,
+              "bbox_norm": [
+                0.60375,
+                0.12252,
+                0.66125,
+                0.14119
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "0309002",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.6825,
+            0.112019,
+            0.79,
+            0.140023
+          ],
+          "tokens": [
+            {
+              "text": "0309002",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.6825,
+                0.112019,
+                0.79,
+                0.140023
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "GEDUMG VTC Le,12",
+          "confidence": 0.132,
+          "bbox_norm": [
+            0.02375,
+            0.138856,
+            0.19125,
+            0.162194
+          ],
+          "tokens": [
+            {
+              "text": "GEDUMG",
+              "confidence": 0.132,
+              "bbox_norm": [
+                0.02375,
+                0.138856,
+                0.102057,
+                0.162194
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "VTC",
+              "confidence": 0.132,
+              "bbox_norm": [
+                0.105945,
+                0.138856,
+                0.143266,
+                0.162194
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Le,12",
+              "confidence": 0.132,
+              "bbox_norm": [
+                0.147154,
+                0.138856,
+                0.19125,
+                0.162194
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Job No",
+          "confidence": 0.992,
+          "bbox_norm": [
+            0.59625,
+            0.138856,
+            0.65875,
+            0.162194
+          ],
+          "tokens": [
+            {
+              "text": "Job",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.59625,
+                0.138856,
+                0.631134,
+                0.162194
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.635047,
+                0.138856,
+                0.65875,
+                0.162194
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "00L/VH-003/HI-09",
+          "confidence": 0.326,
+          "bbox_norm": [
+            0.68375,
+            0.138856,
+            0.85875,
+            0.162194
+          ],
+          "tokens": [
+            {
+              "text": "00L/VH-003/HI-09",
+              "confidence": 0.326,
+              "bbox_norm": [
+                0.68375,
+                0.138856,
+                0.85875,
+                0.162194
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JL. JEXD . SUDIPKAH KAV . 29-31",
+          "confidence": 0.304,
+          "bbox_norm": [
+            0.02625,
+            0.15986,
+            0.29625,
+            0.183197
+          ],
+          "tokens": [
+            {
+              "text": "JL.",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.02625,
+                0.15986,
+                0.054056,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JEXD",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.057674,
+                0.15986,
+                0.103984,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ".",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.107601,
+                0.15986,
+                0.112253,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SUDIPKAH",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.115871,
+                0.15986,
+                0.201564,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KAV",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.205182,
+                0.15986,
+                0.239914,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ".",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.243532,
+                0.15986,
+                0.248183,
+                0.183197
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "29-31",
+              "confidence": 0.304,
+              "bbox_norm": [
+                0.251801,
+                0.15986,
+                0.29625,
+                0.183197
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Date",
+          "confidence": 0.993,
+          "bbox_norm": [
+            0.61875,
+            0.15986,
+            0.66125,
+            0.183197
+          ],
+          "tokens": [
+            {
+              "text": "Date",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.61875,
+                0.15986,
+                0.66125,
+                0.183197
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "12-Har-09",
+          "confidence": 0.568,
+          "bbox_norm": [
+            0.68625,
+            0.162194,
+            0.78125,
+            0.180863
+          ],
+          "tokens": [
+            {
+              "text": "12-Har-09",
+              "confidence": 0.568,
+              "bbox_norm": [
+                0.68625,
+                0.162194,
+                0.78125,
+                0.180863
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "TELP",
+          "confidence": 0.986,
+          "bbox_norm": [
+            0.02375,
+            0.180863,
+            0.07125,
+            0.201867
+          ],
+          "tokens": [
+            {
+              "text": "TELP",
+              "confidence": 0.986,
+              "bbox_norm": [
+                0.02375,
+                0.180863,
+                0.07125,
+                0.201867
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "021-526 4550",
+          "confidence": 0.485,
+          "bbox_norm": [
+            0.09625,
+            0.180863,
+            0.21875,
+            0.201867
+          ],
+          "tokens": [
+            {
+              "text": "021-526",
+              "confidence": 0.485,
+              "bbox_norm": [
+                0.09625,
+                0.180863,
+                0.169632,
+                0.201867
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "4550",
+              "confidence": 0.485,
+              "bbox_norm": [
+                0.173774,
+                0.180863,
+                0.21875,
+                0.201867
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ATT",
+          "confidence": 0.144,
+          "bbox_norm": [
+            0.02375,
+            0.201867,
+            0.07375,
+            0.22287
+          ],
+          "tokens": [
+            {
+              "text": "ATT",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.02375,
+                0.201867,
+                0.07375,
+                0.22287
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "IBU LILIAIA",
+          "confidence": 0.281,
+          "bbox_norm": [
+            0.09375,
+            0.201867,
+            0.20875,
+            0.22287
+          ],
+          "tokens": [
+            {
+              "text": "IBU",
+              "confidence": 0.281,
+              "bbox_norm": [
+                0.09375,
+                0.201867,
+                0.128626,
+                0.22287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LILIAIA",
+              "confidence": 0.281,
+              "bbox_norm": [
+                0.133164,
+                0.201867,
+                0.20875,
+                0.22287
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "INVOICE",
+          "confidence": 0.99,
+          "bbox_norm": [
+            0.39875,
+            0.225204,
+            0.57875,
+            0.271879
+          ],
+          "tokens": [
+            {
+              "text": "INVOICE",
+              "confidence": 0.99,
+              "bbox_norm": [
+                0.39875,
+                0.225204,
+                0.57875,
+                0.271879
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Shipper",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.0225,
+            0.287048,
+            0.0925,
+            0.315053
+          ],
+          "tokens": [
+            {
+              "text": "Shipper",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.0225,
+                0.287048,
+                0.0925,
+                0.315053
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "SHENZHEI GPENTECH Co.LTD",
+          "confidence": 0.161,
+          "bbox_norm": [
+            0.14875,
+            0.288215,
+            0.39125,
+            0.311552
+          ],
+          "tokens": [
+            {
+              "text": "SHENZHEI",
+              "confidence": 0.161,
+              "bbox_norm": [
+                0.14875,
+                0.288215,
+                0.232934,
+                0.311552
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "GPENTECH",
+              "confidence": 0.161,
+              "bbox_norm": [
+                0.236489,
+                0.288215,
+                0.327477,
+                0.311552
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Co.LTD",
+              "confidence": 0.161,
+              "bbox_norm": [
+                0.331031,
+                0.288215,
+                0.39125,
+                0.311552
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Commodity",
+          "confidence": 0.69,
+          "bbox_norm": [
+            0.48375,
+            0.290548,
+            0.57375,
+            0.311552
+          ],
+          "tokens": [
+            {
+              "text": "Commodity",
+              "confidence": 0.69,
+              "bbox_norm": [
+                0.48375,
+                0.290548,
+                0.57375,
+                0.311552
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "COKBAINING",
+          "confidence": 0.707,
+          "bbox_norm": [
+            0.66875,
+            0.288215,
+            0.77625,
+            0.311552
+          ],
+          "tokens": [
+            {
+              "text": "COKBAINING",
+              "confidence": 0.707,
+              "bbox_norm": [
+                0.66875,
+                0.288215,
+                0.77625,
+                0.311552
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Serice",
+          "confidence": 0.377,
+          "bbox_norm": [
+            0.02625,
+            0.311552,
+            0.08875,
+            0.332555
+          ],
+          "tokens": [
+            {
+              "text": "Serice",
+              "confidence": 0.377,
+              "bbox_norm": [
+                0.02625,
+                0.311552,
+                0.08875,
+                0.332555
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "DID ZHE-JKT AIR FREIGHT",
+          "confidence": 0.619,
+          "bbox_norm": [
+            0.14875,
+            0.309218,
+            0.38375,
+            0.332555
+          ],
+          "tokens": [
+            {
+              "text": "DID",
+              "confidence": 0.619,
+              "bbox_norm": [
+                0.14875,
+                0.309218,
+                0.178401,
+                0.332555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ZHE-JKT",
+              "confidence": 0.619,
+              "bbox_norm": [
+                0.182258,
+                0.309218,
+                0.267352,
+                0.332555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "AIR",
+              "confidence": 0.619,
+              "bbox_norm": [
+                0.27121,
+                0.309218,
+                0.300861,
+                0.332555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "FREIGHT",
+              "confidence": 0.619,
+              "bbox_norm": [
+                0.304719,
+                0.309218,
+                0.38375,
+                0.332555
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "MAWB / HAWB",
+          "confidence": 0.372,
+          "bbox_norm": [
+            0.48375,
+            0.309218,
+            0.60375,
+            0.332555
+          ],
+          "tokens": [
+            {
+              "text": "MAWB",
+              "confidence": 0.372,
+              "bbox_norm": [
+                0.48375,
+                0.309218,
+                0.536694,
+                0.332555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/",
+              "confidence": 0.372,
+              "bbox_norm": [
+                0.540299,
+                0.309218,
+                0.5506,
+                0.332555
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "HAWB",
+              "confidence": 0.372,
+              "bbox_norm": [
+                0.554205,
+                0.309218,
+                0.60375,
+                0.332555
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Quantt",
+          "confidence": 0.99,
+          "bbox_norm": [
+            0.02625,
+            0.332555,
+            0.09375,
+            0.353559
+          ],
+          "tokens": [
+            {
+              "text": "Quantt",
+              "confidence": 0.99,
+              "bbox_norm": [
+                0.02625,
+                0.332555,
+                0.09375,
+                0.353559
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "CASE",
+          "confidence": 0.963,
+          "bbox_norm": [
+            0.16875,
+            0.330222,
+            0.21625,
+            0.353559
+          ],
+          "tokens": [
+            {
+              "text": "CASE",
+              "confidence": 0.963,
+              "bbox_norm": [
+                0.16875,
+                0.330222,
+                0.21625,
+                0.353559
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "12s KG",
+          "confidence": 0.573,
+          "bbox_norm": [
+            0.23625,
+            0.330222,
+            0.30375,
+            0.353559
+          ],
+          "tokens": [
+            {
+              "text": "12s",
+              "confidence": 0.573,
+              "bbox_norm": [
+                0.23625,
+                0.330222,
+                0.268715,
+                0.353559
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KG",
+              "confidence": 0.573,
+              "bbox_norm": [
+                0.273449,
+                0.330222,
+                0.30375,
+                0.353559
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Origin - Dest",
+          "confidence": 0.898,
+          "bbox_norm": [
+            0.4825,
+            0.329055,
+            0.5875,
+            0.35706
+          ],
+          "tokens": [
+            {
+              "text": "Origin",
+              "confidence": 0.898,
+              "bbox_norm": [
+                0.4825,
+                0.329055,
+                0.531125,
+                0.35706
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "-",
+              "confidence": 0.898,
+              "bbox_norm": [
+                0.534516,
+                0.329055,
+                0.544202,
+                0.35706
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dest",
+              "confidence": 0.898,
+              "bbox_norm": [
+                0.547592,
+                0.329055,
+                0.5875,
+                0.35706
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ZHE-JKT",
+          "confidence": 0.924,
+          "bbox_norm": [
+            0.67125,
+            0.332555,
+            0.74625,
+            0.353559
+          ],
+          "tokens": [
+            {
+              "text": "ZHE-JKT",
+              "confidence": 0.924,
+              "bbox_norm": [
+                0.67125,
+                0.332555,
+                0.74625,
+                0.353559
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "No.",
+          "confidence": 0.796,
+          "bbox_norm": [
+            0.02625,
+            0.383897,
+            0.05875,
+            0.402567
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.796,
+              "bbox_norm": [
+                0.02625,
+                0.383897,
+                0.05875,
+                0.402567
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Descuption",
+          "confidence": 0.614,
+          "bbox_norm": [
+            0.22375,
+            0.37923,
+            0.32375,
+            0.402567
+          ],
+          "tokens": [
+            {
+              "text": "Descuption",
+              "confidence": 0.614,
+              "bbox_norm": [
+                0.22375,
+                0.37923,
+                0.32375,
+                0.402567
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Charges IDR",
+          "confidence": 0.977,
+          "bbox_norm": [
+            0.69875,
+            0.376896,
+            0.81,
+            0.407235
+          ],
+          "tokens": [
+            {
+              "text": "Charges",
+              "confidence": 0.977,
+              "bbox_norm": [
+                0.69875,
+                0.376896,
+                0.776713,
+                0.407235
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "IDR",
+              "confidence": 0.977,
+              "bbox_norm": [
+                0.780545,
+                0.376896,
+                0.81,
+                0.407235
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Reraık",
+          "confidence": 0.319,
+          "bbox_norm": [
+            0.86125,
+            0.37923,
+            0.93375,
+            0.402567
+          ],
+          "tokens": [
+            {
+              "text": "Reraık",
+              "confidence": 0.319,
+              "bbox_norm": [
+                0.86125,
+                0.37923,
+                0.93375,
+                0.402567
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "A/F ZHE-JKT DOOR; 12s KG X RP 200.000/KG",
+          "confidence": 0.357,
+          "bbox_norm": [
+            0.06125,
+            0.421237,
+            0.46375,
+            0.444574
+          ],
+          "tokens": [
+            {
+              "text": "A/F",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.06125,
+                0.421237,
+                0.097749,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ZHE-JKT",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.101692,
+                0.421237,
+                0.188658,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "DOOR;",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.1926,
+                0.421237,
+                0.248137,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12s",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.25208,
+                0.421237,
+                0.279116,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KG",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.283059,
+                0.421237,
+                0.308292,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "X",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.312235,
+                0.421237,
+                0.324852,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "RP",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.328795,
+                0.421237,
+                0.354028,
+                0.444574
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "200.000/KG",
+              "confidence": 0.357,
+              "bbox_norm": [
+                0.357971,
+                0.421237,
+                0.46375,
+                0.444574
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pp",
+          "confidence": 0.993,
+          "bbox_norm": [
+            0.68625,
+            0.423571,
+            0.71375,
+            0.444574
+          ],
+          "tokens": [
+            {
+              "text": "Pp",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.68625,
+                0.423571,
+                0.71375,
+                0.444574
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25,000,000",
+          "confidence": 0.743,
+          "bbox_norm": [
+            0.72625,
+            0.421237,
+            0.83375,
+            0.444574
+          ],
+          "tokens": [
+            {
+              "text": "25,000,000",
+              "confidence": 0.743,
+              "bbox_norm": [
+                0.72625,
+                0.421237,
+                0.83375,
+                0.444574
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Total Charges",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.36,
+            0.610268,
+            0.4725,
+            0.640607
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.36,
+                0.610268,
+                0.402701,
+                0.640607
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Charges",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.405972,
+                0.610268,
+                0.4725,
+                0.640607
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pp",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.68625,
+            0.612602,
+            0.71375,
+            0.635939
+          ],
+          "tokens": [
+            {
+              "text": "Pp",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.68625,
+                0.612602,
+                0.71375,
+                0.635939
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25,000,000",
+          "confidence": 0.71,
+          "bbox_norm": [
+            0.72625,
+            0.612602,
+            0.83375,
+            0.635939
+          ],
+          "tokens": [
+            {
+              "text": "25,000,000",
+              "confidence": 0.71,
+              "bbox_norm": [
+                0.72625,
+                0.612602,
+                0.83375,
+                0.635939
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "VAT",
+          "confidence": 0.802,
+          "bbox_norm": [
+            0.35875,
+            0.633606,
+            0.39875,
+            0.656943
+          ],
+          "tokens": [
+            {
+              "text": "VAT",
+              "confidence": 0.802,
+              "bbox_norm": [
+                0.35875,
+                0.633606,
+                0.39875,
+                0.656943
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Pp",
+          "confidence": 0.995,
+          "bbox_norm": [
+            0.68625,
+            0.635939,
+            0.71375,
+            0.656943
+          ],
+          "tokens": [
+            {
+              "text": "Pp",
+              "confidence": 0.995,
+              "bbox_norm": [
+                0.68625,
+                0.635939,
+                0.71375,
+                0.656943
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Pre Finance",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.36125,
+            0.654609,
+            0.45875,
+            0.677946
+          ],
+          "tokens": [
+            {
+              "text": "Pre",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.36125,
+                0.654609,
+                0.391549,
+                0.677946
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Finance",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.394948,
+                0.654609,
+                0.45875,
+                0.677946
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pp",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.68625,
+            0.656943,
+            0.71375,
+            0.677946
+          ],
+          "tokens": [
+            {
+              "text": "Pp",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.68625,
+                0.656943,
+                0.71375,
+                0.677946
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Total Due",
+          "confidence": 0.693,
+          "bbox_norm": [
+            0.35875,
+            0.696616,
+            0.44125,
+            0.719953
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.35875,
+                0.696616,
+                0.405644,
+                0.719953
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Due",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.409235,
+                0.696616,
+                0.44125,
+                0.719953
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp",
+          "confidence": 0.957,
+          "bbox_norm": [
+            0.68375,
+            0.69895,
+            0.71375,
+            0.719953
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.957,
+              "bbox_norm": [
+                0.68375,
+                0.69895,
+                0.71375,
+                0.719953
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25 ,000 ,000",
+          "confidence": 0.538,
+          "bbox_norm": [
+            0.72625,
+            0.696616,
+            0.83125,
+            0.719953
+          ],
+          "tokens": [
+            {
+              "text": "25",
+              "confidence": 0.538,
+              "bbox_norm": [
+                0.72625,
+                0.696616,
+                0.747935,
+                0.719953
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",000",
+              "confidence": 0.538,
+              "bbox_norm": [
+                0.751929,
+                0.696616,
+                0.789592,
+                0.719953
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",000",
+              "confidence": 0.538,
+              "bbox_norm": [
+                0.793587,
+                0.696616,
+                0.83125,
+                0.719953
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pemib ayaian dengan €e",
+          "confidence": 0.016,
+          "bbox_norm": [
+            0.02875,
+            0.768961,
+            0.17875,
+            0.787631
+          ],
+          "tokens": [
+            {
+              "text": "Pemib",
+              "confidence": 0.016,
+              "bbox_norm": [
+                0.02875,
+                0.768961,
+                0.064697,
+                0.787631
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ayaian",
+              "confidence": 0.016,
+              "bbox_norm": [
+                0.06745,
+                0.768961,
+                0.110318,
+                0.787631
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.016,
+              "bbox_norm": [
+                0.113071,
+                0.768961,
+                0.160265,
+                0.787631
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "€e",
+              "confidence": 0.016,
+              "bbox_norm": [
+                0.163018,
+                0.768961,
+                0.17875,
+                0.787631
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "010 / Tienstet @tasnamg",
+          "confidence": 0.031,
+          "bbox_norm": [
+            0.18625,
+            0.768961,
+            0.34375,
+            0.785298
+          ],
+          "tokens": [
+            {
+              "text": "010",
+              "confidence": 0.031,
+              "bbox_norm": [
+                0.18625,
+                0.768961,
+                0.204376,
+                0.785298
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/",
+              "confidence": 0.031,
+              "bbox_norm": [
+                0.207075,
+                0.768961,
+                0.214788,
+                0.785298
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tienstet",
+              "confidence": 0.031,
+              "bbox_norm": [
+                0.217488,
+                0.768961,
+                0.275875,
+                0.785298
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@tasnamg",
+              "confidence": 0.031,
+              "bbox_norm": [
+                0.278575,
+                0.768961,
+                0.34375,
+                0.785298
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jae 12laiei 2000",
+          "confidence": 0.017,
+          "bbox_norm": [
+            0.70125,
+            0.768961,
+            0.84375,
+            0.785298
+          ],
+          "tokens": [
+            {
+              "text": "Jae",
+              "confidence": 0.017,
+              "bbox_norm": [
+                0.70125,
+                0.768961,
+                0.737192,
+                0.785298
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12laiei",
+              "confidence": 0.017,
+              "bbox_norm": [
+                0.741224,
+                0.768961,
+                0.795943,
+                0.785298
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2000",
+              "confidence": 0.017,
+              "bbox_norm": [
+                0.799975,
+                0.768961,
+                0.84375,
+                0.785298
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Yuniekanati",
+          "confidence": 0.151,
+          "bbox_norm": [
+            0.02375,
+            0.801634,
+            0.13625,
+            0.822637
+          ],
+          "tokens": [
+            {
+              "text": "Yuniekanati",
+              "confidence": 0.151,
+              "bbox_norm": [
+                0.02375,
+                0.801634,
+                0.13625,
+                0.822637
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "BCAKCP Poso Minggu",
+          "confidence": 0.337,
+          "bbox_norm": [
+            0.02625,
+            0.82147,
+            0.19375,
+            0.844807
+          ],
+          "tokens": [
+            {
+              "text": "BCAKCP",
+              "confidence": 0.337,
+              "bbox_norm": [
+                0.02625,
+                0.82147,
+                0.090791,
+                0.844807
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Poso",
+              "confidence": 0.337,
+              "bbox_norm": [
+                0.094153,
+                0.82147,
+                0.133723,
+                0.844807
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Minggu",
+              "confidence": 0.337,
+              "bbox_norm": [
+                0.137084,
+                0.82147,
+                0.19375,
+                0.844807
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No Rek - 5470285.917",
+          "confidence": 0.239,
+          "bbox_norm": [
+            0.02375,
+            0.838973,
+            0.22125,
+            0.86231
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.02375,
+                0.838973,
+                0.048762,
+                0.86231
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rek",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.052891,
+                0.838973,
+                0.089701,
+                0.86231
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "-",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.093831,
+                0.838973,
+                0.105629,
+                0.86231
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "5470285.917",
+              "confidence": 0.239,
+              "bbox_norm": [
+                0.109758,
+                0.838973,
+                0.22125,
+                0.86231
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Account Bekei",
+          "confidence": 0.131,
+          "bbox_norm": [
+            0.74875,
+            0.908985,
+            0.84125,
+            0.925321
+          ],
+          "tokens": [
+            {
+              "text": "Account",
+              "confidence": 0.131,
+              "bbox_norm": [
+                0.74875,
+                0.908985,
+                0.803451,
+                0.925321
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bekei",
+              "confidence": 0.131,
+              "bbox_norm": [
+                0.80614,
+                0.908985,
+                0.84125,
+                0.925321
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pemoayoran dum mata Uanq @singberlak @ dengenkurs $aat Bemoayeren",
+          "confidence": 0.005,
+          "bbox_norm": [
+            0.025,
+            0.943991,
+            0.47125,
+            0.966161
+          ],
+          "tokens": [
+            {
+              "text": "Pemoayoran",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.025,
+                0.943991,
+                0.100318,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dum",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.102923,
+                0.943991,
+                0.12525,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "mata",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.127855,
+                0.943991,
+                0.157625,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Uanq",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.16023,
+                0.943991,
+                0.190892,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@singberlak",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.193497,
+                0.943991,
+                0.270527,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "@",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.273132,
+                0.943991,
+                0.283923,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dengenkurs",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.286528,
+                0.943991,
+                0.360953,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "$aat",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.363558,
+                0.943991,
+                0.393327,
+                0.966161
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bemoayeren",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.395932,
+                0.943991,
+                0.47125,
+                0.966161
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jangananpembeyataa7 hatt datltandgaltnvotce",
+          "confidence": 0.003,
+          "bbox_norm": [
+            0.02625,
+            0.967328,
+            0.34125,
+            0.985998
+          ],
+          "tokens": [
+            {
+              "text": "Jangananpembeyataa7",
+              "confidence": 0.003,
+              "bbox_norm": [
+                0.02625,
+                0.967328,
+                0.173952,
+                0.985998
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "hatt",
+              "confidence": 0.003,
+              "bbox_norm": [
+                0.176663,
+                0.967328,
+                0.207644,
+                0.985998
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "datltandgaltnvotce",
+              "confidence": 0.003,
+              "bbox_norm": [
+                0.210355,
+                0.967328,
+                0.34125,
+                0.985998
+              ],
+              "_estimated": true
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.02375,
+            0.001167,
+            0.91625,
+            0.271879
+          ],
+          "confidence": 0.95,
+          "text_snippet": "@@R rg Jar parner @busress] Account o1 IBC SOLUTIOHS IND . Invoice 0309002 GEDUMG VTC Le,12 Job No 0"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.0225,
+            0.15986,
+            0.93375,
+            0.407235
+          ],
+          "confidence": 0.92,
+          "text_snippet": "JL. JEXD . SUDIPKAH KAV . 29-31 Date 12-Har-09 TELP 021-526 4550 ATT IBU LILIAIA INVOICE Shipper SHE"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.02625,
+            0.376896,
+            0.93375,
+            0.719953
+          ],
+          "confidence": 0.94,
+          "text_snippet": "No. Descuption Charges IDR Reraık A/F ZHE-JKT DOOR; 12s KG X RP 200.000/KG Pp 25,000,000 Total Charg"
+        },
+        {
+          "region_type": "totals",
+          "bbox_norm": [
+            0.35875,
+            0.610268,
+            0.4725,
+            0.719953
+          ],
+          "confidence": 0.95,
+          "text_snippet": "Total Charges Total Due"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.02375,
+            0.768961,
+            0.84375,
+            0.985998
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Pemib ayaian dengan €e 010 / Tienstet @tasnamg Jae 12laiei 2000 Yuniekanati BCAKCP Poso Minggu No Re"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.06125,
+            0.329055,
+            0.83125,
+            0.719953
+          ],
+          "headers": [
+            "Origin",
+            "-",
+            "Dest"
+          ],
+          "rows": [
+            [
+              "A/F",
+              "ZHE-JKT",
+              "DOOR;",
+              "12s",
+              "KG",
+              "X",
+              "RP",
+              "200.000/KG"
+            ],
+            [
+              "25",
+              ",000",
+              ",000"
+            ]
+          ],
+          "row_count": 2,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

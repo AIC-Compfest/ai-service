@@ -1,0 +1,1702 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 768,
+      "height": 1024,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.859,
+      "quality": {},
+      "lines": [
+        {
+          "text": "PT. GLOBAL KARGO SEJAHTERA",
+          "confidence": 0.842,
+          "bbox_norm": [
+            0.40625,
+            0.027344,
+            0.755208,
+            0.052734
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.40625,
+                0.027344,
+                0.44216,
+                0.052734
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "GLOBAL",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.446833,
+                0.027344,
+                0.536542,
+                0.052734
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KARGO",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.541214,
+                0.027344,
+                0.615972,
+                0.052734
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SEJAHTERA",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.620644,
+                0.027344,
+                0.755208,
+                0.052734
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JGT ARGo",
+          "confidence": 0.231,
+          "bbox_norm": [
+            0.084635,
+            0.036133,
+            0.33724,
+            0.098633
+          ],
+          "tokens": [
+            {
+              "text": "JGT",
+              "confidence": 0.231,
+              "bbox_norm": [
+                0.084635,
+                0.036133,
+                0.189809,
+                0.098633
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ARGo",
+              "confidence": 0.231,
+              "bbox_norm": [
+                0.200764,
+                0.036133,
+                0.33724,
+                0.098633
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JL A. Yani KM.7.4",
+          "confidence": 0.735,
+          "bbox_norm": [
+            0.407552,
+            0.051758,
+            0.540365,
+            0.071289
+          ],
+          "tokens": [
+            {
+              "text": "JL",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.407552,
+                0.051758,
+                0.42911,
+                0.071289
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A.",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.432478,
+                0.051758,
+                0.447588,
+                0.071289
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Yani",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.450957,
+                0.051758,
+                0.485315,
+                0.071289
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KM.7.4",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.488683,
+                0.051758,
+                0.540365,
+                0.071289
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Kel. Kertak Hanyar 2 Kec. Kertak Hanyar",
+          "confidence": 0.647,
+          "bbox_norm": [
+            0.407552,
+            0.069336,
+            0.707031,
+            0.089844
+          ],
+          "tokens": [
+            {
+              "text": "Kel.",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.407552,
+                0.069336,
+                0.434059,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kertak",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.437131,
+                0.069336,
+                0.490848,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hanyar",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.49392,
+                0.069336,
+                0.547637,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.550709,
+                0.069336,
+                0.559047,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kec.",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.562119,
+                0.069336,
+                0.593454,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kertak",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.596526,
+                0.069336,
+                0.650243,
+                0.089844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Hanyar",
+              "confidence": 0.647,
+              "bbox_norm": [
+                0.653315,
+                0.069336,
+                0.707031,
+                0.089844
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Kab Banjar",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.410156,
+            0.088867,
+            0.496094,
+            0.104492
+          ],
+          "tokens": [
+            {
+              "text": "Kab",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.410156,
+                0.088867,
+                0.438115,
+                0.104492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Banjar",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.441251,
+                0.088867,
+                0.496094,
+                0.104492
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Kalimantan Selatan . Telp. 05117948681",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.509115,
+            0.088867,
+            0.803385,
+            0.104492
+          ],
+          "tokens": [
+            {
+              "text": "Kalimantan",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.509115,
+                0.088867,
+                0.596399,
+                0.104492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Selatan",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.599786,
+                0.088867,
+                0.663362,
+                0.104492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ".",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.666749,
+                0.088867,
+                0.671104,
+                0.104492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Telp.",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.674491,
+                0.088867,
+                0.713391,
+                0.104492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "05117948681",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.716778,
+                0.088867,
+                0.803385,
+                0.104492
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Surat Tanda Terima",
+          "confidence": 0.993,
+          "bbox_norm": [
+            0.377604,
+            0.134766,
+            0.619792,
+            0.160156
+          ],
+          "tokens": [
+            {
+              "text": "Surat",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.377604,
+                0.134766,
+                0.45271,
+                0.160156
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tanda",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.457844,
+                0.134766,
+                0.53295,
+                0.160156
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Terima",
+              "confidence": 0.993,
+              "bbox_norm": [
+                0.538085,
+                0.134766,
+                0.619792,
+                0.160156
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Penerima",
+          "confidence": 0.965,
+          "bbox_norm": [
+            0.066406,
+            0.174805,
+            0.141927,
+            0.19043
+          ],
+          "tokens": [
+            {
+              "text": "Penerima",
+              "confidence": 0.965,
+              "bbox_norm": [
+                0.066406,
+                0.174805,
+                0.141927,
+                0.19043
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Pengirim",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.505208,
+            0.173828,
+            0.576823,
+            0.193359
+          ],
+          "tokens": [
+            {
+              "text": "Pengirim",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.505208,
+                0.173828,
+                0.576823,
+                0.193359
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "DHANI",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.066406,
+            0.208008,
+            0.121094,
+            0.223633
+          ],
+          "tokens": [
+            {
+              "text": "DHANI",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.066406,
+                0.208008,
+                0.121094,
+                0.223633
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Pengiriman Mobil dengan towing BDO-BDJ",
+          "confidence": 0.985,
+          "bbox_norm": [
+            0.503906,
+            0.205078,
+            0.825521,
+            0.229492
+          ],
+          "tokens": [
+            {
+              "text": "Pengiriman",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.503906,
+                0.205078,
+                0.58938,
+                0.229492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mobil",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.592696,
+                0.205078,
+                0.633917,
+                0.229492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.637233,
+                0.205078,
+                0.694089,
+                0.229492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "towing",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.697406,
+                0.205078,
+                0.74905,
+                0.229492
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BDO-BDJ",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.752366,
+                0.205078,
+                0.825521,
+                0.229492
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "rute BDO",
+          "confidence": 0.919,
+          "bbox_norm": [
+            0.832031,
+            0.206055,
+            0.907552,
+            0.223633
+          ],
+          "tokens": [
+            {
+              "text": "rute",
+              "confidence": 0.919,
+              "bbox_norm": [
+                0.832031,
+                0.206055,
+                0.871212,
+                0.223633
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BDO",
+              "confidence": 0.919,
+              "bbox_norm": [
+                0.87464,
+                0.206055,
+                0.907552,
+                0.223633
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "WAREHOUSE YOU BANJARMASIN JL A. YANI NO 11",
+          "confidence": 0.887,
+          "bbox_norm": [
+            0.063802,
+            0.223633,
+            0.446615,
+            0.241211
+          ],
+          "tokens": [
+            {
+              "text": "WAREHOUSE",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.063802,
+                0.223633,
+                0.166088,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "YOU",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.169528,
+                0.223633,
+                0.202542,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BANJARMASIN",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.205981,
+                0.223633,
+                0.323694,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JL",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.327133,
+                0.223633,
+                0.349143,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A.",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.352582,
+                0.223633,
+                0.368008,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "YANI",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.371447,
+                0.223633,
+                0.408884,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "NO",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.412323,
+                0.223633,
+                0.434332,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "11",
+              "confidence": 0.887,
+              "bbox_norm": [
+                0.437771,
+                0.223633,
+                0.446615,
+                0.241211
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUB-BDJ",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.503906,
+            0.223633,
+            0.574219,
+            0.241211
+          ],
+          "tokens": [
+            {
+              "text": "SUB-BDJ",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.503906,
+                0.223633,
+                0.574219,
+                0.241211
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Door To Door",
+          "confidence": 0.786,
+          "bbox_norm": [
+            0.582031,
+            0.225586,
+            0.688802,
+            0.241211
+          ],
+          "tokens": [
+            {
+              "text": "Door",
+              "confidence": 0.786,
+              "bbox_norm": [
+                0.582031,
+                0.225586,
+                0.621805,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To",
+              "confidence": 0.786,
+              "bbox_norm": [
+                0.625184,
+                0.225586,
+                0.64565,
+                0.241211
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Door",
+              "confidence": 0.786,
+              "bbox_norm": [
+                0.649028,
+                0.225586,
+                0.688802,
+                0.241211
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "GUNTUNG PAYUNG KEC, LANDASAN ULIN KOTA",
+          "confidence": 0.856,
+          "bbox_norm": [
+            0.063802,
+            0.239258,
+            0.420573,
+            0.258789
+          ],
+          "tokens": [
+            {
+              "text": "GUNTUNG",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.063802,
+                0.239258,
+                0.13865,
+                0.258789
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PAYUNG",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.141992,
+                0.239258,
+                0.206148,
+                0.258789
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KEC,",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.209489,
+                0.239258,
+                0.245863,
+                0.258789
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LANDASAN",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.249205,
+                0.239258,
+                0.334746,
+                0.258789
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ULIN",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.338087,
+                0.239258,
+                0.374461,
+                0.258789
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KOTA",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.377802,
+                0.239258,
+                0.420573,
+                0.258789
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "BANJARBARU GADGETMART BANJARBARU",
+          "confidence": 0.997,
+          "bbox_norm": [
+            0.063802,
+            0.255859,
+            0.384115,
+            0.274414
+          ],
+          "tokens": [
+            {
+              "text": "BANJARBARU",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.063802,
+                0.255859,
+                0.167397,
+                0.274414
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "GADGETMART",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.170635,
+                0.255859,
+                0.277282,
+                0.274414
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BANJARBARU",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.280519,
+                0.255859,
+                0.384115,
+                0.274414
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Note",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.50651,
+            0.258789,
+            0.550781,
+            0.274414
+          ],
+          "tokens": [
+            {
+              "text": "Note",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.50651,
+                0.258789,
+                0.550781,
+                0.274414
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Payment Awal : Rp 9.100.000",
+          "confidence": 0.625,
+          "bbox_norm": [
+            0.50651,
+            0.274414,
+            0.727865,
+            0.293945
+          ],
+          "tokens": [
+            {
+              "text": "Payment",
+              "confidence": 0.625,
+              "bbox_norm": [
+                0.50651,
+                0.274414,
+                0.579106,
+                0.293945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Awal",
+              "confidence": 0.625,
+              "bbox_norm": [
+                0.582674,
+                0.274414,
+                0.619074,
+                0.293945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.625,
+              "bbox_norm": [
+                0.622642,
+                0.274414,
+                0.627231,
+                0.293945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rp",
+              "confidence": 0.625,
+              "bbox_norm": [
+                0.630799,
+                0.274414,
+                0.652415,
+                0.293945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "9.100.000",
+              "confidence": 0.625,
+              "bbox_norm": [
+                0.655983,
+                0.274414,
+                0.727865,
+                0.293945
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pelunasan saat barang diterima : Rp 9.100.000",
+          "confidence": 0.899,
+          "bbox_norm": [
+            0.50651,
+            0.292969,
+            0.852865,
+            0.311523
+          ],
+          "tokens": [
+            {
+              "text": "Pelunasan",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.50651,
+                0.292969,
+                0.586324,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "saat",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.589583,
+                0.292969,
+                0.626836,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "barang",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.630095,
+                0.292969,
+                0.685974,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "diterima",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.689233,
+                0.292969,
+                0.753494,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.756753,
+                0.292969,
+                0.760944,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rp",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.764204,
+                0.292969,
+                0.783948,
+                0.311523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "9.100.000",
+              "confidence": 0.899,
+              "bbox_norm": [
+                0.787207,
+                0.292969,
+                0.852865,
+                0.311523
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Telp :",
+          "confidence": 0.709,
+          "bbox_norm": [
+            0.503906,
+            0.358398,
+            0.553385,
+            0.37793
+          ],
+          "tokens": [
+            {
+              "text": "Telp",
+              "confidence": 0.709,
+              "bbox_norm": [
+                0.503906,
+                0.358398,
+                0.544327,
+                0.37793
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.709,
+              "bbox_norm": [
+                0.54829,
+                0.358398,
+                0.553385,
+                0.37793
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Telp : 08312348214",
+          "confidence": 0.577,
+          "bbox_norm": [
+            0.063802,
+            0.393555,
+            0.22526,
+            0.411133
+          ],
+          "tokens": [
+            {
+              "text": "Telp",
+              "confidence": 0.577,
+              "bbox_norm": [
+                0.063802,
+                0.393555,
+                0.10448,
+                0.411133
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.577,
+              "bbox_norm": [
+                0.108468,
+                0.393555,
+                0.113596,
+                0.411133
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "08312348214",
+              "confidence": 0.577,
+              "bbox_norm": [
+                0.117584,
+                0.393555,
+                0.22526,
+                0.411133
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Isi Kiriman : Mitsubishi Strada Triton",
+          "confidence": 0.912,
+          "bbox_norm": [
+            0.063802,
+            0.436523,
+            0.33724,
+            0.454102
+          ],
+          "tokens": [
+            {
+              "text": "Isi",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.063802,
+                0.436523,
+                0.080775,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kiriman",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.083901,
+                0.436523,
+                0.137678,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.140804,
+                0.436523,
+                0.144824,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mitsubishi",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.14795,
+                0.436523,
+                0.22656,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Strada",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.229687,
+                0.436523,
+                0.284357,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Triton",
+              "confidence": 0.912,
+              "bbox_norm": [
+                0.287483,
+                0.436523,
+                0.33724,
+                0.454102
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Berat :",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.467448,
+            0.438477,
+            0.522135,
+            0.454102
+          ],
+          "tokens": [
+            {
+              "text": "Berat",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.467448,
+                0.438477,
+                0.514745,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.517978,
+                0.438477,
+                0.522135,
+                0.454102
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Koli :",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.602865,
+            0.436523,
+            0.647135,
+            0.454102
+          ],
+          "tokens": [
+            {
+              "text": "Koli",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.602865,
+                0.436523,
+                0.637864,
+                0.454102
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.64192,
+                0.436523,
+                0.647135,
+                0.454102
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total Biaya : 18.200.000",
+          "confidence": 0.842,
+          "bbox_norm": [
+            0.727865,
+            0.436523,
+            0.91276,
+            0.456055
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.727865,
+                0.436523,
+                0.773196,
+                0.456055
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Biaya",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.776668,
+                0.436523,
+                0.821999,
+                0.456055
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.825471,
+                0.436523,
+                0.829934,
+                0.456055
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "18.200.000",
+              "confidence": 0.842,
+              "bbox_norm": [
+                0.833406,
+                0.436523,
+                0.91276,
+                0.456055
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Keterangan : Rp 9.100.0O0",
+          "confidence": 0.608,
+          "bbox_norm": [
+            0.067708,
+            0.469727,
+            0.269531,
+            0.489258
+          ],
+          "tokens": [
+            {
+              "text": "Keterangan",
+              "confidence": 0.608,
+              "bbox_norm": [
+                0.067708,
+                0.469727,
+                0.165153,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.608,
+              "bbox_norm": [
+                0.168524,
+                0.469727,
+                0.172857,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rp",
+              "confidence": 0.608,
+              "bbox_norm": [
+                0.176227,
+                0.469727,
+                0.19664,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "9.100.0O0",
+              "confidence": 0.608,
+              "bbox_norm": [
+                0.20001,
+                0.469727,
+                0.269531,
+                0.489258
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "DP/ €ASH/ BAYAR FUJUAN",
+          "confidence": 0.506,
+          "bbox_norm": [
+            0.727865,
+            0.469727,
+            0.933594,
+            0.489258
+          ],
+          "tokens": [
+            {
+              "text": "DP/",
+              "confidence": 0.506,
+              "bbox_norm": [
+                0.727865,
+                0.469727,
+                0.758204,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "€ASH/",
+              "confidence": 0.506,
+              "bbox_norm": [
+                0.761482,
+                0.469727,
+                0.811673,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BAYAR",
+              "confidence": 0.506,
+              "bbox_norm": [
+                0.814951,
+                0.469727,
+                0.86739,
+                0.489258
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "FUJUAN",
+              "confidence": 0.506,
+              "bbox_norm": [
+                0.870667,
+                0.469727,
+                0.933594,
+                0.489258
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Asuransi",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.115885,
+            0.526367,
+            0.186198,
+            0.541992
+          ],
+          "tokens": [
+            {
+              "text": "Asuransi",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.115885,
+                0.526367,
+                0.186198,
+                0.541992
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Banjarmasi, 27 September 2021",
+          "confidence": 0.949,
+          "bbox_norm": [
+            0.707031,
+            0.579102,
+            0.94401,
+            0.598633
+          ],
+          "tokens": [
+            {
+              "text": "Banjarmasi,",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.707031,
+                0.579102,
+                0.800554,
+                0.598633
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "27",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.80382,
+                0.579102,
+                0.821554,
+                0.598633
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "September",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.824821,
+                0.579102,
+                0.909943,
+                0.598633
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2021",
+              "confidence": 0.949,
+              "bbox_norm": [
+                0.91321,
+                0.579102,
+                0.94401,
+                0.598633
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pengirim",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.097656,
+            0.692383,
+            0.174479,
+            0.71582
+          ],
+          "tokens": [
+            {
+              "text": "Pengirim",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.097656,
+                0.692383,
+                0.174479,
+                0.71582
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Penerima",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.44401,
+            0.696289,
+            0.519531,
+            0.711914
+          ],
+          "tokens": [
+            {
+              "text": "Penerima",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.44401,
+                0.696289,
+                0.519531,
+                0.711914
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JNT Kargo Sejahtera",
+          "confidence": 0.967,
+          "bbox_norm": [
+            0.760417,
+            0.694336,
+            0.915365,
+            0.713867
+          ],
+          "tokens": [
+            {
+              "text": "JNT",
+              "confidence": 0.967,
+              "bbox_norm": [
+                0.760417,
+                0.694336,
+                0.788866,
+                0.713867
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kargo",
+              "confidence": 0.967,
+              "bbox_norm": [
+                0.79183,
+                0.694336,
+                0.835181,
+                0.713867
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sejahtera",
+              "confidence": 0.967,
+              "bbox_norm": [
+                0.838145,
+                0.694336,
+                0.915365,
+                0.713867
+              ],
+              "_estimated": true
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.066406,
+            0.027344,
+            0.803385,
+            0.193359
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT. GLOBAL KARGO SEJAHTERA JGT ARGo JL A. Yani KM.7.4 Kel. Kertak Hanyar 2 Kec. Kertak Hanyar Kab Ba"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.063802,
+            0.173828,
+            0.907552,
+            0.37793
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Penerima Pengirim DHANI Pengiriman Mobil dengan towing BDO-BDJ rute BDO WAREHOUSE YOU BANJARMASIN JL"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.063802,
+            0.358398,
+            0.94401,
+            0.71582
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Telp : Telp : 08312348214 Isi Kiriman : Mitsubishi Strada Triton Berat : Koli : Total Biaya : 18.200"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.44401,
+            0.696289,
+            0.519531,
+            0.711914
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Penerima"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.063802,
+            0.393555,
+            0.94401,
+            0.713867
+          ],
+          "headers": [
+            "Telp",
+            ":",
+            "08312348214"
+          ],
+          "rows": [
+            [
+              "Isi",
+              "Kiriman",
+              ":",
+              "Mitsubishi",
+              "Strada",
+              "Triton"
+            ],
+            [
+              "Total",
+              "Biaya",
+              ":",
+              "18.200.000"
+            ],
+            [
+              "Keterangan",
+              ":",
+              "Rp",
+              "9.100.0O0"
+            ],
+            [
+              "DP/",
+              "€ASH/",
+              "BAYAR",
+              "FUJUAN"
+            ],
+            [
+              "Banjarmasi,",
+              "27",
+              "September",
+              "2021"
+            ],
+            [
+              "JNT",
+              "Kargo",
+              "Sejahtera"
+            ]
+          ],
+          "row_count": 6,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

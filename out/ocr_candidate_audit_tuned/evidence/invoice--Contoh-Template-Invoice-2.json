@@ -1,0 +1,1429 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1000,
+      "height": 1080,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.803,
+      "quality": {},
+      "lines": [
+        {
+          "text": "My Company",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.721,
+            0.035185,
+            0.803,
+            0.053704
+          ],
+          "tokens": [
+            {
+              "text": "My",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.721,
+                0.035185,
+                0.741252,
+                0.053704
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Company",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.744145,
+                0.035185,
+                0.803,
+                0.053704
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jl Pegangsaan Indah Barat A7",
+          "confidence": 0.67,
+          "bbox_norm": [
+            0.721,
+            0.05463,
+            0.883,
+            0.069444
+          ],
+          "tokens": [
+            {
+              "text": "Jl",
+              "confidence": 0.67,
+              "bbox_norm": [
+                0.721,
+                0.05463,
+                0.731285,
+                0.069444
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pegangsaan",
+              "confidence": 0.67,
+              "bbox_norm": [
+                0.733577,
+                0.05463,
+                0.799871,
+                0.069444
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Indah",
+              "confidence": 0.67,
+              "bbox_norm": [
+                0.802164,
+                0.05463,
+                0.831315,
+                0.069444
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Barat",
+              "confidence": 0.67,
+              "bbox_norm": [
+                0.833607,
+                0.05463,
+                0.867147,
+                0.069444
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A7",
+              "confidence": 0.67,
+              "bbox_norm": [
+                0.86944,
+                0.05463,
+                0.883,
+                0.069444
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Kelapa",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.721,
+            0.073148,
+            0.763,
+            0.086111
+          ],
+          "tokens": [
+            {
+              "text": "Kelapa",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.721,
+                0.073148,
+                0.763,
+                0.086111
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Gading; Jakarta Utara",
+          "confidence": 0.909,
+          "bbox_norm": [
+            0.76,
+            0.069444,
+            0.881,
+            0.087963
+          ],
+          "tokens": [
+            {
+              "text": "Gading;",
+              "confidence": 0.909,
+              "bbox_norm": [
+                0.76,
+                0.069444,
+                0.798419,
+                0.087963
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.909,
+              "bbox_norm": [
+                0.800652,
+                0.069444,
+                0.846091,
+                0.087963
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Utara",
+              "confidence": 0.909,
+              "bbox_norm": [
+                0.848325,
+                0.069444,
+                0.881,
+                0.087963
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "NPWP",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.721,
+            0.100926,
+            0.761,
+            0.113889
+          ],
+          "tokens": [
+            {
+              "text": "NPWP",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.721,
+                0.100926,
+                0.761,
+                0.113889
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Invoice",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.025,
+            0.182407,
+            0.132,
+            0.215741
+          ],
+          "tokens": [
+            {
+              "text": "Invoice",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.025,
+                0.182407,
+                0.132,
+                0.215741
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Biled To:",
+          "confidence": 0.846,
+          "bbox_norm": [
+            0.039,
+            0.239815,
+            0.093,
+            0.25463
+          ],
+          "tokens": [
+            {
+              "text": "Biled",
+              "confidence": 0.846,
+              "bbox_norm": [
+                0.039,
+                0.239815,
+                0.07028,
+                0.25463
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To:",
+              "confidence": 0.846,
+              "bbox_norm": [
+                0.073003,
+                0.239815,
+                0.093,
+                0.25463
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Payment Terms:",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.322,
+            0.238889,
+            0.413,
+            0.257407
+          ],
+          "tokens": [
+            {
+              "text": "Payment",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.322,
+                0.238889,
+                0.371687,
+                0.257407
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Terms:",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.37413,
+                0.238889,
+                0.413,
+                0.257407
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No:",
+          "confidence": 0.689,
+          "bbox_norm": [
+            0.605,
+            0.239815,
+            0.627,
+            0.25463
+          ],
+          "tokens": [
+            {
+              "text": "No:",
+              "confidence": 0.689,
+              "bbox_norm": [
+                0.605,
+                0.239815,
+                0.627,
+                0.25463
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Date",
+          "confidence": 0.414,
+          "bbox_norm": [
+            0.791,
+            0.239815,
+            0.823,
+            0.25463
+          ],
+          "tokens": [
+            {
+              "text": "Date",
+              "confidence": 0.414,
+              "bbox_norm": [
+                0.791,
+                0.239815,
+                0.823,
+                0.25463
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Adam aria Jalan pegangsaan indah barat,",
+          "confidence": 0.921,
+          "bbox_norm": [
+            0.039,
+            0.256481,
+            0.279,
+            0.275
+          ],
+          "tokens": [
+            {
+              "text": "Adam",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.039,
+                0.256481,
+                0.068263,
+                0.275
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "aria",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.070749,
+                0.256481,
+                0.095253,
+                0.275
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jalan",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.097739,
+                0.256481,
+                0.130199,
+                0.275
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "pegangsaan",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.132685,
+                0.256481,
+                0.203711,
+                0.275
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "indah",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.206197,
+                0.256481,
+                0.237804,
+                0.275
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "barat,",
+              "confidence": 0.921,
+              "bbox_norm": [
+                0.24029,
+                0.256481,
+                0.279,
+                0.275
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "INVI2017/0001",
+          "confidence": 0.991,
+          "bbox_norm": [
+            0.603,
+            0.256481,
+            0.701,
+            0.275
+          ],
+          "tokens": [
+            {
+              "text": "INVI2017/0001",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.603,
+                0.256481,
+                0.701,
+                0.275
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "2017-12-12",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.789,
+            0.256481,
+            0.865,
+            0.275
+          ],
+          "tokens": [
+            {
+              "text": "2017-12-12",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.789,
+                0.256481,
+                0.865,
+                0.275
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "blok A7 , Jakarta utara",
+          "confidence": 0.913,
+          "bbox_norm": [
+            0.039,
+            0.276852,
+            0.173,
+            0.293519
+          ],
+          "tokens": [
+            {
+              "text": "blok",
+              "confidence": 0.913,
+              "bbox_norm": [
+                0.039,
+                0.276852,
+                0.06272,
+                0.293519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "A7",
+              "confidence": 0.913,
+              "bbox_norm": [
+                0.065126,
+                0.276852,
+                0.079358,
+                0.293519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",",
+              "confidence": 0.913,
+              "bbox_norm": [
+                0.081764,
+                0.276852,
+                0.084858,
+                0.293519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.913,
+              "bbox_norm": [
+                0.087265,
+                0.276852,
+                0.136217,
+                0.293519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "utara",
+              "confidence": 0.913,
+              "bbox_norm": [
+                0.138623,
+                0.276852,
+                0.173,
+                0.293519
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "DKI Jakarta;",
+          "confidence": 0.688,
+          "bbox_norm": [
+            0.037,
+            0.293519,
+            0.113,
+            0.312037
+          ],
+          "tokens": [
+            {
+              "text": "DKI",
+              "confidence": 0.688,
+              "bbox_norm": [
+                0.037,
+                0.293519,
+                0.056269,
+                0.312037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Jakarta;",
+              "confidence": 0.688,
+              "bbox_norm": [
+                0.058776,
+                0.293519,
+                0.113,
+                0.312037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Indonesia",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.039,
+            0.315741,
+            0.101,
+            0.330556
+          ],
+          "tokens": [
+            {
+              "text": "Indonesia",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.039,
+                0.315741,
+                0.101,
+                0.330556
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Telp: 08216788999",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.039,
+            0.332407,
+            0.157,
+            0.349074
+          ],
+          "tokens": [
+            {
+              "text": "Telp:",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.039,
+                0.332407,
+                0.072126,
+                0.349074
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "08216788999",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.07501,
+                0.332407,
+                0.157,
+                0.349074
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Email: adam@gmail com",
+          "confidence": 0.801,
+          "bbox_norm": [
+            0.041,
+            0.350926,
+            0.183,
+            0.367593
+          ],
+          "tokens": [
+            {
+              "text": "Email:",
+              "confidence": 0.801,
+              "bbox_norm": [
+                0.041,
+                0.350926,
+                0.077229,
+                0.367593
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "adam@gmail",
+              "confidence": 0.801,
+              "bbox_norm": [
+                0.080066,
+                0.350926,
+                0.155848,
+                0.367593
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "com",
+              "confidence": 0.801,
+              "bbox_norm": [
+                0.158685,
+                0.350926,
+                0.183,
+                0.367593
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Item",
+          "confidence": 0.754,
+          "bbox_norm": [
+            0.033,
+            0.408333,
+            0.065,
+            0.423148
+          ],
+          "tokens": [
+            {
+              "text": "Item",
+              "confidence": 0.754,
+              "bbox_norm": [
+                0.033,
+                0.408333,
+                0.065,
+                0.423148
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Description",
+          "confidence": 0.679,
+          "bbox_norm": [
+            0.271,
+            0.408333,
+            0.341,
+            0.423148
+          ],
+          "tokens": [
+            {
+              "text": "Description",
+              "confidence": 0.679,
+              "bbox_norm": [
+                0.271,
+                0.408333,
+                0.341,
+                0.423148
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Qty.",
+          "confidence": 0.498,
+          "bbox_norm": [
+            0.583,
+            0.408333,
+            0.611,
+            0.423148
+          ],
+          "tokens": [
+            {
+              "text": "Qty.",
+              "confidence": 0.498,
+              "bbox_norm": [
+                0.583,
+                0.408333,
+                0.611,
+                0.423148
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Unit Price (Rp)",
+          "confidence": 0.773,
+          "bbox_norm": [
+            0.691,
+            0.406481,
+            0.781,
+            0.423148
+          ],
+          "tokens": [
+            {
+              "text": "Unit",
+              "confidence": 0.773,
+              "bbox_norm": [
+                0.691,
+                0.406481,
+                0.715792,
+                0.423148
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Price",
+              "confidence": 0.773,
+              "bbox_norm": [
+                0.718222,
+                0.406481,
+                0.749958,
+                0.423148
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(Rp)",
+              "confidence": 0.773,
+              "bbox_norm": [
+                0.752389,
+                0.406481,
+                0.781,
+                0.423148
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total Amount(Rp)",
+          "confidence": 0.732,
+          "bbox_norm": [
+            0.863,
+            0.408333,
+            0.967,
+            0.423148
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.732,
+              "bbox_norm": [
+                0.863,
+                0.408333,
+                0.894351,
+                0.423148
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Amount(Rp)",
+              "confidence": 0.732,
+              "bbox_norm": [
+                0.896752,
+                0.408333,
+                0.967,
+                0.423148
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "iphone x",
+          "confidence": 0.941,
+          "bbox_norm": [
+            0.035,
+            0.449074,
+            0.085,
+            0.462037
+          ],
+          "tokens": [
+            {
+              "text": "iphone",
+              "confidence": 0.941,
+              "bbox_norm": [
+                0.035,
+                0.449074,
+                0.075074,
+                0.462037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "x",
+              "confidence": 0.941,
+              "bbox_norm": [
+                0.077647,
+                0.449074,
+                0.085,
+                0.462037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "origina black",
+          "confidence": 0.632,
+          "bbox_norm": [
+            0.27,
+            0.44537,
+            0.347,
+            0.463889
+          ],
+          "tokens": [
+            {
+              "text": "origina",
+              "confidence": 0.632,
+              "bbox_norm": [
+                0.27,
+                0.44537,
+                0.312458,
+                0.463889
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "black",
+              "confidence": 0.632,
+              "bbox_norm": [
+                0.314977,
+                0.44537,
+                0.347,
+                0.463889
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 26.000.OCo",
+          "confidence": 0.174,
+          "bbox_norm": [
+            0.699,
+            0.447222,
+            0.779,
+            0.462037
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.174,
+              "bbox_norm": [
+                0.699,
+                0.447222,
+                0.71393,
+                0.462037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "26.000.OCo",
+              "confidence": 0.174,
+              "bbox_norm": [
+                0.716394,
+                0.447222,
+                0.779,
+                0.462037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp 26OoqOco",
+          "confidence": 0.237,
+          "bbox_norm": [
+            0.884,
+            0.44537,
+            0.967,
+            0.463889
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.237,
+              "bbox_norm": [
+                0.884,
+                0.44537,
+                0.900584,
+                0.463889
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "26OoqOco",
+              "confidence": 0.237,
+              "bbox_norm": [
+                0.903322,
+                0.44537,
+                0.967,
+                0.463889
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "samsung Galaxy 58",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.033,
+            0.497222,
+            0.139,
+            0.512037
+          ],
+          "tokens": [
+            {
+              "text": "samsung",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.033,
+                0.497222,
+                0.081912,
+                0.512037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Galaxy",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.084358,
+                0.497222,
+                0.123278,
+                0.512037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "58",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.125724,
+                0.497222,
+                0.139,
+                0.512037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "OrizinaVGold",
+          "confidence": 0.95,
+          "bbox_norm": [
+            0.27,
+            0.494444,
+            0.347,
+            0.512037
+          ],
+          "tokens": [
+            {
+              "text": "OrizinaVGold",
+              "confidence": 0.95,
+              "bbox_norm": [
+                0.27,
+                0.494444,
+                0.347,
+                0.512037
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Rp &.Ooooco",
+          "confidence": 0.153,
+          "bbox_norm": [
+            0.705,
+            0.49537,
+            0.779,
+            0.512037
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.153,
+              "bbox_norm": [
+                0.705,
+                0.49537,
+                0.719955,
+                0.512037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "&.Ooooco",
+              "confidence": 0.153,
+              "bbox_norm": [
+                0.722424,
+                0.49537,
+                0.779,
+                0.512037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Rp&ooooco",
+          "confidence": 0.218,
+          "bbox_norm": [
+            0.893,
+            0.49537,
+            0.967,
+            0.512037
+          ],
+          "tokens": [
+            {
+              "text": "Rp&ooooco",
+              "confidence": 0.218,
+              "bbox_norm": [
+                0.893,
+                0.49537,
+                0.967,
+                0.512037
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Total",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.741,
+            0.539815,
+            0.775,
+            0.556481
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.741,
+                0.539815,
+                0.775,
+                0.556481
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "34,595,294.12",
+          "confidence": 0.754,
+          "bbox_norm": [
+            0.883,
+            0.537963,
+            0.973,
+            0.556481
+          ],
+          "tokens": [
+            {
+              "text": "34,595,294.12",
+              "confidence": 0.754,
+              "bbox_norm": [
+                0.883,
+                0.537963,
+                0.973,
+                0.556481
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Notes",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.033,
+            0.628704,
+            0.071,
+            0.643519
+          ],
+          "tokens": [
+            {
+              "text": "Notes",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.033,
+                0.628704,
+                0.071,
+                0.643519
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Bank Account",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.785,
+            0.628704,
+            0.871,
+            0.643519
+          ],
+          "tokens": [
+            {
+              "text": "Bank",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.785,
+                0.628704,
+                0.815571,
+                0.643519
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Account",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.818168,
+                0.628704,
+                0.871,
+                0.643519
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "account number",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.785,
+            0.667593,
+            0.893,
+            0.682407
+          ],
+          "tokens": [
+            {
+              "text": "account",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.785,
+                0.667593,
+                0.841629,
+                0.682407
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "number",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.844461,
+                0.667593,
+                0.893,
+                0.682407
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Account Holder",
+          "confidence": 0.976,
+          "bbox_norm": [
+            0.787,
+            0.69537,
+            0.889,
+            0.712037
+          ],
+          "tokens": [
+            {
+              "text": "Account",
+              "confidence": 0.976,
+              "bbox_norm": [
+                0.787,
+                0.69537,
+                0.842693,
+                0.712037
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Holder",
+              "confidence": 0.976,
+              "bbox_norm": [
+                0.845431,
+                0.69537,
+                0.889,
+                0.712037
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "My Company",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.785,
+            0.713889,
+            0.867,
+            0.732407
+          ],
+          "tokens": [
+            {
+              "text": "My",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.785,
+                0.713889,
+                0.805252,
+                0.732407
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Company",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.808145,
+                0.713889,
+                0.867,
+                0.732407
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "20 Dec, 2017",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.778,
+            0.774074,
+            0.866,
+            0.796296
+          ],
+          "tokens": [
+            {
+              "text": "20",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.778,
+                0.774074,
+                0.795656,
+                0.796296
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dec,",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.798908,
+                0.774074,
+                0.832082,
+                0.796296
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2017",
+              "confidence": 0.93,
+              "bbox_norm": [
+                0.835335,
+                0.774074,
+                0.866,
+                0.796296
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Finance",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.797,
+            0.908333,
+            0.849,
+            0.923148
+          ],
+          "tokens": [
+            {
+              "text": "Finance",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.797,
+                0.908333,
+                0.849,
+                0.923148
+              ],
+              "_estimated": false
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.025,
+            0.035185,
+            0.883,
+            0.215741
+          ],
+          "confidence": 0.95,
+          "text_snippet": "My Company Jl Pegangsaan Indah Barat A7 Kelapa Gading; Jakarta Utara NPWP Invoice"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.025,
+            0.182407,
+            0.865,
+            0.367593
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Invoice Biled To: Payment Terms: No: Date Adam aria Jalan pegangsaan indah barat, INVI2017/0001 2017"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.033,
+            0.350926,
+            0.973,
+            0.732407
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Email: adam@gmail com Item Description Qty. Unit Price (Rp) Total Amount(Rp) iphone x origina black "
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.778,
+            0.774074,
+            0.866,
+            0.923148
+          ],
+          "confidence": 0.9,
+          "text_snippet": "20 Dec, 2017 Finance"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.033,
+            0.350926,
+            0.781,
+            0.512037
+          ],
+          "headers": [
+            "Email:",
+            "adam@gmail",
+            "com"
+          ],
+          "rows": [
+            [
+              "Unit",
+              "Price",
+              "(Rp)"
+            ],
+            [
+              "samsung",
+              "Galaxy",
+              "58"
+            ]
+          ],
+          "row_count": 2,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

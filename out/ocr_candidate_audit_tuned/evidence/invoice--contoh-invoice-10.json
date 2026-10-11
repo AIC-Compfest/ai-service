@@ -1,0 +1,3120 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 800,
+      "height": 684,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.328,
+      "quality": {},
+      "lines": [
+        {
+          "text": "PT: INDONESIA LOGISTIK SERVIS",
+          "confidence": 0.649,
+          "bbox_norm": [
+            0.195,
+            0.035088,
+            0.5825,
+            0.070175
+          ],
+          "tokens": [
+            {
+              "text": "PT:",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.195,
+                0.035088,
+                0.234861,
+                0.070175
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "INDONESIA",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.240048,
+                0.035088,
+                0.36956,
+                0.070175
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LOGISTIK",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.374747,
+                0.035088,
+                0.487663,
+                0.070175
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SERVIS",
+              "confidence": 0.649,
+              "bbox_norm": [
+                0.492849,
+                0.035088,
+                0.5825,
+                0.070175
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JL Gamelae Na 02 Dadl Mul) _ Kol Samarlede Kalmnpl",
+          "confidence": 0.069,
+          "bbox_norm": [
+            0.13875,
+            0.065789,
+            0.53125,
+            0.092105
+          ],
+          "tokens": [
+            {
+              "text": "JL",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.13875,
+                0.065789,
+                0.15988,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Gamelae",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.163181,
+                0.065789,
+                0.225155,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Na",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.228456,
+                0.065789,
+                0.248454,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "02",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.251755,
+                0.065789,
+                0.269678,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dadl",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.272979,
+                0.065789,
+                0.306654,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mul)",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.309956,
+                0.065789,
+                0.346744,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "_",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.350045,
+                0.065789,
+                0.359478,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kol",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.36278,
+                0.065789,
+                0.387022,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Samarlede",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.390324,
+                0.065789,
+                0.471163,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kalmnpl",
+              "confidence": 0.069,
+              "bbox_norm": [
+                0.474464,
+                0.065789,
+                0.53125,
+                0.092105
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ilmur 18242",
+          "confidence": 0.135,
+          "bbox_norm": [
+            0.55125,
+            0.068713,
+            0.64125,
+            0.092105
+          ],
+          "tokens": [
+            {
+              "text": "Ilmur",
+              "confidence": 0.135,
+              "bbox_norm": [
+                0.55125,
+                0.068713,
+                0.592544,
+                0.092105
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "18242",
+              "confidence": 0.135,
+              "bbox_norm": [
+                0.59625,
+                0.068713,
+                0.64125,
+                0.092105
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Dp (0541)-74001, Emnl : Inloe lls-dcon",
+          "confidence": 0.044,
+          "bbox_norm": [
+            0.23875,
+            0.083333,
+            0.53875,
+            0.114035
+          ],
+          "tokens": [
+            {
+              "text": "Dp",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.23875,
+                0.083333,
+                0.260171,
+                0.114035
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(0541)-74001,",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.263708,
+                0.083333,
+                0.374856,
+                0.114035
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Emnl",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.378393,
+                0.083333,
+                0.414466,
+                0.114035
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.418002,
+                0.083333,
+                0.422549,
+                0.114035
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Inloe",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.426086,
+                0.083333,
+                0.465493,
+                0.114035
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "lls-dcon",
+              "confidence": 0.044,
+              "bbox_norm": [
+                0.46903,
+                0.083333,
+                0.53875,
+                0.114035
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ILS",
+          "confidence": 0.786,
+          "bbox_norm": [
+            0.73875,
+            0.033626,
+            0.89625,
+            0.159357
+          ],
+          "tokens": [
+            {
+              "text": "ILS",
+              "confidence": 0.786,
+              "bbox_norm": [
+                0.73875,
+                0.033626,
+                0.89625,
+                0.159357
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Doonulocnn",
+          "confidence": 0.055,
+          "bbox_norm": [
+            0.75125,
+            0.144737,
+            0.84625,
+            0.162281
+          ],
+          "tokens": [
+            {
+              "text": "Doonulocnn",
+              "confidence": 0.055,
+              "bbox_norm": [
+                0.75125,
+                0.144737,
+                0.84625,
+                0.162281
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "INVOICE",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.45875,
+            0.147661,
+            0.55625,
+            0.176901
+          ],
+          "tokens": [
+            {
+              "text": "INVOICE",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.45875,
+                0.147661,
+                0.55625,
+                0.176901
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "NO; ILSI2/OUT/08-20/0015",
+          "confidence": 0.374,
+          "bbox_norm": [
+            0.40125,
+            0.176901,
+            0.61375,
+            0.20614
+          ],
+          "tokens": [
+            {
+              "text": "NO;",
+              "confidence": 0.374,
+              "bbox_norm": [
+                0.40125,
+                0.176901,
+                0.427726,
+                0.20614
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ILSI2/OUT/08-20/0015",
+              "confidence": 0.374,
+              "bbox_norm": [
+                0.431171,
+                0.176901,
+                0.61375,
+                0.20614
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Date",
+          "confidence": 0.776,
+          "bbox_norm": [
+            0.07375,
+            0.238304,
+            0.10875,
+            0.261696
+          ],
+          "tokens": [
+            {
+              "text": "Date",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.07375,
+                0.238304,
+                0.10875,
+                0.261696
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "20 AlR-21",
+          "confidence": 0.355,
+          "bbox_norm": [
+            0.20375,
+            0.238304,
+            0.27625,
+            0.261696
+          ],
+          "tokens": [
+            {
+              "text": "20",
+              "confidence": 0.355,
+              "bbox_norm": [
+                0.20375,
+                0.238304,
+                0.222517,
+                0.261696
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "AlR-21",
+              "confidence": 0.355,
+              "bbox_norm": [
+                0.225974,
+                0.238304,
+                0.27625,
+                0.261696
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Adaress",
+          "confidence": 0.448,
+          "bbox_norm": [
+            0.62375,
+            0.238304,
+            0.68125,
+            0.258772
+          ],
+          "tokens": [
+            {
+              "text": "Adaress",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.62375,
+                0.238304,
+                0.68125,
+                0.258772
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "JLSELT MA(ASSAR",
+          "confidence": 0.131,
+          "bbox_norm": [
+            0.72375,
+            0.238304,
+            0.85875,
+            0.258772
+          ],
+          "tokens": [
+            {
+              "text": "JLSELT",
+              "confidence": 0.131,
+              "bbox_norm": [
+                0.72375,
+                0.238304,
+                0.779612,
+                0.258772
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "MA(ASSAR",
+              "confidence": 0.131,
+              "bbox_norm": [
+                0.782522,
+                0.238304,
+                0.85875,
+                0.258772
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "87l To",
+          "confidence": 0.121,
+          "bbox_norm": [
+            0.07125,
+            0.26462,
+            0.11625,
+            0.285088
+          ],
+          "tokens": [
+            {
+              "text": "87l",
+              "confidence": 0.121,
+              "bbox_norm": [
+                0.07125,
+                0.26462,
+                0.09319,
+                0.285088
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To",
+              "confidence": 0.121,
+              "bbox_norm": [
+                0.096457,
+                0.26462,
+                0.11625,
+                0.285088
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Muhammad Rizry Armilah",
+          "confidence": 0.162,
+          "bbox_norm": [
+            0.20375,
+            0.261696,
+            0.39875,
+            0.285088
+          ],
+          "tokens": [
+            {
+              "text": "Muhammad",
+              "confidence": 0.162,
+              "bbox_norm": [
+                0.20375,
+                0.261696,
+                0.287223,
+                0.285088
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rizry",
+              "confidence": 0.162,
+              "bbox_norm": [
+                0.29068,
+                0.261696,
+                0.335824,
+                0.285088
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Armilah",
+              "confidence": 0.162,
+              "bbox_norm": [
+                0.339282,
+                0.261696,
+                0.39875,
+                0.285088
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "KeltaniungLUT KeC",
+          "confidence": 0.265,
+          "bbox_norm": [
+            0.72125,
+            0.258772,
+            0.87875,
+            0.282164
+          ],
+          "tokens": [
+            {
+              "text": "KeltaniungLUT",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.72125,
+                0.258772,
+                0.843345,
+                0.282164
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KeC",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.846796,
+                0.258772,
+                0.87875,
+                0.282164
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Oricin /Dest",
+          "confidence": 0.726,
+          "bbox_norm": [
+            0.07125,
+            0.288012,
+            0.15125,
+            0.311404
+          ],
+          "tokens": [
+            {
+              "text": "Oricin",
+              "confidence": 0.726,
+              "bbox_norm": [
+                0.07125,
+                0.288012,
+                0.109534,
+                0.311404
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/Dest",
+              "confidence": 0.726,
+              "bbox_norm": [
+                0.112203,
+                0.288012,
+                0.15125,
+                0.311404
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "AAPcgk",
+          "confidence": 0.478,
+          "bbox_norm": [
+            0.20375,
+            0.288012,
+            0.26875,
+            0.311404
+          ],
+          "tokens": [
+            {
+              "text": "AAPcgk",
+              "confidence": 0.478,
+              "bbox_norm": [
+                0.20375,
+                0.288012,
+                0.26875,
+                0.311404
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "BONIANG SelIan",
+          "confidence": 0.06,
+          "bbox_norm": [
+            0.72125,
+            0.282164,
+            0.85125,
+            0.305556
+          ],
+          "tokens": [
+            {
+              "text": "BONIANG",
+              "confidence": 0.06,
+              "bbox_norm": [
+                0.72125,
+                0.282164,
+                0.79558,
+                0.305556
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SelIan",
+              "confidence": 0.06,
+              "bbox_norm": [
+                0.799209,
+                0.282164,
+                0.85125,
+                0.305556
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "KTP/npwP",
+          "confidence": 0.206,
+          "bbox_norm": [
+            0.07125,
+            0.314327,
+            0.14625,
+            0.337719
+          ],
+          "tokens": [
+            {
+              "text": "KTP/npwP",
+              "confidence": 0.206,
+              "bbox_norm": [
+                0.07125,
+                0.314327,
+                0.14625,
+                0.337719
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "6474021705970010",
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.20375,
+            0.314327,
+            0.33875,
+            0.337719
+          ],
+          "tokens": [
+            {
+              "text": "6474021705970010",
+              "confidence": 0.85,
+              "bbox_norm": [
+                0.20375,
+                0.314327,
+                0.33875,
+                0.337719
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Doscrtptlon",
+          "confidence": 0.249,
+          "bbox_norm": [
+            0.09875,
+            0.364035,
+            0.17875,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Doscrtptlon",
+              "confidence": 0.249,
+              "bbox_norm": [
+                0.09875,
+                0.364035,
+                0.17875,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "AwdNo.",
+          "confidence": 0.123,
+          "bbox_norm": [
+            0.23125,
+            0.364035,
+            0.29625,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "AwdNo.",
+              "confidence": 0.123,
+              "bbox_norm": [
+                0.23125,
+                0.364035,
+                0.29625,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Commodhy",
+          "confidence": 0.803,
+          "bbox_norm": [
+            0.33125,
+            0.366959,
+            0.41375,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Commodhy",
+              "confidence": 0.803,
+              "bbox_norm": [
+                0.33125,
+                0.366959,
+                0.41375,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Flri",
+          "confidence": 0.188,
+          "bbox_norm": [
+            0.43875,
+            0.366959,
+            0.48125,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Flri",
+              "confidence": 0.188,
+              "bbox_norm": [
+                0.43875,
+                0.366959,
+                0.48125,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Colly",
+          "confidence": 0.549,
+          "bbox_norm": [
+            0.51375,
+            0.366959,
+            0.54875,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Colly",
+              "confidence": 0.549,
+              "bbox_norm": [
+                0.51375,
+                0.366959,
+                0.54875,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "wuch",
+          "confidence": 0.271,
+          "bbox_norm": [
+            0.57625,
+            0.366959,
+            0.63125,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "wuch",
+              "confidence": 0.271,
+              "bbox_norm": [
+                0.57625,
+                0.366959,
+                0.63125,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Rnte",
+          "confidence": 0.279,
+          "bbox_norm": [
+            0.66625,
+            0.366959,
+            0.70125,
+            0.384503
+          ],
+          "tokens": [
+            {
+              "text": "Rnte",
+              "confidence": 0.279,
+              "bbox_norm": [
+                0.66625,
+                0.366959,
+                0.70125,
+                0.384503
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Iabumon",
+          "confidence": 0.237,
+          "bbox_norm": [
+            0.75875,
+            0.366959,
+            0.83125,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Iabumon",
+              "confidence": 0.237,
+              "bbox_norm": [
+                0.75875,
+                0.366959,
+                0.83125,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Iotl",
+          "confidence": 0.287,
+          "bbox_norm": [
+            0.86875,
+            0.366959,
+            0.90875,
+            0.387427
+          ],
+          "tokens": [
+            {
+              "text": "Iotl",
+              "confidence": 0.287,
+              "bbox_norm": [
+                0.86875,
+                0.366959,
+                0.90875,
+                0.387427
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Alrvaybl",
+          "confidence": 0.371,
+          "bbox_norm": [
+            0.1025,
+            0.403509,
+            0.17125,
+            0.432749
+          ],
+          "tokens": [
+            {
+              "text": "Alrvaybl",
+              "confidence": 0.371,
+              "bbox_norm": [
+                0.1025,
+                0.403509,
+                0.17125,
+                0.432749
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "888 47423110",
+          "confidence": 0.247,
+          "bbox_norm": [
+            0.21375,
+            0.407895,
+            0.31375,
+            0.428363
+          ],
+          "tokens": [
+            {
+              "text": "888",
+              "confidence": 0.247,
+              "bbox_norm": [
+                0.21375,
+                0.407895,
+                0.242832,
+                0.428363
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "47423110",
+              "confidence": 0.247,
+              "bbox_norm": [
+                0.246403,
+                0.407895,
+                0.31375,
+                0.428363
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Dokumcn",
+          "confidence": 0.771,
+          "bbox_norm": [
+            0.3375,
+            0.404971,
+            0.40625,
+            0.431287
+          ],
+          "tokens": [
+            {
+              "text": "Dokumcn",
+              "confidence": 0.771,
+              "bbox_norm": [
+                0.3375,
+                0.404971,
+                0.40625,
+                0.431287
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "06 42",
+          "confidence": 0.467,
+          "bbox_norm": [
+            0.43375,
+            0.407895,
+            0.48875,
+            0.431287
+          ],
+          "tokens": [
+            {
+              "text": "06",
+              "confidence": 0.467,
+              "bbox_norm": [
+                0.43375,
+                0.407895,
+                0.458931,
+                0.431287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "42",
+              "confidence": 0.467,
+              "bbox_norm": [
+                0.463569,
+                0.407895,
+                0.48875,
+                0.431287
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "20.000",
+          "confidence": 0.757,
+          "bbox_norm": [
+            0.66625,
+            0.407895,
+            0.71625,
+            0.428363
+          ],
+          "tokens": [
+            {
+              "text": "20.000",
+              "confidence": 0.757,
+              "bbox_norm": [
+                0.66625,
+                0.407895,
+                0.71625,
+                0.428363
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "25,000",
+          "confidence": 0.272,
+          "bbox_norm": [
+            0.78625,
+            0.407895,
+            0.83625,
+            0.428363
+          ],
+          "tokens": [
+            {
+              "text": "25,000",
+              "confidence": 0.272,
+              "bbox_norm": [
+                0.78625,
+                0.407895,
+                0.83625,
+                0.428363
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "225,000",
+          "confidence": 0.662,
+          "bbox_norm": [
+            0.88125,
+            0.404971,
+            0.94125,
+            0.428363
+          ],
+          "tokens": [
+            {
+              "text": "225,000",
+              "confidence": 0.662,
+              "bbox_norm": [
+                0.88125,
+                0.404971,
+                0.94125,
+                0.428363
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Dclivcry To Dcpok",
+          "confidence": 0.646,
+          "bbox_norm": [
+            0.07625,
+            0.451754,
+            0.19875,
+            0.475146
+          ],
+          "tokens": [
+            {
+              "text": "Dclivcry",
+              "confidence": 0.646,
+              "bbox_norm": [
+                0.07625,
+                0.451754,
+                0.133733,
+                0.475146
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To",
+              "confidence": 0.646,
+              "bbox_norm": [
+                0.136599,
+                0.451754,
+                0.153959,
+                0.475146
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dcpok",
+              "confidence": 0.646,
+              "bbox_norm": [
+                0.156825,
+                0.451754,
+                0.19875,
+                0.475146
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "200,000",
+          "confidence": 0.487,
+          "bbox_norm": [
+            0.88125,
+            0.454678,
+            0.93875,
+            0.475146
+          ],
+          "tokens": [
+            {
+              "text": "200,000",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.88125,
+                0.454678,
+                0.93875,
+                0.475146
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Scnicc",
+          "confidence": 0.197,
+          "bbox_norm": [
+            0.06875,
+            0.483918,
+            0.12125,
+            0.504386
+          ],
+          "tokens": [
+            {
+              "text": "Scnicc",
+              "confidence": 0.197,
+              "bbox_norm": [
+                0.06875,
+                0.483918,
+                0.12125,
+                0.504386
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Peneiriman Barng Tuuan JılartV Ctiliok",
+          "confidence": 0.07,
+          "bbox_norm": [
+            0.20375,
+            0.483918,
+            0.49125,
+            0.504386
+          ],
+          "tokens": [
+            {
+              "text": "Peneiriman",
+              "confidence": 0.07,
+              "bbox_norm": [
+                0.20375,
+                0.483918,
+                0.282764,
+                0.504386
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Barng",
+              "confidence": 0.07,
+              "bbox_norm": [
+                0.28583,
+                0.483918,
+                0.330681,
+                0.504386
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tuuan",
+              "confidence": 0.07,
+              "bbox_norm": [
+                0.333747,
+                0.483918,
+                0.378598,
+                0.504386
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JılartV",
+              "confidence": 0.07,
+              "bbox_norm": [
+                0.381664,
+                0.483918,
+                0.440267,
+                0.504386
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ctiliok",
+              "confidence": 0.07,
+              "bbox_norm": [
+                0.443333,
+                0.483918,
+                0.49125,
+                0.504386
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Sub Joul",
+          "confidence": 0.482,
+          "bbox_norm": [
+            0.70875,
+            0.483918,
+            0.77625,
+            0.50731
+          ],
+          "tokens": [
+            {
+              "text": "Sub",
+              "confidence": 0.482,
+              "bbox_norm": [
+                0.70875,
+                0.483918,
+                0.738665,
+                0.50731
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Joul",
+              "confidence": 0.482,
+              "bbox_norm": [
+                0.742021,
+                0.483918,
+                0.77625,
+                0.50731
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "625,000",
+          "confidence": 0.924,
+          "bbox_norm": [
+            0.87875,
+            0.483918,
+            0.93875,
+            0.504386
+          ],
+          "tokens": [
+            {
+              "text": "625,000",
+              "confidence": 0.924,
+              "bbox_norm": [
+                0.87875,
+                0.483918,
+                0.93875,
+                0.504386
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Note",
+          "confidence": 0.831,
+          "bbox_norm": [
+            0.07125,
+            0.510234,
+            0.10875,
+            0.533626
+          ],
+          "tokens": [
+            {
+              "text": "Note",
+              "confidence": 0.831,
+              "bbox_norm": [
+                0.07125,
+                0.510234,
+                0.10875,
+                0.533626
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Gch-Transler",
+          "confidence": 0.245,
+          "bbox_norm": [
+            0.20375,
+            0.510234,
+            0.29875,
+            0.530702
+          ],
+          "tokens": [
+            {
+              "text": "Gch-Transler",
+              "confidence": 0.245,
+              "bbox_norm": [
+                0.20375,
+                0.510234,
+                0.29875,
+                0.530702
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Ppn 104",
+          "confidence": 0.102,
+          "bbox_norm": [
+            0.71125,
+            0.510234,
+            0.77125,
+            0.530702
+          ],
+          "tokens": [
+            {
+              "text": "Ppn",
+              "confidence": 0.102,
+              "bbox_norm": [
+                0.71125,
+                0.510234,
+                0.743415,
+                0.530702
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "104",
+              "confidence": 0.102,
+              "bbox_norm": [
+                0.747023,
+                0.510234,
+                0.77125,
+                0.530702
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Enam Ratuı Toa Puluh Satu Rlbu Dua Ratu llma Puluh Ruploh",
+          "confidence": 0.144,
+          "bbox_norm": [
+            0.20375,
+            0.533626,
+            0.61875,
+            0.557018
+          ],
+          "tokens": [
+            {
+              "text": "Enam",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.20375,
+                0.533626,
+                0.239076,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ratuı",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.242077,
+                0.533626,
+                0.285978,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Toa",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.288979,
+                0.533626,
+                0.315731,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Puluh",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.318732,
+                0.533626,
+                0.357917,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Satu",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.360918,
+                0.533626,
+                0.396245,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Rlbu",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.399246,
+                0.533626,
+                0.429856,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Dua",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.432857,
+                0.533626,
+                0.45961,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ratu",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.462611,
+                0.533626,
+                0.497937,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "llma",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.500938,
+                0.533626,
+                0.525804,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Puluh",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.528805,
+                0.533626,
+                0.56799,
+                0.557018
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ruploh",
+              "confidence": 0.144,
+              "bbox_norm": [
+                0.570991,
+                0.533626,
+                0.61875,
+                0.557018
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PPo1X",
+          "confidence": 0.235,
+          "bbox_norm": [
+            0.71625,
+            0.533626,
+            0.76875,
+            0.557018
+          ],
+          "tokens": [
+            {
+              "text": "PPo1X",
+              "confidence": 0.235,
+              "bbox_norm": [
+                0.71625,
+                0.533626,
+                0.76875,
+                0.557018
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "6,250",
+          "confidence": 0.803,
+          "bbox_norm": [
+            0.89375,
+            0.533626,
+            0.93875,
+            0.557018
+          ],
+          "tokens": [
+            {
+              "text": "6,250",
+              "confidence": 0.803,
+              "bbox_norm": [
+                0.89375,
+                0.533626,
+                0.93875,
+                0.557018
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "ToIIvOIG",
+          "confidence": 0.181,
+          "bbox_norm": [
+            0.69125,
+            0.557018,
+            0.79625,
+            0.580409
+          ],
+          "tokens": [
+            {
+              "text": "ToIIvOIG",
+              "confidence": 0.181,
+              "bbox_norm": [
+                0.69125,
+                0.557018,
+                0.79625,
+                0.580409
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "621 250",
+          "confidence": 0.265,
+          "bbox_norm": [
+            0.87875,
+            0.559942,
+            0.93875,
+            0.583333
+          ],
+          "tokens": [
+            {
+              "text": "621",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.87875,
+                0.559942,
+                0.904155,
+                0.583333
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "250",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.907939,
+                0.559942,
+                0.93875,
+                0.583333
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Somannd , 20 /ausus 2021",
+          "confidence": 0.098,
+          "bbox_norm": [
+            0.70375,
+            0.580409,
+            0.88625,
+            0.606725
+          ],
+          "tokens": [
+            {
+              "text": "Somannd",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.70375,
+                0.580409,
+                0.768172,
+                0.606725
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.771339,
+                0.580409,
+                0.775411,
+                0.606725
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "20",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.778578,
+                0.580409,
+                0.795769,
+                0.606725
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/ausus",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.798936,
+                0.580409,
+                0.853224,
+                0.606725
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2021",
+              "confidence": 0.098,
+              "bbox_norm": [
+                0.856391,
+                0.580409,
+                0.88625,
+                0.606725
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "yeret-Syerat Pendlrlmen Bann",
+          "confidence": 0.209,
+          "bbox_norm": [
+            0.07625,
+            0.609649,
+            0.26125,
+            0.633041
+          ],
+          "tokens": [
+            {
+              "text": "yeret-Syerat",
+              "confidence": 0.209,
+              "bbox_norm": [
+                0.07625,
+                0.609649,
+                0.162621,
+                0.633041
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pendlrlmen",
+              "confidence": 0.209,
+              "bbox_norm": [
+                0.165116,
+                0.609649,
+                0.229395,
+                0.633041
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bann",
+              "confidence": 0.209,
+              "bbox_norm": [
+                0.231889,
+                0.609649,
+                0.26125,
+                0.633041
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "PT.indonesu lOgbtik S{RVS",
+          "confidence": 0.027,
+          "bbox_norm": [
+            0.69375,
+            0.609649,
+            0.8975,
+            0.633041
+          ],
+          "tokens": [
+            {
+              "text": "PT.indonesu",
+              "confidence": 0.027,
+              "bbox_norm": [
+                0.69375,
+                0.609649,
+                0.786231,
+                0.633041
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "lOgbtik",
+              "confidence": 0.027,
+              "bbox_norm": [
+                0.789423,
+                0.609649,
+                0.844328,
+                0.633041
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "S{RVS",
+              "confidence": 0.027,
+              "bbox_norm": [
+                0.84752,
+                0.609649,
+                0.8975,
+                0.633041
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "8 ine duing hanudouking JFiudi Cecun",
+          "confidence": 0.002,
+          "bbox_norm": [
+            0.08125,
+            0.638889,
+            0.33625,
+            0.662281
+          ],
+          "tokens": [
+            {
+              "text": "8",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.08125,
+                0.638889,
+                0.089242,
+                0.662281
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ine",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.092187,
+                0.638889,
+                0.112799,
+                0.662281
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "duing",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.115744,
+                0.638889,
+                0.153182,
+                0.662281
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "hanudouking",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.156126,
+                0.638889,
+                0.244043,
+                0.662281
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JFiudi",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.246987,
+                0.638889,
+                0.290231,
+                0.662281
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Cecun",
+              "confidence": 0.002,
+              "bbox_norm": [
+                0.293175,
+                0.638889,
+                0.33625,
+                0.662281
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ablne",
+          "confidence": 0.35,
+          "bbox_norm": [
+            0.39125,
+            0.635965,
+            0.43375,
+            0.656433
+          ],
+          "tokens": [
+            {
+              "text": "Ablne",
+              "confidence": 0.35,
+              "bbox_norm": [
+                0.39125,
+                0.635965,
+                0.43375,
+                0.656433
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Dlerang memasulkanuanl bafbfe Derhyzilj bafeal-baruaeyinberoeny",
+          "confidence": 0.001,
+          "bbox_norm": [
+            0.0775,
+            0.662281,
+            0.5325,
+            0.688596
+          ],
+          "tokens": [
+            {
+              "text": "Dlerang",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.0775,
+                0.662281,
+                0.130139,
+                0.688596
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "memasulkanuanl",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.132943,
+                0.662281,
+                0.236297,
+                0.688596
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "bafbfe",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.239102,
+                0.662281,
+                0.287173,
+                0.688596
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Derhyzilj",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.289978,
+                0.662281,
+                0.354234,
+                0.688596
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "bafeal-baruaeyinberoeny",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.357038,
+                0.662281,
+                0.5325,
+                0.688596
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "0ubi pengibarlendanmelenge\" huhum /e Qalam Palet Yong Bhandab",
+          "confidence": 0.001,
+          "bbox_norm": [
+            0.07125,
+            0.688596,
+            0.48625,
+            0.714912
+          ],
+          "tokens": [
+            {
+              "text": "0ubi",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.07125,
+                0.688596,
+                0.097584,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "pengibarlendanmelenge\"",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.100295,
+                0.688596,
+                0.257915,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "huhum",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.260626,
+                0.688596,
+                0.299353,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "/e",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.302064,
+                0.688596,
+                0.317555,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Qalam",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.320265,
+                0.688596,
+                0.355662,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Palet",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.358373,
+                0.688596,
+                0.39377,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Yong",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.39648,
+                0.688596,
+                0.428392,
+                0.714912
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bhandab",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.431103,
+                0.688596,
+                0.48625,
+                0.714912
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Bcret perhol Icbhdui So1e Ban 0uenblea Wurchorfe",
+          "confidence": 0.005,
+          "bbox_norm": [
+            0.07875,
+            0.711988,
+            0.38875,
+            0.738304
+          ],
+          "tokens": [
+            {
+              "text": "Bcret",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.07875,
+                0.711988,
+                0.116442,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "perhol",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.119018,
+                0.711988,
+                0.159139,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Icbhdui",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.161716,
+                0.711988,
+                0.20515,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "So1e",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.207726,
+                0.711988,
+                0.234008,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ban",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.236584,
+                0.711988,
+                0.259553,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "0uenblea",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.262129,
+                0.711988,
+                0.316606,
+                0.738304
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Wurchorfe",
+              "confidence": 0.005,
+              "bbox_norm": [
+                0.319182,
+                0.711988,
+                0.38875,
+                0.738304
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "ierledi Lehllang n Leruralon Ecbbaua Lefne FO( Mciol,Blle",
+          "confidence": 0.0,
+          "bbox_norm": [
+            0.12125,
+            0.741228,
+            0.50375,
+            0.76462
+          ],
+          "tokens": [
+            {
+              "text": "ierledi",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.12125,
+                0.741228,
+                0.16416,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lehllang",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.166967,
+                0.741228,
+                0.223271,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "n",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.226079,
+                0.741228,
+                0.234099,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Leruralon",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.236906,
+                0.741228,
+                0.305642,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ecbbaua",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.30845,
+                0.741228,
+                0.365556,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Lefne",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.368363,
+                0.741228,
+                0.409428,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "FO(",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.412236,
+                0.741228,
+                0.438222,
+                0.76462
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mciol,Blle",
+              "confidence": 0.0,
+              "bbox_norm": [
+                0.441029,
+                0.741228,
+                0.50375,
+                0.76462
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Uure |enab PT.Indonesl lolhil Semn",
+          "confidence": 0.045,
+          "bbox_norm": [
+            0.08375,
+            0.767544,
+            0.31625,
+            0.790936
+          ],
+          "tokens": [
+            {
+              "text": "Uure",
+              "confidence": 0.045,
+              "bbox_norm": [
+                0.08375,
+                0.767544,
+                0.118608,
+                0.790936
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "|enab",
+              "confidence": 0.045,
+              "bbox_norm": [
+                0.121569,
+                0.767544,
+                0.159219,
+                0.790936
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PT.Indonesl",
+              "confidence": 0.045,
+              "bbox_norm": [
+                0.162181,
+                0.767544,
+                0.243319,
+                0.790936
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "lolhil",
+              "confidence": 0.045,
+              "bbox_norm": [
+                0.24628,
+                0.767544,
+                0.278431,
+                0.790936
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Semn",
+              "confidence": 0.045,
+              "bbox_norm": [
+                0.281392,
+                0.767544,
+                0.31625,
+                0.790936
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Cynthle Anol",
+          "confidence": 0.308,
+          "bbox_norm": [
+            0.74375,
+            0.761696,
+            0.84375,
+            0.788012
+          ],
+          "tokens": [
+            {
+              "text": "Cynthle",
+              "confidence": 0.308,
+              "bbox_norm": [
+                0.74375,
+                0.761696,
+                0.806381,
+                0.788012
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Anol",
+              "confidence": 0.308,
+              "bbox_norm": [
+                0.809718,
+                0.761696,
+                0.84375,
+                0.788012
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Dolem waltu ) [Tı) Antidal Bd* Penguouin Limi Ongpplliu",
+          "confidence": 0.001,
+          "bbox_norm": [
+            0.07875,
+            0.790936,
+            0.46125,
+            0.817251
+          ],
+          "tokens": [
+            {
+              "text": "Dolem",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.07875,
+                0.790936,
+                0.117475,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "waltu",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.12044,
+                0.790936,
+                0.158148,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ")",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.161114,
+                0.790936,
+                0.169587,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "[Tı)",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.172553,
+                0.790936,
+                0.207465,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Antidal",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.21043,
+                0.790936,
+                0.261442,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Bd*",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.264407,
+                0.790936,
+                0.290845,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Penguouin",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.293811,
+                0.790936,
+                0.36643,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Limi",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.369396,
+                0.790936,
+                0.394986,
+                0.817251
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ongpplliu",
+              "confidence": 0.001,
+              "bbox_norm": [
+                0.397952,
+                0.790936,
+                0.46125,
+                0.817251
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ux",
+          "confidence": 0.036,
+          "bbox_norm": [
+            0.77875,
+            0.790936,
+            0.81625,
+            0.811404
+          ],
+          "tokens": [
+            {
+              "text": "Ux",
+              "confidence": 0.036,
+              "bbox_norm": [
+                0.77875,
+                0.790936,
+                0.81625,
+                0.811404
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "dnerima derbunbl",
+          "confidence": 0.172,
+          "bbox_norm": [
+            0.09625,
+            0.817251,
+            0.22125,
+            0.845029
+          ],
+          "tokens": [
+            {
+              "text": "dnerima",
+              "confidence": 0.172,
+              "bbox_norm": [
+                0.09625,
+                0.817251,
+                0.152829,
+                0.845029
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "derbunbl",
+              "confidence": 0.172,
+              "bbox_norm": [
+                0.155899,
+                0.817251,
+                0.22125,
+                0.845029
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Customer",
+          "confidence": 0.997,
+          "bbox_norm": [
+            0.74,
+            0.818713,
+            0.8375,
+            0.853801
+          ],
+          "tokens": [
+            {
+              "text": "Customer",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.74,
+                0.818713,
+                0.8375,
+                0.853801
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Al Tranaacbon Sul t Iraner Full Amnount To:",
+          "confidence": 0.147,
+          "bbox_norm": [
+            0.08375,
+            0.881579,
+            0.40875,
+            0.907895
+          ],
+          "tokens": [
+            {
+              "text": "Al",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.08375,
+                0.881579,
+                0.097975,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Tranaacbon",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.101146,
+                0.881579,
+                0.192838,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Sul",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.19601,
+                0.881579,
+                0.219295,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "t",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.222466,
+                0.881579,
+                0.231527,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Iraner",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.234698,
+                0.881579,
+                0.284078,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Full",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.287249,
+                0.881579,
+                0.314611,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Amnount",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.317783,
+                0.881579,
+                0.382293,
+                0.907895
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "To:",
+              "confidence": 0.147,
+              "bbox_norm": [
+                0.385465,
+                0.881579,
+                0.40875,
+                0.907895
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Nn",
+          "confidence": 0.559,
+          "bbox_norm": [
+            0.08375,
+            0.904971,
+            0.12625,
+            0.925439
+          ],
+          "tokens": [
+            {
+              "text": "Nn",
+              "confidence": 0.559,
+              "bbox_norm": [
+                0.08375,
+                0.904971,
+                0.12625,
+                0.925439
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Indonnu LofhukSeru",
+          "confidence": 0.033,
+          "bbox_norm": [
+            0.25625,
+            0.902047,
+            0.41625,
+            0.925439
+          ],
+          "tokens": [
+            {
+              "text": "Indonnu",
+              "confidence": 0.033,
+              "bbox_norm": [
+                0.25625,
+                0.902047,
+                0.316813,
+                0.925439
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LofhukSeru",
+              "confidence": 0.033,
+              "bbox_norm": [
+                0.3201,
+                0.902047,
+                0.41625,
+                0.925439
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Nnl Nan",
+          "confidence": 0.352,
+          "bbox_norm": [
+            0.08375,
+            0.922515,
+            0.16125,
+            0.942982
+          ],
+          "tokens": [
+            {
+              "text": "Nnl",
+              "confidence": 0.352,
+              "bbox_norm": [
+                0.08375,
+                0.922515,
+                0.116726,
+                0.942982
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Nan",
+              "confidence": 0.352,
+              "bbox_norm": [
+                0.121217,
+                0.922515,
+                0.16125,
+                0.942982
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "RRI",
+          "confidence": 0.533,
+          "bbox_norm": [
+            0.23375,
+            0.922515,
+            0.26375,
+            0.940058
+          ],
+          "tokens": [
+            {
+              "text": "RRI",
+              "confidence": 0.533,
+              "bbox_norm": [
+                0.23375,
+                0.922515,
+                0.26375,
+                0.940058
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Brancho",
+          "confidence": 0.423,
+          "bbox_norm": [
+            0.08375,
+            0.942982,
+            0.14375,
+            0.96345
+          ],
+          "tokens": [
+            {
+              "text": "Brancho",
+              "confidence": 0.423,
+              "bbox_norm": [
+                0.08375,
+                0.942982,
+                0.14375,
+                0.96345
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "BRSmnn",
+          "confidence": 0.202,
+          "bbox_norm": [
+            0.23375,
+            0.940058,
+            0.33125,
+            0.960526
+          ],
+          "tokens": [
+            {
+              "text": "BRSmnn",
+              "confidence": 0.202,
+              "bbox_norm": [
+                0.23375,
+                0.940058,
+                0.33125,
+                0.960526
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Anount No",
+          "confidence": 0.322,
+          "bbox_norm": [
+            0.08625,
+            0.957602,
+            0.16375,
+            0.980994
+          ],
+          "tokens": [
+            {
+              "text": "Anount",
+              "confidence": 0.322,
+              "bbox_norm": [
+                0.08625,
+                0.957602,
+                0.141465,
+                0.980994
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.322,
+              "bbox_norm": [
+                0.144623,
+                0.957602,
+                0.16375,
+                0.980994
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "004101004)0101",
+          "confidence": 0.143,
+          "bbox_norm": [
+            0.23375,
+            0.957602,
+            0.34625,
+            0.97807
+          ],
+          "tokens": [
+            {
+              "text": "004101004)0101",
+              "confidence": 0.143,
+              "bbox_norm": [
+                0.23375,
+                0.957602,
+                0.34625,
+                0.97807
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Drtuia",
+          "confidence": 0.053,
+          "bbox_norm": [
+            0.331524,
+            0.63396,
+            0.394726,
+            0.661362
+          ],
+          "tokens": [
+            {
+              "text": "Drtuia",
+              "confidence": 0.053,
+              "bbox_norm": [
+                0.331524,
+                0.63396,
+                0.394726,
+                0.661362
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "4p46 ,",
+          "confidence": 0.043,
+          "bbox_norm": [
+            0.075732,
+            0.738489,
+            0.126768,
+            0.765897
+          ],
+          "tokens": [
+            {
+              "text": "4p46",
+              "confidence": 0.043,
+              "bbox_norm": [
+                0.075732,
+                0.738489,
+                0.117987,
+                0.765897
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ",",
+              "confidence": 0.043,
+              "bbox_norm": [
+                0.121829,
+                0.738489,
+                0.126768,
+                0.765897
+              ],
+              "_estimated": true
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.13875,
+            0.033626,
+            0.89625,
+            0.20614
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT: INDONESIA LOGISTIK SERVIS JL Gamelae Na 02 Dadl Mul) _ Kol Samarlede Kalmnpl Ilmur 18242 Dp (054"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.07125,
+            0.176901,
+            0.90875,
+            0.387427
+          ],
+          "confidence": 0.92,
+          "text_snippet": "NO; ILSI2/OUT/08-20/0015 Date 20 AlR-21 Adaress JLSELT MA(ASSAR 87l To Muhammad Rizry Armilah Keltan"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.06875,
+            0.364035,
+            0.94125,
+            0.765897
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Doscrtptlon AwdNo. Commodhy Flri Colly wuch Rnte Iabumon Iotl Alrvaybl 888 47423110 Dokumcn 06 42 20"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.07875,
+            0.761696,
+            0.84375,
+            0.980994
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Uure |enab PT.Indonesl lolhil Semn Cynthle Anol Dolem waltu ) [Tı) Antidal Bd* Penguouin Limi Ongppl"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.07125,
+            0.451754,
+            0.8975,
+            0.76462
+          ],
+          "headers": [
+            "Dclivcry",
+            "To",
+            "Dcpok"
+          ],
+          "rows": [
+            [
+              "Peneiriman",
+              "Barng",
+              "Tuuan",
+              "JılartV",
+              "Ctiliok"
+            ],
+            [
+              "Enam",
+              "Ratuı",
+              "Toa",
+              "Puluh",
+              "Satu",
+              "Rlbu",
+              "Dua",
+              "Ratu",
+              "llma",
+              "Puluh",
+              "Ruploh"
+            ],
+            [
+              "Somannd",
+              ",",
+              "20",
+              "/ausus",
+              "2021"
+            ],
+            [
+              "yeret-Syerat",
+              "Pendlrlmen",
+              "Bann"
+            ],
+            [
+              "PT.indonesu",
+              "lOgbtik",
+              "S{RVS"
+            ],
+            [
+              "8",
+              "ine",
+              "duing",
+              "hanudouking",
+              "JFiudi",
+              "Cecun"
+            ],
+            [
+              "Dlerang",
+              "memasulkanuanl",
+              "bafbfe",
+              "Derhyzilj",
+              "bafeal-baruaeyinberoeny"
+            ],
+            [
+              "0ubi",
+              "pengibarlendanmelenge\"",
+              "huhum",
+              "/e",
+              "Qalam",
+              "Palet",
+              "Yong",
+              "Bhandab"
+            ],
+            [
+              "Bcret",
+              "perhol",
+              "Icbhdui",
+              "So1e",
+              "Ban",
+              "0uenblea",
+              "Wurchorfe"
+            ],
+            [
+              "ierledi",
+              "Lehllang",
+              "n",
+              "Leruralon",
+              "Ecbbaua",
+              "Lefne",
+              "FO(",
+              "Mciol,Blle"
+            ]
+          ],
+          "row_count": 10,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

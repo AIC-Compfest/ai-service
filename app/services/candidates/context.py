@@ -31,5 +31,10 @@ def context_for(candidate: Candidate) -> dict[str, str]:
 
 
 def _bbox(value: list[float]) -> tuple[float, float, float, float]:
-    values = [float(item) / 1000 if float(item) > 1 else float(item) for item in value[:4]]
-    return tuple(max(0.0, min(1.0, value)) for value in values)  # type: ignore[return-value]
+    """Validate the canonical OCR coordinate scale: normalized floats [0.0, 1.0]."""
+    if len(value) < 4:
+        raise ValueError("bbox_norm must contain four normalized coordinates")
+    values = [float(item) for item in value[:4]]
+    if any(item < 0.0 or item > 1.0 for item in values):
+        raise ValueError(f"bbox_norm must use [0.0, 1.0] coordinates: {value}")
+    return tuple(values)  # type: ignore[return-value]

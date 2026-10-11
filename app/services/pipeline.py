@@ -92,10 +92,9 @@ class Phase5DocumentPipeline:
             quality = self.preprocessor.estimate_quality(cv_img)
 
             # OCR & Layout
-            if p_asset.is_pdf_page and p_asset.pdf_page is not None:
-                p_ocr = self.ocr_engine.process_pdf_page(p_asset.pdf_page, p_asset.page_number, quality)
-            else:
-                p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality)
+            # OCR always consumes the canonical page raster. This keeps geometry,
+            # preprocessing, and the image shown to users in one coordinate system.
+            p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality)
 
             page_text = p_ocr.full_text()
             all_text += page_text + "\n"

@@ -93,6 +93,23 @@ class ImagePreprocessor:
         return deskewed
 
     @staticmethod
+    def enhance_document_for_ocr(cv_img: np.ndarray) -> np.ndarray:
+        """Increase local contrast in low-quality document scans for an OCR retry.
+
+        CLAHE preserves faint pen strokes while Otsu supplies a document-wide
+        foreground/background decision.  The returned BGR image is intentionally
+        a new array; callers keep the original image for the first OCR pass and
+        for user-facing visualization.
+        """
+        gray = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY) if len(cv_img.shape) == 3 else cv_img
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        contrast = clahe.apply(gray)
+        _, binary = cv2.threshold(contrast, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+        # Mild opening removes isolated scan noise without erasing handwriting.
+        binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, np.ones((2, 2), np.uint8))
+        return cv2.cvtColor(binary, cv2.COLOR_GRAY2BGR)
+
+    @staticmethod
     def bytes_to_cv2(image_bytes: bytes) -> np.ndarray:
         """Convert raw image bytes to OpenCV BGR ndarray."""
         np_arr = np.frombuffer(image_bytes, np.uint8)

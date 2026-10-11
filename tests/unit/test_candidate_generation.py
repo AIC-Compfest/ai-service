@@ -6,6 +6,7 @@ from app.tools.build_candidate_dataset import restrict_pages
 
 
 def _line(text, x1, y1, x2, y2):
+    x1, y1, x2, y2 = (value / 1000 for value in (x1, y1, x2, y2))
     words = text.split()
     width = (x2 - x1) / len(words)
     return {"text": text, "confidence": 0.95, "bbox_norm": [x1, y1, x2, y2], "tokens": [
@@ -56,3 +57,15 @@ def test_shared_evidence_can_be_restricted_to_logical_segment():
     selected = restrict_pages(evidence, "2", "3")
     assert [page["page_number"] for page in selected["pages"]] == [2, 3]
     assert [page["page_number"] for page in evidence["pages"]] == [1, 2, 3]
+
+
+def test_rate_agreement_emits_configured_percent_and_days_candidates():
+    evidence = {"pages": [{"page_number": 1, "engine_used": "easyocr_gpu", "lines": [
+        _line("Surcharge 11%", 100, 400, 400, 420),
+        _line("Payment term 30 days", 100, 440, 500, 460),
+    ]}]}
+
+    rows = CandidatePipeline("config/candidates").generate("R1", "RATE_AGREEMENT", evidence, "run")
+
+    assert any(row["m_cand_type"] == "percent" and row["m_parsed_value"] == "11" for row in rows)
+    assert any(row["m_cand_type"] == "days" and row["m_parsed_value"] == "30" for row in rows)

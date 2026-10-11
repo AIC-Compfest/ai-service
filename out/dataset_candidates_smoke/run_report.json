@@ -1,0 +1,19 @@
+{
+  "candidate_counts": {
+    "INVOICE_amount": 9,
+    "INVOICE_date": 2,
+    "INVOICE_id": 9,
+    "INVOICE_party": 56,
+    "POD_date": 1,
+    "POD_id": 3,
+    "POD_party": 28,
+    "RATE_AGREEMENT_amount": 1,
+    "RATE_AGREEMENT_date": 1,
+    "RATE_AGREEMENT_days": 1,
+    "RATE_AGREEMENT_id": 4,
+    "SURAT_JALAN_date": 1,
+    "SURAT_JALAN_id": 10,
+    "SURAT_JALAN_party": 45
+  },
+  "documents": 4
+}

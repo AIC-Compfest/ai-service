@@ -1,0 +1,1483 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 700,
+      "height": 444,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.76,
+      "quality": {},
+      "lines": [
+        {
+          "text": "CE SALES & SERVICES SDN BHD (Roc.383078-4",
+          "confidence": 0.627,
+          "bbox_norm": [
+            0.28,
+            0.067568,
+            0.76,
+            0.121622
+          ],
+          "tokens": [
+            {
+              "text": "CE",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.28,
+                0.067568,
+                0.30784,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SALES",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.312191,
+                0.067568,
+                0.381792,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "&",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.386142,
+                0.067568,
+                0.404164,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SERVICES",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.408514,
+                0.067568,
+                0.511548,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SDN",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.515898,
+                0.067568,
+                0.557659,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "BHD",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.562009,
+                0.067568,
+                0.60377,
+                0.121622
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(Roc.383078-4",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.60812,
+                0.067568,
+                0.76,
+                0.121622
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "54, JALAN SENTOSA, 41300 KLANG",
+          "confidence": 0.525,
+          "bbox_norm": [
+            0.381429,
+            0.103604,
+            0.652857,
+            0.146396
+          ],
+          "tokens": [
+            {
+              "text": "54,",
+              "confidence": 0.525,
+              "bbox_norm": [
+                0.381429,
+                0.103604,
+                0.404632,
+                0.146396
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "JALAN",
+              "confidence": 0.525,
+              "bbox_norm": [
+                0.408088,
+                0.103604,
+                0.46338,
+                0.146396
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SENTOSA,",
+              "confidence": 0.525,
+              "bbox_norm": [
+                0.466836,
+                0.103604,
+                0.548689,
+                0.146396
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "41300",
+              "confidence": 0.525,
+              "bbox_norm": [
+                0.552145,
+                0.103604,
+                0.594109,
+                0.146396
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KLANG",
+              "confidence": 0.525,
+              "bbox_norm": [
+                0.597564,
+                0.103604,
+                0.652857,
+                0.146396
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SELANGOR",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.427143,
+            0.141892,
+            0.518571,
+            0.173423
+          ],
+          "tokens": [
+            {
+              "text": "SELANGOR",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.427143,
+                0.141892,
+                0.518571,
+                0.173423
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "MaLAYSIA",
+          "confidence": 0.309,
+          "bbox_norm": [
+            0.524286,
+            0.141892,
+            0.612857,
+            0.173423
+          ],
+          "tokens": [
+            {
+              "text": "MaLAYSIA",
+              "confidence": 0.309,
+              "bbox_norm": [
+                0.524286,
+                0.141892,
+                0.612857,
+                0.173423
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Tel: 0333732599, F&xc 03-33732588",
+          "confidence": 0.55,
+          "bbox_norm": [
+            0.384286,
+            0.15991,
+            0.652857,
+            0.207207
+          ],
+          "tokens": [
+            {
+              "text": "Tel:",
+              "confidence": 0.55,
+              "bbox_norm": [
+                0.384286,
+                0.15991,
+                0.412168,
+                0.207207
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "0333732599,",
+              "confidence": 0.55,
+              "bbox_norm": [
+                0.415399,
+                0.15991,
+                0.507262,
+                0.207207
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "F&xc",
+              "confidence": 0.55,
+              "bbox_norm": [
+                0.510493,
+                0.15991,
+                0.552685,
+                0.207207
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "03-33732588",
+              "confidence": 0.55,
+              "bbox_norm": [
+                0.555917,
+                0.15991,
+                0.652857,
+                0.207207
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "DELIVERY ORDER",
+          "confidence": 0.704,
+          "bbox_norm": [
+            0.365714,
+            0.27027,
+            0.631429,
+            0.333333
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERY",
+              "confidence": 0.704,
+              "bbox_norm": [
+                0.365714,
+                0.27027,
+                0.520403,
+                0.333333
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ORDER",
+              "confidence": 0.704,
+              "bbox_norm": [
+                0.526934,
+                0.27027,
+                0.631429,
+                0.333333
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "No.",
+          "confidence": 0.825,
+          "bbox_norm": [
+            0.664286,
+            0.290541,
+            0.698571,
+            0.322072
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.825,
+              "bbox_norm": [
+                0.664286,
+                0.290541,
+                0.698571,
+                0.322072
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "CONTROL MANUFAC TURING",
+          "confidence": 0.693,
+          "bbox_norm": [
+            0.061429,
+            0.362613,
+            0.278571,
+            0.398649
+          ],
+          "tokens": [
+            {
+              "text": "CONTROL",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.061429,
+                0.362613,
+                0.136226,
+                0.398649
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "MANUFAC",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.139566,
+                0.362613,
+                0.217512,
+                0.398649
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "TURING",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.220851,
+                0.362613,
+                0.278571,
+                0.398649
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Your P:O No",
+          "confidence": 0.714,
+          "bbox_norm": [
+            0.592857,
+            0.349099,
+            0.701429,
+            0.385135
+          ],
+          "tokens": [
+            {
+              "text": "Your",
+              "confidence": 0.714,
+              "bbox_norm": [
+                0.592857,
+                0.349099,
+                0.639307,
+                0.385135
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "P:O",
+              "confidence": 0.714,
+              "bbox_norm": [
+                0.643253,
+                0.349099,
+                0.673581,
+                0.385135
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.714,
+              "bbox_norm": [
+                0.677527,
+                0.349099,
+                0.701429,
+                0.385135
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "400-2 (TINGKAT SATU)",
+          "confidence": 0.825,
+          "bbox_norm": [
+            0.061429,
+            0.396396,
+            0.238571,
+            0.434685
+          ],
+          "tokens": [
+            {
+              "text": "400-2",
+              "confidence": 0.825,
+              "bbox_norm": [
+                0.061429,
+                0.396396,
+                0.10583,
+                0.434685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "(TINGKAT",
+              "confidence": 0.825,
+              "bbox_norm": [
+                0.109068,
+                0.396396,
+                0.184642,
+                0.434685
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "SATU)",
+              "confidence": 0.825,
+              "bbox_norm": [
+                0.18788,
+                0.396396,
+                0.238571,
+                0.434685
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "lıwoice No",
+          "confidence": 0.627,
+          "bbox_norm": [
+            0.592857,
+            0.403153,
+            0.684286,
+            0.439189
+          ],
+          "tokens": [
+            {
+              "text": "lıwoice",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.592857,
+                0.403153,
+                0.657305,
+                0.439189
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No",
+              "confidence": 0.627,
+              "bbox_norm": [
+                0.661128,
+                0.403153,
+                0.684286,
+                0.439189
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "BATU 1/2,",
+          "confidence": 0.538,
+          "bbox_norm": [
+            0.061429,
+            0.434685,
+            0.138571,
+            0.470721
+          ],
+          "tokens": [
+            {
+              "text": "BATU",
+              "confidence": 0.538,
+              "bbox_norm": [
+                0.061429,
+                0.434685,
+                0.106429,
+                0.470721
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "1/2,",
+              "confidence": 0.538,
+              "bbox_norm": [
+                0.109944,
+                0.434685,
+                0.138571,
+                0.470721
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "JALAN PAHANG",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.061429,
+            0.470721,
+            0.184286,
+            0.506757
+          ],
+          "tokens": [
+            {
+              "text": "JALAN",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.061429,
+                0.470721,
+                0.11573,
+                0.506757
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PAHANG",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.119124,
+                0.470721,
+                0.184286,
+                0.506757
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Terms",
+          "confidence": 0.94,
+          "bbox_norm": [
+            0.592857,
+            0.461712,
+            0.652857,
+            0.497748
+          ],
+          "tokens": [
+            {
+              "text": "Terms",
+              "confidence": 0.94,
+              "bbox_norm": [
+                0.592857,
+                0.461712,
+                0.652857,
+                0.497748
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Net 60 days",
+          "confidence": 0.999,
+          "bbox_norm": [
+            0.721429,
+            0.461712,
+            0.824286,
+            0.497748
+          ],
+          "tokens": [
+            {
+              "text": "Net",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.721429,
+                0.461712,
+                0.754444,
+                0.497748
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "60",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.758148,
+                0.461712,
+                0.778254,
+                0.497748
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "days",
+              "confidence": 0.999,
+              "bbox_norm": [
+                0.781958,
+                0.461712,
+                0.824286,
+                0.497748
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "51000 KUALA LUMPUR",
+          "confidence": 0.95,
+          "bbox_norm": [
+            0.061429,
+            0.511261,
+            0.235714,
+            0.542793
+          ],
+          "tokens": [
+            {
+              "text": "51000",
+              "confidence": 0.95,
+              "bbox_norm": [
+                0.061429,
+                0.511261,
+                0.103515,
+                0.542793
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "KUALA",
+              "confidence": 0.95,
+              "bbox_norm": [
+                0.106981,
+                0.511261,
+                0.162435,
+                0.542793
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "LUMPUR",
+              "confidence": 0.95,
+              "bbox_norm": [
+                0.165901,
+                0.511261,
+                0.235714,
+                0.542793
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Date",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.592857,
+            0.52027,
+            0.638571,
+            0.551802
+          ],
+          "tokens": [
+            {
+              "text": "Date",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.592857,
+                0.52027,
+                0.638571,
+                0.551802
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "09/04/2000",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.721429,
+            0.515766,
+            0.818571,
+            0.551802
+          ],
+          "tokens": [
+            {
+              "text": "09/04/2000",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.721429,
+                0.515766,
+                0.818571,
+                0.551802
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "TEL: 03-0832500",
+          "confidence": 0.442,
+          "bbox_norm": [
+            0.061429,
+            0.542793,
+            0.198571,
+            0.578829
+          ],
+          "tokens": [
+            {
+              "text": "TEL:",
+              "confidence": 0.442,
+              "bbox_norm": [
+                0.061429,
+                0.542793,
+                0.09954,
+                0.578829
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "03-0832500",
+              "confidence": 0.442,
+              "bbox_norm": [
+                0.103042,
+                0.542793,
+                0.198571,
+                0.578829
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "FAX :",
+          "confidence": 0.928,
+          "bbox_norm": [
+            0.272857,
+            0.542793,
+            0.318571,
+            0.574324
+          ],
+          "tokens": [
+            {
+              "text": "FAX",
+              "confidence": 0.928,
+              "bbox_norm": [
+                0.272857,
+                0.542793,
+                0.30978,
+                0.574324
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.928,
+              "bbox_norm": [
+                0.313626,
+                0.542793,
+                0.318571,
+                0.574324
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "03-8832588",
+          "confidence": 0.546,
+          "bbox_norm": [
+            0.324286,
+            0.542793,
+            0.415714,
+            0.578829
+          ],
+          "tokens": [
+            {
+              "text": "03-8832588",
+              "confidence": 0.546,
+              "bbox_norm": [
+                0.324286,
+                0.542793,
+                0.415714,
+                0.578829
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Page",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.592857,
+            0.574324,
+            0.641429,
+            0.61036
+          ],
+          "tokens": [
+            {
+              "text": "Page",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.592857,
+                0.574324,
+                0.641429,
+                0.61036
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Of 1",
+          "confidence": 0.624,
+          "bbox_norm": [
+            0.735714,
+            0.574324,
+            0.77,
+            0.61036
+          ],
+          "tokens": [
+            {
+              "text": "Of",
+              "confidence": 0.624,
+              "bbox_norm": [
+                0.735714,
+                0.574324,
+                0.760607,
+                0.61036
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "1",
+              "confidence": 0.624,
+              "bbox_norm": [
+                0.764716,
+                0.574324,
+                0.77,
+                0.61036
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Item",
+          "confidence": 0.968,
+          "bbox_norm": [
+            0.05,
+            0.637387,
+            0.092857,
+            0.673423
+          ],
+          "tokens": [
+            {
+              "text": "Item",
+              "confidence": 0.968,
+              "bbox_norm": [
+                0.05,
+                0.637387,
+                0.092857,
+                0.673423
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Description",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.267143,
+            0.641892,
+            0.364286,
+            0.677928
+          ],
+          "tokens": [
+            {
+              "text": "Description",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.267143,
+                0.641892,
+                0.364286,
+                0.677928
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "UoM",
+          "confidence": 0.482,
+          "bbox_norm": [
+            0.692857,
+            0.641892,
+            0.735714,
+            0.673423
+          ],
+          "tokens": [
+            {
+              "text": "UoM",
+              "confidence": 0.482,
+              "bbox_norm": [
+                0.692857,
+                0.641892,
+                0.735714,
+                0.673423
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Qty",
+          "confidence": 0.71,
+          "bbox_norm": [
+            0.835714,
+            0.641892,
+            0.867143,
+            0.673423
+          ],
+          "tokens": [
+            {
+              "text": "Qty",
+              "confidence": 0.71,
+              "bbox_norm": [
+                0.835714,
+                0.641892,
+                0.867143,
+                0.673423
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "ACCOUNTING 2000 PLUS",
+          "confidence": 0.788,
+          "bbox_norm": [
+            0.121429,
+            0.713964,
+            0.312857,
+            0.745495
+          ],
+          "tokens": [
+            {
+              "text": "ACCOUNTING",
+              "confidence": 0.788,
+              "bbox_norm": [
+                0.121429,
+                0.713964,
+                0.224747,
+                0.745495
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "2000",
+              "confidence": 0.788,
+              "bbox_norm": [
+                0.228181,
+                0.713964,
+                0.265466,
+                0.745495
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PLUS",
+              "confidence": 0.788,
+              "bbox_norm": [
+                0.2689,
+                0.713964,
+                0.312857,
+                0.745495
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "UNIT",
+          "confidence": 0.951,
+          "bbox_norm": [
+            0.692857,
+            0.713964,
+            0.732857,
+            0.745495
+          ],
+          "tokens": [
+            {
+              "text": "UNIT",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.692857,
+                0.713964,
+                0.732857,
+                0.745495
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "'GLı AR. AP & STOcK",
+          "confidence": 0.265,
+          "bbox_norm": [
+            0.121429,
+            0.740991,
+            0.29,
+            0.777027
+          ],
+          "tokens": [
+            {
+              "text": "'GLı",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.121429,
+                0.740991,
+                0.158126,
+                0.777027
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "AR.",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.161607,
+                0.740991,
+                0.18836,
+                0.777027
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "AP",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.191841,
+                0.740991,
+                0.214118,
+                0.777027
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "&",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.217599,
+                0.740991,
+                0.232019,
+                0.777027
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "STOcK",
+              "confidence": 0.265,
+              "bbox_norm": [
+                0.2355,
+                0.740991,
+                0.29,
+                0.777027
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "\"FINANCIAL REPORT",
+          "confidence": 0.606,
+          "bbox_norm": [
+            0.121429,
+            0.772523,
+            0.281429,
+            0.804054
+          ],
+          "tokens": [
+            {
+              "text": "\"FINANCIAL",
+              "confidence": 0.606,
+              "bbox_norm": [
+                0.121429,
+                0.772523,
+                0.214135,
+                0.804054
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "REPORT",
+              "confidence": 0.606,
+              "bbox_norm": [
+                0.217467,
+                0.772523,
+                0.281429,
+                0.804054
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "'STUDY GUIDE",
+          "confidence": 0.931,
+          "bbox_norm": [
+            0.121429,
+            0.795045,
+            0.238571,
+            0.831081
+          ],
+          "tokens": [
+            {
+              "text": "'STUDY",
+              "confidence": 0.931,
+              "bbox_norm": [
+                0.121429,
+                0.795045,
+                0.183981,
+                0.831081
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "GUIDE",
+              "confidence": 0.931,
+              "bbox_norm": [
+                0.187599,
+                0.795045,
+                0.238571,
+                0.831081
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "\"LICENSE AGREEMENT",
+          "confidence": 0.764,
+          "bbox_norm": [
+            0.121429,
+            0.826577,
+            0.301429,
+            0.858108
+          ],
+          "tokens": [
+            {
+              "text": "\"LICENSE",
+              "confidence": 0.764,
+              "bbox_norm": [
+                0.121429,
+                0.826577,
+                0.199115,
+                0.858108
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "AGREEMENT",
+              "confidence": 0.764,
+              "bbox_norm": [
+                0.202443,
+                0.826577,
+                0.301429,
+                0.858108
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "DISKETTE",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.121429,
+            0.853604,
+            0.204286,
+            0.88964
+          ],
+          "tokens": [
+            {
+              "text": "DISKETTE",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.121429,
+                0.853604,
+                0.204286,
+                0.88964
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "SET",
+          "confidence": 0.992,
+          "bbox_norm": [
+            0.695714,
+            0.858108,
+            0.732857,
+            0.88964
+          ],
+          "tokens": [
+            {
+              "text": "SET",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.695714,
+                0.858108,
+                0.732857,
+                0.88964
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "CE MOUSE PAD",
+          "confidence": 0.735,
+          "bbox_norm": [
+            0.121429,
+            0.88964,
+            0.244286,
+            0.925676
+          ],
+          "tokens": [
+            {
+              "text": "CE",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.121429,
+                0.88964,
+                0.143931,
+                0.925676
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "MOUSE",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.147447,
+                0.88964,
+                0.207017,
+                0.925676
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PAD",
+              "confidence": 0.735,
+              "bbox_norm": [
+                0.210533,
+                0.88964,
+                0.244286,
+                0.925676
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Pcs",
+          "confidence": 0.564,
+          "bbox_norm": [
+            0.695714,
+            0.88964,
+            0.732857,
+            0.921171
+          ],
+          "tokens": [
+            {
+              "text": "Pcs",
+              "confidence": 0.564,
+              "bbox_norm": [
+                0.695714,
+                0.88964,
+                0.732857,
+                0.921171
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "PRINTER PANASONIC Kx-1121",
+          "confidence": 0.569,
+          "bbox_norm": [
+            0.121429,
+            0.925676,
+            0.352857,
+            0.961712
+          ],
+          "tokens": [
+            {
+              "text": "PRINTER",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.121429,
+                0.925676,
+                0.194527,
+                0.961712
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "PANASONIC",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.198096,
+                0.925676,
+                0.294031,
+                0.961712
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Kx-1121",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.2976,
+                0.925676,
+                0.352857,
+                0.961712
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "UNIT",
+          "confidence": 0.958,
+          "bbox_norm": [
+            0.692857,
+            0.93018,
+            0.732857,
+            0.957207
+          ],
+          "tokens": [
+            {
+              "text": "UNIT",
+              "confidence": 0.958,
+              "bbox_norm": [
+                0.692857,
+                0.93018,
+                0.732857,
+                0.957207
+              ],
+              "_estimated": false
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.28,
+            0.067568,
+            0.76,
+            0.207207
+          ],
+          "confidence": 0.95,
+          "text_snippet": "CE SALES & SERVICES SDN BHD (Roc.383078-4 54, JALAN SENTOSA, 41300 KLANG SELANGOR MaLAYSIA Tel: 0333"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.061429,
+            0.15991,
+            0.701429,
+            0.551802
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Tel: 0333732599, F&xc 03-33732588 DELIVERY ORDER No. CONTROL MANUFAC TURING Your P:O No Date"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.05,
+            0.362613,
+            0.867143,
+            0.777027
+          ],
+          "confidence": 0.94,
+          "text_snippet": "CONTROL MANUFAC TURING 400-2 (TINGKAT SATU) lıwoice No BATU 1/2, JALAN PAHANG Terms Net 60 days 5100"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.121429,
+            0.772523,
+            0.732857,
+            0.961712
+          ],
+          "confidence": 0.9,
+          "text_snippet": "\"FINANCIAL REPORT 'STUDY GUIDE \"LICENSE AGREEMENT DISKETTE SET CE MOUSE PAD Pcs PRINTER PANASONIC Kx"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.061429,
+            0.349099,
+            0.824286,
+            0.777027
+          ],
+          "headers": [
+            "CONTROL",
+            "MANUFAC",
+            "TURING"
+          ],
+          "rows": [
+            [
+              "Your",
+              "P:O",
+              "No"
+            ],
+            [
+              "400-2",
+              "(TINGKAT",
+              "SATU)"
+            ],
+            [
+              "Net",
+              "60",
+              "days"
+            ],
+            [
+              "51000",
+              "KUALA",
+              "LUMPUR"
+            ],
+            [
+              "ACCOUNTING",
+              "2000",
+              "PLUS"
+            ],
+            [
+              "'GLı",
+              "AR.",
+              "AP",
+              "&",
+              "STOcK"
+            ]
+          ],
+          "row_count": 6,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

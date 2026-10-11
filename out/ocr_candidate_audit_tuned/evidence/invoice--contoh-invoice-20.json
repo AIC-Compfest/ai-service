@@ -1,0 +1,3384 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 649,
+      "height": 847,
+      "engine_used": "easyocr_gpu",
+      "fallback_used": true,
+      "average_confidence": 0.685,
+      "quality": {},
+      "lines": [
+        {
+          "text": "242",
+          "confidence": 0.228,
+          "bbox_norm": [
+            0.090909,
+            0.041322,
+            0.272727,
+            0.083825
+          ],
+          "tokens": [
+            {
+              "text": "242",
+              "confidence": 0.228,
+              "bbox_norm": [
+                0.090909,
+                0.041322,
+                0.272727,
+                0.083825
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "EXefESS",
+          "confidence": 0.128,
+          "bbox_norm": [
+            0.143297,
+            0.086187,
+            0.223421,
+            0.102715
+          ],
+          "tokens": [
+            {
+              "text": "EXefESS",
+              "confidence": 0.128,
+              "bbox_norm": [
+                0.143297,
+                0.086187,
+                0.223421,
+                0.102715
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "COMMERCIAL INVOICE INSTRUCTIONS",
+          "confidence": 0.875,
+          "bbox_norm": [
+            0.357473,
+            0.0732,
+            0.936826,
+            0.101535
+          ],
+          "tokens": [
+            {
+              "text": "COMMERCIAL",
+              "confidence": 0.875,
+              "bbox_norm": [
+                0.357473,
+                0.0732,
+                0.570099,
+                0.101535
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "INVOICE",
+              "confidence": 0.875,
+              "bbox_norm": [
+                0.576749,
+                0.0732,
+                0.700258,
+                0.101535
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "INSTRUCTIONS",
+              "confidence": 0.875,
+              "bbox_norm": [
+                0.706909,
+                0.0732,
+                0.936826,
+                0.101535
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Samplc Commcrcial Invoicc",
+          "confidence": 0.856,
+          "bbox_norm": [
+            0.063174,
+            0.102715,
+            0.349769,
+            0.126328
+          ],
+          "tokens": [
+            {
+              "text": "Samplc",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.063174,
+                0.102715,
+                0.138508,
+                0.126328
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Commcrcial",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.143242,
+                0.102715,
+                0.265238,
+                0.126328
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Invoicc",
+              "confidence": 0.856,
+              "bbox_norm": [
+                0.269971,
+                0.102715,
+                0.349769,
+                0.126328
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "shippcr ",
+          "confidence": 0.506,
+          "bbox_norm": [
+            0.063174,
+            0.145218,
+            0.115562,
+            0.161747
+          ],
+          "tokens": [
+            {
+              "text": "shippcr",
+              "confidence": 0.506,
+              "bbox_norm": [
+                0.063174,
+                0.145218,
+                0.115562,
+                0.161747
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "nune andcontct nanlc",
+          "confidence": 0.054,
+          "bbox_norm": [
+            0.11094,
+            0.146399,
+            0.249615,
+            0.155844
+          ],
+          "tokens": [
+            {
+              "text": "nune",
+              "confidence": 0.054,
+              "bbox_norm": [
+                0.11094,
+                0.146399,
+                0.141502,
+                0.155844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "andcontct",
+              "confidence": 0.054,
+              "bbox_norm": [
+                0.144176,
+                0.146399,
+                0.21294,
+                0.155844
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "nanlc",
+              "confidence": 0.054,
+              "bbox_norm": [
+                0.215615,
+                0.146399,
+                0.249615,
+                0.155844
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Irvoice Date",
+          "confidence": 0.691,
+          "bbox_norm": [
+            0.61171,
+            0.145218,
+            0.688752,
+            0.159386
+          ],
+          "tokens": [
+            {
+              "text": "Irvoice",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.61171,
+                0.145218,
+                0.655543,
+                0.159386
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Date",
+              "confidence": 0.691,
+              "bbox_norm": [
+                0.658143,
+                0.145218,
+                0.688752,
+                0.159386
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ann",
+          "confidence": 0.985,
+          "bbox_norm": [
+            0.063174,
+            0.161747,
+            0.103236,
+            0.178276
+          ],
+          "tokens": [
+            {
+              "text": "Ann",
+              "confidence": 0.985,
+              "bbox_norm": [
+                0.063174,
+                0.161747,
+                0.103236,
+                0.178276
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "February 5.2005",
+          "confidence": 0.6,
+          "bbox_norm": [
+            0.61171,
+            0.159386,
+            0.756549,
+            0.178276
+          ],
+          "tokens": [
+            {
+              "text": "February",
+              "confidence": 0.6,
+              "bbox_norm": [
+                0.61171,
+                0.159386,
+                0.697744,
+                0.178276
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "5.2005",
+              "confidence": 0.6,
+              "bbox_norm": [
+                0.701453,
+                0.159386,
+                0.756549,
+                0.178276
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Jennifer Maxwell",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.060092,
+            0.178276,
+            0.211094,
+            0.194805
+          ],
+          "tokens": [
+            {
+              "text": "Jennifer",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.060092,
+                0.178276,
+                0.140196,
+                0.194805
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Maxwell",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.1439,
+                0.178276,
+                0.211094,
+                0.194805
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Irvoicc Nuiber:",
+          "confidence": 0.252,
+          "bbox_norm": [
+            0.61171,
+            0.180638,
+            0.710324,
+            0.194805
+          ],
+          "tokens": [
+            {
+              "text": "Irvoicc",
+              "confidence": 0.252,
+              "bbox_norm": [
+                0.61171,
+                0.180638,
+                0.659128,
+                0.194805
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Nuiber:",
+              "confidence": 0.252,
+              "bbox_norm": [
+                0.661941,
+                0.180638,
+                0.710324,
+                0.194805
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "dre<",
+          "confidence": 0.041,
+          "bbox_norm": [
+            0.064715,
+            0.195986,
+            0.107858,
+            0.20307
+          ],
+          "tokens": [
+            {
+              "text": "dre<",
+              "confidence": 0.041,
+              "bbox_norm": [
+                0.064715,
+                0.195986,
+                0.107858,
+                0.20307
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "5559-789",
+          "confidence": 0.957,
+          "bbox_norm": [
+            0.61171,
+            0.194805,
+            0.694915,
+            0.213695
+          ],
+          "tokens": [
+            {
+              "text": "5559-789",
+              "confidence": 0.957,
+              "bbox_norm": [
+                0.61171,
+                0.194805,
+                0.694915,
+                0.213695
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "17 Great West Road",
+          "confidence": 0.845,
+          "bbox_norm": [
+            0.063174,
+            0.20425,
+            0.232666,
+            0.22314
+          ],
+          "tokens": [
+            {
+              "text": "17",
+              "confidence": 0.845,
+              "bbox_norm": [
+                0.063174,
+                0.20425,
+                0.077876,
+                0.22314
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Great",
+              "confidence": 0.845,
+              "bbox_norm": [
+                0.081551,
+                0.20425,
+                0.135318,
+                0.22314
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "West",
+              "confidence": 0.845,
+              "bbox_norm": [
+                0.138994,
+                0.20425,
+                0.185725,
+                0.22314
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Road",
+              "confidence": 0.845,
+              "bbox_norm": [
+                0.1894,
+                0.20425,
+                0.232666,
+                0.22314
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Terms ot Irackincolermi:",
+          "confidence": 0.093,
+          "bbox_norm": [
+            0.613251,
+            0.219599,
+            0.761171,
+            0.229044
+          ],
+          "tokens": [
+            {
+              "text": "Terms",
+              "confidence": 0.093,
+              "bbox_norm": [
+                0.613251,
+                0.219599,
+                0.650987,
+                0.229044
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "ot",
+              "confidence": 0.093,
+              "bbox_norm": [
+                0.653566,
+                0.219599,
+                0.668307,
+                0.229044
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Irackincolermi:",
+              "confidence": 0.093,
+              "bbox_norm": [
+                0.670886,
+                0.219599,
+                0.761171,
+                0.229044
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "West",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.063174,
+            0.225502,
+            0.112481,
+            0.242031
+          ],
+          "tokens": [
+            {
+              "text": "West",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.063174,
+                0.225502,
+                0.112481,
+                0.242031
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Orange; NJ 07052",
+          "confidence": 0.65,
+          "bbox_norm": [
+            0.107858,
+            0.224321,
+            0.263482,
+            0.247934
+          ],
+          "tokens": [
+            {
+              "text": "Orange;",
+              "confidence": 0.65,
+              "bbox_norm": [
+                0.107858,
+                0.224321,
+                0.179559,
+                0.247934
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "NJ",
+              "confidence": 0.65,
+              "bbox_norm": [
+                0.183378,
+                0.224321,
+                0.207824,
+                0.247934
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "07052",
+              "confidence": 0.65,
+              "bbox_norm": [
+                0.211644,
+                0.224321,
+                0.263482,
+                0.247934
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "FOB",
+          "confidence": 1.0,
+          "bbox_norm": [
+            0.61171,
+            0.232586,
+            0.657935,
+            0.251476
+          ],
+          "tokens": [
+            {
+              "text": "FOB",
+              "confidence": 1.0,
+              "bbox_norm": [
+                0.61171,
+                0.232586,
+                0.657935,
+                0.251476
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Fost Code",
+          "confidence": 0.811,
+          "bbox_norm": [
+            0.063174,
+            0.263282,
+            0.124807,
+            0.27745
+          ],
+          "tokens": [
+            {
+              "text": "Fost",
+              "confidence": 0.811,
+              "bbox_norm": [
+                0.063174,
+                0.263282,
+                0.092735,
+                0.27745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Code",
+              "confidence": 0.811,
+              "bbox_norm": [
+                0.095246,
+                0.263282,
+                0.124807,
+                0.27745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Ftorc Fax",
+          "confidence": 0.351,
+          "bbox_norm": [
+            0.328197,
+            0.263282,
+            0.392912,
+            0.27745
+          ],
+          "tokens": [
+            {
+              "text": "Ftorc",
+              "confidence": 0.351,
+              "bbox_norm": [
+                0.328197,
+                0.263282,
+                0.36677,
+                0.27745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Fax",
+              "confidence": 0.351,
+              "bbox_norm": [
+                0.369407,
+                0.263282,
+                0.392912,
+                0.27745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "07052",
+          "confidence": 0.852,
+          "bbox_norm": [
+            0.063174,
+            0.27745,
+            0.121726,
+            0.29634
+          ],
+          "tokens": [
+            {
+              "text": "07052",
+              "confidence": 0.852,
+              "bbox_norm": [
+                0.063174,
+                0.27745,
+                0.121726,
+                0.29634
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "USA",
+          "confidence": 0.992,
+          "bbox_norm": [
+            0.223421,
+            0.27745,
+            0.269646,
+            0.29634
+          ],
+          "tokens": [
+            {
+              "text": "USA",
+              "confidence": 0.992,
+              "bbox_norm": [
+                0.223421,
+                0.27745,
+                0.269646,
+                0.29634
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "973-555-1212",
+          "confidence": 0.81,
+          "bbox_norm": [
+            0.328197,
+            0.27745,
+            0.448382,
+            0.29634
+          ],
+          "tokens": [
+            {
+              "text": "973-555-1212",
+              "confidence": 0.81,
+              "bbox_norm": [
+                0.328197,
+                0.27745,
+                0.448382,
+                0.29634
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Convencc namc Ind contuct nlILC",
+          "confidence": 0.061,
+          "bbox_norm": [
+            0.064715,
+            0.304604,
+            0.261941,
+            0.31405
+          ],
+          "tokens": [
+            {
+              "text": "Convencc",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.064715,
+                0.304604,
+                0.123788,
+                0.31405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "namc",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.126335,
+                0.304604,
+                0.155435,
+                0.31405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ind",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.157981,
+                0.304604,
+                0.175805,
+                0.31405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "contuct",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.178351,
+                0.304604,
+                0.229276,
+                0.31405
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "nlILC",
+              "confidence": 0.061,
+              "bbox_norm": [
+                0.231823,
+                0.304604,
+                0.261941,
+                0.31405
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total Number of Pieces: 12",
+          "confidence": 0.581,
+          "bbox_norm": [
+            0.61171,
+            0.301063,
+            0.762712,
+            0.31523
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.581,
+              "bbox_norm": [
+                0.61171,
+                0.301063,
+                0.643792,
+                0.31523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Number",
+              "confidence": 0.581,
+              "bbox_norm": [
+                0.646249,
+                0.301063,
+                0.689212,
+                0.31523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "of",
+              "confidence": 0.581,
+              "bbox_norm": [
+                0.691669,
+                0.301063,
+                0.705709,
+                0.31523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pieces:",
+              "confidence": 0.581,
+              "bbox_norm": [
+                0.708166,
+                0.301063,
+                0.750427,
+                0.31523
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "12",
+              "confidence": 0.581,
+              "bbox_norm": [
+                0.752884,
+                0.301063,
+                0.762712,
+                0.31523
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "HFT Electronics",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.063174,
+            0.31523,
+            0.201849,
+            0.33412
+          ],
+          "tokens": [
+            {
+              "text": "HFT",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.063174,
+                0.31523,
+                0.097111,
+                0.33412
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Electronics",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.100646,
+                0.31523,
+                0.201849,
+                0.33412
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Attn: Chris Mason",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.063174,
+            0.331759,
+            0.217257,
+            0.350649
+          ],
+          "tokens": [
+            {
+              "text": "Attn:",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.063174,
+                0.331759,
+                0.109228,
+                0.350649
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Chris",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.112755,
+                0.331759,
+                0.158808,
+                0.350649
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mason",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.162336,
+                0.331759,
+                0.217257,
+                0.350649
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "TonlGnss",
+          "confidence": 0.211,
+          "bbox_norm": [
+            0.613251,
+            0.337662,
+            0.677966,
+            0.347107
+          ],
+          "tokens": [
+            {
+              "text": "TonlGnss",
+              "confidence": 0.211,
+              "bbox_norm": [
+                0.613251,
+                0.337662,
+                0.677966,
+                0.347107
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Wcight: 10 Ibs",
+          "confidence": 0.448,
+          "bbox_norm": [
+            0.674884,
+            0.335301,
+            0.762712,
+            0.354191
+          ],
+          "tokens": [
+            {
+              "text": "Wcight:",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.674884,
+                0.335301,
+                0.72605,
+                0.354191
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "10",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.72887,
+                0.335301,
+                0.740151,
+                0.354191
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ibs",
+              "confidence": 0.448,
+              "bbox_norm": [
+                0.742971,
+                0.335301,
+                0.762712,
+                0.354191
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Dclivcry Adkess",
+          "confidence": 0.317,
+          "bbox_norm": [
+            0.063174,
+            0.348288,
+            0.161787,
+            0.364817
+          ],
+          "tokens": [
+            {
+              "text": "Dclivcry",
+              "confidence": 0.317,
+              "bbox_norm": [
+                0.063174,
+                0.348288,
+                0.114491,
+                0.364817
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Adkess",
+              "confidence": 0.317,
+              "bbox_norm": [
+                0.11705,
+                0.348288,
+                0.161787,
+                0.364817
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "3973 Technology Ct",
+          "confidence": 0.837,
+          "bbox_norm": [
+            0.063174,
+            0.358914,
+            0.232666,
+            0.383707
+          ],
+          "tokens": [
+            {
+              "text": "3973",
+              "confidence": 0.837,
+              "bbox_norm": [
+                0.063174,
+                0.358914,
+                0.102956,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Technology",
+              "confidence": 0.837,
+              "bbox_norm": [
+                0.10662,
+                0.358914,
+                0.206807,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Ct",
+              "confidence": 0.837,
+              "bbox_norm": [
+                0.210472,
+                0.358914,
+                0.232666,
+                0.383707
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total Nc Wcicht: 95 [bs",
+          "confidence": 0.432,
+          "bbox_norm": [
+            0.61171,
+            0.367178,
+            0.75963,
+            0.383707
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.432,
+              "bbox_norm": [
+                0.61171,
+                0.367178,
+                0.646663,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Nc",
+              "confidence": 0.432,
+              "bbox_norm": [
+                0.64934,
+                0.367178,
+                0.665555,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Wcicht:",
+              "confidence": 0.432,
+              "bbox_norm": [
+                0.668232,
+                0.367178,
+                0.716799,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "95",
+              "confidence": 0.432,
+              "bbox_norm": [
+                0.719476,
+                0.367178,
+                0.734008,
+                0.383707
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "[bs",
+              "confidence": 0.432,
+              "bbox_norm": [
+                0.736685,
+                0.367178,
+                0.75963,
+                0.383707
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Seattle; Washington",
+          "confidence": 0.546,
+          "bbox_norm": [
+            0.063174,
+            0.378985,
+            0.232666,
+            0.403778
+          ],
+          "tokens": [
+            {
+              "text": "Seattle;",
+              "confidence": 0.546,
+              "bbox_norm": [
+                0.063174,
+                0.378985,
+                0.13207,
+                0.403778
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Washington",
+              "confidence": 0.546,
+              "bbox_norm": [
+                0.135505,
+                0.378985,
+                0.232666,
+                0.403778
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Fostcode",
+          "confidence": 0.508,
+          "bbox_norm": [
+            0.064715,
+            0.399055,
+            0.120185,
+            0.408501
+          ],
+          "tokens": [
+            {
+              "text": "Fostcode",
+              "confidence": 0.508,
+              "bbox_norm": [
+                0.064715,
+                0.399055,
+                0.120185,
+                0.408501
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Ccunir",
+          "confidence": 0.502,
+          "bbox_norm": [
+            0.22188,
+            0.399055,
+            0.268105,
+            0.408501
+          ],
+          "tokens": [
+            {
+              "text": "Ccunir",
+              "confidence": 0.502,
+              "bbox_norm": [
+                0.22188,
+                0.399055,
+                0.268105,
+                0.408501
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "PyEE",
+          "confidence": 0.013,
+          "bbox_norm": [
+            0.734977,
+            0.400236,
+            0.821263,
+            0.419126
+          ],
+          "tokens": [
+            {
+              "text": "PyEE",
+              "confidence": 0.013,
+              "bbox_norm": [
+                0.734977,
+                0.400236,
+                0.821263,
+                0.419126
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "98108",
+          "confidence": 0.971,
+          "bbox_norm": [
+            0.063174,
+            0.409681,
+            0.121726,
+            0.428571
+          ],
+          "tokens": [
+            {
+              "text": "98108",
+              "confidence": 0.971,
+              "bbox_norm": [
+                0.063174,
+                0.409681,
+                0.121726,
+                0.428571
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "USA",
+          "confidence": 0.995,
+          "bbox_norm": [
+            0.223421,
+            0.409681,
+            0.269646,
+            0.428571
+          ],
+          "tokens": [
+            {
+              "text": "USA",
+              "confidence": 0.995,
+              "bbox_norm": [
+                0.223421,
+                0.409681,
+                0.269646,
+                0.428571
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "CARRIER:",
+          "confidence": 0.998,
+          "bbox_norm": [
+            0.61171,
+            0.414404,
+            0.697997,
+            0.430933
+          ],
+          "tokens": [
+            {
+              "text": "CARRIER:",
+              "confidence": 0.998,
+              "bbox_norm": [
+                0.61171,
+                0.414404,
+                0.697997,
+                0.430933
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "AIR WAYBILL No: 1234 567 8912",
+          "confidence": 0.487,
+          "bbox_norm": [
+            0.61171,
+            0.428571,
+            0.879815,
+            0.449823
+          ],
+          "tokens": [
+            {
+              "text": "AIR",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.61171,
+                0.428571,
+                0.641811,
+                0.449823
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "WAYBILL",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.645727,
+                0.428571,
+                0.72965,
+                0.449823
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "No:",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.733566,
+                0.428571,
+                0.762323,
+                0.449823
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "1234",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.76624,
+                0.428571,
+                0.803166,
+                0.449823
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "567",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.807082,
+                0.428571,
+                0.838973,
+                0.449823
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "8912",
+              "confidence": 0.487,
+              "bbox_norm": [
+                0.842889,
+                0.428571,
+                0.879815,
+                0.449823
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "(206) 369-3574",
+          "confidence": 0.706,
+          "bbox_norm": [
+            0.063174,
+            0.440378,
+            0.195686,
+            0.459268
+          ],
+          "tokens": [
+            {
+              "text": "(206)",
+              "confidence": 0.706,
+              "bbox_norm": [
+                0.063174,
+                0.440378,
+                0.113188,
+                0.459268
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "369-3574",
+              "confidence": 0.706,
+              "bbox_norm": [
+                0.116797,
+                0.440378,
+                0.195686,
+                0.459268
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "(206) 492 3876",
+          "confidence": 0.726,
+          "bbox_norm": [
+            0.220339,
+            0.440378,
+            0.355932,
+            0.459268
+          ],
+          "tokens": [
+            {
+              "text": "(206)",
+              "confidence": 0.726,
+              "bbox_norm": [
+                0.220339,
+                0.440378,
+                0.274243,
+                0.459268
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "492",
+              "confidence": 0.726,
+              "bbox_norm": [
+                0.278133,
+                0.440378,
+                0.309808,
+                0.459268
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "3876",
+              "confidence": 0.726,
+              "bbox_norm": [
+                0.313698,
+                0.440378,
+                0.355932,
+                0.459268
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Full Descrintion of",
+          "confidence": 0.828,
+          "bbox_norm": [
+            0.063174,
+            0.459268,
+            0.204931,
+            0.475797
+          ],
+          "tokens": [
+            {
+              "text": "Full",
+              "confidence": 0.828,
+              "bbox_norm": [
+                0.063174,
+                0.459268,
+                0.090373,
+                0.475797
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Descrintion",
+              "confidence": 0.828,
+              "bbox_norm": [
+                0.093525,
+                0.459268,
+                0.183766,
+                0.475797
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "of",
+              "confidence": 0.828,
+              "bbox_norm": [
+                0.186918,
+                0.459268,
+                0.204931,
+                0.475797
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Customs Commoditv",
+          "confidence": 0.693,
+          "bbox_norm": [
+            0.223421,
+            0.459268,
+            0.380586,
+            0.473436
+          ],
+          "tokens": [
+            {
+              "text": "Customs",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.223421,
+                0.459268,
+                0.293185,
+                0.473436
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Commoditv",
+              "confidence": 0.693,
+              "bbox_norm": [
+                0.296614,
+                0.459268,
+                0.380586,
+                0.473436
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Countrv of Manufacturc",
+          "confidence": 0.611,
+          "bbox_norm": [
+            0.423729,
+            0.459268,
+            0.605547,
+            0.473436
+          ],
+          "tokens": [
+            {
+              "text": "Countrv",
+              "confidence": 0.611,
+              "bbox_norm": [
+                0.423729,
+                0.459268,
+                0.484591,
+                0.473436
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "of",
+              "confidence": 0.611,
+              "bbox_norm": [
+                0.487583,
+                0.459268,
+                0.504679,
+                0.473436
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Manufacturc",
+              "confidence": 0.611,
+              "bbox_norm": [
+                0.507671,
+                0.459268,
+                0.605547,
+                0.473436
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Otv.",
+          "confidence": 0.48,
+          "bbox_norm": [
+            0.61171,
+            0.459268,
+            0.651772,
+            0.475797
+          ],
+          "tokens": [
+            {
+              "text": "Otv.",
+              "confidence": 0.48,
+              "bbox_norm": [
+                0.61171,
+                0.459268,
+                0.651772,
+                0.475797
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Unit Value",
+          "confidence": 0.576,
+          "bbox_norm": [
+            0.694915,
+            0.459268,
+            0.775039,
+            0.475797
+          ],
+          "tokens": [
+            {
+              "text": "Unit",
+              "confidence": 0.576,
+              "bbox_norm": [
+                0.694915,
+                0.459268,
+                0.728607,
+                0.475797
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Value",
+              "confidence": 0.576,
+              "bbox_norm": [
+                0.73191,
+                0.459268,
+                0.775039,
+                0.475797
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Subtotal Valuc",
+          "confidence": 0.743,
+          "bbox_norm": [
+            0.827427,
+            0.459268,
+            0.941448,
+            0.475797
+          ],
+          "tokens": [
+            {
+              "text": "Subtotal",
+              "confidence": 0.743,
+              "bbox_norm": [
+                0.827427,
+                0.459268,
+                0.896534,
+                0.475797
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Valuc",
+              "confidence": 0.743,
+              "bbox_norm": [
+                0.899729,
+                0.459268,
+                0.941448,
+                0.475797
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Gopds",
+          "confidence": 0.338,
+          "bbox_norm": [
+            0.063174,
+            0.478158,
+            0.115562,
+            0.494687
+          ],
+          "tokens": [
+            {
+              "text": "Gopds",
+              "confidence": 0.338,
+              "bbox_norm": [
+                0.063174,
+                0.478158,
+                0.115562,
+                0.494687
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Codc",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.223421,
+            0.478158,
+            0.266564,
+            0.492326
+          ],
+          "tokens": [
+            {
+              "text": "Codc",
+              "confidence": 0.966,
+              "bbox_norm": [
+                0.223421,
+                0.478158,
+                0.266564,
+                0.492326
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "and Currcncy 13",
+          "confidence": 0.979,
+          "bbox_norm": [
+            0.827427,
+            0.475797,
+            0.959938,
+            0.492326
+          ],
+          "tokens": [
+            {
+              "text": "and",
+              "confidence": 0.979,
+              "bbox_norm": [
+                0.827427,
+                0.475797,
+                0.857498,
+                0.492326
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Currcncy",
+              "confidence": 0.979,
+              "bbox_norm": [
+                0.861006,
+                0.475797,
+                0.942397,
+                0.492326
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "13",
+              "confidence": 0.979,
+              "bbox_norm": [
+                0.945905,
+                0.475797,
+                0.959938,
+                0.492326
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Populated Printed Circuit Board used in",
+          "confidence": 0.951,
+          "bbox_norm": [
+            0.086287,
+            0.507674,
+            0.414484,
+            0.531287
+          ],
+          "tokens": [
+            {
+              "text": "Populated",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.086287,
+                0.507674,
+                0.170296,
+                0.531287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Printed",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.173727,
+                0.507674,
+                0.238132,
+                0.531287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Circuit",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.241563,
+                0.507674,
+                0.300575,
+                0.531287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Board",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.304006,
+                0.507674,
+                0.354197,
+                0.531287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "used",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.357628,
+                0.507674,
+                0.396839,
+                0.531287
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "in",
+              "confidence": 0.951,
+              "bbox_norm": [
+                0.40027,
+                0.507674,
+                0.414484,
+                0.531287
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Word Processor.",
+          "confidence": 0.836,
+          "bbox_norm": [
+            0.42681,
+            0.508855,
+            0.565485,
+            0.527745
+          ],
+          "tokens": [
+            {
+              "text": "Word",
+              "confidence": 0.836,
+              "bbox_norm": [
+                0.42681,
+                0.508855,
+                0.469754,
+                0.527745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Processor.",
+              "confidence": 0.836,
+              "bbox_norm": [
+                0.473132,
+                0.508855,
+                0.565485,
+                0.527745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "10 Pcs.",
+          "confidence": 0.965,
+          "bbox_norm": [
+            0.61171,
+            0.508855,
+            0.676425,
+            0.527745
+          ],
+          "tokens": [
+            {
+              "text": "10",
+              "confidence": 0.965,
+              "bbox_norm": [
+                0.61171,
+                0.508855,
+                0.628741,
+                0.527745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pcs.",
+              "confidence": 0.965,
+              "bbox_norm": [
+                0.632998,
+                0.508855,
+                0.676425,
+                0.527745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSD 100.00",
+          "confidence": 0.632,
+          "bbox_norm": [
+            0.691834,
+            0.508855,
+            0.812018,
+            0.527745
+          ],
+          "tokens": [
+            {
+              "text": "SUSD",
+              "confidence": 0.632,
+              "bbox_norm": [
+                0.691834,
+                0.508855,
+                0.748332,
+                0.527745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "100.00",
+              "confidence": 0.632,
+              "bbox_norm": [
+                0.752746,
+                0.508855,
+                0.812018,
+                0.527745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSD 1.000",
+          "confidence": 0.62,
+          "bbox_norm": [
+            0.824345,
+            0.506494,
+            0.938367,
+            0.527745
+          ],
+          "tokens": [
+            {
+              "text": "SUSD",
+              "confidence": 0.62,
+              "bbox_norm": [
+                0.824345,
+                0.506494,
+                0.883881,
+                0.527745
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "1.000",
+              "confidence": 0.62,
+              "bbox_norm": [
+                0.888532,
+                0.506494,
+                0.938367,
+                0.527745
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "It contains the",
+          "confidence": 0.997,
+          "bbox_norm": [
+            0.090909,
+            0.527745,
+            0.214176,
+            0.546635
+          ],
+          "tokens": [
+            {
+              "text": "It",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.090909,
+                0.527745,
+                0.105095,
+                0.546635
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "contains",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.108519,
+                0.527745,
+                0.181402,
+                0.546635
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "the",
+              "confidence": 0.997,
+              "bbox_norm": [
+                0.184826,
+                0.527745,
+                0.214176,
+                0.546635
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "following components: CPU, DRAM:",
+          "confidence": 0.776,
+          "bbox_norm": [
+            0.209553,
+            0.525384,
+            0.522342,
+            0.548996
+          ],
+          "tokens": [
+            {
+              "text": "following",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.209553,
+                0.525384,
+                0.291896,
+                0.548996
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "components:",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.295817,
+                0.525384,
+                0.412888,
+                0.548996
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "CPU,",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.416809,
+                0.525384,
+                0.459493,
+                0.548996
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "DRAM:",
+              "confidence": 0.776,
+              "bbox_norm": [
+                0.463414,
+                0.525384,
+                0.522342,
+                0.548996
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "HTS",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.090909,
+            0.546635,
+            0.137134,
+            0.565525
+          ],
+          "tokens": [
+            {
+              "text": "HTS",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.090909,
+                0.546635,
+                0.137134,
+                0.565525
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "8473.10 : Manufactured in South Korea.",
+          "confidence": 0.569,
+          "bbox_norm": [
+            0.149461,
+            0.545455,
+            0.48228,
+            0.565525
+          ],
+          "tokens": [
+            {
+              "text": "8473.10",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.149461,
+                0.545455,
+                0.207427,
+                0.565525
+              ],
+              "_estimated": true
+            },
+            {
+              "text": ":",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.211018,
+                0.545455,
+                0.215635,
+                0.565525
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Manufactured",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.219226,
+                0.545455,
+                0.346957,
+                0.565525
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "in",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.350548,
+                0.545455,
+                0.365424,
+                0.565525
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "South",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.369015,
+                0.545455,
+                0.421544,
+                0.565525
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Korea.",
+              "confidence": 0.569,
+              "bbox_norm": [
+                0.425135,
+                0.545455,
+                0.48228,
+                0.565525
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2 Laser Imaging Assembly for",
+          "confidence": 0.501,
+          "bbox_norm": [
+            0.063174,
+            0.578512,
+            0.325116,
+            0.602125
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.501,
+              "bbox_norm": [
+                0.063174,
+                0.578512,
+                0.073569,
+                0.602125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Laser",
+              "confidence": 0.501,
+              "bbox_norm": [
+                0.077398,
+                0.578512,
+                0.133419,
+                0.602125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Imaging",
+              "confidence": 0.501,
+              "bbox_norm": [
+                0.137249,
+                0.578512,
+                0.201804,
+                0.602125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Assembly",
+              "confidence": 0.501,
+              "bbox_norm": [
+                0.205633,
+                0.578512,
+                0.288461,
+                0.602125
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "for",
+              "confidence": 0.501,
+              "bbox_norm": [
+                0.292291,
+                0.578512,
+                0.325116,
+                0.602125
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Laser Printer incorporating",
+          "confidence": 0.991,
+          "bbox_norm": [
+            0.334361,
+            0.579693,
+            0.559322,
+            0.600945
+          ],
+          "tokens": [
+            {
+              "text": "Laser",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.334361,
+                0.579693,
+                0.381779,
+                0.600945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Printer",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.385021,
+                0.579693,
+                0.445869,
+                0.600945
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "incorporating",
+              "confidence": 0.991,
+              "bbox_norm": [
+                0.44911,
+                0.579693,
+                0.559322,
+                0.600945
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "2 Pcs.",
+          "confidence": 0.994,
+          "bbox_norm": [
+            0.61171,
+            0.579693,
+            0.66718,
+            0.598583
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.61171,
+                0.579693,
+                0.622531,
+                0.598583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Pcs.",
+              "confidence": 0.994,
+              "bbox_norm": [
+                0.626517,
+                0.579693,
+                0.66718,
+                0.598583
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSD 50.00",
+          "confidence": 0.775,
+          "bbox_norm": [
+            0.688752,
+            0.577332,
+            0.802773,
+            0.598583
+          ],
+          "tokens": [
+            {
+              "text": "SUSD",
+              "confidence": 0.775,
+              "bbox_norm": [
+                0.688752,
+                0.577332,
+                0.745009,
+                0.598583
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "50.00",
+              "confidence": 0.775,
+              "bbox_norm": [
+                0.749404,
+                0.577332,
+                0.802773,
+                0.598583
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSDIOO.0O",
+          "confidence": 0.677,
+          "bbox_norm": [
+            0.827427,
+            0.579693,
+            0.941448,
+            0.598583
+          ],
+          "tokens": [
+            {
+              "text": "SUSDIOO.0O",
+              "confidence": 0.677,
+              "bbox_norm": [
+                0.827427,
+                0.579693,
+                0.941448,
+                0.598583
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "toner",
+          "confidence": 0.989,
+          "bbox_norm": [
+            0.090909,
+            0.600945,
+            0.140216,
+            0.615112
+          ],
+          "tokens": [
+            {
+              "text": "toner",
+              "confidence": 0.989,
+              "bbox_norm": [
+                0.090909,
+                0.600945,
+                0.140216,
+                0.615112
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "receptacle unit and a cleaning unit: HTS",
+          "confidence": 0.89,
+          "bbox_norm": [
+            0.135593,
+            0.596222,
+            0.466872,
+            0.618654
+          ],
+          "tokens": [
+            {
+              "text": "receptacle",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.135593,
+                0.596222,
+                0.230002,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "unit",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.233498,
+                0.596222,
+                0.267965,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "and",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.271462,
+                0.596222,
+                0.301432,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "a",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.304929,
+                0.596222,
+                0.314919,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "cleaning",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.318416,
+                0.596222,
+                0.387349,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "unit:",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.390846,
+                0.596222,
+                0.429808,
+                0.618654
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "HTS",
+              "confidence": 0.89,
+              "bbox_norm": [
+                0.433305,
+                0.596222,
+                0.466872,
+                0.618654
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "8473.30:",
+          "confidence": 0.662,
+          "bbox_norm": [
+            0.479199,
+            0.596222,
+            0.562404,
+            0.617473
+          ],
+          "tokens": [
+            {
+              "text": "8473.30:",
+              "confidence": 0.662,
+              "bbox_norm": [
+                0.479199,
+                0.596222,
+                0.562404,
+                0.617473
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Manufactured in Mexico.",
+          "confidence": 0.969,
+          "bbox_norm": [
+            0.090909,
+            0.617473,
+            0.303544,
+            0.636364
+          ],
+          "tokens": [
+            {
+              "text": "Manufactured",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.090909,
+                0.617473,
+                0.217272,
+                0.636364
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "in",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.220824,
+                0.617473,
+                0.235541,
+                0.636364
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Mexico.",
+              "confidence": 0.969,
+              "bbox_norm": [
+                0.239094,
+                0.617473,
+                0.303544,
+                0.636364
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSD 50.00",
+          "confidence": 0.804,
+          "bbox_norm": [
+            0.827427,
+            0.652893,
+            0.938367,
+            0.671783
+          ],
+          "tokens": [
+            {
+              "text": "SUSD",
+              "confidence": 0.804,
+              "bbox_norm": [
+                0.827427,
+                0.652893,
+                0.882164,
+                0.671783
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "50.00",
+              "confidence": 0.804,
+              "bbox_norm": [
+                0.88644,
+                0.652893,
+                0.938367,
+                0.671783
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Total Shipping Costs",
+          "confidence": 0.682,
+          "bbox_norm": [
+            0.093991,
+            0.668241,
+            0.269646,
+            0.693034
+          ],
+          "tokens": [
+            {
+              "text": "Total",
+              "confidence": 0.682,
+              "bbox_norm": [
+                0.093991,
+                0.668241,
+                0.140099,
+                0.693034
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Shipping",
+              "confidence": 0.682,
+              "bbox_norm": [
+                0.14363,
+                0.668241,
+                0.214457,
+                0.693034
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Costs",
+              "confidence": 0.682,
+              "bbox_norm": [
+                0.217988,
+                0.668241,
+                0.269646,
+                0.693034
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUSDLISD",
+          "confidence": 0.535,
+          "bbox_norm": [
+            0.824345,
+            0.702479,
+            0.935285,
+            0.726092
+          ],
+          "tokens": [
+            {
+              "text": "SUSDLISD",
+              "confidence": 0.535,
+              "bbox_norm": [
+                0.824345,
+                0.702479,
+                0.935285,
+                0.726092
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Iotal Valuc and Currency Used: 14",
+          "confidence": 0.529,
+          "bbox_norm": [
+            0.093991,
+            0.72137,
+            0.383667,
+            0.74026
+          ],
+          "tokens": [
+            {
+              "text": "Iotal",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.093991,
+                0.72137,
+                0.135358,
+                0.74026
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Valuc",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.13907,
+                0.72137,
+                0.187544,
+                0.74026
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "and",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.191257,
+                0.72137,
+                0.223078,
+                0.74026
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Currency",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.22679,
+                0.72137,
+                0.312919,
+                0.74026
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "Used:",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.316631,
+                0.72137,
+                0.365105,
+                0.74026
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "14",
+              "confidence": 0.529,
+              "bbox_norm": [
+                0.368817,
+                0.72137,
+                0.383667,
+                0.74026
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "FWe hereby certify that the information on this invoice is true and correct and that the contents of this",
+          "confidence": 0.731,
+          "bbox_norm": [
+            0.063174,
+            0.789847,
+            0.885978,
+            0.811098
+          ],
+          "tokens": [
+            {
+              "text": "FWe",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.063174,
+                0.789847,
+                0.096005,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "hereby",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.099224,
+                0.789847,
+                0.154403,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "certify",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.157621,
+                0.789847,
+                0.216938,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "that",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.220157,
+                0.789847,
+                0.256943,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "the",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.260162,
+                0.789847,
+                0.287751,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "information",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.29097,
+                0.789847,
+                0.382014,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "on",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.385233,
+                0.789847,
+                0.403626,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "this",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.406845,
+                0.789847,
+                0.438572,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "invoice",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.441791,
+                0.789847,
+                0.49605,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "is",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.499269,
+                0.789847,
+                0.512603,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "true",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.515822,
+                0.789847,
+                0.552608,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "and",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.555827,
+                0.789847,
+                0.583416,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "correct",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.586635,
+                0.789847,
+                0.65101,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "and",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.654228,
+                0.789847,
+                0.681818,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "that",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.685037,
+                0.789847,
+                0.721822,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "the",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.725041,
+                0.789847,
+                0.75263,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "contents",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.755849,
+                0.789847,
+                0.82942,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "of",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.832639,
+                0.789847,
+                0.851032,
+                0.811098
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "this",
+              "confidence": 0.731,
+              "bbox_norm": [
+                0.854251,
+                0.789847,
+                0.885978,
+                0.811098
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "shipment are as stated above. 15",
+          "confidence": 0.881,
+          "bbox_norm": [
+            0.063174,
+            0.813459,
+            0.328197,
+            0.832349
+          ],
+          "tokens": [
+            {
+              "text": "shipment",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.063174,
+                0.813459,
+                0.136166,
+                0.832349
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "are",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.139595,
+                0.813459,
+                0.168987,
+                0.832349
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "as",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.172417,
+                0.813459,
+                0.192012,
+                0.832349
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "stated",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.195441,
+                0.813459,
+                0.254226,
+                0.832349
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "above.",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.257655,
+                0.813459,
+                0.311052,
+                0.832349
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "15",
+              "confidence": 0.881,
+              "bbox_norm": [
+                0.314481,
+                0.813459,
+                0.328197,
+                0.832349
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "Signature: 16",
+          "confidence": 0.995,
+          "bbox_norm": [
+            0.063174,
+            0.846517,
+            0.177196,
+            0.867769
+          ],
+          "tokens": [
+            {
+              "text": "Signature:",
+              "confidence": 0.995,
+              "bbox_norm": [
+                0.063174,
+                0.846517,
+                0.158669,
+                0.867769
+              ],
+              "_estimated": true
+            },
+            {
+              "text": "16",
+              "confidence": 0.995,
+              "bbox_norm": [
+                0.162374,
+                0.846517,
+                0.177196,
+                0.867769
+              ],
+              "_estimated": true
+            }
+          ]
+        },
+        {
+          "text": "SUPERVISOR",
+          "confidence": 0.974,
+          "bbox_norm": [
+            0.063174,
+            0.88902,
+            0.180277,
+            0.90791
+          ],
+          "tokens": [
+            {
+              "text": "SUPERVISOR",
+              "confidence": 0.974,
+              "bbox_norm": [
+                0.063174,
+                0.88902,
+                0.180277,
+                0.90791
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Taylor",
+          "confidence": 0.996,
+          "bbox_norm": [
+            0.09875,
+            0.157297,
+            0.164733,
+            0.183908
+          ],
+          "tokens": [
+            {
+              "text": "Taylor",
+              "confidence": 0.996,
+              "bbox_norm": [
+                0.09875,
+                0.157297,
+                0.164733,
+                0.183908
+              ],
+              "_estimated": false
+            }
+          ]
+        },
+        {
+          "text": "Culn",
+          "confidence": 0.067,
+          "bbox_norm": [
+            0.221902,
+            0.262409,
+            0.269623,
+            0.277143
+          ],
+          "tokens": [
+            {
+              "text": "Culn",
+              "confidence": 0.067,
+              "bbox_norm": [
+                0.221902,
+                0.262409,
+                0.269623,
+                0.277143
+              ],
+              "_estimated": false
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.060092,
+            0.041322,
+            0.936826,
+            0.194805
+          ],
+          "confidence": 0.95,
+          "text_snippet": "242 EXefESS COMMERCIAL INVOICE INSTRUCTIONS Samplc Commcrcial Invoicc shippcr  nune andcontct nanlc "
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.060092,
+            0.145218,
+            0.762712,
+            0.403778
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Irvoice Date Ann February 5.2005 Jennifer Maxwell Irvoicc Nuiber: dre< 5559-789 17 Great West Road T"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.063174,
+            0.358914,
+            0.959938,
+            0.74026
+          ],
+          "confidence": 0.94,
+          "text_snippet": "3973 Technology Ct Total Nc Wcicht: 95 [bs Seattle; Washington Fostcode Ccunir PyEE 98108 USA CARRIE"
+        },
+        {
+          "region_type": "totals",
+          "bbox_norm": [
+            0.093991,
+            0.668241,
+            0.269646,
+            0.693034
+          ],
+          "confidence": 0.95,
+          "text_snippet": "Total Shipping Costs"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.063174,
+            0.789847,
+            0.885978,
+            0.90791
+          ],
+          "confidence": 0.9,
+          "text_snippet": "FWe hereby certify that the information on this invoice is true and correct and that the contents of"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.063174,
+            0.331759,
+            0.959938,
+            0.74026
+          ],
+          "headers": [
+            "Attn:",
+            "Chris",
+            "Mason"
+          ],
+          "rows": [
+            [
+              "Wcight:",
+              "10",
+              "Ibs"
+            ],
+            [
+              "3973",
+              "Technology",
+              "Ct"
+            ],
+            [
+              "Total",
+              "Nc",
+              "Wcicht:",
+              "95",
+              "[bs"
+            ],
+            [
+              "AIR",
+              "WAYBILL",
+              "No:",
+              "1234",
+              "567",
+              "8912"
+            ],
+            [
+              "(206)",
+              "492",
+              "3876"
+            ],
+            [
+              "Full",
+              "Descrintion",
+              "of"
+            ],
+            [
+              "Countrv",
+              "of",
+              "Manufacturc"
+            ],
+            [
+              "and",
+              "Currcncy",
+              "13"
+            ],
+            [
+              "Populated",
+              "Printed",
+              "Circuit",
+              "Board",
+              "used",
+              "in"
+            ],
+            [
+              "It",
+              "contains",
+              "the"
+            ],
+            [
+              "following",
+              "components:",
+              "CPU,",
+              "DRAM:"
+            ],
+            [
+              "8473.10",
+              ":",
+              "Manufactured",
+              "in",
+              "South",
+              "Korea."
+            ],
+            [
+              "2",
+              "Laser",
+              "Imaging",
+              "Assembly",
+              "for"
+            ],
+            [
+              "Laser",
+              "Printer",
+              "incorporating"
+            ],
+            [
+              "receptacle",
+              "unit",
+              "and",
+              "a",
+              "cleaning",
+              "unit:",
+              "HTS"
+            ],
+            [
+              "Manufactured",
+              "in",
+              "Mexico."
+            ],
+            [
+              "Total",
+              "Shipping",
+              "Costs"
+            ],
+            [
+              "Iotal",
+              "Valuc",
+              "and",
+              "Currency",
+              "Used:",
+              "14"
+            ]
+          ],
+          "row_count": 18,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}
