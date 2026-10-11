@@ -21,6 +21,7 @@ def main() -> None:
     rows = list(csv.DictReader(args.manifest.open(encoding="utf-8", newline="")))
     for manifest in rows[:args.limit]:
         evidence = json.loads(Path(manifest["evidence_json_path"]).read_text(encoding="utf-8"))
+        evidence = restrict_pages(evidence, manifest.get("page_start"), manifest.get("page_end"))
         generated = CandidatePipeline(args.config).generate(manifest["document_id"], manifest["doc_type"], evidence, args.out.name)
         for row in generated:
             grouped[f"{manifest['doc_type']}_{row['m_cand_type']}"].append(row)
@@ -32,6 +33,19 @@ def main() -> None:
             writer.writeheader()
             writer.writerows(records)
     (args.out / "run_report.json").write_text(json.dumps({"documents": len(rows[:args.limit]), "candidate_counts": {key: len(value) for key, value in grouped.items()}}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def restrict_pages(evidence: dict, page_start: str | None, page_end: str | None) -> dict:
+    """Return a shallow evidence copy containing only the requested logical segment."""
+    if not page_start and not page_end:
+        return evidence
+    start = int(page_start) if page_start else min(int(page.get("page_number", 1)) for page in evidence.get("pages", []))
+    end = int(page_end) if page_end else max(int(page.get("page_number", 1)) for page in evidence.get("pages", []))
+    if start > end:
+        raise ValueError(f"page_start ({start}) cannot be greater than page_end ({end})")
+    filtered = dict(evidence)
+    filtered["pages"] = [page for page in evidence.get("pages", []) if start <= int(page.get("page_number", 1)) <= end]
+    return filtered
 
 
 def _column_order(name: str) -> tuple[int, str]:

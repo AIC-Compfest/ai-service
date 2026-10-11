@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from app.services.candidates.parsers import parse_date, parse_number, parse_time
 from app.services.candidates.pipeline import CandidatePipeline
+from app.tools.build_candidate_dataset import restrict_pages
 
 
 def _line(text, x1, y1, x2, y2):
@@ -48,3 +49,10 @@ def test_invoice_candidate_contract_and_context(tmp_path):
     assert any(row["m_raw_text"] == "1.250.000" and row["ctx_left"] == "Subtotal Rp" for row in grouped["amount"])
     assert all(row["label__subtotal"] == "" for row in grouped["amount"])
     assert all(0 <= row["m_x1"] < row["m_x2"] <= 1 for row in rows)
+
+
+def test_shared_evidence_can_be_restricted_to_logical_segment():
+    evidence = {"pages": [{"page_number": 1}, {"page_number": 2}, {"page_number": 3}]}
+    selected = restrict_pages(evidence, "2", "3")
+    assert [page["page_number"] for page in selected["pages"]] == [2, 3]
+    assert [page["page_number"] for page in evidence["pages"]] == [1, 2, 3]
