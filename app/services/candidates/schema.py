@@ -35,6 +35,48 @@ class Page:
 
 
 @dataclass
+class Cell:
+    text: str
+    bbox: tuple[float, float, float, float]
+    tokens: list[Token] = field(default_factory=list)
+    row_idx: int = 0
+    col_idx: int = 0
+    is_header: bool = False
+
+
+@dataclass
+class Column:
+    idx: int
+    x1: float
+    x2: float
+    header_text: str
+    header_lines: list[str] = field(default_factory=list)
+
+
+@dataclass
+class TableRow:
+    idx: int
+    cells: list[Cell]
+    bbox: tuple[float, float, float, float]
+    continuation_rows: int = 0
+    kind_hint: str = "item"
+
+
+@dataclass
+class Table:
+    table_id: str
+    page_start: int
+    page_end: int
+    layout_kind: str
+    source: str
+    columns: list[Column]
+    rows: list[TableRow]
+    bbox: tuple[float, float, float, float]
+    conf: float = 0.0
+    stitched_pages: list[int] = field(default_factory=list)
+
+
+@dataclass
 class Candidate:
     cand_type: str
     page: Page

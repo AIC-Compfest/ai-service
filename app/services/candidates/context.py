@@ -21,13 +21,16 @@ def build_page(page_data: dict) -> Page:
 
 def context_for(candidate: Candidate) -> dict[str, str]:
     tokens = candidate.page.tokens
+    cx = (candidate.bbox[0] + candidate.bbox[2]) / 2
     cy = (candidate.bbox[1] + candidate.bbox[3]) / 2
     height = candidate.bbox[3] - candidate.bbox[1]
     own = set(candidate.tokens)
     left = sorted((token for token in tokens if token not in own and token.bbox[2] <= candidate.bbox[0] + .005 and abs(token.cy - cy) <= .6 * max(height, token.bbox[3] - token.bbox[1]) and candidate.bbox[0] - token.bbox[2] <= .4), key=lambda token: (-token.bbox[2], token.tok_idx))[:6]
     right = sorted((token for token in tokens if token not in own and token.bbox[0] >= candidate.bbox[2] - .005 and abs(token.cy - cy) <= .6 * max(height, token.bbox[3] - token.bbox[1]) and token.bbox[0] - candidate.bbox[2] <= .4), key=lambda token: (token.bbox[0], token.tok_idx))[:6]
-    same_line = [token for token in tokens if token not in own and token.row_idx == candidate.tokens[0].row_idx]
-    return {"ctx_left": " ".join(token.text for token in reversed(left)), "ctx_right": " ".join(token.text for token in right), "ctx_line": " ".join(token.text for token in sorted(same_line, key=lambda token: token.bbox[0]))}
+    same_line = [token for token in tokens if token not in own and abs(token.cy - cy) <= .5 * max(height, token.bbox[3] - token.bbox[1])]
+    above = sorted((token for token in tokens if token not in own and token.bbox[3] <= candidate.bbox[1] + .2 * height and candidate.bbox[1] - token.bbox[3] <= .07 and abs(token.cx - cx) <= .05 + (candidate.bbox[2] - candidate.bbox[0]) / 2), key=lambda token: (-token.bbox[3], token.bbox[0]))[:12]
+    below = sorted((token for token in tokens if token not in own and token.bbox[1] >= candidate.bbox[3] - .2 * height and token.bbox[1] - candidate.bbox[3] <= .07 and abs(token.cx - cx) <= .05 + (candidate.bbox[2] - candidate.bbox[0]) / 2), key=lambda token: (token.bbox[1], token.bbox[0]))[:12]
+    return {"ctx_left": " ".join(token.text for token in reversed(left)), "ctx_right": " ".join(token.text for token in right), "ctx_above": " ".join(token.text for token in reversed(above)), "ctx_below": " ".join(token.text for token in below), "ctx_line": " ".join(token.text for token in sorted(same_line, key=lambda token: token.bbox[0])), "ctx_sent": " ".join(token.text for token in sorted(same_line + above[:6] + below[:6], key=lambda token: (token.cy, token.bbox[0])))[:300]}
 
 
 def _bbox(value: list[float]) -> tuple[float, float, float, float]:
