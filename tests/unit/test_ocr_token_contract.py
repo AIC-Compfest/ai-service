@@ -9,6 +9,7 @@ def test_token_to_dict_has_required_candidate_fields():
         "confidence": 0.97,
         "bbox_norm": [0.01, 0.02, 0.05, 0.04],
         "_estimated": False,
+        "row_idx": 0,
     }
     assert token.to_full_dict()["bbox_pixel"] == [10, 20, 50, 40]
 

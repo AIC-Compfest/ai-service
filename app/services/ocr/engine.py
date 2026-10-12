@@ -32,6 +32,7 @@ class OCRToken:
         bbox_pixel: tuple[float, float, float, float],
         bbox_norm: tuple[float, float, float, float],
         estimated: bool = False,
+        row_idx: int = 0,
     ):
         self.text = text
         self.confidence = confidence
@@ -39,6 +40,7 @@ class OCRToken:
         self.bbox_norm = bbox_norm    # (x1, y1, x2, y2) in [0.0, 1.0]
         # True only where the word box was derived from a larger OCR box.
         self.estimated = estimated
+        self.row_idx = row_idx
 
     def to_dict(self) -> dict:
         return {
@@ -46,6 +48,7 @@ class OCRToken:
             "confidence": round(self.confidence, 3),
             "bbox_norm": [round(c, 6) for c in self.bbox_norm],
             "_estimated": self.estimated,
+            "row_idx": self.row_idx,
         }
 
     def to_full_dict(self) -> dict:
@@ -160,7 +163,7 @@ _GLOBAL_EASYOCR_READER = None
 class OCREngine:
     """Cascaded OCR and Layout Understanding Engine."""
 
-    def __init__(self, confidence_threshold: float = 0.85, max_image_side: int = 1600):
+    def __init__(self, confidence_threshold: float = 0.85, max_image_side: int = 2400):
         self.confidence_threshold = confidence_threshold
         self.max_image_side = max_image_side
 
@@ -270,19 +273,41 @@ class OCREngine:
             ys = [point[1] / scale for point in box]
             lx0, ly0, lx1, ly1 = float(min(xs)), float(min(ys)), float(max(xs)), float(max(ys))
             line_box = (lx0, ly0, lx1, ly1)
-            norm_bbox = (lx0 / width, ly0 / height, lx1 / width, ly1 / height)
+            norm_bbox = self._safe_norm_bbox(lx0, ly0, lx1, ly1, width, height)
             estimated_boxes = self._estimate_token_boxes(text, line_box)
             tokens = [
                 OCRToken(
                     word,
                     float(probability),
                     token_box,
-                    (token_box[0] / width, token_box[1] / height, token_box[2] / width, token_box[3] / height),
+                    self._safe_norm_bbox(*token_box, width, height),
                     estimated=len(estimated_boxes) > 1,
                 )
                 for word, token_box in estimated_boxes
             ]
             lines.append(OCRLine(text, float(probability), line_box, norm_bbox, tokens))
+        return self._assign_row_indices(lines)
+
+    @staticmethod
+    def _safe_norm_bbox(x1: float, y1: float, x2: float, y2: float, width: float, height: float) -> tuple[float, float, float, float]:
+        x1, x2 = sorted((max(0.0, min(width, x1)), max(0.0, min(width, x2))))
+        y1, y2 = sorted((max(0.0, min(height, y1)), max(0.0, min(height, y2))))
+        if x2 <= x1: x2 = min(width, x1 + 1)
+        if y2 <= y1: y2 = min(height, y1 + 1)
+        return x1 / width, y1 / height, x2 / width, y2 / height
+
+    @staticmethod
+    def _assign_row_indices(lines: list[OCRLine]) -> list[OCRLine]:
+        """Assign stable visual rows, independent of EasyOCR phrase line indices."""
+        rows: list[tuple[float, float]] = []
+        for line in sorted(lines, key=lambda item: (item.bbox_pixel[1], item.bbox_pixel[0], item.text)):
+            center = (line.bbox_pixel[1] + line.bbox_pixel[3]) / 2
+            height = max(1.0, line.bbox_pixel[3] - line.bbox_pixel[1])
+            row = next((i for i, (cy, h) in enumerate(rows) if abs(center - cy) <= .6 * max(height, h)), None)
+            if row is None:
+                row = len(rows); rows.append((center, height))
+            for token in line.tokens:
+                token.row_idx = row
         return lines
 
     def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict, canonical_image_bytes: bytes | None = None) -> PageOCREvidence:
@@ -348,6 +373,7 @@ class OCREngine:
                 )
             )
 
+        ocr_lines = self._assign_row_indices(ocr_lines)
         regions = self._detect_layout_regions(ocr_lines, w, h)
         tables = self._detect_tables(ocr_lines)
 
