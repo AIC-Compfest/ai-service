@@ -23,7 +23,16 @@ class FieldRegistry:
     @classmethod
     def load(cls, path: str | Path) -> "FieldRegistry":
         data: dict[str, Any] = yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {}
-        fields = [FieldSpec(**item) for item in data.get("fields", [])]
+        raw_fields = data.get("fields")
+        if raw_fields is None:
+            raw_fields = []
+            for doc_type, doc_fields in data.items():
+                if not isinstance(doc_fields, dict):
+                    continue
+                for field, spec in doc_fields.items():
+                    spec = spec or {}
+                    raw_fields.append({"doc_type": doc_type, "field": field, **spec})
+        fields = [FieldSpec(**item) for item in raw_fields]
         if not fields:
             raise ValueError("field registry contains no fields")
         return cls(fields)
@@ -33,3 +42,6 @@ class FieldRegistry:
 
     def fields_for_type(self, doc_type: str, cand_type: str) -> list[str]:
         return [field.field for field in self.for_doc(doc_type) if field.cand_type == cand_type]
+
+    def field_specs_for_type(self, doc_type: str, cand_type: str) -> list[FieldSpec]:
+        return [field for field in self.for_doc(doc_type) if field.cand_type == cand_type]

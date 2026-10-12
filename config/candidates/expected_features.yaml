@@ -1,0 +1,11 @@
+- {name: g_x1, dtype: float, nullable: false, applies_to: ['*']}
+- {name: g_y1, dtype: float, nullable: false, applies_to: ['*']}
+- {name: g_x2, dtype: float, nullable: false, applies_to: ['*']}
+- {name: g_y2, dtype: float, nullable: false, applies_to: ['*']}
+- {name: g_cx, dtype: float, nullable: false, applies_to: ['*']}
+- {name: g_cy, dtype: float, nullable: false, applies_to: ['*']}
+- {name: q_conf_mean, dtype: float, nullable: false, applies_to: ['*']}
+- {name: q_box_estimated, dtype: bool, nullable: false, applies_to: ['*']}
+- {name: q_is_vector, dtype: bool, nullable: false, applies_to: ['*']}
+- {name: d_n_same_type_doc, dtype: int, nullable: false, applies_to: ['*']}
+- {name: d_rank_reading, dtype: int, nullable: false, applies_to: ['*']}

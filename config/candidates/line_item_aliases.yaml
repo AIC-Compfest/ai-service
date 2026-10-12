@@ -1,0 +1,41 @@
+INVOICE:
+  fields:
+    line_number: {dtype: int, aliases: [no, no., nomor, baris, line, urut, item]}
+    quantity: {dtype: decimal, aliases: [qty, quantity, kuantitas, jumlah, jml, jumlah koli, koli, pcs]}
+    frequency: {dtype: decimal, aliases: [frequency, frekuensi, freq, rit, ritase, trip]}
+    shipment_id: {dtype: id, aliases: [shipment id, shipment, no resi, nomor resi, resi, tracking no, reference no, ref]}
+    awb_number: {dtype: id, aliases: [awb, awb no, airwaybill, no waybill]}
+    item_description: {dtype: text, aliases: [description, deskripsi barang, uraian barang, nama barang, item description, commodity]}
+    destination: {dtype: city, aliases: [destination, tujuan, kota tujuan]}
+    chargeable_weight: {dtype: weight, aliases: [chargeable weight, berat tertagih, berat kg, berat, weight, kg]}
+    base_rate: {dtype: amount, aliases: [base rate, tarif dasar, tarif, rate, harga, price, tarif kg, rate kg]}
+    fuel_surcharge: {dtype: amount, aliases: [fuel surcharge, fuel, bbm, surcharge bbm]}
+    line_tax: {dtype: percent, aliases: [ppn, vat, tax, pajak, nilai ppn, ppn 11%]}
+    line_total: {dtype: amount, aliases: [total, jumlah, amount, subtotal, total harga]}
+SURAT_JALAN:
+  fields:
+    line_number: {dtype: int, aliases: [no, nomor, baris, line]}
+    item_description: {dtype: text, aliases: [nama barang, item description, deskripsi barang]}
+    quantity: {dtype: int, aliases: [qty, quantity, koli, jumlah]}
+    weight_kg: {dtype: weight, aliases: [berat, berat kg, weight, berat aktual]}
+    remarks: {dtype: text, aliases: [remarks, catatan, keterangan, notes]}
+POD:
+  fields:
+    line_number: {dtype: int, aliases: [no, nomor, baris]}
+    item_description: {dtype: text, aliases: [nama barang, item description, deskripsi barang]}
+    quantity_delivered: {dtype: int, aliases: [qty kirim, delivered qty, jumlah kirim]}
+    quantity_received: {dtype: int, aliases: [qty terima, received qty, jumlah terima]}
+    condition: {dtype: enum, aliases: [condition, kondisi, kondisi barang, status]}
+RATE_AGREEMENT:
+  fields:
+    service_type: {dtype: text, aliases: [service, service type, layanan, jenis layanan]}
+    origin_zone: {dtype: city, aliases: [origin, asal, zona asal, dari]}
+    destination_zone: {dtype: city, aliases: [destination, tujuan, zona tujuan, ke]}
+    weight_min_kg: {dtype: weight, aliases: [min weight, min kg, berat min, dari kg, from kg]}
+    weight_max_kg: {dtype: weight, aliases: [max weight, max kg, berat max, sampai kg, to kg]}
+    base_rate_idr: {dtype: amount, aliases: [base rate, tarif dasar, tarif, rate, harga, tarif kg, rate kg]}
+    rate_unit: {dtype: text, aliases: [per, satuan tarif, unit tarif]}
+_surcharge_types:
+  fuel: [fuel surcharge, fuel, bbm, bahan bakar]
+  handling: [handling fee, biaya penanganan, handling]
+ambiguous_ok: [jumlah, total, tujuan, asal, berat]
