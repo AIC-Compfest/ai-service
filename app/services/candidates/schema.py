@@ -13,6 +13,7 @@ class Token:
     line_idx: int = 0
     tok_idx: int = 0
     box_estimated: bool = False
+    row_idx: int = 0
 
     @property
     def cx(self) -> float:

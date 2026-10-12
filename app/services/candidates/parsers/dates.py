@@ -27,7 +27,7 @@ def parse_date(text: str) -> DateParse:
     if match:
         year, month, day = map(int, match.groups())
         return _make(day, month, year, "yyyy_mm_dd", "num", False, False, False, match.group(0)[4])
-    match = re.fullmatch(r"(\d{1,2})\s+([A-Za-z]+)[,\s-]+(\d{2,4})|([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{2,4})", raw)
+    match = re.fullmatch(r"(\d{1,2})[\s./-]+([A-Za-z]+)[,\s./-]+(\d{2,4})|([A-Za-z]+)[\s./-]+(\d{1,2}),?[\s./-]+(\d{2,4})", raw)
     if not match:
         return DateParse(None)
     if match.group(1):
@@ -38,7 +38,7 @@ def parse_date(text: str) -> DateParse:
     month = _MONTHS.get(normalized)
     fuzzy = False
     if month is None:
-        choices = [(sum(a != b for a, b in zip(normalized, item)) + abs(len(normalized) - len(item)), number) for item, number in _MONTHS.items() if len(item) >= 4]
+        choices = [(_edit_distance(normalized, item), number) for item, number in _MONTHS.items()]
         if choices:
             distance, month = min(choices)
             fuzzy = distance <= 1
@@ -47,6 +47,17 @@ def parse_date(text: str) -> DateParse:
     year = int(year_text) + (2000 if len(year_text) == 2 else 0)
     lang = "id" if normalized in {"januari", "maret", "mei", "juni", "juli", "agustus", "oktober", "desember"} else "en"
     return _make(day, month, year, fmt, lang, fuzzy, len(year_text) == 2, False, " ")
+
+
+def _edit_distance(left: str, right: str) -> int:
+    """Small deterministic Levenshtein implementation for OCR month noise."""
+    previous = list(range(len(right) + 1))
+    for i, char in enumerate(left, 1):
+        current = [i]
+        for j, other in enumerate(right, 1):
+            current.append(min(current[-1] + 1, previous[j] + 1, previous[j - 1] + (char != other)))
+        previous = current
+    return previous[-1]
 
 
 def _make(day: int, month: int, year: int, fmt: str, lang: str, fuzzy: bool, two: bool, ambiguous: bool, sep: str) -> DateParse:

@@ -69,3 +69,34 @@ def test_rate_agreement_emits_configured_percent_and_days_candidates():
 
     assert any(row["m_cand_type"] == "percent" and row["m_parsed_value"] == "11" for row in rows)
     assert any(row["m_cand_type"] == "days" and row["m_parsed_value"] == "30" for row in rows)
+
+
+def test_multitoken_amount_and_numeric_id_overlap():
+    evidence = {"pages": [{"page_number": 1, "engine_used": "easyocr_gpu", "lines": [
+        _line("Total Due Rp 25 ,000 ,000", 100, 700, 800, 730),
+        _line("Invoice 0309002", 100, 100, 500, 130),
+    ]}]}
+    rows = CandidatePipeline("config/candidates").generate("D2", "INVOICE", evidence)
+    amount = next(row for row in rows if row["m_cand_type"] == "amount" and row["m_parsed_value"] == "25000000")
+    assert amount["m_raw_text"] == "Rp 25 ,000 ,000"
+    assert amount["a_n_tokens"] == 4 and amount["a_has_currency_sym"] == 1
+    numeric = [row for row in rows if row["m_raw_text"] == "0309002"]
+    assert {row["m_cand_type"] for row in numeric} == {"amount", "id"}
+    assert all(row["m_overlap_types"] == "amount|id" for row in numeric)
+
+
+def test_fuzzy_month_date_is_not_an_id():
+    evidence = {"pages": [{"page_number": 1, "lines": [_line("Date 12-Har-09", 100, 100, 500, 130)]}]}
+    rows = CandidatePipeline("config/candidates").generate("D3", "INVOICE", evidence)
+    dates = [row for row in rows if row["m_cand_type"] == "date"]
+    assert any(row["m_parsed_value"] == "2009-03-12" and row["dt_month_fuzzy"] == 1 for row in dates)
+    assert not any(row["m_cand_type"] == "id" and "12-Har-09" in row["m_raw_text"] for row in rows)
+
+
+def test_caps_are_applied_and_reported():
+    evidence = {"pages": [{"page_number": 1, "lines": [_line(f"Total Rp {i}.000", 100, 100 + i * 20, 500, 120 + i * 20) for i in range(1, 5)]}]}
+    pipeline = CandidatePipeline("config/candidates")
+    pipeline.caps["amount"] = 2
+    rows = pipeline.generate("D4", "INVOICE", evidence)
+    assert len([row for row in rows if row["m_cand_type"] == "amount"]) == 2
+    assert pipeline.last_run_report["cap_overflow"] == {"1": {"amount": 2}}

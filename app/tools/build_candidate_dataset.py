@@ -18,11 +18,15 @@ def main() -> None:
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     grouped: dict[str, list[dict]] = defaultdict(list)
+    cap_overflow: dict[str, dict] = {}
     rows = list(csv.DictReader(args.manifest.open(encoding="utf-8", newline="")))
     for manifest in rows[:args.limit]:
         evidence = json.loads(Path(manifest["evidence_json_path"]).read_text(encoding="utf-8"))
         evidence = restrict_pages(evidence, manifest.get("page_start"), manifest.get("page_end"))
-        generated = CandidatePipeline(args.config).generate(manifest["document_id"], manifest["doc_type"], evidence, args.out.name)
+        pipeline = CandidatePipeline(args.config)
+        generated = pipeline.generate(manifest["document_id"], manifest["doc_type"], evidence, args.out.name)
+        if pipeline.last_run_report.get("cap_overflow"):
+            cap_overflow[manifest["document_id"]] = pipeline.last_run_report["cap_overflow"]
         for row in generated:
             grouped[f"{manifest['doc_type']}_{row['m_cand_type']}"].append(row)
     for name, records in grouped.items():
@@ -32,7 +36,7 @@ def main() -> None:
             writer = csv.DictWriter(handle, fieldnames=columns, lineterminator="\n")
             writer.writeheader()
             writer.writerows(records)
-    (args.out / "run_report.json").write_text(json.dumps({"documents": len(rows[:args.limit]), "candidate_counts": {key: len(value) for key, value in grouped.items()}}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (args.out / "run_report.json").write_text(json.dumps({"documents": len(rows[:args.limit]), "candidate_counts": {key: len(value) for key, value in grouped.items()}, "cap_overflow": cap_overflow}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def restrict_pages(evidence: dict, page_start: str | None, page_end: str | None) -> dict:

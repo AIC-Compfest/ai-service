@@ -24,6 +24,7 @@ class CandidatePipeline:
         if generation.exists():
             import yaml
             self.caps.update((yaml.safe_load(generation.read_text(encoding="utf-8")) or {}).get("caps", {}))
+        self.last_run_report: dict[str, Any] = {"cap_overflow": {}}
 
     def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "") -> list[dict[str, Any]]:
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
@@ -33,12 +34,14 @@ class CandidatePipeline:
             for cand_type in sorted(enabled):
                 candidates.extend(self._generate_type(page, cand_type))
         candidates.sort(key=lambda candidate: (candidate.page.page_number, candidate.bbox[1], candidate.bbox[0], candidate.cand_type, candidate.raw_text))
+        candidates = self._apply_caps(candidates)
         type_counts: dict[str, int] = {}
         for candidate in candidates:
             candidate.reading_idx = type_counts.get(candidate.cand_type, 0) + 1
             type_counts[candidate.cand_type] = candidate.reading_idx
             candidate.context = context_for(candidate)
             candidate.features = self._features(candidate, candidates)
+        self._active_candidates = candidates
         return [self._row(document_id, doc_type, run_id, candidate) for candidate in candidates]
 
     def _generate_type(self, page: Page, cand_type: str) -> list[Candidate]:
@@ -73,7 +76,33 @@ class CandidatePipeline:
                 if re.fullmatch(r"(?:\+?62|0)8\d{8,12}", text):
                     continue
             result.append(self._candidate(cand_type, page, [token], str(parsed.value), norm_alnum(token.text)))
+        if amount:
+            # OCR often splits grouped thousands into individual tokens ("25", ",000", ",000").
+            # Generate only contiguous visual-line spans, retaining exact evidence provenance.
+            for line in page.lines:
+                for start in range(len(line)):
+                    for end in range(start + 2, min(len(line), start + 4) + 1):
+                        tokens = line[start:end]
+                        if not self._reasonable_token_span(tokens):
+                            continue
+                        raw = " ".join(token.text for token in tokens)
+                        numeric = re.sub(r"^(?:rp\.?|idr|usd|\$)\s*", "", raw, flags=re.I)
+                        # A currency token plus an already intact amount is covered by the
+                        # legacy single-token candidate; this generator is for fragmented
+                        # numeric groups only.
+                        if sum(bool(re.search(r"\d", token.text)) for token in tokens) < 2:
+                            continue
+                        if not re.fullmatch(r"\d{1,3}(?:\s*[.,]\s?\d{3})+", numeric):
+                            continue
+                        parsed = parse_number(raw)
+                        if parsed.value is not None:
+                            result.append(self._candidate(cand_type, page, tokens, str(parsed.value), norm_alnum(raw)))
         return self._dedupe(result)
+
+    @staticmethod
+    def _reasonable_token_span(tokens: list[Token]) -> bool:
+        return all(next_token.bbox[0] - token.bbox[2] <= max(.03, 2.5 * (token.bbox[2] - token.bbox[0]))
+                   for token, next_token in zip(tokens, tokens[1:]))
 
     def _date_candidates(self, page: Page) -> list[Candidate]:
         result = []
@@ -118,7 +147,7 @@ class CandidatePipeline:
             raw = token.text.strip("[]")
             if len(raw) < 4 or len(raw) > 32 or not re.search(r"\d", raw) or (raw.isdigit() and len(raw) < 5) or parse_date(raw).iso:
                 continue
-            if re.fullmatch(r"[\d.,]+", raw):
+            if re.fullmatch(r"[\d.,]+", raw) and not re.fullmatch(r"\d{5,20}", raw):
                 continue
             result.append(self._candidate("id", page, [token], raw, norm_alnum(raw)))
         return self._dedupe(result)
@@ -146,29 +175,62 @@ class CandidatePipeline:
         return Candidate(cand_type, page, tokens, " ".join(token.text for token in tokens), parsed, normalized or norm_text(parsed))
 
     def _dedupe(self, candidates: list[Candidate]) -> list[Candidate]:
-        seen: set[tuple[str, int, tuple[float, ...]]] = set()
-        result = []
+        chosen: dict[tuple[str, int, tuple[float, ...], str], Candidate] = {}
         for candidate in candidates:
-            key = (candidate.cand_type, candidate.page.page_number, candidate.bbox)
-            if key not in seen:
-                seen.add(key)
-                result.append(candidate)
-        return result
+            key = (candidate.cand_type, candidate.page.page_number, candidate.bbox, candidate.parsed_value)
+            old = chosen.get(key)
+            if old is None or len(candidate.tokens) > len(old.tokens):
+                chosen[key] = candidate
+        return list(chosen.values())
+
+    def _apply_caps(self, candidates: list[Candidate]) -> list[Candidate]:
+        """Apply configured caps deterministically, retaining an auditable overflow count."""
+        grouped: dict[tuple[int, str], list[Candidate]] = {}
+        for candidate in candidates:
+            grouped.setdefault((candidate.page.page_number, candidate.cand_type), []).append(candidate)
+        kept: list[Candidate] = []
+        overflow: dict[str, dict[str, int]] = {}
+        for (page, cand_type), group in sorted(grouped.items()):
+            ranked = sorted(group, key=lambda item: (-sum(t.confidence for t in item.tokens) / len(item.tokens), item.bbox[1], item.bbox[0], item.raw_text))
+            cap = int(self.caps.get(cand_type, len(ranked)))
+            kept.extend(ranked[:cap])
+            if len(ranked) > cap:
+                overflow.setdefault(str(page), {})[cand_type] = len(ranked) - cap
+        self.last_run_report = {"cap_overflow": overflow}
+        return kept
 
     def _features(self, candidate: Candidate, all_candidates: list[Candidate]) -> dict[str, Any]:
         x1, y1, x2, y2 = candidate.bbox
         same = [item for item in all_candidates if item.cand_type == candidate.cand_type]
         values = [item for item in same if item.parsed_norm == candidate.parsed_norm]
         features: dict[str, Any] = {"g_x1": round(x1, 4), "g_y1": round(y1, 4), "g_x2": round(x2, 4), "g_y2": round(y2, 4), "g_cx": round((x1 + x2) / 2, 4), "g_cy": round((y1 + y2) / 2, 4), "g_w": round(x2 - x1, 4), "g_h": round(y2 - y1, 4), "q_conf_mean": round(sum(token.confidence for token in candidate.tokens) / len(candidate.tokens), 6), "q_box_estimated": int(any(token.box_estimated for token in candidate.tokens)), "q_is_vector": int(candidate.page.engine_used == "pymupdf_vector"), "d_n_same_type_doc": len(same), "d_n_same_type_page": sum(item.page.page_number == candidate.page.page_number for item in same), "d_dup_count_doc": len(values) - 1, "d_is_first_occurrence": int(values and values[0] is candidate), "d_rank_reading": candidate.reading_idx, "d_rank_reading_rel": (candidate.reading_idx - 1) / max(len(same) - 1, 1)}
+        raw = candidate.raw_text
+        features.update({"m_region": self._region_for(candidate), "q_text_alpha_ratio": round(sum(char.isalpha() for char in raw) / max(len(raw), 1), 6), "q_text_digit_ratio": round(sum(char.isdigit() for char in raw) / max(len(raw), 1), 6)})
         if candidate.cand_type == "amount":
             parsed = Decimal(candidate.parsed_value)
-            features.update({"a_value": float(parsed), "a_log10": 0 if parsed == 0 else float(abs(parsed).ln() / Decimal(10).ln()), "a_ambiguous": int("." in candidate.raw_text or "," in candidate.raw_text), "a_is_max": int(parsed == max(Decimal(item.parsed_value) for item in same)), "a_rank_desc_doc": sorted((Decimal(item.parsed_value) for item in same), reverse=True).index(parsed) + 1})
+            features.update({"a_value": float(parsed), "a_log10": 0 if parsed == 0 else float(abs(parsed).ln() / Decimal(10).ln()), "a_ambiguous": int("." in candidate.raw_text or "," in candidate.raw_text), "a_is_max": int(parsed == max(Decimal(item.parsed_value) for item in same)), "a_rank_desc_doc": sorted((Decimal(item.parsed_value) for item in same), reverse=True).index(parsed) + 1, "a_n_tokens": len(candidate.tokens), "a_has_currency_sym": int(bool(re.search(r"(?:^|\s)(?:rp\.?|idr|usd|\$)(?:\s|$)", raw, re.I)))})
+        if candidate.cand_type == "date":
+            features["dt_month_fuzzy"] = int(parse_date(candidate.raw_text).month_fuzzy)
+        if candidate.cand_type == "party":
+            features["party_has_legal_suffix"] = int(bool(re.search(r"\b(?:pt|cv|co|ltd|tbk|pte|gmbh)\b", raw, re.I)))
         return features
+
+    @staticmethod
+    def _region_for(candidate: Candidate) -> str:
+        cx, cy = (candidate.bbox[0] + candidate.bbox[2]) / 2, (candidate.bbox[1] + candidate.bbox[3]) / 2
+        priority = {"header": 1, "metadata_block": 2, "table": 3, "totals": 4, "signature_block": 0}
+        found = []
+        for region in candidate.page.regions:
+            bbox = region.get("bbox_norm", [])
+            if len(bbox) >= 4 and bbox[0] <= cx <= bbox[2] and bbox[1] <= cy <= bbox[3]:
+                found.append(str(region.get("region_type", "none")))
+        return max(found, key=lambda value: priority.get(value, -1)) if found else "none"
 
     def _row(self, document_id: str, doc_type: str, run_id: str, candidate: Candidate) -> dict[str, Any]:
         x1, y1, x2, y2 = candidate.bbox
         candidate_id = hashlib.sha1(f"{document_id}|{candidate.page.page_number}|{candidate.cand_type}|{x1:.4f},{y1:.4f},{x2:.4f},{y2:.4f}|{candidate.raw_text}".encode()).hexdigest()[:16]
-        row = {"m_schema_version": "1.0.0", "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": "UNKNOWN", "m_template_group": "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": candidate.line_idx, "m_tok_start": candidate.tokens[0].tok_idx, "m_tok_end": candidate.tokens[-1].tok_idx, "m_overlap_types": "", **candidate.features, **candidate.context}
+        overlaps = sorted({item.cand_type for item in getattr(self, "_active_candidates", []) if item.page.page_number == candidate.page.page_number and item.bbox == candidate.bbox})
+        row = {"m_schema_version": "1.0.0", "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": "UNKNOWN", "m_template_group": "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": candidate.line_idx, "m_row_idx": candidate.tokens[0].row_idx, "m_tok_start": candidate.tokens[0].tok_idx, "m_tok_end": candidate.tokens[-1].tok_idx, "m_overlap_types": "|".join(overlaps), **candidate.features, **candidate.context}
         for field in self.registry.fields_for_type(doc_type, candidate.cand_type):
             row[f"label__{field}"] = ""
         row.update({"label_status": "", "label_notes": ""})
