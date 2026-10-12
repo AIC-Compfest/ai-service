@@ -112,7 +112,7 @@ class TableStructure:
 
 
 class PageOCREvidence:
-    def __init__(self, page_number: int, width: int, height: int, engine_used: str, fallback_used: bool, lines: list[OCRLine], regions: list[LayoutRegion], tables: list[TableStructure], quality: dict):
+    def __init__(self, page_number: int, width: int, height: int, engine_used: str, fallback_used: bool, lines: list[OCRLine], regions: list[LayoutRegion], tables: list[TableStructure], quality: dict, page_image: dict | None = None):
         self.page_number = page_number
         self.width = width
         self.height = height
@@ -122,6 +122,7 @@ class PageOCREvidence:
         self.regions = regions
         self.tables = tables
         self.quality = quality
+        self.page_image = page_image or {}
 
     def full_text(self) -> str:
         return "\n".join(l.text for l in self.lines)
@@ -141,6 +142,8 @@ class PageOCREvidence:
             "fallback_used": self.fallback_used,
             "average_confidence": round(self.average_confidence(), 3),
             "quality": self.quality,
+            "page_image": self.page_image,
+            "coord_space": "page_image_normalized",
             "lines": [l.to_dict() for l in self.lines],
             "regions": [r.to_dict() for r in self.regions],
             "tables": [t.to_dict() for t in self.tables],
@@ -282,7 +285,7 @@ class OCREngine:
             lines.append(OCRLine(text, float(probability), line_box, norm_bbox, tokens))
         return lines
 
-    def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict) -> PageOCREvidence:
+    def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict, canonical_image_bytes: bytes | None = None) -> PageOCREvidence:
         """Extract high-precision vector text, coordinates and layout from PDF page.
         Falls back to EasyOCR if page is scanned/image-based with insufficient digital text."""
         rect = page.rect
@@ -294,8 +297,8 @@ class OCREngine:
         # Fallback to EasyOCR for scanned / image-only PDF pages (PRD Hybrid OCR requirement)
         if len(words_data) < 5:
             logger.info("ocr.fallback_to_easyocr", page_number=page_number, words_found=len(words_data))
-            pix = page.get_pixmap(dpi=300, alpha=False)
-            img_bytes = pix.tobytes("png")
+            pix = page.get_pixmap(dpi=200, alpha=False)
+            img_bytes = canonical_image_bytes or pix.tobytes("png")
             ocr_res = self.process_image(img_bytes, page_number, quality)
             ocr_res.fallback_used = True
             return ocr_res

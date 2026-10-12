@@ -94,7 +94,17 @@ class Phase5DocumentPipeline:
             # OCR & Layout
             # OCR always consumes the canonical page raster. This keeps geometry,
             # preprocessing, and the image shown to users in one coordinate system.
-            p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality)
+            # Native PDF text is more accurate; its coordinates are normalized against
+            # the canonical rendered PNG dimensions passed here.
+            if p_asset.is_pdf_page and p_asset.pdf_page is not None:
+                p_ocr = self.ocr_engine.process_pdf_page(
+                    p_asset.pdf_page, p_asset.page_number, quality,
+                    canonical_image_bytes=p_asset.image_bytes,
+                )
+            else:
+                p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality)
+            # Evidence dimensions always describe the canonical PNG, including vector PDFs.
+            p_ocr.width, p_ocr.height = p_asset.width, p_asset.height
 
             page_text = p_ocr.full_text()
             all_text += page_text + "\n"
@@ -128,6 +138,8 @@ class Phase5DocumentPipeline:
             )
 
             page_dict = p_ocr.to_dict()
+            page_dict["page_image"] = p_asset.page_image
+            page_dict["coord_space"] = "page_image_normalized"
             page_dict["classification"] = {
                 "document_type": page_type_str,
                 "confidence": page_classify_res.confidence,
