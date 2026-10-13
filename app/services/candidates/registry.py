@@ -45,3 +45,19 @@ class FieldRegistry:
 
     def field_specs_for_type(self, doc_type: str, cand_type: str) -> list[FieldSpec]:
         return [field for field in self.for_doc(doc_type) if field.cand_type == cand_type]
+
+    def validate(self) -> None:
+        valid_docs = {"INVOICE", "SURAT_JALAN", "POD", "RATE_AGREEMENT"}
+        valid_types = {"amount", "date", "time", "id", "party", "address", "city", "qty", "weight", "percent", "days", "enum", "text", "table", "none"}
+        errors = []
+        for field in self.fields:
+            if field.doc_type not in valid_docs:
+                errors.append(f"unknown document type: {field.doc_type}")
+            if field.cand_type not in valid_types:
+                errors.append(f"unknown candidate type: {field.cand_type} for {field.doc_type}.{field.field}")
+            if field.cardinality not in {"one", "many"}:
+                errors.append(f"invalid cardinality: {field.doc_type}.{field.field}")
+            if field.model not in {"lgbm", "none"}:
+                errors.append(f"invalid model: {field.doc_type}.{field.field}")
+        if errors:
+            raise ValueError("invalid field registry: " + "; ".join(errors))

@@ -1,0 +1,100 @@
+{
+  "document_id": "pod-10-v1",
+  "doc_type": "POD",
+  "prompt_version": "extract_truth_v1",
+  "llm_model": "fake-local",
+  "fields": {
+    "nomor_berita_acara": {
+      "status": "present",
+      "value_text": null,
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "hari": {
+      "status": "present",
+      "value_text": null,
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "tanggal": {
+      "status": "present",
+      "value_text": "31-07-2020",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_nama": {
+      "status": "present",
+      "value_text": "Bambang Catur M",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_jabatan": {
+      "status": "present",
+      "value_text": "Resident Engineer",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_alamat": {
+      "status": "present",
+      "value_text": null,
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_nama": {
+      "status": "present",
+      "value_text": "Dedi Arisman Saputra",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_jabatan": {
+      "status": "present",
+      "value_text": "Site Manager",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_alamat": {
+      "status": "present",
+      "value_text": null,
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    }
+  },
+  "tables": [],
+  "m_pipeline_version": ""
+}

@@ -1,0 +1,3205 @@
+{
+  "document_id": "pod-10-v2",
+  "source_file": "PoD_10_variasi_2.pdf",
+  "source_sha256": "1134c61911b0377c02f6853acbf7f7e14f2c7cea05c24424d5a56186328398cb",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.9209,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.9209,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1437,
+      "SURAT_JALAN": 0.1414,
+      "POD": 0.4467,
+      "RATE_AGREEMENT": 0.0642,
+      "UNKNOWN": 0.204
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.978,
+      "quality": {
+        "blur_score": 2482.02,
+        "brightness": 246.22,
+        "contrast": 43.33,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": false
+      },
+      "page_image": {
+        "path": "out/pages/pod-10-v2/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "71557be95f1be13ae38778769020e67757a3d378cbfb95da9e2acc7fa93b6374"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "BERITA ACARA SERAH TERIMA MATERIAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.288908,
+            0.05958,
+            0.711092,
+            0.079208
+          ],
+          "tokens": [
+            {
+              "text": "BERITA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.288908,
+                0.05958,
+                0.363939,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "ACARA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.369543,
+                0.05958,
+                0.442316,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "SERAH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.44792,
+                0.05958,
+                0.518476,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.52408,
+                0.05958,
+                0.601348,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "MATERIAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.606952,
+                0.05958,
+                0.711092,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "PEKERJAAN INSTALL PIPING SYSTEM & TRANSFER PUMP",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.211589,
+            0.083336,
+            0.788411,
+            0.102964
+          ],
+          "tokens": [
+            {
+              "text": "PEKERJAAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.211589,
+                0.083336,
+                0.335908,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "INSTALL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.341512,
+                0.083336,
+                0.426622,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "PIPING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.432226,
+                0.083336,
+                0.500564,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "SYSTEM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.506169,
+                0.083336,
+                0.589061,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.594665,
+                0.083336,
+                0.60922,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "TRANSFER",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.614824,
+                0.083336,
+                0.724568,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "PUMP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.730172,
+                0.083336,
+                0.788411,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "SANGATTA PROCESSING PLANT, PT. KALTIM PRIMA COAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.208807,
+            0.107092,
+            0.791193,
+            0.12672
+          ],
+          "tokens": [
+            {
+              "text": "SANGATTA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.208807,
+                0.107092,
+                0.320789,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "PROCESSING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.326393,
+                0.107092,
+                0.460811,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "PLANT,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.466416,
+                0.107092,
+                0.539209,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.544813,
+                0.107092,
+                0.57618,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "KALTIM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.581784,
+                0.107092,
+                0.657923,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "PRIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.663528,
+                0.107092,
+                0.728479,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "COAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.734083,
+                0.107092,
+                0.791193,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Pada hari ini Selasa tanggal Dua Puluh Lima bulan November tahun dua ribu dua puluh lima (25-11-2025) yang",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.144066,
+            0.90169,
+            0.15966
+          ],
+          "tokens": [
+            {
+              "text": "Pada",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.144066,
+                0.122939,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "hari",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.127375,
+                0.144066,
+                0.153979,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.158416,
+                0.144066,
+                0.174375,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Selasa",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.178811,
+                0.144122,
+                0.229385,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "tanggal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.233822,
+                0.144066,
+                0.286167,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Dua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.290604,
+                0.144122,
+                0.320751,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Puluh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.325187,
+                0.144122,
+                0.369521,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Lima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.373958,
+                0.144122,
+                0.411206,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "bulan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.415643,
+                0.144066,
+                0.454679,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "November",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.459115,
+                0.144122,
+                0.537155,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "tahun",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.541591,
+                0.144066,
+                0.581521,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "dua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.585957,
+                0.144122,
+                0.614332,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "ribu",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.618769,
+                0.144122,
+                0.648915,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "dua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.653352,
+                0.144122,
+                0.681727,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "puluh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.686164,
+                0.144122,
+                0.729604,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "lima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.734041,
+                0.144122,
+                0.765975,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "(25-11-2025)",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.770411,
+                0.144122,
+                0.862654,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.867091,
+                0.144066,
+                0.90169,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "bertanda tangan di bawah ini:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.161289,
+            0.295041,
+            0.176793
+          ],
+          "tokens": [
+            {
+              "text": "bertanda",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.161289,
+                0.148665,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "tangan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.153101,
+                0.161289,
+                0.201904,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "di",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.206341,
+                0.161289,
+                0.218757,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "bawah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.223193,
+                0.161289,
+                0.270208,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "ini:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.274645,
+                0.161289,
+                0.295041,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "1.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.192766,
+            0.089137,
+            0.20827
+          ],
+          "tokens": [
+            {
+              "text": "1.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.192766,
+                0.089137,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Hendra Prasetyo",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.109425,
+            0.192822,
+            0.236251,
+            0.20836
+          ],
+          "tokens": [
+            {
+              "text": "Hendra",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.109425,
+                0.192822,
+                0.164403,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Prasetyo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.16884,
+                0.192822,
+                0.236251,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Selaku Project Manager, dalam hal ini bertindak untuk dan atas nama PT.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.192766,
+            0.866182,
+            0.20836
+          ],
+          "tokens": [
+            {
+              "text": "Selaku",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.192766,
+                0.393396,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Project",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.397833,
+                0.192766,
+                0.447497,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Manager,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.451934,
+                0.192766,
+                0.519345,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.523781,
+                0.192766,
+                0.567238,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "hal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.571674,
+                0.192766,
+                0.592964,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5974,
+                0.192766,
+                0.613359,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "bertindak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.617796,
+                0.192766,
+                0.683435,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "untuk",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.687872,
+                0.192766,
+                0.726907,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.731344,
+                0.192766,
+                0.757964,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "atas",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.7624,
+                0.192766,
+                0.792563,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.796999,
+                0.192766,
+                0.836913,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.84135,
+                0.192822,
+                0.866182,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "KALTIM PRIMA COAL. Selanjutnya disebut sebagai PIHAK PERTAMA.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.209989,
+            0.860724,
+            0.225584
+          ],
+          "tokens": [
+            {
+              "text": "KALTIM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.210045,
+                0.404887,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "PRIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.409324,
+                0.210045,
+                0.460743,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "COAL.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.46518,
+                0.209989,
+                0.514828,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Selanjutnya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.519265,
+                0.209989,
+                0.602651,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "disebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.607087,
+                0.209989,
+                0.658539,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.662976,
+                0.209989,
+                0.718864,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "PIHAK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.723301,
+                0.210045,
+                0.772949,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "PERTAMA.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.777386,
+                0.209989,
+                0.860724,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "2.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.236714,
+            0.089137,
+            0.252219
+          ],
+          "tokens": [
+            {
+              "text": "2.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.236714,
+                0.089137,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Agus Kurniawan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.109425,
+            0.236771,
+            0.235341,
+            0.252309
+          ],
+          "tokens": [
+            {
+              "text": "Agus",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.109425,
+                0.236771,
+                0.149322,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Kurniawan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.153759,
+                0.236771,
+                0.235341,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Selaku Lead Mechanical Engineer, dalam hal ini bertindak sebagai kontraktor PT.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.236714,
+            0.920283,
+            0.252309
+          ],
+          "tokens": [
+            {
+              "text": "Selaku",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.236714,
+                0.393396,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Lead",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.397833,
+                0.236714,
+                0.433326,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Mechanical",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.437762,
+                0.236714,
+                0.518467,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Engineer,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.522904,
+                0.236714,
+                0.591208,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.595645,
+                0.236714,
+                0.639101,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "hal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.643538,
+                0.236714,
+                0.664827,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.669264,
+                0.236714,
+                0.685223,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "bertindak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.689659,
+                0.236714,
+                0.755299,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.759735,
+                0.236714,
+                0.815624,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "kontraktor",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.82006,
+                0.236714,
+                0.891014,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.895451,
+                0.236771,
+                0.920283,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "REKAYASA INDUSTRI. Selanjutnya disebut sebagai PIHAK KEDUA.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.253938,
+            0.842115,
+            0.269532
+          ],
+          "tokens": [
+            {
+              "text": "REKAYASA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.253994,
+                0.434156,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "INDUSTRI.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.438592,
+                0.253938,
+                0.518387,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Selanjutnya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.522824,
+                0.253938,
+                0.60621,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "disebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.610646,
+                0.253938,
+                0.662098,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.666535,
+                0.253938,
+                0.722423,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "PIHAK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.72686,
+                0.253994,
+                0.776508,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "KEDUA.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780945,
+                0.253938,
+                0.842115,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Pihak Kedua menyerahkan barang kepada pihak pertama untuk Pekerjaan Install Piping System & Transfer Pump,",
+          "confidence": 0.973,
+          "bbox_norm": [
+            0.085675,
+            0.290166,
+            0.89553,
+            0.30567
+          ],
+          "tokens": [
+            {
+              "text": "Pihak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.290166,
+                0.125588,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Kedua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.130025,
+                0.290166,
+                0.176162,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "menyerahkan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.180599,
+                0.290166,
+                0.277278,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.281715,
+                0.290166,
+                0.331395,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "kepada",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.335832,
+                0.290166,
+                0.388177,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "pihak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.392614,
+                0.290166,
+                0.430756,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "pertama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.435193,
+                0.290166,
+                0.49373,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "untuk",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.498167,
+                0.290166,
+                0.537202,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Pekerjaan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.541639,
+                0.290166,
+                0.613487,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Install",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.617923,
+                0.290166,
+                0.659608,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Piping",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.664045,
+                0.290166,
+                0.708395,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "System",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.712831,
+                0.290166,
+                0.766039,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.770475,
+                0.290166,
+                0.78112,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Transfer",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.785556,
+                0.290166,
+                0.844972,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Pump,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.849408,
+                0.290166,
+                0.89553,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Sangatta Processing Plant, PT. Kaltim Prima Coal. Dengan data sebagai berikut:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.307389,
+            0.656911,
+            0.322893
+          ],
+          "tokens": [
+            {
+              "text": "Sangatta",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.307389,
+                0.149558,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Processing",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.153995,
+                0.307389,
+                0.232928,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Plant,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.237365,
+                0.307389,
+                0.278172,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.282609,
+                0.307389,
+                0.307441,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Kaltim",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.311877,
+                0.307389,
+                0.356212,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Prima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.360648,
+                0.307389,
+                0.402317,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Coal.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.406754,
+                0.307389,
+                0.444002,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Dengan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.448439,
+                0.307389,
+                0.504327,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "data",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.508764,
+                0.307389,
+                0.53982,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.544256,
+                0.307389,
+                0.600145,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "berikut:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.604581,
+                0.307389,
+                0.656911,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.095148,
+            0.341339,
+            0.115302,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095148,
+                0.341339,
+                0.115302,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Material",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.391638,
+            0.341339,
+            0.448773,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "Material",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.391638,
+                0.341339,
+                0.448773,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Jumlah",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.788514,
+            0.341339,
+            0.841446,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "Jumlah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.788514,
+                0.341339,
+                0.841446,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.365086,
+            0.111179,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "1.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.365086,
+                0.111179,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Centrifugal Transfer Pump 15 HP KSB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.365086,
+            0.386652,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "Centrifugal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.365086,
+                0.212062,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Transfer",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.216032,
+                0.365086,
+                0.269193,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Pump",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.273162,
+                0.365086,
+                0.310459,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "15",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.314429,
+                0.365086,
+                0.330307,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "HP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.334277,
+                0.365086,
+                0.35411,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "KSB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.35808,
+                0.365086,
+                0.386652,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "2 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.365086,
+            0.832444,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.365086,
+                0.805456,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.365086,
+                0.832444,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "2.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.388249,
+            0.111179,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "2.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.388249,
+                0.111179,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Gate Valve 4\" Flange ANSI 150",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.388249,
+            0.343344,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "Gate",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.388249,
+                0.17398,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Valve",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.177949,
+                0.388249,
+                0.213661,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "4\"",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.217631,
+                0.388249,
+                0.230639,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Flange",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.234609,
+                0.388249,
+                0.27826,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "ANSI",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.282229,
+                0.388249,
+                0.315557,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "150",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.319526,
+                0.388249,
+                0.343344,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "4 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.388249,
+            0.832444,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "4",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.388249,
+                0.805456,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.388249,
+                0.832444,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "3.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.411411,
+            0.111179,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "3.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.411411,
+                0.111179,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Check Valve 4\" Dual Plate Swung",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.411411,
+            0.357609,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "Check",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.411411,
+                0.183489,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Valve",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.187459,
+                0.411411,
+                0.223171,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "4\"",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.227141,
+                0.411411,
+                0.240149,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Dual",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.244119,
+                0.411411,
+                0.273476,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Plate",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.277446,
+                0.411411,
+                0.309988,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Swung",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.313958,
+                0.411411,
+                0.357609,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "2 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.411411,
+            0.832444,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.411411,
+                0.805456,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.411411,
+                0.832444,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "4.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.434573,
+            0.111179,
+            0.448445
+          ],
+          "tokens": [
+            {
+              "text": "4.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.434573,
+                0.111179,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Digital Flow Meter Endress+Hauser 3\"",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.434573,
+            0.384953,
+            0.448445
+          ],
+          "tokens": [
+            {
+              "text": "Digital",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.434573,
+                0.18269,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Flow",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.186659,
+                0.434573,
+                0.216803,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Meter",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.220772,
+                0.434573,
+                0.25727,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Endress+Hauser",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.261239,
+                0.434573,
+                0.367975,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "3\"",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.371945,
+                0.434573,
+                0.384953,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "1 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.434573,
+            0.832444,
+            0.448445
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.434573,
+                0.805456,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.434573,
+                0.832444,
+                0.448445
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Demikian berita acara serah terima barang ini di perbuat oleh kedua belah pihak, adapun barang-barang tersebut",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.470712,
+            0.885795,
+            0.486216
+          ],
+          "tokens": [
+            {
+              "text": "Demikian",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.470712,
+                0.152176,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "berita",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.156612,
+                0.470712,
+                0.196526,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "acara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200962,
+                0.470712,
+                0.240876,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "serah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.245312,
+                0.470712,
+                0.285226,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "terima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.289662,
+                0.470712,
+                0.333997,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.338433,
+                0.470712,
+                0.388113,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.39255,
+                0.470712,
+                0.408509,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "di",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.412946,
+                0.470712,
+                0.425362,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "perbuat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.429798,
+                0.470712,
+                0.483915,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.488352,
+                0.470712,
+                0.518514,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "kedua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.522951,
+                0.470712,
+                0.566423,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "belah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.57086,
+                0.470712,
+                0.609896,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "pihak,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.614332,
+                0.470712,
+                0.656911,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "adapun",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.661348,
+                0.470712,
+                0.714587,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "barang-barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.719024,
+                0.470712,
+                0.823699,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "tersebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.828135,
+                0.470712,
+                0.885795,
+                0.486216
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "dalam keadaan baik dan cukup.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.487935,
+            0.311,
+            0.503439
+          ],
+          "tokens": [
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.487935,
+                0.129131,
+                0.503439
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "keadaan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.133568,
+                0.487935,
+                0.194786,
+                0.503439
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "baik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199223,
+                0.487935,
+                0.228492,
+                0.503439
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232928,
+                0.487935,
+                0.259548,
+                0.503439
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "cukup.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263984,
+                0.487935,
+                0.311,
+                0.503439
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "Diketahui Oleh :",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.161852,
+            0.538417,
+            0.275384,
+            0.553921
+          ],
+          "tokens": [
+            {
+              "text": "Diketahui",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.161852,
+                0.538417,
+                0.228369,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232805,
+                0.538417,
+                0.266511,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.270947,
+                0.538417,
+                0.275384,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "PT. KALTIM PRIMA COAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.121092,
+            0.555696,
+            0.316143,
+            0.571235
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.121092,
+                0.555696,
+                0.145925,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "KALTIM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.150361,
+                0.555696,
+                0.210638,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "PRIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.215075,
+                0.555696,
+                0.266495,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "COAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.270931,
+                0.555696,
+                0.316143,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Diterima Oleh :",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.446793,
+            0.538417,
+            0.553207,
+            0.553921
+          ],
+          "tokens": [
+            {
+              "text": "Diterima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.446793,
+                0.538417,
+                0.506192,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.510629,
+                0.538417,
+                0.544334,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.548771,
+                0.538417,
+                0.553207,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "PT. KALTIM PRIMA COAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.402475,
+            0.555696,
+            0.597525,
+            0.571235
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.402475,
+                0.555696,
+                0.427307,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "KALTIM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.431743,
+                0.555696,
+                0.492021,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "PRIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.496457,
+                0.555696,
+                0.547877,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "COAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.552314,
+                0.555696,
+                0.597525,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Diajukan Oleh:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.729053,
+            0.538417,
+            0.833712,
+            0.553921
+          ],
+          "tokens": [
+            {
+              "text": "Diajukan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.729053,
+                0.538417,
+                0.791133,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Oleh:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.79557,
+                0.538417,
+                0.833712,
+                0.553921
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "PT. REKAYASA INDUSTRI",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.682077,
+            0.555696,
+            0.880687,
+            0.571235
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.682077,
+                0.555696,
+                0.70691,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "REKAYASA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.711346,
+                0.555696,
+                0.800892,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "INDUSTRI",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.805329,
+                0.555696,
+                0.880687,
+                0.571235
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "BAMBANG SUDARMONO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.121547,
+            0.652502,
+            0.315688,
+            0.668041
+          ],
+          "tokens": [
+            {
+              "text": "BAMBANG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.121547,
+                0.652502,
+                0.204869,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "SUDARMONO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.209306,
+                0.652502,
+                0.315688,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "VP PLANT ENG",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.160527,
+            0.669669,
+            0.276708,
+            0.685173
+          ],
+          "tokens": [
+            {
+              "text": "VP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.160527,
+                0.669669,
+                0.181816,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "PLANT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.186253,
+                0.669669,
+                0.237689,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "ENG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.242125,
+                0.669669,
+                0.276708,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "Hendra Prasetyo",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.436587,
+            0.652502,
+            0.563413,
+            0.668041
+          ],
+          "tokens": [
+            {
+              "text": "Hendra",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.436587,
+                0.652502,
+                0.491566,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "Prasetyo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.496002,
+                0.652502,
+                0.563413,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "PM SPP",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.469846,
+            0.669669,
+            0.530155,
+            0.685173
+          ],
+          "tokens": [
+            {
+              "text": "PM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.469846,
+                0.669669,
+                0.493784,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "SPP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.498221,
+                0.669669,
+                0.530155,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "Agus Kurniawan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.718424,
+            0.652502,
+            0.844341,
+            0.668041
+          ],
+          "tokens": [
+            {
+              "text": "Agus",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.718424,
+                0.652502,
+                0.758322,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "Kurniawan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.762758,
+                0.652502,
+                0.844341,
+                0.668041
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "LEAD MECH",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.73483,
+            0.669669,
+            0.827935,
+            0.685173
+          ],
+          "tokens": [
+            {
+              "text": "LEAD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.73483,
+                0.669669,
+                0.776515,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "MECH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780951,
+                0.669669,
+                0.827935,
+                0.685173
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.085675,
+            0.05958,
+            0.90169,
+            0.176793
+          ],
+          "confidence": 0.95,
+          "text_snippet": "BERITA ACARA SERAH TERIMA MATERIAL PEKERJAAN INSTALL PIPING SYSTEM & TRANSFER PUMP SANGATTA PROCESSI"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.075827,
+            0.144066,
+            0.920283,
+            0.378959
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Pada hari ini Selasa tanggal Dua Puluh Lima bulan November tahun dua ribu dua puluh lima (25-11-2025"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.085675,
+            0.341339,
+            0.885795,
+            0.685173
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Jumlah 1. Centrifugal Transfer Pump 15 HP KSB 2 unit 2. Gate Valve 4\" Flange ANSI 150 4 unit 3. Chec"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.085675,
+            0.365086,
+            0.885795,
+            0.685173
+          ],
+          "headers": [
+            "Centrifugal",
+            "Transfer",
+            "Pump",
+            "15",
+            "HP",
+            "KSB"
+          ],
+          "rows": [
+            [
+              "Gate",
+              "Valve",
+              "4\"",
+              "Flange",
+              "ANSI",
+              "150"
+            ],
+            [
+              "Check",
+              "Valve",
+              "4\"",
+              "Dual",
+              "Plate",
+              "Swung"
+            ],
+            [
+              "Digital",
+              "Flow",
+              "Meter",
+              "Endress+Hauser",
+              "3\""
+            ],
+            [
+              "Demikian",
+              "berita",
+              "acara",
+              "serah",
+              "terima",
+              "barang",
+              "ini",
+              "di",
+              "perbuat",
+              "oleh",
+              "kedua",
+              "belah",
+              "pihak,",
+              "adapun",
+              "barang-barang",
+              "tersebut"
+            ],
+            [
+              "dalam",
+              "keadaan",
+              "baik",
+              "dan",
+              "cukup."
+            ],
+            [
+              "Diketahui",
+              "Oleh",
+              ":"
+            ],
+            [
+              "PT.",
+              "KALTIM",
+              "PRIMA",
+              "COAL"
+            ],
+            [
+              "Diterima",
+              "Oleh",
+              ":"
+            ],
+            [
+              "PT.",
+              "KALTIM",
+              "PRIMA",
+              "COAL"
+            ],
+            [
+              "PT.",
+              "REKAYASA",
+              "INDUSTRI"
+            ],
+            [
+              "VP",
+              "PLANT",
+              "ENG"
+            ]
+          ],
+          "row_count": 11,
+          "col_count": 6,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.9209,
+        "probabilities": {
+          "INVOICE": 0.1437,
+          "SURAT_JALAN": 0.1414,
+          "POD": 0.4467,
+          "RATE_AGREEMENT": 0.0642,
+          "UNKNOWN": 0.204
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 395.9,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

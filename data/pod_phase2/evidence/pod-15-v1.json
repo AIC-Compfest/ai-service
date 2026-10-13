@@ -1,0 +1,3279 @@
+{
+  "document_id": "pod-15-v1",
+  "source_file": "PoD_15_variasi_1.pdf",
+  "source_sha256": "e24e130cebfaee5430c827716ad803b9a00a5c4d951114d9c15095aacf660129",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.8871,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.8871,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.2044,
+      "SURAT_JALAN": 0.2243,
+      "POD": 0.3521,
+      "RATE_AGREEMENT": 0.0883,
+      "UNKNOWN": 0.1309
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.978,
+      "quality": {
+        "blur_score": 1299.74,
+        "brightness": 250.27,
+        "contrast": 29.56,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-15-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "483f4790a6f776f22857b6235c6af52d2dc2b8749706946a15a1b6172f760cb9"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "AM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.048391,
+            0.117576,
+            0.077832
+          ],
+          "tokens": [
+            {
+              "text": "AM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.048391,
+                0.117576,
+                0.077832
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "AM TRANSPORTATION LOGISTICS INC.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.075188,
+            0.391617,
+            0.091544
+          ],
+          "tokens": [
+            {
+              "text": "AM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.075188,
+                0.096678,
+                0.091544
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "TRANSPORTATION",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.101348,
+                0.075188,
+                0.258133,
+                0.091544
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "LOGISTICS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.262803,
+                0.075188,
+                0.353349,
+                0.091544
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "INC.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.358019,
+                0.075188,
+                0.391617,
+                0.091544
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Customer Name: ed ramos",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.102537,
+            0.251414,
+            0.117311
+          ],
+          "tokens": [
+            {
+              "text": "Customer",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.102591,
+                0.133788,
+                0.117311
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "Name:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.137991,
+                0.102591,
+                0.184195,
+                0.117311
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "ed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.188398,
+                0.102537,
+                0.205211,
+                0.117226
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "ramos",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.209414,
+                0.102537,
+                0.251414,
+                0.117226
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Address: 13971 mulberry dr, whittier, CA 90605",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.117979,
+            0.387561,
+            0.132753
+          ],
+          "tokens": [
+            {
+              "text": "Address:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.118032,
+                0.128753,
+                0.132753
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "13971",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.132957,
+                0.117979,
+                0.174988,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "mulberry",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.179191,
+                0.117979,
+                0.237989,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "dr,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.242192,
+                0.117979,
+                0.259836,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "whittier,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.264039,
+                0.117979,
+                0.316124,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.320327,
+                0.117979,
+                0.341327,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "90605",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34553,
+                0.117979,
+                0.387561,
+                0.132667
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Email: dssolr@yahoo.com",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.13342,
+            0.242418,
+            0.148194
+          ],
+          "tokens": [
+            {
+              "text": "Email:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.133474,
+                0.1086,
+                0.148194
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "dssolr@yahoo.com",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.112803,
+                0.13342,
+                0.242418,
+                0.148108
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Phone: (562) 693-1479",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.148862,
+            0.222038,
+            0.163635
+          ],
+          "tokens": [
+            {
+              "text": "Phone:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.148915,
+                0.114466,
+                0.163635
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "(562)",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.118669,
+                0.148862,
+                0.153957,
+                0.16355
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "693-1479",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.15816,
+                0.148862,
+                0.222038,
+                0.16355
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Order Details: CURBSIDE DELIVERY",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.179744,
+            0.324515,
+            0.194518
+          ],
+          "tokens": [
+            {
+              "text": "Order",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.179798,
+                0.104397,
+                0.194518
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Details:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1086,
+                0.179798,
+                0.16321,
+                0.194518
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "CURBSIDE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.167413,
+                0.179744,
+                0.245533,
+                0.194433
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "DELIVERY",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.249736,
+                0.179744,
+                0.324515,
+                0.194433
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Proof of Delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.102424,
+            0.647868,
+            0.120416
+          ],
+          "tokens": [
+            {
+              "text": "Proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.102424,
+                0.548248,
+                0.120416
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.553385,
+                0.102424,
+                0.570829,
+                0.120416
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.575967,
+                0.102424,
+                0.647868,
+                0.120416
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Date of Service: December 11, 2019",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.135796,
+            0.751248,
+            0.15057
+          ],
+          "tokens": [
+            {
+              "text": "Date",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.135849,
+                0.532763,
+                0.15057
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.536966,
+                0.135849,
+                0.551238,
+                0.15057
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Service:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.555442,
+                0.135849,
+                0.61427,
+                0.15057
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "December",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.618473,
+                0.135796,
+                0.688202,
+                0.150484
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "11,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.692405,
+                0.135796,
+                0.71342,
+                0.150484
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.717624,
+                0.135796,
+                0.751248,
+                0.150484
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Tracking #: 2453292",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.5,
+            0.151237,
+            0.643707,
+            0.166011
+          ],
+          "tokens": [
+            {
+              "text": "Tracking",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.151291,
+                0.563016,
+                0.166011
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "#:",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.567219,
+                0.151291,
+                0.58066,
+                0.166011
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "2453292",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.584863,
+                0.151237,
+                0.643707,
+                0.165926
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "BOL #: -",
+          "confidence": 0.913,
+          "bbox_norm": [
+            0.5,
+            0.166679,
+            0.558798,
+            0.181452
+          ],
+          "tokens": [
+            {
+              "text": "BOL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.166732,
+                0.531916,
+                0.181452
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "#:",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.536119,
+                0.166732,
+                0.54956,
+                0.181452
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "-",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.553763,
+                0.166679,
+                0.558798,
+                0.181367
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Service Level: CURBSIDE OR IN GARAGE DELIVERY",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.18212,
+            0.878097,
+            0.196894
+          ],
+          "tokens": [
+            {
+              "text": "Service",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.182173,
+                0.553794,
+                0.196894
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Level:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.557997,
+                0.182173,
+                0.601691,
+                0.196894
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "CURBSIDE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.605894,
+                0.18212,
+                0.684014,
+                0.196808
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "OR",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.688217,
+                0.18212,
+                0.710896,
+                0.196808
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "IN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.715099,
+                0.18212,
+                0.730218,
+                0.196808
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "GARAGE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.734421,
+                0.18212,
+                0.799115,
+                0.196808
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "DELIVERY",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.803318,
+                0.18212,
+                0.878097,
+                0.196808
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Supplier: NEW YORK FURNITURE OUTLET",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.197561,
+            0.807446,
+            0.212335
+          ],
+          "tokens": [
+            {
+              "text": "Supplier:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.197615,
+                0.565526,
+                0.212335
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "NEW",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.569729,
+                0.197561,
+                0.605002,
+                0.21225
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "YORK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.609205,
+                0.197561,
+                0.652052,
+                0.21225
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "FURNITURE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.656255,
+                0.197561,
+                0.743598,
+                0.21225
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "OUTLET",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.747801,
+                0.197561,
+                0.807446,
+                0.21225
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Carrier: White Glove Delivery of CA-M.C.T.B.D.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.213003,
+            0.821764,
+            0.227777
+          ],
+          "tokens": [
+            {
+              "text": "Carrier:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.213056,
+                0.55461,
+                0.227777
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "White",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.558813,
+                0.213003,
+                0.597457,
+                0.227691
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Glove",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.601661,
+                0.213003,
+                0.641151,
+                0.227691
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.645355,
+                0.213003,
+                0.699949,
+                0.227691
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.704153,
+                0.213003,
+                0.716762,
+                0.227691
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "CA-M.C.T.B.D.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.720965,
+                0.213003,
+                0.821764,
+                0.227691
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Sku",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.066587,
+            0.248732,
+            0.092775,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Sku",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.066587,
+                0.248732,
+                0.092775,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Description",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.200979,
+            0.248732,
+            0.279528,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Description",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200979,
+                0.248732,
+                0.279528,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Unit Price",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.581176,
+            0.248732,
+            0.647831,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.581176,
+                0.248732,
+                0.608934,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Price",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.612904,
+                0.248732,
+                0.647831,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Qty",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.672887,
+            0.248732,
+            0.69669,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Qty",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.672887,
+                0.248732,
+                0.69669,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.736641,
+            0.248732,
+            0.800925,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.736641,
+                0.248732,
+                0.800925,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Extended",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.869142,
+            0.248732,
+            0.933413,
+            0.262635
+          ],
+          "tokens": [
+            {
+              "text": "Extended",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.869142,
+                0.248732,
+                0.933413,
+                0.262635
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "8501-WHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.066587,
+            0.271799,
+            0.139673,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "8501-WHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.066587,
+                0.271799,
+                0.139673,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "[8501-WHT] sofa",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.200979,
+            0.271799,
+            0.315249,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "[8501-WHT]",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200979,
+                0.271799,
+                0.282471,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "sofa",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.286674,
+                0.271799,
+                0.315249,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "0.00",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.618409,
+            0.271799,
+            0.647831,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "0.00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.618409,
+                0.271799,
+                0.647831,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.680585,
+            0.271799,
+            0.688991,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.680585,
+                0.271799,
+                0.688991,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.76458,
+            0.271799,
+            0.772986,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.76458,
+                0.271799,
+                0.772986,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "0.00",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.903991,
+            0.271799,
+            0.933413,
+            0.286488
+          ],
+          "tokens": [
+            {
+              "text": "0.00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.903991,
+                0.271799,
+                0.933413,
+                0.286488
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "8501-WHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.066587,
+            0.296743,
+            0.139673,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "8501-WHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.066587,
+                0.296743,
+                0.139673,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "[8501-WHT] loveseat",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.200979,
+            0.296743,
+            0.342977,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "[8501-WHT]",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200979,
+                0.296743,
+                0.282471,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "loveseat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.286674,
+                0.296743,
+                0.342977,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "0.00",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.618409,
+            0.296743,
+            0.647831,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "0.00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.618409,
+                0.296743,
+                0.647831,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.680585,
+            0.296743,
+            0.688991,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.680585,
+                0.296743,
+                0.688991,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.76458,
+            0.296743,
+            0.772986,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.76458,
+                0.296743,
+                0.772986,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "0.00",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.903991,
+            0.296743,
+            0.933413,
+            0.311432
+          ],
+          "tokens": [
+            {
+              "text": "0.00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.903991,
+                0.296743,
+                0.933413,
+                0.311432
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.680585,
+            0.32174,
+            0.688991,
+            0.336461
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.680585,
+                0.32174,
+                0.688991,
+                0.336461
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.76458,
+            0.32174,
+            0.772986,
+            0.336461
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.76458,
+                0.32174,
+                0.772986,
+                0.336461
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "By signing below, consignee hereby acknowledges receipt of shipment in good and satisfactory condition",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.35983,
+            0.647969,
+            0.372071
+          ],
+          "tokens": [
+            {
+              "text": "By",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.35983,
+                0.077931,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "signing",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.081433,
+                0.35983,
+                0.121348,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "below,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.12485,
+                0.35983,
+                0.161262,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "consignee",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.164765,
+                0.35983,
+                0.222192,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "hereby",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.225694,
+                0.35983,
+                0.26421,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "acknowledges",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.267713,
+                0.35983,
+                0.347541,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "receipt",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.351044,
+                0.35983,
+                0.388854,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.392357,
+                0.35983,
+                0.402864,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.406367,
+                0.35983,
+                0.457482,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "in",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.460984,
+                0.35983,
+                0.470787,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "good",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.474289,
+                0.35983,
+                0.50231,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.505812,
+                0.35983,
+                0.526828,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "satisfactory",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.530331,
+                0.35983,
+                0.594045,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "condition",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.597547,
+                0.35983,
+                0.647969,
+                0.372071
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "unless noted in the Inspection Questionnaire provided to consignee at the time of delivery. Consignee further",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.372302,
+            0.66799,
+            0.384543
+          ],
+          "tokens": [
+            {
+              "text": "unless",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.372302,
+                0.099639,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "noted",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.103075,
+                0.372302,
+                0.134598,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "in",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138033,
+                0.372302,
+                0.147835,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "the",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.151271,
+                0.372302,
+                0.168784,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Inspection",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.172219,
+                0.372302,
+                0.229646,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Questionnaire",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.233082,
+                0.372302,
+                0.311512,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "provided",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.314947,
+                0.372302,
+                0.363265,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "to",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.3667,
+                0.372302,
+                0.377208,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "consignee",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.380644,
+                0.372302,
+                0.438071,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.441506,
+                0.372302,
+                0.452014,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "the",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.455449,
+                0.372302,
+                0.472962,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "time",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.476398,
+                0.372302,
+                0.500197,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.503633,
+                0.372302,
+                0.514141,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "delivery.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.517576,
+                0.372302,
+                0.564483,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Consignee",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.567918,
+                0.372302,
+                0.628143,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "further",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.631578,
+                0.372302,
+                0.66799,
+                0.384543
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "acknowledges that no damage was caused to its property as a result of this delivery and does hereby",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.384774,
+            0.626967,
+            0.397015
+          ],
+          "tokens": [
+            {
+              "text": "acknowledges",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.384774,
+                0.143056,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "that",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.146559,
+                0.384774,
+                0.167574,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "no",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.171077,
+                0.384774,
+                0.185087,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "damage",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.18859,
+                0.384774,
+                0.234111,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "was",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.237613,
+                0.384774,
+                0.260015,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "caused",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263517,
+                0.384774,
+                0.304137,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "to",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.30764,
+                0.384774,
+                0.318147,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "its",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.32165,
+                0.384774,
+                0.334249,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "property",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.337752,
+                0.384774,
+                0.383966,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "as",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.387468,
+                0.384774,
+                0.400773,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "a",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404275,
+                0.384774,
+                0.411281,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "result",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.414783,
+                0.384774,
+                0.445588,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.449091,
+                0.384774,
+                0.459599,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "this",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.463101,
+                0.384774,
+                0.482706,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.486208,
+                0.384774,
+                0.529612,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.533115,
+                0.384774,
+                0.554131,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "does",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.557633,
+                0.384774,
+                0.584948,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "hereby",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.588451,
+                0.384774,
+                0.626967,
+                0.397015
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "release Shipper, Carrier and its agents from any claims and liability arising the shipment provided herein. All",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.397246,
+            0.664008,
+            0.409486
+          ],
+          "tokens": [
+            {
+              "text": "release",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.397246,
+                0.10454,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Shipper,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.108043,
+                0.397246,
+                0.154962,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Carrier",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.158465,
+                0.397246,
+                0.196955,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200458,
+                0.397246,
+                0.221474,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "its",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.224976,
+                0.397246,
+                0.237575,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "agents",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.241078,
+                0.397246,
+                0.278901,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "from",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.282403,
+                0.397246,
+                0.307602,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "any",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.311104,
+                0.397246,
+                0.331414,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "claims",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.334917,
+                0.397246,
+                0.37061,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.374113,
+                0.397246,
+                0.395128,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "liability",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.398631,
+                0.397246,
+                0.436429,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "arising",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.439931,
+                0.397246,
+                0.477036,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "the",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.480538,
+                0.397246,
+                0.498051,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.501554,
+                0.397246,
+                0.552669,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "provided",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.556171,
+                0.397246,
+                0.60449,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "herein.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.607992,
+                0.397246,
+                0.646508,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "All",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.650011,
+                0.397246,
+                0.664008,
+                0.409486
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "installations services included herein, if any, are provided by In Home Installations Inc. and are governed by",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.409718,
+            0.66266,
+            0.421958
+          ],
+          "tokens": [
+            {
+              "text": "installations",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.409718,
+                0.129046,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "services",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.132548,
+                0.409718,
+                0.17875,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "included",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.182252,
+                0.409718,
+                0.229172,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "herein,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232674,
+                0.409718,
+                0.27119,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "if",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.274693,
+                0.409718,
+                0.280992,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "any,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.284495,
+                0.409718,
+                0.308307,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "are",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.31181,
+                0.409718,
+                0.330016,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "provided",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.333518,
+                0.409718,
+                0.381836,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.385339,
+                0.409718,
+                0.398644,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "In",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.402146,
+                0.409718,
+                0.412654,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Home",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.416157,
+                0.409718,
+                0.449759,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Installations",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.453261,
+                0.409718,
+                0.519785,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Inc.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.523288,
+                0.409718,
+                0.543597,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5471,
+                0.409718,
+                0.568116,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "are",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.571618,
+                0.409718,
+                0.589824,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "governed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.593327,
+                0.409718,
+                0.645853,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.649355,
+                0.409718,
+                0.66266,
+                0.421958
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "its terms and conditions which are available online at www.inhomeinstallations.com",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.42219,
+            0.526059,
+            0.43443
+          ],
+          "tokens": [
+            {
+              "text": "its",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.42219,
+                0.075827,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "terms",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.079329,
+                0.42219,
+                0.110827,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "and",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.11433,
+                0.42219,
+                0.135345,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "conditions",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138848,
+                0.42219,
+                0.19557,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "which",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199072,
+                0.42219,
+                0.231276,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "are",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.234778,
+                0.42219,
+                0.252984,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "available",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.256487,
+                0.42219,
+                0.306203,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "online",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.309706,
+                0.42219,
+                0.34332,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.346823,
+                0.42219,
+                0.357331,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "www.inhomeinstallations.com",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.360833,
+                0.42219,
+                0.526059,
+                0.43443
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Sub Total: 0.0",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.842641,
+            0.359697,
+            0.936773,
+            0.374385
+          ],
+          "tokens": [
+            {
+              "text": "Sub",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.842641,
+                0.359697,
+                0.869538,
+                0.374385
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Total:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.873741,
+                0.359697,
+                0.911554,
+                0.374385
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "0.0",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.915757,
+                0.359697,
+                0.936773,
+                0.374385
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Delivery Charge: 0.0",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.798977,
+            0.375138,
+            0.936773,
+            0.389827
+          ],
+          "tokens": [
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.798977,
+                0.375138,
+                0.853572,
+                0.389827
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Charge:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.857775,
+                0.375138,
+                0.911554,
+                0.389827
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "0.0",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.915757,
+                0.375138,
+                0.936773,
+                0.389827
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Sales Tax: 0.0",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.840132,
+            0.39058,
+            0.936773,
+            0.405268
+          ],
+          "tokens": [
+            {
+              "text": "Sales",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.840132,
+                0.39058,
+                0.877944,
+                0.405268
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "Tax:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.882147,
+                0.39058,
+                0.911554,
+                0.405268
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "0.0",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.915757,
+                0.39058,
+                0.936773,
+                0.405268
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "Total: 0.0",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.8704,
+            0.406074,
+            0.936773,
+            0.420795
+          ],
+          "tokens": [
+            {
+              "text": "Total:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.8704,
+                0.406074,
+                0.911554,
+                0.420795
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "0.0",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.915757,
+                0.406074,
+                0.936773,
+                0.420795
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Signature: ed ramos",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.458284,
+            0.205211,
+            0.473058
+          ],
+          "tokens": [
+            {
+              "text": "Signature:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.458338,
+                0.137991,
+                0.473058
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "ed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.142194,
+                0.458284,
+                0.159007,
+                0.472973
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "ramos",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.16321,
+                0.458284,
+                0.205211,
+                0.472973
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Date: Dec 11, 2019 03:43 PM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.473726,
+            0.264069,
+            0.4885
+          ],
+          "tokens": [
+            {
+              "text": "Date:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.473779,
+                0.101025,
+                0.4885
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "Dec",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.105228,
+                0.473726,
+                0.13211,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "11,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.136313,
+                0.473726,
+                0.157328,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.161532,
+                0.473726,
+                0.195156,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "03:43",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199359,
+                0.473726,
+                0.237187,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "PM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.24139,
+                0.473726,
+                0.264069,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "Drivers:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.567196,
+            0.458338,
+            0.624331,
+            0.473058
+          ],
+          "tokens": [
+            {
+              "text": "Drivers:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.567196,
+                0.458338,
+                0.624331,
+                0.473058
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Hugo Gonzales",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.567196,
+            0.473726,
+            0.671396,
+            0.488414
+          ],
+          "tokens": [
+            {
+              "text": "Hugo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.567196,
+                0.473726,
+                0.60333,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "Gonzales",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.607533,
+                0.473726,
+                0.671396,
+                0.488414
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "Powered by Dispatch Track",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.507204,
+            0.214324,
+            0.518462
+          ],
+          "tokens": [
+            {
+              "text": "Powered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.507204,
+                0.116958,
+                0.518462
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.120227,
+                0.507204,
+                0.132644,
+                0.518462
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "Dispatch",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.135914,
+                0.507204,
+                0.181657,
+                0.518462
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "Track",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.184926,
+                0.507204,
+                0.214324,
+                0.518462
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.063228,
+            0.048391,
+            0.751248,
+            0.194518
+          ],
+          "confidence": 0.95,
+          "text_snippet": "AM AM TRANSPORTATION LOGISTICS INC. Customer Name: ed ramos Address: 13971 mulberry dr, whittier, CA"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.063228,
+            0.135796,
+            0.936773,
+            0.4885
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Order Details: CURBSIDE DELIVERY Date of Service: December 11, 2019 Tracking #: 2453292 BOL #: - Ser"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.063228,
+            0.248732,
+            0.936773,
+            0.518462
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Description Qty By signing below, consignee hereby acknowledges receipt of shipment in good and sati"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.063228,
+            0.359697,
+            0.936773,
+            0.518462
+          ],
+          "headers": [
+            "By",
+            "signing",
+            "below,",
+            "consignee",
+            "hereby",
+            "acknowledges",
+            "receipt",
+            "of",
+            "shipment",
+            "in",
+            "good",
+            "and",
+            "satisfactory",
+            "condition"
+          ],
+          "rows": [
+            [
+              "unless",
+              "noted",
+              "in",
+              "the",
+              "Inspection",
+              "Questionnaire",
+              "provided",
+              "to",
+              "consignee",
+              "at",
+              "the",
+              "time",
+              "of",
+              "delivery.",
+              "Consignee",
+              "further"
+            ],
+            [
+              "acknowledges",
+              "that",
+              "no",
+              "damage",
+              "was",
+              "caused",
+              "to",
+              "its",
+              "property",
+              "as",
+              "a",
+              "result",
+              "of",
+              "this",
+              "delivery",
+              "and",
+              "does",
+              "hereby"
+            ],
+            [
+              "release",
+              "Shipper,",
+              "Carrier",
+              "and",
+              "its",
+              "agents",
+              "from",
+              "any",
+              "claims",
+              "and",
+              "liability",
+              "arising",
+              "the",
+              "shipment",
+              "provided",
+              "herein.",
+              "All"
+            ],
+            [
+              "installations",
+              "services",
+              "included",
+              "herein,",
+              "if",
+              "any,",
+              "are",
+              "provided",
+              "by",
+              "In",
+              "Home",
+              "Installations",
+              "Inc.",
+              "and",
+              "are",
+              "governed",
+              "by"
+            ],
+            [
+              "its",
+              "terms",
+              "and",
+              "conditions",
+              "which",
+              "are",
+              "available",
+              "online",
+              "at",
+              "www.inhomeinstallations.com"
+            ],
+            [
+              "Sub",
+              "Total:",
+              "0.0"
+            ],
+            [
+              "Delivery",
+              "Charge:",
+              "0.0"
+            ],
+            [
+              "Sales",
+              "Tax:",
+              "0.0"
+            ],
+            [
+              "Signature:",
+              "ed",
+              "ramos"
+            ],
+            [
+              "Date:",
+              "Dec",
+              "11,",
+              "2019",
+              "03:43",
+              "PM"
+            ],
+            [
+              "Powered",
+              "by",
+              "Dispatch",
+              "Track"
+            ]
+          ],
+          "row_count": 11,
+          "col_count": 14,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.8871,
+        "probabilities": {
+          "INVOICE": 0.2044,
+          "SURAT_JALAN": 0.2243,
+          "POD": 0.3521,
+          "RATE_AGREEMENT": 0.0883,
+          "UNKNOWN": 0.1309
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 384.49,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

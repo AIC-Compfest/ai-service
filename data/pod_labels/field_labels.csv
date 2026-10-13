@@ -1,0 +1,325 @@
+label_version,document_id,doc_type,template_group,is_base,field,status,review_state,label_source,confidence,value_text,value_norm,page,positive_candidate_ids,closest_candidate_id,grounding_method,grounding_score,transfer_score,transfer_margin,anchor_text,notes,llm_model,prompt_version,reviewer,reviewed_at,m_pipeline_version
+1,pod-1-v1,POD,pod-1-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Senin,MONDAY,,,439436452639e1b6,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,nomor_berita_acara,missed_by_generator,auto_accepted,llm_base,0.0,042/BAST-PROJECT/XI/2025,042bastprojectxi2025,,,87cce9ab5fa02282,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_kedua_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Gatot Subroto No. 12, Jakarta Pusat",jl gatot subroto no 12 jakarta pusat,,,7038e01e6cbea77b,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Direktur Operasional PT Mitra Mandiri,direktur operasional pt mitra mandiri,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_kedua_nama,missed_by_generator,auto_accepted,llm_base,0.0,Budi Santoso,budi santoso,,,915fc02ccc6ae9c2,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_pertama_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Sudirman No. 45, Jakarta Selatan",jl sudirman no 45 jakarta selatan,,,7038e01e6cbea77b,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Project Manager PT Solusi Teknologi,project manager pt solusi teknologi,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pihak_pertama_nama,missed_by_generator,auto_accepted,llm_base,0.0,Andi Pratama,andi pratama,,,34e002fd553f3efd,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-1-v1,POD,pod-1-v1,1,tanggal,missed_by_generator,auto_accepted,llm_base,0.0,10 November 2025,2025-11-10,,,f0f57c30b15ec14b,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Site Manager,site manager,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,Dedi Arisman Saputra,dedi arisman saputra,,a9291dd3ee5a4236|b69efb1fa301164d,b69efb1fa301164d,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Resident Engineer,resident engineer,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,Bambang Catur M,bambang catur m,,1a6fcb12637fdfda|9b7c9a3acd175e14,9b7c9a3acd175e14,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-10-v1,POD,pod-10-v1,1,tanggal,missed_by_generator,auto_accepted,llm_base,0.0,31-07-2020,2020-07-31,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-10-v2,POD,pod-10-v1,0,pihak_kedua_nama,present,auto_accepted,transfer,0.8525976516941891,Agus Kurniawan,agus kurniawan,1,3684e2c335e49cfd,,transfer,0.8525976516941891,0,0,,,,,,,
+1.0.0,pod-10-v2,POD,pod-10-v1,0,pihak_pertama_nama,present,auto_accepted,transfer,0.915605747078291,Hendra Prasetyo,hendra prasetyo,1,dcbd6d98a61bdd87,,transfer,0.915605747078291,0,0,,,,,,,
+1,pod-11-v1,POD,pod-11-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Jum’at,JUM’AT,,,7aec6263f4a77c74,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,KEPALA BNN KOTA KENDARI,kepala bnn kota kendari,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,"Dra. Murniaty M, MPH.,Apt",dra murniaty m mph apt,,8d76af114d421a98|f84dc619dea4ca73,f84dc619dea4ca73,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,KEPALA BAGIAN LOGISTIK BIRO UMUM SETTAMA BNN,kepala bagian logistik biro umum settama bnn,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,"TEGUH IMAN WAHYUDI, SH.,MM",teguh iman wahyudi sh mm,,730cf42963e16013|b81cdd7ea8e86c07,730cf42963e16013,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-11-v1,POD,pod-11-v1,1,tanggal,missed_by_generator,auto_accepted,llm_base,0.0,30 Desember 2011,2011-12-30,,,97b5ba5e8ddc85af,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-11-v2,POD,pod-11-v1,0,pihak_kedua_nama,present,auto_accepted,transfer,0.9683331492969425,"Dr. Rahmat Hidayat, S.H., M.H.",dr rahmat hidayat s h m h,1,b5de15ebcf6417e6,,transfer,0.9683331492969425,0,0,,,,,,,
+1.0.0,pod-11-v2,POD,pod-11-v1,0,pihak_pertama_nama,present,pending_review,transfer,0.7038461538461538,"KUSNADI, S.I.K., M.Si.",kusnadi s i k m si,1,2f8635e3fa29ec7f,,transfer,0.7038461538461538,0,0,,,,,,,
+1,pod-12-v1,POD,pod-12-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-12-v1,POD,pod-12-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-13-v1,POD,pod-13-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-14-v1,POD,pod-14-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-15-v1,POD,pod-15-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-16-v1,POD,pod-16-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-17-v1,POD,pod-17-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Jumat,FRIDAY,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,nomor_berita_acara,missed_by_generator,auto_accepted,llm_base,0.0,12/BAST/VII/2021,12bastvii2021,,,c79a44d41e6ad52c,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_kedua_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Asia Afrika No. 55, Bandung",jl asia afrika no 55 bandung,,,d2ffb4815eca062b,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Kepala Toko Berkah Jaya,kepala toko berkah jaya,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_kedua_nama,missed_by_generator,auto_accepted,llm_base,0.0,Siti Aminah,siti aminah,,,ba87b782f0c2f071,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_pertama_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Merdeka No. 10, Bandung",jl merdeka no 10 bandung,,,c3bbf50c714a2f2d,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Staf Gudang Logistik,staf gudang logistik,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pihak_pertama_nama,missed_by_generator,auto_accepted,llm_base,0.0,Ahmad Fauzi,ahmad fauzi,,,2587b6402411b36d,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-2-v1,POD,pod-2-v1,1,tanggal,missed_by_generator,auto_accepted,llm_base,0.0,09 Juli 2021,2021-07-09,,,bc5de7fde071ac7d,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Selasa,TUESDAY,,,569ef984c4e7f467,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,nomor_berita_acara,missed_by_generator,auto_accepted,llm_base,0.0,015/BAST-KSO/2024,015bastkso2024,,,f20c4dcdf024bb98,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_kedua_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Pahlawan No. 88, Semarang",jl pahlawan no 88 semarang,,,96b760282f7d5422,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Kuasa Direktur PT Konstruksi Kokoh,kuasa direktur pt konstruksi kokoh,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_kedua_nama,missed_by_generator,auto_accepted,llm_base,0.0,Bambang Pamungkas,bambang pamungkas,,,2eb677c7d772fa2b,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_pertama_alamat,missed_by_generator,auto_accepted,llm_base,0.0,"Jl. Diponegoro No. 22, Semarang",jl diponegoro no 22 semarang,,,96b760282f7d5422,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Pejabat Pembuat Komitmen,pejabat pembuat komitmen,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pihak_pertama_nama,missed_by_generator,auto_accepted,llm_base,0.0,Ir. Joko Widodo,ir joko widodo,,,886f847ed6d817d1,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-3-v1,POD,pod-3-v1,1,tanggal,missed_by_generator,auto_accepted,llm_base,0.0,14 Agustus 2024,2024-08-14,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Rabu,WEDNESDAY,,,e653a8a3487dcf9e,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,RT/RW : 009/004 Parakan Trenggalek,rt rw 009 004 parakan trenggalek,,043d5c9ddef8808c,043d5c9ddef8808c,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,-,-,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,PUNGKI NUR AGUSTINA,pungki nur agustina,,138bdbaaee2188af|48d698a54e786667,48d698a54e786667,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,Jl. Dr. Sutomo 02 Trenggalek,jl dr sutomo 02 trenggalek,,f3c3d990a356269f,f3c3d990a356269f,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,HUMAS (Rekrutmen Pegawai Non PNS RSUD Dr. Soedomo Trenggalek),humas rekrutmen pegawai non pns rsud dr soedomo trenggalek,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,BAKTI SANYOTO,bakti sanyoto,,7f7edfe5cbfafc10|87155c6698df7514,7f7edfe5cbfafc10,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-4-v1,POD,pod-4-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-4-v2,POD,pod-4-v1,0,pihak_kedua_alamat,present,pending_review,transfer,0.7343822221147693,Jl. Raya Cileunyi No. 88 RT 03/RW 08 Bandung,jl raya cileunyi no 88 rt 03 rw 08 bandung,1,821e338151aad2f4,,transfer,0.7343822221147693,0,0,,,,,,,
+1.0.0,pod-4-v2,POD,pod-4-v1,0,pihak_kedua_nama,present,pending_review,transfer,0.6901193664527634,DANI RAMDHANI,dani ramdhani,1,34996350f3d10816,,transfer,0.6901193664527634,0,0,,,,,,,
+1.0.0,pod-4-v2,POD,pod-4-v1,0,pihak_pertama_alamat,present,pending_review,transfer,0.6764968816082202,Jl. Soekarno Hatta No. 142 Bandung,jl soekarno hatta no 142 bandung,1,5a4c134847658523,,transfer,0.6764968816082202,0,0,,,,,,,
+1.0.0,pod-4-v2,POD,pod-4-v1,0,pihak_pertama_nama,present,pending_review,transfer,0.65625,"HENDRA WIJAYA, S.H., M.Kn.",hendra wijaya s h m kn,1,909a7c6ecd5ba271,,transfer,0.65625,0,0,,,,,,,
+1,pod-5-v1,POD,pod-5-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Rabu,WEDNESDAY,,,80f95ef9163a2d75,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,Jl. Perjuangan Nasib No. 78 Yogyakarta,jl perjuangan nasib no 78 yogyakarta,,d6fef3648f42055d,d6fef3648f42055d,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Pengusaha,pengusaha,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,Mariam Ummu Isa,mariam ummu isa,,ae2fb31ea8d9ec6b|cac11f4a9072ddc6,ae2fb31ea8d9ec6b,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,Jl. Mencari Hidayah No. 99 Yogyakarta,jl mencari hidayah no 99 yogyakarta,,d6559e1970510927,d6559e1970510927,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Staf Bagian Pengiriman di PT. Berkah Ilahi,staf bagian pengiriman di pt berkah ilahi,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,Muhammad Aryan,muhammad aryan,,3c8e5e166844f5df|a2af26d337438f01,3c8e5e166844f5df,duplicate_all,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-5-v1,POD,pod-5-v1,1,tanggal,present,auto_accepted,llm_base,0.0,14 Juli 2021,2021-07-14,,dd1c57c1e73e6164,dd1c57c1e73e6164,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-5-v2,POD,pod-5-v1,0,pihak_kedua_alamat,present,pending_review,transfer,0.7232762545527889,Jl. Sudirman Kav. 45 Jakarta Pusat,jl sudirman kav 45 jakarta pusat,1,9cb7183cc30fec05,,transfer,0.7232762545527889,0,0,,,,,,,
+1.0.0,pod-5-v2,POD,pod-5-v1,0,pihak_kedua_nama,present,auto_accepted,transfer,0.8294404703642162,"(Citra Lestari, S.E.)",citra lestari s e,1,558befa301f8a889,,transfer,0.8294404703642162,0,0,,,,,,,
+1.0.0,pod-5-v2,POD,pod-5-v1,0,pihak_pertama_alamat,present,pending_review,transfer,0.7264849185340485,Jl. Rasuna Said Blok C No. 12 Jakarta,jl rasuna said blok c no 12 jakarta,1,9b2c67182ad80263,,transfer,0.7264849185340485,0,0,,,,,,,
+1.0.0,pod-5-v2,POD,pod-5-v1,0,pihak_pertama_nama,present,auto_accepted,transfer,0.7794404703642162,(Rian Ardianto),rian ardianto,1,c809f80bc98d2b84,,transfer,0.7794404703642162,0,0,,,,,,,
+1.0.0,pod-5-v2,POD,pod-5-v1,0,tanggal,present,pending_review,transfer,0.6818631112421596,16 Oktober 2025,2025-10-16,1,5dba8e4816254e68,,transfer,0.6818631112421596,0,0,,,,,,,
+1,pod-6-v1,POD,pod-6-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-6-v1,POD,pod-6-v1,1,tanggal,present,auto_accepted,llm_base,0.0,31 Mei 2021,2021-05-31,,5b7dc1e6bd90a494,5b7dc1e6bd90a494,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-6-v2,POD,pod-6-v1,0,tanggal,present,auto_accepted,transfer,0.9035062868435304,20 Oktober 2025,2025-10-20,1,0e1096a66bfe6010,,transfer,0.9035062868435304,0,0,,,,,,,
+1,pod-7-v1,POD,pod-7-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-7-v1,POD,pod-7-v1,1,tanggal,present,auto_accepted,llm_base,0.0,27 September 2021,2021-09-27,,9d6fbd343329f741,9d6fbd343329f741,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-7-v2,POD,pod-7-v1,0,tanggal,present,pending_review,transfer,0.5863625423330633,14 Oktober 2025,2025-10-14,1,27a1769ce14d6114,,transfer,0.5863625423330633,0,0,,,,,,,
+1,pod-8-v1,POD,pod-8-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,hari,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_kedua_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_pertama_jabatan,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-8-v1,POD,pod-8-v1,1,tanggal,present,auto_accepted,llm_base,0.0,28 Mei 2026,2026-05-28,,5c96a0da39162878,5c96a0da39162878,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-8-v2,POD,pod-8-v1,0,tanggal,present,auto_accepted,transfer,0.8218708886623758,10 November 2026,2026-11-10,1,6b951597bd989330,,transfer,0.8218708886623758,0,0,,,,,,,
+1,pod-9-v1,POD,pod-9-v1,1,awb,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,delivery_date,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,delivery_time,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,goods_condition,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,hari,missed_by_generator,auto_accepted,llm_base,0.0,Rabu,WEDNESDAY,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,nomor_berita_acara,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_kedua_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_kedua_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Ketua KPPSD,ketua kppsd,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_kedua_nama,present,auto_accepted,llm_base,0.0,Maman Suherman,maman suherman,,d728d3e49eca457f,d728d3e49eca457f,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_pertama_alamat,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_pertama_jabatan,missed_by_generator,auto_accepted,llm_base,0.0,Ketua Panitia Pilkades,ketua panitia pilkades,,,,none,0.0,0.0,0.0,,no candidate matched normalized truth,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pihak_pertama_nama,present,auto_accepted,llm_base,0.0,Abdul Ropik,abdul ropik,,b3201e029ded1e12,b3201e029ded1e12,exact,1.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,pod_number,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,quantity_received,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,receiver_company,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,receiver_name,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,shipment_id,absent,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1,pod-9-v1,POD,pod-9-v1,1,tanggal,present,auto_accepted,llm_base,0.0,,,,,,none,0.0,0.0,0.0,,,fake-local,extract_truth_v1,,,45abcf4c0635f4c4
+1.0.0,pod-9-v2,POD,pod-9-v1,0,pihak_kedua_nama,present,auto_accepted,transfer,0.9140642326397259,Hendra Gunawan,hendra gunawan,1,a9eea019069dae04,,transfer,0.9140642326397259,0,0,,,,,,,
+1.0.0,pod-9-v2,POD,pod-9-v1,0,pihak_pertama_nama,present,auto_accepted,transfer,0.8280996818497864,Drs. H. Ahmad Fauzi,drs h ahmad fauzi,1,b90ca557526b5731,,transfer,0.8280996818497864,0,0,,,,,,,

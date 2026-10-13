@@ -1,0 +1,100 @@
+{
+  "document_id": "pod-5-v1",
+  "doc_type": "POD",
+  "prompt_version": "extract_truth_v1",
+  "llm_model": "fake-local",
+  "fields": {
+    "nomor_berita_acara": {
+      "status": "present",
+      "value_text": null,
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "hari": {
+      "status": "present",
+      "value_text": "Rabu",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "tanggal": {
+      "status": "present",
+      "value_text": "14 Juli 2021",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_nama": {
+      "status": "present",
+      "value_text": "Muhammad Aryan",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_jabatan": {
+      "status": "present",
+      "value_text": "Staf Bagian Pengiriman di PT. Berkah Ilahi",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_alamat": {
+      "status": "present",
+      "value_text": "Jl. Mencari Hidayah No. 99 Yogyakarta",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_nama": {
+      "status": "present",
+      "value_text": "Mariam Ummu Isa",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_jabatan": {
+      "status": "present",
+      "value_text": "Pengusaha",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_alamat": {
+      "status": "present",
+      "value_text": "Jl. Perjuangan Nasib No. 78 Yogyakarta",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    }
+  },
+  "tables": [],
+  "m_pipeline_version": ""
+}

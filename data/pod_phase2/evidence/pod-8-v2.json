@@ -1,0 +1,1900 @@
+{
+  "document_id": "pod-8-v2",
+  "source_file": "PoD_8_variasi_2.pdf",
+  "source_sha256": "31cd4aad2f6fd3638010d81bbba1183f77104deb74feaf6d1867a867ccb7ea52",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "UNKNOWN",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.3382,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": true
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": [
+      1
+    ]
+  },
+  "classification": {
+    "document_type": "UNKNOWN",
+    "confidence": 0.3382,
+    "requires_human_review": true,
+    "probabilities": {
+      "INVOICE": 0.1986,
+      "SURAT_JALAN": 0.1868,
+      "POD": 0.1986,
+      "RATE_AGREEMENT": 0.0778,
+      "UNKNOWN": 0.3382
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_tfidf_logistic_regression",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.9,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.969,
+      "quality": {
+        "blur_score": 1384.86,
+        "brightness": 250.87,
+        "contrast": 29.53,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-8-v2/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "30939177706307c82f3375df50fb9c2707cd97f62f38284510f36ab6f31e1a43"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "PT NUSA INDAH SOLUSINDO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.358324,
+            0.053641,
+            0.641676,
+            0.073268
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.358324,
+                0.053641,
+                0.384087,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "NUSA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.389691,
+                0.053641,
+                0.446801,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "INDAH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.452405,
+                0.053641,
+                0.516228,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "SOLUSINDO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.521832,
+                0.053641,
+                0.641676,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Gedung Cyber 2 Lantai 8, Jakarta Selatan | Telp: 021-5299880",
+          "confidence": 0.97,
+          "bbox_norm": [
+            0.277476,
+            0.07161,
+            0.722525,
+            0.087114
+          ],
+          "tokens": [
+            {
+              "text": "Gedung",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.277476,
+                0.07161,
+                0.334258,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Cyber",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.338694,
+                0.07161,
+                0.381257,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.385694,
+                0.07161,
+                0.394567,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Lantai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.399003,
+                0.07161,
+                0.442476,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "8,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.446912,
+                0.07161,
+                0.460222,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.464659,
+                0.07161,
+                0.516988,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Selatan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.521425,
+                0.07161,
+                0.575542,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "|",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.579979,
+                0.07161,
+                0.584128,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Telp:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.588564,
+                0.07161,
+                0.624041,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "021-5299880",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.628478,
+                0.07161,
+                0.722525,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "TANDA TERIMA BERKAS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.388111,
+            0.1048,
+            0.611889,
+            0.122792
+          ],
+          "tokens": [
+            {
+              "text": "TANDA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.388111,
+                0.1048,
+                0.452768,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.457905,
+                0.1048,
+                0.528735,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "BERKAS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.533872,
+                0.1048,
+                0.611889,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "No. Urut: 104/NIS-LOG/XI",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.390134,
+            0.121429,
+            0.609866,
+            0.139421
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.390134,
+                0.121429,
+                0.419904,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Urut:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.425041,
+                0.121429,
+                0.469168,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "104/NIS-LOG/XI",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.474305,
+                0.121429,
+                0.609866,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Proyek / Unit",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.067427,
+            0.158319,
+            0.158777,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": "Proyek",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.067427,
+                0.158319,
+                0.117092,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "/",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.121528,
+                0.158319,
+                0.125965,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.130401,
+                0.158319,
+                0.158777,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": ": Infrastruktur IT & Data Center",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.235417,
+            0.158319,
+            0.461534,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.235417,
+                0.158319,
+                0.239853,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Infrastruktur",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252216,
+                0.158319,
+                0.337357,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "IT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.341793,
+                0.158319,
+                0.355981,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.360418,
+                0.158319,
+                0.371062,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Data",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.375499,
+                0.158319,
+                0.409204,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Center",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.413641,
+                0.158319,
+                0.461534,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Tanggal",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.546197,
+            0.158319,
+            0.603857,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": "Tanggal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.546197,
+                0.158319,
+                0.603857,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": ": 10 November 2026",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.697388,
+            0.158319,
+            0.849902,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.697388,
+                0.158319,
+                0.701824,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.714187,
+                0.158319,
+                0.731933,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "November",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.736369,
+                0.158319,
+                0.809972,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "2026",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.814409,
+                0.158319,
+                0.849902,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Nama Sub-Vendor",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.067427,
+            0.1797,
+            0.199584,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.067427,
+                0.1797,
+                0.10999,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Sub-Vendor",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.114427,
+                0.1797,
+                0.199584,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": ": PT Network Utama Indonesia",
+          "confidence": 0.96,
+          "bbox_norm": [
+            0.235417,
+            0.1797,
+            0.46064,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.235417,
+                0.1797,
+                0.239853,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252216,
+                0.1797,
+                0.272611,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Network",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.277048,
+                0.1797,
+                0.335569,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Utama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.340006,
+                0.1797,
+                0.387005,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Indonesia",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.391442,
+                0.1797,
+                0.46064,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Diserahkan ke",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.546197,
+            0.1797,
+            0.648191,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": "Diserahkan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.546197,
+                0.1797,
+                0.626902,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ke",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.631338,
+                0.1797,
+                0.648191,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": ": Divisi IT Support",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.697388,
+            0.1797,
+            0.831246,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.697388,
+                0.1797,
+                0.701824,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Divisi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.714187,
+                0.1797,
+                0.752297,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "IT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.756733,
+                0.1797,
+                0.770921,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Support",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.775357,
+                0.1797,
+                0.831246,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.082549,
+            0.217808,
+            0.102703,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.082549,
+                0.217808,
+                0.102703,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Kode Barang",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.154776,
+            0.217808,
+            0.248862,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Kode",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.154776,
+                0.217808,
+                0.192573,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.196777,
+                0.217808,
+                0.248862,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Deskripsi Dokumen",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.387427,
+            0.217808,
+            0.528578,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Deskripsi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.387427,
+                0.217808,
+                0.455493,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Dokumen",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.459696,
+                0.217808,
+                0.528578,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Jumlah",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.670922,
+            0.217808,
+            0.723853,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Jumlah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.670922,
+                0.217808,
+                0.723853,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Status",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.825476,
+            0.217808,
+            0.87168,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Status",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.825476,
+                0.217808,
+                0.87168,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.241555,
+            0.096595,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.241555,
+                0.096595,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "HW-RTR-901",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.241555,
+            0.212684,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "HW-RTR-901",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.241555,
+                0.212684,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Router Cisco Enterprise & Manual",
+          "confidence": 0.96,
+          "bbox_norm": [
+            0.294213,
+            0.241555,
+            0.510056,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "Router",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.241555,
+                0.337065,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Cisco",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.341034,
+                0.241555,
+                0.376732,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Enterprise",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.380702,
+                0.241555,
+                0.445771,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.449741,
+                0.241555,
+                0.459265,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Manual",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.463235,
+                0.241555,
+                0.510056,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "2 Unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.678739,
+            0.241555,
+            0.716036,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.678739,
+                0.241555,
+                0.686678,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.690648,
+                0.241555,
+                0.716036,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Baru & Segel",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.772983,
+            0.241555,
+            0.857115,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "Baru",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.241555,
+                0.80314,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.80711,
+                0.241555,
+                0.816634,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Segel",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.820604,
+                0.241555,
+                0.857115,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.264717,
+            0.096595,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.264717,
+                0.096595,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "LIC-NET-2026",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.264717,
+            0.218267,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "LIC-NET-2026",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.264717,
+                0.218267,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Sertifikat Lisensi Perangkat Lunak",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.294213,
+            0.264717,
+            0.510084,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "Sertifikat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.264717,
+                0.349759,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Lisensi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353728,
+                0.264717,
+                0.398165,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Perangkat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.402134,
+                0.264717,
+                0.467219,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Lunak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.471188,
+                0.264717,
+                0.510084,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "1 Berkas",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.669215,
+            0.264717,
+            0.72556,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.669215,
+                0.264717,
+                0.677154,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Berkas",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.681124,
+                0.264717,
+                0.72556,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Aktif s/d 2028",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.772983,
+            0.264717,
+            0.8595,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "Aktif",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.264717,
+                0.800756,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "s/d",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.804725,
+                0.264717,
+                0.823774,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "2028",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.827743,
+                0.264717,
+                0.8595,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "3",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.287879,
+            0.096595,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.287879,
+                0.096595,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "BA-TEST-008",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.287879,
+            0.215097,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "BA-TEST-008",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.287879,
+                0.215097,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Berita Acara Uji Coba Jaringan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.294213,
+            0.287879,
+            0.490222,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "Berita",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.287879,
+                0.33151,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Acara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.33548,
+                0.287879,
+                0.372777,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Uji",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.376746,
+                0.287879,
+                0.393396,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Coba",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.397365,
+                0.287879,
+                0.431492,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Jaringan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.435462,
+                0.287879,
+                0.490222,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "2 Rangkap",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.662861,
+            0.287879,
+            0.731914,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.662861,
+                0.287879,
+                0.6708,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Rangkap",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.674769,
+                0.287879,
+                0.731914,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Lolos QC",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.772983,
+            0.287879,
+            0.832498,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "Lolos",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.287879,
+                0.80711,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "QC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.811079,
+                0.287879,
+                0.832498,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Catatan Lapangan: Perangkat router dan lisensi siap dipasang pada rack server A-04.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.324018,
+            0.684914,
+            0.339522
+          ],
+          "tokens": [
+            {
+              "text": "Catatan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.324018,
+                0.133164,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Lapangan:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1376,
+                0.324018,
+                0.213022,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Perangkat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.217459,
+                0.324018,
+                0.2902,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "router",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294637,
+                0.324018,
+                0.336322,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.340758,
+                0.324018,
+                0.367378,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "lisensi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.371814,
+                0.324018,
+                0.416148,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "siap",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.420585,
+                0.324018,
+                0.449854,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "dipasang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.45429,
+                0.324018,
+                0.519052,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "pada",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.523489,
+                0.324018,
+                0.558981,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "rack",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.563418,
+                0.324018,
+                0.593565,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "server",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.598001,
+                0.324018,
+                0.642335,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "A-04.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646772,
+                0.324018,
+                0.684914,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Tim Operasional IT,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.213234,
+            0.379845,
+            0.353354,
+            0.395349
+          ],
+          "tokens": [
+            {
+              "text": "Tim",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.213234,
+                0.379845,
+                0.239821,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Operasional",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.244258,
+                0.379845,
+                0.330293,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "IT,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.334729,
+                0.379845,
+                0.353354,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Teknisi Sub-Vendor,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.64358,
+            0.379845,
+            0.788153,
+            0.395349
+          ],
+          "tokens": [
+            {
+              "text": "Teknisi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.64358,
+                0.379845,
+                0.694122,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Sub-Vendor,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.698559,
+                0.379845,
+                0.788153,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "(________________________)",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.171501,
+            0.476057,
+            0.395086,
+            0.491561
+          ],
+          "tokens": [
+            {
+              "text": "(________________________)",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.171501,
+                0.476057,
+                0.395086,
+                0.491561
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "(________________________)",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.604074,
+            0.476057,
+            0.827659,
+            0.491561
+          ],
+          "tokens": [
+            {
+              "text": "(________________________)",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.604074,
+                0.476057,
+                0.827659,
+                0.491561
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.067427,
+            0.053641,
+            0.849902,
+            0.195204
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT NUSA INDAH SOLUSINDO Gedung Cyber 2 Lantai 8, Jakarta Selatan | Telp: 021-5299880 TANDA TERIMA BE"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.067427,
+            0.121429,
+            0.87168,
+            0.395349
+          ],
+          "confidence": 0.92,
+          "text_snippet": "No. Urut: 104/NIS-LOG/XI Proyek / Unit : Infrastruktur IT & Data Center Tanggal : 10 November 2026 N"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.171501,
+            0.217808,
+            0.827659,
+            0.491561
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Jumlah Tim Operasional IT, Teknisi Sub-Vendor, (________________________) (________________________)"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.077275,
+            0.324018,
+            0.684914,
+            0.395349
+          ],
+          "headers": [
+            "Catatan",
+            "Lapangan:",
+            "Perangkat",
+            "router",
+            "dan",
+            "lisensi",
+            "siap",
+            "dipasang",
+            "pada",
+            "rack",
+            "server",
+            "A-04."
+          ],
+          "rows": [
+            [
+              "Tim",
+              "Operasional",
+              "IT,"
+            ]
+          ],
+          "row_count": 1,
+          "col_count": 12,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "UNKNOWN",
+        "confidence": 0.3382,
+        "probabilities": {
+          "INVOICE": 0.1986,
+          "SURAT_JALAN": 0.1868,
+          "POD": 0.1986,
+          "RATE_AGREEMENT": 0.0778,
+          "UNKNOWN": 0.3382
+        },
+        "requires_human_review": true,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_tfidf_logistic_regression"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.9,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 361.15,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "candidate_counts": {
+    "POD_address": 67,
+    "POD_date": 57,
+    "POD_enum": 38,
+    "POD_id": 214,
+    "POD_party": 1080,
+    "POD_qty": 432,
+    "POD_text": 4,
+    "POD_time": 41
+  },
+  "cap_overflows": [
+    {
+      "document_id": "",
+      "dropped": 31,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 28,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 9,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 13,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 21,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 16,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 2,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 2,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 8,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    },
+    {
+      "document_id": "",
+      "dropped": 4,
+      "kept": 40,
+      "page": 1,
+      "type": "party"
+    }
+  ],
+  "documents": 34,
+  "empty_pages": [],
+  "m_pipeline_version": "45abcf4c0635f4c4",
+  "timings_ms": {
+    "pod-1-v1:POD": 581.687,
+    "pod-1-v2:POD": 593.471,
+    "pod-10-v1:POD": 607.325,
+    "pod-10-v2:POD": 716.163,
+    "pod-11-v1:POD": 1395.198,
+    "pod-11-v2:POD": 1361.585,
+    "pod-12-v1:POD": 389.823,
+    "pod-12-v2:POD": 437.598,
+    "pod-13-v1:POD": 486.883,
+    "pod-13-v2:POD": 501.061,
+    "pod-14-v1:POD": 902.847,
+    "pod-14-v2:POD": 820.037,
+    "pod-15-v1:POD": 726.207,
+    "pod-15-v2:POD": 874.953,
+    "pod-16-v1:POD": 536.634,
+    "pod-16-v2:POD": 638.186,
+    "pod-17-v1:POD": 405.238,
+    "pod-17-v2:POD": 419.029,
+    "pod-2-v1:POD": 1139.195,
+    "pod-2-v2:POD": 955.647,
+    "pod-3-v1:POD": 1084.717,
+    "pod-3-v2:POD": 1190.079,
+    "pod-4-v1:POD": 376.129,
+    "pod-4-v2:POD": 513.868,
+    "pod-5-v1:POD": 665.074,
+    "pod-5-v2:POD": 746.631,
+    "pod-6-v1:POD": 213.195,
+    "pod-6-v2:POD": 207.934,
+    "pod-7-v1:POD": 363.02,
+    "pod-7-v2:POD": 367.085,
+    "pod-8-v1:POD": 478.618,
+    "pod-8-v2:POD": 583.828,
+    "pod-9-v1:POD": 843.043,
+    "pod-9-v2:POD": 859.635
+  }
+}

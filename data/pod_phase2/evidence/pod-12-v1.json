@@ -1,0 +1,1560 @@
+{
+  "document_id": "pod-12-v1",
+  "source_file": "PoD_12_variasi_1.pdf",
+  "source_sha256": "df9cf15d73a9156d87c7a7dbf16d38002873cfd6d36c80d3826cbf24fef7fe26",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.8871,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.8871,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1432,
+      "SURAT_JALAN": 0.1427,
+      "POD": 0.5408,
+      "RATE_AGREEMENT": 0.0621,
+      "UNKNOWN": 0.1112
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.98,
+      "quality": {
+        "blur_score": 667.09,
+        "brightness": 251.84,
+        "contrast": 23.61,
+        "skew_angle": 11.74,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-12-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "2d3f0bfeda9c019da377219beaa1143b451fa5d17135b5b85234e5e4b938effc"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "DHL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.087354,
+            0.050434,
+            0.163303,
+            0.086417
+          ],
+          "tokens": [
+            {
+              "text": "DHL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.087354,
+                0.050434,
+                0.163303,
+                0.086417
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "06 July 2023",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.102537,
+            0.156281,
+            0.117226
+          ],
+          "tokens": [
+            {
+              "text": "06",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.102537,
+                0.087368,
+                0.117226
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "July",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.091571,
+                0.102537,
+                0.118453,
+                0.117226
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "2023",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122656,
+                0.102537,
+                0.156281,
+                0.117226
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Dear Customer,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.131044,
+            0.177251,
+            0.145733
+          ],
+          "tokens": [
+            {
+              "text": "Dear",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.131044,
+                0.103319,
+                0.145733
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "Customer,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.107522,
+                0.131044,
+                0.177251,
+                0.145733
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "This is a proof of delivery / statement of final status for the shipment with waybill number 9799563863.",
+          "confidence": 0.974,
+          "bbox_norm": [
+            0.070556,
+            0.14708,
+            0.752062,
+            0.161854
+          ],
+          "tokens": [
+            {
+              "text": "This",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.14708,
+                0.099115,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "is",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.103319,
+                0.14708,
+                0.114234,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "a",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.118438,
+                0.14708,
+                0.126844,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.131047,
+                0.14708,
+                0.165503,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.169706,
+                0.14708,
+                0.182316,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.186519,
+                0.14708,
+                0.238604,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "/",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.242807,
+                0.14708,
+                0.24701,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "statement",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.251213,
+                0.14708,
+                0.317601,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.321804,
+                0.14708,
+                0.334413,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "final",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.338616,
+                0.14708,
+                0.366345,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "status",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.370548,
+                0.14708,
+                0.410885,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.415088,
+                0.14708,
+                0.432732,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "the",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.436935,
+                0.14708,
+                0.457951,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.462154,
+                0.14708,
+                0.523492,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "with",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.527695,
+                0.14708,
+                0.554577,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "waybill",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.55878,
+                0.14708,
+                0.604137,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "number",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.60834,
+                0.14708,
+                0.659594,
+                0.161768
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "9799563863.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.663797,
+                0.14708,
+                0.752062,
+                0.161854
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Thank you for choosing DHL Express.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.163115,
+            0.32516,
+            0.177804
+          ],
+          "tokens": [
+            {
+              "text": "Thank",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.163115,
+                0.112571,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "you",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.116774,
+                0.163115,
+                0.141146,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.145349,
+                0.163115,
+                0.162993,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "choosing",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.167197,
+                0.163115,
+                0.227703,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "DHL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231906,
+                0.163115,
+                0.262144,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Express.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.266347,
+                0.163115,
+                0.32516,
+                0.177804
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "www.dhl.com",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.179151,
+            0.160438,
+            0.193839
+          ],
+          "tokens": [
+            {
+              "text": "www.dhl.com",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.179151,
+                0.160438,
+                0.193839
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Your shipment 9799563863 was delivered on 16 June 2023 at 09.04",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.211815,
+            0.531112,
+            0.226589
+          ],
+          "tokens": [
+            {
+              "text": "Your",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.211815,
+                0.102487,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.10669,
+                0.211815,
+                0.168028,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "9799563863",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.172231,
+                0.211869,
+                0.256293,
+                0.226589
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "was",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.260496,
+                0.211815,
+                0.287378,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.291581,
+                0.211815,
+                0.352919,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "on",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.357122,
+                0.211815,
+                0.373934,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "16",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378137,
+                0.211869,
+                0.39495,
+                0.226589
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "June",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.399153,
+                0.211869,
+                0.434441,
+                0.226589
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "2023",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.438644,
+                0.211869,
+                0.472269,
+                0.226589
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.476472,
+                0.211815,
+                0.489081,
+                0.226504
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "09.04",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.493284,
+                0.211869,
+                0.531112,
+                0.226589
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Signed",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.244524,
+            0.105998,
+            0.258397
+          ],
+          "tokens": [
+            {
+              "text": "Signed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.244524,
+                0.105998,
+                0.258397
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Signature",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.244524,
+            0.561115,
+            0.258397
+          ],
+          "tokens": [
+            {
+              "text": "Signature",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.244524,
+                0.561115,
+                0.258397
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "FARIS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.262986,
+            0.104385,
+            0.276888
+          ],
+          "tokens": [
+            {
+              "text": "FARIS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.262986,
+                0.104385,
+                0.276888
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "[Signature On File]",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.262986,
+            0.619045,
+            0.276656
+          ],
+          "tokens": [
+            {
+              "text": "[Signature",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.262986,
+                0.565084,
+                0.276656
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "On",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.569054,
+                0.262986,
+                0.588102,
+                0.276656
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "File]",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.592072,
+                0.262986,
+                0.619045,
+                0.276656
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Additional Shipment Details",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.303882,
+            0.280203,
+            0.31942
+          ],
+          "tokens": [
+            {
+              "text": "Additional",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.303882,
+                0.146291,
+                0.31942
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.150727,
+                0.303882,
+                0.223437,
+                0.31942
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Details",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.227873,
+                0.303882,
+                0.280203,
+                0.31942
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Destination Service Area",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.33361,
+            0.225394,
+            0.347482
+          ],
+          "tokens": [
+            {
+              "text": "Destination",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.33361,
+                0.139691,
+                0.347482
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Service",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143661,
+                0.33361,
+                0.191267,
+                0.347482
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Area",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.195237,
+                0.33361,
+                0.225394,
+                0.347482
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "REST OF INDONESIA",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.33366,
+            0.549436,
+            0.347563
+          ],
+          "tokens": [
+            {
+              "text": "REST",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.33366,
+                0.442328,
+                0.347563
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "OF",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.446298,
+                0.33366,
+                0.466132,
+                0.347563
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "INDONESIA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.470101,
+                0.33366,
+                0.549436,
+                0.347563
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "INDONESIA",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.34732,
+            0.483581,
+            0.361222
+          ],
+          "tokens": [
+            {
+              "text": "INDONESIA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.34732,
+                0.483581,
+                0.361222
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Shipment Status",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.375183,
+            0.173033,
+            0.389055
+          ],
+          "tokens": [
+            {
+              "text": "Shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.375183,
+                0.128582,
+                0.389055
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Status",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.132552,
+                0.375183,
+                0.173033,
+                0.389055
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.375233,
+            0.468531,
+            0.389136
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.375233,
+                0.468531,
+                0.389136
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Piece ID(s)",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.403096,
+            0.138877,
+            0.416968
+          ],
+          "tokens": [
+            {
+              "text": "Piece",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.403096,
+                0.103979,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "ID(s)",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.107949,
+                0.403096,
+                0.138877,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "JD014600011017737918",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.403147,
+            0.5654,
+            0.417049
+          ],
+          "tokens": [
+            {
+              "text": "JD014600011017737918",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.403147,
+                0.5654,
+                0.417049
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Service",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.431009,
+            0.115874,
+            0.444882
+          ],
+          "tokens": [
+            {
+              "text": "Service",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.431009,
+                0.115874,
+                0.444882
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "EXPRESS WORLDWIDE nondoc",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.43106,
+            0.622416,
+            0.444963
+          ],
+          "tokens": [
+            {
+              "text": "EXPRESS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.43106,
+                0.471701,
+                0.444963
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "WORLDWIDE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.47567,
+                0.43106,
+                0.566885,
+                0.444963
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "nondoc",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.570855,
+                0.43106,
+                0.622416,
+                0.444963
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Picked Up",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.458923,
+            0.133337,
+            0.472795
+          ],
+          "tokens": [
+            {
+              "text": "Picked",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.458923,
+                0.111119,
+                0.472795
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Up",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.115088,
+                0.458923,
+                0.133337,
+                0.472795
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "12 June 2023 at 12.14",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.458973,
+            0.549507,
+            0.472876
+          ],
+          "tokens": [
+            {
+              "text": "12",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.458973,
+                0.420124,
+                0.472876
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "June",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.424094,
+                0.458973,
+                0.457421,
+                0.472876
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "2023",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.461391,
+                0.458973,
+                0.493148,
+                0.472876
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.497117,
+                0.458973,
+                0.509811,
+                0.472876
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "12.14",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.513781,
+                0.458973,
+                0.549507,
+                0.472876
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Origin Service Area",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.486836,
+            0.192053,
+            0.500709
+          ],
+          "tokens": [
+            {
+              "text": "Origin",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.486836,
+                0.10635,
+                0.500709
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "Service",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.110319,
+                0.486836,
+                0.157926,
+                0.500709
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "Area",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.161895,
+                0.486836,
+                0.192053,
+                0.500709
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "HONG KONG",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.486887,
+            0.49389,
+            0.500789
+          ],
+          "tokens": [
+            {
+              "text": "HONG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.486887,
+                0.447083,
+                0.500789
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "KONG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.451053,
+                0.486887,
+                0.49389,
+                0.500789
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "HONG KONG",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.500546,
+            0.49389,
+            0.514449
+          ],
+          "tokens": [
+            {
+              "text": "HONG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.500546,
+                0.447083,
+                0.514449
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "KONG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.451053,
+                0.500546,
+                0.49389,
+                0.514449
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "Shipper Reference",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.068267,
+            0.528409,
+            0.187312,
+            0.542282
+          ],
+          "tokens": [
+            {
+              "text": "Shipper",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.068267,
+                0.528409,
+                0.117473,
+                0.542282
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Reference",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.121443,
+                0.528409,
+                0.187312,
+                0.542282
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "9799563863HK20230608055935732",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.52846,
+            0.639223,
+            0.542363
+          ],
+          "tokens": [
+            {
+              "text": "9799563863HK20230608055935732",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.52846,
+                0.639223,
+                0.542363
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "2399060728",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.404246,
+            0.54212,
+            0.483638,
+            0.556022
+          ],
+          "tokens": [
+            {
+              "text": "2399060728",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404246,
+                0.54212,
+                0.483638,
+                0.556022
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.070556,
+            0.050434,
+            0.752062,
+            0.193839
+          ],
+          "confidence": 0.95,
+          "text_snippet": "DHL 06 July 2023 Dear Customer, This is a proof of delivery / statement of final status for the ship"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.061548,
+            0.163115,
+            0.619045,
+            0.389136
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Thank you for choosing DHL Express. www.dhl.com Your shipment 9799563863 was delivered on 16 June 20"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.068267,
+            0.375183,
+            0.639223,
+            0.556022
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Shipment Status Delivered Piece ID(s) JD014600011017737918 Service EXPRESS WORLDWIDE nondoc Picked U"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.068267,
+            0.33361,
+            0.622416,
+            0.500709
+          ],
+          "headers": [
+            "Destination",
+            "Service",
+            "Area"
+          ],
+          "rows": [
+            [
+              "REST",
+              "OF",
+              "INDONESIA"
+            ],
+            [
+              "EXPRESS",
+              "WORLDWIDE",
+              "nondoc"
+            ],
+            [
+              "12",
+              "June",
+              "2023",
+              "at",
+              "12.14"
+            ],
+            [
+              "Origin",
+              "Service",
+              "Area"
+            ]
+          ],
+          "row_count": 4,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.8871,
+        "probabilities": {
+          "INVOICE": 0.1432,
+          "SURAT_JALAN": 0.1427,
+          "POD": 0.5408,
+          "RATE_AGREEMENT": 0.0621,
+          "UNKNOWN": 0.1112
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 364.15,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

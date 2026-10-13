@@ -1,0 +1,147 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-5-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "address",
+      "center": [
+        0.37734999999999996,
+        0.35614999999999997
+      ],
+      "ctx": {
+        "above": "Jl. : sebagai disebut Pertama Pihak Isa Ummu Mariam : Pengusaha :",
+        "left": "Alamat :",
+        "line": "Alamat :"
+      },
+      "field": "pihak_kedua_alamat",
+      "page_pos": "first",
+      "size": [
+        0.2839,
+        0.015500000000000014
+      ],
+      "value_norm": "jl perjuangan nasib no 78 yogyakarta"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.3006,
+        0.31455
+      ],
+      "ctx": {
+        "above": "Bagian Staf : No. Hidayah Mencari Jl. : sebagai disebut Pertama Pihak",
+        "left": "Nama :",
+        "line": "Nama :"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.13040000000000002,
+        0.015499999999999958
+      ],
+      "value_norm": "mariam ummu isa"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.7117,
+        0.75815
+      ],
+      "ctx": {
+        "above": "Kedua Pihak",
+        "left": "(Muhammad Aryan)",
+        "line": "(Muhammad Aryan)"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.14100000000000001,
+        0.01550000000000007
+      ],
+      "value_norm": "mariam ummu isa"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "address",
+      "center": [
+        0.37375,
+        0.27295
+      ],
+      "ctx": {
+        "above": "tanggal Aryan Muhammad : Ilahi Berkah PT. di Pengiriman Bagian Staf :",
+        "left": "Alamat :",
+        "line": "Alamat :"
+      },
+      "field": "pihak_pertama_alamat",
+      "page_pos": "first",
+      "size": [
+        0.2767,
+        0.015500000000000014
+      ],
+      "value_norm": "jl mencari hidayah no 99 yogyakarta"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.3006,
+        0.2314
+      ],
+      "ctx": {
+        "above": "SURAT yang kami 2021, Juli 14 tanggal",
+        "left": "Nama :",
+        "line": "Nama :"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.13040000000000002,
+        0.015600000000000003
+      ],
+      "value_norm": "muhammad aryan"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.2875,
+        0.75815
+      ],
+      "ctx": {
+        "above": "Pertama Pihak",
+        "left": "",
+        "line": "(Mariam Ummu Isa)"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.141,
+        0.01550000000000007
+      ],
+      "value_norm": "muhammad aryan"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "date",
+      "center": [
+        0.7564500000000001,
+        0.6489499999999999
+      ],
+      "ctx": {
+        "above": "",
+        "left": "Yogyakarta,",
+        "line": "Yogyakarta,"
+      },
+      "field": "tanggal",
+      "page_pos": "first",
+      "size": [
+        0.08609999999999995,
+        0.015499999999999958
+      ],
+      "value_norm": "2021-07-14"
+    }
+  ],
+  "template_group": "pod-5-v1"
+}

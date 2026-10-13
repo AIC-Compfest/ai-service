@@ -1,0 +1,20 @@
+{
+  "candidate_counts": {
+    "POD_address": 2,
+    "POD_date": 3,
+    "POD_enum": 4,
+    "POD_id": 12,
+    "POD_party": 65,
+    "POD_qty": 25,
+    "POD_text": 0,
+    "POD_time": 0
+  },
+  "cap_overflows": [],
+  "documents": 2,
+  "empty_pages": [],
+  "m_pipeline_version": "b434f80e16820d67",
+  "timings_ms": {
+    "pod-1-v1:POD": 664.543,
+    "pod-1-v2:POD": 647.407
+  }
+}

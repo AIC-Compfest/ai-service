@@ -1,0 +1,87 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-10-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.78135,
+        0.6371
+      ],
+      "ctx": {
+        "above": "",
+        "left": "Bambang Catur M",
+        "line": "ROHMAD YULIANTO Bambang Catur M"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.16670000000000007,
+        0.015600000000000058
+      ],
+      "value_norm": "dedi arisman saputra"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.19275,
+        0.24455000000000002
+      ],
+      "ctx": {
+        "above": "ini: bawah di tangan 1. M Catur Bambang",
+        "left": "2.",
+        "line": "2. Selaku Site Manager, dalam hal ini bertindak sebagai kontraktor PT.TRIROYAL"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.16670000000000001,
+        0.015500000000000014
+      ],
+      "value_norm": "dedi arisman saputra"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.5,
+        0.6371
+      ],
+      "ctx": {
+        "above": "",
+        "left": "ROHMAD YULIANTO",
+        "line": "ROHMAD YULIANTO Dedi Arisman Saputra"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.13660000000000005,
+        0.015600000000000058
+      ],
+      "value_norm": "bambang catur m"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.1777,
+        0.2006
+      ],
+      "ctx": {
+        "above": "TANJUNG tanggal ini hari Pada Jum'at ini: bawah di tangan",
+        "left": "1.",
+        "line": "1. Selaku Resident Engineer, dalam hal ini bertindak untuk dan atas nama PT."
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.1366,
+        0.015600000000000003
+      ],
+      "value_norm": "bambang catur m"
+    }
+  ],
+  "template_group": "pod-10-v1"
+}

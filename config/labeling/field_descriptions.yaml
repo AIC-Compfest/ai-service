@@ -1,0 +1,10 @@
+POD:
+  nomor_berita_acara: "BAST or handover document number"
+  hari: "Printed weekday"
+  tanggal: "Printed document date"
+  pihak_pertama_nama: "First party name"
+  pihak_pertama_jabatan: "First party role"
+  pihak_pertama_alamat: "First party address"
+  pihak_kedua_nama: "Second party name"
+  pihak_kedua_jabatan: "Second party role"
+  pihak_kedua_alamat: "Second party address"

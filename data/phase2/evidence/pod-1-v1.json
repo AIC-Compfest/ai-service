@@ -1,0 +1,2297 @@
+{
+  "document_id": "pod-1-v1",
+  "source_file": "PoD_1_variasi_1.pdf",
+  "source_sha256": "5a474c50b343ecf86b8b2a30b650b2f93fae95f15cdfb3979f569755b7742313",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.9336,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.9336,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1093,
+      "SURAT_JALAN": 0.1762,
+      "POD": 0.4492,
+      "RATE_AGREEMENT": 0.0761,
+      "UNKNOWN": 0.1893
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.968,
+      "quality": {
+        "blur_score": 1671.58,
+        "brightness": 249.34,
+        "contrast": 33.03,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": false
+      },
+      "page_image": {
+        "path": "out/pages/pod-1-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "4608d57dae91e6330a64ce14be8668c34c416f8e24bcfabe56df578a4cfd1d35"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "HASHMICROTHINK FORWARD",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.379437,
+            0.053641,
+            0.618695,
+            0.073268
+          ],
+          "tokens": [
+            {
+              "text": "HASHMICROTHINK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.379437,
+                0.053641,
+                0.544793,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "FORWARD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.548529,
+                0.058725,
+                0.618695,
+                0.07181
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "SURAT TANDA TERIMA BARANG",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.311875,
+            0.086733,
+            0.688125,
+            0.109632
+          ],
+          "tokens": [
+            {
+              "text": "SURAT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.311875,
+                0.086733,
+                0.392873,
+                0.109632
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "TANDA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.399411,
+                0.086733,
+                0.481703,
+                0.109632
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.488241,
+                0.086733,
+                0.578387,
+                0.109632
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "BARANG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.584925,
+                0.086733,
+                0.688125,
+                0.109632
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Nomor: STTB/11/2025/104",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.386521,
+            0.113115,
+            0.613479,
+            0.131106
+          ],
+          "tokens": [
+            {
+              "text": "Nomor:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.386521,
+                0.113115,
+                0.452214,
+                0.131106
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "STTB/11/2025/104",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.457351,
+                0.113115,
+                0.613479,
+                0.131106
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Yang bertanda tangan di bawah ini:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.147585,
+            0.341556,
+            0.163905
+          ],
+          "tokens": [
+            {
+              "text": "Yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.147585,
+                0.116501,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "bertanda",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.121171,
+                0.147585,
+                0.187476,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "tangan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.192146,
+                0.147585,
+                0.243517,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "di",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.248188,
+                0.147585,
+                0.261257,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "bawah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.265927,
+                0.147585,
+                0.315417,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "ini:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.320087,
+                0.147585,
+                0.341556,
+                0.163905
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Nama",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.071627,
+            0.17728,
+            0.11643,
+            0.1936
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.071627,
+                0.17728,
+                0.11643,
+                0.1936
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": ":",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.206019,
+            0.17728,
+            0.210689,
+            0.1936
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.206019,
+                0.17728,
+                0.210689,
+                0.1936
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Andi Wijaya",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.231217,
+            0.17728,
+            0.319899,
+            0.1936
+          ],
+          "tokens": [
+            {
+              "text": "Andi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231217,
+                0.17728,
+                0.264832,
+                0.1936
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Wijaya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.269502,
+                0.17728,
+                0.319899,
+                0.1936
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Jabatan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.071627,
+            0.201036,
+            0.131398,
+            0.217356
+          ],
+          "tokens": [
+            {
+              "text": "Jabatan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.071627,
+                0.201036,
+                0.131398,
+                0.217356
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": ":",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.206019,
+            0.201036,
+            0.210689,
+            0.217356
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.206019,
+                0.201036,
+                0.210689,
+                0.217356
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "IT Infrastructure Lead",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.231217,
+            0.201036,
+            0.391815,
+            0.217356
+          ],
+          "tokens": [
+            {
+              "text": "IT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231217,
+                0.201036,
+                0.246151,
+                0.217356
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Infrastructure",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.250821,
+                0.201036,
+                0.349784,
+                0.217356
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Lead",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.354454,
+                0.201036,
+                0.391815,
+                0.217356
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Alamat",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.071627,
+            0.224792,
+            0.123905,
+            0.241112
+          ],
+          "tokens": [
+            {
+              "text": "Alamat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.071627,
+                0.224792,
+                0.123905,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": ":",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.206019,
+            0.224792,
+            0.210689,
+            0.241112
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.206019,
+                0.224792,
+                0.210689,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Jl. Pemuda No. 88, Surabaya",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.231217,
+            0.224792,
+            0.450645,
+            0.241112
+          ],
+          "tokens": [
+            {
+              "text": "Jl.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231217,
+                0.224792,
+                0.248016,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Pemuda",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252686,
+                0.224792,
+                0.315245,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "No.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.319915,
+                0.224792,
+                0.346055,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "88,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.350725,
+                0.224792,
+                0.374075,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Surabaya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378745,
+                0.224792,
+                0.450645,
+                0.241112
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "No. Telp",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.071627,
+            0.248548,
+            0.13511,
+            0.264868
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.071627,
+                0.248548,
+                0.097766,
+                0.264868
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Telp",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.102436,
+                0.248548,
+                0.13511,
+                0.264868
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": ":",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.206019,
+            0.248548,
+            0.210689,
+            0.264868
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.206019,
+                0.248548,
+                0.210689,
+                0.264868
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "0813-9876-5432",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.231217,
+            0.248548,
+            0.354488,
+            0.264868
+          ],
+          "tokens": [
+            {
+              "text": "0813-9876-5432",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231217,
+                0.248548,
+                0.354488,
+                0.264868
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Telah menerima barang dari PT Nusantara Tech Solusindo dengan rincian sebagai berikut:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.280619,
+            0.755129,
+            0.296939
+          ],
+          "tokens": [
+            {
+              "text": "Telah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.280619,
+                0.119289,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "menerima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.123959,
+                0.280619,
+                0.198631,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.203301,
+                0.280619,
+                0.255596,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "dari",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.260266,
+                0.280619,
+                0.28827,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.29294,
+                0.280619,
+                0.314409,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Nusantara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.319079,
+                0.280619,
+                0.396573,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Tech",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.401243,
+                0.280619,
+                0.438587,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Solusindo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.443257,
+                0.280619,
+                0.517021,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.521691,
+                0.280619,
+                0.577732,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "rincian",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.582402,
+                0.280619,
+                0.631875,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.636545,
+                0.280619,
+                0.695375,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "berikut:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.700045,
+                0.280619,
+                0.755129,
+                0.296939
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.090948,
+            0.317583,
+            0.111102,
+            0.332304
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.090948,
+                0.317583,
+                0.111102,
+                0.332304
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Nama Barang",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.31268,
+            0.317583,
+            0.410137,
+            0.332304
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.31268,
+                0.317583,
+                0.353849,
+                0.332304
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.358052,
+                0.317583,
+                0.410137,
+                0.332304
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Qty",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.642788,
+            0.317583,
+            0.667992,
+            0.332304
+          ],
+          "tokens": [
+            {
+              "text": "Qty",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.642788,
+                0.317583,
+                0.667992,
+                0.332304
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Keterangan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.781795,
+            0.317583,
+            0.864965,
+            0.332304
+          ],
+          "tokens": [
+            {
+              "text": "Keterangan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.781795,
+                0.317583,
+                0.864965,
+                0.332304
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.096822,
+            0.343661,
+            0.105228,
+            0.35835
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.096822,
+                0.343661,
+                0.105228,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Server Dell PowerEdge R750",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.138823,
+            0.343661,
+            0.336278,
+            0.35835
+          ],
+          "tokens": [
+            {
+              "text": "Server",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138823,
+                0.343661,
+                0.183348,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Dell",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.187551,
+                0.343661,
+                0.213586,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "PowerEdge",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.21779,
+                0.343661,
+                0.29594,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "R750",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.300143,
+                0.343661,
+                0.336278,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "1 Unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.635645,
+            0.343661,
+            0.675136,
+            0.35835
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.635645,
+                0.343661,
+                0.644051,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.648254,
+                0.343661,
+                0.675136,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Baru (Garansi 3 Thn)",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.726786,
+            0.343661,
+            0.868784,
+            0.35835
+          ],
+          "tokens": [
+            {
+              "text": "Baru",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726786,
+                0.343661,
+                0.758717,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "(Garansi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.76292,
+                0.343661,
+                0.820887,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.82509,
+                0.343661,
+                0.833496,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Thn)",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.837699,
+                0.343661,
+                0.868784,
+                0.35835
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.096822,
+            0.369793,
+            0.105228,
+            0.384481
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.096822,
+                0.369793,
+                0.105228,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Switch Cisco Catalyst 24 Port",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.138823,
+            0.369793,
+            0.337109,
+            0.384481
+          ],
+          "tokens": [
+            {
+              "text": "Switch",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138823,
+                0.369793,
+                0.183348,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Cisco",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.187551,
+                0.369793,
+                0.225349,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Catalyst",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.229552,
+                0.369793,
+                0.284162,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "24",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.288365,
+                0.369793,
+                0.305178,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Port",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.309381,
+                0.369793,
+                0.337109,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "3 Unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.635645,
+            0.369793,
+            0.675136,
+            0.384481
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.635645,
+                0.369793,
+                0.644051,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.648254,
+                0.369793,
+                0.675136,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Baik / Segel Intakt",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.726786,
+            0.369793,
+            0.848645,
+            0.384481
+          ],
+          "tokens": [
+            {
+              "text": "Baik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726786,
+                0.369793,
+                0.756192,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "/",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.760395,
+                0.369793,
+                0.764598,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Segel",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.768802,
+                0.369793,
+                0.807461,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Intakt",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.811664,
+                0.369793,
+                0.848645,
+                0.384481
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "3",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.096822,
+            0.395925,
+            0.105228,
+            0.410613
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.096822,
+                0.395925,
+                0.105228,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Kabel UTP Cat6 Belden 305m",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.138823,
+            0.395925,
+            0.341342,
+            0.410613
+          ],
+          "tokens": [
+            {
+              "text": "Kabel",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138823,
+                0.395925,
+                0.177482,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "UTP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.181685,
+                0.395925,
+                0.211923,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Cat6",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.216126,
+                0.395925,
+                0.248058,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Belden",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252261,
+                0.395925,
+                0.299327,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "305m",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.30353,
+                0.395925,
+                0.341342,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "5 Roll",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.636068,
+            0.395925,
+            0.674712,
+            0.410613
+          ],
+          "tokens": [
+            {
+              "text": "5",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.636068,
+                0.395925,
+                0.644474,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Roll",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.648677,
+                0.395925,
+                0.674712,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Baru",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.726786,
+            0.395925,
+            0.758717,
+            0.410613
+          ],
+          "tokens": [
+            {
+              "text": "Baru",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726786,
+                0.395925,
+                0.758717,
+                0.410613
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "4",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.096822,
+            0.422056,
+            0.105228,
+            0.436745
+          ],
+          "tokens": [
+            {
+              "text": "4",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.096822,
+                0.422056,
+                0.105228,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "UPS APC Smart-UPS 2000VA",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.138823,
+            0.422056,
+            0.343837,
+            0.436745
+          ],
+          "tokens": [
+            {
+              "text": "UPS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138823,
+                0.422056,
+                0.169908,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "APC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.174111,
+                0.422056,
+                0.205195,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Smart-UPS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.209398,
+                0.422056,
+                0.28584,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "2000VA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.290043,
+                0.422056,
+                0.343837,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "2 Unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.635645,
+            0.422056,
+            0.675136,
+            0.436745
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.635645,
+                0.422056,
+                0.644051,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.648254,
+                0.422056,
+                0.675136,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Lengkap dengan Baterai",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.726786,
+            0.422056,
+            0.891523,
+            0.436745
+          ],
+          "tokens": [
+            {
+              "text": "Lengkap",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726786,
+                0.422056,
+                0.784782,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "dengan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.788985,
+                0.422056,
+                0.839423,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Baterai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.843626,
+                0.422056,
+                0.891523,
+                0.436745
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Dokumen ini dibuat sebagai bukti serah terima barang yang sah dan dapat digunakan sesuai ketentuan yang",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.454038,
+            0.886866,
+            0.470358
+          ],
+          "tokens": [
+            {
+              "text": "Dokumen",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.454038,
+                0.149158,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.153828,
+                0.454038,
+                0.170627,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "dibuat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.175297,
+                0.454038,
+                0.221057,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.225727,
+                0.454038,
+                0.284557,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "bukti",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.289227,
+                0.454038,
+                0.324707,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "serah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.329377,
+                0.454038,
+                0.371391,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "terima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.376061,
+                0.454038,
+                0.422729,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.427399,
+                0.454038,
+                0.479694,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.484364,
+                0.454038,
+                0.520784,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "sah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.525454,
+                0.454038,
+                0.552534,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.557204,
+                0.454038,
+                0.585225,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "dapat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.589895,
+                0.454038,
+                0.631926,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "digunakan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.636596,
+                0.454038,
+                0.714106,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "sesuai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.718776,
+                0.454038,
+                0.767325,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "ketentuan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.771995,
+                0.454038,
+                0.845776,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.850446,
+                0.454038,
+                0.886866,
+                0.470358
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "berlaku.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.470667,
+            0.137029,
+            0.486988
+          ],
+          "tokens": [
+            {
+              "text": "berlaku.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.470667,
+                0.137029,
+                0.486988
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Surabaya, 12 November 2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.698627,
+            0.520555,
+            0.922725,
+            0.536875
+          ],
+          "tokens": [
+            {
+              "text": "Surabaya,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.698627,
+                0.520555,
+                0.775197,
+                0.536875
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "12",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.779867,
+                0.520555,
+                0.798547,
+                0.536875
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "November",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.803217,
+                0.520555,
+                0.880694,
+                0.536875
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.885364,
+                0.520555,
+                0.922725,
+                0.536875
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "Penerima",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.249872,
+            0.557377,
+            0.321755,
+            0.573697
+          ],
+          "tokens": [
+            {
+              "text": "Penerima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.249872,
+                0.557377,
+                0.321755,
+                0.573697
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "Yang Menyerahkan",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.641355,
+            0.557377,
+            0.787018,
+            0.573697
+          ],
+          "tokens": [
+            {
+              "text": "Yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.641355,
+                0.557377,
+                0.68058,
+                0.573697
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Menyerahkan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.68525,
+                0.557377,
+                0.787018,
+                0.573697
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "( Andi Wijaya )",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.231209,
+            0.646462,
+            0.340418,
+            0.662783
+          ],
+          "tokens": [
+            {
+              "text": "(",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.231209,
+                0.646462,
+                0.236803,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Andi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.241473,
+                0.646462,
+                0.275087,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Wijaya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.279757,
+                0.646462,
+                0.330154,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": ")",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.334824,
+                0.646462,
+                0.340418,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "( PT Nusantara Tech Solusindo )",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.591882,
+            0.646462,
+            0.836491,
+            0.662783
+          ],
+          "tokens": [
+            {
+              "text": "(",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.591882,
+                0.646462,
+                0.597476,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.602146,
+                0.646462,
+                0.623615,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Nusantara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.628285,
+                0.646462,
+                0.705779,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Tech",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.710449,
+                0.646462,
+                0.747793,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Solusindo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.752463,
+                0.646462,
+                0.826227,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": ")",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.830897,
+                0.646462,
+                0.836491,
+                0.662783
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.071627,
+            0.053641,
+            0.688125,
+            0.1936
+          ],
+          "confidence": 0.95,
+          "text_snippet": "HASHMICROTHINK FORWARD SURAT TANDA TERIMA BARANG Nomor: STTB/11/2025/104 Yang bertanda tangan di baw"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.071627,
+            0.113115,
+            0.868784,
+            0.384481
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Nomor: STTB/11/2025/104 Nama : Andi Wijaya Jabatan : IT Infrastructure Lead Alamat : Jl. Pemuda No. "
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.077275,
+            0.317583,
+            0.922725,
+            0.662783
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Qty 2 Switch Cisco Catalyst 24 Port 3 Unit Baik / Segel Intakt 3 Kabel UTP Cat6 Belden 305m 5 Roll B"
+        },
+        {
+          "region_type": "signature_block",
+          "bbox_norm": [
+            0.249872,
+            0.557377,
+            0.321755,
+            0.573697
+          ],
+          "confidence": 0.9,
+          "text_snippet": "Penerima"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.077275,
+            0.343661,
+            0.922725,
+            0.662783
+          ],
+          "headers": [
+            "Server",
+            "Dell",
+            "PowerEdge",
+            "R750"
+          ],
+          "rows": [
+            [
+              "Baru",
+              "(Garansi",
+              "3",
+              "Thn)"
+            ],
+            [
+              "Switch",
+              "Cisco",
+              "Catalyst",
+              "24",
+              "Port"
+            ],
+            [
+              "Baik",
+              "/",
+              "Segel",
+              "Intakt"
+            ],
+            [
+              "Kabel",
+              "UTP",
+              "Cat6",
+              "Belden",
+              "305m"
+            ],
+            [
+              "UPS",
+              "APC",
+              "Smart-UPS",
+              "2000VA"
+            ],
+            [
+              "Lengkap",
+              "dengan",
+              "Baterai"
+            ],
+            [
+              "Dokumen",
+              "ini",
+              "dibuat",
+              "sebagai",
+              "bukti",
+              "serah",
+              "terima",
+              "barang",
+              "yang",
+              "sah",
+              "dan",
+              "dapat",
+              "digunakan",
+              "sesuai",
+              "ketentuan",
+              "yang"
+            ],
+            [
+              "Surabaya,",
+              "12",
+              "November",
+              "2025"
+            ],
+            [
+              "(",
+              "Andi",
+              "Wijaya",
+              ")"
+            ],
+            [
+              "(",
+              "PT",
+              "Nusantara",
+              "Tech",
+              "Solusindo",
+              ")"
+            ]
+          ],
+          "row_count": 10,
+          "col_count": 4,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.9336,
+        "probabilities": {
+          "INVOICE": 0.1093,
+          "SURAT_JALAN": 0.1762,
+          "POD": 0.4492,
+          "RATE_AGREEMENT": 0.0761,
+          "UNKNOWN": 0.1893
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 547.04,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

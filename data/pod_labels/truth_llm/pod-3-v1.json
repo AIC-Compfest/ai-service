@@ -1,0 +1,100 @@
+{
+  "document_id": "pod-3-v1",
+  "doc_type": "POD",
+  "prompt_version": "extract_truth_v1",
+  "llm_model": "fake-local",
+  "fields": {
+    "nomor_berita_acara": {
+      "status": "present",
+      "value_text": "015/BAST-KSO/2024",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "hari": {
+      "status": "present",
+      "value_text": "Selasa",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "tanggal": {
+      "status": "present",
+      "value_text": "14 Agustus 2024",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_nama": {
+      "status": "present",
+      "value_text": "Ir. Joko Widodo",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_jabatan": {
+      "status": "present",
+      "value_text": "Pejabat Pembuat Komitmen",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_alamat": {
+      "status": "present",
+      "value_text": "Jl. Diponegoro No. 22, Semarang",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_nama": {
+      "status": "present",
+      "value_text": "Bambang Pamungkas",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_jabatan": {
+      "status": "present",
+      "value_text": "Kuasa Direktur PT Konstruksi Kokoh",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_alamat": {
+      "status": "present",
+      "value_text": "Jl. Pahlawan No. 88, Semarang",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    }
+  },
+  "tables": [],
+  "m_pipeline_version": ""
+}

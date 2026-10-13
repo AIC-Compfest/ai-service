@@ -1,0 +1,40 @@
+always_drop_prefixes:
+- m_
+- ctx_
+- label_
+- prelabel__
+always_drop_names:
+- cell_text
+- value_parsed
+- value_alt
+- header_raw
+- header_norm
+- field_top2
+- li_product_partner_cols
+- field_norm
+- field_score
+- row_idx
+- col_idx
+- table_id
+- li_field
+drop_default:
+- a_value
+- wt_value
+- wt_value_alt
+- qt_value
+- pc_value
+- dy_value
+- dt_year
+- dt_month
+- dt_day
+- tm_hour
+- tm_minute
+- id_prefix_alpha
+- li_col_sum
+ablate:
+- a_log10
+- qt_log
+- li_log10_median
+- li_log10_max
+- a_n_digits
+- id_len

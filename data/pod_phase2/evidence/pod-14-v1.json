@@ -1,0 +1,2874 @@
+{
+  "document_id": "pod-14-v1",
+  "source_file": "PoD_14_variasi_1.pdf",
+  "source_sha256": "bf361d0dcd37cefb7d33af88e817a4eba20925a3f46c53413ddb22ca43a888ba",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "UNKNOWN",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.2805,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": true
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [
+      1
+    ],
+    "POD": [],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "SURAT_JALAN",
+    "confidence": 0.2805,
+    "requires_human_review": true,
+    "probabilities": {
+      "INVOICE": 0.2437,
+      "SURAT_JALAN": 0.2805,
+      "POD": 0.2536,
+      "RATE_AGREEMENT": 0.0782,
+      "UNKNOWN": 0.1439
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_tfidf_logistic_regression",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.98,
+      "quality": {
+        "blur_score": 1040.68,
+        "brightness": 250.31,
+        "contrast": 29.05,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-14-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "bb27f8dcf811a819dbc56f7b8c763e8f33ef5ff4da2e145dbaa1c734b4203175"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "FedEx.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.048059,
+            0.188004,
+            0.084042
+          ],
+          "tokens": [
+            {
+              "text": "FedEx.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.048059,
+                0.188004,
+                0.084042
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "786831485738",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.073501,
+            0.249888,
+            0.099671
+          ],
+          "tokens": [
+            {
+              "text": "786831485738",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.073501,
+                0.249888,
+                0.099671
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.09386,
+            0.176436,
+            0.116759
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.09386,
+                0.176436,
+                0.116759
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Friday 5/17/2019 at 1:42 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.109664,
+            0.259649,
+            0.124352
+          ],
+          "tokens": [
+            {
+              "text": "Friday",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.109664,
+                0.112556,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "5/17/2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.116759,
+                0.109664,
+                0.184009,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.188212,
+                0.109664,
+                0.200821,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "1:42",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.205024,
+                0.109664,
+                0.234446,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.238649,
+                0.109664,
+                0.259649,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "FROM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.141871,
+            0.101112,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "FROM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.141871,
+                0.101112,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "DELIVERED",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.141871,
+            0.430762,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERED",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.141871,
+                0.430762,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "TO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.141871,
+            0.664818,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "TO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.141871,
+                0.664818,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Cell Phone DIY",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.159605,
+            0.169089,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "Cell",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.159605,
+                0.089276,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Phone",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.093479,
+                0.159605,
+                0.139683,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "DIY",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143886,
+                0.159605,
+                0.169089,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "377 Lauderdale Dr",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.174993,
+            0.186764,
+            0.189682
+          ],
+          "tokens": [
+            {
+              "text": "377",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.174993,
+                0.086766,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Lauderdale",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.090969,
+                0.174993,
+                0.16661,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Dr",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.170813,
+                0.174993,
+                0.186764,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Maple, ON CA L6A4K9",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.190435,
+            0.217002,
+            0.205123
+          ],
+          "tokens": [
+            {
+              "text": "Maple,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.190435,
+                0.10692,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.111123,
+                0.190435,
+                0.133802,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138005,
+                0.190435,
+                0.159005,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "L6A4K9",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.163208,
+                0.190435,
+                0.217002,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "289 385-1919",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.205876,
+            0.154847,
+            0.220564
+          ],
+          "tokens": [
+            {
+              "text": "289",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.205876,
+                0.086766,
+                0.220564
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "385-1919",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.090969,
+                0.205876,
+                0.154847,
+                0.220564
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Signature release on file",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.159605,
+            0.528625,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "Signature",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.159605,
+                0.423578,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "release",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.427781,
+                0.159605,
+                0.479897,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "on",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.4841,
+                0.159605,
+                0.502575,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "file",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.506778,
+                0.159605,
+                0.528625,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Pierre Toubia",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.159605,
+            0.742777,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "Pierre",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.159605,
+                0.689013,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Toubia",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.693216,
+                0.159605,
+                0.742777,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Laval, PQ CA H7Y1A8",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.174993,
+            0.798248,
+            0.189682
+          ],
+          "tokens": [
+            {
+              "text": "Laval,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.174993,
+                0.686488,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "PQ",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.690692,
+                0.174993,
+                0.712539,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.716742,
+                0.174993,
+                0.737742,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "H7Y1A8",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.741945,
+                0.174993,
+                0.798248,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "438 876-3178",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.190435,
+            0.73945,
+            0.205123
+          ],
+          "tokens": [
+            {
+              "text": "438",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.190435,
+                0.671369,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "876-3178",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.675572,
+                0.190435,
+                0.73945,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Shipment Facts",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.241522,
+            0.189386,
+            0.25706
+          ],
+          "tokens": [
+            {
+              "text": "Shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.241522,
+                0.143265,
+                0.25706
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Facts",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.147701,
+                0.241522,
+                0.189386,
+                0.25706
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "TRACKING NUMBER",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.266543,
+            0.192956,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "TRACKING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.266543,
+                0.130988,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "NUMBER",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.134724,
+                0.266543,
+                0.192956,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "SERVICE",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.266543,
+            0.412847,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "SERVICE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.266543,
+                0.412847,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "WEIGHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.266543,
+            0.699907,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "WEIGHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.266543,
+                0.699907,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "786831485738",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.285554,
+            0.156818,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "786831485738",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.285554,
+                0.156818,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "FedEx Standard Overnight",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.285554,
+            0.533966,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.285554,
+                0.396701,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Standard",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.40067,
+                0.285554,
+                0.462556,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Overnight",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.466526,
+                0.285554,
+                0.533966,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "0.5 lbs/0.23 kgs",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.285554,
+            0.750931,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "0.5",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.285554,
+                0.665999,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "lbs/0.23",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.669968,
+                0.285554,
+                0.722358,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "kgs",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726328,
+                0.285554,
+                0.750931,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "DELIVERY ATTEMPTS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.305147,
+            0.203438,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERY",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.305147,
+                0.128018,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "ATTEMPTS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.131754,
+                0.305147,
+                0.203438,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "DELIVERED TO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.305147,
+            0.452425,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERED",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.305147,
+                0.430022,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "TO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.433758,
+                0.305147,
+                0.452425,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "TOTAL PIECES",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.305147,
+            0.742496,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.305147,
+                0.689465,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "PIECES",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.693201,
+                0.305147,
+                0.742496,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.324158,
+            0.069487,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.324158,
+                0.069487,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Residence",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.324158,
+            0.425273,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "Residence",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.324158,
+                0.425273,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.324158,
+            0.65409,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.324158,
+                0.65409,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "TOTAL SHIPMENT WEIGHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.34375,
+            0.235531,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.34375,
+                0.104862,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "SHIPMENT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.108598,
+                0.34375,
+                0.178038,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "WEIGHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.181774,
+                0.34375,
+                0.235531,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "TERMS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.34375,
+            0.400886,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "TERMS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.34375,
+                0.400886,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "PACKAGING",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.34375,
+            0.72606,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "PACKAGING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.34375,
+                0.72606,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "0.5 lbs/0.23 kgs",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.362761,
+            0.166328,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "0.5",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.362761,
+                0.081396,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "lbs/0.23",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085365,
+                0.362761,
+                0.137755,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "kgs",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.141725,
+                0.362761,
+                0.166328,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Shipper",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.362761,
+            0.40701,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "Shipper",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.362761,
+                0.40701,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Your Packaging",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.362761,
+            0.754072,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "Your",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.362761,
+                0.678679,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Packaging",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.682648,
+                0.362761,
+                0.754072,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "SPECIAL HANDLING SECTION",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.382354,
+            0.254964,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "SPECIAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.382354,
+                0.118315,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "HANDLING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122051,
+                0.382354,
+                0.191491,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "SECTION",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.195227,
+                0.382354,
+                0.254964,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "STANDARD TRANSIT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.382354,
+            0.488993,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "STANDARD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.382354,
+                0.427765,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "TRANSIT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.431501,
+                0.382354,
+                0.488993,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "SHIP DATE",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.382354,
+            0.717096,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "SHIP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.382354,
+                0.677518,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "DATE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.681254,
+                0.382354,
+                0.717096,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Deliver Weekday, Residential Delivery.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.40127,
+            0.321988,
+            0.415958
+          ],
+          "tokens": [
+            {
+              "text": "Deliver",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.40127,
+                0.108583,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Weekday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.112786,
+                0.40127,
+                0.180005,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Residential",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.184208,
+                0.40127,
+                0.258987,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Delivery.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.26319,
+                0.40127,
+                0.321988,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Saturday Pickup",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.416711,
+            0.171629,
+            0.4314
+          ],
+          "tokens": [
+            {
+              "text": "Saturday",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.416711,
+                0.122054,
+                0.4314
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "Pickup",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126257,
+                0.416711,
+                0.171629,
+                0.4314
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "5/17/2019 by 8:00 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.401365,
+            0.495926,
+            0.415268
+          ],
+          "tokens": [
+            {
+              "text": "5/17/2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.401365,
+                0.417363,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.421332,
+                0.401365,
+                0.437996,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "8:00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.441966,
+                0.401365,
+                0.470538,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.474508,
+                0.401365,
+                0.495926,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Thu 5/16/2019",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.401365,
+            0.739807,
+            0.415268
+          ],
+          "tokens": [
+            {
+              "text": "Thu",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.401365,
+                0.672324,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "5/16/2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.676294,
+                0.401365,
+                0.739807,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Travel History",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.453545,
+            0.176986,
+            0.469083
+          ],
+          "tokens": [
+            {
+              "text": "Travel",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.453545,
+                0.117571,
+                0.469083
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "History",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122007,
+                0.453545,
+                0.176986,
+                0.469083
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "Date/Time",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.480989,
+            0.125773,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Date/Time",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.480989,
+                0.125773,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Activity",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.480989,
+            0.311677,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Activity",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.480989,
+                0.311677,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Location",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.480989,
+            0.755908,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Location",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.480989,
+                0.755908,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Friday, 5/17/2019",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.503421,
+            0.179204,
+            0.518109
+          ],
+          "tokens": [
+            {
+              "text": "Friday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.503421,
+                0.107751,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "5/17/2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.111955,
+                0.503421,
+                0.179204,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "1:42 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.518862,
+            0.116173,
+            0.533551
+          ],
+          "tokens": [
+            {
+              "text": "1:42",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.518862,
+                0.090969,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.518862,
+                0.116173,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.503474,
+            0.331201,
+            0.518195
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.503474,
+                0.331201,
+                0.518195
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Left at front door, Package delivered to recipient address",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.518862,
+            0.642986,
+            0.533551
+          ],
+          "tokens": [
+            {
+              "text": "Left",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.518862,
+                0.288354,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.292557,
+                0.518862,
+                0.305166,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "front",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.309369,
+                0.518862,
+                0.339622,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "door,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.343825,
+                0.518862,
+                0.378282,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "Package",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.382485,
+                0.518862,
+                0.441313,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.445516,
+                0.518862,
+                0.506854,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "to",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.511057,
+                0.518862,
+                0.523666,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "recipient",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.527869,
+                0.518862,
+                0.585004,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "address",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.589207,
+                0.518862,
+                0.642986,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Laval, PQ",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.503421,
+            0.766295,
+            0.518109
+          ],
+          "tokens": [
+            {
+              "text": "Laval,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.503421,
+                0.740245,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "PQ",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.744448,
+                0.503421,
+                0.766295,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "10:07 am",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.543806,
+            0.124579,
+            0.558495
+          ],
+          "tokens": [
+            {
+              "text": "10:07",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.543806,
+                0.099375,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "am",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.103579,
+                0.543806,
+                0.124579,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "release authorized",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.54386,
+            0.395895,
+            0.55858
+          ],
+          "tokens": [
+            {
+              "text": "release",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.54386,
+                0.31525,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "authorized",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.319453,
+                0.54386,
+                0.395895,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "MIRABEL, PQ",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.543806,
+            0.796533,
+            0.558495
+          ],
+          "tokens": [
+            {
+              "text": "MIRABEL,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.543806,
+                0.770483,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "PQ",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.774686,
+                0.543806,
+                0.796533,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "7:49 am",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.56875,
+            0.116173,
+            0.583439
+          ],
+          "tokens": [
+            {
+              "text": "7:49",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.56875,
+                0.090969,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "am",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.56875,
+                0.116173,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "On FedEx vehicle for delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.568804,
+            0.474892,
+            0.583524
+          ],
+          "tokens": [
+            {
+              "text": "On",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.568804,
+                0.284135,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.288338,
+                0.568804,
+                0.333711,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "vehicle",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.337914,
+                0.568804,
+                0.389182,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.393386,
+                0.568804,
+                0.413539,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.417742,
+                0.568804,
+                0.474892,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "MIRABEL, PQ",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.56875,
+            0.796533,
+            0.583439
+          ],
+          "tokens": [
+            {
+              "text": "MIRABEL,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.56875,
+                0.770483,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "PQ",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.774686,
+                0.56875,
+                0.796533,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "6:48 am",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.593694,
+            0.116173,
+            0.608382
+          ],
+          "tokens": [
+            {
+              "text": "6:48",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.593694,
+                0.090969,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "am",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.593694,
+                0.116173,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "At local FedEx facility",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.593748,
+            0.419421,
+            0.608468
+          ],
+          "tokens": [
+            {
+              "text": "At",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.593748,
+                0.279086,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "local",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.283289,
+                0.593748,
+                0.317745,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.321948,
+                0.593748,
+                0.36732,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "facility",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.371523,
+                0.593748,
+                0.419421,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "MIRABEL, PQ",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.593694,
+            0.796533,
+            0.608382
+          ],
+          "tokens": [
+            {
+              "text": "MIRABEL,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.593694,
+                0.770483,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "PQ",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.774686,
+                0.593694,
+                0.796533,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "Thursday, 5/16/2019",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.618638,
+            0.20022,
+            0.633326
+          ],
+          "tokens": [
+            {
+              "text": "Thursday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.618638,
+                0.128767,
+                0.633326
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "5/16/2019",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.13297,
+                0.618638,
+                0.20022,
+                0.633326
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "10:02 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.634079,
+            0.124579,
+            0.648768
+          ],
+          "tokens": [
+            {
+              "text": "10:02",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.634079,
+                0.099375,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.103579,
+                0.634079,
+                0.124579,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            }
+          ]
+        },
+        {
+          "text": "In transit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.618691,
+            0.326983,
+            0.633412
+          ],
+          "tokens": [
+            {
+              "text": "In",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.618691,
+                0.276576,
+                0.633412
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "transit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.280779,
+                0.618691,
+                0.326983,
+                0.633412
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "MISSISSAUGA, ON",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.618638,
+            0.835178,
+            0.633326
+          ],
+          "tokens": [
+            {
+              "text": "MISSISSAUGA,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.618638,
+                0.808296,
+                0.633326
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.812499,
+                0.618638,
+                0.835178,
+                0.633326
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "8:10 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.659023,
+            0.116173,
+            0.673712
+          ],
+          "tokens": [
+            {
+              "text": "8:10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.659023,
+                0.090969,
+                0.673712
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.659023,
+                0.116173,
+                0.673712
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            }
+          ]
+        },
+        {
+          "text": "Left FedEx origin facility",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.659077,
+            0.438728,
+            0.673797
+          ],
+          "tokens": [
+            {
+              "text": "Left",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.659077,
+                0.290848,
+                0.673797
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            },
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.295051,
+                0.659077,
+                0.340424,
+                0.673797
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            },
+            {
+              "text": "origin",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.344627,
+                0.659077,
+                0.386627,
+                0.673797
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            },
+            {
+              "text": "facility",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.39083,
+                0.659077,
+                0.438728,
+                0.673797
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            }
+          ]
+        },
+        {
+          "text": "MARKHAM, ON",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.659023,
+            0.808266,
+            0.673712
+          ],
+          "tokens": [
+            {
+              "text": "MARKHAM,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.659023,
+                0.781384,
+                0.673712
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.785587,
+                0.659023,
+                0.808266,
+                0.673712
+              ],
+              "_estimated": false,
+              "row_idx": 26
+            }
+          ]
+        },
+        {
+          "text": "5:45 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.683967,
+            0.116173,
+            0.698656
+          ],
+          "tokens": [
+            {
+              "text": "5:45",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.683967,
+                0.090969,
+                0.698656
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.683967,
+                0.116173,
+                0.698656
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            }
+          ]
+        },
+        {
+          "text": "Picked up",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.684021,
+            0.334557,
+            0.698741
+          ],
+          "tokens": [
+            {
+              "text": "Picked",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.684021,
+                0.311879,
+                0.698741
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            },
+            {
+              "text": "up",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.316082,
+                0.684021,
+                0.334557,
+                0.698741
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            }
+          ]
+        },
+        {
+          "text": "MARKHAM, ON",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.683967,
+            0.808266,
+            0.698656
+          ],
+          "tokens": [
+            {
+              "text": "MARKHAM,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.683967,
+                0.781384,
+                0.698656
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.785587,
+                0.683967,
+                0.808266,
+                0.698656
+              ],
+              "_estimated": false,
+              "row_idx": 27
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.061548,
+            0.048059,
+            0.798248,
+            0.189682
+          ],
+          "confidence": 0.95,
+          "text_snippet": "FedEx. 786831485738 Delivered Friday 5/17/2019 at 1:42 pm FROM DELIVERED TO Cell Phone DIY 377 Laude"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.061548,
+            0.159605,
+            0.798248,
+            0.494074
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Cell Phone DIY 377 Lauderdale Dr Maple, ON CA L6A4K9 289 385-1919 Signature release on file Pierre T"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.061548,
+            0.362761,
+            0.835178,
+            0.698741
+          ],
+          "confidence": 0.94,
+          "text_snippet": "0.5 lbs/0.23 kgs Shipper Your Packaging SPECIAL HANDLING SECTION STANDARD TRANSIT SHIP DATE Deliver "
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.061548,
+            0.34375,
+            0.642986,
+            0.673797
+          ],
+          "headers": [
+            "TOTAL",
+            "SHIPMENT",
+            "WEIGHT"
+          ],
+          "rows": [
+            [
+              "0.5",
+              "lbs/0.23",
+              "kgs"
+            ],
+            [
+              "SPECIAL",
+              "HANDLING",
+              "SECTION"
+            ],
+            [
+              "Deliver",
+              "Weekday,",
+              "Residential",
+              "Delivery."
+            ],
+            [
+              "5/17/2019",
+              "by",
+              "8:00",
+              "pm"
+            ],
+            [
+              "Left",
+              "at",
+              "front",
+              "door,",
+              "Package",
+              "delivered",
+              "to",
+              "recipient",
+              "address"
+            ],
+            [
+              "On",
+              "FedEx",
+              "vehicle",
+              "for",
+              "delivery"
+            ],
+            [
+              "At",
+              "local",
+              "FedEx",
+              "facility"
+            ],
+            [
+              "Left",
+              "FedEx",
+              "origin",
+              "facility"
+            ]
+          ],
+          "row_count": 8,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "SURAT_JALAN",
+        "confidence": 0.2805,
+        "probabilities": {
+          "INVOICE": 0.2437,
+          "SURAT_JALAN": 0.2805,
+          "POD": 0.2536,
+          "RATE_AGREEMENT": 0.0782,
+          "UNKNOWN": 0.1439
+        },
+        "requires_human_review": true,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_tfidf_logistic_regression"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 389.27,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

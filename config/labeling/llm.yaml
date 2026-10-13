@@ -1,0 +1,6 @@
+provider: fake
+model: fake-local
+temperature: 0
+max_images_per_call: 6
+dpi: 150
+max_cost_usd: 0

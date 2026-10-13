@@ -1,0 +1,5053 @@
+{
+  "ctx_above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_above",
+    "nullable": false,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "(Garansi Baru",
+      "(Garansi Baru Segel / Baik",
+      "05 Semarang,",
+      "0813-9876-5432 Tech Nusantara PT dari",
+      "0821-4567-8901 Utama Medika PT dari",
+      "1 2 3",
+      "1 TE-171 Terumo Pump Infuse 2 @50pcs) (Box 3-Ply Medis Masker 3",
+      "12 Surabaya,",
+      "3 (Garansi Baru Intakt Segel / Baik Baru",
+      "4 uMEC10 Mindray Unit 6 TE-171 Terumo Box 100 @50pcs) (Box 3-Ply",
+      "Baik Kondisi",
+      "Barang Nama No R750 PowerEdge Dell Server 1",
+      "Barang Nama R750 PowerEdge Port 24 Catalyst",
+      "Barang Nama uMEC10 Mindray TE-171",
+      "FORWARD HASHMICROTHINK",
+      "FORWARD HASHMICROTHINK BARANG TERIMA TANDA",
+      "Jabatan Semarang 15, No. Pandanaran Jl. : Alamat 0821-4567-8901 : Telp No.",
+      "Jabatan Surabaya 88, No. Pemuda Jl. : Alamat 0813-9876-5432 : Telp No.",
+      "Kabel 3 Baterai dengan Lengkap Unit 2 2000VA Smart-UPS APC UPS 4",
+      "Kabel 3 UPS 4 ini Dokumen",
+      "Kalibrasi & Baik Kondisi Baru Rapi Tersegel",
+      "Keterangan",
+      "Keterangan Kalibrasi & Baik Kondisi Baru",
+      "Keterangan Thn) 3 (Garansi Baru",
+      "Masker 3 Hand 4 ini Dokumen",
+      "Masker 3 Utuh Kondisi Galon 20 Liter 5 Liquid Sanitizer Hand 4",
+      "Mindray Monitor TE-171 Terumo Pump",
+      "Nama Jabatan Alamat",
+      "Nama No uMEC10 Mindray Monitor Patient 1",
+      "Nama No uMEC10 Mindray Monitor Patient 1 TE-171 Terumo Pump Infuse 2",
+      "Nama R750 PowerEdge",
+      "Nama uMEC10 Mindray",
+      "No 1",
+      "No 1 2",
+      "No R750 PowerEdge Dell Server 1 Port 24 Catalyst Cisco Switch 2",
+      "Nomor: ini: bawah di tangan Wijaya Andi :",
+      "Nusantara PT dari Barang Nama",
+      "Nusantara PT dari barang menerima Telah Barang Nama No",
+      "Port 24 Catalyst Cisco Switch 2 305m Belden Cat6 UTP Kabel 3",
+      "PowerEdge Dell 24 Catalyst Cisco",
+      "Qty Unit 1",
+      "Qty Unit 1 Unit 3",
+      "Qty Unit 4",
+      "Qty Unit 4 Unit 6",
+      "R750 PowerEdge Port 24 Catalyst 305m Belden",
+      "STTB/12/2025/219 Nomor: ini: bawah di tangan Sari Ratna Dr. :",
+      "SURAT",
+      "SURAT ini: bawah di tangan",
+      "Sari Ratna Dr. : Penanggung Kepala : 15, No. Pandanaran Jl. :",
+      "Telah No",
+      "Thn) 3 (Garansi Baru Intakt Segel / Baik Baru",
+      "Unit 1 Unit 3 Roll 5",
+      "Unit 4 Unit 6 Box 100",
+      "Utama Medika PT dari Barang Nama",
+      "Utama Medika PT dari barang menerima Telah Barang Nama No",
+      "Wijaya Andi : Lead Infrastructure IT : 88, No. Pemuda Jl. :",
+      "bawah di tangan Sari Ratna Dr. : Medis Jawab Penanggung Kepala :",
+      "berikut: Keterangan",
+      "berikut: sebagai rincian",
+      "berikut: sebagai rincian Qty",
+      "bertanda Yang",
+      "bertanda Yang Nama",
+      "bertanda Yang Nama Jabatan",
+      "ini: Jawab Penanggung",
+      "ini: Lead",
+      "ini: bawah di tangan Wijaya Andi : Lead Infrastructure IT :",
+      "ketentuan sesuai",
+      "other",
+      "sebagai rincian",
+      "sebagai rincian Qty",
+      "uMEC10 Mindray TE-171 Terumo @50pcs) (Box 3-Ply",
+      "yang",
+      "yang ketentuan sesuai",
+      "yang ketentuan sesuai digunakan"
+    ]
+  },
+  "ctx_below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_below",
+    "nullable": false,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "1 Unit 3 Unit 5 Roll",
+      "100 Box 20 Galon dapat digunakan",
+      "2 3 4",
+      "2 3 4 UPS",
+      "2 Infuse Pump Terumo TE-171 3 Masker Medis 3-Ply (Box @50pcs) 4",
+      "2 Switch Cisco Catalyst 24 Port 3 Kabel UTP Cat6 Belden 305m",
+      "2 Unit dapat digunakan",
+      "20 Galon dapat digunakan",
+      "2000VA sebagai bukti serah",
+      "3 4 Dokumen",
+      "3 4 UPS Dokumen",
+      "3 Kabel UTP Cat6 Belden 305m 4 UPS APC Smart-UPS 2000VA Dokumen",
+      "3 Masker Medis 3-Ply (Box @50pcs) 4 Hand Sanitizer Liquid 5 Liter",
+      "3 Unit 5 Roll 2 Unit",
+      "3-Ply (Box @50pcs) Liquid 5 Liter sebagai bukti serah",
+      "4 Dokumen berlaku.",
+      "4 Hand Sanitizer Liquid 5 Liter Dokumen ini dibuat sebagai bukti serah",
+      "4 UPS APC Smart-UPS 2000VA Dokumen ini dibuat sebagai bukti serah berlaku.",
+      "4 UPS Dokumen berlaku.",
+      "4 Unit 6 Unit 100 Box",
+      "5 Roll 2 Unit dapat digunakan",
+      "6 Unit 100 Box 20 Galon",
+      ": 0813-9876-5432 barang dari PT Nusantara Tech Solusindo",
+      ": 0821-4567-8901 barang dari PT Medika Utama Indonesia",
+      ": IT Infrastructure : Jl. Pemuda No. 88, : 0813-9876-5432",
+      ": Jl. Pandanaran No. 15, Semarang : 0821-4567-8901 barang dari PT Medika",
+      ": Jl. Pemuda No. 88, Surabaya : 0813-9876-5432 barang dari PT Nusantara",
+      ": Kepala Penanggung : Jl. Pandanaran No. : 0821-4567-8901",
+      "APC Smart-UPS dibuat sebagai",
+      "Alamat No. Telp Telah menerima",
+      "Baik / Segel Intakt Baru Lengkap dengan Baterai",
+      "Baru (Garansi 3 Thn) Baik / Segel Intakt Baru",
+      "Baru Lengkap dengan Baterai sesuai ketentuan yang",
+      "Baru Lengkap sesuai",
+      "Baru Tersegel Rapi Kondisi Utuh",
+      "Belden 305m Smart-UPS 2000VA sebagai bukti serah",
+      "Catalyst 24 Port Belden 305m 2000VA",
+      "Dokumen berlaku.",
+      "Dokumen ini dibuat sebagai bukti serah berlaku.",
+      "Jabatan Alamat No. Telp",
+      "Jawab Medis",
+      "Kondisi Baik & Kalibrasi OK Baru Tersegel Rapi",
+      "Kondisi Utuh sesuai ketentuan yang",
+      "Lengkap sesuai",
+      "Liquid 5 Liter bukti serah terima",
+      "Medika Utama",
+      "Menyerahkan",
+      "Mindray uMEC10 TE-171 (Box @50pcs)",
+      "Nama : Andi Wijaya Jabatan : IT Infrastructure Lead Alamat : Jl.",
+      "Nama : Dr. Ratna Sari Jabatan : Kepala Penanggung Alamat : Jl.",
+      "No Nama Barang Qty 1 Patient Monitor Mindray uMEC10 4 Unit Kondisi",
+      "No Nama Barang Qty 1 Server Dell PowerEdge R750 1 Unit Baru",
+      "No. Telp Telah menerima",
+      "Nomor: STTB/11/2025/104 bawah ini: Wijaya",
+      "Nomor: STTB/12/2025/219 bawah ini: Ratna Sari",
+      "PT Nusantara Tech",
+      "R750 24 Port Belden 305m",
+      "SURAT TANDA TERIMA BARANG Nomor: STTB/11/2025/104",
+      "SURAT TANDA TERIMA BARANG Nomor: STTB/12/2025/219",
+      "Sanitizer Liquid 5 Liter dibuat sebagai bukti",
+      "Segel Intakt dengan Baterai",
+      "Telah menerima No",
+      "Tersegel Rapi Kondisi Utuh sesuai",
+      "Terumo TE-171 3-Ply (Box @50pcs) Liquid 5 Liter",
+      "Yang Menyerahkan",
+      "barang dari PT Medika Utama Nama Barang",
+      "barang dari PT Nusantara Nama Barang",
+      "berlaku. Semarang, 05 Desember 2025",
+      "berlaku. Surabaya, 12 November 2025",
+      "dapat digunakan",
+      "other",
+      "sebagai bukti",
+      "sebagai bukti serah",
+      "sebagai bukti serah terima barang yang sah dan dapat digunakan",
+      "sesuai ketentuan",
+      "sesuai ketentuan yang"
+    ]
+  },
+  "ctx_left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_left",
+    "nullable": false,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "( Andi Wijaya )",
+      "( Dr. Ratna Sari )",
+      "1",
+      "1 Patient Monitor Mindray",
+      "1 Server Dell PowerEdge",
+      "1 Unit Baru (Garansi",
+      "2",
+      "2 Infuse Pump Terumo",
+      "2 Switch Cisco Catalyst",
+      "2000VA 2 Unit",
+      "3",
+      "3 Kabel UTP",
+      "3 Kabel UTP Cat6 Belden",
+      "3 Masker Medis",
+      "3 Masker Medis 3-Ply (Box",
+      "305m 5 Roll",
+      "4",
+      "4 Hand Sanitizer Liquid",
+      "4 UPS APC Smart-UPS",
+      "4 Unit Kondisi",
+      "4 Unit Kondisi Baik & Kalibrasi",
+      "@50pcs) 100 Box",
+      "Alamat :",
+      "Alamat : Jl. Pandanaran No.",
+      "Alamat : Jl. Pemuda No.",
+      "Barang Qty",
+      "Cat6 Belden 305m",
+      "Catalyst 24 Port",
+      "Jabatan :",
+      "Liter 20 Galon",
+      "Medis 3-Ply (Box @50pcs)",
+      "Monitor Mindray uMEC10",
+      "Nama :",
+      "Nama Barang",
+      "No",
+      "No. Telp :",
+      "Nomor:",
+      "Penerima",
+      "Port 3 Unit",
+      "PowerEdge R750",
+      "R750 1 Unit",
+      "Sanitizer Liquid 5 Liter",
+      "Semarang,",
+      "Semarang, 05 Desember",
+      "Smart-UPS 2000VA",
+      "Surabaya,",
+      "Surabaya, 12 November",
+      "TE-171 6 Unit",
+      "Terumo TE-171",
+      "other",
+      "uMEC10 4 Unit"
+    ]
+  },
+  "ctx_line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_line",
+    "nullable": false,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "( Andi Wijaya )",
+      "( Dr. Ratna Sari )",
+      "( PT Medika Utama Indonesia )",
+      "( PT Nusantara Tech Solusindo )",
+      "1 1 Unit Baru (Garansi 3 Thn)",
+      "1 4 Unit Kondisi Baik & Kalibrasi OK",
+      "1 Patient Monitor Mindray 4 Unit Kondisi Baik & Kalibrasi OK",
+      "1 Patient Monitor Mindray uMEC10 4 Unit",
+      "1 Patient Monitor Mindray uMEC10 4 Unit Kondisi & Kalibrasi OK",
+      "1 Patient Monitor Mindray uMEC10 4 Unit Kondisi Baik & Kalibrasi",
+      "1 Patient Monitor Mindray uMEC10 Kondisi Baik & Kalibrasi OK",
+      "1 Patient Monitor Mindray uMEC10 Unit Kondisi Baik & Kalibrasi OK",
+      "1 Server Dell PowerEdge 1 Unit Baru (Garansi 3 Thn)",
+      "1 Server Dell PowerEdge R750 1 Unit",
+      "1 Server Dell PowerEdge R750 1 Unit Baru (Garansi Thn)",
+      "1 Server Dell PowerEdge R750 Baru (Garansi 3 Thn)",
+      "1 Server Dell PowerEdge R750 Unit Baru (Garansi 3 Thn)",
+      "2 3 Unit Baik / Segel Intakt",
+      "2 6 Unit Baru",
+      "2 Infuse Pump Terumo 6 Unit Baru",
+      "2 Infuse Pump Terumo TE-171 6 Unit",
+      "2 Infuse Pump Terumo TE-171 Baru",
+      "2 Infuse Pump Terumo TE-171 Unit Baru",
+      "2 Switch Cisco Catalyst 24 Port 3 Unit",
+      "2 Switch Cisco Catalyst 24 Port 3 Unit / Segel Intakt",
+      "2 Switch Cisco Catalyst 24 Port Baik / Segel Intakt",
+      "2 Switch Cisco Catalyst 24 Port Unit Baik / Segel Intakt",
+      "2 Switch Cisco Catalyst Port 3 Unit Baik / Segel Intakt",
+      "3 100 Box Tersegel Rapi",
+      "3 5 Roll Baru",
+      "3 Kabel UTP Belden 305m 5 Roll Baru",
+      "3 Kabel UTP Cat6 Belden 305m 5 Roll",
+      "3 Kabel UTP Cat6 Belden 305m Baru",
+      "3 Kabel UTP Cat6 Belden 305m Roll Baru",
+      "3 Kabel UTP Cat6 Belden 5 Roll Baru",
+      "3 Masker Medis (Box @50pcs) 100 Box Tersegel Rapi",
+      "3 Masker Medis 3-Ply (Box 100 Box Tersegel Rapi",
+      "3 Masker Medis 3-Ply (Box @50pcs) 100 Box",
+      "3 Masker Medis 3-Ply (Box @50pcs) Box Tersegel Rapi",
+      "4 2 Unit Lengkap dengan Baterai",
+      "4 20 Galon Kondisi Utuh",
+      "4 Hand Sanitizer Liquid 5 Liter 20 Galon",
+      "4 Hand Sanitizer Liquid 5 Liter Galon Kondisi Utuh",
+      "4 Hand Sanitizer Liquid 5 Liter Kondisi Utuh",
+      "4 Hand Sanitizer Liquid Galon Kondisi Utuh",
+      "4 Hand Sanitizer Liquid Liter 20 Galon Kondisi Utuh",
+      "4 UPS APC Smart-UPS 2 Unit Lengkap dengan Baterai",
+      "4 UPS APC Smart-UPS 2000VA 2 Unit",
+      "4 UPS APC Smart-UPS 2000VA 2 Unit dengan Baterai",
+      "4 UPS APC Smart-UPS 2000VA Lengkap dengan Baterai",
+      "4 UPS APC Smart-UPS 2000VA Unit Lengkap dengan Baterai",
+      ": 0813-9876-5432",
+      ": 0821-4567-8901",
+      ": Andi Wijaya",
+      ": Dr. Ratna Sari",
+      ": IT Infrastructure Lead",
+      ": Jl. Pandanaran No. 15, Semarang",
+      ": Jl. Pemuda No. 88, Surabaya",
+      ": Kepala Penanggung Jawab Medis",
+      "Alamat :",
+      "Alamat : Jl. Pandanaran No. Semarang",
+      "Alamat : Jl. Pemuda No. Surabaya",
+      "Hand Sanitizer Liquid 5 Liter 20 Galon Kondisi Utuh",
+      "Infuse Pump Terumo TE-171 6 Unit Baru",
+      "Jabatan :",
+      "Kabel UTP Cat6 Belden 305m 5 Roll Baru",
+      "Masker Medis 3-Ply (Box @50pcs) 100 Box Tersegel Rapi",
+      "Nama :",
+      "No Nama Barang Keterangan",
+      "No Nama Barang Qty",
+      "No Qty Keterangan",
+      "No. Telp :",
+      "Nomor:",
+      "Patient Monitor Mindray uMEC10 4 Unit Kondisi Baik & Kalibrasi OK",
+      "Penerima",
+      "Semarang,",
+      "Semarang, 05 Desember",
+      "Semarang, Desember 2025",
+      "Server Dell PowerEdge R750 1 Unit Baru (Garansi 3 Thn)",
+      "Surabaya,",
+      "Surabaya, 12 November",
+      "Surabaya, November 2025",
+      "Switch Cisco Catalyst 24 Port 3 Unit Baik / Segel Intakt",
+      "UPS APC Smart-UPS 2000VA 2 Unit Lengkap dengan Baterai",
+      "Yang Menyerahkan",
+      "other"
+    ]
+  },
+  "ctx_right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_right",
+    "nullable": true,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "& Kalibrasi OK",
+      "( PT Medika Utama Indonesia",
+      "( PT Nusantara Tech",
+      "(Box @50pcs) 100 Box",
+      "/ Segel Intakt",
+      "1 Unit Baru",
+      "100 Box Tersegel",
+      "2 Unit Lengkap",
+      "20 Galon Kondisi",
+      "3 Unit Baik",
+      "4 Unit Kondisi",
+      "5 Roll Baru",
+      "6 Unit Baru",
+      ": 0813-9876-5432",
+      ": 0821-4567-8901",
+      ": Andi Wijaya",
+      ": Dr. Ratna Sari",
+      ": IT Infrastructure Lead",
+      ": Jl. Pandanaran No. 15, Semarang",
+      ": Jl. Pemuda No. 88, Surabaya",
+      ": Kepala Penanggung Jawab Medis",
+      "Baik / Segel Intakt",
+      "Baru",
+      "Baru (Garansi 3 Thn)",
+      "Belden 305m 5",
+      "Box Tersegel Rapi",
+      "Desember 2025",
+      "Galon Kondisi Utuh",
+      "Hand Sanitizer Liquid 5 Liter",
+      "Infuse Pump Terumo TE-171",
+      "Kabel UTP Cat6 Belden 305m",
+      "Keterangan",
+      "Kondisi Baik & Kalibrasi OK",
+      "Kondisi Utuh",
+      "Lengkap dengan Baterai",
+      "Liter 20 Galon",
+      "Masker Medis 3-Ply (Box @50pcs)",
+      "November 2025",
+      "Patient Monitor Mindray uMEC10",
+      "Port 3 Unit",
+      "Qty Keterangan",
+      "Roll Baru",
+      "Semarang",
+      "Server Dell PowerEdge R750",
+      "Surabaya",
+      "Switch Cisco Catalyst 24 Port",
+      "Thn)",
+      "UPS APC Smart-UPS 2000VA",
+      "Unit Baik / Segel Intakt",
+      "Unit Baru",
+      "Unit Baru (Garansi 3 Thn)",
+      "Unit Kondisi Baik & Kalibrasi OK",
+      "Unit Lengkap dengan Baterai",
+      "Yang Menyerahkan",
+      "dengan Baterai",
+      "other"
+    ]
+  },
+  "ctx_sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "ctx_sent",
+    "nullable": false,
+    "range": null,
+    "role": "context_text",
+    "train_policy": "always_drop",
+    "vocab": [
+      "( Andi Wijaya )",
+      "( Dr. Ratna Sari )",
+      "( PT Medika Utama Indonesia )",
+      "( PT Nusantara Tech Solusindo )",
+      "0813-9876-5432 dari PT Nusantara Tech No Qty Keterangan R750 24 Port Belden 305m",
+      "0821-4567-8901 dari PT Medika Utama No Qty Keterangan Mindray uMEC10 TE-171 (Box @50pcs)",
+      "1 2 3 Hand Sanitizer Liquid 5 Liter 20 Galon Kondisi Utuh Dokumen berlaku.",
+      "1 2 3 UPS APC Smart-UPS 2000VA 2 Unit Lengkap dengan Baterai Dokumen berlaku.",
+      "1 2 Infuse Pump Terumo TE-171 3 100 Box Tersegel Rapi 4 Hand Sanitizer Liquid 5 Liter",
+      "1 Patient Monitor Mindray uMEC10 4 Unit Kondisi Baik & Kalibrasi",
+      "1 Unit 3 Unit 5 Roll 4 UPS APC Smart-UPS 2000VA Lengkap dengan Baterai dapat digunakan",
+      "1 Unit 3 Unit 5 Roll 4 UPS APC Smart-UPS 2000VA Unit Lengkap dengan Baterai dapat digunakan",
+      "2 Switch Cisco Catalyst 24 Port 3 5 Roll Baru 4 UPS APC Smart-UPS 2000VA Dokumen",
+      "3 Kabel 4 UPS Dokumen ini",
+      "3 Kabel UTP Cat6 Belden 305m 4 2 Unit Lengkap dengan Baterai Dokumen ini dibuat sebagai bukti serah",
+      "3 Masker 4 Hand Dokumen ini",
+      "3 Masker Medis 3-Ply (Box @50pcs) 4 20 Galon Kondisi Utuh Dokumen ini dibuat sebagai bukti serah",
+      "4 Hand Sanitizer Liquid 5 Liter berlaku. Semarang, 05 Desember 2025",
+      "4 UPS APC Smart-UPS 2000VA 2 berlaku. Surabaya, 12 November 2025",
+      "4 Unit 6 Unit 100 Box 4 Hand Sanitizer Liquid 5 Liter Galon Kondisi Utuh dapat digunakan",
+      "4 Unit 6 Unit 100 Box 4 Hand Sanitizer Liquid 5 Liter Kondisi Utuh dapat digunakan",
+      ": : Jl. Pandanaran No. 15, No. Telp : barang dari PT Medika Utama Nama",
+      ": : Jl. Pemuda No. 88, No. Telp : barang dari PT Nusantara Nama Barang",
+      ": : Kepala Penanggung Jawab Medis Alamat : : 0821-4567-8901 barang dari PT Medika",
+      ": Andi : IT Infrastructure Lead Alamat : : 0813-9876-5432 barang dari PT Nusantara",
+      "Alamat : No. Telp : 0813-9876-5432 No Nama Barang Qty 1 Server",
+      "Alamat : No. Telp : 0821-4567-8901 No Nama Barang Qty 1 Patient",
+      "Baru (Garansi 2 Switch Cisco Catalyst 24 Port 3 Unit / Segel Intakt Baru Lengkap sesuai",
+      "Baru (Garansi Baik / Segel 3 Kabel UTP Cat6 Belden 305m 5 Roll Lengkap sesuai",
+      "Baru Baik / Segel Intakt Baru 4 UPS APC Smart-UPS 2000VA 2 Unit dengan Baterai sesuai ketentuan",
+      "Baru Baik / Segel Intakt Baru 4 UPS APC Smart-UPS 2000VA 2 Unit sesuai ketentuan yang",
+      "Dell PowerEdge Cisco Catalyst 24 3 Kabel UTP Belden 305m 5 Roll Baru APC Smart-UPS dibuat sebagai",
+      "HASHMICROTHINK FORWARD Nomor: STTB/11/2025/104 bawah ini: Wijaya",
+      "HASHMICROTHINK FORWARD Nomor: STTB/12/2025/219 bawah ini: Ratna Sari",
+      "HASHMICROTHINK FORWARD TANDA TERIMA BARANG Nomor:",
+      "HASHMICROTHINK FORWARD TANDA TERIMA BARANG Nomor: Jawab Medis",
+      "Keterangan 1 Patient Monitor Mindray uMEC10 4 Unit Kondisi & Kalibrasi OK Baru Tersegel Rapi Kondisi Utuh",
+      "Keterangan 1 Server Dell PowerEdge R750 1 Unit Baru (Garansi Thn) Segel Intakt dengan Baterai",
+      "Keterangan Baru (Garansi 3 Thn) 2 Switch Cisco Catalyst 24 Port 3 Unit Baru Lengkap dengan Baterai sesuai ketentuan",
+      "Keterangan Kondisi Baik & Kalibrasi Baru 3 Masker Medis 3-Ply (Box @50pcs) 100 Box Kondisi Utuh sesuai ketentuan yang",
+      "Kondisi Baik & Baru Tersegel Rapi 4 Hand Sanitizer Liquid 5 Liter 20 Galon sesuai ketentuan",
+      "Kondisi Baik 2 Infuse Pump Terumo TE-171 6 Unit Tersegel Rapi Kondisi Utuh sesuai",
+      "Mindray Terumo TE-171 3-Ply (Box @50pcs) 4 Hand Sanitizer Liquid Liter 20 Galon Kondisi Utuh sebagai bukti",
+      "Monitor Mindray Pump Terumo TE-171 3 Masker Medis (Box @50pcs) 100 Box Tersegel Rapi Sanitizer Liquid 5 Liter dibuat sebagai",
+      "Nama Barang Mindray uMEC10 TE-171 3 Masker Medis 3-Ply (Box 100 Box Tersegel Rapi Liquid 5 Liter bukti serah terima",
+      "Nama Jabatan Alamat : 0813-9876-5432 Telah menerima No",
+      "Nama Jabatan Alamat : 0821-4567-8901 Telah menerima No",
+      "Nama Mindray uMEC10 2 Infuse Pump Terumo 6 Unit Baru 3-Ply (Box @50pcs) Liquid 5 Liter",
+      "Nama PowerEdge R750 2 Switch Cisco Catalyst Port 3 Unit Baik / Segel Intakt Belden 305m Smart-UPS 2000VA sebagai bukti",
+      "Nama PowerEdge R750 Catalyst 24 Port 3 Kabel UTP Cat6 Belden 5 Roll Baru 2000VA sebagai bukti serah",
+      "No 1 2 Kabel UTP Cat6 Belden 305m 5 Roll Baru 4 UPS Dokumen berlaku.",
+      "No 1 2 Masker Medis 3-Ply (Box @50pcs) 100 Box Tersegel Rapi 4 Dokumen berlaku.",
+      "No 1 Infuse Pump Terumo TE-171 6 Unit Baru 3 4 Dokumen",
+      "No 1 Patient Monitor Mindray uMEC10 2 6 Unit Baru 3 Masker Medis 3-Ply (Box @50pcs)",
+      "No 1 Server Dell PowerEdge R750 2 3 Unit Baik / Segel Intakt 3 Kabel UTP Cat6 Belden 305m",
+      "No 1 Switch Cisco Catalyst 24 Port 3 Unit Baik / Segel Intakt 3 4 UPS Dokumen",
+      "No Nama Barang Qty Baru (Garansi 3 Thn) Baik /",
+      "No Nama Barang Qty Kondisi Baik & Kalibrasi OK Baru",
+      "PowerEdge Catalyst 24 Port Belden 305m 4 UPS APC Smart-UPS 2 Unit Lengkap dengan Baterai sebagai bukti serah",
+      "Qty 1 Unit 2 Switch Cisco Catalyst 24 Port Baik / Segel Intakt 5 Roll 2 Unit dapat digunakan",
+      "Qty 1 Unit 2 Switch Cisco Catalyst 24 Port Unit Baik / Segel Intakt 5 Roll 2 Unit dapat digunakan",
+      "Qty 1 Unit 3 Unit 3 Kabel UTP Cat6 Belden 305m Baru 2 Unit dapat digunakan",
+      "Qty 1 Unit 3 Unit 3 Kabel UTP Cat6 Belden 305m Roll Baru 2 Unit dapat digunakan",
+      "Qty 4 Unit 2 Infuse Pump Terumo TE-171 Baru 100 Box 20 Galon dapat digunakan",
+      "Qty 4 Unit 2 Infuse Pump Terumo TE-171 Unit Baru 100 Box 20 Galon dapat digunakan",
+      "Qty 4 Unit 6 Unit 3 Masker Medis 3-Ply (Box @50pcs) Box Tersegel Rapi 20 Galon dapat digunakan",
+      "SURAT Nama : Andi Wijaya Jabatan :",
+      "SURAT Nama : Dr. Ratna Sari Jabatan",
+      "SURAT TANDA TERIMA BARANG Nomor: STTB/11/2025/104",
+      "SURAT TANDA TERIMA BARANG Nomor: STTB/12/2025/219",
+      "SURAT tangan di bawah ini: Nama : : IT Infrastructure : Jl. Pemuda",
+      "SURAT tangan di bawah ini: Nama : : Kepala Penanggung : Jl. Pandanaran",
+      "Semarang, 05 Penerima",
+      "Surabaya, 12 Penerima",
+      "Telah No Patient Monitor Mindray uMEC10 4 Unit Kondisi Baik & Kalibrasi OK 2 3 4",
+      "Telah No Server Dell PowerEdge R750 1 Unit Baru (Garansi 3 Thn) 2 3 4 UPS",
+      "Telah menerima barang No Nama Barang 1 1 Unit Baru (Garansi 3 Thn) 2 Switch Cisco Catalyst 24 Port",
+      "Telah menerima barang No Nama Barang 1 4 Unit Kondisi Baik & Kalibrasi OK 2 Infuse Pump Terumo TE-171 3",
+      "Terumo 3-Ply (Box @50pcs) 100 Box 4 Hand Sanitizer Liquid Galon Kondisi Utuh sebagai bukti serah terima barang yang",
+      "Yang Menyerahkan",
+      "Yang bertanda : Andi Wijaya Jabatan Alamat No. Telp",
+      "Yang bertanda : Dr. Ratna Sari Jabatan Alamat No. Telp",
+      "Yang bertanda Nama : IT Infrastructure Lead Alamat No. Telp Telah menerima",
+      "Yang bertanda Nama : Kepala Penanggung Jawab Medis Alamat No. Telp Telah menerima",
+      "Yang bertanda Nama Jabatan : Jl. Pandanaran No. 15, Semarang No. Telp Telah menerima",
+      "Yang bertanda Nama Jabatan : Jl. Pemuda No. 88, Surabaya No. Telp Telah menerima",
+      "berikut: Keterangan 1 Patient Monitor Mindray uMEC10 4 Unit Baru Tersegel Rapi Kondisi Utuh",
+      "berikut: Keterangan 1 Server Dell PowerEdge R750 1 Unit Baik / Segel Intakt Baru Lengkap",
+      "dari PT Medika Utama Nama Barang 1 Patient Monitor Mindray 4 Unit Kondisi Baik & Kalibrasi OK Terumo TE-171 3-Ply (Box @50pcs) Liquid",
+      "dari PT Nusantara Nama Barang 1 Server Dell PowerEdge 1 Unit Baru (Garansi 3 Thn) Catalyst 24 Port Belden 305m 2000VA",
+      "digunakan sesuai ketentuan yang Yang Menyerahkan",
+      "ini: Lead Alamat : Jl. Pemuda No. Surabaya PT Nusantara Tech",
+      "ini: Penanggung Jawab Alamat : Jl. Pandanaran No. Semarang Medika Utama",
+      "other",
+      "rincian sebagai No Nama Barang Keterangan 1 Unit 3 Unit 5 Roll",
+      "rincian sebagai Qty 1 Patient Monitor Mindray uMEC10 Unit Kondisi Baik & Kalibrasi OK 6 Unit 100 Box 20 Galon",
+      "rincian sebagai Qty 1 Server Dell PowerEdge R750 Baru (Garansi 3 Thn) 3 Unit 5 Roll 2 Unit",
+      "rincian sebagai Qty 1 Server Dell PowerEdge R750 Unit Baru (Garansi 3 Thn) 3 Unit 5 Roll 2 Unit",
+      "rincian sebagai berikut: No Nama Barang Keterangan 4 Unit 6 Unit 100 Box",
+      "rincian sebagai berikut: Qty 1 Patient Monitor Mindray uMEC10 Kondisi Baik & Kalibrasi OK 6 Unit 100 Box 20 Galon",
+      "sesuai ketentuan Semarang, Desember 2025 Menyerahkan",
+      "sesuai ketentuan Surabaya, November 2025 Menyerahkan",
+      "sesuai ketentuan yang Semarang, Menyerahkan",
+      "sesuai ketentuan yang Surabaya, Menyerahkan",
+      "tangan di : Dr. Ratna Sari Jabatan : : Jl. Pandanaran No. 15, Semarang",
+      "tangan di bawah : Andi Wijaya Jabatan : : Jl. Pemuda No. 88, Surabaya",
+      "yang Semarang, 05 Desember",
+      "yang Surabaya, 12 November"
+    ]
+  },
+  "d_dup_count_doc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "d_dup_count_doc",
+    "nullable": false,
+    "range": [
+      0.0,
+      2.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "d_is_first_occurrence": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "d_is_first_occurrence",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "d_n_same_type_doc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "d_n_same_type_doc",
+    "nullable": false,
+    "range": [
+      1.0,
+      33.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "d_n_same_type_page": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "d_n_same_type_page",
+    "nullable": false,
+    "range": [
+      1.0,
+      33.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "d_rank_reading": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "d_rank_reading",
+    "nullable": false,
+    "range": [
+      1.0,
+      33.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "d_rank_reading_rel": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "d_rank_reading_rel",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_ambiguous_dm": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_ambiguous_dm",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_day": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_day",
+    "nullable": false,
+    "range": [
+      5.0,
+      12.0
+    ],
+    "role": "value_echo",
+    "train_policy": "drop_default",
+    "vocab": []
+  },
+  "dt_days_from_min": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_days_from_min",
+    "nullable": false,
+    "range": [
+      0.0,
+      2130.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_days_to_max": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_days_to_max",
+    "nullable": false,
+    "range": [
+      0.0,
+      2130.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_fmt": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "dt_fmt",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "dd_mon_yyyy",
+      "other"
+    ]
+  },
+  "dt_is_max": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_is_max",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_is_min": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_is_min",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_is_month_end": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_is_month_end",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_is_month_start": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_is_month_start",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_month": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_month",
+    "nullable": false,
+    "range": [
+      2.0,
+      12.0
+    ],
+    "role": "value_echo",
+    "train_policy": "drop_default",
+    "vocab": []
+  },
+  "dt_month_fuzzy": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_month_fuzzy",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_month_lang": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "dt_month_lang",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "en",
+      "id",
+      "other"
+    ]
+  },
+  "dt_n_dates_doc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_n_dates_doc",
+    "nullable": false,
+    "range": [
+      1.0,
+      2.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_rank_asc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_rank_asc",
+    "nullable": false,
+    "range": [
+      1.0,
+      2.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_rank_desc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_rank_desc",
+    "nullable": false,
+    "range": [
+      1.0,
+      2.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_two_digit_year": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_two_digit_year",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_weekday": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_weekday",
+    "nullable": false,
+    "range": [
+      2.0,
+      4.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "dt_year": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "dt_year",
+    "nullable": false,
+    "range": [
+      2020.0,
+      2025.0
+    ],
+    "role": "value_echo",
+    "train_policy": "drop_default",
+    "vocab": []
+  },
+  "en_in_signature_region": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "en_in_signature_region",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "en_match_type": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "en_match_type",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "exact",
+      "other"
+    ]
+  },
+  "en_norm": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "en_norm",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "GOOD",
+      "other"
+    ]
+  },
+  "en_symbol_vs_code": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "en_symbol_vs_code",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "other",
+      "word"
+    ]
+  },
+  "g_cx": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_cx",
+    "nullable": false,
+    "range": [
+      0.094,
+      0.904
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_cy": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_cy",
+    "nullable": false,
+    "range": [
+      0.0635,
+      0.6546
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_h": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_h",
+    "nullable": false,
+    "range": [
+      0.0147,
+      0.0229
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_w": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_w",
+    "nullable": false,
+    "range": [
+      0.0084,
+      0.8096
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_x1": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_x1",
+    "nullable": false,
+    "range": [
+      0.0716,
+      0.8906
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_x2": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_x2",
+    "nullable": false,
+    "range": [
+      0.1052,
+      0.9227
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_y1": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_y1",
+    "nullable": false,
+    "range": [
+      0.0536,
+      0.6465
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "g_y2": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "g_y2",
+    "nullable": false,
+    "range": [
+      0.0733,
+      0.6628
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_digit_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "id_digit_ratio",
+    "nullable": false,
+    "range": [
+      0.2,
+      0.8571428571428571
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_has_dash": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_has_dash",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_has_dot": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_has_dot",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_has_slash": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_has_slash",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_has_underscore": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_has_underscore",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_has_year_segment": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_has_year_segment",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_in_brackets": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_in_brackets",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_is_merged": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_is_merged",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_len": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_len",
+    "nullable": false,
+    "range": [
+      4.0,
+      16.0
+    ],
+    "role": "value_magnitude",
+    "train_policy": "ablate",
+    "vocab": []
+  },
+  "id_looks_like_phone": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_looks_like_phone",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_n_alpha": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_n_alpha",
+    "nullable": false,
+    "range": [
+      0.0,
+      4.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_n_digits": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_n_digits",
+    "nullable": false,
+    "range": [
+      1.0,
+      12.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_n_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_n_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      3.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_prefix_alpha": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "id_prefix_alpha",
+    "nullable": false,
+    "range": null,
+    "role": "value_echo",
+    "train_policy": "drop_default",
+    "vocab": [
+      "cat",
+      "other",
+      "r",
+      "sttb",
+      "te",
+      "umec"
+    ]
+  },
+  "id_pure_digits": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_pure_digits",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_pure_digits_len": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "id_pure_digits_len",
+    "nullable": true,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_shape_compact": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "id_shape_compact",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "9-9-9",
+      "9-Aa",
+      "9A",
+      "9a",
+      "@9a)",
+      "A-9",
+      "A/9/9/9",
+      "A9",
+      "Aa9",
+      "aA9",
+      "other"
+    ]
+  },
+  "id_starts_alpha": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "id_starts_alpha",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "id_upper_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "id_upper_ratio",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8333333333333335
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8333333333333335
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_customer_name__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8333333333333335
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__line__gap",
+    "nullable": false,
+    "range": [
+      0.8333333333333334,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8333333333333335
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__right__gap",
+    "nullable": false,
+    "range": [
+      0.8333333333333334,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8333333333333335
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_customer_name__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_customer_name__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_due_date__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_due_date__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_due_date__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_grand_total__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_grand_total__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_grand_total__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_invoice_date__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_date__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_date__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.8181818181818181
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_invoice_number__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_invoice_number__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_invoice_number__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_party_roles__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_party_roles__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_party_roles__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_subtotal__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_subtotal__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_subtotal__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__above__gap",
+    "nullable": false,
+    "range": [
+      0.16666666666666666,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__below__gap",
+    "nullable": false,
+    "range": [
+      0.3333333333333333,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_table_end__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__line__gap",
+    "nullable": false,
+    "range": [
+      0.5,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__right__gap",
+    "nullable": false,
+    "range": [
+      0.16666666666666666,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_table_end__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_table_end__sent__gap",
+    "nullable": false,
+    "range": [
+      0.8333333333333334,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_tax_amount__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_tax_amount__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_tax_amount__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_titles__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_titles__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_titles__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__above": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__above",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__above__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__above__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__below": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__below",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__below__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__below__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__left": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__left",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__left__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__left__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__left_sep": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "kw_total_row__left_sep",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__line": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__line",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__line__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__line__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__right": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__right",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__right__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__right__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__sent": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__sent",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "kw_total_row__sent__gap": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "kw_total_row__sent__gap",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "label__awb": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__awb",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__delivery_date": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__delivery_date",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__goods_condition": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__goods_condition",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__hari": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__hari",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__nomor_berita_acara": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__nomor_berita_acara",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__pihak_kedua_alamat": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__pihak_kedua_alamat",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__pihak_kedua_nama": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__pihak_kedua_nama",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__pihak_pertama_alamat": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__pihak_pertama_alamat",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__pihak_pertama_nama": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__pihak_pertama_nama",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__pod_number": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__pod_number",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__quantity_received": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__quantity_received",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__receiver_company": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__receiver_company",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__receiver_name": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__receiver_name",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__shipment_id": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__shipment_id",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label__tanggal": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label__tanggal",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label_notes": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label_notes",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "label_status": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "label_status",
+    "nullable": true,
+    "range": null,
+    "role": "label",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_base_document_id": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_base_document_id",
+    "nullable": true,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "other",
+      "pod-1-v1"
+    ]
+  },
+  "m_cand_type": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_cand_type",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "address",
+      "date",
+      "enum",
+      "id",
+      "other",
+      "party",
+      "qty"
+    ]
+  },
+  "m_candidate_id": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_candidate_id",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "012be74315f323c2",
+      "0499b9c1c86d3d04",
+      "0932c23c11dc51fc",
+      "095197a046d84201",
+      "0a4e6404e11c1dac",
+      "121d397f38934b5d",
+      "14cb8764ef1b94c4",
+      "183bb40050d078e5",
+      "1e5282198653f769",
+      "1f5072dc3794a366",
+      "2652267f41d4be58",
+      "26aab2ed72f819fd",
+      "2f2850effec9b9a5",
+      "30325fee3b53b5d6",
+      "30a7273a7a9389e1",
+      "312c4ed97b7b75b3",
+      "32fe662ac31185c0",
+      "344f55444e18a31f",
+      "34e002fd553f3efd",
+      "35479fa47959dd5b",
+      "3986bf126f218eef",
+      "3b2b607978a6dfc9",
+      "3f47113ae0640d67",
+      "42e7c5f6706e43a8",
+      "439436452639e1b6",
+      "44fcf9464866a912",
+      "4580af4a7e73f9b9",
+      "4711ee7328e1026d",
+      "47b2ad2c2d7bce14",
+      "4cfd5c412703da09",
+      "4ef4c43d122f705c",
+      "525f82d90eb47aa1",
+      "5342bce2e5dbc08e",
+      "5349fb3b5f548c1d",
+      "56ab51d8b81218e8",
+      "57abc5ec2c35b0a4",
+      "59217a24f46b358b",
+      "5a045a208de28941",
+      "5c578f24bbff3ed3",
+      "5c66aeea54380cb0",
+      "5cd7b76ff02ed072",
+      "5dc2ff7dc85c89e3",
+      "60dc175266ba1057",
+      "669db712e938136d",
+      "66fe9fdd50844785",
+      "6941b5c4ab2bc3aa",
+      "696abf9e5d8b4731",
+      "69c71d7cd502093f",
+      "6aa887e558d1dce5",
+      "6c89e0d6e78bf0ee",
+      "6e7ca94776d56200",
+      "7038e01e6cbea77b",
+      "71975b0ced9394cb",
+      "72b0917a197a094c",
+      "77a0d97f97b109d8",
+      "7cd02d224fa4e967",
+      "81d8e7093573682b",
+      "82b9027bc0fd8329",
+      "83f0b4a362d2133a",
+      "87cce9ab5fa02282",
+      "88a8dc76b687f149",
+      "898d6a61672d2ce1",
+      "8ebf120136926f85",
+      "915fc02ccc6ae9c2",
+      "94083e592ae542bd",
+      "9795b8b1ae4c1a47",
+      "98af9d6d6316b31d",
+      "9968fac7085e8fc5",
+      "9ada42e2fbcb2cc0",
+      "9eef7da9aa19976e",
+      "a0210709f58ea382",
+      "a1036629116fbafc",
+      "a5f8c04b519381e1",
+      "a7fca0b2ab87f9c8",
+      "aba9a1691a40e6ea",
+      "ae0c4f8a7dede20c",
+      "b0a67fc1b75b0e7e",
+      "b1f7bcecf124cd35",
+      "b23328f372be978e",
+      "b69eebbd113b7ffe",
+      "b6ca34fed9671df6",
+      "c15134442db7f581",
+      "c640bc940b2ad085",
+      "c79fd6ab5d3036d4",
+      "c7b4dc00171fc05b",
+      "c7bd5f0ee65a06e5",
+      "cfa083c4f99aa488",
+      "d172b28b4f31ea12",
+      "d1bd9eff4bac44cc",
+      "d566a8472495742d",
+      "d67bc204af53e739",
+      "d7bdfd98980bc1ec",
+      "d9aa37a54324e905",
+      "dbfc3aa639f642ff",
+      "dcd1ff35186d5a0a",
+      "e5040b196bef72e6",
+      "e5ed68a7bbf4ad40",
+      "e60786c052bac2c4",
+      "e78934b66d1919ba",
+      "f0005e042c3199a3",
+      "f0bbef135ed4dc43",
+      "f0f57c30b15ec14b",
+      "f249e84771e7bbde",
+      "f54d80fb8487d49e",
+      "f81e2a1cd275acb1",
+      "f8f55e081b2d2529",
+      "f9c903cbbf36be4f",
+      "fa2ac1510429b0d6",
+      "fbfbb60d91ba7797",
+      "fe44f3a9b8f536ed",
+      "ffa59e8e3adf12b3",
+      "other"
+    ]
+  },
+  "m_doc_type": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_doc_type",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "POD",
+      "other"
+    ]
+  },
+  "m_document_id": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_document_id",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "other",
+      "pod-1-v1",
+      "pod-1-v2"
+    ]
+  },
+  "m_is_base": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_is_base",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "0",
+      "1",
+      "other"
+    ]
+  },
+  "m_line_idx": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "m_line_idx",
+    "nullable": false,
+    "range": [
+      0.0,
+      43.0
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_overlap_types": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_overlap_types",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "address|party",
+      "address|qty",
+      "date|party",
+      "date|qty",
+      "enum",
+      "id",
+      "other",
+      "party",
+      "party|qty",
+      "qty"
+    ]
+  },
+  "m_page": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "m_page",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_parsed_norm": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_parsed_norm",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "05",
+      "0813-9876-5432",
+      "0821-4567-8901",
+      "1",
+      "1 unit",
+      "100",
+      "12",
+      "15",
+      "2",
+      "2 unit",
+      "20",
+      "20 galon",
+      "2000va",
+      "2020-02-05",
+      "2025",
+      "2025-11-12",
+      "2025-12-05",
+      "24",
+      "3",
+      "3 unit",
+      "3-ply",
+      "305m",
+      "4",
+      "4 unit",
+      "5",
+      "5 roll",
+      "6",
+      "6 unit",
+      "88",
+      "@50pcs",
+      "alamat",
+      "andi wijaya",
+      "baik segel intakt",
+      "baru",
+      "baru garansi 3 thn",
+      "berlaku",
+      "cat6",
+      "dokumen ini dibuat sebagai bukti serah terima barang yang sah dan dapat digunakan sesuai ketentuan yang",
+      "dr ratna sari",
+      "good",
+      "hand sanitizer liquid 5 liter",
+      "hashmicrothink forward",
+      "infuse pump terumo te-171",
+      "it infrastructure lead",
+      "jabatan",
+      "jl pandanaran no 15 semarang",
+      "jl pemuda no 88 surabaya",
+      "kabel utp cat6 belden 305m",
+      "kepala penanggung jawab medis",
+      "keterangan",
+      "kondisi baik & kalibrasi ok",
+      "kondisi utuh",
+      "lengkap dengan baterai",
+      "masker medis 3-ply box @50pcs",
+      "nama",
+      "nama barang",
+      "no telp",
+      "other",
+      "patient monitor mindray umec10",
+      "penerima",
+      "pt medika utama indonesia",
+      "pt nusantara tech solusindo",
+      "qty",
+      "r750",
+      "semarang 05 desember 2025",
+      "server dell poweredge r750",
+      "sttb112025104",
+      "sttb122025219",
+      "surabaya 12 november 2025",
+      "surat tanda terima barang",
+      "switch cisco catalyst 24 port",
+      "te-171",
+      "telah menerima barang dari pt medika utama indonesia dengan rincian sebagai berikut",
+      "telah menerima barang dari pt nusantara tech solusindo dengan rincian sebagai berikut",
+      "tersegel rapi",
+      "umec10",
+      "ups apc smart ups 2000va",
+      "yang bertanda tangan di bawah ini",
+      "yang menyerahkan"
+    ]
+  },
+  "m_parsed_value": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_parsed_value",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "( Andi Wijaya )",
+      "( Dr. Ratna Sari )",
+      "( PT Medika Utama Indonesia )",
+      "( PT Nusantara Tech Solusindo )",
+      "0813-9876-5432",
+      "0821-4567-8901",
+      "1",
+      "1 Unit",
+      "100",
+      "12",
+      "15",
+      "2",
+      "2 Unit",
+      "20",
+      "20 Galon",
+      "2000VA",
+      "2020-02-05",
+      "2025",
+      "2025-11-12",
+      "2025-12-05",
+      "24",
+      "3",
+      "3 Unit",
+      "3-Ply",
+      "305m",
+      "4",
+      "4 Unit",
+      "5",
+      "5 Roll",
+      "6",
+      "6 Unit",
+      "88",
+      "@50pcs)",
+      "Alamat",
+      "Andi Wijaya",
+      "Baik / Segel Intakt",
+      "Baru",
+      "Baru (Garansi 3 Thn)",
+      "Cat6",
+      "Dokumen ini dibuat sebagai bukti serah terima barang yang sah dan dapat digunakan sesuai ketentuan yang",
+      "Dr. Ratna Sari",
+      "GOOD",
+      "HASHMICROTHINK FORWARD",
+      "Hand Sanitizer Liquid 5 Liter",
+      "IT Infrastructure Lead",
+      "Infuse Pump Terumo TE-171",
+      "Jabatan",
+      "Jl. Pandanaran No. 15, Semarang",
+      "Jl. Pemuda No. 88, Surabaya",
+      "Kabel UTP Cat6 Belden 305m",
+      "Kepala Penanggung Jawab Medis",
+      "Keterangan",
+      "Kondisi Baik & Kalibrasi OK",
+      "Kondisi Utuh",
+      "Lengkap dengan Baterai",
+      "Masker Medis 3-Ply (Box @50pcs)",
+      "Nama",
+      "Nama Barang",
+      "No. Telp",
+      "Patient Monitor Mindray uMEC10",
+      "Penerima",
+      "Qty",
+      "R750",
+      "STTB/11/2025/104",
+      "STTB/12/2025/219",
+      "SURAT TANDA TERIMA BARANG",
+      "Semarang, 05 Desember 2025",
+      "Server Dell PowerEdge R750",
+      "Surabaya, 12 November 2025",
+      "Switch Cisco Catalyst 24 Port",
+      "TE-171",
+      "Telah menerima barang dari PT Medika Utama Indonesia dengan rincian sebagai berikut:",
+      "Telah menerima barang dari PT Nusantara Tech Solusindo dengan rincian sebagai berikut:",
+      "Tersegel Rapi",
+      "UPS APC Smart-UPS 2000VA",
+      "Yang Menyerahkan",
+      "Yang bertanda tangan di bawah ini:",
+      "berlaku.",
+      "other",
+      "uMEC10"
+    ]
+  },
+  "m_pipeline_version": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_pipeline_version",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "b434f80e16820d67",
+      "other"
+    ]
+  },
+  "m_raw_text": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_raw_text",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "( Andi Wijaya )",
+      "( Dr. Ratna Sari )",
+      "( PT Medika Utama Indonesia )",
+      "( PT Nusantara Tech Solusindo )",
+      "05",
+      "05 Desember 2025",
+      "0813-9876-5432",
+      "0821-4567-8901",
+      "1",
+      "1 Unit",
+      "100",
+      "12",
+      "12 November 2025",
+      "15,",
+      "2",
+      "2 Unit",
+      "20",
+      "20 Galon",
+      "2000VA",
+      "2025",
+      "24",
+      "3",
+      "3 Unit",
+      "3-Ply",
+      "305m",
+      "4",
+      "4 Unit",
+      "5",
+      "5 Liter 20",
+      "5 Roll",
+      "6",
+      "6 Unit",
+      "88,",
+      "@50pcs)",
+      "Alamat",
+      "Andi Wijaya",
+      "Baik",
+      "Baik / Segel Intakt",
+      "Baru",
+      "Baru (Garansi 3 Thn)",
+      "Cat6",
+      "Dokumen ini dibuat sebagai bukti serah terima barang yang sah dan dapat digunakan sesuai ketentuan yang",
+      "Dr. Ratna Sari",
+      "HASHMICROTHINK FORWARD",
+      "Hand Sanitizer Liquid 5 Liter",
+      "IT Infrastructure Lead",
+      "Infuse Pump Terumo TE-171",
+      "Jabatan",
+      "Jl. Pandanaran No. 15, Semarang",
+      "Jl. Pemuda No. 88, Surabaya",
+      "Kabel UTP Cat6 Belden 305m",
+      "Kepala Penanggung Jawab Medis",
+      "Keterangan",
+      "Kondisi Baik & Kalibrasi OK",
+      "Kondisi Utuh",
+      "Lengkap",
+      "Lengkap dengan Baterai",
+      "Masker Medis 3-Ply (Box @50pcs)",
+      "Nama",
+      "Nama Barang",
+      "No. Telp",
+      "OK",
+      "Patient Monitor Mindray uMEC10",
+      "Penerima",
+      "Qty",
+      "R750",
+      "STTB/11/2025/104",
+      "STTB/12/2025/219",
+      "SURAT TANDA TERIMA BARANG",
+      "Semarang, 05 Desember 2025",
+      "Server Dell PowerEdge R750",
+      "Surabaya, 12 November 2025",
+      "Switch Cisco Catalyst 24 Port",
+      "TE-171",
+      "Telah menerima barang dari PT Medika Utama Indonesia dengan rincian sebagai berikut:",
+      "Telah menerima barang dari PT Nusantara Tech Solusindo dengan rincian sebagai berikut:",
+      "Tersegel Rapi",
+      "UPS APC Smart-UPS 2000VA",
+      "Yang Menyerahkan",
+      "Yang bertanda tangan di bawah ini:",
+      "berlaku.",
+      "other",
+      "uMEC10"
+    ]
+  },
+  "m_run_id": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_run_id",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "candidates",
+      "other"
+    ]
+  },
+  "m_schema_version": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_schema_version",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "1.0.0",
+      "other"
+    ]
+  },
+  "m_template_group": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_template_group",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "other",
+      "pod-1-v1"
+    ]
+  },
+  "m_tok_end": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "m_tok_end",
+    "nullable": false,
+    "range": [
+      0.0,
+      15.0
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_tok_start": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "m_tok_start",
+    "nullable": false,
+    "range": [
+      0.0,
+      4.0
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_vendor_group": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "m_vendor_group",
+    "nullable": false,
+    "range": null,
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": [
+      "UNKNOWN",
+      "other"
+    ]
+  },
+  "m_x1": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "m_x1",
+    "nullable": false,
+    "range": [
+      0.0716,
+      0.8906
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_x2": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "m_x2",
+    "nullable": false,
+    "range": [
+      0.1052,
+      0.9227
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_y1": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "m_y1",
+    "nullable": false,
+    "range": [
+      0.0536,
+      0.6465
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "m_y2": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "m_y2",
+    "nullable": false,
+    "range": [
+      0.0733,
+      0.6628
+    ],
+    "role": "meta_id",
+    "train_policy": "always_drop",
+    "vocab": []
+  },
+  "pt_alpha_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "pt_alpha_ratio",
+    "nullable": false,
+    "range": [
+      0.6956521739130435,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_digit_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "pt_digit_ratio",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.2857142857142857
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_has_email": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_has_email",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_has_npwp": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_has_npwp",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_has_phone": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_has_phone",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_has_url": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_has_url",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_is_centered": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_is_centered",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_is_left_aligned": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_is_left_aligned",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_legal_marker": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "pt_legal_marker",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "none",
+      "other",
+      "pt"
+    ]
+  },
+  "pt_legal_pos": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "cat",
+    "name": "pt_legal_pos",
+    "nullable": false,
+    "range": null,
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": [
+      "none",
+      "other",
+      "prefix",
+      "suffix"
+    ]
+  },
+  "pt_n_chars": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_n_chars",
+    "nullable": false,
+    "range": [
+      3.0,
+      103.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_n_tokens": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_n_tokens",
+    "nullable": false,
+    "range": [
+      1.0,
+      16.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_person_like": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "pt_person_like",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_title_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "pt_title_ratio",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "pt_upper_ratio": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "pt_upper_ratio",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "q_box_estimated": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "q_box_estimated",
+    "nullable": false,
+    "range": [
+      0.0,
+      0.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "q_conf_mean": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "q_conf_mean",
+    "nullable": false,
+    "range": [
+      0.93,
+      0.98
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "q_is_vector": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "q_is_vector",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "qt_has_unit": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "qt_has_unit",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "qt_is_small": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "qt_is_small",
+    "nullable": false,
+    "range": [
+      0.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "qt_log": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "qt_log",
+    "nullable": false,
+    "range": [
+      0.0,
+      3.3064250275506875
+    ],
+    "role": "value_magnitude",
+    "train_policy": "ablate",
+    "vocab": []
+  },
+  "qt_n_doc": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "qt_n_doc",
+    "nullable": false,
+    "range": [
+      12.0,
+      13.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "qt_plausible": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "int",
+    "name": "qt_plausible",
+    "nullable": false,
+    "range": [
+      1.0,
+      1.0
+    ],
+    "role": "feature",
+    "train_policy": "keep",
+    "vocab": []
+  },
+  "qt_value": {
+    "applies_to": [
+      "*"
+    ],
+    "description": "Generated candidate column",
+    "dtype": "float",
+    "name": "qt_value",
+    "nullable": false,
+    "range": [
+      1.0,
+      2025.0
+    ],
+    "role": "value_echo",
+    "train_policy": "drop_default",
+    "vocab": []
+  }
+}

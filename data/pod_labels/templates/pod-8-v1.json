@@ -1,0 +1,27 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-8-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "date",
+      "center": [
+        0.7581,
+        0.16605
+      ],
+      "ctx": {
+        "above": "",
+        "left": "Konstruksi Tanggal :",
+        "line": "Proyek / Unit : Sipil & Konstruksi Tanggal :"
+      },
+      "field": "tanggal",
+      "page_pos": "first",
+      "size": [
+        0.0878000000000001,
+        0.015500000000000014
+      ],
+      "value_norm": "2026-05-28"
+    }
+  ],
+  "template_group": "pod-8-v1"
+}

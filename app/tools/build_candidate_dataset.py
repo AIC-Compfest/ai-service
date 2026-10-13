@@ -12,6 +12,7 @@ from app.services.candidates.pipeline import CandidatePipeline
 from app.services.candidates.line_items import LineItemBuilder
 from app.services.candidates.tables import TokenGridTableProvider
 from app.services.candidates.training_schema import classify_column, load_policy
+from app.services.candidates.version import candidate_pipeline_version
 
 
 def main() -> None:
@@ -24,12 +25,16 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     grouped: dict[str, list[dict]] = defaultdict(list)
     pipeline = CandidatePipeline(args.config)
-    report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
+    report = {"m_pipeline_version": pipeline.pipeline_version, "empty_pages": [], "cap_overflows": [], "timings_ms": {}}
     rows = list(csv.DictReader(args.manifest.open(encoding="utf-8", newline="")))
+    _validate_manifest(rows)
     for manifest in rows[:args.limit]:
         evidence = json.loads(Path(manifest["evidence_json_path"]).read_text(encoding="utf-8"))
         evidence = restrict_pages(evidence, manifest.get("page_start"), manifest.get("page_end"))
         generated = pipeline.generate(manifest["document_id"], manifest["doc_type"], evidence, args.out.name, manifest.get("vendor_group", "UNKNOWN"), manifest.get("template_group", "UNKNOWN"))
+        for item in generated:
+            item["m_is_base"] = manifest.get("is_base", "1") or "1"
+            item["m_base_document_id"] = manifest.get("base_document_id", "")
         for key in ("empty_pages", "cap_overflows"):
             report[key].extend(pipeline.last_report.get(key, []))
         report["timings_ms"].update(pipeline.last_report.get("timings_ms", {}))
@@ -90,7 +95,16 @@ def _write_feature_manifest(output, config_dir, grouped, registry):
         for row in records:
             for name, value in row.items():
                 role, train_policy = classify_column(name, policy)
-                manifest.setdefault(name, {"name": name, "role": role, "train_policy": train_policy, "dtype": "bool" if isinstance(value, bool) else "float" if isinstance(value, float) else "int" if isinstance(value, int) else "cat" if isinstance(value, str) else "str", "nullable": value == "", "range": None, "applies_to": ["*"], "description": "Generated candidate column"})
+                manifest.setdefault(name, {"name": name, "role": role, "train_policy": train_policy, "dtype": "bool" if isinstance(value, bool) else "float" if isinstance(value, float) else "int" if isinstance(value, int) else "cat" if isinstance(value, str) else "str", "nullable": value == "", "range": None, "vocab": [], "applies_to": ["*"], "description": "Generated candidate column"})
+                spec = manifest[name]
+                if spec["dtype"] == "cat" and value != "":
+                    spec["vocab"] = sorted(set(spec.get("vocab", [])) | {str(value), "other"})
+                if spec["dtype"] in {"int", "float"} and value != "":
+                    numeric = float(value)
+                    current = spec.get("range")
+                    spec["range"] = [numeric, numeric] if current is None else [min(current[0], numeric), max(current[1], numeric)]
+    for name in ("m_schema_version", "m_pipeline_version", "m_run_id", "m_candidate_id", "m_doc_type", "m_document_id", "m_vendor_group", "m_template_group", "m_is_base", "m_base_document_id", "m_page", "m_cand_type", "m_raw_text", "m_parsed_value", "m_parsed_norm", "m_x1", "m_y1", "m_x2", "m_y2", "m_line_idx", "m_tok_start", "m_tok_end", "m_overlap_types"):
+        manifest.setdefault(name, {"name": name, "role": "meta_id", "train_policy": "always_drop", "dtype": "str", "nullable": True, "range": None, "vocab": [], "applies_to": ["*"], "description": "Candidate metadata"})
     (output / "feature_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     training = {}
     doc_types = sorted({field.doc_type for field in registry.fields})
@@ -113,7 +127,7 @@ def _write_records(path, records, columns=None):
 
 
 def _empty_candidate_columns(doc_type, cand_type, registry):
-    columns = ["m_schema_version", "m_run_id", "m_candidate_id", "m_doc_type", "m_document_id", "m_vendor_group", "m_template_group", "m_page", "m_cand_type", "m_raw_text", "m_parsed_value", "m_parsed_norm", "m_x1", "m_y1", "m_x2", "m_y2", "m_line_idx", "m_tok_start", "m_tok_end", "m_overlap_types", "ctx_left", "ctx_right", "ctx_above", "ctx_below", "ctx_line", "ctx_sent", "label_status", "label_notes"]
+    columns = ["m_schema_version", "m_pipeline_version", "m_run_id", "m_candidate_id", "m_doc_type", "m_document_id", "m_vendor_group", "m_template_group", "m_is_base", "m_base_document_id", "m_page", "m_cand_type", "m_raw_text", "m_parsed_value", "m_parsed_norm", "m_x1", "m_y1", "m_x2", "m_y2", "m_line_idx", "m_tok_start", "m_tok_end", "m_overlap_types", "ctx_left", "ctx_right", "ctx_above", "ctx_below", "ctx_line", "ctx_sent", "label_status", "label_notes"]
     columns.extend(f"label__{field.field}" for field in registry.field_specs_for_type(doc_type, cand_type))
     return sorted(columns, key=_column_order)
 
@@ -147,6 +161,19 @@ def _column_order(name: str) -> tuple[int, str]:
     if name.startswith("label__") or name.startswith("label_"):
         return 3, name
     return 1, name
+
+
+def _validate_manifest(rows):
+    ids = {row["document_id"] for row in rows}
+    for row in rows:
+        if row.get("is_base", "1") not in {"0", "1", "", 0, 1}:
+            raise ValueError(f"invalid is_base for {row['document_id']}")
+        if row.get("is_base", "1") in {"0", 0} and row.get("base_document_id") not in ids:
+            raise ValueError(f"variant {row['document_id']} has no resolving base_document_id")
+        if row.get("is_base", "1") in {"1", 1} and row.get("base_document_id", ""):
+            raise ValueError(f"base {row['document_id']} must not have base_document_id")
+        if row.get("is_base", "1") in {"0", 0} and row.get("template_group") != row.get("base_document_id"):
+            raise ValueError(f"variant {row['document_id']} template_group must equal base_document_id")
 
 
 if __name__ == "__main__":

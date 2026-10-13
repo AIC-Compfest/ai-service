@@ -1,0 +1,3 @@
+document_id,evidence_json_path,doc_type,vendor_group,template_group,page_start,page_end,source_file,is_base,base_document_id,ground_truth_json,m_pipeline_version
+pod-1-v1,data\phase2\evidence\pod-1-v1.json,POD,UNKNOWN,pod-1-v1,1,1,reports\POD_Training\PoD_1_variasi_1.pdf,1,,reports\POD_Training\ground_truth_all_17_documents.json,b434f80e16820d67
+pod-1-v2,data\phase2\evidence\pod-1-v2.json,POD,UNKNOWN,pod-1-v1,1,1,reports\POD_Training\PoD_1_variasi_2.pdf,0,pod-1-v1,reports\POD_Training\ground_truth_all_17_documents.json,b434f80e16820d67

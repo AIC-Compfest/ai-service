@@ -15,6 +15,7 @@ from .registry import FieldRegistry
 from .schema import Candidate, Page, Token
 from .text_norm import norm_alnum, norm_text, ocr_fold
 from .fuzzy_fields import _window_similarity
+from .version import candidate_pipeline_version
 
 
 class CandidatePipeline:
@@ -23,9 +24,11 @@ class CandidatePipeline:
     def __init__(self, config_dir: str | Path):
         config_dir = Path(config_dir)
         self.config_dir = config_dir
+        self.pipeline_version = candidate_pipeline_version(config_dir)
         lexicon_path = config_dir / "lexicon.yaml"
         self.lexicon = yaml.safe_load(lexicon_path.read_text(encoding="utf-8")) if lexicon_path.exists() else {}
         self.registry = FieldRegistry.load(config_dir / "field_registry.yaml")
+        self.registry.validate()
         self.caps = {"amount": 80, "date": 30, "time": 20, "id": 60, "party": 40, "enum": 20, "qty": 40, "weight": 30, "percent": 20, "days": 20, "text": 25}
         self.last_report: dict[str, Any] = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         generation = config_dir / "candidate_generation.yaml"
@@ -44,11 +47,6 @@ class CandidatePipeline:
                 self.last_report["empty_pages"].append({"document_id": document_id, "page": page.page_number})
             for cand_type in sorted(enabled):
                 generated = self._generate_type(page, cand_type)
-                cap = int(self.caps.get(cand_type, len(generated)))
-                if len(generated) > cap:
-                    dropped = len(generated) - cap
-                    self.last_report["cap_overflows"].append({"document_id": document_id, "page": page.page_number, "type": cand_type, "kept": cap, "dropped": dropped})
-                    generated = generated[:cap]
                 candidates.extend(generated)
         candidates.sort(key=lambda candidate: (candidate.page.page_number, candidate.bbox[1], candidate.bbox[0], candidate.cand_type, candidate.raw_text))
         candidates = self._apply_caps(candidates)
@@ -58,7 +56,9 @@ class CandidatePipeline:
             type_counts[candidate.cand_type] = candidate.reading_idx
             candidate.context = context_for(candidate)
             candidate.features = self._features(candidate, candidates)
-            candidate.features["m_overlap_types"] = "|".join(sorted({other.cand_type for other in candidates if other is not candidate and _overlaps(candidate.bbox, other.bbox)}))
+            overlap_types = {candidate.cand_type}
+            overlap_types.update(other.cand_type for other in candidates if other is not candidate and _overlaps(candidate.bbox, other.bbox))
+            candidate.features["m_overlap_types"] = "|".join(sorted(overlap_types))
         self.last_report["timings_ms"][f"{document_id}:{doc_type}"] = round((time.perf_counter() - started) * 1000, 3)
         return [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
 
@@ -298,6 +298,9 @@ class CandidatePipeline:
             if len(ranked) > cap:
                 overflow.setdefault(str(page), {})[cand_type] = len(ranked) - cap
         self.last_run_report = {"cap_overflow": overflow}
+        for page, types in overflow.items():
+            for cand_type, dropped in types.items():
+                self.last_report["cap_overflows"].append({"document_id": "", "page": int(page), "type": cand_type, "kept": int(self.caps.get(cand_type, 0)), "dropped": dropped})
         return kept
 
     def _features(self, candidate: Candidate, all_candidates: list[Candidate]) -> dict[str, Any]:
@@ -308,7 +311,7 @@ class CandidatePipeline:
         features.update(self._lexical_features(candidate))
         if candidate.cand_type == "amount":
             parsed = Decimal(candidate.parsed_value)
-            features.update({"a_value": float(parsed), "a_log10": 0 if parsed == 0 else float(abs(parsed).ln() / Decimal(10).ln()), "a_ambiguous": int("." in candidate.raw_text or "," in candidate.raw_text), "a_is_max": int(parsed == max(Decimal(item.parsed_value) for item in same)), "a_rank_desc_doc": sorted((Decimal(item.parsed_value) for item in same), reverse=True).index(parsed) + 1})
+            features.update({"a_value": float(parsed), "a_log10": 0 if parsed == 0 else float(abs(parsed).ln() / Decimal(10).ln()), "a_ambiguous": int("." in candidate.raw_text or "," in candidate.raw_text), "a_n_tokens": len(candidate.tokens), "a_has_currency_sym": int(bool(re.search(r"(?:^|\s)(?:rp\.?|idr|usd|\$)(?:\s|$)", candidate.raw_text, re.I))), "a_is_max": int(parsed == max(Decimal(item.parsed_value) for item in same)), "a_rank_desc_doc": sorted((Decimal(item.parsed_value) for item in same), reverse=True).index(parsed) + 1})
         elif candidate.cand_type == "date":
             parsed = parse_date(candidate.raw_text)
             if parsed.iso:
@@ -370,7 +373,7 @@ class CandidatePipeline:
     def _row(self, document_id: str, doc_type: str, run_id: str, vendor_group: str, template_group: str, candidate: Candidate) -> dict[str, Any]:
         x1, y1, x2, y2 = candidate.bbox
         candidate_id = hashlib.sha1(f"{document_id}|{candidate.page.page_number}|{candidate.cand_type}|{x1:.4f},{y1:.4f},{x2:.4f},{y2:.4f}|{candidate.raw_text}".encode()).hexdigest()[:16]
-        row = {"m_schema_version": "1.0.0", "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": vendor_group or "UNKNOWN", "m_template_group": template_group or "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": candidate.line_idx, "m_tok_start": candidate.tokens[0].tok_idx, "m_tok_end": candidate.tokens[-1].tok_idx, "m_overlap_types": candidate.features.pop("m_overlap_types", ""), **candidate.features, **candidate.context}
+        row = {"m_schema_version": "1.0.0", "m_pipeline_version": self.pipeline_version, "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": vendor_group or "UNKNOWN", "m_template_group": template_group or "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": candidate.line_idx, "m_tok_start": candidate.tokens[0].tok_idx, "m_tok_end": candidate.tokens[-1].tok_idx, "m_overlap_types": candidate.features.pop("m_overlap_types", ""), **candidate.features, **candidate.context}
         for field in self.registry.fields_for_type(doc_type, candidate.cand_type):
             row[f"label__{field}"] = ""
         row.update({"label_status": "", "label_notes": ""})

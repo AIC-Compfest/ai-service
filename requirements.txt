@@ -15,4 +15,7 @@ scipy>=1.14.0
 joblib>=1.4.0
 PyYAML>=6.0
 rapidfuzz>=3.0
+lightgbm>=4.0
+pandas>=2.0
+streamlit>=1.30
 

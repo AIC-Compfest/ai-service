@@ -40,6 +40,15 @@ fields:
   - {doc_type: POD, field: signature_present, cand_type: none, model: none}
   - {doc_type: POD, field: signature_confidence, cand_type: none, model: none}
   - {doc_type: POD, field: signature_bbox, cand_type: none, model: none}
+  - {doc_type: POD, field: nomor_berita_acara, cand_type: id}
+  - {doc_type: POD, field: hari, cand_type: enum}
+  - {doc_type: POD, field: tanggal, cand_type: date}
+  - {doc_type: POD, field: pihak_pertama_nama, cand_type: party}
+  - {doc_type: POD, field: pihak_pertama_jabatan, cand_type: text}
+  - {doc_type: POD, field: pihak_pertama_alamat, cand_type: address}
+  - {doc_type: POD, field: pihak_kedua_nama, cand_type: party}
+  - {doc_type: POD, field: pihak_kedua_jabatan, cand_type: text}
+  - {doc_type: POD, field: pihak_kedua_alamat, cand_type: address}
   - {doc_type: RATE_AGREEMENT, field: agreement_id, cand_type: id}
   - {doc_type: RATE_AGREEMENT, field: vendor_name, cand_type: party}
   - {doc_type: RATE_AGREEMENT, field: vendor_id, cand_type: id}

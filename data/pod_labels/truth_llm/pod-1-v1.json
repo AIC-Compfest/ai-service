@@ -1,0 +1,100 @@
+{
+  "document_id": "pod-1-v1",
+  "doc_type": "POD",
+  "prompt_version": "extract_truth_v1",
+  "llm_model": "fake-local",
+  "fields": {
+    "nomor_berita_acara": {
+      "status": "present",
+      "value_text": "042/BAST-PROJECT/XI/2025",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "hari": {
+      "status": "present",
+      "value_text": "Senin",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "tanggal": {
+      "status": "present",
+      "value_text": "10 November 2025",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_nama": {
+      "status": "present",
+      "value_text": "Andi Pratama",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_jabatan": {
+      "status": "present",
+      "value_text": "Project Manager PT Solusi Teknologi",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_alamat": {
+      "status": "present",
+      "value_text": "Jl. Sudirman No. 45, Jakarta Selatan",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_nama": {
+      "status": "present",
+      "value_text": "Budi Santoso",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_jabatan": {
+      "status": "present",
+      "value_text": "Direktur Operasional PT Mitra Mandiri",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_alamat": {
+      "status": "present",
+      "value_text": "Jl. Gatot Subroto No. 12, Jakarta Pusat",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    }
+  },
+  "tables": [],
+  "m_pipeline_version": ""
+}

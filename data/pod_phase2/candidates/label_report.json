@@ -1,0 +1,14 @@
+{
+  "files": [
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_address.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_date.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_enum.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_id.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_party.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_qty.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_text.csv",
+    "data\\pod_phase2\\candidates\\candidate_labels_POD_time.csv"
+  ],
+  "labels": 324,
+  "stale_pipeline": []
+}

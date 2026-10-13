@@ -1,0 +1,5 @@
+label_version: "1.0.0"
+prompt_version: extract_truth_v1
+value_stable_fields: [currency, vendor_name, vendor_id]
+transfer_auto_accept_disabled: []
+include_missed_as_negative: true

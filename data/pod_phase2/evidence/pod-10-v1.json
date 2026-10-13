@@ -1,0 +1,2879 @@
+{
+  "document_id": "pod-10-v1",
+  "source_file": "PoD_10_variasi_1.pdf",
+  "source_sha256": "efd094c09a8b5e153fd5ae7cee19af44f69e28d93f9d9a8f95bf18af6ad88f3a",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.9078,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.9078,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1326,
+      "SURAT_JALAN": 0.1353,
+      "POD": 0.4632,
+      "RATE_AGREEMENT": 0.0685,
+      "UNKNOWN": 0.2005
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.978,
+      "quality": {
+        "blur_score": 2244.28,
+        "brightness": 246.92,
+        "contrast": 41.67,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": false
+      },
+      "page_image": {
+        "path": "out/pages/pod-10-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "85cb5f85837f765eebe653c0bd2101b6975b3579d63a30c03679047c65733378"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "BERITA ACARA SERAH TERIMA MATERIAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.288908,
+            0.05958,
+            0.711092,
+            0.079208
+          ],
+          "tokens": [
+            {
+              "text": "BERITA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.288908,
+                0.05958,
+                0.363939,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "ACARA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.369543,
+                0.05958,
+                0.442316,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "SERAH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.44792,
+                0.05958,
+                0.518476,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.52408,
+                0.05958,
+                0.601348,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "MATERIAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.606952,
+                0.05958,
+                0.711092,
+                0.079208
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "PEKERJAAN INSTALL MASS FLOW METER",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.290007,
+            0.083336,
+            0.709993,
+            0.102964
+          ],
+          "tokens": [
+            {
+              "text": "PEKERJAAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.290007,
+                0.083336,
+                0.414325,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "INSTALL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.41993,
+                0.083336,
+                0.50504,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "MASS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.510644,
+                0.083336,
+                0.568882,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "FLOW",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.574487,
+                0.083336,
+                0.633834,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "METER",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.639438,
+                0.083336,
+                0.709993,
+                0.102964
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "TANJUNG KARAS BULKING, PT. TAPIAN NADENGGAN",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.233461,
+            0.107092,
+            0.766539,
+            0.12672
+          ],
+          "tokens": [
+            {
+              "text": "TANJUNG",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.233461,
+                0.107092,
+                0.330888,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "KARAS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.336493,
+                0.107092,
+                0.408157,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "BULKING,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.413761,
+                0.107092,
+                0.511188,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.516792,
+                0.107092,
+                0.548159,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "TAPIAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.553763,
+                0.107092,
+                0.628794,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "NADENGGAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.634398,
+                0.107092,
+                0.766539,
+                0.12672
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Pada hari ini Jum'at tanggal Tiga Puluh Satu bulan Juli tahun dua ribu dua puluh (31-07-2020) yang bertanda",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.144066,
+            0.882428,
+            0.15966
+          ],
+          "tokens": [
+            {
+              "text": "Pada",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.144066,
+                0.122939,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "hari",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.127375,
+                0.144066,
+                0.153979,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.158416,
+                0.144066,
+                0.174375,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Jum'at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.178811,
+                0.144122,
+                0.229609,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "tanggal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.234045,
+                0.144066,
+                0.286391,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Tiga",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.290827,
+                0.144122,
+                0.323639,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Puluh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.328076,
+                0.144122,
+                0.37241,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Satu",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.376847,
+                0.144122,
+                0.41143,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "bulan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.415866,
+                0.144066,
+                0.454902,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Juli",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.459339,
+                0.144122,
+                0.486836,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "tahun",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.491273,
+                0.144066,
+                0.531202,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "dua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.535639,
+                0.144122,
+                0.564014,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "ribu",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.56845,
+                0.144122,
+                0.598597,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "dua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.603033,
+                0.144122,
+                0.631409,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "puluh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.635845,
+                0.144122,
+                0.679286,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "(31-07-2020)",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.683722,
+                0.144122,
+                0.775965,
+                0.15966
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "yang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780402,
+                0.144066,
+                0.815001,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "bertanda",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.819438,
+                0.144066,
+                0.882428,
+                0.15957
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "tangan di bawah ini:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.161289,
+            0.227614,
+            0.176793
+          ],
+          "tokens": [
+            {
+              "text": "tangan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.161289,
+                0.134477,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "di",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138914,
+                0.161289,
+                0.15133,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "bawah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.155767,
+                0.161289,
+                0.202782,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "ini:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.207218,
+                0.161289,
+                0.227614,
+                0.176793
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "1.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.192766,
+            0.089137,
+            0.20827
+          ],
+          "tokens": [
+            {
+              "text": "1.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.192766,
+                0.089137,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Bambang Catur M",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.109425,
+            0.192822,
+            0.24597,
+            0.20836
+          ],
+          "tokens": [
+            {
+              "text": "Bambang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.109425,
+                0.192822,
+                0.182134,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Catur",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.18657,
+                0.192822,
+                0.228239,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "M",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232676,
+                0.192822,
+                0.24597,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Selaku Resident Engineer, dalam hal ini bertindak untuk dan atas nama PT.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.192766,
+            0.880385,
+            0.20836
+          ],
+          "tokens": [
+            {
+              "text": "Selaku",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.192766,
+                0.393396,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Resident",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.397833,
+                0.192766,
+                0.460807,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Engineer,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.465244,
+                0.192766,
+                0.533548,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.537985,
+                0.192766,
+                0.581441,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "hal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.585878,
+                0.192766,
+                0.607167,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.611604,
+                0.192766,
+                0.627563,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "bertindak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.631999,
+                0.192766,
+                0.697639,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "untuk",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.702075,
+                0.192766,
+                0.741111,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.745548,
+                0.192766,
+                0.772167,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "atas",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.776604,
+                0.192766,
+                0.806766,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.811203,
+                0.192766,
+                0.851116,
+                0.20827
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.855553,
+                0.192822,
+                0.880385,
+                0.20836
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "TAPIAN NADENGGAN. Selanjutnya disebut sebagai PIHAK PERTAMA.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.209989,
+            0.863389,
+            0.225584
+          ],
+          "tokens": [
+            {
+              "text": "TAPIAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.210045,
+                0.404009,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "NADENGGAN.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.408446,
+                0.209989,
+                0.517494,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Selanjutnya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.52193,
+                0.209989,
+                0.605316,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "disebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.609753,
+                0.209989,
+                0.661204,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.665641,
+                0.209989,
+                0.721529,
+                0.225493
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "PIHAK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.725966,
+                0.210045,
+                0.775614,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "PERTAMA.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780051,
+                0.209989,
+                0.863389,
+                0.225584
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "2.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.236714,
+            0.089137,
+            0.252219
+          ],
+          "tokens": [
+            {
+              "text": "2.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.236714,
+                0.089137,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Dedi Arisman Saputra",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.109425,
+            0.236771,
+            0.276148,
+            0.252309
+          ],
+          "tokens": [
+            {
+              "text": "Dedi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.109425,
+                0.236771,
+                0.144008,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Arisman",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.148444,
+                0.236771,
+                0.212296,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Saputra",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.216733,
+                0.236771,
+                0.276148,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Selaku Site Manager, dalam hal ini bertindak sebagai kontraktor PT.TRIROYAL",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.236714,
+            0.907819,
+            0.252309
+          ],
+          "tokens": [
+            {
+              "text": "Selaku",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.236714,
+                0.393396,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Site",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.397833,
+                0.236714,
+                0.42533,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Manager,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.429767,
+                0.236714,
+                0.497178,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.501614,
+                0.236714,
+                0.545071,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "hal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.549507,
+                0.236714,
+                0.570797,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.575233,
+                0.236714,
+                0.591192,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "bertindak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.595629,
+                0.236714,
+                0.661268,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.665705,
+                0.236714,
+                0.721593,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "kontraktor",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.72603,
+                0.236714,
+                0.796983,
+                0.252219
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "PT.TRIROYAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.80142,
+                0.236771,
+                0.907819,
+                0.252309
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "TIMURRAYA. Selanjutnya disebut sebagai PIHAK KEDUA.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.34461,
+            0.253938,
+            0.768513,
+            0.269532
+          ],
+          "tokens": [
+            {
+              "text": "TIMURRAYA.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.34461,
+                0.253938,
+                0.444784,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Selanjutnya",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.449221,
+                0.253938,
+                0.532607,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "disebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.537043,
+                0.253938,
+                0.588495,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.592932,
+                0.253938,
+                0.64882,
+                0.269442
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "PIHAK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.653257,
+                0.253994,
+                0.702905,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "KEDUA.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.707342,
+                0.253938,
+                0.768513,
+                0.269532
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Pihak Kedua menyerahkan barang kepada pihak pertama untuk Pekerjaan Install Mass Flow Meter, Tanjung Karas",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.290166,
+            0.898179,
+            0.30567
+          ],
+          "tokens": [
+            {
+              "text": "Pihak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.290166,
+                0.125588,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Kedua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.130025,
+                0.290166,
+                0.176162,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "menyerahkan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.180599,
+                0.290166,
+                0.277278,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.281715,
+                0.290166,
+                0.331395,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "kepada",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.335832,
+                0.290166,
+                0.388177,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "pihak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.392614,
+                0.290166,
+                0.430756,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "pertama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.435193,
+                0.290166,
+                0.49373,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "untuk",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.498167,
+                0.290166,
+                0.537202,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Pekerjaan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.541639,
+                0.290166,
+                0.613487,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Install",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.617923,
+                0.290166,
+                0.659608,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Mass",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.664045,
+                0.290166,
+                0.702171,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Flow",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.706607,
+                0.290166,
+                0.740297,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Meter,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.744733,
+                0.290166,
+                0.789961,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Tanjung",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.794398,
+                0.290166,
+                0.852058,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Karas",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.856494,
+                0.290166,
+                0.898179,
+                0.30567
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Bulking, PT. Tapian Nadenggan. Dengan data sebagai berikut:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.307389,
+            0.529223,
+            0.322893
+          ],
+          "tokens": [
+            {
+              "text": "Bulking,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.307389,
+                0.142441,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.146877,
+                0.307389,
+                0.17171,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Tapian",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.176146,
+                0.307389,
+                0.224933,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Nadenggan.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.229369,
+                0.307389,
+                0.316314,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Dengan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.320751,
+                0.307389,
+                0.376639,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "data",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.381076,
+                0.307389,
+                0.412132,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "sebagai",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.416568,
+                0.307389,
+                0.472457,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "berikut:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.476893,
+                0.307389,
+                0.529223,
+                0.322893
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.095148,
+            0.341339,
+            0.115302,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095148,
+                0.341339,
+                0.115302,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Material",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.391638,
+            0.341339,
+            0.448773,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "Material",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.391638,
+                0.341339,
+                0.448773,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Jumlah",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.788514,
+            0.341339,
+            0.841446,
+            0.35606
+          ],
+          "tokens": [
+            {
+              "text": "Jumlah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.788514,
+                0.341339,
+                0.841446,
+                0.35606
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.365086,
+            0.111179,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "1.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.365086,
+                0.111179,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Ball valve 2.1/2 \" valmatic",
+          "confidence": 0.96,
+          "bbox_norm": [
+            0.143023,
+            0.365086,
+            0.305219,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "Ball",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.365086,
+                0.166826,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "valve",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.170795,
+                0.365086,
+                0.204123,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "2.1/2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.208092,
+                0.365086,
+                0.239849,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "\"",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.243819,
+                0.365086,
+                0.248888,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "valmatic",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252857,
+                0.365086,
+                0.305219,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "1 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.365086,
+            0.832444,
+            0.378959
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.365086,
+                0.805456,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.365086,
+                0.832444,
+                0.378959
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "2.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.388249,
+            0.111179,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "2.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.388249,
+                0.111179,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Ball valve ½\" valmatic",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.388249,
+            0.281401,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "Ball",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.388249,
+                0.166826,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "valve",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.170795,
+                0.388249,
+                0.204123,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "½\"",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.208092,
+                0.388249,
+                0.22507,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "valmatic",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.22904,
+                0.388249,
+                0.281401,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "2 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.388249,
+            0.832444,
+            0.402121
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.388249,
+                0.805456,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.388249,
+                0.832444,
+                0.402121
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "3.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.09927,
+            0.411411,
+            0.111179,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "3.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.09927,
+                0.411411,
+                0.111179,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Presure gauge c/w simphone",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.143023,
+            0.411411,
+            0.327937,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "Presure",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143023,
+                0.411411,
+                0.193014,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "gauge",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.196983,
+                0.411411,
+                0.236679,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "c/w",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.240649,
+                0.411411,
+                0.262067,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "simphone",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.266037,
+                0.411411,
+                0.327937,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "3 unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.797517,
+            0.411411,
+            0.832444,
+            0.425283
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.797517,
+                0.411411,
+                0.805456,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.809426,
+                0.411411,
+                0.832444,
+                0.425283
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Demikian berita acara serah terima barang ini di perbuat oleh kedua belah pihak, adapun barang-barang tersebut",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.44755,
+            0.885795,
+            0.463054
+          ],
+          "tokens": [
+            {
+              "text": "Demikian",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.44755,
+                0.152176,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "berita",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.156612,
+                0.44755,
+                0.196526,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "acara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.200962,
+                0.44755,
+                0.240876,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "serah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.245312,
+                0.44755,
+                0.285226,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "terima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.289662,
+                0.44755,
+                0.333997,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.338433,
+                0.44755,
+                0.388113,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "ini",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.39255,
+                0.44755,
+                0.408509,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "di",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.412946,
+                0.44755,
+                0.425362,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "perbuat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.429798,
+                0.44755,
+                0.483915,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.488352,
+                0.44755,
+                0.518514,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "kedua",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.522951,
+                0.44755,
+                0.566423,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "belah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.57086,
+                0.44755,
+                0.609896,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "pihak,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.614332,
+                0.44755,
+                0.656911,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "adapun",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.661348,
+                0.44755,
+                0.714587,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "barang-barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.719024,
+                0.44755,
+                0.823699,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "tersebut",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.828135,
+                0.44755,
+                0.885795,
+                0.463054
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "dalam keadaan baik dan cukup.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.464773,
+            0.311,
+            0.480277
+          ],
+          "tokens": [
+            {
+              "text": "dalam",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.464773,
+                0.129131,
+                0.480277
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "keadaan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.133568,
+                0.464773,
+                0.194786,
+                0.480277
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "baik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199223,
+                0.464773,
+                0.228492,
+                0.480277
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "dan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232928,
+                0.464773,
+                0.259548,
+                0.480277
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "cukup.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263984,
+                0.464773,
+                0.311,
+                0.480277
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "Diketahui Oleh :",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.161852,
+            0.515255,
+            0.275384,
+            0.530759
+          ],
+          "tokens": [
+            {
+              "text": "Diketahui",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.161852,
+                0.515255,
+                0.228369,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232805,
+                0.515255,
+                0.266511,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.270947,
+                0.515255,
+                0.275384,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "PT. TAPIAN NADENGGAN",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.11976,
+            0.532534,
+            0.317476,
+            0.548072
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.11976,
+                0.532534,
+                0.144592,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "TAPIAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.149029,
+                0.532534,
+                0.208428,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "NADENGGAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.212865,
+                0.532534,
+                0.317476,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Diterima Oleh :",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.446793,
+            0.515255,
+            0.553207,
+            0.530759
+          ],
+          "tokens": [
+            {
+              "text": "Diterima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.446793,
+                0.515255,
+                0.506192,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Oleh",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.510629,
+                0.515255,
+                0.544334,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.548771,
+                0.515255,
+                0.553207,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "PT. TAPIAN NADENGGAN",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.401142,
+            0.532534,
+            0.598858,
+            0.548072
+          ],
+          "tokens": [
+            {
+              "text": "PT.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.401142,
+                0.532534,
+                0.425974,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "TAPIAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.430411,
+                0.532534,
+                0.48981,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "NADENGGAN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.494247,
+                0.532534,
+                0.598858,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Diajukan Oleh:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.729053,
+            0.515255,
+            0.833712,
+            0.530759
+          ],
+          "tokens": [
+            {
+              "text": "Diajukan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.729053,
+                0.515255,
+                0.791133,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Oleh:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.79557,
+                0.515255,
+                0.833712,
+                0.530759
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "PT.TRIROYAL TIMURRAYA",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.678096,
+            0.532534,
+            0.884669,
+            0.548072
+          ],
+          "tokens": [
+            {
+              "text": "PT.TRIROYAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.678096,
+                0.532534,
+                0.784494,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "TIMURRAYA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.788931,
+                0.532534,
+                0.884669,
+                0.548072
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "ROHMAD YULIANTO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.139716,
+            0.62934,
+            0.297519,
+            0.644878
+          ],
+          "tokens": [
+            {
+              "text": "ROHMAD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.139716,
+                0.62934,
+                0.211516,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "YULIANTO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.215953,
+                0.62934,
+                0.297519,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "UH TKRB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.183596,
+            0.646507,
+            0.25364,
+            0.662011
+          ],
+          "tokens": [
+            {
+              "text": "UH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.183596,
+                0.646507,
+                0.206641,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "TKRB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.211077,
+                0.646507,
+                0.25364,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Bambang Catur M",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.431727,
+            0.62934,
+            0.568273,
+            0.644878
+          ],
+          "tokens": [
+            {
+              "text": "Bambang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.431727,
+                0.62934,
+                0.504437,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Catur",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.508873,
+                0.62934,
+                0.550542,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "M",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.554979,
+                0.62934,
+                0.568273,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "RE TKRB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.465417,
+            0.646507,
+            0.534583,
+            0.662011
+          ],
+          "tokens": [
+            {
+              "text": "RE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.465417,
+                0.646507,
+                0.487584,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "TKRB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.492021,
+                0.646507,
+                0.534583,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Dedi Arisman Saputra",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.69802,
+            0.62934,
+            0.864744,
+            0.644878
+          ],
+          "tokens": [
+            {
+              "text": "Dedi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.69802,
+                0.62934,
+                0.732604,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Arisman",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.73704,
+                0.62934,
+                0.800892,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Saputra",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.805329,
+                0.62934,
+                0.864744,
+                0.644878
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "SITE MANAGER",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.721081,
+            0.646507,
+            0.841683,
+            0.662011
+          ],
+          "tokens": [
+            {
+              "text": "SITE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.721081,
+                0.646507,
+                0.756558,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "MANAGER",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.760995,
+                0.646507,
+                0.841683,
+                0.662011
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.085675,
+            0.05958,
+            0.882428,
+            0.176793
+          ],
+          "confidence": 0.95,
+          "text_snippet": "BERITA ACARA SERAH TERIMA MATERIAL PEKERJAAN INSTALL MASS FLOW METER TANJUNG KARAS BULKING, PT. TAPI"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.075827,
+            0.144066,
+            0.907819,
+            0.378959
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Pada hari ini Jum'at tanggal Tiga Puluh Satu bulan Juli tahun dua ribu dua puluh (31-07-2020) yang b"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.085675,
+            0.341339,
+            0.885795,
+            0.662011
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Jumlah 1. Ball valve 2.1/2 \" valmatic 1 unit 2. Ball valve ½\" valmatic 2 unit 3. Presure gauge c/w s"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.085675,
+            0.365086,
+            0.885795,
+            0.644878
+          ],
+          "headers": [
+            "Ball",
+            "valve",
+            "2.1/2",
+            "\"",
+            "valmatic"
+          ],
+          "rows": [
+            [
+              "Ball",
+              "valve",
+              "½\"",
+              "valmatic"
+            ],
+            [
+              "Presure",
+              "gauge",
+              "c/w",
+              "simphone"
+            ],
+            [
+              "Demikian",
+              "berita",
+              "acara",
+              "serah",
+              "terima",
+              "barang",
+              "ini",
+              "di",
+              "perbuat",
+              "oleh",
+              "kedua",
+              "belah",
+              "pihak,",
+              "adapun",
+              "barang-barang",
+              "tersebut"
+            ],
+            [
+              "dalam",
+              "keadaan",
+              "baik",
+              "dan",
+              "cukup."
+            ],
+            [
+              "Diketahui",
+              "Oleh",
+              ":"
+            ],
+            [
+              "PT.",
+              "TAPIAN",
+              "NADENGGAN"
+            ],
+            [
+              "Diterima",
+              "Oleh",
+              ":"
+            ],
+            [
+              "PT.",
+              "TAPIAN",
+              "NADENGGAN"
+            ],
+            [
+              "Bambang",
+              "Catur",
+              "M"
+            ],
+            [
+              "Dedi",
+              "Arisman",
+              "Saputra"
+            ]
+          ],
+          "row_count": 10,
+          "col_count": 5,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.9078,
+        "probabilities": {
+          "INVOICE": 0.1326,
+          "SURAT_JALAN": 0.1353,
+          "POD": 0.4632,
+          "RATE_AGREEMENT": 0.0685,
+          "UNKNOWN": 0.2005
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 389.39,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

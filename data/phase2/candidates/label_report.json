@@ -1,0 +1,12 @@
+{
+  "files": [
+    "data\\phase2\\candidates\\candidate_labels_POD_address.csv",
+    "data\\phase2\\candidates\\candidate_labels_POD_date.csv",
+    "data\\phase2\\candidates\\candidate_labels_POD_enum.csv",
+    "data\\phase2\\candidates\\candidate_labels_POD_id.csv",
+    "data\\phase2\\candidates\\candidate_labels_POD_party.csv",
+    "data\\phase2\\candidates\\candidate_labels_POD_qty.csv"
+  ],
+  "labels": 306,
+  "stale_pipeline": []
+}

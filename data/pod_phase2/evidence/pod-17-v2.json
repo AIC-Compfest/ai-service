@@ -1,0 +1,1708 @@
+{
+  "document_id": "pod-17-v2",
+  "source_file": "PoD_17_variasi_2.pdf",
+  "source_sha256": "6a45e8503bffc19bd3bc7b7d1a60ec18836c4b5090588ec93936c316b4697d00",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.9078,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.9078,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1507,
+      "SURAT_JALAN": 0.1231,
+      "POD": 0.5658,
+      "RATE_AGREEMENT": 0.0551,
+      "UNKNOWN": 0.1053
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.98,
+      "quality": {
+        "blur_score": 593.4,
+        "brightness": 252.48,
+        "contrast": 21.55,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-17-v2/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "335c997b37b646df8ceae3f7b5e2b59a557c3234c5fb3590370bdc5f3a71f120"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "ups",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.052976,
+            0.135564,
+            0.085688
+          ],
+          "tokens": [
+            {
+              "text": "ups",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.052976,
+                0.135564,
+                0.085688
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "18/11/2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.844314,
+            0.060326,
+            0.924173,
+            0.07583
+          ],
+          "tokens": [
+            {
+              "text": "18/11/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.844314,
+                0.060326,
+                0.924173,
+                0.07583
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Proof of Delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.094027,
+            0.246985,
+            0.113654
+          ],
+          "tokens": [
+            {
+              "text": "Proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.094027,
+                0.138309,
+                0.113654
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143913,
+                0.094027,
+                0.162943,
+                0.113654
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.168547,
+                0.094027,
+                0.246985,
+                0.113654
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "UPS: Proof of Delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.113198,
+            0.264903,
+            0.129554
+          ],
+          "tokens": [
+            {
+              "text": "UPS:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.113198,
+                0.125807,
+                0.129554
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "Proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.130477,
+                0.113198,
+                0.174339,
+                0.129554
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.17901,
+                0.113198,
+                0.194868,
+                0.129554
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199538,
+                0.113198,
+                0.264903,
+                0.129554
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Dear Customer,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.143516,
+            0.19237,
+            0.158205
+          ],
+          "tokens": [
+            {
+              "text": "Dear",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.143516,
+                0.118438,
+                0.158205
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Customer,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122641,
+                0.143516,
+                0.19237,
+                0.158205
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "This notice serves as proof of delivery for the shipment listed below.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.159552,
+            0.539427,
+            0.17424
+          ],
+          "tokens": [
+            {
+              "text": "This",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.159552,
+                0.114234,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "notice",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.118438,
+                0.159552,
+                0.158775,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "serves",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.162978,
+                0.159552,
+                0.207504,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "as",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.211707,
+                0.159552,
+                0.227673,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231876,
+                0.159552,
+                0.266332,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.270535,
+                0.159552,
+                0.283144,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.287348,
+                0.159552,
+                0.339433,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.343636,
+                0.159552,
+                0.36128,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "the",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.365483,
+                0.159552,
+                0.386498,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.390701,
+                0.159552,
+                0.452039,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "listed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.456242,
+                0.159552,
+                0.49153,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "below.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.495733,
+                0.159552,
+                0.539427,
+                0.17424
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Tracking Number:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.194636,
+            0.189288,
+            0.208509
+          ],
+          "tokens": [
+            {
+              "text": "Tracking",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.194636,
+                0.130573,
+                0.208509
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Number:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.134542,
+                0.194636,
+                0.189288,
+                0.208509
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "1Z88A9200391823901",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.194687,
+            0.524269,
+            0.20859
+          ],
+          "tokens": [
+            {
+              "text": "1Z88A9200391823901",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.194687,
+                0.524269,
+                0.20859
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Shipment Reference:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.218393,
+            0.20995,
+            0.232265
+          ],
+          "tokens": [
+            {
+              "text": "Shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.218393,
+                0.136142,
+                0.232265
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Reference:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.140111,
+                0.218393,
+                0.20995,
+                0.232265
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "2045, 882109",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.218443,
+            0.465539,
+            0.232346
+          ],
+          "tokens": [
+            {
+              "text": "2045,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.218443,
+                0.413934,
+                0.232346
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "882109",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.417904,
+                0.218443,
+                0.465539,
+                0.232346
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Service:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.242149,
+            0.127403,
+            0.256021
+          ],
+          "tokens": [
+            {
+              "text": "Service:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.242149,
+                0.127403,
+                0.256021
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "UPS Next Day Air®",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.242199,
+            0.506962,
+            0.256102
+          ],
+          "tokens": [
+            {
+              "text": "UPS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.242199,
+                0.407566,
+                0.256102
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Next",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.411535,
+                0.242199,
+                0.442478,
+                0.256102
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Day",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.446448,
+                0.242199,
+                0.472635,
+                0.256102
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Air®",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.476605,
+                0.242199,
+                0.506962,
+                0.256102
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Weight:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.265905,
+            0.124233,
+            0.279777
+          ],
+          "tokens": [
+            {
+              "text": "Weight:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.265905,
+                0.124233,
+                0.279777
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "2.450 KGS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.265955,
+            0.448846,
+            0.279858
+          ],
+          "tokens": [
+            {
+              "text": "2.450",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.265955,
+                0.413934,
+                0.279858
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "KGS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.417904,
+                0.265955,
+                0.448846,
+                0.279858
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Shipped or Billed On:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.289661,
+            0.21075,
+            0.303533
+          ],
+          "tokens": [
+            {
+              "text": "Shipped",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.289661,
+                0.128217,
+                0.303533
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "or",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.132186,
+                0.289661,
+                0.14488,
+                0.303533
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Billed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.14885,
+                0.289661,
+                0.183762,
+                0.303533
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "On:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.187732,
+                0.289661,
+                0.21075,
+                0.303533
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Nov 17, 2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.289711,
+            0.464725,
+            0.303614
+          ],
+          "tokens": [
+            {
+              "text": "Nov",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.289711,
+                0.405181,
+                0.303614
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "17,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.409151,
+                0.289711,
+                0.428998,
+                0.303614
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.432968,
+                0.289711,
+                0.464725,
+                0.303614
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Delivered on:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.313417,
+            0.159945,
+            0.327289
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.313417,
+                0.136127,
+                0.327289
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "on:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.140097,
+                0.313417,
+                0.159945,
+                0.327289
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Nov 18, 2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.313467,
+            0.464725,
+            0.32737
+          ],
+          "tokens": [
+            {
+              "text": "Nov",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.313467,
+                0.405181,
+                0.32737
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "18,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.409151,
+                0.313467,
+                0.428998,
+                0.32737
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.432968,
+                0.313467,
+                0.464725,
+                0.32737
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Delivered to:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.337173,
+            0.155975,
+            0.351045
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.337173,
+                0.136127,
+                0.351045
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "to:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.140097,
+                0.337173,
+                0.155975,
+                0.351045
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "742 Evergreen Terrace",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.337223,
+            0.531394,
+            0.351126
+          ],
+          "tokens": [
+            {
+              "text": "742",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.337223,
+                0.402025,
+                0.351126
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Evergreen",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.405995,
+                0.337223,
+                0.475834,
+                0.351126
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Terrace",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.479803,
+                0.337223,
+                0.531394,
+                0.351126
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Los Angeles, CA 90001",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.351477,
+            0.535335,
+            0.36538
+          ],
+          "tokens": [
+            {
+              "text": "Los",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.351477,
+                0.403596,
+                0.36538
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "Angeles,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.407566,
+                0.351477,
+                0.467081,
+                0.36538
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.47105,
+                0.351477,
+                0.491669,
+                0.36538
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "90001",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.495639,
+                0.351477,
+                0.535335,
+                0.36538
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Location:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.375183,
+            0.133771,
+            0.389055
+          ],
+          "tokens": [
+            {
+              "text": "Location:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.375183,
+                0.133771,
+                0.389055
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "UNITED STATES",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.375233,
+            0.491655,
+            0.389136
+          ],
+          "tokens": [
+            {
+              "text": "UNITED",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.375233,
+                0.431355,
+                0.389136
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "STATES",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.435324,
+                0.375233,
+                0.491655,
+                0.389136
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Signed By:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.075827,
+            0.398939,
+            0.14488,
+            0.412811
+          ],
+          "tokens": [
+            {
+              "text": "Signed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.075827,
+                0.398939,
+                0.120278,
+                0.412811
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "By:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.124247,
+                0.398939,
+                0.14488,
+                0.412811
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Robert Vance",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.378208,
+            0.398989,
+            0.470251,
+            0.412892
+          ],
+          "tokens": [
+            {
+              "text": "Robert",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.378208,
+                0.398989,
+                0.424215,
+                0.412892
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "Vance",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.428185,
+                0.398989,
+                0.470251,
+                0.412892
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Left at Front Door",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.43928,
+            0.204163,
+            0.453968
+          ],
+          "tokens": [
+            {
+              "text": "Left",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.43928,
+                0.110893,
+                0.453968
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.115096,
+                0.43928,
+                0.127706,
+                0.453968
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Front",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.131909,
+                0.43928,
+                0.167197,
+                0.453968
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Door",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1714,
+                0.43928,
+                0.204163,
+                0.453968
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Thank you for giving us this opportunity to serve you.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.467193,
+            0.43946,
+            0.481881
+          ],
+          "tokens": [
+            {
+              "text": "Thank",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.467193,
+                0.12769,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "you",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.131894,
+                0.467193,
+                0.156265,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.160469,
+                0.467193,
+                0.178112,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "giving",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.182316,
+                0.467193,
+                0.221807,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "us",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.22601,
+                0.467193,
+                0.241975,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "this",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.246178,
+                0.467193,
+                0.269704,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "opportunity",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.273907,
+                0.467193,
+                0.348701,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "to",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.352904,
+                0.467193,
+                0.365513,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "serve",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.369716,
+                0.467193,
+                0.406682,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "you.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.410885,
+                0.467193,
+                0.43946,
+                0.481881
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "Sincerely,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.483228,
+            0.152047,
+            0.497917
+          ],
+          "tokens": [
+            {
+              "text": "Sincerely,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.483228,
+                0.152047,
+                0.497917
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "UPS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.499317,
+            0.116759,
+            0.514038
+          ],
+          "tokens": [
+            {
+              "text": "UPS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.499317,
+                0.116759,
+                0.514038
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Tracking results provided by UPS: Nov 18, 2025 10:15 Pacific Standard Time",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.533205,
+            0.545038,
+            0.546261
+          ],
+          "tokens": [
+            {
+              "text": "Tracking",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.533205,
+                0.1372,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "results",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.140936,
+                0.533205,
+                0.180515,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "provided",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.184251,
+                0.533205,
+                0.23579,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.239526,
+                0.533205,
+                0.253718,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "UPS:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.257454,
+                0.533205,
+                0.288821,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Nov",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.292557,
+                0.533205,
+                0.316452,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "18,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.320188,
+                0.533205,
+                0.338868,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.342604,
+                0.533205,
+                0.372493,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "10:15",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.376229,
+                0.533205,
+                0.409854,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Pacific",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.41359,
+                0.533205,
+                0.453168,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Standard",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.456904,
+                0.533205,
+                0.51144,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "Time",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.515176,
+                0.533205,
+                0.545038,
+                0.546261
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "https://www.ups.com/qvm/displayPOD",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.085675,
+            0.549241,
+            0.313455,
+            0.562297
+          ],
+          "tokens": [
+            {
+              "text": "https://www.ups.com/qvm/displayPOD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085675,
+                0.549241,
+                0.313455,
+                0.562297
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.075827,
+            0.052976,
+            0.924173,
+            0.17424
+          ],
+          "confidence": 0.95,
+          "text_snippet": "ups 18/11/2025 Proof of Delivery UPS: Proof of Delivery Dear Customer, This notice serves as proof o"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.075827,
+            0.159552,
+            0.539427,
+            0.389136
+          ],
+          "confidence": 0.92,
+          "text_snippet": "This notice serves as proof of delivery for the shipment listed below. Tracking Number: 1Z88A9200391"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.075827,
+            0.351477,
+            0.545038,
+            0.562297
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Los Angeles, CA 90001 Location: UNITED STATES Signed By: Robert Vance Left at Front Door Thank you f"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.085675,
+            0.337223,
+            0.545038,
+            0.546261
+          ],
+          "headers": [
+            "742",
+            "Evergreen",
+            "Terrace"
+          ],
+          "rows": [
+            [
+              "Los",
+              "Angeles,",
+              "CA",
+              "90001"
+            ],
+            [
+              "Left",
+              "at",
+              "Front",
+              "Door"
+            ],
+            [
+              "Thank",
+              "you",
+              "for",
+              "giving",
+              "us",
+              "this",
+              "opportunity",
+              "to",
+              "serve",
+              "you."
+            ],
+            [
+              "Tracking",
+              "results",
+              "provided",
+              "by",
+              "UPS:",
+              "Nov",
+              "18,",
+              "2025",
+              "10:15",
+              "Pacific",
+              "Standard",
+              "Time"
+            ]
+          ],
+          "row_count": 4,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.9078,
+        "probabilities": {
+          "INVOICE": 0.1507,
+          "SURAT_JALAN": 0.1231,
+          "POD": 0.5658,
+          "RATE_AGREEMENT": 0.0551,
+          "UNKNOWN": 0.1053
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 356.4,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

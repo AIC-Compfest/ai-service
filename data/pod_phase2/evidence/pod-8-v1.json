@@ -1,0 +1,1699 @@
+{
+  "document_id": "pod-8-v1",
+  "source_file": "PoD_8_variasi_1.pdf",
+  "source_sha256": "972f38a63db1ddfd850b6bfc52f24a05d04a6ec83d9cdf9475c76c0d2ef809bf",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "SURAT_JALAN",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.867,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [
+      1
+    ],
+    "POD": [],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "SURAT_JALAN",
+    "confidence": 0.867,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.1724,
+      "SURAT_JALAN": 0.3356,
+      "POD": 0.2649,
+      "RATE_AGREEMENT": 0.065,
+      "UNKNOWN": 0.1622
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.9,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.969,
+      "quality": {
+        "blur_score": 1262.19,
+        "brightness": 251.23,
+        "contrast": 28.21,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-8-v1/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "da26ac7686e4f29705bf41222f790a7f62a1261c013ad60a0e9bbbfb79dcb205"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "PT MEGA SEJAHTERA TEKNIK",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.349918,
+            0.053641,
+            0.650082,
+            0.073268
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.349918,
+                0.053641,
+                0.375681,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "MEGA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.381285,
+                0.053641,
+                0.441761,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "SEJAHTERA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.447366,
+                0.053641,
+                0.569447,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            },
+            {
+              "text": "TEKNIK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.575051,
+                0.053641,
+                0.650082,
+                0.073268
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Kawasan Industri Jababeka, Bekasi | Telp: 021-8901234",
+          "confidence": 0.966,
+          "bbox_norm": [
+            0.300106,
+            0.07161,
+            0.699895,
+            0.087114
+          ],
+          "tokens": [
+            {
+              "text": "Kawasan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.300106,
+                0.07161,
+                0.365745,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Industri",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.370181,
+                0.07161,
+                0.422511,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Jababeka,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.426948,
+                0.07161,
+                0.500582,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Bekasi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.505019,
+                0.07161,
+                0.552912,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "|",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.557349,
+                0.07161,
+                0.561498,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Telp:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.565935,
+                0.07161,
+                0.601411,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "021-8901234",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.605848,
+                0.07161,
+                0.699895,
+                0.087114
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "TANDA TERIMA BERKAS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.388111,
+            0.1048,
+            0.611889,
+            0.122792
+          ],
+          "tokens": [
+            {
+              "text": "TANDA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.388111,
+                0.1048,
+                0.452768,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "TERIMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.457905,
+                0.1048,
+                0.528735,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "BERKAS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.533872,
+                0.1048,
+                0.611889,
+                0.122792
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "No. Urut: 771/EXC/V",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.412207,
+            0.121429,
+            0.587793,
+            0.139421
+          ],
+          "tokens": [
+            {
+              "text": "No.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.412207,
+                0.121429,
+                0.441976,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Urut:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.447114,
+                0.121429,
+                0.491241,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "771/EXC/V",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.496378,
+                0.121429,
+                0.587793,
+                0.139421
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Proyek / Unit",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.067427,
+            0.158319,
+            0.158777,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": "Proyek",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.067427,
+                0.158319,
+                0.117092,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "/",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.121528,
+                0.158319,
+                0.125965,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.130401,
+                0.158319,
+                0.158777,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": ": Sipil & Konstruksi",
+          "confidence": 0.93,
+          "bbox_norm": [
+            0.235417,
+            0.158319,
+            0.376377,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.235417,
+                0.158319,
+                0.239853,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Sipil",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252216,
+                0.158319,
+                0.282362,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.286799,
+                0.158319,
+                0.297443,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Konstruksi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.30188,
+                0.158319,
+                0.376377,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Tanggal",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.546197,
+            0.158319,
+            0.603857,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": "Tanggal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.546197,
+                0.158319,
+                0.603857,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": ": 28 Mei 2026",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.697388,
+            0.158319,
+            0.802009,
+            0.173824
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.697388,
+                0.158319,
+                0.701824,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "28",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.714187,
+                0.158319,
+                0.731933,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Mei",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.736369,
+                0.158319,
+                0.762079,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "2026",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.766516,
+                0.158319,
+                0.802009,
+                0.173824
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Nama Sub-Vendor",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.067427,
+            0.1797,
+            0.199584,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": "Nama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.067427,
+                0.1797,
+                0.10999,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Sub-Vendor",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.114427,
+                0.1797,
+                0.199584,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": ": PT Baja Mandiri",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.235417,
+            0.1797,
+            0.365732,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.235417,
+                0.1797,
+                0.239853,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.252216,
+                0.1797,
+                0.272611,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Baja",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.277048,
+                0.1797,
+                0.308982,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Mandiri",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.313418,
+                0.1797,
+                0.365732,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Diserahkan ke",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.546197,
+            0.1797,
+            0.648191,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": "Diserahkan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.546197,
+                0.1797,
+                0.626902,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ke",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.631338,
+                0.1797,
+                0.648191,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": ": Divisi Gudang",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.697388,
+            0.1797,
+            0.813515,
+            0.195204
+          ],
+          "tokens": [
+            {
+              "text": ":",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.697388,
+                0.1797,
+                0.701824,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Divisi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.714187,
+                0.1797,
+                0.752297,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "Gudang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.756733,
+                0.1797,
+                0.813515,
+                0.195204
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "No",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.082549,
+            0.217808,
+            0.102703,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "No",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.082549,
+                0.217808,
+                0.102703,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Kode Barang",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.154776,
+            0.217808,
+            0.248862,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Kode",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.154776,
+                0.217808,
+                0.192573,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Barang",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.196777,
+                0.217808,
+                0.248862,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Deskripsi Dokumen",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.387427,
+            0.217808,
+            0.528578,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Deskripsi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.387427,
+                0.217808,
+                0.455493,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Dokumen",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.459696,
+                0.217808,
+                0.528578,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Jumlah",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.670922,
+            0.217808,
+            0.723853,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Jumlah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.670922,
+                0.217808,
+                0.723853,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Status",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.825476,
+            0.217808,
+            0.87168,
+            0.232528
+          ],
+          "tokens": [
+            {
+              "text": "Status",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.825476,
+                0.217808,
+                0.87168,
+                0.232528
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.241555,
+            0.096595,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.241555,
+                0.096595,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "DOC-CIV-091",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.241555,
+            0.215082,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "DOC-CIV-091",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.241555,
+                0.215082,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Cetak Biru Denah A3",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.294213,
+            0.241555,
+            0.428337,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "Cetak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.241555,
+                0.33151,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Biru",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.33548,
+                0.241555,
+                0.360868,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Denah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.364837,
+                0.241555,
+                0.406904,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "A3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.410873,
+                0.241555,
+                0.428337,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "3 Lembar",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.66723,
+            0.241555,
+            0.727545,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.66723,
+                0.241555,
+                0.675169,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Lembar",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.679139,
+                0.241555,
+                0.727545,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Revisi Final",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.772983,
+            0.241555,
+            0.846763,
+            0.255427
+          ],
+          "tokens": [
+            {
+              "text": "Revisi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.241555,
+                0.811851,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Final",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.81582,
+                0.241555,
+                0.846763,
+                0.255427
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.264717,
+            0.096595,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.264717,
+                0.096595,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "SPK-BM-2026",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.264717,
+            0.217481,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "SPK-BM-2026",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.264717,
+                0.217481,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Surat Perintah Kerja",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.294213,
+            0.264717,
+            0.422782,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "Surat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.264717,
+                0.32834,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Perintah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.33231,
+                0.264717,
+                0.385485,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Kerja",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.389455,
+                0.264717,
+                0.422782,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "1 Ekspl",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.673977,
+            0.264717,
+            0.720798,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.673977,
+                0.264717,
+                0.681916,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Ekspl",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.685886,
+                0.264717,
+                0.720798,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Asli Ttd Direksi",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.772983,
+            0.264717,
+            0.868182,
+            0.278589
+          ],
+          "tokens": [
+            {
+              "text": "Asli",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.264717,
+                0.795986,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Ttd",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.799956,
+                0.264717,
+                0.820589,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "Direksi",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.824559,
+                0.264717,
+                0.868182,
+                0.278589
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "3",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.088656,
+            0.287879,
+            0.096595,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "3",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.088656,
+                0.287879,
+                0.096595,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "JAL-88211",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.126224,
+            0.287879,
+            0.195277,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "JAL-88211",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.126224,
+                0.287879,
+                0.195277,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Surat Jalan Material",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.294213,
+            0.287879,
+            0.421183,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "Surat",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.294213,
+                0.287879,
+                0.32834,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Jalan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.33231,
+                0.287879,
+                0.366437,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Material",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.370406,
+                0.287879,
+                0.421183,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "2 Rangkap",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.662861,
+            0.287879,
+            0.731914,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.662861,
+                0.287879,
+                0.6708,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Rangkap",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.674769,
+                0.287879,
+                0.731914,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Putih & Merah",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.772983,
+            0.287879,
+            0.863455,
+            0.301752
+          ],
+          "tokens": [
+            {
+              "text": "Putih",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.772983,
+                0.287879,
+                0.805525,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.809494,
+                0.287879,
+                0.819019,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Merah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.822988,
+                0.287879,
+                0.863455,
+                0.301752
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Catatan Lapangan: Berkas denah akan langsung didistribusikan ke tim mandor.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.077275,
+            0.324018,
+            0.63967,
+            0.339522
+          ],
+          "tokens": [
+            {
+              "text": "Catatan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.077275,
+                0.324018,
+                0.133164,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Lapangan:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1376,
+                0.324018,
+                0.213022,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "Berkas",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.217459,
+                0.324018,
+                0.267123,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "denah",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.27156,
+                0.324018,
+                0.315926,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "akan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.320363,
+                0.324018,
+                0.354962,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "langsung",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.359398,
+                0.324018,
+                0.42416,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "didistribusikan",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.428596,
+                0.324018,
+                0.529697,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "ke",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.534133,
+                0.324018,
+                0.550986,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "tim",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.555423,
+                0.324018,
+                0.576696,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "mandor.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.581133,
+                0.324018,
+                0.63967,
+                0.339522
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Penerima Gudang,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.216322,
+            0.379845,
+            0.350266,
+            0.395349
+          ],
+          "tokens": [
+            {
+              "text": "Penerima",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.216322,
+                0.379845,
+                0.28461,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Gudang,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.289047,
+                0.379845,
+                0.350266,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Kurir Logistik,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.667535,
+            0.379845,
+            0.764198,
+            0.395349
+          ],
+          "tokens": [
+            {
+              "text": "Kurir",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.667535,
+                0.379845,
+                0.701224,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Logistik,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.705661,
+                0.379845,
+                0.764198,
+                0.395349
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "(________________________)",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.171501,
+            0.476057,
+            0.395086,
+            0.491561
+          ],
+          "tokens": [
+            {
+              "text": "(________________________)",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.171501,
+                0.476057,
+                0.395086,
+                0.491561
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "(________________________)",
+          "confidence": 0.88,
+          "bbox_norm": [
+            0.604074,
+            0.476057,
+            0.827659,
+            0.491561
+          ],
+          "tokens": [
+            {
+              "text": "(________________________)",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.604074,
+                0.476057,
+                0.827659,
+                0.491561
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.067427,
+            0.053641,
+            0.813515,
+            0.301752
+          ],
+          "confidence": 0.95,
+          "text_snippet": "PT MEGA SEJAHTERA TEKNIK Kawasan Industri Jababeka, Bekasi | Telp: 021-8901234 TANDA TERIMA BERKAS N"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.067427,
+            0.121429,
+            0.87168,
+            0.395349
+          ],
+          "confidence": 0.92,
+          "text_snippet": "No. Urut: 771/EXC/V Proyek / Unit : Sipil & Konstruksi Tanggal : 28 Mei 2026 Nama Sub-Vendor : PT Ba"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.171501,
+            0.217808,
+            0.827659,
+            0.491561
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Jumlah Penerima Gudang, Kurir Logistik, (________________________) (________________________)"
+        }
+      ],
+      "tables": [],
+      "classification": {
+        "document_type": "SURAT_JALAN",
+        "confidence": 0.867,
+        "probabilities": {
+          "INVOICE": 0.1724,
+          "SURAT_JALAN": 0.3356,
+          "POD": 0.2649,
+          "RATE_AGREEMENT": 0.065,
+          "UNKNOWN": 0.1622
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.9,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 327.09,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

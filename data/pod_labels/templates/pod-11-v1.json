@@ -1,0 +1,87 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-11-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.2833,
+        0.78045
+      ],
+      "ctx": {
+        "above": "",
+        "left": "",
+        "line": ""
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.18900000000000003,
+        0.014699999999999935
+      ],
+      "value_norm": "dra murniaty m mph apt"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.3383,
+        0.31484999999999996
+      ],
+      "ctx": {
+        "above": "POLISI BESAR KOMISARIS : BIRO LOGISTIK BAGIAN KEPALA : disebut PERTAMA. PIHAK",
+        "left": "2. Nama :",
+        "line": "2. Nama :"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.18900000000000003,
+        0.01469999999999999
+      ],
+      "value_norm": "dra murniaty m mph apt"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.3614,
+        0.2412
+      ],
+      "ctx": {
+        "above": "ACARA BERITA : NOMOR tahn bulan tanggal 2011, Desember puluh Tiga",
+        "left": "1. Nama :",
+        "line": "1. Nama :"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.2352,
+        0.01479999999999998
+      ],
+      "value_norm": "teguh iman wahyudi sh mm"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.7159,
+        0.78845
+      ],
+      "ctx": {
+        "above": "",
+        "left": "Murniaty M, 199312 2 MPH.,Apt 001",
+        "line": ""
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.23519999999999996,
+        0.014699999999999935
+      ],
+      "value_norm": "teguh iman wahyudi sh mm"
+    }
+  ],
+  "template_group": "pod-11-v1"
+}

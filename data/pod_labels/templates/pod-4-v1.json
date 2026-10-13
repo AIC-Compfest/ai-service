@@ -1,0 +1,127 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-4-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "address",
+      "center": [
+        0.41185,
+        0.29115
+      ],
+      "ctx": {
+        "above": "PERTAMA PIHAK AGUSTINA NUR PUNGKI : - :",
+        "left": "Alamat :",
+        "line": "Alamat :"
+      },
+      "field": "pihak_kedua_alamat",
+      "page_pos": "first",
+      "size": [
+        0.28569999999999995,
+        0.016300000000000037
+      ],
+      "value_norm": "rt rw 009 004 parakan trenggalek"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.2875,
+        0.7497
+      ],
+      "ctx": {
+        "above": "",
+        "left": "",
+        "line": "BAKTI SANYOTO"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.19880000000000003,
+        0.01639999999999997
+      ],
+      "value_norm": "pungki nur agustina"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.367,
+        0.24605
+      ],
+      "ctx": {
+        "above": "Pegawai (Rekrutmen HUMAS : Trenggalek 02 Sutomo Dr. Jl. : PERTAMA PIHAK",
+        "left": "Nama :",
+        "line": "Nama :"
+      },
+      "field": "pihak_kedua_nama",
+      "page_pos": "first",
+      "size": [
+        0.196,
+        0.01629999999999998
+      ],
+      "value_norm": "pungki nur agustina"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "address",
+      "center": [
+        0.37825,
+        0.20085
+      ],
+      "ctx": {
+        "above": "Juni Bulan Satu Tanggal SANYOTO BAKTI : Non Pegawai (Rekrutmen HUMAS :",
+        "left": "Alamat :",
+        "line": "Alamat :"
+      },
+      "field": "pihak_pertama_alamat",
+      "page_pos": "first",
+      "size": [
+        0.21849999999999997,
+        0.01629999999999998
+      ],
+      "value_norm": "jl dr sutomo 02 trenggalek"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.3367,
+        0.15575
+      ],
+      "ctx": {
+        "above": "ACARA BERITA Tahun Juni Bulan Satu Tanggal",
+        "left": "Nama :",
+        "line": "Nama :"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.13539999999999996,
+        0.01629999999999998
+      ],
+      "value_norm": "bakti sanyoto"
+    },
+    {
+      "anchor_text": "",
+      "cand_type": "party",
+      "center": [
+        0.71165,
+        0.7497
+      ],
+      "ctx": {
+        "above": "",
+        "left": "PUNGKI NUR AGUSTINA",
+        "line": "PUNGKI NUR AGUSTINA"
+      },
+      "field": "pihak_pertama_nama",
+      "page_pos": "first",
+      "size": [
+        0.1391,
+        0.01639999999999997
+      ],
+      "value_norm": "bakti sanyoto"
+    }
+  ],
+  "template_group": "pod-4-v1"
+}

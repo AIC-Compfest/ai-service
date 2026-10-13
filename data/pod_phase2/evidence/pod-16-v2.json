@@ -1,0 +1,2290 @@
+{
+  "document_id": "pod-16-v2",
+  "source_file": "PoD_16_variasi_2.pdf",
+  "source_sha256": "332412b7de420c007c6bacab63bad7f067956f89d7ed8cdee96592750b93bc0a",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.9209,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.9209,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.2396,
+      "SURAT_JALAN": 0.2058,
+      "POD": 0.3362,
+      "RATE_AGREEMENT": 0.0985,
+      "UNKNOWN": 0.1199
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.978,
+      "quality": {
+        "blur_score": 1020.5,
+        "brightness": 251.05,
+        "contrast": 27.45,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-16-v2/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "1114aefd252490e1a6cbd2a31631f5a12ff2f79b6a0b9b653efdba1ab5ab12dc"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "kargo",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.048391,
+            0.152894,
+            0.077832
+          ],
+          "tokens": [
+            {
+              "text": "kargo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.048391,
+                0.152894,
+                0.077832
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Electronic Proof of Delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.0869,
+            0.334937,
+            0.106527
+          ],
+          "tokens": [
+            {
+              "text": "Electronic",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.0869,
+                0.168023,
+                0.106527
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.173627,
+                0.0869,
+                0.226262,
+                0.106527
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.231866,
+                0.0869,
+                0.250896,
+                0.106527
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.2565,
+                0.0869,
+                0.334937,
+                0.106527
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Order #3104892",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.10132,
+            0.195691,
+            0.117676
+          ],
+          "tokens": [
+            {
+              "text": "Order",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.10132,
+                0.116299,
+                0.117676
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            },
+            {
+              "text": "#3104892",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.120969,
+                0.10132,
+                0.195691,
+                0.117676
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "Dear Customer,",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.127526,
+            0.171323,
+            0.141398
+          ],
+          "tokens": [
+            {
+              "text": "Dear",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.127526,
+                0.101498,
+                0.141398
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Customer,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.105468,
+                0.127526,
+                0.171323,
+                0.141398
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "This notice serves as Proof Of Delivery with details as listed below.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.141779,
+            0.493517,
+            0.155652
+          ],
+          "tokens": [
+            {
+              "text": "This",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.141779,
+                0.097529,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "notice",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.101498,
+                0.141779,
+                0.139595,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "serves",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.143565,
+                0.141779,
+                0.185617,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "as",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.189586,
+                0.141779,
+                0.204665,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Proof",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.208634,
+                0.141779,
+                0.242762,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.246731,
+                0.141779,
+                0.26181,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.265779,
+                0.141779,
+                0.317341,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "with",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.321311,
+                0.141779,
+                0.346699,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "details",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.350669,
+                0.141779,
+                0.391935,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "as",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.395905,
+                0.141779,
+                0.410984,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "listed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.414953,
+                0.141779,
+                0.448281,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "below.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.45225,
+                0.141779,
+                0.493517,
+                0.155652
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Origin:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.170337,
+            0.110034,
+            0.18424
+          ],
+          "tokens": [
+            {
+              "text": "Origin:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.170337,
+                0.110034,
+                0.18424
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Shipper: Logistik Nusantara Utama",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.18454,
+            0.284639,
+            0.198413
+          ],
+          "tokens": [
+            {
+              "text": "Shipper:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.18454,
+                0.116403,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.120372,
+                0.18454,
+                0.168779,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Nusantara",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.172748,
+                0.18454,
+                0.238618,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Utama",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.242587,
+                0.18454,
+                0.284639,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Contact number: 081223344556",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.198794,
+            0.268018,
+            0.212666
+          ],
+          "tokens": [
+            {
+              "text": "Contact",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.198794,
+                0.112433,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "number:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.116403,
+                0.198794,
+                0.168779,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "081223344556",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.172748,
+                0.198794,
+                0.268018,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Destination:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.170337,
+            0.582505,
+            0.18424
+          ],
+          "tokens": [
+            {
+              "text": "Destination:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.170337,
+                0.582505,
+                0.18424
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Jl. Gatot Subroto No. 120, Tebet, Jakarta Selatan, DKI Jakarta",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.18454,
+            0.89526,
+            0.198413
+          ],
+          "tokens": [
+            {
+              "text": "Jl.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.18454,
+                0.514279,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Gatot",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.518249,
+                0.18454,
+                0.553175,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Subroto",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.557145,
+                0.18454,
+                0.60715,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "No.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.61112,
+                0.18454,
+                0.633338,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "120,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.637308,
+                0.18454,
+                0.665095,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Tebet,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.669065,
+                0.18454,
+                0.709546,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.713515,
+                0.18454,
+                0.760337,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Selatan,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.764306,
+                0.18454,
+                0.816696,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "DKI",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.820666,
+                0.18454,
+                0.844469,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "Jakarta",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.848439,
+                0.18454,
+                0.89526,
+                0.198413
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Recipient: PT Sinar Perkasa Logistik",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.198794,
+            0.731721,
+            0.212666
+          ],
+          "tokens": [
+            {
+              "text": "Recipient:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.198794,
+                0.563485,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.567454,
+                0.198794,
+                0.585703,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Sinar",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.589673,
+                0.198794,
+                0.623,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Perkasa",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.62697,
+                0.198794,
+                0.679346,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.683315,
+                0.198794,
+                0.731721,
+                0.212666
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "Contact number: +6281198765432",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.5,
+            0.213047,
+            0.721069,
+            0.22692
+          ],
+          "tokens": [
+            {
+              "text": "Contact",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.5,
+                0.213047,
+                0.549206,
+                0.22692
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "number:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.553175,
+                0.213047,
+                0.605551,
+                0.22692
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "+6281198765432",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.609521,
+                0.213047,
+                0.721069,
+                0.22692
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "Internal ID:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.247494,
+            0.133067,
+            0.261366
+          ],
+          "tokens": [
+            {
+              "text": "Internal",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.247494,
+                0.110848,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "ID:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.114818,
+                0.247494,
+                0.133067,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "INT-90812",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.261798,
+            0.130682,
+            0.275701
+          ],
+          "tokens": [
+            {
+              "text": "INT-90812",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.261798,
+                0.130682,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Actual Departure:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.247494,
+            0.464955,
+            0.261366
+          ],
+          "tokens": [
+            {
+              "text": "Actual",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.247494,
+                0.393531,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Departure:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.3975,
+                0.247494,
+                0.464955,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "2025-11-10 08:30:00 WIB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.261798,
+            0.519715,
+            0.275701
+          ],
+          "tokens": [
+            {
+              "text": "2025-11-10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.261798,
+                0.426873,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "08:30:00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.430842,
+                0.261798,
+                0.487987,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "WIB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.491957,
+                0.261798,
+                0.519715,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Cash On Delivery:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.644471,
+            0.247494,
+            0.760317,
+            0.261366
+          ],
+          "tokens": [
+            {
+              "text": "Cash",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.644471,
+                0.247494,
+                0.677798,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "On",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.681768,
+                0.247494,
+                0.700816,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Delivery:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.704786,
+                0.247494,
+                0.760317,
+                0.261366
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "Rp 0",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.644471,
+            0.261798,
+            0.675414,
+            0.275701
+          ],
+          "tokens": [
+            {
+              "text": "Rp",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.644471,
+                0.261798,
+                0.663505,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "0",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.667475,
+                0.261798,
+                0.675414,
+                0.275701
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "Delivery ID:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.283128,
+            0.137008,
+            0.297
+          ],
+          "tokens": [
+            {
+              "text": "Delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.283128,
+                0.114789,
+                0.297
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "ID:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.118759,
+                0.283128,
+                0.137008,
+                0.297
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "281045",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.297432,
+            0.110863,
+            0.311335
+          ],
+          "tokens": [
+            {
+              "text": "281045",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.297432,
+                0.110863,
+                0.311335
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Actual Arrival:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.283128,
+            0.441923,
+            0.297
+          ],
+          "tokens": [
+            {
+              "text": "Actual",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.283128,
+                0.393531,
+                0.297
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Arrival:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.3975,
+                0.283128,
+                0.441923,
+                0.297
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "2025-11-10 11:45:12 WIB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.297432,
+            0.519715,
+            0.311335
+          ],
+          "tokens": [
+            {
+              "text": "2025-11-10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.297432,
+                0.426873,
+                0.311335
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "11:45:12",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.430842,
+                0.297432,
+                0.487987,
+                0.311335
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "WIB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.491957,
+                0.297432,
+                0.519715,
+                0.311335
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "Reference ID:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.318762,
+            0.151315,
+            0.332634
+          ],
+          "tokens": [
+            {
+              "text": "Reference",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.318762,
+                0.129097,
+                0.332634
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "ID:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.133067,
+                0.318762,
+                0.151315,
+                0.332634
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "SPL/0204/2025/11/09/001284",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.333066,
+            0.253754,
+            0.346969
+          ],
+          "tokens": [
+            {
+              "text": "SPL/0204/2025/11/09/001284",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.333066,
+                0.253754,
+                0.346969
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Actual Finished:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.318762,
+            0.455431,
+            0.332634
+          ],
+          "tokens": [
+            {
+              "text": "Actual",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.318762,
+                0.393531,
+                0.332634
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Finished:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.3975,
+                0.318762,
+                0.455431,
+                0.332634
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "2025-11-10 12:00:05 WIB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.333066,
+            0.519715,
+            0.346969
+          ],
+          "tokens": [
+            {
+              "text": "2025-11-10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.333066,
+                0.426873,
+                0.346969
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "12:00:05",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.430842,
+                0.333066,
+                0.487987,
+                0.346969
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "WIB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.491957,
+                0.333066,
+                0.519715,
+                0.346969
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Additional Notes:",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.365137,
+            0.188758,
+            0.379039
+          ],
+          "tokens": [
+            {
+              "text": "Additional",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.365137,
+                0.140366,
+                0.379039
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Notes:",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.144336,
+                0.365137,
+                0.188758,
+                0.379039
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "FRAGILE - DOKUMEN & ELEKTRONIK DIREKSI",
+          "confidence": 0.947,
+          "bbox_norm": [
+            0.070556,
+            0.37934,
+            0.386352,
+            0.393212
+          ],
+          "tokens": [
+            {
+              "text": "FRAGILE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.37934,
+                0.131656,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "-",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.135625,
+                0.37934,
+                0.14038,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "DOKUMEN",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.14435,
+                0.37934,
+                0.21733,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.2213,
+                0.37934,
+                0.230824,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "ELEKTRONIK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.234794,
+                0.37934,
+                0.325252,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            },
+            {
+              "text": "DIREKSI",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.329221,
+                0.37934,
+                0.386352,
+                0.393212
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "Received at Tebet Hub on Mon, Nov 10, 2025 12:00 PM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.403096,
+            0.426134,
+            0.416968
+          ],
+          "tokens": [
+            {
+              "text": "Received",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.403096,
+                0.130071,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.13404,
+                0.403096,
+                0.145949,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Tebet",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.149919,
+                0.403096,
+                0.18643,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Hub",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1904,
+                0.403096,
+                0.216588,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "on",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.220558,
+                0.403096,
+                0.236436,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Mon,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.240405,
+                0.403096,
+                0.272148,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "Nov",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.276117,
+                0.403096,
+                0.301506,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "10,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.305475,
+                0.403096,
+                0.325323,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.329293,
+                0.403096,
+                0.36105,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "12:00",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.365019,
+                0.403096,
+                0.400745,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "PM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.404715,
+                0.403096,
+                0.426134,
+                0.416968
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "PT Sinar Perkasa Logistik",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.426903,
+            0.245946,
+            0.440805
+          ],
+          "tokens": [
+            {
+              "text": "PT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.426903,
+                0.088804,
+                0.440805
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Sinar",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.092774,
+                0.426903,
+                0.128486,
+                0.440805
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Perkasa",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.132455,
+                0.426903,
+                0.18723,
+                0.440805
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            },
+            {
+              "text": "Logistik",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.1912,
+                0.426903,
+                0.245946,
+                0.440805
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Thank you for using our service!",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.455359,
+            0.273719,
+            0.469232
+          ],
+          "tokens": [
+            {
+              "text": "Thank",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.455359,
+                0.110237,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "you",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.114207,
+                0.455359,
+                0.137225,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.141194,
+                0.455359,
+                0.157858,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "using",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.161828,
+                0.455359,
+                0.195955,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "our",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.199924,
+                0.455359,
+                0.220558,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "service!",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.224527,
+                0.455359,
+                0.273719,
+                0.469232
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Kargo Tech",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.469664,
+            0.149105,
+            0.483566
+          ],
+          "tokens": [
+            {
+              "text": "Kargo",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.469664,
+                0.111808,
+                0.483566
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "Tech",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.115777,
+                0.469664,
+                0.149105,
+                0.483566
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Detail Of Goods Received",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.502881,
+            0.255401,
+            0.517601
+          ],
+          "tokens": [
+            {
+              "text": "Detail",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.502881,
+                0.111725,
+                0.517601
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "Of",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.115928,
+                0.502881,
+                0.132725,
+                0.517601
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "Goods",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.136928,
+                0.502881,
+                0.18481,
+                0.517601
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "Received",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.189013,
+                0.502881,
+                0.255401,
+                0.517601
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "Product Description",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.063228,
+            0.529012,
+            0.20772,
+            0.543733
+          ],
+          "tokens": [
+            {
+              "text": "Product",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.529012,
+                0.120347,
+                0.543733
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "Description",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.12455,
+                0.529012,
+                0.20772,
+                0.543733
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "Quantity",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.654127,
+            0.529012,
+            0.71545,
+            0.543733
+          ],
+          "tokens": [
+            {
+              "text": "Quantity",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.654127,
+                0.529012,
+                0.71545,
+                0.543733
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "UoM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.836404,
+            0.529012,
+            0.869152,
+            0.543733
+          ],
+          "tokens": [
+            {
+              "text": "UoM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.836404,
+                0.529012,
+                0.869152,
+                0.543733
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "PERANGKAT NETWORK SWITCH & ACCESS POINT",
+          "confidence": 0.963,
+          "bbox_norm": [
+            0.063228,
+            0.552759,
+            0.412323,
+            0.566632
+          ],
+          "tokens": [
+            {
+              "text": "PERANGKAT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.552759,
+                0.151301,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "NETWORK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.155271,
+                0.552759,
+                0.228251,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "SWITCH",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.232221,
+                0.552759,
+                0.288537,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.292507,
+                0.552759,
+                0.302031,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "ACCESS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.306001,
+                0.552759,
+                0.364716,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "POINT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.368686,
+                0.552759,
+                0.412323,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "4",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.680819,
+            0.552759,
+            0.688758,
+            0.566632
+          ],
+          "tokens": [
+            {
+              "text": "4",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.680819,
+                0.552759,
+                0.688758,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "unit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.841269,
+            0.552759,
+            0.864287,
+            0.566632
+          ],
+          "tokens": [
+            {
+              "text": "unit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.841269,
+                0.552759,
+                0.864287,
+                0.566632
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "BERKAS SPK & KONTRAK KERJASAMA",
+          "confidence": 0.96,
+          "bbox_norm": [
+            0.063228,
+            0.576515,
+            0.330647,
+            0.590388
+          ],
+          "tokens": [
+            {
+              "text": "BERKAS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.063228,
+                0.576515,
+                0.121158,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "SPK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.125127,
+                0.576515,
+                0.1537,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "&",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.15767,
+                0.576515,
+                0.167194,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "KONTRAK",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.171163,
+                0.576515,
+                0.240188,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "KERJASAMA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.244158,
+                0.576515,
+                0.330647,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "2",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.680819,
+            0.576515,
+            0.688758,
+            0.590388
+          ],
+          "tokens": [
+            {
+              "text": "2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.680819,
+                0.576515,
+                0.688758,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "koli",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.842068,
+            0.576515,
+            0.863487,
+            0.590388
+          ],
+          "tokens": [
+            {
+              "text": "koli",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.842068,
+                0.576515,
+                0.863487,
+                0.590388
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.063228,
+            0.048391,
+            0.582505,
+            0.18424
+          ],
+          "confidence": 0.95,
+          "text_snippet": "kargo Electronic Proof of Delivery Order #3104892 Dear Customer, This notice serves as Proof Of Deli"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.063228,
+            0.170337,
+            0.89526,
+            0.393212
+          ],
+          "confidence": 0.92,
+          "text_snippet": "Origin: Shipper: Logistik Nusantara Utama Contact number: 081223344556 Destination: Jl. Gatot Subrot"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.063228,
+            0.365137,
+            0.869152,
+            0.590388
+          ],
+          "confidence": 0.94,
+          "text_snippet": "Additional Notes: FRAGILE - DOKUMEN & ELEKTRONIK DIREKSI Received at Tebet Hub on Mon, Nov 10, 2025 "
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.063228,
+            0.333066,
+            0.519715,
+            0.590388
+          ],
+          "headers": [
+            "2025-11-10",
+            "12:00:05",
+            "WIB"
+          ],
+          "rows": [
+            [
+              "FRAGILE",
+              "-",
+              "DOKUMEN",
+              "&",
+              "ELEKTRONIK",
+              "DIREKSI"
+            ],
+            [
+              "Received",
+              "at",
+              "Tebet",
+              "Hub",
+              "on",
+              "Mon,",
+              "Nov",
+              "10,",
+              "2025",
+              "12:00",
+              "PM"
+            ],
+            [
+              "PT",
+              "Sinar",
+              "Perkasa",
+              "Logistik"
+            ],
+            [
+              "Thank",
+              "you",
+              "for",
+              "using",
+              "our",
+              "service!"
+            ],
+            [
+              "Detail",
+              "Of",
+              "Goods",
+              "Received"
+            ],
+            [
+              "PERANGKAT",
+              "NETWORK",
+              "SWITCH",
+              "&",
+              "ACCESS",
+              "POINT"
+            ],
+            [
+              "BERKAS",
+              "SPK",
+              "&",
+              "KONTRAK",
+              "KERJASAMA"
+            ]
+          ],
+          "row_count": 7,
+          "col_count": 3,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.9209,
+        "probabilities": {
+          "INVOICE": 0.2396,
+          "SURAT_JALAN": 0.2058,
+          "POD": 0.3362,
+          "RATE_AGREEMENT": 0.0985,
+          "UNKNOWN": 0.1199
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 359.35,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}

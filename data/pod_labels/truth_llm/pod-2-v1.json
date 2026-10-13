@@ -1,0 +1,100 @@
+{
+  "document_id": "pod-2-v1",
+  "doc_type": "POD",
+  "prompt_version": "extract_truth_v1",
+  "llm_model": "fake-local",
+  "fields": {
+    "nomor_berita_acara": {
+      "status": "present",
+      "value_text": "12/BAST/VII/2021",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "hari": {
+      "status": "present",
+      "value_text": "Jumat",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "tanggal": {
+      "status": "present",
+      "value_text": "09 Juli 2021",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_nama": {
+      "status": "present",
+      "value_text": "Ahmad Fauzi",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_jabatan": {
+      "status": "present",
+      "value_text": "Staf Gudang Logistik",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_pertama_alamat": {
+      "status": "present",
+      "value_text": "Jl. Merdeka No. 10, Bandung",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_nama": {
+      "status": "present",
+      "value_text": "Siti Aminah",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_jabatan": {
+      "status": "present",
+      "value_text": "Kepala Toko Berkah Jaya",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    },
+    "pihak_kedua_alamat": {
+      "status": "present",
+      "value_text": "Jl. Asia Afrika No. 55, Bandung",
+      "page": null,
+      "bbox": null,
+      "anchor_text": null,
+      "evidence": null,
+      "confidence": 0.0,
+      "also_at": []
+    }
+  },
+  "tables": [],
+  "m_pipeline_version": ""
+}

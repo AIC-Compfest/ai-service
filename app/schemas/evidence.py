@@ -18,6 +18,7 @@ class ExtractionMethod(str, Enum):
     VLM = "vlm"
     RULE_BASED = "rule_based"
     MANUAL = "manual"
+    ML_MODEL = "ml_model"
 
 
 class BoundingBox(BaseModel):

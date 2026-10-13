@@ -1,0 +1,27 @@
+{
+  "created_from": "audited_labels",
+  "document_id": "pod-7-v1",
+  "fields": [
+    {
+      "anchor_text": "",
+      "cand_type": "date",
+      "center": [
+        0.8563000000000001,
+        0.49595
+      ],
+      "ctx": {
+        "above": "TUJUAN BAYAR CASH/",
+        "left": "Banjarmasin,",
+        "line": "Banjarmasin,"
+      },
+      "field": "tanggal",
+      "page_pos": "first",
+      "size": [
+        0.13279999999999992,
+        0.01469999999999999
+      ],
+      "value_norm": "2021-09-27"
+    }
+  ],
+  "template_group": "pod-7-v1"
+}

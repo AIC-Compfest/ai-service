@@ -1,0 +1,2582 @@
+{
+  "document_id": "pod-14-v2",
+  "source_file": "PoD_14_variasi_2.pdf",
+  "source_sha256": "a70e349117c5d1422fcbc27468c29d0da7d2e5eae9e7b6dff46a9490c86fa66b",
+  "mime_type": "application/pdf",
+  "page_count": 1,
+  "segments": [
+    {
+      "segment_number": 1,
+      "document_type": "POD",
+      "start_page": 1,
+      "end_page": 1,
+      "page_count": 1,
+      "classification_confidence": 0.8717,
+      "classification_method": "page_boundary_detection",
+      "requires_human_review": false
+    }
+  ],
+  "logical_document_groups": {
+    "INVOICE": [],
+    "SURAT_JALAN": [],
+    "POD": [
+      1
+    ],
+    "RATE_AGREEMENT": [],
+    "UNKNOWN": []
+  },
+  "classification": {
+    "document_type": "POD",
+    "confidence": 0.8717,
+    "requires_human_review": false,
+    "probabilities": {
+      "INVOICE": 0.2204,
+      "SURAT_JALAN": 0.2504,
+      "POD": 0.284,
+      "RATE_AGREEMENT": 0.1071,
+      "UNKNOWN": 0.1381
+    },
+    "model_version": "doc-classifier-v1",
+    "method": "ml_structural_ensemble",
+    "note": "SINGLE_DOC"
+  },
+  "signature_detection": {
+    "signature_present": false,
+    "confidence": 0.55,
+    "bbox": null
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "width": 1654,
+      "height": 2339,
+      "engine_used": "pymupdf_vector",
+      "fallback_used": false,
+      "average_confidence": 0.98,
+      "quality": {
+        "blur_score": 933.48,
+        "brightness": 250.76,
+        "contrast": 27.73,
+        "skew_angle": 0.0,
+        "is_blurry": false,
+        "is_low_contrast": true
+      },
+      "page_image": {
+        "path": "out/pages/pod-14-v2/page_0001.png",
+        "width": 1654,
+        "height": 2339,
+        "dpi": 200,
+        "rotation_applied": 0,
+        "sha256": "101b8f8c71cad173870a504e0d7e711d321416d550e10bd9ba52b3cb7a78e290"
+      },
+      "coord_space": "page_image_normalized",
+      "lines": [
+        {
+          "text": "FedEx.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.048059,
+            0.188004,
+            0.084042
+          ],
+          "tokens": [
+            {
+              "text": "FedEx.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.048059,
+                0.188004,
+                0.084042
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "890214829012",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.073501,
+            0.249888,
+            0.099671
+          ],
+          "tokens": [
+            {
+              "text": "890214829012",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.073501,
+                0.249888,
+                0.099671
+              ],
+              "_estimated": false,
+              "row_idx": 0
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.09386,
+            0.176436,
+            0.116759
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.09386,
+                0.176436,
+                0.116759
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "Wednesday 10/15/2025 at 2:15 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.109664,
+            0.305884,
+            0.124352
+          ],
+          "tokens": [
+            {
+              "text": "Wednesday",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.109664,
+                0.150384,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "10/15/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.154587,
+                0.109664,
+                0.230243,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "at",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.234446,
+                0.109664,
+                0.247055,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "2:15",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.251258,
+                0.109664,
+                0.28068,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.284883,
+                0.109664,
+                0.305884,
+                0.124352
+              ],
+              "_estimated": false,
+              "row_idx": 1
+            }
+          ]
+        },
+        {
+          "text": "FROM",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.141871,
+            0.101112,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "FROM",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.141871,
+                0.101112,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "DELIVERED",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.141871,
+            0.430762,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERED",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.141871,
+                0.430762,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "TO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.141871,
+            0.664818,
+            0.154956
+          ],
+          "tokens": [
+            {
+              "text": "TO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.141871,
+                0.664818,
+                0.154956
+              ],
+              "_estimated": false,
+              "row_idx": 2
+            }
+          ]
+        },
+        {
+          "text": "TechGear Solutions",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.159605,
+            0.204377,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "TechGear",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.159605,
+                0.131292,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Solutions",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.135495,
+                0.159605,
+                0.204377,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "120 Yonge Street",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.174993,
+            0.179219,
+            0.189682
+          ],
+          "tokens": [
+            {
+              "text": "120",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.174993,
+                0.086766,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Yonge",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.090969,
+                0.174993,
+                0.134678,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "Street",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.138882,
+                0.174993,
+                0.179219,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "Toronto, ON CA M5C1W6",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.190435,
+            0.23714,
+            0.205123
+          ],
+          "tokens": [
+            {
+              "text": "Toronto,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.190435,
+                0.117851,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122054,
+                0.190435,
+                0.144733,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.148936,
+                0.190435,
+                0.169936,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "M5C1W6",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.174139,
+                0.190435,
+                0.23714,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "416 555-0199",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.205876,
+            0.154847,
+            0.220564
+          ],
+          "tokens": [
+            {
+              "text": "416",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.205876,
+                0.086766,
+                0.220564
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            },
+            {
+              "text": "555-0199",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.090969,
+                0.205876,
+                0.154847,
+                0.220564
+              ],
+              "_estimated": false,
+              "row_idx": 6
+            }
+          ]
+        },
+        {
+          "text": "Signed by recipient",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.159605,
+            0.493322,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "Signed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.159605,
+                0.404256,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.408459,
+                0.159605,
+                0.426103,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "recipient",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.430306,
+                0.159605,
+                0.493322,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Marcus Vance",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.159605,
+            0.747826,
+            0.174326
+          ],
+          "tokens": [
+            {
+              "text": "Marcus",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.159605,
+                0.699083,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            },
+            {
+              "text": "Vance",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.703286,
+                0.159605,
+                0.747826,
+                0.174326
+              ],
+              "_estimated": false,
+              "row_idx": 3
+            }
+          ]
+        },
+        {
+          "text": "Vancouver, BC CA V6B1A1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.174993,
+            0.832705,
+            0.189682
+          ],
+          "tokens": [
+            {
+              "text": "Vancouver,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.174993,
+                0.722623,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "BC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726826,
+                0.174993,
+                0.747826,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "CA",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.75203,
+                0.174993,
+                0.77303,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            },
+            {
+              "text": "V6B1A1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.777233,
+                0.174993,
+                0.832705,
+                0.189682
+              ],
+              "_estimated": false,
+              "row_idx": 4
+            }
+          ]
+        },
+        {
+          "text": "604 555-0142",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.190435,
+            0.73945,
+            0.205123
+          ],
+          "tokens": [
+            {
+              "text": "604",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.190435,
+                0.671369,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            },
+            {
+              "text": "555-0142",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.675572,
+                0.190435,
+                0.73945,
+                0.205123
+              ],
+              "_estimated": false,
+              "row_idx": 5
+            }
+          ]
+        },
+        {
+          "text": "Shipment Facts",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.241522,
+            0.189386,
+            0.25706
+          ],
+          "tokens": [
+            {
+              "text": "Shipment",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.241522,
+                0.143265,
+                0.25706
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            },
+            {
+              "text": "Facts",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.147701,
+                0.241522,
+                0.189386,
+                0.25706
+              ],
+              "_estimated": false,
+              "row_idx": 7
+            }
+          ]
+        },
+        {
+          "text": "TRACKING NUMBER",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.266543,
+            0.192956,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "TRACKING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.266543,
+                0.130988,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            },
+            {
+              "text": "NUMBER",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.134724,
+                0.266543,
+                0.192956,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "SERVICE",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.266543,
+            0.412847,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "SERVICE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.266543,
+                0.412847,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "WEIGHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.266543,
+            0.699907,
+            0.2796
+          ],
+          "tokens": [
+            {
+              "text": "WEIGHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.266543,
+                0.699907,
+                0.2796
+              ],
+              "_estimated": false,
+              "row_idx": 8
+            }
+          ]
+        },
+        {
+          "text": "890214829012",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.285554,
+            0.156818,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "890214829012",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.285554,
+                0.156818,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "FedEx Priority Overnight",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.285554,
+            0.522071,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.285554,
+                0.396701,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Priority",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.40067,
+                0.285554,
+                0.450662,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "Overnight",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.454631,
+                0.285554,
+                0.522071,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "3.2 lbs/1.45 kgs",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.285554,
+            0.750931,
+            0.299457
+          ],
+          "tokens": [
+            {
+              "text": "3.2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.285554,
+                0.665999,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "lbs/1.45",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.669968,
+                0.285554,
+                0.722358,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            },
+            {
+              "text": "kgs",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.726328,
+                0.285554,
+                0.750931,
+                0.299457
+              ],
+              "_estimated": false,
+              "row_idx": 9
+            }
+          ]
+        },
+        {
+          "text": "DELIVERY ATTEMPTS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.305147,
+            0.203438,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERY",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.305147,
+                0.128018,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "ATTEMPTS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.131754,
+                0.305147,
+                0.203438,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "DELIVERED TO",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.305147,
+            0.452425,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "DELIVERED",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.305147,
+                0.430022,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "TO",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.433758,
+                0.305147,
+                0.452425,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "TOTAL PIECES",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.305147,
+            0.742496,
+            0.318203
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.305147,
+                0.689465,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            },
+            {
+              "text": "PIECES",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.693201,
+                0.305147,
+                0.742496,
+                0.318203
+              ],
+              "_estimated": false,
+              "row_idx": 10
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.324158,
+            0.069487,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.324158,
+                0.069487,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "Reception / Front Desk",
+          "confidence": 0.955,
+          "bbox_norm": [
+            0.353849,
+            0.324158,
+            0.509363,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "Reception",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.324158,
+                0.422874,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "/",
+              "confidence": 0.88,
+              "bbox_norm": [
+                0.426844,
+                0.324158,
+                0.430814,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Front",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.434783,
+                0.324158,
+                0.471266,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            },
+            {
+              "text": "Desk",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.475236,
+                0.324158,
+                0.509363,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.324158,
+            0.65409,
+            0.33806
+          ],
+          "tokens": [
+            {
+              "text": "1",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.324158,
+                0.65409,
+                0.33806
+              ],
+              "_estimated": false,
+              "row_idx": 11
+            }
+          ]
+        },
+        {
+          "text": "TOTAL SHIPMENT WEIGHT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.34375,
+            0.235531,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "TOTAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.34375,
+                0.104862,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "SHIPMENT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.108598,
+                0.34375,
+                0.178038,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            },
+            {
+              "text": "WEIGHT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.181774,
+                0.34375,
+                0.235531,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "TERMS",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.34375,
+            0.400886,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "TERMS",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.34375,
+                0.400886,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "PACKAGING",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.34375,
+            0.72606,
+            0.356807
+          ],
+          "tokens": [
+            {
+              "text": "PACKAGING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.34375,
+                0.72606,
+                0.356807
+              ],
+              "_estimated": false,
+              "row_idx": 12
+            }
+          ]
+        },
+        {
+          "text": "3.2 lbs/1.45 kgs",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.362761,
+            0.166328,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "3.2",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.362761,
+                0.081396,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "lbs/1.45",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.085365,
+                0.362761,
+                0.137755,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "kgs",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.141725,
+                0.362761,
+                0.166328,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "Shipper",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.362761,
+            0.40701,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "Shipper",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.362761,
+                0.40701,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "FedEx Pak",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.362761,
+            0.718375,
+            0.376664
+          ],
+          "tokens": [
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.362761,
+                0.689002,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            },
+            {
+              "text": "Pak",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.692972,
+                0.362761,
+                0.718375,
+                0.376664
+              ],
+              "_estimated": false,
+              "row_idx": 13
+            }
+          ]
+        },
+        {
+          "text": "SPECIAL HANDLING SECTION",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.382354,
+            0.254964,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "SPECIAL",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.382354,
+                0.118315,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "HANDLING",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122051,
+                0.382354,
+                0.191491,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "SECTION",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.195227,
+                0.382354,
+                0.254964,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "STANDARD TRANSIT",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.382354,
+            0.488993,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "STANDARD",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.382354,
+                0.427765,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "TRANSIT",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.431501,
+                0.382354,
+                0.488993,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "SHIP DATE",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.382354,
+            0.717096,
+            0.39541
+          ],
+          "tokens": [
+            {
+              "text": "SHIP",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.382354,
+                0.677518,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            },
+            {
+              "text": "DATE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.681254,
+                0.382354,
+                0.717096,
+                0.39541
+              ],
+              "_estimated": false,
+              "row_idx": 14
+            }
+          ]
+        },
+        {
+          "text": "Deliver Weekday, Direct Signature",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.40127,
+            0.292597,
+            0.415958
+          ],
+          "tokens": [
+            {
+              "text": "Deliver",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.40127,
+                0.108583,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Weekday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.112786,
+                0.40127,
+                0.180005,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Direct",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.184208,
+                0.40127,
+                0.223684,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "Signature",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.227887,
+                0.40127,
+                0.292597,
+                0.415958
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Required.",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.416711,
+            0.127089,
+            0.4314
+          ],
+          "tokens": [
+            {
+              "text": "Required.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.416711,
+                0.127089,
+                0.4314
+              ],
+              "_estimated": false,
+              "row_idx": 16
+            }
+          ]
+        },
+        {
+          "text": "10/15/2025 by 4:30 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.353849,
+            0.401365,
+            0.503865,
+            0.415268
+          ],
+          "tokens": [
+            {
+              "text": "10/15/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.353849,
+                0.401365,
+                0.425302,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.429271,
+                0.401365,
+                0.445935,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "4:30",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.449905,
+                0.401365,
+                0.478477,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.482447,
+                0.401365,
+                0.503865,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Tue 10/14/2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.646151,
+            0.401365,
+            0.746961,
+            0.415268
+          ],
+          "tokens": [
+            {
+              "text": "Tue",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.646151,
+                0.401365,
+                0.671539,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            },
+            {
+              "text": "10/14/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.675509,
+                0.401365,
+                0.746961,
+                0.415268
+              ],
+              "_estimated": false,
+              "row_idx": 15
+            }
+          ]
+        },
+        {
+          "text": "Travel History",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.070556,
+            0.453545,
+            0.176986,
+            0.469083
+          ],
+          "tokens": [
+            {
+              "text": "Travel",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.070556,
+                0.453545,
+                0.117571,
+                0.469083
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            },
+            {
+              "text": "History",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.122007,
+                0.453545,
+                0.176986,
+                0.469083
+              ],
+              "_estimated": false,
+              "row_idx": 17
+            }
+          ]
+        },
+        {
+          "text": "Date/Time",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.480989,
+            0.125773,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Date/Time",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.480989,
+                0.125773,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Activity",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.480989,
+            0.311677,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Activity",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.480989,
+                0.311677,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Location",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.480989,
+            0.755908,
+            0.494074
+          ],
+          "tokens": [
+            {
+              "text": "Location",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.480989,
+                0.755908,
+                0.494074
+              ],
+              "_estimated": false,
+              "row_idx": 18
+            }
+          ]
+        },
+        {
+          "text": "Wednesday, 10/15/2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.503421,
+            0.225438,
+            0.518109
+          ],
+          "tokens": [
+            {
+              "text": "Wednesday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.503421,
+                0.145579,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "10/15/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.149782,
+                0.503421,
+                0.225438,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "2:15 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.518862,
+            0.116173,
+            0.533551
+          ],
+          "tokens": [
+            {
+              "text": "2:15",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.518862,
+                0.090969,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.518862,
+                0.116173,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Delivered",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.503474,
+            0.331201,
+            0.518195
+          ],
+          "tokens": [
+            {
+              "text": "Delivered",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.503474,
+                0.331201,
+                0.518195
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "Signed for by M. VANCE",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.518862,
+            0.429505,
+            0.533551
+          ],
+          "tokens": [
+            {
+              "text": "Signed",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.518862,
+                0.310201,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.314404,
+                0.518862,
+                0.332048,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "by",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.336251,
+                0.518862,
+                0.352216,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "M.",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.356419,
+                0.518862,
+                0.373217,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            },
+            {
+              "text": "VANCE",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.37742,
+                0.518862,
+                0.429505,
+                0.533551
+              ],
+              "_estimated": false,
+              "row_idx": 20
+            }
+          ]
+        },
+        {
+          "text": "Vancouver, BC",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.503421,
+            0.801583,
+            0.518109
+          ],
+          "tokens": [
+            {
+              "text": "Vancouver,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.503421,
+                0.77638,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            },
+            {
+              "text": "BC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780583,
+                0.503421,
+                0.801583,
+                0.518109
+              ],
+              "_estimated": false,
+              "row_idx": 19
+            }
+          ]
+        },
+        {
+          "text": "8:30 am",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.543806,
+            0.116173,
+            0.558495
+          ],
+          "tokens": [
+            {
+              "text": "8:30",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.543806,
+                0.090969,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "am",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.543806,
+                0.116173,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "On FedEx vehicle for delivery",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.54386,
+            0.474892,
+            0.55858
+          ],
+          "tokens": [
+            {
+              "text": "On",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.54386,
+                0.284135,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.288338,
+                0.54386,
+                0.333711,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "vehicle",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.337914,
+                0.54386,
+                0.389182,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "for",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.393386,
+                0.54386,
+                0.413539,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "delivery",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.417742,
+                0.54386,
+                0.474892,
+                0.55858
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "RICHMOND, BC",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.543806,
+            0.812454,
+            0.558495
+          ],
+          "tokens": [
+            {
+              "text": "RICHMOND,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.543806,
+                0.78725,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            },
+            {
+              "text": "BC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.791453,
+                0.543806,
+                0.812454,
+                0.558495
+              ],
+              "_estimated": false,
+              "row_idx": 21
+            }
+          ]
+        },
+        {
+          "text": "6:15 am",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.56875,
+            0.116173,
+            0.583439
+          ],
+          "tokens": [
+            {
+              "text": "6:15",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.56875,
+                0.090969,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "am",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.56875,
+                0.116173,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "At local FedEx facility",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.568804,
+            0.419421,
+            0.583524
+          ],
+          "tokens": [
+            {
+              "text": "At",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.568804,
+                0.279086,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "local",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.283289,
+                0.568804,
+                0.317745,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "FedEx",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.321948,
+                0.568804,
+                0.36732,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "facility",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.371523,
+                0.568804,
+                0.419421,
+                0.583524
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "RICHMOND, BC",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.56875,
+            0.812454,
+            0.583439
+          ],
+          "tokens": [
+            {
+              "text": "RICHMOND,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.56875,
+                0.78725,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            },
+            {
+              "text": "BC",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.791453,
+                0.56875,
+                0.812454,
+                0.583439
+              ],
+              "_estimated": false,
+              "row_idx": 22
+            }
+          ]
+        },
+        {
+          "text": "Tuesday, 10/14/2025",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.593694,
+            0.203591,
+            0.608382
+          ],
+          "tokens": [
+            {
+              "text": "Tuesday,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.593694,
+                0.123732,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "10/14/2025",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.127935,
+                0.593694,
+                0.203591,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "11:20 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.609136,
+            0.124579,
+            0.623824
+          ],
+          "tokens": [
+            {
+              "text": "11:20",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.609136,
+                0.099375,
+                0.623824
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.103579,
+                0.609136,
+                0.124579,
+                0.623824
+              ],
+              "_estimated": false,
+              "row_idx": 24
+            }
+          ]
+        },
+        {
+          "text": "In transit",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.593748,
+            0.326983,
+            0.608468
+          ],
+          "tokens": [
+            {
+              "text": "In",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.593748,
+                0.276576,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "transit",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.280779,
+                0.593748,
+                0.326983,
+                0.608468
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "CALGARY, AB",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.593694,
+            0.800736,
+            0.608382
+          ],
+          "tokens": [
+            {
+              "text": "CALGARY,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.593694,
+                0.776364,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            },
+            {
+              "text": "AB",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.780568,
+                0.593694,
+                0.800736,
+                0.608382
+              ],
+              "_estimated": false,
+              "row_idx": 23
+            }
+          ]
+        },
+        {
+          "text": "6:10 pm",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.061548,
+            0.634079,
+            0.116173,
+            0.648768
+          ],
+          "tokens": [
+            {
+              "text": "6:10",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.061548,
+                0.634079,
+                0.090969,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            },
+            {
+              "text": "pm",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.095172,
+                0.634079,
+                0.116173,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            }
+          ]
+        },
+        {
+          "text": "Picked up",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.263135,
+            0.634133,
+            0.334557,
+            0.648853
+          ],
+          "tokens": [
+            {
+              "text": "Picked",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.263135,
+                0.634133,
+                0.311879,
+                0.648853
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            },
+            {
+              "text": "up",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.316082,
+                0.634133,
+                0.334557,
+                0.648853
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            }
+          ]
+        },
+        {
+          "text": "TORONTO, ON",
+          "confidence": 0.98,
+          "bbox_norm": [
+            0.699907,
+            0.634079,
+            0.806587,
+            0.648768
+          ],
+          "tokens": [
+            {
+              "text": "TORONTO,",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.699907,
+                0.634079,
+                0.779706,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            },
+            {
+              "text": "ON",
+              "confidence": 0.98,
+              "bbox_norm": [
+                0.783909,
+                0.634079,
+                0.806587,
+                0.648768
+              ],
+              "_estimated": false,
+              "row_idx": 25
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region_type": "header",
+          "bbox_norm": [
+            0.061548,
+            0.048059,
+            0.832705,
+            0.189682
+          ],
+          "confidence": 0.95,
+          "text_snippet": "FedEx. 890214829012 Delivered Wednesday 10/15/2025 at 2:15 pm FROM DELIVERED TO TechGear Solutions 1"
+        },
+        {
+          "region_type": "metadata_block",
+          "bbox_norm": [
+            0.061548,
+            0.159605,
+            0.832705,
+            0.494074
+          ],
+          "confidence": 0.92,
+          "text_snippet": "TechGear Solutions 120 Yonge Street Toronto, ON CA M5C1W6 416 555-0199 Signed by recipient Marcus Va"
+        },
+        {
+          "region_type": "table",
+          "bbox_norm": [
+            0.061548,
+            0.362761,
+            0.812454,
+            0.648853
+          ],
+          "confidence": 0.94,
+          "text_snippet": "3.2 lbs/1.45 kgs Shipper FedEx Pak SPECIAL HANDLING SECTION STANDARD TRANSIT SHIP DATE Deliver Weekd"
+        }
+      ],
+      "tables": [
+        {
+          "bbox_norm": [
+            0.061548,
+            0.324158,
+            0.509363,
+            0.583524
+          ],
+          "headers": [
+            "Reception",
+            "/",
+            "Front",
+            "Desk"
+          ],
+          "rows": [
+            [
+              "TOTAL",
+              "SHIPMENT",
+              "WEIGHT"
+            ],
+            [
+              "3.2",
+              "lbs/1.45",
+              "kgs"
+            ],
+            [
+              "SPECIAL",
+              "HANDLING",
+              "SECTION"
+            ],
+            [
+              "Deliver",
+              "Weekday,",
+              "Direct",
+              "Signature"
+            ],
+            [
+              "10/15/2025",
+              "by",
+              "4:30",
+              "pm"
+            ],
+            [
+              "Signed",
+              "for",
+              "by",
+              "M.",
+              "VANCE"
+            ],
+            [
+              "On",
+              "FedEx",
+              "vehicle",
+              "for",
+              "delivery"
+            ],
+            [
+              "At",
+              "local",
+              "FedEx",
+              "facility"
+            ]
+          ],
+          "row_count": 8,
+          "col_count": 4,
+          "confidence": 0.94
+        }
+      ],
+      "classification": {
+        "document_type": "POD",
+        "confidence": 0.8717,
+        "probabilities": {
+          "INVOICE": 0.2204,
+          "SURAT_JALAN": 0.2504,
+          "POD": 0.284,
+          "RATE_AGREEMENT": 0.1071,
+          "UNKNOWN": 0.1381
+        },
+        "requires_human_review": false,
+        "model_version": "doc-classifier-v1",
+        "method": "ml_structural_ensemble"
+      },
+      "signature_detection": {
+        "signature_present": false,
+        "confidence": 0.55,
+        "bbox": null
+      }
+    }
+  ],
+  "processing_metadata": {
+    "pipeline_version": "phase_5_v3_segment_aware",
+    "processing_time_ms": 376.81,
+    "model_version": "doc-classifier-v1",
+    "segment_count": 1,
+    "segmentation_method": "page_boundary_detection"
+  }
+}
