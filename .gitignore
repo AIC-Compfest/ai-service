@@ -10,4 +10,7 @@ venv/
 .coverage
 htmlcov/
 reports/
-docs/
+docs/*
+!docs/table_reliability/
+!docs/table_reliability/**
+out/
