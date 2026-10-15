@@ -74,6 +74,9 @@ Ekstraksi tabel dan line item tidak andal karena:
 - Normalisasi koordinat konsisten dengan `process_pdf_page`
 - Dukung banyak tabel per halaman
 - **Risk:** API `find_tables` hanya tersedia mulai PyMuPDF ≥ 1.23.x
+- [x] Implemented with `lines` then `text` strategies, normalized coordinates,
+  deduplication, and multi-table support. It is reachable only through the
+  existing table-extractor feature flag.
 
 ### Langkah 5 — Perbaiki `TokenGridTableProvider` dan Sambungkan ke Runtime
 **Perbaikan besar di:** `app/services/candidates/tables/token_grid.py`

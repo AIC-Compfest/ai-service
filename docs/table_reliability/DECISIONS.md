@@ -220,3 +220,13 @@ is deliberately deferred to Step 3.
 validation evidence. A failed check exposes `suggested_value` for review but
 never changes an OCR cell or a public extracted field. Router scoring includes
 the arithmetic signal only when `ENABLE_ARITHMETIC_VALIDATION=true`.
+
+---
+
+## D-017: PyMuPDF Provider Receives the Live PDF Page Only at OCR Time
+
+**Date:** 2026-10-15
+**Decision:** The internal candidate `Page` may carry a non-serializable live
+PyMuPDF page solely during OCR-time discovery. Persisted OCR evidence remains
+JSON-only. CandidatePipeline has no live PDF object and therefore naturally
+falls back to token-grid.

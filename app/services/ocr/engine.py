@@ -391,7 +391,7 @@ class OCREngine:
 
         ocr_lines = self._assign_row_indices(ocr_lines)
         regions = self._detect_layout_regions(ocr_lines, w, h)
-        tables = self._detect_tables(ocr_lines, page_number)
+        tables = self._detect_tables(ocr_lines, page_number, page)
 
         return PageOCREvidence(
             page_number=page_number,
@@ -536,14 +536,14 @@ class OCREngine:
 
         return regions
 
-    def _detect_tables(self, lines: list[OCRLine], page_number: int) -> list[TableStructure]:
+    def _detect_tables(self, lines: list[OCRLine], page_number: int, source_page=None) -> list[TableStructure]:
         """Route discovery through providers; doc type is intentionally unknown here."""
         if not settings.enable_table_extractor:
             return []
         from app.services.candidates.context import build_page
         from app.services.candidates.pipeline import table_evidence
         from app.services.candidates.tables import TableExtractor
-        page = build_page({"page_number": page_number, "lines": [line.to_dict() for line in lines]})
+        page = build_page({"page_number": page_number, "lines": [line.to_dict() for line in lines], "_source_page": source_page})
         extractor = TableExtractor.from_config(Path("config/candidates"), settings.table_provider_order)
         return [TableStructure(**_table_structure_args(table_evidence(table))) for table in extractor.extract(page, None, f"ocr-p{page_number}")]
 

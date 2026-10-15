@@ -90,6 +90,13 @@ and document subtotal / tax / withholding-tax / grand-total relationships with
 `Decimal`. It is disabled by default and does not claim accuracy or mutate OCR
 values. Failure metadata includes reason codes and a review-only suggestion.
 
+## Langkah 4 — PyMuPDF provider
+
+The digital-PDF provider uses PyMuPDF 1.28.2 `find_tables(**kwargs)` with
+`lines` and then `text` strategies. It normalizes coordinates to the established
+0–1 evidence space, deduplicates strategy results, and preserves multiple
+tables on one page. It has no dependency on PaddleOCR or PP-Structure.
+
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 
 ```powershell

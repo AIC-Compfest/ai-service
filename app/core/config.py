@@ -52,8 +52,8 @@ class Settings(BaseSettings):
     # Langkah 2: Router provider tabel
     # Urutan provider yang dicoba per halaman.
     # Tersedia: "token_grid", "pymupdf_find_tables", "ppstructure"
-    # Default: ["token_grid"] — tidak berubah dari perilaku sebelumnya
-    table_provider_order: list[str] = ["token_grid"]
+    # Digital PDF pages try PyMuPDF before geometry-only token-grid discovery.
+    table_provider_order: list[str] = ["pymupdf_find_tables", "token_grid"]
     # False keeps the legacy OCR evidence contract untouched. True routes
     # table discovery through the scored provider router.
     enable_table_extractor: bool = False

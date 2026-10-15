@@ -32,6 +32,7 @@ class Page:
     engine_used: str = ""
     quality: dict[str, Any] = field(default_factory=dict)
     regions: list[dict[str, Any]] = field(default_factory=list)
+    source_page: Any | None = None
 
 
 @dataclass

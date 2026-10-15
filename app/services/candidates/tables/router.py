@@ -7,6 +7,7 @@ from typing import Protocol
 
 from ..schema import Page, Table
 from .token_grid import TokenGridTableProvider
+from .pymupdf_provider import PyMuPDFTableProvider
 from app.services.validation.arithmetic import validate_table
 
 
@@ -29,7 +30,7 @@ class TableExtractor:
         provider = TokenGridTableProvider(config_dir / "line_item_aliases.yaml", config_dir / "abbreviations.yaml")
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
-        return cls([provider]).ordered(provider_order)
+        return cls([PyMuPDFTableProvider(), provider]).ordered(provider_order)
 
     def ordered(self, provider_order: Iterable[str]) -> "TableExtractor":
         requested = list(provider_order)
