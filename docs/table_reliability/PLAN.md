@@ -95,6 +95,8 @@ Ekstraksi tabel dan line item tidak andal karena:
   configuration, observed values, and the presence of a preceding rate field.
 - [x] Token-grid combines multi-line headers up to the configured row limit,
   only when a single row is not already a valid header.
+- [x] Candidate runtime can stitch consecutive-page tables with the same
+  provider and normalized headers behind `ENABLE_TABLE_STITCHING=false`.
 
 ### Langkah 6 — Ganti EasyOCR dengan PaddleOCR (di Balik Interface)
 **Refactor:** `app/services/ocr/engine.py`

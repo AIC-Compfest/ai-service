@@ -107,6 +107,8 @@ The ambiguous `jumlah` header is resolved by versioned candidate configuration,
 not vendor-specific or code-hardcoded data.
 Multi-line table headers are joined only under the configured limit and only
 when the first header row does not already match enough configured fields.
+Candidate runtime now has opt-in cross-page stitching based exclusively on
+provider, consecutive pages, and normalized header structure.
 
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 

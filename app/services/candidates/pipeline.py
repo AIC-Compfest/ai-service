@@ -45,10 +45,16 @@ class CandidatePipeline:
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
         pages = [build_page(page) for page in ocr_result.get("pages", [])]
         if settings.enable_table_extractor:
-            self.last_report["tables"] = [
-                table_evidence(table)
+            tables = [
+                table
                 for page in pages
                 for table in self.table_extractor.extract(page, doc_type, document_id, arithmetic_validation=settings.enable_arithmetic_validation, relative_tolerance=Decimal(str(settings.arith_row_tolerance_relative)), absolute_tolerance=Decimal(str(settings.arith_row_tolerance_absolute_idr)))
+            ]
+            if settings.enable_table_stitching:
+                tables = stitch_tables(tables)
+            self.last_report["tables"] = [
+                table_evidence(table)
+                for table in tables
             ]
         candidates: list[Candidate] = []
         for page in pages:
@@ -421,3 +427,28 @@ def table_evidence(table) -> dict[str, Any]:
         "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],
         "summary_rows": [[cell.text for cell in row.cells] for row in table.summary_rows],
     }
+
+
+def stitch_tables(tables):
+    """Join adjacent-page tables only when their provider and headers agree."""
+    stitched = []
+    for table in sorted(tables, key=lambda value: (value.page_start, value.table_id)):
+        previous = stitched[-1] if stitched else None
+        if previous and _same_table_segment(previous, table):
+            offset = len(previous.rows)
+            for row in table.rows:
+                row.idx += offset
+                for cell in row.cells:
+                    cell.row_idx = row.idx
+            previous.rows.extend(table.rows)
+            previous.summary_rows.extend(table.summary_rows)
+            previous.page_end = table.page_end
+            previous.stitched_pages.extend(page for page in table.stitched_pages if page not in previous.stitched_pages)
+            previous.reason = "consecutive_page_header_match"
+        else:
+            stitched.append(table)
+    return stitched
+
+
+def _same_table_segment(left, right) -> bool:
+    return left.source == right.source and left.page_end + 1 == right.page_start and [norm_text(column.header_text) for column in left.columns] == [norm_text(column.header_text) for column in right.columns]

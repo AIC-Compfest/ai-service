@@ -3,7 +3,7 @@ from pathlib import Path
 from app.services.candidates.context import build_page
 from app.services.candidates.schema import Cell, Column, Table, TableRow
 from app.services.candidates.tables.router import TableExtractor
-from app.services.candidates.pipeline import table_evidence
+from app.services.candidates.pipeline import table_evidence, stitch_tables
 from app.services.candidates.pipeline import CandidatePipeline
 from app.core.config import settings
 
@@ -47,3 +47,20 @@ def test_candidate_runtime_emits_router_diagnostics_only_when_flagged(monkeypatc
     pipeline = CandidatePipeline(Path("config/candidates"))
     pipeline.generate("D1", "SURAT_JALAN", evidence)
     assert pipeline.last_report["tables"][0]["provider"] == "token_grid"
+
+
+def test_stitching_joins_only_consecutive_tables_with_same_headers():
+    first, second = _table("token_grid"), _table("token_grid")
+    first.page_start = first.page_end = 1; first.stitched_pages = [1]
+    second.page_start = second.page_end = 2; second.stitched_pages = [2]
+    result = stitch_tables([first, second])
+    assert len(result) == 1
+    assert result[0].stitched_pages == [1, 2]
+    assert [row.idx for row in result[0].rows] == [0, 1]
+
+
+def test_stitching_rejects_header_or_page_gaps():
+    first, second = _table("token_grid"), _table("token_grid")
+    second.page_start = second.page_end = 3
+    second.columns[0].header_text = "Different"
+    assert len(stitch_tables([first, second])) == 2

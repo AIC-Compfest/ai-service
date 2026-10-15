@@ -57,6 +57,9 @@ class Settings(BaseSettings):
     # False keeps the legacy OCR evidence contract untouched. True routes
     # table discovery through the scored provider router.
     enable_table_extractor: bool = False
+    # False keeps each page table independent. True may join consecutive-page
+    # tables only when their normalized headers and provider match.
+    enable_table_stitching: bool = False
 
     # Langkah 3: Validasi aritmetika
     # False = tidak menjalankan validasi aritmetika (perilaku lama)

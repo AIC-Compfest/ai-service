@@ -267,3 +267,12 @@ a line total.
 **Decision:** `token_grid.header_max_rows` in table-resolution configuration
 controls header joining. A valid single header takes precedence, preventing a
 first line item from being swallowed as a second header line.
+
+---
+
+## D-022: Cross-Page Stitching Requires Structural Continuity
+
+**Date:** 2026-10-15
+**Decision:** Candidate runtime stitches only adjacent-page tables from the
+same provider with identical normalized header sequences. The behavior is
+feature-flagged off by default; it does not infer continuity from vendor data.
