@@ -2,7 +2,7 @@
 
 **Branch:** `feat/table-reliability`  
 **Dibuat:** 2026-10-14  
-**Status:** 🟡 Fase 0 — Recon sedang berjalan
+**Status:** 🟡 Fase 0 — baseline verification in progress
 
 ---
 
@@ -25,9 +25,9 @@ Ekstraksi tabel dan line item tidak andal karena:
 ### Fase 0 — Recon & Baseline (SEKARANG)
 - [x] Baca semua file kunci yang disebutkan
 - [x] Buat branch `feat/table-reliability`
-- [ ] Jalankan test suite (blocked: no valid local Python interpreter)
+- [x] Jalankan test suite dan catat kegagalan pre-existing
 - [x] Buat harness `scripts/benchmark_tables.py`
-- [ ] Jalankan baseline benchmark
+- [x] Jalankan baseline benchmark (OCR unavailable; result is a capability baseline, not accuracy)
 - [x] Buat PLAN.md, DECISIONS.md
 
 **Done criteria:** PLAN.md, hasil test awal, baseline.json, daftar file dibaca.
@@ -40,6 +40,8 @@ Ekstraksi tabel dan line item tidak andal karena:
 - Pertahankan `len(words) < 5` sebagai safety net
 - **Risk:** PyMuPDF `get_texttrace()` API bisa berbeda antar versi — harus cek versi terpasang
 - **Test:** PDF sintetis deterministik (5 kasus)
+- [x] Implemented and regression-tested (DIGITAL, SCAN, HYBRID_OCR_LAYER,
+  MIXED, logo, and near-empty footer).
 
 ### Langkah 2 — Model Tabel Terpadu dan Router Provider
 **File baru:** `app/services/candidates/tables/router.py`
@@ -169,5 +171,8 @@ Temuan di luar scope dicatat di `OUT_OF_SCOPE_NOTES.md`.
 | 2026-10-14 | Fase 0: Recon | 🟡 In Progress | Membaca semua file kunci |
 | 2026-10-14 | Branch dibuat | ✅ Done | `feat/table-reliability` |
 | 2026-10-14 | PLAN.md dibuat | ✅ Done | — |
-| 2026-10-15 | Dataset boundary | ✅ Done | Benchmark now accepts only direct media files from `DATASET/invoice`, `DATASET/PoD`, `DATASET/rate card`, and `DATASET/surat jalan`; nested duplicates, archives, and generated exports are excluded. |
-| 2026-10-15 | Initial test run | ⚠️ Blocked | The repository virtualenv references a missing Python 3.10 executable. `python` and `pytest` are not on PATH. No test result is claimed. |
+| 2026-10-15 | Dataset boundary | ⚠️ Code changed, unverified | Benchmark now has an explicit allow-list of four valid `DATASET` documents; no directory-wide discovery is permitted. Test execution remains blocked by the missing Python interpreter. |
+| 2026-10-15 | Initial test run | ⚠️ Historical result: 114 passed, 2 pre-existing failures | The reported baseline remains unverified in this workspace: `.venv` points to a missing Python 3.11 executable. The two reported failures are `test_noisy_scan_signature_low_confidence` (unseeded random noise) and `test_document_ingestion_jpg` (PNG fixture versus JPEG assertion). |
+| 2026-10-15 | Environment verification | ✅ Done with sandbox elevation | Python 3.11.9 virtualenv and PyMuPDF 1.28.2 run outside the restricted sandbox. `easyocr` and `paddleocr` are not installed. Target table tests: 6 passed. |
+| 2026-10-15 | Canonical capability baseline | ✅ Done, not accuracy | `out/benchmarks/20261015T010604Z_baseline-easyocr.json`: 4 allow-listed documents, table/line-item presence 4/4, mean OCR confidence 0.748, mean 15,642.4 ms/page. No reviewed gold or arithmetic validation exists, so no accuracy is claimed. |
+| 2026-10-15 | Step 1: page-kind routing | ✅ Done | Feature-flagged per-page routing/evidence added. Deterministic PDF tests cover digital, scan, invisible OCR layer, mixed page, large-logo page, and near-empty footer; 8 related tests passed. |

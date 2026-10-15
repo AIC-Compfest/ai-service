@@ -19,7 +19,9 @@ import numpy as np
 from PIL import Image
 
 from app.core.logging import get_logger
+from app.core.config import settings
 from ..preprocessing.image_preprocessor import ImagePreprocessor
+from ..preprocessing.page_kind import PageKind, PageKindResult, detect_page_kind
 
 logger = get_logger(__name__)
 
@@ -115,7 +117,7 @@ class TableStructure:
 
 
 class PageOCREvidence:
-    def __init__(self, page_number: int, width: int, height: int, engine_used: str, fallback_used: bool, lines: list[OCRLine], regions: list[LayoutRegion], tables: list[TableStructure], quality: dict, page_image: dict | None = None):
+    def __init__(self, page_number: int, width: int, height: int, engine_used: str, fallback_used: bool, lines: list[OCRLine], regions: list[LayoutRegion], tables: list[TableStructure], quality: dict, page_image: dict | None = None, page_kind: PageKindResult | None = None):
         self.page_number = page_number
         self.width = width
         self.height = height
@@ -126,6 +128,7 @@ class PageOCREvidence:
         self.tables = tables
         self.quality = quality
         self.page_image = page_image or {}
+        self.page_kind = page_kind
 
     def full_text(self) -> str:
         return "\n".join(l.text for l in self.lines)
@@ -137,7 +140,7 @@ class PageOCREvidence:
 
     def to_dict(self) -> dict:
         """CandidatePipeline-compatible, JSON-serializable page evidence."""
-        return {
+        payload = {
             "page_number": self.page_number,
             "width": self.width,
             "height": self.height,
@@ -151,6 +154,9 @@ class PageOCREvidence:
             "regions": [r.to_dict() for r in self.regions],
             "tables": [t.to_dict() for t in self.tables],
         }
+        if self.page_kind is not None:
+            payload.update(self.page_kind.to_dict())
+        return payload
 
 
 def to_evidence_json(pages: list[PageOCREvidence]) -> dict[str, list[dict[str, Any]]]:
@@ -318,14 +324,19 @@ class OCREngine:
         h = float(rect.height)
 
         words_data = page.get_text("words")
+        page_kind = self._page_kind(page)
 
         # Fallback to EasyOCR for scanned / image-only PDF pages (PRD Hybrid OCR requirement)
-        if len(words_data) < 5:
-            logger.info("ocr.fallback_to_easyocr", page_number=page_number, words_found=len(words_data))
+        use_raster_ocr = len(words_data) < settings.page_kind_legacy_word_count_floor
+        if page_kind is not None:
+            use_raster_ocr = page_kind.kind == PageKind.SCAN
+        if use_raster_ocr:
+            logger.info("ocr.fallback_to_easyocr", page_number=page_number, words_found=len(words_data), page_kind=page_kind.kind if page_kind else "legacy")
             pix = page.get_pixmap(dpi=200, alpha=False)
             img_bytes = canonical_image_bytes or pix.tobytes("png")
             ocr_res = self.process_image(img_bytes, page_number, quality)
             ocr_res.fallback_used = True
+            ocr_res.page_kind = page_kind
             return ocr_res
 
         lines_by_key: dict[tuple[int, int], list] = {}
@@ -387,6 +398,20 @@ class OCREngine:
             regions=regions,
             tables=tables,
             quality=quality,
+            page_kind=page_kind,
+        )
+
+    @staticmethod
+    def _page_kind(page: fitz.Page) -> PageKindResult | None:
+        """Return feature-flagged routing evidence without changing legacy default."""
+        if not settings.page_kind_routing:
+            return None
+        return detect_page_kind(
+            page,
+            word_coverage_min=settings.page_kind_word_coverage_min,
+            image_coverage_scan_threshold=settings.page_kind_image_coverage_scan_threshold,
+            full_page_image_threshold=settings.page_kind_full_page_image_threshold,
+            legacy_word_count_floor=settings.page_kind_legacy_word_count_floor,
         )
 
     def process_image(

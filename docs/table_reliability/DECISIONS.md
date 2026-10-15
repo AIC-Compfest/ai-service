@@ -109,15 +109,77 @@ Gazetteer perlu diperluas bila ada kota yang valid tapi belum terdaftar.
 ## D-009: Canonical Benchmark Dataset Boundary
 
 **Date:** 2026-10-15  
-**Context:** `DATASET` contains four approved document-type collections, but
-also nested duplicate/transformed files, archives, generated candidate CSVs,
-and a separate `Dataset` directory.  Including all descendants would make the
-benchmark data provenance invalid.
-**Decision:** `benchmark_tables.py` accepts only immediate PDF/image files in
-`DATASET/invoice/{pdf,image}`, `DATASET/PoD/{pdf,image}`,
-`DATASET/rate card/{pdf,image}`, and `DATASET/surat jalan/{pdf,image}`.
-Synthetic fixtures require `--synthetic`; the harness never silently falls
-back to them.
-**Impact:** Every real-data metric can be traced to one of the four approved
-document-type collections.  A human still needs to identify a reviewed gold
-subset before accuracy claims are made.
+**Context:** The user clarified that the only valid real dataset population is
+four documents in `D:\\AIC\\DATASET`, one representative each for Invoice,
+POD, Rate Agreement, and Surat Jalan. The directory also contains variants,
+archives, exports, and unreviewed examples.
+**Decision:** `benchmark_tables.py` uses an explicit four-file allow-list in
+`CANONICAL_DATASET_DOCUMENTS`. It never discovers every file in the four
+directories. Synthetic fixtures require `--synthetic`; the harness never
+silently falls back to them.
+**Impact:** A benchmark is incomplete when an allow-listed file is absent;
+it must not substitute another file. Any manifest change requires a documented
+human decision before metrics are compared.
+
+---
+
+## D-010: Baseline Test Failures Outside Table Reliability
+
+**Date:** 2026-10-15
+**Context:** The first complete baseline run after rebuilding Python reported
+`114 passed, 2 failed`.
+**Decision:** Do not change either failure in this feature branch because both
+are outside the requested scope:
+
+1. `test_noisy_scan_signature_low_confidence` creates unseeded random noise,
+   so the signature score varies between runs.
+2. `test_document_ingestion_jpg` selects a PNG POD fixture but asserts a JPEG
+   MIME type.
+
+**Impact:** Subsequent table-reliability tests must pass. Full-suite reporting
+will preserve these two baseline failures until their owning components are
+fixed separately.
+
+---
+
+## D-011: Project Python Requires Sandbox Elevation
+
+**Date:** 2026-10-15
+**Context:** The project virtual environment's launcher references Python 3.11.9
+under the user's profile. It is available, but the restricted sandbox cannot
+execute it (`Access is denied`). It runs successfully when the command is
+approved outside the sandbox.
+**Decision:** Use the documented `.venv` with explicit elevation only for
+verification and installation commands. Do not recreate or retarget it.
+**Impact:** PyMuPDF 1.28.2 and the target table tests are now verified. Package
+availability and benchmark claims still require their respective commands.
+
+---
+
+## D-012: Canonical Baseline Is a Capability Measurement, Not Accuracy
+
+**Date:** 2026-10-15
+**Context:** The first run without EasyOCR produced a zero-output availability
+artifact. EasyOCR 1.7.2 (Torch 2.14.1+cpu) was then installed and imported,
+and the required four-file benchmark completed.
+**Decision:** Preserve both JSON files as diagnostic artifacts, but report only
+the EasyOCR run as the real-data capability baseline. It measures emitted
+tables/line items, OCR confidence, and latency; it is not accuracy because no
+reviewed gold or arithmetic validation is present.
+**Impact:** `out/benchmarks/20261015T010604Z_baseline-easyocr.json` is not
+committed. Its 4/4 table and line-item presence must not be interpreted as
+correct extraction.
+
+---
+
+## D-013: Page-Kind Safety-Net Precedes DIGITAL Classification
+
+**Date:** 2026-10-15
+**Context:** A deterministic near-empty footer PDF had only two words but its
+word boxes covered more than a low synthetic threshold. Classifying on coverage
+first incorrectly returned `DIGITAL`.
+**Decision:** Evaluate full-page image and invisible OCR-layer signals first,
+then apply the configurable legacy word-count safety net before the DIGITAL
+coverage rule. The default remains five words.
+**Impact:** Pages containing only a footer cannot bypass scan routing due to a
+misleading bbox-area ratio. This applies only when `PAGE_KIND_ROUTING=true`.

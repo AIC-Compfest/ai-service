@@ -5,6 +5,8 @@ milik dirinya sendiri (port, log level, model path). Business threshold
 (materiality, matching score, dll) tetap tinggal di backend-api / repo infra.
 """
 
+from __future__ import annotations
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -25,6 +27,53 @@ class Settings(BaseSettings):
     ocr_fallback_engine: str = "paddleocr-vl-1.6"
 
     max_upload_size_mb: int = 25
+
+    # -------------------------------------------------------------------------
+    # Feature Flags — feat/table-reliability
+    # Default SEMUA flag: aman (perilaku lama). Rollback ke perilaku lama
+    # cukup dengan mengubah config ini kembali ke default.
+    # -------------------------------------------------------------------------
+
+    # Langkah 1: Deteksi halaman digital vs scan per halaman
+    # False = pakai logika lama (len(words) < 5)
+    # True  = pakai PageKindDetector dari app/services/preprocessing/page_kind.py
+    page_kind_routing: bool = False
+
+    # Threshold untuk PageKindDetector (Langkah 1)
+    # Rasio luas union bbox kata terhadap luas halaman — di atas ini = DIGITAL
+    page_kind_word_coverage_min: float = 0.05
+    # Rasio luas gambar terhadap luas halaman — di atas ini bisa SCAN
+    page_kind_image_coverage_scan_threshold: float = 0.70
+    # Rasio satu gambar terhadap luas halaman untuk dianggap full-page scan.
+    page_kind_full_page_image_threshold: float = 0.90
+    # Legacy word-count is retained only as the final scan safety net.
+    page_kind_legacy_word_count_floor: int = 5
+
+    # Langkah 2: Router provider tabel
+    # Urutan provider yang dicoba per halaman.
+    # Tersedia: "token_grid", "pymupdf_find_tables", "ppstructure"
+    # Default: ["token_grid"] — tidak berubah dari perilaku sebelumnya
+    table_provider_order: list[str] = ["token_grid"]
+
+    # Langkah 3: Validasi aritmetika
+    # False = tidak menjalankan validasi aritmetika (perilaku lama)
+    # True  = jalankan validasi dan turunkan confidence berdasarkan hasil
+    enable_arithmetic_validation: bool = False
+
+    # Toleransi relatif untuk cek qty * rate ≈ line_total  (1% default)
+    arith_row_tolerance_relative: float = 0.01
+    # Toleransi absolut (Rupiah) untuk pembulatan
+    arith_row_tolerance_absolute_idr: float = 1.0
+
+    # Langkah 6: OCR backend
+    # "easyocr"   = perilaku lama (default aman)
+    # "paddleocr" = PaddleOCR (perlu requirements-paddle.txt terpasang)
+    ocr_backend: str = "easyocr"
+
+    # Langkah 7: Preprocessing untuk scan/foto
+    # False = tidak ada preprocessing tambahan (perilaku lama)
+    # True  = aktifkan deskew, perspective correction, adaptive upscale
+    enable_ocr_preprocess: bool = False
 
 
 settings = Settings()

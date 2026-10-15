@@ -41,16 +41,19 @@ DOC_TYPES = {
     "surat jalan": "SURAT_JALAN",
 }
 
-# The only approved real-data source for this work.  These names deliberately
-# refer to the four top-level document-type collections in DATASET.  Do not
-# recurse through DATASET wholesale: it also contains exports, archives, and
-# duplicate/transformed fixtures which must not be used for benchmark claims.
-CANONICAL_DATASET_DIRECTORIES = {
-    "invoice": "INVOICE",
-    "PoD": "POD",
-    "rate card": "RATE_AGREEMENT",
-    "surat jalan": "SURAT_JALAN",
-}
+# The only approved real-data source for this work.  This is deliberately an
+# allow-list of *four files*, not four recursive document collections.  DATASET
+# also contains variants, archives, generated exports, and unreviewed examples;
+# those must never be folded into a benchmark or an accuracy claim by accident.
+#
+# A human may replace this manifest only after recording the reviewed source in
+# docs/table_reliability/DECISIONS.md.  The paths are relative to --doc-dir.
+CANONICAL_DATASET_DOCUMENTS = (
+    (Path("invoice/image/Contoh-Template-Invoice-1.jpg"), "INVOICE"),
+    (Path("PoD/image/contoh-surat-bukti-terima-1.png"), "POD"),
+    (Path("rate card/image/contoh-rate-card-1.png"), "RATE_AGREEMENT"),
+    (Path("surat jalan/image/contoh-surat-jalan-10.png"), "SURAT_JALAN"),
+)
 
 
 def document_type_for(path: Path) -> str | None:
@@ -63,23 +66,17 @@ def document_type_for(path: Path) -> str | None:
 
 
 def discover_dataset_documents(dataset_root: Path) -> list[tuple[Path, str, bool]]:
-    """Return only canonical documents from the four approved DATASET folders.
+    """Return exactly the four allow-listed real documents, when present.
 
-    A canonical source is a PDF or image immediately below an ``image`` or
-    ``pdf`` directory of one of the four document-type folders.  Nested
-    directories often contain transformed copies or third-party samples and
-    are intentionally excluded from all benchmark metrics.
+    Missing files are intentionally not substituted with similarly named files.
+    That makes a changed dataset visible as an incomplete benchmark instead of
+    silently changing the population being measured.
     """
     sources: list[tuple[Path, str, bool]] = []
-    for directory_name, doc_type in CANONICAL_DATASET_DIRECTORIES.items():
-        type_root = dataset_root / directory_name
-        for media_directory in (type_root / "pdf", type_root / "image"):
-            if not media_directory.is_dir():
-                continue
-            for path in sorted(media_directory.iterdir()):
-                if not path.is_file() or path.suffix.lower() not in IMAGE_EXTENSIONS | PDF_EXTENSIONS:
-                    continue
-                sources.append((path, doc_type, path.suffix.lower() in PDF_EXTENSIONS))
+    for relative_path, doc_type in CANONICAL_DATASET_DOCUMENTS:
+        path = dataset_root / relative_path
+        if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS | PDF_EXTENSIONS:
+            sources.append((path, doc_type, path.suffix.lower() in PDF_EXTENSIONS))
     return sources
 
 
@@ -308,10 +305,11 @@ def main() -> None:
         if not sources:
             raise SystemExit(
                 f"No canonical documents found in {args.doc_dir}. "
-                "Expected immediate files in the four approved type folders."
+                "Expected the four allow-listed documents declared in "
+                "CANONICAL_DATASET_DOCUMENTS."
             )
         print(
-            f"[INFO] Found {len(sources)} canonical documents in the four approved DATASET folders"
+            f"[INFO] Found {len(sources)} allow-listed documents in DATASET"
         )
 
     if args.limit:
