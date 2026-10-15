@@ -10,6 +10,7 @@ Architecture:
 """
 
 from __future__ import annotations
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -24,6 +25,14 @@ from ..preprocessing.image_preprocessor import ImagePreprocessor
 from ..preprocessing.page_kind import PageKind, PageKindResult, detect_page_kind
 
 logger = get_logger(__name__)
+
+
+def _paddle_payload(result: Any) -> dict[str, Any]:
+    """Read PaddleOCR v3 Result JSON without depending on private classes."""
+    value = result.json if hasattr(result, "json") else result
+    if callable(value):
+        value = value()
+    return value.get("res", value) if isinstance(value, dict) else {}
 
 
 class OCRToken:
@@ -169,7 +178,7 @@ def to_evidence_json(pages: list[PageOCREvidence]) -> dict[str, list[dict[str, A
     return {"pages": [page.to_dict() for page in pages]}
 
 
-_GLOBAL_EASYOCR_READER = None
+_GLOBAL_PADDLE_OCR = None
 
 class OCREngine:
     """Cascaded OCR and Layout Understanding Engine."""
@@ -179,22 +188,19 @@ class OCREngine:
         self.max_image_side = max_image_side
 
     @property
-    def reader(self):
-        global _GLOBAL_EASYOCR_READER
-        if _GLOBAL_EASYOCR_READER is None:
+    def paddle_ocr(self):
+        """Lazily initialize the sole raster OCR backend."""
+        global _GLOBAL_PADDLE_OCR
+        if _GLOBAL_PADDLE_OCR is None:
             try:
-                import easyocr
-                import torch
-                use_gpu = torch.cuda.is_available()
-                logger.info("initializing_easyocr_reader", use_gpu=use_gpu)
-                try:
-                    _GLOBAL_EASYOCR_READER = easyocr.Reader(["en", "id"], gpu=use_gpu, verbose=False)
-                except Exception:
-                    _GLOBAL_EASYOCR_READER = easyocr.Reader(["en"], gpu=use_gpu, verbose=False)
+                os.environ.setdefault("PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK", "True")
+                from paddleocr import PaddleOCR
+                logger.info("initializing_paddleocr", language=settings.paddle_language, mkldnn=settings.paddle_enable_mkldnn)
+                _GLOBAL_PADDLE_OCR = PaddleOCR(lang=settings.paddle_language, use_doc_orientation_classify=False, use_doc_unwarping=False, use_textline_orientation=False, enable_mkldnn=settings.paddle_enable_mkldnn, cpu_threads=settings.paddle_cpu_threads)
             except Exception as e:
-                logger.warning("easyocr_init_failed", error=str(e))
-                _GLOBAL_EASYOCR_READER = None
-        return _GLOBAL_EASYOCR_READER
+                logger.error("paddleocr_init_failed", error=str(e))
+                raise RuntimeError("PaddleOCR initialization failed") from e
+        return _GLOBAL_PADDLE_OCR
 
     def _estimate_vector_token_confidence(self, token_text: str) -> float:
         """Estimate confidence for digital PDF vector token based on character validity."""
@@ -225,9 +231,9 @@ class OCREngine:
     def _estimate_token_boxes(
         self, text: str, bbox_pixel: tuple[float, float, float, float]
     ) -> list[tuple[str, tuple[float, float, float, float]]]:
-        """Split an EasyOCR phrase box using glyph widths and its literal whitespace.
+        """Split an OCR phrase box using glyph widths and its literal whitespace.
 
-        EasyOCR's standard API supplies one polygon for a recognised phrase, not
+        PaddleOCR's OCR result supplies one box for a recognised phrase, not
         per-word polygons. These boxes are therefore explicitly marked estimated.
         The allocation preserves relative word widths and multiple source spaces,
         rather than assigning every token the same width.
@@ -259,8 +265,8 @@ class OCREngine:
             boxes[-1] = (word, (token_x1, token_y1, x2, token_y2))
         return boxes
 
-    def _read_image_lines(self, cv_img: np.ndarray, width: int, height: int) -> list[OCRLine]:
-        """Run EasyOCR once and convert phrase detections into candidate-ready lines."""
+    def _read_paddle_lines(self, cv_img: np.ndarray, width: int, height: int) -> list[OCRLine]:
+        """Run PaddleOCR and convert its v3 result fields to OCR evidence."""
         scale = 1.0
         ocr_input = cv_img
         if max(height, width) > self.max_image_side:
@@ -268,35 +274,17 @@ class OCREngine:
             ocr_input = cv2.resize(cv_img, (int(width * scale), int(height * scale)), interpolation=cv2.INTER_AREA)
 
         lines: list[OCRLine] = []
-        for box, text, probability in self.reader.readtext(
-            ocr_input,
-            decoder="beamsearch",
-            beamWidth=5,
-            contrast_ths=0.05,
-            adjust_contrast=0.7,
-            text_threshold=0.65,
-            low_text=0.30,
-            link_threshold=0.35,
-        ):
-            if not text.strip():
-                continue
-            xs = [point[0] / scale for point in box]
-            ys = [point[1] / scale for point in box]
-            lx0, ly0, lx1, ly1 = float(min(xs)), float(min(ys)), float(max(xs)), float(max(ys))
-            line_box = (lx0, ly0, lx1, ly1)
-            norm_bbox = self._safe_norm_bbox(lx0, ly0, lx1, ly1, width, height)
-            estimated_boxes = self._estimate_token_boxes(text, line_box)
-            tokens = [
-                OCRToken(
-                    word,
-                    float(probability),
-                    token_box,
-                    self._safe_norm_bbox(*token_box, width, height),
-                    estimated=len(estimated_boxes) > 1,
-                )
-                for word, token_box in estimated_boxes
-            ]
-            lines.append(OCRLine(text, float(probability), line_box, norm_bbox, tokens))
+        for result in self.paddle_ocr.predict(ocr_input):
+            payload = _paddle_payload(result)
+            for text, probability, box in zip(payload.get("rec_texts", []), payload.get("rec_scores", []), payload.get("rec_boxes", [])):
+                if not text.strip() or len(box) != 4:
+                    continue
+                lx0, ly0, lx1, ly1 = (float(value) / scale for value in box)
+                line_box = (lx0, ly0, lx1, ly1)
+                norm_bbox = self._safe_norm_bbox(lx0, ly0, lx1, ly1, width, height)
+                estimated_boxes = self._estimate_token_boxes(text, line_box)
+                tokens = [OCRToken(word, float(probability), token_box, self._safe_norm_bbox(*token_box, width, height), estimated=len(estimated_boxes) > 1) for word, token_box in estimated_boxes]
+                lines.append(OCRLine(text, float(probability), line_box, norm_bbox, tokens))
         return self._assign_row_indices(lines)
 
     @staticmethod
@@ -309,7 +297,7 @@ class OCREngine:
 
     @staticmethod
     def _assign_row_indices(lines: list[OCRLine]) -> list[OCRLine]:
-        """Assign stable visual rows, independent of EasyOCR phrase line indices."""
+        """Assign stable visual rows independently of OCR provider internals."""
         rows: list[tuple[float, float]] = []
         for line in sorted(lines, key=lambda item: (item.bbox_pixel[1], item.bbox_pixel[0], item.text)):
             center = (line.bbox_pixel[1] + line.bbox_pixel[3]) / 2
@@ -323,7 +311,7 @@ class OCREngine:
 
     def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict, canonical_image_bytes: bytes | None = None) -> PageOCREvidence:
         """Extract high-precision vector text, coordinates and layout from PDF page.
-        Falls back to EasyOCR if page is scanned/image-based with insufficient digital text."""
+        Falls back to PaddleOCR if page is scanned/image-based with insufficient digital text."""
         rect = page.rect
         w = float(rect.width)
         h = float(rect.height)
@@ -331,12 +319,12 @@ class OCREngine:
         words_data = page.get_text("words")
         page_kind = self._page_kind(page)
 
-        # Fallback to EasyOCR for scanned / image-only PDF pages (PRD Hybrid OCR requirement)
+        # Fallback to PaddleOCR for scanned / image-only PDF pages.
         use_raster_ocr = len(words_data) < settings.page_kind_legacy_word_count_floor
         if page_kind is not None:
             use_raster_ocr = page_kind.kind == PageKind.SCAN
         if use_raster_ocr:
-            logger.info("ocr.fallback_to_easyocr", page_number=page_number, words_found=len(words_data), page_kind=page_kind.kind if page_kind else "legacy")
+            logger.info("ocr.fallback_to_paddleocr", page_number=page_number, words_found=len(words_data), page_kind=page_kind.kind if page_kind else "legacy")
             pix = page.get_pixmap(dpi=200, alpha=False)
             img_bytes = canonical_image_bytes or pix.tobytes("png")
             ocr_res = self.process_image(img_bytes, page_number, quality)
@@ -425,7 +413,7 @@ class OCREngine:
         page_number: int,
         quality: dict,
     ) -> PageOCREvidence:
-        """Process raster image / scanned document using EasyOCR with GPU acceleration."""
+        """Process raster image / scanned document using PaddleOCR."""
         if isinstance(image_bytes, (str, Path)):
             image_path = Path(image_bytes)
             image_bytes = image_path.read_bytes()
@@ -433,22 +421,12 @@ class OCREngine:
         h, w = cv_img.shape[:2]
 
         ocr_lines: list[OCRLine] = []
-        engine_used = "easyocr_gpu"
-
-        if self.reader is not None:
-            try:
-                ocr_lines = self._read_image_lines(cv_img, w, h)
-                # A second OCR pass is deliberately limited to low-confidence pages.
-                # Preserve the better result so preprocessing cannot degrade clean scans.
-                if self._average_line_confidence(ocr_lines) < 0.55:
-                    enhanced = ImagePreprocessor.enhance_document_for_ocr(cv_img)
-                    enhanced_lines = self._read_image_lines(enhanced, w, h)
-                    if self._average_line_confidence(enhanced_lines) > self._average_line_confidence(ocr_lines):
-                        ocr_lines = enhanced_lines
-                        quality = {**quality, "ocr_preprocessing": "clahe_otsu_retry"}
-            except Exception as e:
-                logger.warning("easyocr_extraction_error", error=str(e))
-                engine_used = "raster_cv_fallback"
+        engine_used = "paddleocr"
+        try:
+            ocr_lines = self._read_paddle_lines(cv_img, w, h)
+        except Exception as e:
+            logger.error("paddleocr_extraction_error", error=str(e))
+            raise RuntimeError("PaddleOCR raster extraction failed") from e
 
         regions = self._detect_layout_regions(ocr_lines, w, h)
         tables = self._detect_tables(ocr_lines, page_number)

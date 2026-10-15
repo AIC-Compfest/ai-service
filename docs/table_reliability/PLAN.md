@@ -98,14 +98,17 @@ Ekstraksi tabel dan line item tidak andal karena:
 - [x] Candidate runtime can stitch consecutive-page tables with the same
   provider and normalized headers behind `ENABLE_TABLE_STITCHING=false`.
 
-### Langkah 6 — Ganti EasyOCR dengan PaddleOCR (di Balik Interface)
+### Langkah 6 — Migrasi Raster OCR ke PaddleOCR
 **Refactor:** `app/services/ocr/engine.py`
-- Backend pattern: `EasyOCRBackend`, `PaddleOCRBackend`
-- Pilih via `OCR_BACKEND` feature flag
-- Kontrak `PageOCREvidence.to_dict()` tidak berubah
-- Dependensi Paddle di `requirements-paddle.txt`
-- **Risk:** Kompatibilitas numpy/opencv bisa bentrok; model PaddleOCR perlu diunduh
-- **Catatan:** Jika model tidak bisa diunduh, test di-skip dengan alasan tertulis
+- [x] PaddleOCR menjadi satu-satunya backend OCR raster; EasyOCR dihapus dari
+  runtime dan dependency manifest.
+- [x] Kontrak `PageOCREvidence.to_dict()` tetap sama; `engine_used` kini
+  melaporkan `paddleocr` untuk halaman raster.
+- [x] Adapter membaca hasil publik PaddleOCR v3 tanpa mengakses kelas privat.
+- [x] CPU oneDNN/MKLDNN dapat dikonfigurasi dan default aman dimatikan setelah
+  smoke test menemukan kegagalan runtime pada build yang terpasang.
+- **Risk:** Model PaddleOCR perlu tersedia di cache/diunduh saat inisialisasi;
+  kompatibilitas dependency tetap diverifikasi lewat smoke test nyata.
 
 ### Langkah 7 — Preprocessing untuk Scan/Foto
 **File baru:** `app/services/preprocessing/ocr_prep.py`

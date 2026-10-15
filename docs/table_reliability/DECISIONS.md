@@ -66,7 +66,7 @@ mengganti ini dengan sinyal nyata, perlu data yang sudah divalidasi.
 - `TABLE_PROVIDER_ORDER` default ke `["token_grid"]` (tidak mengubah behavior
   saat ini, karena PyMuPDF provider belum ada sebelumnya).
 - `PAGE_KIND_ROUTING` default ke `false` (pakai logika lama `len(words) < 5`).
-- `OCR_BACKEND` tetap `"easyocr"` (tidak mengaktifkan Paddle otomatis).
+- Raster OCR sekarang memakai PaddleOCR secara eksklusif (lihat D-023).
 - `ENABLE_OCR_PREPROCESS` default ke `false`.
 
 ---
@@ -276,3 +276,25 @@ first line item from being swallowed as a second header line.
 **Decision:** Candidate runtime stitches only adjacent-page tables from the
 same provider with identical normalized header sequences. The behavior is
 feature-flagged off by default; it does not infer continuity from vendor data.
+
+---
+
+## D-023: PaddleOCR Is the Sole Raster OCR Backend
+
+**Date:** 2026-10-15
+**Context:** The requested migration explicitly replaces EasyOCR rather than
+adding an alternative runtime. PaddleOCR 3.7.0 and PaddlePaddle 3.3.1 are
+installed in the project environment.
+**Decision:** `OCREngine` initializes only PaddleOCR and adapts its public v3
+result JSON (`rec_texts`, `rec_scores`, and `rec_boxes`) into the existing OCR
+line/token evidence contract. EasyOCR is removed from `requirements.txt` and
+there is no backend-selection fallback.
+**Operational compatibility:** `pandas` is constrained below major version 3
+because the installed PaddleX dependency fails to import with pandas 3.0. CPU
+MKLDNN defaults to disabled because the installed Paddle runtime raised a
+oneDNN PIR attribute conversion error during real inference when it was
+enabled. Both language and CPU settings remain application configuration, not
+document-specific constants.
+**Impact:** A Paddle initialization or model-availability failure is explicit;
+the service does not silently switch OCR engines. Existing vector PDF
+extraction remains PyMuPDF-based.

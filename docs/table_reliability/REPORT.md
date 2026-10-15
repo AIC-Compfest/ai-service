@@ -44,7 +44,24 @@ terpasang, run `baseline-easyocr` menghasilkan table dan line-item presence
 adalah satu-satunya dokumen di bawah confidence 0.6 (`0.5275`). Tidak ada
 reviewed gold atau arithmetic validation, sehingga angka ini bukan akurasi.
 
-## Instalasi OCR
+## Langkah 6 — migrasi PaddleOCR
+
+EasyOCR sudah dikeluarkan dari runtime dan `requirements.txt`; OCR raster kini
+selalu menggunakan PaddleOCR. Adapter memakai field hasil publik PaddleOCR v3
+dan mengubahnya ke kontrak evidence lama (`lines`, token estimasi, koordinat
+ternormalisasi, serta confidence heuristik OCR), tanpa mengubah struktur API
+evidence.
+
+Environment yang diverifikasi berisi PaddleOCR `3.7.0` dan PaddlePaddle
+`3.3.1`. Smoke inference nyata berhasil dengan CPU MKLDNN dimatikan. Konfigurasi
+default tersebut disengaja: MKLDNN pada runtime terpasang gagal dengan error
+oneDNN PIR. `pandas` juga dibatasi `<3` karena dependensi PaddleX terpasang
+gagal import pada pandas `3.0.6`. Ini adalah kompatibilitas lingkungan, bukan
+aturan atau data khusus dokumen.
+
+PP-Structure belum diaktifkan ataupun diklaim tersedia; itu tetap Langkah 9.
+
+## Instalasi OCR historis
 
 Instalasi serial `pip install easyocr` selesai pada percobaan ulang. Verifikasi:
 EasyOCR `1.7.2`, Torch `2.14.1+cpu`, CUDA `False`. PaddleOCR/PP-Structure belum

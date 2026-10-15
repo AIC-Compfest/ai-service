@@ -19,7 +19,7 @@ def test_estimated_token_is_flagged_and_evidence_is_candidate_payload():
         "Maju", 0.96, (70, 36, 140, 55), (0.07, 0.0365, 0.14, 0.055), estimated=True
     )
     line = OCRLine("Maju", 0.96, (70, 36, 140, 55), (0.07, 0.0365, 0.14, 0.055), [token])
-    page = PageOCREvidence(1, 1240, 1754, "easyocr_gpu", False, [line], [], [], {})
+    page = PageOCREvidence(1, 1240, 1754, "paddleocr", False, [line], [], [], {})
 
     evidence = to_evidence_json([page])
 

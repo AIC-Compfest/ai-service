@@ -225,7 +225,7 @@ class BBoxCropVerifier:
 
         cropped = img.crop((px1, py1, px2, py2))
 
-        # We can't run full EasyOCR here (too slow for verification).
+        # We cannot run the full OCR engine here (too slow for verification).
         # Instead, use PyMuPDF fitz text extraction if original PDF page is available.
         # For image crops, we do a simple text density check as a proxy.
         # In production, this would call a lightweight OCR (e.g., Tesseract on the crop).

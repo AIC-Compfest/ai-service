@@ -60,7 +60,7 @@ def test_shared_evidence_can_be_restricted_to_logical_segment():
 
 
 def test_rate_agreement_emits_configured_percent_and_days_candidates():
-    evidence = {"pages": [{"page_number": 1, "engine_used": "easyocr_gpu", "lines": [
+    evidence = {"pages": [{"page_number": 1, "engine_used": "paddleocr", "lines": [
         _line("Surcharge 11%", 100, 400, 400, 420),
         _line("Payment term 30 days", 100, 440, 500, 460),
     ]}]}
@@ -72,7 +72,7 @@ def test_rate_agreement_emits_configured_percent_and_days_candidates():
 
 
 def test_multitoken_amount_and_numeric_id_overlap():
-    evidence = {"pages": [{"page_number": 1, "engine_used": "easyocr_gpu", "lines": [
+    evidence = {"pages": [{"page_number": 1, "engine_used": "paddleocr", "lines": [
         _line("Total Due Rp 25 ,000 ,000", 100, 700, 800, 730),
         _line("Invoice 0309002", 100, 100, 500, 130),
     ]}]}

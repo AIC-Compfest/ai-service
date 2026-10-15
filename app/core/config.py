@@ -71,10 +71,11 @@ class Settings(BaseSettings):
     # Toleransi absolut (Rupiah) untuk pembulatan
     arith_row_tolerance_absolute_idr: float = 1.0
 
-    # Langkah 6: OCR backend
-    # "easyocr"   = perilaku lama (default aman)
-    # "paddleocr" = PaddleOCR (perlu requirements-paddle.txt terpasang)
-    ocr_backend: str = "easyocr"
+    # Langkah 6: PaddleOCR is the only raster OCR backend.
+    ocr_backend: str = "paddleocr"
+    paddle_language: str = "en"
+    paddle_enable_mkldnn: bool = False
+    paddle_cpu_threads: int = 8
 
     # Langkah 7: Preprocessing untuk scan/foto
     # False = tidak ada preprocessing tambahan (perilaku lama)
