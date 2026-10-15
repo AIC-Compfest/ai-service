@@ -126,11 +126,11 @@ Ekstraksi tabel dan line item tidak andal karena:
 
 ### Langkah 8 — Gold Set Tabel dan Evaluasi
 **File baru:** `app/tools/prelabel_tables.py`, `scripts/eval_tables.py`
-- Format gold: `data/gold/tables/<document_id>.json`
-- Pre-label via LLM client yang ada (test pakai fake)
-- Evaluasi hanya pada dokumen `reviewed=true`
-- 3-5 dokumen gold sintetis deterministik untuk menguji tooling
-- **Risk:** Tidak ada dokumen nyata berformat gold yang sudah direview manusia
+- [x] Draft gold berasal dari evidence tabel dan selalu `reviewed=false`.
+- [x] Evaluasi exact normalized-row hanya menerima gold `reviewed=true`.
+- [ ] Pre-label LLM dan gold nyata ditunda sampai inference DATASET stabil.
+- **Risk:** Belum ada dokumen nyata berformat gold yang sudah direview manusia;
+  metrik evaluasi tidak boleh diklaim sebagai accuracy.
 
 ### Langkah 9 — PP-Structure untuk Tabel pada Scan
 **File baru:** `app/services/candidates/tables/ppstructure_provider.py`

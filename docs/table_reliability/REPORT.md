@@ -77,6 +77,14 @@ Windows berhenti tanpa mengembalikan evidence final. Karena itu belum ada
 benchmark atau klaim hasil DATASET untuk langkah ini. Inference gambar kosong
 tetap berhasil; masalah perlu didiagnosis sebelum evaluasi corpus image/pdf.
 
+## Langkah 8 — gold draft dan evaluasi
+
+Tooling awal tersedia: `prelabel_tables.py` membuat draft dari evidence dengan
+`reviewed=false`, sedangkan `scripts/eval_tables.py` menolak gold yang belum
+direview manusia dan menghitung exact normalized-row precision/recall/F1.
+Belum ada metrik DATASET atau klaim akurasi karena inference nyata belum stabil
+dan tidak ada gold yang direview.
+
 ## Instalasi OCR historis
 
 Instalasi serial `pip install easyocr` selesai pada percobaan ulang. Verifikasi:

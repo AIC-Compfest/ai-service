@@ -313,3 +313,12 @@ coordinate system before evidence or table discovery.
 enabled without a validated detector. Applying either broadly would risk
 removing document content or corrupting coordinates. This is explicitly not a
 document/vendor exception.
+
+---
+
+## D-025: Table Evaluation Requires Human-Reviewed Gold
+
+**Date:** 2026-10-15
+**Decision:** Extraction evidence can create a draft only. `eval_tables.py`
+rejects any gold file without `reviewed=true` and reports exact normalized-row
+precision/recall/F1, not OCR or field accuracy.
