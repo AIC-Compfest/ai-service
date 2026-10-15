@@ -63,6 +63,9 @@ Ekstraksi tabel dan line item tidak andal karena:
 - Reason codes: `ARITH_ROW_FAIL`, `ARITH_DOC_FAIL`, dll.
 - **Risk:** Format angka Indonesia vs Inggris bisa muncul bersama dalam satu dokumen
 - **Test:** 10+ kasus termasuk ambiguitas locale, koreksi OCR, diskon, PPh
+- [x] Decimal-only row and document validation implemented behind
+  `ENABLE_ARITHMETIC_VALIDATION=false`; it emits suggestions without replacing
+  observed OCR values.
 
 ### Langkah 4 — Provider `pymupdf_find_tables` (PDF Digital)
 **File baru:** `app/services/candidates/tables/pymupdf_provider.py`

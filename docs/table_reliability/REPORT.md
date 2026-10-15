@@ -83,6 +83,13 @@ no fabricated document type; CandidatePipeline performs alias-aware discovery
 after type is known. Evidence fields `provider`, `reason`, `validation`,
 `columns`, and `cells` are additive to the established table fields.
 
+## Langkah 3 — arithmetic validation
+
+`app/services/validation/arithmetic.py` validates `quantity × rate = line total`
+and document subtotal / tax / withholding-tax / grand-total relationships with
+`Decimal`. It is disabled by default and does not claim accuracy or mutate OCR
+values. Failure metadata includes reason codes and a review-only suggestion.
+
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 
 ```powershell

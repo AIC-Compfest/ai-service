@@ -210,3 +210,13 @@ only as a deterministic tie-breaker.
 fields remain unchanged; `provider`, `reason`, `validation`, `columns`, and
 `cells` are additive only when router output is present. Arithmetic validation
 is deliberately deferred to Step 3.
+
+---
+
+## D-016: Arithmetic Validation Is an Additive Signal
+
+**Date:** 2026-10-15
+**Decision:** Arithmetic checks use `Decimal` end-to-end and only append
+validation evidence. A failed check exposes `suggested_value` for review but
+never changes an OCR cell or a public extracted field. Router scoring includes
+the arithmetic signal only when `ENABLE_ARITHMETIC_VALIDATION=true`.

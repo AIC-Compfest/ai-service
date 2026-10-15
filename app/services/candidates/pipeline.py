@@ -48,7 +48,7 @@ class CandidatePipeline:
             self.last_report["tables"] = [
                 table_evidence(table)
                 for page in pages
-                for table in self.table_extractor.extract(page, doc_type, document_id)
+                for table in self.table_extractor.extract(page, doc_type, document_id, arithmetic_validation=settings.enable_arithmetic_validation, relative_tolerance=Decimal(str(settings.arith_row_tolerance_relative)), absolute_tolerance=Decimal(str(settings.arith_row_tolerance_absolute_idr)))
             ]
         candidates: list[Candidate] = []
         for page in pages:

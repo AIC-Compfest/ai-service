@@ -7,6 +7,7 @@ from typing import Protocol
 
 from ..schema import Page, Table
 from .token_grid import TokenGridTableProvider
+from app.services.validation.arithmetic import validate_table
 
 
 class TableProvider(Protocol):
@@ -35,7 +36,7 @@ class TableExtractor:
         self.order = [name for name in requested if name in self.providers]
         return self
 
-    def extract(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
+    def extract(self, page: Page, doc_type: str | None, document_id: str = "document", *, arithmetic_validation: bool = False, relative_tolerance=None, absolute_tolerance=None) -> list[Table]:
         candidates: list[tuple[float, int, list[Table]]] = []
         for position, name in enumerate(self.order):
             tables = self.providers[name].tables(page, doc_type, document_id)
@@ -45,6 +46,11 @@ class TableExtractor:
                 table.structural_score = structural_score(table)
                 table.reason = table.reason or "structural_score"
                 table.validation.setdefault("structural", {"score": round(table.structural_score, 6)})
+                if arithmetic_validation:
+                    validation = validate_table(table, relative_tolerance=relative_tolerance, absolute_tolerance=absolute_tolerance)
+                    table.validation["arithmetic"] = _json_validation(validation)
+                    if validation["available"]:
+                        table.structural_score = round(0.8 * table.structural_score + 0.2 * float(validation["score"]), 6)
             candidates.append((sum(table.structural_score for table in tables) / len(tables), position, tables))
         if not candidates:
             return []
@@ -61,3 +67,11 @@ def structural_score(table: Table) -> float:
     header_ratio = sum(bool(column.header_text.strip()) for column in table.columns) / len(table.columns)
     fill_ratio = filled / expected if expected else 0.0
     return round(0.45 * header_ratio + 0.55 * fill_ratio, 6)
+
+
+def _json_validation(value):
+    if isinstance(value, dict):
+        return {key: _json_validation(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_json_validation(item) for item in value]
+    return str(value) if hasattr(value, "as_tuple") else value
