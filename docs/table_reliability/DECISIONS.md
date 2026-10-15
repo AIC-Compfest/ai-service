@@ -248,3 +248,13 @@ building. Repeated detected headers delimit independent tables on the page.
 **Decision:** Line-item city values are canonicalized only through
 `gazetteer_cities.csv`. Unrecognized text retains its raw uppercase value with
 `value_type=city_unknown` and `parse_ok=false`.
+
+---
+
+## D-020: Ambiguous Headers Are Resolved by Configuration
+
+**Date:** 2026-10-15
+**Decision:** `jumlah` mapping is controlled by
+`config/candidates/table_resolution.yaml`, not code constants. Its configured
+value floor and rate-field list determine whether it represents a quantity or
+a line total.

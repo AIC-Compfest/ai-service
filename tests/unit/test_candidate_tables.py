@@ -4,6 +4,7 @@ from app.services.candidates.context import build_page
 from app.services.candidates.line_items import LineItemBuilder
 from app.services.candidates.tables import TokenGridTableProvider
 from app.services.candidates.line_items.builder import _parse_cell
+from app.services.candidates.schema import Cell, Column, Table, TableRow
 
 
 def _page():
@@ -53,3 +54,9 @@ def test_city_cells_require_a_gazetteer_match():
     cities = {"JKT": "JAKARTA"}
     assert _parse_cell("JKT", "origin", cities)[:3] == ("JAKARTA", "city", True)
     assert _parse_cell("UNKNOWNVILLE", "destination", cities)[:3] == ("UNKNOWNVILLE", "city_unknown", False)
+
+
+def test_jumlah_resolution_comes_from_configured_position_and_values():
+    table = Table("t", 1, 1, "columnar", "test", [Column(0, 0, .3, "Qty"), Column(1, .3, .6, "Rate"), Column(2, .6, 1, "Jumlah")], [TableRow(0, [Cell("2", (0, 0, .3, .1), col_idx=0), Cell("1500", (.3, 0, .6, .1), col_idx=1), Cell("3000", (.6, 0, 1, .1), col_idx=2)], (0, 0, 1, .1))], (0, 0, 1, .1))
+    result = LineItemBuilder(Path("config/candidates")).build("D", "INVOICE", [table])
+    assert next(row for row in result["columns"] if row["li_col_idx"] == 2)["li_field"] == "line_total"

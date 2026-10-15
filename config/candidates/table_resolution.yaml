@@ -1,0 +1,6 @@
+ambiguous_headers:
+  jumlah:
+    quantity_field: quantity
+    amount_field: line_total
+    rate_fields: [base_rate, base_rate_idr]
+    amount_value_floor: "1000"

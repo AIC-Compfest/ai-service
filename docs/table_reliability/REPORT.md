@@ -103,6 +103,8 @@ Repeated headers now split token-grid output into separate tables. Total-like
 rows are retained as `summary_rows`, not passed as candidate line items.
 City line-item values now require a configured gazetteer match; unknown values
 are explicitly marked rather than treated as valid cities.
+The ambiguous `jumlah` header is resolved by versioned candidate configuration,
+not vendor-specific or code-hardcoded data.
 
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 
