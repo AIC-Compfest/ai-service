@@ -161,3 +161,10 @@ cd D:\AIC\ai-service
 
 Benchmark hanya boleh menggunakan empat path allow-listed di
 `scripts/benchmark_tables.py`; artifact `out/` tidak akan di-commit.
+
+## Corpus follow-up
+
+The negative PyMuPDF coordinate found in `invoice_14_variasi_1.pdf` is clipped
+at both vector-evidence and table-provider boundaries. It is covered by a
+regression test; corpus revalidation is required before publishing a new
+coverage count.

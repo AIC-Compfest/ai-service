@@ -1,7 +1,7 @@
 import fitz
 
 from app.services.candidates.context import build_page
-from app.services.candidates.tables.pymupdf_provider import PyMuPDFTableProvider
+from app.services.candidates.tables.pymupdf_provider import PyMuPDFTableProvider, _norm_bbox
 
 
 def _grid(page, rect, header, row):
@@ -31,3 +31,7 @@ def test_pymupdf_provider_normalizes_multiple_digital_tables():
 def test_pymupdf_provider_falls_back_cleanly_without_source_page():
     page = build_page({"page_number": 1, "lines": []})
     assert PyMuPDFTableProvider().tables(page, "INVOICE") == []
+
+
+def test_pymupdf_provider_clips_slightly_out_of_page_geometry():
+    assert _norm_bbox(10, -4, 50, 110, 100, 100) == (0.1, 0.0, 0.5, 1.0)

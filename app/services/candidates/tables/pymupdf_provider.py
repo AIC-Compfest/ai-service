@@ -40,12 +40,13 @@ def _normalize(found, page: Page, document_id: str) -> list[Table]:
             extracted = extracted[1:]
         if len(headers) < 2 or not extracted:
             continue
-        columns = _columns(headers, x1 / width, x2 / width)
-        rows = _rows(extracted, columns, found_table.cells, width, height, y1 / height, y2 / height)
+        table_bbox = _norm_bbox(x1, y1, x2, y2, width, height)
+        columns = _columns(headers, table_bbox[0], table_bbox[2])
+        rows = _rows(extracted, columns, found_table.cells, width, height, table_bbox[1], table_bbox[3])
         if not rows:
             continue
         table_id = f"{document_id}-p{page.page_number}-t{len(output) + 1}"
-        output.append(Table(table_id, page.page_number, page.page_number, "grid", "pymupdf_find_tables", columns, rows, (x1 / width, y1 / height, x2 / width, y2 / height), conf=0.0, stitched_pages=[page.page_number], reason="pymupdf_find_tables"))
+        output.append(Table(table_id, page.page_number, page.page_number, "grid", "pymupdf_find_tables", columns, rows, table_bbox, conf=0.0, stitched_pages=[page.page_number], reason="pymupdf_find_tables"))
     return output
 
 
@@ -70,5 +71,12 @@ def _cell_bbox(cells, row_idx, col_idx, columns, width, height, column, y1, y2):
     index = row_idx * columns + col_idx
     if index < len(cells) and cells[index] is not None:
         x1, y1_px, x2, y2_px = cells[index]
-        return (x1 / width, y1_px / height, x2 / width, y2_px / height)
+        return _norm_bbox(x1, y1_px, x2, y2_px, width, height)
     return (column.x1, y1, column.x2, y2)
+
+
+def _norm_bbox(x1, y1, x2, y2, width, height):
+    """Clip provider geometry to the established normalized page bounds."""
+    left, right = sorted((max(0.0, min(width, x1)), max(0.0, min(width, x2))))
+    top, bottom = sorted((max(0.0, min(height, y1)), max(0.0, min(height, y2))))
+    return (left / width, top / height, right / width, bottom / height)

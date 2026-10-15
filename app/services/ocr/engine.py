@@ -378,18 +378,13 @@ class OCREngine:
             lx1 = max(item[2] for item in w_items)
             ly1 = max(item[3] for item in w_items)
 
-            norm_bbox = (
-                lx0 / w,
-                ly0 / h,
-                lx1 / w,
-                ly1 / h,
-            )
+            norm_bbox = self._safe_norm_bbox(lx0, ly0, lx1, ly1, w, h)
 
             tokens: list[OCRToken] = []
             token_confs: list[float] = []
             for item in w_items:
                 tx0, ty0, tx1, ty1, tw = item
-                t_norm = (tx0 / w, ty0 / h, tx1 / w, ty1 / h)
+                t_norm = self._safe_norm_bbox(tx0, ty0, tx1, ty1, w, h)
                 t_conf = self._estimate_vector_token_confidence(tw)
                 token_confs.append(t_conf)
                 tokens.append(OCRToken(text=tw, confidence=t_conf, bbox_pixel=(tx0, ty0, tx1, ty1), bbox_norm=t_norm))
