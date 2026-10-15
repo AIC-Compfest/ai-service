@@ -33,3 +33,16 @@ def test_token_grid_and_line_item_outputs():
     assert result["columns"]
     assert any(row["li_field"] == "quantity" for row in result["columns"])
     assert any(row["value_parsed"] == "10" for row in result["cells"])
+
+
+def test_token_grid_splits_repeated_headers_and_excludes_summary_rows():
+    lines = []
+    for y, values in [(100, [(40, "No"), (100, "Nama Barang"), (250, "Koli")]), (130, [(40, "1"), (100, "Widget"), (250, "5")]), (160, [(40, "Total"), (250, "5")]), (240, [(40, "No"), (100, "Nama Barang"), (250, "Koli")]), (270, [(40, "1"), (100, "Box"), (250, "7")])]:
+        tokens = [{"text": text, "bbox_norm": [x, y, x + 20, y + 12]} for x, text in values]
+        lines.append({"text": " ".join(item["text"] for item in tokens), "bbox_norm": [0, y, 400, y + 12], "tokens": tokens})
+    page = build_page({"page_number": 1, "lines": lines})
+    config = Path("config/candidates")
+    tables = TokenGridTableProvider(config / "line_item_aliases.yaml", config / "abbreviations.yaml").tables(page, "SURAT_JALAN", "D2")
+    assert len(tables) == 2
+    assert [len(table.rows) for table in tables] == [1, 1]
+    assert tables[0].summary_rows[0].kind_hint == "total_like"

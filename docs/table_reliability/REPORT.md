@@ -97,6 +97,11 @@ The digital-PDF provider uses PyMuPDF 1.28.2 `find_tables(**kwargs)` with
 0–1 evidence space, deduplicates strategy results, and preserves multiple
 tables on one page. It has no dependency on PaddleOCR or PP-Structure.
 
+## Langkah 5 — token-grid segmentation
+
+Repeated headers now split token-grid output into separate tables. Total-like
+rows are retained as `summary_rows`, not passed as candidate line items.
+
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 
 ```powershell

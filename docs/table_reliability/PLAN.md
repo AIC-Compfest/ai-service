@@ -87,6 +87,8 @@ Ekstraksi tabel dan line item tidak andal karena:
 - Hilangkan ambiguitas `jumlah` dengan konteks posisi
 - `_parse_cell` kota: validasi dengan gazetteer, tidak boleh `ok=True` bila unknown
 - **Risk:** Perubahan ini akan mempengaruhi test kandidat yang sudah ada
+- [x] Repeated headers now segment multiple token-grid tables, and total-like
+  rows are emitted as `summary_rows` rather than line-item rows.
 
 ### Langkah 6 — Ganti EasyOCR dengan PaddleOCR (di Balik Interface)
 **Refactor:** `app/services/ocr/engine.py`

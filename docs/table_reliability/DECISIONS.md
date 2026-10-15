@@ -230,3 +230,12 @@ the arithmetic signal only when `ENABLE_ARITHMETIC_VALIDATION=true`.
 PyMuPDF page solely during OCR-time discovery. Persisted OCR evidence remains
 JSON-only. CandidatePipeline has no live PDF object and therefore naturally
 falls back to token-grid.
+
+---
+
+## D-018: Token-Grid Summary Rows Are Not Line Items
+
+**Date:** 2026-10-15
+**Decision:** Rows beginning with total/subtotal/PPN-like labels are stored as
+`summary_rows` and excluded from the normal table rows consumed by line-item
+building. Repeated detected headers delimit independent tables on the page.

@@ -78,6 +78,7 @@ class Table:
     reason: str = ""
     validation: dict[str, Any] = field(default_factory=dict)
     structural_score: float = 0.0
+    summary_rows: list[TableRow] = field(default_factory=list)
 
 
 @dataclass

@@ -20,14 +20,28 @@ class TokenGridTableProvider:
         rows = _visual_rows(page.tokens)
         if len(rows) < 2:
             return []
-        header_index, header_cells = _find_header(rows, matcher)
-        if header_index is None or len(header_cells) < 2:
-            return []
-        columns = _columns(header_cells)
-        body = rows[header_index + 1:]
-        logical_rows: list[TableRow] = []
-        pitch = median([row[0].cy for row in rows[1:]]) - median([row[0].cy for row in rows[:-1]]) if len(rows) > 2 else 0.03
-        for visual_index, visual_row in enumerate(body):
+        tables = []
+        start = 0
+        while start < len(rows) - 1:
+            header_index, header_cells = _find_header(rows, matcher, start)
+            if header_index is None or len(header_cells) < 2:
+                break
+            next_header, _ = _find_header(rows, matcher, header_index + 1)
+            end = next_header if next_header is not None else len(rows)
+            table = _build_table(rows, header_index, end, header_cells, page, document_id)
+            if table:
+                tables.append(table)
+            start = end
+        return tables
+
+
+def _build_table(rows, header_index, end, header_cells, page, document_id):
+    columns = _columns(header_cells)
+    body = rows[header_index + 1:end]
+    logical_rows: list[TableRow] = []
+    summary_rows: list[TableRow] = []
+    pitch = median([row[0].cy for row in rows[1:]]) - median([row[0].cy for row in rows[:-1]]) if len(rows) > 2 else 0.03
+    for visual_index, visual_row in enumerate(body):
             cells = _assign_cells(visual_row, columns, len(logical_rows))
             nonempty = sum(bool(cell.text) for cell in cells)
             if not nonempty:
@@ -43,13 +57,14 @@ class TokenGridTableProvider:
                 previous.continuation_rows += 1
                 continue
             row_text = " ".join(cell.text for cell in cells)
-            kind = "total_like" if any(word in row_text.lower().split() for word in ("total", "subtotal", "jumlah", "ppn")) and not anchor else "item"
-            logical_rows.append(TableRow(len(logical_rows), cells, _row_bbox(cells), kind_hint=kind))
-        if not logical_rows:
-            return []
-        table_bbox = _row_bbox([cell for row in logical_rows for cell in row.cells])
-        table_id = f"{document_id}-p{page.page_number}-t1"
-        return [Table(table_id, page.page_number, page.page_number, "columnar", "token_grid", columns, logical_rows, table_bbox, conf=0.8, stitched_pages=[page.page_number], reason="token_geometry")]
+            kind = "total_like" if _is_summary_row(row_text) else "item"
+            target = summary_rows if kind == "total_like" else logical_rows
+            target.append(TableRow(len(target), cells, _row_bbox(cells), kind_hint=kind))
+    if not logical_rows:
+        return None
+    table_bbox = _row_bbox([cell for row in logical_rows for cell in row.cells])
+    table_id = f"{document_id}-p{page.page_number}-t{header_index + 1}"
+    return Table(table_id, page.page_number, page.page_number, "columnar", "token_grid", columns, logical_rows, table_bbox, conf=0.8, stitched_pages=[page.page_number], reason="token_geometry", summary_rows=summary_rows)
 
 
 def _visual_rows(tokens: list[Token]) -> list[list[Token]]:
@@ -67,8 +82,9 @@ def _visual_rows(tokens: list[Token]) -> list[list[Token]]:
     return rows
 
 
-def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None):
-    for index, row in enumerate(rows[:-1]):
+def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None, start: int = 0):
+    for index in range(start, len(rows) - 1):
+        row = rows[index]
         cells = _merge_cells(row)
         if matcher is None and len(cells) >= 2 and len(rows[index + 1]) >= 2:
             return index, cells
@@ -76,6 +92,11 @@ def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None):
         if matcher and len({matcher.match(cell.text).candidates[0].field for cell in hits if matcher.match(cell.text).candidates}) >= 2:
             return index, cells
     return None, []
+
+
+def _is_summary_row(text: str) -> bool:
+    normalized = text.lower().strip()
+    return normalized.startswith(("total", "subtotal", "sub total", "ppn", "grand total", "jumlah"))
 
 
 def _merge_cells(row: list[Token]) -> list[Cell]:
