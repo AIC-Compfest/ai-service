@@ -16,6 +16,8 @@ from .schema import Candidate, Page, Token
 from .text_norm import norm_alnum, norm_text, ocr_fold
 from .fuzzy_fields import _window_similarity
 from .version import candidate_pipeline_version
+from .tables import TableExtractor
+from app.core.config import settings
 
 
 class CandidatePipeline:
@@ -35,12 +37,19 @@ class CandidatePipeline:
         if generation.exists():
             self.caps.update((yaml.safe_load(generation.read_text(encoding="utf-8")) or {}).get("caps", {}))
         self.last_run_report: dict[str, Any] = {"cap_overflow": {}}
+        self.table_extractor = TableExtractor.from_config(config_dir, settings.table_provider_order)
 
     def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN") -> list[dict[str, Any]]:
         started = time.perf_counter()
         self.last_report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
         pages = [build_page(page) for page in ocr_result.get("pages", [])]
+        if settings.enable_table_extractor:
+            self.last_report["tables"] = [
+                table_evidence(table)
+                for page in pages
+                for table in self.table_extractor.extract(page, doc_type, document_id)
+            ]
         candidates: list[Candidate] = []
         for page in pages:
             if not page.lines:
@@ -61,7 +70,6 @@ class CandidatePipeline:
             candidate.features["m_overlap_types"] = "|".join(sorted(overlap_types))
         self.last_report["timings_ms"][f"{document_id}:{doc_type}"] = round((time.perf_counter() - started) * 1000, 3)
         return [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
-
     def _generate_type(self, page: Page, cand_type: str) -> list[Candidate]:
         if cand_type == "amount":
             return self._number_candidates(page, cand_type, amount=True)
@@ -400,3 +408,15 @@ def _near_unit(page: Page, token: Token, units: set[str]) -> str:
         if candidate.line_idx == token.line_idx and candidate.tok_idx == token.tok_idx + 1 and norm_text(candidate.text) in units:
             return norm_text(candidate.text)
     return "none"
+
+
+def table_evidence(table) -> dict[str, Any]:
+    """Serialize additive table diagnostics while retaining the legacy fields."""
+    return {
+        "bbox_norm": list(table.bbox), "headers": [column.header_text for column in table.columns],
+        "rows": [[cell.text for cell in row.cells] for row in table.rows],
+        "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.conf,
+        "provider": table.source, "reason": table.reason, "validation": table.validation,
+        "columns": [{"idx": column.idx, "bbox_norm": [column.x1, 0.0, column.x2, 1.0], "header": column.header_text} for column in table.columns],
+        "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],
+    }

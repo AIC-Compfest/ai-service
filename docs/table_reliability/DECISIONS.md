@@ -193,3 +193,20 @@ misleading bbox-area ratio. This applies only when `PAGE_KIND_ROUTING=true`.
 structural row predicate: a row needs an identifier containing a digit or a
 parseable line total. This keeps header/vendor text out without encoding a
 specific company name.
+
+---
+
+## D-015: Table Discovery Does Not Invent a Document Type
+
+**Date:** 2026-10-15
+**Context:** OCR engine runs before document classification, whereas header
+aliases are document-type specific.
+**Decision:** The table router accepts `doc_type: str | None`. At OCR time it
+uses geometry-only token-grid discovery; CandidatePipeline supplies the known
+document type for alias-aware discovery. The router selects a non-empty
+provider result by structural completeness score, with configured order used
+only as a deterministic tie-breaker.
+**Impact:** `ENABLE_TABLE_EXTRACTOR` defaults to false. Existing evidence
+fields remain unchanged; `provider`, `reason`, `validation`, `columns`, and
+`cells` are additive only when router output is present. Arithmetic validation
+is deliberately deferred to Step 3.

@@ -50,6 +50,9 @@ Ekstraksi tabel dan line item tidak andal karena:
 - Ganti `OCREngine._detect_tables()` (y-band hardcoded) dengan pemanggilan router
 - Pertahankan kompatibilitas field evidence lama + tambah field baru
 - **Risk:** Harus memastikan `extraction/invoice.py` dan test lama tidak pecah
+- [x] Router and additive evidence serialization implemented behind
+  `ENABLE_TABLE_EXTRACTOR=false`; the first registered provider is token-grid.
+  PyMuPDF and PP-Structure providers remain separate later steps.
 
 ### Langkah 3 — Validasi Aritmetika sebagai Confidence Sungguhan
 **File baru:** `app/services/validation/arithmetic.py`
@@ -177,3 +180,4 @@ Temuan di luar scope dicatat di `OUT_OF_SCOPE_NOTES.md`.
 | 2026-10-15 | Canonical capability baseline | ✅ Done, not accuracy | `out/benchmarks/20261015T010604Z_baseline-easyocr.json`: 4 allow-listed documents, table/line-item presence 4/4, mean OCR confidence 0.748, mean 15,642.4 ms/page. No reviewed gold or arithmetic validation exists, so no accuracy is claimed. |
 | 2026-10-15 | Step 1: page-kind routing | ✅ Done | Feature-flagged per-page routing/evidence added. Deterministic PDF tests cover digital, scan, invisible OCR layer, mixed page, large-logo page, and near-empty footer; 8 related tests passed. |
 | 2026-10-15 | Step 2: invoice row filter | ✅ Partial | Removed vendor-specific `shipment_id != "Logistik"` exception; structural identifier/total validation is unit-tested. Unified table router remains in progress. |
+| 2026-10-15 | Step 2: table router | ✅ Done | Added scored, feature-flagged table router, CandidatePipeline diagnostics, and backward-compatible evidence metadata. |

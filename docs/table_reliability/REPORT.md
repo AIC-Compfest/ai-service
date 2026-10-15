@@ -68,12 +68,20 @@ footer. Perintah verifikasi:
 
 Hasil: `8 passed`.
 
-## Langkah 2 — work in progress
+## Langkah 2 — table router
 
 The invoice extractor no longer excludes a row because its shipment id is
 `Logistik`. It now requires an identifier-like value or a parseable line total.
-The focused unit test passed (`1 passed`). The unified table router and evidence
-provider metadata are not implemented yet.
+The focused unit test passed (`1 passed`).
+
+`TableExtractor` is feature-flagged by `ENABLE_TABLE_EXTRACTOR=false` and
+returns the unified internal `Table` model. It falls back after empty provider
+results, selects non-empty results by a structural completeness heuristic (not
+accuracy), and preserves all tables from the selected provider. The token-grid
+provider is the only registered provider in this step. OCR-time discovery uses
+no fabricated document type; CandidatePipeline performs alias-aware discovery
+after type is known. Evidence fields `provider`, `reason`, `validation`,
+`columns`, and `cells` are additive to the established table fields.
 
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 

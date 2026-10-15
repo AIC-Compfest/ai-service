@@ -54,6 +54,9 @@ class Settings(BaseSettings):
     # Tersedia: "token_grid", "pymupdf_find_tables", "ppstructure"
     # Default: ["token_grid"] — tidak berubah dari perilaku sebelumnya
     table_provider_order: list[str] = ["token_grid"]
+    # False keeps the legacy OCR evidence contract untouched. True routes
+    # table discovery through the scored provider router.
+    enable_table_extractor: bool = False
 
     # Langkah 3: Validasi aritmetika
     # False = tidak menjalankan validasi aritmetika (perilaku lama)

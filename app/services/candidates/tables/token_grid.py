@@ -9,12 +9,14 @@ from ..schema import Cell, Column, Page, Table, TableRow, Token
 class TokenGridTableProvider:
     """Build simple columnar tables directly from OCR token geometry."""
 
+    name = "token_grid"
+
     def __init__(self, aliases_path, abbreviations_path):
         self.aliases_path = aliases_path
         self.abbreviations_path = abbreviations_path
 
-    def tables(self, page: Page, doc_type: str, document_id: str = "document") -> list[Table]:
-        matcher = FuzzyFieldMatcher(doc_type, self.aliases_path, self.abbreviations_path)
+    def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
+        matcher = FuzzyFieldMatcher(doc_type, self.aliases_path, self.abbreviations_path) if doc_type else None
         rows = _visual_rows(page.tokens)
         if len(rows) < 2:
             return []
@@ -47,7 +49,7 @@ class TokenGridTableProvider:
             return []
         table_bbox = _row_bbox([cell for row in logical_rows for cell in row.cells])
         table_id = f"{document_id}-p{page.page_number}-t1"
-        return [Table(table_id, page.page_number, page.page_number, "columnar", "token_grid", columns, logical_rows, table_bbox, conf=0.8, stitched_pages=[page.page_number])]
+        return [Table(table_id, page.page_number, page.page_number, "columnar", "token_grid", columns, logical_rows, table_bbox, conf=0.8, stitched_pages=[page.page_number], reason="token_geometry")]
 
 
 def _visual_rows(tokens: list[Token]) -> list[list[Token]]:
@@ -65,11 +67,13 @@ def _visual_rows(tokens: list[Token]) -> list[list[Token]]:
     return rows
 
 
-def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher):
+def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None):
     for index, row in enumerate(rows[:-1]):
         cells = _merge_cells(row)
-        hits = [cell for cell in cells if matcher.best_score(cell.text) >= 0.8]
-        if len({matcher.match(cell.text).candidates[0].field for cell in hits if matcher.match(cell.text).candidates}) >= 2:
+        if matcher is None and len(cells) >= 2 and len(rows[index + 1]) >= 2:
+            return index, cells
+        hits = [cell for cell in cells if matcher and matcher.best_score(cell.text) >= 0.8]
+        if matcher and len({matcher.match(cell.text).candidates[0].field for cell in hits if matcher.match(cell.text).candidates}) >= 2:
             return index, cells
     return None, []
 

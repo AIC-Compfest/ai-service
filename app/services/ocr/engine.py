@@ -99,14 +99,16 @@ class LayoutRegion:
 
 
 class TableStructure:
-    def __init__(self, bbox_norm: tuple[float, float, float, float], headers: list[str], rows: list[list[str]], confidence: float = 0.95):
+    def __init__(self, bbox_norm: tuple[float, float, float, float], headers: list[str], rows: list[list[str]], confidence: float = 0.95, provider: str = "", reason: str = "", validation: dict | None = None, columns: list[dict] | None = None, cells: list[dict] | None = None):
         self.bbox_norm = bbox_norm
         self.headers = headers
         self.rows = rows
         self.confidence = confidence
+        self.provider, self.reason, self.validation = provider, reason, validation or {}
+        self.columns, self.cells = columns or [], cells or []
 
     def to_dict(self) -> dict:
-        return {
+        payload = {
             "bbox_norm": [round(c, 6) for c in self.bbox_norm],
             "headers": self.headers,
             "rows": self.rows,
@@ -114,6 +116,9 @@ class TableStructure:
             "col_count": len(self.headers),
             "confidence": round(self.confidence, 3),
         }
+        if self.provider:
+            payload.update({"provider": self.provider, "reason": self.reason, "validation": self.validation, "columns": self.columns, "cells": self.cells})
+        return payload
 
 
 class PageOCREvidence:
@@ -386,7 +391,7 @@ class OCREngine:
 
         ocr_lines = self._assign_row_indices(ocr_lines)
         regions = self._detect_layout_regions(ocr_lines, w, h)
-        tables = self._detect_tables(ocr_lines)
+        tables = self._detect_tables(ocr_lines, page_number)
 
         return PageOCREvidence(
             page_number=page_number,
@@ -446,7 +451,7 @@ class OCREngine:
                 engine_used = "raster_cv_fallback"
 
         regions = self._detect_layout_regions(ocr_lines, w, h)
-        tables = self._detect_tables(ocr_lines)
+        tables = self._detect_tables(ocr_lines, page_number)
 
         return PageOCREvidence(
             page_number=page_number,
@@ -531,22 +536,17 @@ class OCREngine:
 
         return regions
 
-    def _detect_tables(self, lines: list[OCRLine]) -> list[TableStructure]:
-        """Detect tabular line items and structural grid."""
-        tables: list[TableStructure] = []
-        table_lines = [line for line in lines if 0.32 <= line.bbox_norm[1] <= 0.76 and len(line.tokens) >= 3]
-        if len(table_lines) >= 2:
-            headers = [t.text for t in table_lines[0].tokens]
-            rows: list[list[str]] = []
-            for l in table_lines[1:]:
-                row_cells = [t.text for t in l.tokens]
-                if row_cells:
-                    rows.append(row_cells)
+    def _detect_tables(self, lines: list[OCRLine], page_number: int) -> list[TableStructure]:
+        """Route discovery through providers; doc type is intentionally unknown here."""
+        if not settings.enable_table_extractor:
+            return []
+        from app.services.candidates.context import build_page
+        from app.services.candidates.pipeline import table_evidence
+        from app.services.candidates.tables import TableExtractor
+        page = build_page({"page_number": page_number, "lines": [line.to_dict() for line in lines]})
+        extractor = TableExtractor.from_config(Path("config/candidates"), settings.table_provider_order)
+        return [TableStructure(**_table_structure_args(table_evidence(table))) for table in extractor.extract(page, None, f"ocr-p{page_number}")]
 
-            tx1 = min(l.bbox_norm[0] for l in table_lines)
-            ty1 = min(l.bbox_norm[1] for l in table_lines)
-            tx2 = max(l.bbox_norm[2] for l in table_lines)
-            ty2 = max(l.bbox_norm[3] for l in table_lines)
 
-            tables.append(TableStructure(bbox_norm=(tx1, ty1, tx2, ty2), headers=headers, rows=rows, confidence=0.94))
-        return tables
+def _table_structure_args(evidence: dict) -> dict:
+    return {"bbox_norm": tuple(evidence["bbox_norm"]), "headers": evidence["headers"], "rows": evidence["rows"], "confidence": evidence["confidence"], "provider": evidence["provider"], "reason": evidence["reason"], "validation": evidence["validation"], "columns": evidence["columns"], "cells": evidence["cells"]}

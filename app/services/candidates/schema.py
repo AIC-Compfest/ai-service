@@ -74,6 +74,9 @@ class Table:
     bbox: tuple[float, float, float, float]
     conf: float = 0.0
     stitched_pages: list[int] = field(default_factory=list)
+    reason: str = ""
+    validation: dict[str, Any] = field(default_factory=dict)
+    structural_score: float = 0.0
 
 
 @dataclass
