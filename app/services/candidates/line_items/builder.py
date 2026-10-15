@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import csv
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any
@@ -18,6 +19,7 @@ class LineItemBuilder:
         self.config_dir = Path(config_dir)
         self.aliases = self.config_dir / "line_item_aliases.yaml"
         self.abbreviations = self.config_dir / "abbreviations.yaml"
+        self.cities = _load_cities(self.config_dir / "gazetteer_cities.csv")
 
     def build(self, document_id: str, doc_type: str, tables: list[Table]) -> dict[str, Any]:
         matcher = FuzzyFieldMatcher(doc_type, self.aliases, self.abbreviations)
@@ -37,7 +39,7 @@ class LineItemBuilder:
                 row_values = {}
                 nonempty = 0
                 for cell, (field, score, _) in zip(row.cells, column_matches):
-                    value, value_type, ok, ambiguous, alt = _parse_cell(cell.text, field)
+                    value, value_type, ok, ambiguous, alt = _parse_cell(cell.text, field, self.cities)
                     cells.append({"m_document_id": document_id, "m_doc_type": doc_type, "m_table_id": table.table_id, "m_page": table.page_start, "row_idx": row.idx, "col_idx": cell.col_idx, "field_norm": field, "field_score": score, "header_raw": table.columns[cell.col_idx].header_text, "header_norm": norm_text(table.columns[cell.col_idx].header_text), "cell_text": cell.text, "value_parsed": value, "value_type": value_type, "parse_ok": int(ok), "parse_ambiguous": int(ambiguous), "value_alt": alt, "x1": round(cell.bbox[0], 4), "y1": round(cell.bbox[1], 4), "x2": round(cell.bbox[2], 4), "y2": round(cell.bbox[3], 4), "is_continuation_merged": int(row.continuation_rows > 0), "kind_hint": row.kind_hint, "cell_empty_marker": int(norm_text(cell.text) in {"", "-", "n/a"})})
                     if cell.text:
                         nonempty += 1
@@ -49,7 +51,7 @@ class LineItemBuilder:
         return {"columns": columns, "cells": cells, "rows": rows, "previews": previews}
 
 
-def _parse_cell(text: str, field: str) -> tuple[str | None, str, bool, bool, str | None]:
+def _parse_cell(text: str, field: str, cities: dict[str, str] | None = None) -> tuple[str | None, str, bool, bool, str | None]:
     raw = text.strip()
     if not raw or norm_text(raw) in {"-", "—", "n/a"}:
         return None, "empty", False, False, None
@@ -58,9 +60,19 @@ def _parse_cell(text: str, field: str) -> tuple[str | None, str, bool, bool, str
         parsed = parse_number(raw.replace("kg", "").strip())
         return (str(parsed.value) if parsed.value is not None else None, "number", parsed.value is not None, parsed.ambiguous, str(parsed.value_alt) if parsed.value_alt is not None else None)
     if field in {"origin", "destination", "origin_zone", "destination_zone"}:
-        return raw.upper(), "city", True, False, None
+        canonical = (cities or {}).get(norm_text(raw).upper())
+        if canonical:
+            return canonical, "city", True, False, None
+        return raw.upper(), "city_unknown", False, False, None
     if field == "condition":
         normalized = norm_text(raw)
         value = "GOOD" if normalized in {"baik", "good", "ok", "lengkap", "complete"} else "DAMAGED" if normalized in {"rusak", "damaged", "pecah", "penyok"} else "SHORTAGE" if normalized in {"kurang", "shortage"} else "OTHER"
         return value, "enum", True, False, None
     return raw, "text", True, False, None
+
+
+def _load_cities(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as handle:
+        return {row["alias"].upper(): row["canonical"].upper() for row in csv.DictReader(handle) if row.get("alias") and row.get("canonical")}

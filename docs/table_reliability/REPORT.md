@@ -101,6 +101,8 @@ tables on one page. It has no dependency on PaddleOCR or PP-Structure.
 
 Repeated headers now split token-grid output into separate tables. Total-like
 rows are retained as `summary_rows`, not passed as candidate line items.
+City line-item values now require a configured gazetteer match; unknown values
+are explicitly marked rather than treated as valid cities.
 
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 

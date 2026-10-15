@@ -3,6 +3,7 @@ from pathlib import Path
 from app.services.candidates.context import build_page
 from app.services.candidates.line_items import LineItemBuilder
 from app.services.candidates.tables import TokenGridTableProvider
+from app.services.candidates.line_items.builder import _parse_cell
 
 
 def _page():
@@ -46,3 +47,9 @@ def test_token_grid_splits_repeated_headers_and_excludes_summary_rows():
     assert len(tables) == 2
     assert [len(table.rows) for table in tables] == [1, 1]
     assert tables[0].summary_rows[0].kind_hint == "total_like"
+
+
+def test_city_cells_require_a_gazetteer_match():
+    cities = {"JKT": "JAKARTA"}
+    assert _parse_cell("JKT", "origin", cities)[:3] == ("JAKARTA", "city", True)
+    assert _parse_cell("UNKNOWNVILLE", "destination", cities)[:3] == ("UNKNOWNVILLE", "city_unknown", False)

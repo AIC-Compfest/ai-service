@@ -89,6 +89,8 @@ Ekstraksi tabel dan line item tidak andal karena:
 - **Risk:** Perubahan ini akan mempengaruhi test kandidat yang sudah ada
 - [x] Repeated headers now segment multiple token-grid tables, and total-like
   rows are emitted as `summary_rows` rather than line-item rows.
+- [x] City line-item cells are accepted only when their alias appears in the
+  configured gazetteer; unknown values remain explicit review candidates.
 
 ### Langkah 6 — Ganti EasyOCR dengan PaddleOCR (di Balik Interface)
 **Refactor:** `app/services/ocr/engine.py`

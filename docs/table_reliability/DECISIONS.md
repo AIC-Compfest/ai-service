@@ -239,3 +239,12 @@ falls back to token-grid.
 **Decision:** Rows beginning with total/subtotal/PPN-like labels are stored as
 `summary_rows` and excluded from the normal table rows consumed by line-item
 building. Repeated detected headers delimit independent tables on the page.
+
+---
+
+## D-019: City Cells Require Gazetteer Evidence
+
+**Date:** 2026-10-15
+**Decision:** Line-item city values are canonicalized only through
+`gazetteer_cities.csv`. Unrecognized text retains its raw uppercase value with
+`value_type=city_unknown` and `parse_ok=false`.
