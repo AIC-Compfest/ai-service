@@ -298,3 +298,18 @@ document-specific constants.
 **Impact:** A Paddle initialization or model-availability failure is explicit;
 the service does not silently switch OCR engines. Existing vector PDF
 extraction remains PyMuPDF-based.
+
+---
+
+## D-024: OCR Preprocessing Is Geometry-Aware and Conservative
+
+**Date:** 2026-10-15
+**Decision:** The opt-in preprocessing path evaluates raw and prepared images,
+then keeps the result with the greater `(mean OCR confidence, line count)`
+tuple. Ties retain raw OCR. Deskew and adaptive upscale carry an inverse
+homography so all selected OCR boxes are restored to the source-image
+coordinate system before evidence or table discovery.
+**Scope boundary:** Perspective correction and stamp-color filtering are not
+enabled without a validated detector. Applying either broadly would risk
+removing document content or corrupting coordinates. This is explicitly not a
+document/vendor exception.

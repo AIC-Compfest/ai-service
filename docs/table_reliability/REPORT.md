@@ -61,6 +61,22 @@ aturan atau data khusus dokumen.
 
 PP-Structure belum diaktifkan ataupun diklaim tersedia; itu tetap Langkah 9.
 
+## Langkah 7 — preprocessing scan/foto
+
+`ENABLE_OCR_PREPROCESS` tetap `false` secara default. Saat aktif, service
+menjalankan OCR mentah dan varian deskew/normalisasi-kontras/adaptive-upscale,
+memilih hasil dengan pasangan `(mean confidence, line count)`, dan memetakan
+koordinat varian kembali ke gambar sumber. Evidence `quality` mendapatkan
+metadata additive tentang operasi, skor, dan hasil yang dipilih. Tidak ada
+aturan berdasarkan nama dokumen, vendor, atau isi dataset.
+
+Test unit preprocessing lulus, termasuk inverse coordinate mapping dan
+rollback saat flag mati. Smoke pada gambar nyata pertama yang ditemukan di
+`D:\\AIC\\DATASET\\Dataset\\invoice\\image` memuat model Paddle, tetapi runner
+Windows berhenti tanpa mengembalikan evidence final. Karena itu belum ada
+benchmark atau klaim hasil DATASET untuk langkah ini. Inference gambar kosong
+tetap berhasil; masalah perlu didiagnosis sebelum evaluasi corpus image/pdf.
+
 ## Instalasi OCR historis
 
 Instalasi serial `pip install easyocr` selesai pada percobaan ulang. Verifikasi:

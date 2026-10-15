@@ -81,6 +81,8 @@ class Settings(BaseSettings):
     # False = tidak ada preprocessing tambahan (perilaku lama)
     # True  = aktifkan deskew, perspective correction, adaptive upscale
     enable_ocr_preprocess: bool = False
+    ocr_preprocess_min_side_for_upscale: int = 960
+    ocr_preprocess_max_upscale: float = 2.0
 
 
 settings = Settings()

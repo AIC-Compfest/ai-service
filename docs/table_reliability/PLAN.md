@@ -112,11 +112,17 @@ Ekstraksi tabel dan line item tidak andal karena:
 
 ### Langkah 7 — Preprocessing untuk Scan/Foto
 **File baru:** `app/services/preprocessing/ocr_prep.py`
-- Deskew, perspective correction, adaptive upscale, stamp color filter
-- Guard A/B: jalankan versi mentah dan diproses, simpan yang lebih baik
-- Simpan metadata transformasi di evidence
-- Aktif via `ENABLE_OCR_PREPROCESS`
-- **Risk:** Preprocessing yang agresif bisa memperburuk scan yang sudah bersih
+- [x] Deskew, contrast normalization, dan adaptive upscale menjaga transformasi
+  balik koordinat ke ruang gambar sumber.
+- [x] Guard A/B menjalankan versi mentah dan prepared, lalu memilih confidence
+  rata-rata dan jumlah baris secara deterministik; seri memilih raw.
+- [x] Metadata transformasi serta skor pemilihan ditambahkan secara additive di
+  `quality.ocr_preprocessing` hanya saat `ENABLE_OCR_PREPROCESS=true`.
+- [ ] Perspective correction dan stamp color filtering ditunda: tidak ada
+  detektor geometri/stamp yang tervalidasi, sehingga tidak aman diaktifkan.
+- **Risk:** Inference pada gambar DATASET nyata belum memberikan hasil proses
+  yang dapat ditangkap runner Windows; jangan membuat klaim benchmark sebelum
+  kegagalan runtime tersebut terdiagnosis.
 
 ### Langkah 8 — Gold Set Tabel dan Evaluasi
 **File baru:** `app/tools/prelabel_tables.py`, `scripts/eval_tables.py`

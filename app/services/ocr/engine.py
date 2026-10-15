@@ -22,6 +22,7 @@ from PIL import Image
 from app.core.logging import get_logger
 from app.core.config import settings
 from ..preprocessing.image_preprocessor import ImagePreprocessor
+from ..preprocessing.ocr_prep import OCRPreprocessor, PreparedImage
 from ..preprocessing.page_kind import PageKind, PageKindResult, detect_page_kind
 
 logger = get_logger(__name__)
@@ -288,6 +289,34 @@ class OCREngine:
         return self._assign_row_indices(lines)
 
     @staticmethod
+    def _remap_lines(
+        lines: list[OCRLine], inverse_transform: np.ndarray, width: int, height: int
+    ) -> list[OCRLine]:
+        """Map OCR boxes from a prepared image back into source-image coordinates."""
+        def remap_box(box: tuple[float, float, float, float]) -> tuple[float, float, float, float]:
+            x1, y1, x2, y2 = box
+            corners = np.array([[[x1, y1], [x2, y1], [x2, y2], [x1, y2]]], dtype=np.float32)
+            mapped = cv2.perspectiveTransform(corners, inverse_transform)[0]
+            xs, ys = mapped[:, 0], mapped[:, 1]
+            return float(xs.min()), float(ys.min()), float(xs.max()), float(ys.max())
+
+        for line in lines:
+            line.bbox_pixel = remap_box(line.bbox_pixel)
+            line.bbox_norm = OCREngine._safe_norm_bbox(*line.bbox_pixel, width, height)
+            for token in line.tokens:
+                token.bbox_pixel = remap_box(token.bbox_pixel)
+                token.bbox_norm = OCREngine._safe_norm_bbox(*token.bbox_pixel, width, height)
+        return OCREngine._assign_row_indices(lines)
+
+    def _read_prepared_lines(
+        self, prepared: PreparedImage, source_width: int, source_height: int
+    ) -> list[OCRLine]:
+        """Read a prepared variant and preserve the source-image evidence geometry."""
+        prepared_height, prepared_width = prepared.image.shape[:2]
+        lines = self._read_paddle_lines(prepared.image, prepared_width, prepared_height)
+        return self._remap_lines(lines, prepared.inverse_transform, source_width, source_height)
+
+    @staticmethod
     def _safe_norm_bbox(x1: float, y1: float, x2: float, y2: float, width: float, height: float) -> tuple[float, float, float, float]:
         x1, x2 = sorted((max(0.0, min(width, x1)), max(0.0, min(width, x2))))
         y1, y2 = sorted((max(0.0, min(height, y1)), max(0.0, min(height, y2))))
@@ -424,6 +453,28 @@ class OCREngine:
         engine_used = "paddleocr"
         try:
             ocr_lines = self._read_paddle_lines(cv_img, w, h)
+            if settings.enable_ocr_preprocess:
+                preprocessor = OCRPreprocessor(
+                    settings.ocr_preprocess_min_side_for_upscale,
+                    settings.ocr_preprocess_max_upscale,
+                )
+                prepared = preprocessor.prepare(cv_img)
+                prepared_lines = self._read_prepared_lines(prepared, w, h)
+                raw_score = (self._average_line_confidence(ocr_lines), len(ocr_lines))
+                prepared_score = (self._average_line_confidence(prepared_lines), len(prepared_lines))
+                use_prepared = prepared_score > raw_score
+                if use_prepared:
+                    ocr_lines = prepared_lines
+                quality = {
+                    **quality,
+                    "ocr_preprocessing": {
+                        "enabled": True,
+                        "selected": "prepared" if use_prepared else "raw",
+                        "operations": list(prepared.operations),
+                        "raw_score": list(raw_score),
+                        "prepared_score": list(prepared_score),
+                    },
+                }
         except Exception as e:
             logger.error("paddleocr_extraction_error", error=str(e))
             raise RuntimeError("PaddleOCR raster extraction failed") from e
