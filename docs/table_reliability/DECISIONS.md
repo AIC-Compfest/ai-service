@@ -183,3 +183,13 @@ then apply the configurable legacy word-count safety net before the DIGITAL
 coverage rule. The default remains five words.
 **Impact:** Pages containing only a footer cannot bypass scan routing due to a
 misleading bbox-area ratio. This applies only when `PAGE_KIND_ROUTING=true`.
+
+---
+
+## D-014: Invoice Line Items Must Not Depend on a Vendor Name
+
+**Date:** 2026-10-15
+**Decision:** Replace the literal `shipment_id != "Logistik"` exception with a
+structural row predicate: a row needs an identifier containing a digit or a
+parseable line total. This keeps header/vendor text out without encoding a
+specific company name.

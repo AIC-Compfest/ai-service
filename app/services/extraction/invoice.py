@@ -39,6 +39,17 @@ from app.services.extraction.utils import (
 
 logger = get_logger(__name__)
 
+
+def _is_invoice_item_row(row: dict) -> bool:
+    """Reject header/vendor text by structure, never by a vendor-specific word."""
+    identifier = " ".join(
+        str(row.get(field) or "") for field in ("shipment_id", "awb_number")
+    ).strip()
+    line_total = row.get("line_total")
+    has_identifier = bool(re.search(r"\d", identifier)) and len(identifier) >= 4
+    has_total = parse_amount(line_total) is not None if line_total else False
+    return has_identifier or has_total
+
 # Canonical column aliases for invoice line-item tables (PRD §13, multi-vendor)
 INVOICE_TABLE_COLUMNS = {
     "line_number":          ["no", "no.", "#", "baris", "line"],
@@ -402,7 +413,7 @@ class InvoiceExtractor(BaseExtractor):
         Uses fuzzy table columns if available, or falls back to line-based AWB grouping.
         """
         rows = parse_table_columns(tables, INVOICE_TABLE_COLUMNS) if tables else []
-        valid_rows = [r for r in rows if any(r.get(k) for k in ["shipment_id", "awb_number", "line_total"]) and r.get("shipment_id") != "Logistik"]
+        valid_rows = [row for row in rows if _is_invoice_item_row(row)]
 
         if valid_rows:
             items = []

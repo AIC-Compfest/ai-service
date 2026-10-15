@@ -68,6 +68,13 @@ footer. Perintah verifikasi:
 
 Hasil: `8 passed`.
 
+## Langkah 2 — work in progress
+
+The invoice extractor no longer excludes a row because its shipment id is
+`Logistik`. It now requires an identifier-like value or a parseable line total.
+The focused unit test passed (`1 passed`). The unified table router and evidence
+provider metadata are not implemented yet.
+
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 
 ```powershell
