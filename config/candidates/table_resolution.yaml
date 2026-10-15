@@ -4,3 +4,5 @@ ambiguous_headers:
     amount_field: line_total
     rate_fields: [base_rate, base_rate_idr]
     amount_value_floor: "1000"
+token_grid:
+  header_max_rows: 2

@@ -105,6 +105,8 @@ City line-item values now require a configured gazetteer match; unknown values
 are explicitly marked rather than treated as valid cities.
 The ambiguous `jumlah` header is resolved by versioned candidate configuration,
 not vendor-specific or code-hardcoded data.
+Multi-line table headers are joined only under the configured limit and only
+when the first header row does not already match enough configured fields.
 
 ## Reproduksi setelah Python 3.11.9 dipulihkan
 

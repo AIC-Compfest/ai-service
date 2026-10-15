@@ -258,3 +258,12 @@ building. Repeated detected headers delimit independent tables on the page.
 `config/candidates/table_resolution.yaml`, not code constants. Its configured
 value floor and rate-field list determine whether it represents a quantity or
 a line total.
+
+---
+
+## D-021: Multi-Line Header Limit Is Configured
+
+**Date:** 2026-10-15
+**Decision:** `token_grid.header_max_rows` in table-resolution configuration
+controls header joining. A valid single header takes precedence, preventing a
+first line item from being swallowed as a second header line.

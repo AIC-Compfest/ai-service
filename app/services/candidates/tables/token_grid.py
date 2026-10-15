@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from statistics import median
+from pathlib import Path
+
+import yaml
 
 from ..fuzzy_fields import FuzzyFieldMatcher
 from ..schema import Cell, Column, Page, Table, TableRow, Token
@@ -14,6 +17,8 @@ class TokenGridTableProvider:
     def __init__(self, aliases_path, abbreviations_path):
         self.aliases_path = aliases_path
         self.abbreviations_path = abbreviations_path
+        config = yaml.safe_load((Path(aliases_path).parent / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
+        self.header_max_rows = int(config.get("token_grid", {}).get("header_max_rows", 1))
 
     def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
         matcher = FuzzyFieldMatcher(doc_type, self.aliases_path, self.abbreviations_path) if doc_type else None
@@ -23,21 +28,21 @@ class TokenGridTableProvider:
         tables = []
         start = 0
         while start < len(rows) - 1:
-            header_index, header_cells = _find_header(rows, matcher, start)
+            header_index, header_end, header_cells = _find_header(rows, matcher, start, self.header_max_rows)
             if header_index is None or len(header_cells) < 2:
                 break
-            next_header, _ = _find_header(rows, matcher, header_index + 1)
+            next_header, _, _ = _find_header(rows, matcher, header_end, self.header_max_rows)
             end = next_header if next_header is not None else len(rows)
-            table = _build_table(rows, header_index, end, header_cells, page, document_id)
+            table = _build_table(rows, header_index, header_end, end, header_cells, page, document_id)
             if table:
                 tables.append(table)
             start = end
         return tables
 
 
-def _build_table(rows, header_index, end, header_cells, page, document_id):
+def _build_table(rows, header_index, header_end, end, header_cells, page, document_id):
     columns = _columns(header_cells)
-    body = rows[header_index + 1:end]
+    body = rows[header_end:end]
     logical_rows: list[TableRow] = []
     summary_rows: list[TableRow] = []
     pitch = median([row[0].cy for row in rows[1:]]) - median([row[0].cy for row in rows[:-1]]) if len(rows) > 2 else 0.03
@@ -82,16 +87,34 @@ def _visual_rows(tokens: list[Token]) -> list[list[Token]]:
     return rows
 
 
-def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None, start: int = 0):
+def _find_header(rows: list[list[Token]], matcher: FuzzyFieldMatcher | None, start: int = 0, max_rows: int = 1):
     for index in range(start, len(rows) - 1):
         row = rows[index]
         cells = _merge_cells(row)
+        header_end = index + 1
+        if matcher and _header_match_count(cells, matcher) < 2 and max_rows > 1 and index + 1 < len(rows):
+            combined = _combine_header_cells(cells, _merge_cells(rows[index + 1]))
+            if _header_match_count(combined, matcher) >= 2:
+                cells, header_end = combined, index + 2
         if matcher is None and len(cells) >= 2 and len(rows[index + 1]) >= 2:
-            return index, cells
-        hits = [cell for cell in cells if matcher and matcher.best_score(cell.text) >= 0.8]
-        if matcher and len({matcher.match(cell.text).candidates[0].field for cell in hits if matcher.match(cell.text).candidates}) >= 2:
-            return index, cells
-    return None, []
+            return index, header_end, cells
+        if matcher and _header_match_count(cells, matcher) >= 2:
+            return index, header_end, cells
+    return None, None, []
+
+
+def _header_match_count(cells, matcher):
+    return len({matcher.match(cell.text).candidates[0].field for cell in cells if matcher.match(cell.text).candidates and matcher.best_score(cell.text) >= 0.8})
+
+
+def _combine_header_cells(first, second):
+    combined = []
+    for cell in first:
+        nearest = min(second, key=lambda other: abs(other.bbox[0] - cell.bbox[0])) if second else None
+        text = " ".join(value for value in (cell.text, nearest.text if nearest else "") if value).strip()
+        tokens = cell.tokens + (nearest.tokens if nearest else [])
+        combined.append(Cell(text, _row_bbox(tokens), tokens, is_header=True))
+    return combined
 
 
 def _is_summary_row(text: str) -> bool:

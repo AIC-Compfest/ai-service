@@ -93,6 +93,8 @@ Ekstraksi tabel dan line item tidak andal karena:
   configured gazetteer; unknown values remain explicit review candidates.
 - [x] Ambiguous `jumlah` is resolved from the versioned table-resolution
   configuration, observed values, and the presence of a preceding rate field.
+- [x] Token-grid combines multi-line headers up to the configured row limit,
+  only when a single row is not already a valid header.
 
 ### Langkah 6 — Ganti EasyOCR dengan PaddleOCR (di Balik Interface)
 **Refactor:** `app/services/ocr/engine.py`

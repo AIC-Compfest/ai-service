@@ -60,3 +60,14 @@ def test_jumlah_resolution_comes_from_configured_position_and_values():
     table = Table("t", 1, 1, "columnar", "test", [Column(0, 0, .3, "Qty"), Column(1, .3, .6, "Rate"), Column(2, .6, 1, "Jumlah")], [TableRow(0, [Cell("2", (0, 0, .3, .1), col_idx=0), Cell("1500", (.3, 0, .6, .1), col_idx=1), Cell("3000", (.6, 0, 1, .1), col_idx=2)], (0, 0, 1, .1))], (0, 0, 1, .1))
     result = LineItemBuilder(Path("config/candidates")).build("D", "INVOICE", [table])
     assert next(row for row in result["columns"] if row["li_col_idx"] == 2)["li_field"] == "line_total"
+
+
+def test_token_grid_combines_configured_multiline_headers():
+    lines = []
+    for y, values in [(100, [(40, "Nama"), (220, "Berat")]), (120, [(40, "Barang"), (220, "Kg")]), (150, [(40, "Widget"), (220, "5")])]:
+        tokens = [{"text": text, "bbox_norm": [x, y, x + 35, y + 10]} for x, text in values]
+        lines.append({"text": " ".join(value["text"] for value in tokens), "bbox_norm": [0, y, 400, y + 10], "tokens": tokens})
+    config = Path("config/candidates")
+    table = TokenGridTableProvider(config / "line_item_aliases.yaml", config / "abbreviations.yaml").tables(build_page({"page_number": 1, "lines": lines}), "SURAT_JALAN", "D")[0]
+    assert [column.header_text for column in table.columns] == ["Nama Barang", "Berat Kg"]
+    assert len(table.rows) == 1
