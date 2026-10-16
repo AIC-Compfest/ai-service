@@ -30,6 +30,13 @@ geometry:
   side_header_jaccard: 0.5     # ... and those shared texts must be this share of all distinct texts on that line (rejects splits inside one table)
   side_min_lines: 3            # both sides need at least this many lines
   default_aspect: 0.7071       # page width / height when the evidence does not carry the page size (A4 portrait)
+continuation:
+  # A header-less table on the next page continues a table only when that table is a real data table (not a key-value
+  # block) and the last table of its page. Found on the rate-card documents: 1-row key-value blocks were "continued".
+  min_tail_rows: 3
+  min_tail_columns: 3
+  bottom_tolerance: 0.02       # the tail must end within this normalized distance of the lowest table of its page
+
 # Whole-word labels that start a summary row (totals, tax, discount ...). Matched at the start of the first
 # non-empty cell of a sparse line (see rows.py). Add words here, not in code.
 summary_labels:

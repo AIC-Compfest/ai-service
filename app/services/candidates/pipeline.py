@@ -42,12 +42,12 @@ class CandidatePipeline:
         self.last_run_report: dict[str, Any] = {"cap_overflow": {}}
         self.table_extractor = TableExtractor.from_config(config_dir, settings.table_provider_order)
 
-    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN") -> list[dict[str, Any]]:
+    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN", include_tables: bool = True) -> list[dict[str, Any]]:
         started = time.perf_counter()
         self.last_report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
         pages = [build_page(page) for page in ocr_result.get("pages", [])]
-        if settings.enable_table_extractor:
+        if settings.enable_table_extractor and include_tables:
             tables = [
                 table
                 for page in pages

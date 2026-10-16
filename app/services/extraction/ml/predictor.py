@@ -41,7 +41,7 @@ class MLFieldExtractor:
             self.bundles[(metadata["doc_type"], metadata["field"])] = (model, metadata)
 
     def extract(self, document_id: str, doc_type: str, ocr_result: dict[str, Any]) -> MLExtractionResult:
-        rows = self.pipeline.generate(document_id, doc_type, ocr_result, "inference")
+        rows = self.pipeline.generate(document_id, doc_type, ocr_result, "inference", include_tables=False)
         scores = {}
         thresholds = {}
         for (bundle_doc, field), (model, metadata) in self.bundles.items():

@@ -17,6 +17,7 @@ from fastapi import APIRouter, HTTPException, UploadFile
 from app.core.logging import get_logger
 from app.schemas.document_type import DocumentType
 from app.schemas.extraction import ExtractionResponse
+from app.services.extraction.ml.service import promote_ml_fields, run_ml_extraction
 from app.services.extraction.registry import get_extractor
 from app.services.pipeline import Phase5DocumentPipeline
 
@@ -108,6 +109,11 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
         extractor = get_extractor(first_type)
         fields = extractor.extract(document_id, evidence)
 
+    # Candidate generation + LightGBM on the whole document (additive; see extraction/ml/service.py)
+    main_type = doc_type if doc_type != DocumentType.UNKNOWN else first_type
+    ml_extraction = run_ml_extraction(document_id, main_type.value, evidence)
+    fields = promote_ml_fields(fields, ml_extraction, document_id)
+
     # Multi-document extraction across logical segments (ARCHITECTURE ROOT CAUSE A FIX)
     segments = evidence.get("segments", [])
     segment_extractions: list[dict] = []
@@ -127,6 +133,8 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
                     if start_p <= p.get("page_number", 0) <= end_p
                 ]
                 s_fields = s_extractor.extract(document_id, s_evidence)
+                s_ml = run_ml_extraction(document_id, seg_type_str, s_evidence)
+                s_fields = promote_ml_fields(s_fields, s_ml, document_id)
                 segment_extractions.append({
                     "segment_number": seg.get("segment_number"),
                     "document_type": seg_type_str,
@@ -135,6 +143,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
                     "page_count": seg.get("page_count", end_p - start_p + 1),
                     "classification_confidence": seg.get("classification_confidence", 1.0),
                     "extracted_fields": [f.model_dump() for f in s_fields],
+                    "ml_extraction": s_ml,
                 })
             except Exception as e:
                 logger.warning(
@@ -196,6 +205,8 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
             for p in evidence.get("pages", [])
         ],
         "extracted_fields": [f.model_dump() for f in fields],
+        "ml_extraction": ml_extraction,
+        "table_groups": evidence.get("table_groups", []),
         "logical_extractions": logical_extractions,
         "extraction_attempted": True,
         "unknown_fields": unknown_fields,

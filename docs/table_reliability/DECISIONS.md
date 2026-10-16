@@ -405,3 +405,26 @@ re-scored against v2 so before/after are comparable; numbers in METRICS_AFTER_AL
 **Decision:** `pymupdf.strategies: [lines]`. The `text` strategy takes 1-5 s per dense page and, once token-geometry tables are arbitrated per table, adds no
 tables on dev+val (router F1 0.586 with it, 0.589 without). It remains selectable in the YAML and is covered by a test.
 
+
+## D-035: Table Extractor Default Becomes `true` (closes K2, updates D-031)
+**Date:** 2026-10-16
+**Decision:** `ENABLE_TABLE_EXTRACTOR` default is now `true`. Gate (D-031): no structural metric worse than the flag-off baseline and a clear gain over the flag-on baseline.
+Flag off returns no tables and no invoice line items (0/28 documents), so no metric can be worse. Against the flag-on baseline (old router, typed; gold v2) on dev+val:
+detection F1 0.456 -> 0.641, rows exact 23/36 -> 49/58, header exact 27/34 -> 41/56, cols exact 33/36 -> 53/58, amount@table 93/181 -> 141/181; E2E invoice line items 50/77 -> 56/77, exact row count 6/28 -> 14/28.
+**Caveat (read before trusting the gate):** the exact-match RATIOS of header (0.79 -> 0.73) and columns (0.92 -> 0.91) are slightly lower because the matched set grew (34 -> 56 tables);
+absolute counts rose. No paired per-table comparison exists, so this is a judgement call, not a proof. Reverting is one setting: `ENABLE_TABLE_EXTRACTOR=false`.
+Targets K4 are NOT met (see REPORT_FASE_4.md); the flag flip does not claim they are.
+## D-036: Continuation Only For Data Tables That End The Page
+**Date:** 2026-10-16
+**Context:** Rate-card documents showed 1-row key-value blocks "continued" onto the next page (3 extra false tables in dev+val).
+**Decision:** `continuation` in `table_resolution.yaml`: the tail must have >= 3 rows and >= 3 columns, no summary rows, and be the lowest table of its page (tolerance 0.02). Fixtures (24-row two-page tables) unaffected.
+A page whose segment is UNKNOWN may continue a table of the previous known segment (continuation pages carry no document cues and the classifier rejects them, conf 0.35). Known limit:
+the segmenter still puts that page in a separate UNKNOWN segment, so the rule-based extractor does not read its rows (OS-011).
+## D-037: Candidate Generation + LightGBM Stay On The Extraction Path (shadow, conservative)
+**Date:** 2026-10-16
+**Context:** Owner requirement: candidate generation and LightGBM must remain in use. Before this change nothing on the API path called `MLFieldExtractor`.
+**Decision:** `extraction/ml/service.py`: `/v1/extract/pipeline/full` runs candidate generation (without a second table pass) and the LightGBM bundles of the document type for the whole document and for each segment.
+Output is additive (`ml_extraction`, per segment and top-level). Rule-based extractors stay primary; an ML value replaces a rule field only if that field is unknown, has the SAME name, and the decoder status is `accepted` (score >= t_auto).
+Failures never break the response. Settings: `ENABLE_ML_EXTRACTION` (true), `ML_MODEL_SET_DIR` (`models/pod_phase2`).
+**Honest status:** the only bundle is `POD.pihak_pertama_nama` (bundle metrics accepted 0, precision 0). A retraining try for the POD registry fields on `data/pod_phase2` (output kept only in the terminal tail, so only the last 9 fields were read): every field read had `accepted = 0` except `tanggal` (4 accepted, precision 0.0); two fields were skipped for a single positive sample. The models were discarded.
+Labels exist only for POD (34 documents, LLM draft). ML field names (`pihak_pertama_nama`) differ from rule field names (`receiver_name`), so promotion cannot fire today. The path is exercised and measured, not yet useful.

@@ -41,6 +41,16 @@ def _line_item_tables(tables: list[Table]) -> list[Table]:
     return [t for t in tables if t.role == "line_items"]
 
 
+def _can_continue(tail: Table, page_tables: list[Table], rules: dict) -> bool:
+    """A table may continue on the next page only if it did not end, is a data table and is the lowest table of its page."""
+    if tail.summary_rows:
+        return False
+    if len(tail.rows) < int(rules.get("min_tail_rows", 3)) or len(tail.columns) < int(rules.get("min_tail_columns", 3)):
+        return False
+    lowest = max((t.bbox[3] for t in page_tables), default=tail.bbox[3])
+    return tail.bbox[3] >= lowest - float(rules.get("bottom_tolerance", 0.02))
+
+
 def link_segment_tables(pages: dict[int, Page], tables: dict[int, list[Table]], segments: list[dict], document_id: str) -> tuple[dict[int, list[Table]], list[dict]]:
     """Add header-less continuation tables and return ``(tables_by_page, table_groups)``.
 
@@ -62,7 +72,7 @@ def link_segment_tables(pages: dict[int, Page], tables: dict[int, list[Table]], 
         same_chain = tail is not None and tail.page_end == number - 1 and chain_segment is not None and (
             segment.get("segment_number") == chain_segment.get("segment_number") or segment.get("document_type") in (None, "UNKNOWN")
         )
-        if same_chain and not tail.summary_rows:
+        if same_chain and _can_continue(tail, tables.get(tail.page_end, []), config.get("continuation", {})):
             has_top_table = any(t.bbox[1] < 0.35 and len(t.columns) == len(tail.columns) for t in current)
             if not has_top_table:
                 continued = continue_table(pages[number], tail, config, document_id)

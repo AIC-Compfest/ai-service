@@ -90,3 +90,20 @@ melanggar "No Hallucination Rule" (PRD §60) — nilai yang dihitung ulang
 seharusnya diberi tanda berbeda dari nilai yang ditemukan secara langsung.  
 **Rekomendasi:** Tandai field sebagai `method=ExtractionMethod.DERIVED`
 atau `is_calculated=True`.
+
+---
+## OS-009: Satuan di `utils.py`, `pod.py`, `surat_jalan.py` (K11, Fase 9 ditunda)
+**Temuan:** Penanganan satuan (kg/koli/dus) di extractor POD dan Surat Jalan belum diseragamkan dengan registry kandidat. Tidak diubah karena Q1=A (hanya tabel).
+**Rekomendasi:** Satukan parser satuan dengan `candidates/parsers.py`, lalu tambah test per satuan.
+
+## OS-010: Extractor POD dan Surat Jalan belum memakai tabel (K12, Fase 9 ditunda)
+**Temuan:** Hanya `invoice.py` dan `rate_agreement.py` membaca `pages[].tables` (difilter `role`). POD dan Surat Jalan tetap berbasis baris teks. Tabel sudah tersedia di evidence untuk keduanya (surat jalan F1 deteksi 0.724).
+**Rekomendasi:** Setelah gold direview manusia, konsumsi tabel `role=line_items` untuk item barang.
+
+## OS-011: Halaman lanjutan tabel yang diklasifikasi UNKNOWN masuk segmen sendiri
+**Temuan:** Halaman lanjutan tanpa header sering berkeyakinan < 0.45 (mis. 0.345) sehingga `segmenter.py` memisahkannya sebagai segmen UNKNOWN. Tabelnya kini tersambung di `table_groups` (D-036), tetapi extractor invoice hanya membaca halaman segmennya sendiri sehingga baris halaman itu tidak ikut `line_items`.
+**Rekomendasi:** Implementasikan aturan "UNKNOWN berkeyakinan rendah digabung ke segmen tetangga" yang sudah tertulis di docstring `segmenter.py` tetapi belum dikodekan; ukur dampaknya pada metrik klasifikasi/segmentasi dulu.
+
+## OS-012: Model LightGBM belum berguna (D-037)
+**Temuan:** Hanya satu bundle (`POD.pihak_pertama_nama`, accepted 0). Label hanya untuk POD (34 dokumen, draf LLM). Nama field ML tidak sama dengan nama field extractor aturan, sehingga promosi nilai ML tidak pernah terpicu.
+**Rekomendasi:** Label manusia untuk INVOICE/SURAT_JALAN/RATE_AGREEMENT, latih ulang dengan split per-template, tambah pemetaan nama field ML -> extractor.

@@ -64,7 +64,8 @@ class Settings(BaseSettings):
     table_provider_order: list[str] = ["pymupdf_find_tables", "token_grid"]
     # False keeps the legacy OCR evidence contract untouched. True routes
     # table discovery through the scored provider router.
-    enable_table_extractor: bool = False
+    # Default true since Fase 4 (D-035): with false the API returns no tables and no invoice line items.
+    enable_table_extractor: bool = True
     # False keeps each page table independent. True may join consecutive-page
     # tables only when their normalized headers and provider match.
     enable_table_stitching: bool = False
@@ -84,6 +85,12 @@ class Settings(BaseSettings):
     paddle_language: str = "en"
     paddle_enable_mkldnn: bool = False
     paddle_cpu_threads: int = 8
+
+    # Candidate generation + LightGBM scoring on the extraction path (additive, see extraction/ml/service.py).
+    # Rule-based extractors stay primary; an ML value only replaces a rule field that is unknown AND has the same name,
+    # and only when the model is "accepted" (score >= t_auto of its bundle).
+    enable_ml_extraction: bool = True
+    ml_model_set_dir: Path = PACKAGE_ROOT / "models" / "pod_phase2"
 
     # Layout zones for extractors, as FRACTIONS of the page (bbox_norm is 0..1). Legacy 0..1000 fixtures are
     # converted by ``to_unit_bbox`` before comparing. These replace pixel-like literals (T-13).

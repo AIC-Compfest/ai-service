@@ -106,3 +106,18 @@ def test_tables_on_one_page_are_ordered_naturally_not_as_strings():
     ids = ["d-p1-t10", "d-p1-t2", "d-p1-t1"]
     result = stitch_tables([_table(i, 1, 1, headers=(i, "Qty")) for i in ids])
     assert [t.table_id for t in result] == ["d-p1-t1", "d-p1-t2", "d-p1-t10"]
+
+
+# ---- continuation guard (found on rate-card documents: key-value blocks were "continued")
+
+def test_only_the_lowest_data_table_of_a_page_can_be_continued():
+    from app.services.candidates.table_runtime import _can_continue
+
+    rules = {"min_tail_rows": 3, "min_tail_columns": 3, "bottom_tolerance": 0.02}
+    data = _table("a", 1, 5, headers=("Item", "Qty", "Price"))
+    below = _table("b", 1, 5, headers=("Item", "Qty", "Price"))
+    below.bbox = (0, 0.92, 1, 0.97)
+    assert _can_continue(data, [data], rules)
+    assert not _can_continue(data, [data, below], rules)  # another table sits lower on the page
+    assert not _can_continue(_table("k", 1, 1, headers=("Key", "Value", "Note")), [], rules)  # a one-row key-value block
+    assert not _can_continue(_table("t", 1, 5, summary=1, headers=("Item", "Qty", "Price")), [], rules)  # it already ended
