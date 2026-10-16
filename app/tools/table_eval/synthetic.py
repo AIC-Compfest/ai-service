@@ -454,7 +454,7 @@ def to_evidence_page(page: pymupdf.Page, page_number: int, mode: str = "vector",
             items = sorted(grouped[key], key=lambda w: w[0])
             tokens = [{"text": w[4], "confidence": 1.0, "bbox_norm": norm_box(w[0], w[1], w[2], w[3]), "_estimated": False} for w in items]
             lines.append({"text": " ".join(w[4] for w in items), "confidence": 1.0, "bbox_norm": norm_box(min(w[0] for w in items), min(w[1] for w in items), max(w[2] for w in items), max(w[3] for w in items)), "tokens": tokens})
-        return {"page_number": page_number, "lines": lines, "engine_used": "synthetic_vector"}
+        return {"page_number": page_number, "lines": lines, "engine_used": "synthetic_vector", "width": width, "height": height}
 
     # phrase mode: cluster words into visual lines, then split into phrases at large gaps.
     heights = sorted(w[3] - w[1] for w in words) or [10.0]
@@ -487,4 +487,4 @@ def to_evidence_page(page: pymupdf.Page, page_number: int, mode: str = "vector",
                 tokens.append({"text": token_text, "confidence": 0.9, "bbox_norm": norm_box(cursor, y0, cursor + span, y1, jitter), "_estimated": len(text_words) > 1})
                 cursor += span
             lines.append({"text": " ".join(text_words), "confidence": 0.9, "bbox_norm": norm_box(x0, y0, x1, y1, jitter), "tokens": tokens})
-    return {"page_number": page_number, "lines": lines, "engine_used": "synthetic_phrase"}
+    return {"page_number": page_number, "lines": lines, "engine_used": "synthetic_phrase", "width": width, "height": height}

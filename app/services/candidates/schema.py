@@ -33,6 +33,7 @@ class Page:
     quality: dict[str, Any] = field(default_factory=dict)
     regions: list[dict[str, Any]] = field(default_factory=list)
     source_page: Any | None = None
+    aspect: float | None = None  # page width / height; None when the evidence does not carry the page size
 
 
 @dataclass
