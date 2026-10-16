@@ -381,3 +381,27 @@ improvement over the flag-on baseline). At that point the default becomes `true`
 `TABLE_PROVIDER_ORDER` default is `["pymupdf_find_tables", "token_grid"]` (config.py), not `["token_grid"]` as D-005 states.
 `PAGE_KIND_ROUTING` and `ENABLE_OCR_PREPROCESS` default to `false` as written in D-005.
 
+## D-032: Table Discovery Is Geometry-First, Arbitrated Per Table (supersedes D-018, D-021, D-022 mechanics)
+
+**Date:** 2026-10-16
+**Decision:** `token_grid` no longer clusters rows over the whole page. Pipeline: text blocks (local-pitch vertical gaps; side-by-side split only
+with a repeated header) -> header scored among all lines of the block (first convincing header opens a table; key-value lines, prose, digit-heavy
+lines rejected; wrapped headers and group labels joined) -> columns from header cells AND data extents (ruling lines when they enclose the header)
+-> rows (summary labels tested BEFORE continuation; end of table at prose, notes or a non-summary line after the summary block) -> role.
+All thresholds live in `table_resolution.yaml` (`geometry`, `scoring`, `summary_labels`). The router collects tables from every provider and keeps the best
+of each overlapping group (`scoring.arbitrate`); provider order is only a tie-breaker. Summary rows remain outside `rows` (D-018 kept).
+`header_max_rows` (D-021) is replaced by `header_max_extra_lines`.
+
+## D-033: Gold v2 (header lines)
+
+**Date:** 2026-10-16
+**Decision:** In `grounding.py`, header lines must not contain contact data, `label:value` pairs, digits (unruled tables) or running text. Gold v1 swallowed
+adjacent address/contact/sentence lines into headers (found by overlay inspection, not by looking at provider output). All earlier prediction sets were
+re-scored against v2 so before/after are comparable; numbers in METRICS_AFTER_ALGO.md use v2. METRICS_BASELINE.md and METRICS_AFTER_P0.md keep their v1 numbers.
+
+## D-034: PyMuPDF `text` Strategy Removed From Production Config
+
+**Date:** 2026-10-16
+**Decision:** `pymupdf.strategies: [lines]`. The `text` strategy takes 1-5 s per dense page and, once token-geometry tables are arbitrated per table, adds no
+tables on dev+val (router F1 0.586 with it, 0.589 without). It remains selectable in the YAML and is covered by a test.
+

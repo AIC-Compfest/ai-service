@@ -26,54 +26,54 @@
           "role": "line_items",
           "bbox_norm": [
             0.080392,
-            0.418671,
+            0.4616,
             0.919608,
             0.500809
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "52-0284917 loading on the following rate: Description",
-              "normalized_text": "52-0284917 loading on the following rate: Description",
+              "raw_text": "Description",
+              "normalized_text": "Description",
               "bbox_norm": [
                 0.080392,
-                0.418671,
-                0.239176,
+                0.4616,
+                0.158022,
                 0.478081
               ],
               "legibility": "clear"
             },
             {
               "column_index": 1,
-              "raw_text": "04/22/2019 1400 and moving from CANTON, Units",
-              "normalized_text": "04/22/2019 1400 and moving from CANTON, Units",
+              "raw_text": "Units",
+              "normalized_text": "Units",
               "bbox_norm": [
-                0.243491,
-                0.418671,
-                0.554088,
+                0.460849,
+                0.4616,
+                0.49621,
                 0.478081
               ],
               "legibility": "clear"
             },
             {
               "column_index": 2,
-              "raw_text": "OH 44702 to PINE BLUFF, Rate",
-              "normalized_text": "OH 44702 to PINE BLUFF, Rate",
+              "raw_text": "Rate",
+              "normalized_text": "Rate",
               "bbox_norm": [
-                0.558404,
-                0.418671,
-                0.744756,
+                0.612431,
+                0.4616,
+                0.645216,
                 0.478081
               ],
               "legibility": "clear"
             },
             {
               "column_index": 3,
-              "raw_text": "AR 71601 will move at Amount",
-              "normalized_text": "AR 71601 will move at Amount",
+              "raw_text": "Amount",
+              "normalized_text": "Amount",
               "bbox_norm": [
-                0.749071,
-                0.418671,
+                0.866116,
+                0.4616,
                 0.919608,
                 0.478081
               ],

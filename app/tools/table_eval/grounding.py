@@ -287,6 +287,22 @@ def _cell(index: int, words: list[Word], fallback_box) -> dict:
     return {"column_index": index, "raw_text": text, "normalized_text": text, "bbox_norm": _norm_box(_union(words) if words else fallback_box), "legibility": "clear"}
 
 
+def _header_like(words: list[Word], ruled: bool) -> bool:
+    """Gold v2: a header line carries no contact data, label:value pairs or running text (those were swallowed by v1).
+
+    Inside a ruled grid the rules already delimit the header, so only contact data and label:value are refused there.
+    """
+    text = " ".join(w.text for w in words)
+    if "@" in text or ":" in text:
+        return False
+    if ruled:
+        return True
+    if any(ch.isdigit() for ch in text):
+        return False
+    lower = sum(1 for w in words if next((c for c in w.text if c.isalpha()), "A").islower())
+    return lower < max(2, 0.3 * len(words))
+
+
 def ground_table(lines: list[list[Word]], rows: list[list[Needle]], anchors: list[int], first_row: int, totals: set[str], table_id: str, rules: Rules | None = None) -> tuple[dict | None, str]:
     """Build one gold table for rows ``first_row .. first_row+len(anchors)`` on a page, or return a reason."""
     if not anchors:
@@ -390,6 +406,8 @@ def ground_table(lines: list[list[Word]], rows: list[list[Needle]], anchors: lis
             step = lines[k + 1][0].cy - lines[k][0].cy
             if len(in_table) < 2 or (base_gap and step > 2.2 * base_gap) or any(len(num) >= 4 and num in row_numbers for w in in_table for num in w.nums):
                 break
+        if not _header_like(in_table, rule_top is not None):
+            break
         header_lines.insert(0, in_table)
         k -= 1
     headers, header_found = [], False

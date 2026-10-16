@@ -26,7 +26,7 @@
           "role": "line_items",
           "bbox_norm": [
             0.02875,
-            0.25573,
+            0.308822,
             0.8275,
             0.374373
           ],
@@ -45,23 +45,23 @@
             },
             {
               "column_index": 1,
-              "raw_text": "Service : DTD PVG-JKT AIR FREIGHT MAWB / HAWB Quantity : 2 CRATE / 340 KG Origin - Dest Description",
-              "normalized_text": "Service : DTD PVG-JKT AIR FREIGHT MAWB / HAWB Quantity : 2 CRATE / 340 KG Origin - Dest Description",
+              "raw_text": "Description",
+              "normalized_text": "Description",
               "bbox_norm": [
-                0.02875,
-                0.25573,
-                0.610288,
+                0.225616,
+                0.308822,
+                0.321884,
                 0.325861
               ],
               "legibility": "clear"
             },
             {
               "column_index": 2,
-              "raw_text": ": : PVG-JKT Charges IDR",
-              "normalized_text": ": : PVG-JKT Charges IDR",
+              "raw_text": "Charges IDR",
+              "normalized_text": "Charges IDR",
               "bbox_norm": [
-                0.65,
-                0.25573,
+                0.70625,
+                0.308822,
                 0.811268,
                 0.325861
               ],

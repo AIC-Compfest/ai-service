@@ -26,19 +26,19 @@
           "role": "line_items",
           "bbox_norm": [
             0.036,
-            0.267208,
+            0.325004,
             0.965,
             0.403373
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "Telp: 08123456780 Email: budi.santoso@gmail.com Item",
-              "normalized_text": "Telp: 08123456780 Email: budi.santoso@gmail.com Item",
+              "raw_text": "Item",
+              "normalized_text": "Item",
               "bbox_norm": [
                 0.036,
-                0.267208,
-                0.233788,
+                0.325004,
+                0.059644,
                 0.336201
               ],
               "legibility": "clear"

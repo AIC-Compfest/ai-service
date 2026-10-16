@@ -25,32 +25,32 @@
           "table_id": "surat_jalan/surat_jalan_7_variasi_1-p1-g1",
           "role": "line_items",
           "bbox_norm": [
-            0.019231,
-            0.579807,
+            0.032692,
+            0.686714,
             0.85498,
             0.801891
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "Disetujui oleh : Kode Barang",
-              "normalized_text": "Disetujui oleh : Kode Barang",
+              "raw_text": "Kode Barang",
+              "normalized_text": "Kode Barang",
               "bbox_norm": [
-                0.019231,
-                0.579807,
-                0.234939,
+                0.074481,
+                0.686714,
+                0.167826,
                 0.711124
               ],
               "legibility": "clear"
             },
             {
               "column_index": 1,
-              "raw_text": "rahmat ..:: DAFTAR BARANG DIKIRIM ::.. Nama Barang",
-              "normalized_text": "rahmat ..:: DAFTAR BARANG DIKIRIM ::.. Nama Barang",
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
               "bbox_norm": [
-                0.239109,
-                0.579807,
-                0.616438,
+                0.420886,
+                0.686714,
+                0.517576,
                 0.711124
               ],
               "legibility": "clear"

@@ -25,85 +25,12 @@
           "table_id": "invoice/invoice_4_variasi_1-p1-g1",
           "role": "line_items",
           "bbox_norm": [
-            0.057407,
-            0.348106,
+            0.07037,
+            0.422742,
             0.935185,
             0.515493
           ],
-          "headers": [
-            {
-              "column_index": 0,
-              "raw_text": "Email: sinarmotor@gmail.com Produk",
-              "normalized_text": "Email: sinarmotor@gmail.com Produk",
-              "bbox_norm": [
-                0.057407,
-                0.348106,
-                0.261366,
-                0.401871
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 1,
-              "raw_text": "Deskripsi",
-              "normalized_text": "Deskripsi",
-              "bbox_norm": [
-                0.255556,
-                0.386545,
-                0.32642,
-                0.401871
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 2,
-              "raw_text": "Qty",
-              "normalized_text": "Qty",
-              "bbox_norm": [
-                0.440584,
-                0.386545,
-                0.466824,
-                0.401871
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 3,
-              "raw_text": "Email: Harga",
-              "normalized_text": "Email: Harga",
-              "bbox_norm": [
-                0.524918,
-                0.348106,
-                0.610034,
-                0.401871
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 4,
-              "raw_text": "purchasing@armadalogistik.co.id Disc Pajak PPN",
-              "normalized_text": "purchasing@armadalogistik.co.id Disc Pajak PPN",
-              "bbox_norm": [
-                0.614281,
-                0.348106,
-                0.839507,
-                0.429728
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 5,
-              "raw_text": "Jumlah 10%",
-              "normalized_text": "Jumlah 10%",
-              "bbox_norm": [
-                0.742359,
-                0.386545,
-                0.90811,
-                0.429728
-              ],
-              "legibility": "clear"
-            }
-          ],
+          "headers": [],
           "rows": [
             {
               "row_id": "r1",
@@ -578,7 +505,7 @@
           ],
           "logical_id": null,
           "quality": {
-            "header_found": true,
+            "header_found": false,
             "row_coverage_ok": "3/3",
             "columns": 6
           }

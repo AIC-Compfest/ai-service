@@ -26,8 +26,8 @@
           "role": "line_items",
           "bbox_norm": [
             0.066587,
-            0.197561,
-            0.699949,
+            0.248732,
+            0.69669,
             0.311432
           ],
           "headers": [
@@ -57,12 +57,12 @@
             },
             {
               "column_index": 2,
-              "raw_text": "Supplier: NEW YORK Carrier: White Glove Delivery Unit Price Qty",
-              "normalized_text": "Supplier: NEW YORK Carrier: White Glove Delivery Unit Price Qty",
+              "raw_text": "Unit Price Qty",
+              "normalized_text": "Unit Price Qty",
               "bbox_norm": [
-                0.5,
-                0.197561,
-                0.699949,
+                0.581176,
+                0.248732,
+                0.69669,
                 0.262635
               ],
               "legibility": "clear"

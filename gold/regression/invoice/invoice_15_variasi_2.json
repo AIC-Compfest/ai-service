@@ -25,32 +25,32 @@
           "table_id": "invoice/invoice_15_variasi_2-p1-g1",
           "role": "line_items",
           "bbox_norm": [
-            0.072266,
-            0.353823,
+            0.075195,
+            0.422174,
             0.889648,
             0.565768
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "Semarang Email: No.",
-              "normalized_text": "Semarang Email: No.",
+              "raw_text": "No.",
+              "normalized_text": "No.",
               "bbox_norm": [
-                0.072266,
-                0.353823,
-                0.155091,
+                0.075195,
+                0.422174,
+                0.106345,
                 0.441001
               ],
               "legibility": "clear"
             },
             {
               "column_index": 1,
-              "raw_text": "50241 siti.nurhaliza@email.com Description",
-              "normalized_text": "50241 siti.nurhaliza@email.com Description",
+              "raw_text": "Description",
+              "normalized_text": "Description",
               "bbox_norm": [
-                0.127135,
-                0.353823,
-                0.326936,
+                0.150391,
+                0.422174,
+                0.256758,
                 0.441001
               ],
               "legibility": "clear"

@@ -26,7 +26,7 @@
           "role": "line_items",
           "bbox_norm": [
             0.056863,
-            0.387254,
+            0.433971,
             0.931806,
             0.5623
           ],
@@ -45,23 +45,23 @@
             },
             {
               "column_index": 1,
-              "raw_text": "Pickup Date & 10/06/24 9:00 Type",
-              "normalized_text": "Pickup Date & 10/06/24 9:00 Type",
+              "raw_text": "Type",
+              "normalized_text": "Type",
               "bbox_norm": [
-                0.072814,
-                0.387254,
-                0.168543,
+                0.120275,
+                0.433971,
+                0.152691,
                 0.448749
               ],
               "legibility": "clear"
             },
             {
               "column_index": 2,
-              "raw_text": "Time Pickup # Ref No Delivery Date & Time am 10/06/24 by 3:00 pm Company Name, Address, City, State and Zip Code Pickup/Del.#",
-              "normalized_text": "Time Pickup # Ref No Delivery Date & Time am 10/06/24 by 3:00 pm Company Name, Address, City, State and Zip Code Pickup/Del.#",
+              "raw_text": "Company Name, Address, City, State and Zip Code Pickup/Del.#",
+              "normalized_text": "Company Name, Address, City, State and Zip Code Pickup/Del.#",
               "bbox_norm": [
-                0.170064,
-                0.387254,
+                0.183686,
+                0.433971,
                 0.719225,
                 0.448749
               ],
@@ -69,11 +69,11 @@
             },
             {
               "column_index": 3,
-              "raw_text": "Delivery # Date",
-              "normalized_text": "Delivery # Date",
+              "raw_text": "Date",
+              "normalized_text": "Date",
               "bbox_norm": [
-                0.716305,
-                0.387254,
+                0.763451,
+                0.433971,
                 0.793548,
                 0.448749
               ],
@@ -81,12 +81,12 @@
             },
             {
               "column_index": 4,
-              "raw_text": "Weight 450 Time",
-              "normalized_text": "Weight 450 Time",
+              "raw_text": "Time",
+              "normalized_text": "Time",
               "bbox_norm": [
-                0.861854,
-                0.387254,
-                0.908146,
+                0.863098,
+                0.433971,
+                0.895515,
                 0.448749
               ],
               "legibility": "clear"

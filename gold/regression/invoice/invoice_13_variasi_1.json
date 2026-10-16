@@ -26,60 +26,11 @@
           "role": "line_items",
           "bbox_norm": [
             0.088367,
-            0.383772,
+            0.474758,
             0.898078,
             0.624504
           ],
-          "headers": [
-            {
-              "column_index": 0,
-              "raw_text": "+62-813-9988-7766 (Mobile) E: Keterangan Kertas A3 (BOX)",
-              "normalized_text": "+62-813-9988-7766 (Mobile) E: Keterangan Kertas A3 (BOX)",
-              "bbox_norm": [
-                0.088367,
-                0.383772,
-                0.31264,
-                0.48264
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 1,
-              "raw_text": "ratna@kantorsejahtera.com Harga Unit",
-              "normalized_text": "ratna@kantorsejahtera.com Harga Unit",
-              "bbox_norm": [
-                0.326622,
-                0.383772,
-                0.581262,
-                0.442212
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 2,
-              "raw_text": "Kuantitas",
-              "normalized_text": "Kuantitas",
-              "bbox_norm": [
-                0.663059,
-                0.426455,
-                0.730677,
-                0.442212
-              ],
-              "legibility": "clear"
-            },
-            {
-              "column_index": 3,
-              "raw_text": "Total",
-              "normalized_text": "Total",
-              "bbox_norm": [
-                0.836558,
-                0.426455,
-                0.872614,
-                0.442212
-              ],
-              "legibility": "clear"
-            }
-          ],
+          "headers": [],
           "rows": [
             {
               "row_id": "r1",
@@ -374,7 +325,7 @@
           ],
           "logical_id": null,
           "quality": {
-            "header_found": true,
+            "header_found": false,
             "row_coverage_ok": "3/3",
             "columns": 4
           }

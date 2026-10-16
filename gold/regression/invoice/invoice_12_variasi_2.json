@@ -26,19 +26,19 @@
           "role": "line_items",
           "bbox_norm": [
             0.0875,
-            0.285693,
+            0.301551,
             0.9225,
             0.412739
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "Kelengkapan Invoice (ceklis dokumen yang dilampirkan): Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
-              "normalized_text": "Kelengkapan Invoice (ceklis dokumen yang dilampirkan): Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
+              "raw_text": "Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
+              "normalized_text": "Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
               "bbox_norm": [
-                0.0875,
-                0.285693,
-                0.478946,
+                0.10125,
+                0.301551,
+                0.46787,
                 0.379153
               ],
               "legibility": "clear"

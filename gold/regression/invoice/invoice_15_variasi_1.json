@@ -25,32 +25,32 @@
           "table_id": "invoice/invoice_15_variasi_1-p1-g1",
           "role": "line_items",
           "bbox_norm": [
-            0.072266,
-            0.353823,
+            0.075195,
+            0.422174,
             0.889649,
             0.563518
           ],
           "headers": [
             {
               "column_index": 0,
-              "raw_text": "Bandung Email: No.",
-              "normalized_text": "Bandung Email: No.",
+              "raw_text": "No.",
+              "normalized_text": "No.",
               "bbox_norm": [
-                0.072266,
-                0.353823,
-                0.144139,
+                0.075195,
+                0.422174,
+                0.106345,
                 0.441001
               ],
               "legibility": "clear"
             },
             {
               "column_index": 1,
-              "raw_text": "40135 rizky.pratama@email.com Description",
-              "normalized_text": "40135 rizky.pratama@email.com Description",
+              "raw_text": "Description",
+              "normalized_text": "Description",
               "bbox_norm": [
-                0.127135,
-                0.353823,
-                0.334908,
+                0.150391,
+                0.422174,
+                0.256758,
                 0.441001
               ],
               "legibility": "clear"
