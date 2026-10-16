@@ -438,3 +438,10 @@ Hasilnya muncul sebagai `arithmetic_validation` pada `/v1/extract/pipeline/full`
 ## D-039: Sumber Konfidensi
 **Date:** 2026-10-16
 **Decision:** `ExtractedField.confidence_source` (aditif). `line_items` dan `rate_matrix` dari tabel memakai skor struktural terlemah (maks 0.95); baris teks 0.50; konstanta lain diberi label `heuristic_constant` atau didaftar di CONFIDENCE.md. Konfidensi tabel di evidence kini skor struktural (dulu 0.0 untuk semua tabel).
+
+## D-040: Model PaddleOCR Dapat Diatur, Default Tidak Diubah
+**Date:** 2026-10-16
+**Decision:** `PADDLE_DET_MODEL`, `PADDLE_REC_MODEL`, `PADDLE_DET_LIMIT_SIDE_LEN` ditambahkan; default kosong tetap memakai model server Paddle. Model mobile 3 kali lebih cepat (106 -> 38 detik per halaman, 3 gambar) dengan kesepakatan angka 0.99, tetapi tidak ada gold OCR untuk mengukur akurasi, jadi mengganti default adalah keputusan pemilik. oneDNN tetap mati (galat PIR pada Paddle 3.3.1).
+## D-041: Pipeline Bersama dan Endpoint Sinkron
+**Date:** 2026-10-16
+**Decision:** Satu `Phase5DocumentPipeline` untuk seluruh proses (`runtime.get_pipeline`), endpoint unggah berupa `def` (threadpool FastAPI), predictor Paddle diserialisasi dengan kunci. Batas unggah ditegakkan (413). PNG halaman dihapus setelah `PAGE_RETENTION_HOURS` (default 24). Dependensi runtime dipin ke versi yang diuji; Paddle terpisah.

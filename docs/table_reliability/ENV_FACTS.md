@@ -31,4 +31,4 @@ Dikumpulkan di Fase 0 (2026-10-16) lewat perintah, bukan tebakan. Tag: `[diuji]`
 
 ## Catatan Paddle
 
-Versi di atas adalah yang dipakai D-023. Status inferensi PNG nyata: lihat `REPORT_FASE_6.md`.
+Versi di atas adalah yang dipakai D-023. Status inferensi PNG nyata: 52 dari 52 PNG dataset berhasil di venv ini (model mobile, mkldnn mati), tanpa crash; rinci di `REPORT_FASE_6.md`.
