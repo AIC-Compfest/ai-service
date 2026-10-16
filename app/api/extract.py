@@ -20,6 +20,7 @@ from app.schemas.extraction import ExtractionResponse
 from app.services.extraction.ml.service import promote_ml_fields, run_ml_extraction
 from app.services.extraction.registry import get_extractor
 from app.services.pipeline import Phase5DocumentPipeline
+from app.services.validation.document import validate_extraction
 
 router = APIRouter(prefix="/v1/extract", tags=["extraction"])
 logger = get_logger(__name__)
@@ -113,6 +114,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
     main_type = doc_type if doc_type != DocumentType.UNKNOWN else first_type
     ml_extraction = run_ml_extraction(document_id, main_type.value, evidence)
     fields = promote_ml_fields(fields, ml_extraction, document_id)
+    arithmetic_validation = validate_extraction(fields, evidence.get("pages", []))
 
     # Multi-document extraction across logical segments (ARCHITECTURE ROOT CAUSE A FIX)
     segments = evidence.get("segments", [])
@@ -135,6 +137,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
                 s_fields = s_extractor.extract(document_id, s_evidence)
                 s_ml = run_ml_extraction(document_id, seg_type_str, s_evidence)
                 s_fields = promote_ml_fields(s_fields, s_ml, document_id)
+                s_arithmetic = validate_extraction(s_fields, s_evidence["pages"])
                 segment_extractions.append({
                     "segment_number": seg.get("segment_number"),
                     "document_type": seg_type_str,
@@ -144,6 +147,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
                     "classification_confidence": seg.get("classification_confidence", 1.0),
                     "extracted_fields": [f.model_dump() for f in s_fields],
                     "ml_extraction": s_ml,
+                    "arithmetic_validation": s_arithmetic,
                 })
             except Exception as e:
                 logger.warning(
@@ -206,6 +210,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
         ],
         "extracted_fields": [f.model_dump() for f in fields],
         "ml_extraction": ml_extraction,
+        "arithmetic_validation": arithmetic_validation,
         "table_groups": evidence.get("table_groups", []),
         "logical_extractions": logical_extractions,
         "extraction_attempted": True,

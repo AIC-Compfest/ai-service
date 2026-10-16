@@ -74,6 +74,9 @@ class Settings(BaseSettings):
     # False = tidak menjalankan validasi aritmetika (perilaku lama)
     # True  = jalankan validasi dan turunkan confidence berdasarkan hasil
     enable_arithmetic_validation: bool = False
+    # Additive "arithmetic_validation" evidence on /v1/extract/pipeline/full (row rules + subtotal/grand total). Never
+    # changes an extracted value. The router blend above (structural score) stays off until measured.
+    enable_arithmetic_evidence: bool = True
 
     # Toleransi relatif untuk cek qty * rate ≈ line_total  (1% default)
     arith_row_tolerance_relative: float = 0.01

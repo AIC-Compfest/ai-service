@@ -47,3 +47,5 @@ class ExtractedField(BaseModel):
     source: EvidenceSource
     method: ExtractionMethod
     is_unknown: bool = False  # true jika evidence tidak cukup (INSUFFICIENT_EVIDENCE)
+    # Where confidence comes from (additive; see docs/table_reliability/CONFIDENCE.md). None = not labelled yet.
+    confidence_source: str | None = None

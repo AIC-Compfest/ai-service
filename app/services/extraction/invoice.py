@@ -25,6 +25,7 @@ from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import EvidenceSource, ExtractedField, ExtractionMethod
 from app.services.extraction.base import BaseExtractor
+from app.services.extraction.confidence import HEURISTIC_CONSTANT, table_derived_confidence
 from app.services.extraction.utils import (
     _bbox_norm_to_model,
     _midpoint_y,
@@ -194,11 +195,11 @@ class InvoiceExtractor(BaseExtractor):
         vendor_conf = 0.90 if vendor_name else 0.0
         vendor_bbox = header_lines[0].get("bbox_norm") if header_lines else None
         fields.append(build_field(
-            field="vendor_name", value=vendor_name, confidence=vendor_conf,
+            field="vendor_name", value=vendor_name, confidence=vendor_conf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=vendor_bbox, document_id=document_id, page=page_num,
         ))
         fields.append(build_field(
-            field="vendor_id", value=vendor_id, confidence=vendor_conf,
+            field="vendor_id", value=vendor_id, confidence=vendor_conf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=vendor_bbox, document_id=document_id, page=page_num,
         ))
 
@@ -297,10 +298,12 @@ class InvoiceExtractor(BaseExtractor):
         # 11. Line items from table (PRD §13 — line_items[])
         # ----------------------------------------------------------------
         line_items = self._extract_line_items(all_tables, all_lines, document_id, page_num)
+        items_conf, items_source = table_derived_confidence(all_tables, bool(line_items))
         fields.append(build_field(
             field="line_items",
             value=line_items if line_items else None,
-            confidence=0.90 if line_items else 0.0,
+            confidence=items_conf,
+            confidence_source=items_source,
             bbox_norm=all_tables[0].get("bbox_norm") if all_tables else None,
             document_id=document_id,
             page=page_num,

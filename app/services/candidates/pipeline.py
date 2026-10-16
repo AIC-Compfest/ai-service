@@ -425,7 +425,7 @@ def table_evidence(table) -> dict[str, Any]:
         "table_id": table.table_id,
         "bbox_norm": list(table.bbox), "headers": [column.header_text for column in table.columns],
         "rows": [[cell.text for cell in row.cells] for row in table.rows],
-        "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.conf,
+        "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.structural_score or table.conf, "confidence_source": "structural_score" if table.structural_score else "unscored",
         "provider": table.source, "reason": table.reason, "validation": table.validation,
         "columns": [{"idx": column.idx, "bbox_norm": [column.x1, 0.0, column.x2, 1.0], "header": column.header_text} for column in table.columns],
         "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],

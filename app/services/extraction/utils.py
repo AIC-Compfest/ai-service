@@ -523,6 +523,7 @@ def build_field(
     document_id: str,
     page: int,
     method: ExtractionMethod = ExtractionMethod.OCR,
+    confidence_source: str | None = None,
 ) -> ExtractedField:
     """
     Build an ExtractedField with full EvidenceSource (PRD §18).
@@ -543,4 +544,5 @@ def build_field(
         ),
         method=method,
         is_unknown=is_unknown,
+        confidence_source=None if is_unknown else confidence_source,
     )

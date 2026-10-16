@@ -14,7 +14,6 @@ from .token_grid import TokenGridTableProvider
 from .pymupdf_provider import PyMuPDFTableProvider
 from .rows import summary_pattern
 from .scoring import arbitrate, classify_role, table_quality
-from app.services.validation.arithmetic import validate_table
 
 
 class TableProvider(Protocol):
@@ -70,6 +69,8 @@ class TableExtractor:
                 table.reason = table.reason or "structural_score"
                 table.validation.setdefault("structural", {"score": round(table.structural_score, 6)})
                 if arithmetic_validation:
+                    from app.services.validation.arithmetic import validate_table  # lazy: validation imports the candidates package
+
                     validation = validate_table(table, relative_tolerance=relative_tolerance, absolute_tolerance=absolute_tolerance)
                     table.validation["arithmetic"] = _json_validation(validation)
                     if validation["available"]:

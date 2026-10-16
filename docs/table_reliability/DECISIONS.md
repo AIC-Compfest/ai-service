@@ -428,3 +428,13 @@ Output is additive (`ml_extraction`, per segment and top-level). Rule-based extr
 Failures never break the response. Settings: `ENABLE_ML_EXTRACTION` (true), `ML_MODEL_SET_DIR` (`models/pod_phase2`).
 **Honest status:** the only bundle is `POD.pihak_pertama_nama` (bundle metrics accepted 0, precision 0). A retraining try for the POD registry fields on `data/pod_phase2` (output kept only in the terminal tail, so only the last 9 fields were read): every field read had `accepted = 0` except `tanggal` (4 accepted, precision 0.0); two fields were skipped for a single positive sample. The models were discarded.
 Labels exist only for POD (34 documents, LLM draft). ML field names (`pihak_pertama_nama`) differ from rule field names (`receiver_name`), so promotion cannot fire today. The path is exercised and measured, not yet useful.
+
+## D-038: Aritmetika Deterministik Sebagai Bukti Aditif, Bukan Pengubah Nilai
+**Date:** 2026-10-16
+**Decision:** Aturan di `config/validation/arithmetic.yaml` (qty x rate, weight x rate, qty x rate = gross, gross - discount = net, subtotal = jumlah total baris, grand total = subtotal + pajak - PPh). Toleransi mutlak per mata uang (IDR 1, USD 0.01), tanpa toleransi relatif (K3). `suggested_value` hanya bila selisih satu karakter. Aturan produk dilewati bila ada kolom diskon/pajak. Kolom persen tidak pernah mengambil peran uang.
+Hasilnya muncul sebagai `arithmetic_validation` pada `/v1/extract/pipeline/full` (`ENABLE_ARITHMETIC_EVIDENCE`, default true). Nilai ekstraksi dan konfidensi tidak diubah.
+`ENABLE_ARITHMETIC_VALIDATION` (campuran skor pada pemilihan tabel di router) tetap `false`: diukur pada dev+val, hasil identik dengan flag mati (F1 0.641, header 41/56, baris 49/58), jadi tidak ada alasan menyalakannya.
+**Batas:** grand total yang diturunkan extractor dari subtotal dan pajak (OS-008) membuat pengecekannya sirkular; diskon dan PPh tingkat dokumen tidak dimodelkan.
+## D-039: Sumber Konfidensi
+**Date:** 2026-10-16
+**Decision:** `ExtractedField.confidence_source` (aditif). `line_items` dan `rate_matrix` dari tabel memakai skor struktural terlemah (maks 0.95); baris teks 0.50; konstanta lain diberi label `heuristic_constant` atau didaftar di CONFIDENCE.md. Konfidensi tabel di evidence kini skor struktural (dulu 0.0 untuk semua tabel).

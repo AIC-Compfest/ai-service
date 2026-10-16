@@ -24,6 +24,7 @@ from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import ExtractedField
 from app.services.extraction.base import BaseExtractor
+from app.services.extraction.confidence import HEURISTIC_CONSTANT, table_derived_confidence
 from app.services.extraction.utils import (
     build_field,
     extract_regex_with_bbox,
@@ -163,12 +164,12 @@ class RateAgreementExtractor(BaseExtractor):
         vendor_name, vendor_id = self._extract_vendor_info(header_lines, all_lines)
         vconf = 0.88 if vendor_name else 0.0
         fields.append(build_field(
-            field="vendor_name", value=vendor_name, confidence=vconf,
+            field="vendor_name", value=vendor_name, confidence=vconf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=header_lines[0].get("bbox_norm") if header_lines else None,
             document_id=document_id, page=page_num,
         ))
         fields.append(build_field(
-            field="vendor_id", value=vendor_id, confidence=vconf,
+            field="vendor_id", value=vendor_id, confidence=vconf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=None, document_id=document_id, page=page_num,
         ))
 
@@ -247,7 +248,8 @@ class RateAgreementExtractor(BaseExtractor):
         fields.append(build_field(
             field="rate_matrix",
             value=rate_matrix if rate_matrix else None,
-            confidence=0.90 if rate_matrix else 0.0,
+            confidence=table_derived_confidence(all_tables, bool(rate_matrix))[0],
+            confidence_source=table_derived_confidence(all_tables, bool(rate_matrix))[1],
             bbox_norm=all_tables[0].get("bbox_norm") if all_tables else None,
             document_id=document_id,
             page=page_num,
@@ -261,6 +263,7 @@ class RateAgreementExtractor(BaseExtractor):
             field="surcharge_rules",
             value=surcharges if surcharges else None,
             confidence=0.88 if surcharges else 0.0,
+            confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=None,
             document_id=document_id,
             page=page_num,
