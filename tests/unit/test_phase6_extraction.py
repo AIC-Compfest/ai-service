@@ -559,8 +559,9 @@ class TestPhase6Integration(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.root_dir = Path(__file__).resolve().parent.parent.parent.parent
-        cls.dataset_dir = cls.root_dir / "synthetic-data" / "dataset" / "v4_pilot_20"
+        from tests.support.paths import SYNTHETIC_DATA_ROOT
+
+        cls.dataset_dir = SYNTHETIC_DATA_ROOT / "dataset" / "v4_pilot_20"
         cls.skip = not cls.dataset_dir.exists()
 
     def _run_pipeline(self, file_path: Path) -> dict:

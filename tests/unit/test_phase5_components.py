@@ -18,21 +18,28 @@ from app.services.ocr.engine import OCREngine
 from app.services.signature.detector import SignatureDetector
 from app.services.pipeline import Phase5DocumentPipeline
 from app.schemas.document_type import DocumentType
+from tests.support.paths import SYNTHETIC_DATA_ROOT, require
 
 
 class TestPhase5Components(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # Locate synthetic dataset sample files
-        cls.root_dir = Path(__file__).resolve().parent.parent.parent.parent
-        cls.dataset_dir = cls.root_dir / "synthetic-data" / "dataset" / "v4_pilot_20"
+        # Locate synthetic dataset sample files (external to this repository; skip when absent)
+        cls.dataset_dir = SYNTHETIC_DATA_ROOT / "dataset" / "v4_pilot_20"
         if not cls.dataset_dir.exists():
-            cls.dataset_dir = cls.root_dir / "synthetic-data" / "dataset" / "v3_pilot_20"
+            cls.dataset_dir = SYNTHETIC_DATA_ROOT / "dataset" / "v3_pilot_20"
+        require(cls.dataset_dir, "synthetic-data/dataset/v4_pilot_20")
 
-        cls.sample_invoice = sorted(cls.dataset_dir.glob("invoices/*.pdf"))[0]
-        cls.sample_sj = sorted(cls.dataset_dir.glob("transactions/*/surat_jalan.pdf"))[0]
-        cls.sample_pod = sorted(cls.dataset_dir.glob("transactions/*/pod.jpg"))[0]
-        cls.sample_ra = sorted(cls.dataset_dir.glob("transactions/*/rate_agreement.pdf"))[0]
+        def first(pattern: str) -> Path:
+            matches = sorted(cls.dataset_dir.glob(pattern))
+            if not matches:
+                raise unittest.SkipTest(f"No fixture matching {pattern} in {cls.dataset_dir.name}")
+            return matches[0]
+
+        cls.sample_invoice = first("invoices/*.pdf")
+        cls.sample_sj = first("transactions/*/surat_jalan.pdf")
+        cls.sample_pod = first("transactions/*/pod.jpg")
+        cls.sample_ra = first("transactions/*/rate_agreement.pdf")
 
     def test_document_ingestion_pdf(self):
         ingested = DocumentIngestionService.ingest_file(self.sample_invoice)
@@ -46,7 +53,10 @@ class TestPhase5Components(unittest.TestCase):
 
     def test_document_ingestion_jpg(self):
         ingested = DocumentIngestionService.ingest_file(self.sample_pod)
-        self.assertEqual(ingested.mime_type, "image/jpeg")
+        # The source is a JPEG, but ingestion deliberately re-encodes every non-PDF image to the
+        # canonical PNG (document_ingestion.py), so the evidence reports the canonical type.
+        self.assertEqual(self.sample_pod.suffix.lower(), ".jpg")
+        self.assertEqual(ingested.mime_type, "image/png")
         self.assertEqual(len(ingested.pages), 1)
         self.assertFalse(ingested.pages[0].is_pdf_page)
 
