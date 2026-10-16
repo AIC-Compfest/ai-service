@@ -41,18 +41,24 @@ def _full_page_text_grid() -> pymupdf.Page:
 
 
 def test_page_wide_text_table_is_rejected_by_configured_ratio():
-    """Unrestricted, the 'text' strategy returns the whole page as one table (F7); the configured ratio removes it."""
+    """Unrestricted, the 'text' strategy returns the whole page as one table (F7); the ratio removes it even if 'text' is enabled."""
     page = build_page({"page_number": 1, "lines": [], "_source_page": _full_page_text_grid()})
     unrestricted = PyMuPDFTableProvider().tables(page, None, "d")
     assert unrestricted and max(area(t.bbox) for t in unrestricted) > 0.5  # the failure being fixed
+    assert PyMuPDFTableProvider({"strategies": ["lines", "text"], "max_page_area_ratio": 0.5}).tables(page, None, "d") == []
     assert _configured_provider().tables(page, None, "d") == []
 
 
-def test_text_strategy_is_used_when_lines_find_nothing():
-    tables = _tables(_configured_provider(), "single_unruled")
-    assert len(tables) == 1
-    assert area(tables[0].bbox) < 0.5
-    assert len(tables[0].rows) == 6
+def test_production_config_uses_lines_only_and_leaves_unruled_tables_to_token_geometry():
+    assert _configured_provider().options["strategies"] == ["lines"]
+    assert _tables(_configured_provider(), "single_unruled") == []
+
+
+def test_text_strategy_is_still_available_when_configured():
+    provider = PyMuPDFTableProvider({"strategies": ["lines", "text"], "max_page_area_ratio": 0.5})
+    tables = _tables(provider, "single_unruled")
+    assert len(tables) == 1 and area(tables[0].bbox) < 0.5 and len(tables[0].rows) == 6
+    assert tables[0].reason == "pymupdf_find_tables:text"
 
 
 def test_ruled_table_uses_lines_strategy():

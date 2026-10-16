@@ -8,7 +8,9 @@ token_grid:
   header_max_rows: 2
 pymupdf:
   # Strategies are tried in order; the first strategy that yields an ACCEPTED table wins (merge_strategies: false).
-  strategies: [lines, text]
+  # 'text' is NOT used in production: it costs 1-5 s per dense page and, with token-geometry discovery arbitrated per
+  # table, it adds no tables on dev+val (router F1 0.586 with it, 0.589 without; measured Fase 3).
+  strategies: [lines]
   merge_strategies: false
   # Reject page-wide tables (F7). Origin: on dev+val structural gold the largest table covers 0.298 of the page
   # (p90 0.22); 0.5 keeps >1.6x margin. Chosen on dev, confirmed on val (scripts/experiments/pymupdf_variants.py).
