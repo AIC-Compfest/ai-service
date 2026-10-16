@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import re
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import EvidenceSource, ExtractedField, ExtractionMethod
 from app.services.extraction.base import BaseExtractor
@@ -35,6 +36,7 @@ from app.services.extraction.utils import (
     parse_amount,
     parse_date_string,
     parse_table_columns,
+    to_unit_bbox,
 )
 
 logger = get_logger(__name__)
@@ -186,7 +188,7 @@ class InvoiceExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 3. Vendor name & vendor_id from header region (first ~15 lines)
         # ----------------------------------------------------------------
-        header_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] < 150]
+        header_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] < settings.invoice_header_max_y]
         vendor_name, vendor_id = self._extract_vendor_info(header_lines, all_lines)
         vendor_conf = 0.90 if vendor_name else 0.0
         vendor_bbox = header_lines[0].get("bbox_norm") if header_lines else None
@@ -247,7 +249,7 @@ class InvoiceExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 8. Subtotal
         # ----------------------------------------------------------------
-        summary_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] > 250] or all_lines
+        summary_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] > settings.invoice_summary_min_y] or all_lines
         subtotal, conf, bbox = find_amount_near_keyword(summary_lines, self._SUBTOTAL_KEYS)
         if not subtotal:
             subtotal, conf, bbox = find_amount_near_keyword(all_lines, self._SUBTOTAL_KEYS)
@@ -336,7 +338,7 @@ class InvoiceExtractor(BaseExtractor):
                 break
 
             # Heuristic: lines with "PT " prefix are likely vendor names
-            if re.match(r"^PT\s+", text, re.IGNORECASE) and vendor_name is None:
+            if re.match(r"^PT\.?\s+", text, re.IGNORECASE) and vendor_name is None:
                 vendor_name = text.strip()
 
         # Pass 2: check all lines for 3PL-xxx vendor ID pattern
@@ -443,7 +445,7 @@ class InvoiceExtractor(BaseExtractor):
             return items
 
         # Fallback: scan lines in table area for AWB / SHP items
-        table_lines = [l for l in lines if 200 <= l.get("bbox_norm", [0, 0, 0, 0])[1] <= 700]
+        table_lines = [l for l in lines if settings.invoice_table_min_y <= to_unit_bbox(l.get("bbox_norm"))[1] <= settings.invoice_table_max_y]
         awb_lines = [l for l in table_lines if re.search(r"\bAWB[-/ ]?\d{7,10}\b", l.get("text", ""), re.IGNORECASE)]
 
         if awb_lines:
@@ -453,9 +455,9 @@ class InvoiceExtractor(BaseExtractor):
                 awb_match = re.search(r"\b(AWB[-/ ]?\d{7,10})\b", atext, re.IGNORECASE)
                 awb_val = awb_match.group(1).strip() if awb_match else None
 
-                ay = _midpoint_y(aline.get("bbox_norm", [0, 0, 0, 0]))
-                # Find lines on the same row (within +-25px Y)
-                row_lines = [l for l in table_lines if abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - ay) <= 25.0]
+                ay = _midpoint_y(to_unit_bbox(aline.get("bbox_norm")))
+                # Lines on the same row (within the configured fraction of the page height)
+                row_lines = [l for l in table_lines if abs(_midpoint_y(to_unit_bbox(l.get("bbox_norm"))) - ay) <= settings.invoice_row_y_tolerance]
                 row_text = " ".join(l.get("text", "") for l in row_lines)
 
                 shp_match = re.search(r"\b(SHP[-/]?\d{4,}[-\w]*)\b", row_text, re.IGNORECASE)

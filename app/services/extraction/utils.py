@@ -54,6 +54,18 @@ def find_token_bbox_for_value(line: dict, value_substr: str) -> list[float] | No
     return line.get("bbox_norm")
 
 
+def to_unit_bbox(bbox) -> list[float]:
+    """Return ``bbox`` on the canonical 0..1 scale.
+
+    Production evidence is already 0..1; legacy fixtures use 0..1000 and are detected the same way as
+    ``_bbox_norm_to_model`` does (any coordinate above 1.0).
+    """
+    if not bbox or len(bbox) < 4:
+        return [0.0, 0.0, 0.0, 0.0]
+    scale = 1000.0 if max(bbox) > 1.0 else 1.0
+    return [float(value) / scale for value in bbox[:4]]
+
+
 def _midpoint_y(bbox_norm: list[float]) -> float:
     return (bbox_norm[1] + bbox_norm[3]) / 2.0
 

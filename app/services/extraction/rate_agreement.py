@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import re
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import ExtractedField
 from app.services.extraction.base import BaseExtractor
@@ -33,6 +34,7 @@ from app.services.extraction.utils import (
     parse_date_string,
     parse_integer,
     parse_table_columns,
+    to_unit_bbox,
 )
 
 logger = get_logger(__name__)
@@ -156,7 +158,7 @@ class RateAgreementExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 2. Vendor Name & Vendor ID
         # ----------------------------------------------------------------
-        header_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] < 200]
+        header_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] < settings.rate_agreement_header_max_y]
         vendor_name, vendor_id = self._extract_vendor_info(header_lines, all_lines)
         vconf = 0.88 if vendor_name else 0.0
         fields.append(build_field(

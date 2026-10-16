@@ -77,6 +77,15 @@ class Settings(BaseSettings):
     paddle_enable_mkldnn: bool = False
     paddle_cpu_threads: int = 8
 
+    # Layout zones for extractors, as FRACTIONS of the page (bbox_norm is 0..1). Legacy 0..1000 fixtures are
+    # converted by ``to_unit_bbox`` before comparing. These replace pixel-like literals (T-13).
+    invoice_header_max_y: float = 0.15  # vendor name is searched above this y
+    invoice_summary_min_y: float = 0.25  # subtotal/tax/total keywords are searched below this y first
+    invoice_table_min_y: float = 0.20  # AWB fallback scans the table band between these y values
+    invoice_table_max_y: float = 0.70
+    invoice_row_y_tolerance: float = 0.025  # lines within this vertical distance belong to the same row
+    rate_agreement_header_max_y: float = 0.20
+
     # Langkah 7: Preprocessing untuk scan/foto
     # False = tidak ada preprocessing tambahan (perilaku lama)
     # True  = aktifkan deskew, perspective correction, adaptive upscale
