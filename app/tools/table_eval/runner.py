@@ -4,7 +4,7 @@ Configurations:
   token_grid_none / token_grid_typed   TokenGridTableProvider, doc_type None / known
   pymupdf                              PyMuPDFTableProvider
   router_none / router_typed           TableExtractor over the configured provider order
-  api_flag_off / api_flag_on           full Phase5DocumentPipeline with ENABLE_TABLE_EXTRACTOR off / on
+  api_flag_off / api_flag_on           full Phase5DocumentPipeline with ENABLE_TABLE_EXTRACTOR off / on`n  api_raster_clean / api_raster_degraded  the same pipeline on a RASTER TWIN of the PDF (page 1 rendered at 200 DPI, PNG;`n                                       degraded = blur + noise + JPEG q55 + 0.4 deg rotation, seeded). Needs PaddleOCR.
                                        (what the HTTP API actually returns in ``pages[].tables``)
 """
 from __future__ import annotations
@@ -17,7 +17,7 @@ import yaml
 
 from app.core.config import settings
 
-CONFIGS = ("token_grid_none", "token_grid_typed", "pymupdf", "router_none", "router_typed", "api_flag_off", "api_flag_on")
+CONFIGS = ("token_grid_none", "token_grid_typed", "pymupdf", "router_none", "router_typed", "api_flag_off", "api_flag_on", "api_raster_clean", "api_raster_degraded")
 AI_ROOT = Path(__file__).resolve().parents[3]
 CONFIG_DIR = AI_ROOT / "config" / "candidates"
 
@@ -60,6 +60,9 @@ def predict_pdf(pdf_path: Path, config: str, doc_type: str | None, document_id: 
     from app.services.ocr.engine import OCREngine
     from app.services.preprocessing.image_preprocessor import ImagePreprocessor
 
+    if config.startswith("api_raster"):
+        return predict_raster_twin(pdf_path, config, document_id)
+
     if config.startswith("api_"):
         from app.services.pipeline import Phase5DocumentPipeline
 
@@ -96,3 +99,36 @@ def predict_fixture(pdf_bytes: bytes, config: str, mode: str, document_id: str, 
         evidence["_source_page"] = page if mode == "vector" else None
         pages.append({"page_number": number, "tables": tables_for_page(config, build_page(evidence), None, document_id)})
     return {"document_id": document_id, "config": config, "mode": mode, "pages": pages}
+
+
+def raster_twin_png(pdf_path: Path, degraded: bool, seed: int = 0) -> bytes:
+    """Page 1 of ``pdf_path`` as a 200 DPI PNG; ``degraded`` simulates a scan/photo (deterministic for a given seed)."""
+    import cv2
+    import numpy as np
+
+    page = pymupdf.open(pdf_path)[0]
+    image = cv2.imdecode(np.frombuffer(page.get_pixmap(dpi=200, alpha=False).tobytes("png"), np.uint8), 1)
+    if degraded:
+        rng = np.random.default_rng(seed)
+        image = cv2.GaussianBlur(image, (0, 0), 0.8)
+        image = np.clip(image.astype(np.float32) + rng.normal(0, 6, image.shape), 0, 255).astype(np.uint8)
+        height, width = image.shape[:2]
+        matrix = cv2.getRotationMatrix2D((width / 2, height / 2), 0.4, 1.0)
+        image = cv2.warpAffine(image, matrix, (width, height), borderValue=(255, 255, 255))
+        image = cv2.imdecode(cv2.imencode(".jpg", image, [cv2.IMWRITE_JPEG_QUALITY, 55])[1], 1)
+    return cv2.imencode(".png", image)[1].tobytes()
+
+
+def predict_raster_twin(pdf_path: Path, config: str, document_id: str) -> dict:
+    """Run the full pipeline on the raster twin. Only page 1 exists in the twin, so use single-page documents."""
+    from app.services.pipeline import Phase5DocumentPipeline
+
+    png = raster_twin_png(pdf_path, config.endswith("degraded"))
+    previous = settings.enable_table_extractor
+    settings.enable_table_extractor = True
+    try:
+        pipeline = _cache.setdefault("pipeline", Phase5DocumentPipeline())
+        evidence = pipeline.process_document(png, filename="twin.png", document_id=f"pred_{config}_{document_id.replace('/', '_')}")
+    finally:
+        settings.enable_table_extractor = previous
+    return {"document_id": document_id, "config": config, "pages": [{"page_number": p["page_number"], "tables": p.get("tables", []), "engine": p.get("engine_used")} for p in evidence["pages"]]}

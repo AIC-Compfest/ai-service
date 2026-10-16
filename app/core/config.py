@@ -31,10 +31,12 @@ class Settings(BaseSettings):
     # keputusan akhir threshold tetap di backend-api (configs/thresholds.yaml).
     default_classification_confidence_floor: float = 0.0
 
-    ocr_engine: str = "pp-ocr-v6"  # placeholder, diaktifkan Fase 4
-    ocr_fallback_engine: str = "paddleocr-vl-1.6"
 
     max_upload_size_mb: int = 25
+    # Canonical page PNGs written per request (evidence page_image.path points here; relative to the working directory).
+    page_output_dir: Path = Path("out/pages")
+    # Folders older than this are deleted (0 = never). The service is stateless; the PNGs are a cache for viewers.
+    page_retention_hours: int = 24
 
     # -------------------------------------------------------------------------
     # Feature Flags — feat/table-reliability
@@ -84,10 +86,14 @@ class Settings(BaseSettings):
     arith_row_tolerance_absolute_idr: float = 1.0
 
     # Langkah 6: PaddleOCR is the only raster OCR backend.
-    ocr_backend: str = "paddleocr"
     paddle_language: str = "en"
     paddle_enable_mkldnn: bool = False
     paddle_cpu_threads: int = 8
+    # Empty = PaddleOCR defaults (PP-OCRv5 SERVER models: ~70 s per page on a 6-core CPU without oneDNN, measured Fase 6).
+    # Set e.g. PADDLE_DET_MODEL=PP-OCRv5_mobile_det and PADDLE_REC_MODEL=en_PP-OCRv5_mobile_rec for the mobile models.
+    paddle_det_model: str = ""
+    paddle_rec_model: str = ""
+    paddle_det_limit_side_len: int = 0  # 0 = PaddleOCR default; >0 limits the longest side (limit type "max")
 
     # Candidate generation + LightGBM scoring on the extraction path (additive, see extraction/ml/service.py).
     # Rule-based extractors stay primary; an ML value only replaces a rule field that is unknown AND has the same name,

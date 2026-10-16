@@ -33,6 +33,9 @@ def main() -> int:
     parser.add_argument("--splits", default="dev,val,holdout", help="Comma list; use 'holdout' only for the end-of-phase run")
     parser.add_argument("--constructed", choices=("vector", "phrase"), default=None)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--limit", type=int, default=0, help="stop after N documents (0 = all)")
+    parser.add_argument("--max-pages", type=int, default=0, help="only documents with at most N pages (0 = any)")
+    parser.add_argument("--types", default="", help="comma list of doc types, e.g. INVOICE,POD (empty = all)")
     args = parser.parse_args()
 
     started = time.time()
@@ -46,6 +49,10 @@ def main() -> int:
         for entry in read_json(args.manifest)["entries"]:
             if not entry["has_gt"] or entry["source_kind"] != "pdf" or entry["split"] not in wanted:
                 continue
+            if (args.max_pages and entry["pages"] > args.max_pages) or (args.types and entry["doc_type"] not in args.types.split(",")):
+                continue
+            if args.limit and count >= args.limit:
+                break
             write_json(args.out / f"{entry['id']}.json", predict_pdf(args.dataset_root / entry["path"], args.config, entry["doc_type"], entry["id"]))
             count += 1
     print(f"{args.config}: {count} document(s) -> {args.out} in {time.time() - started:.1f}s")

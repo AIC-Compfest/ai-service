@@ -11,6 +11,7 @@ Architecture:
 
 from __future__ import annotations
 import os
+import threading
 import re
 from pathlib import Path
 from typing import Any
@@ -186,6 +187,8 @@ def to_evidence_json(pages: list[PageOCREvidence]) -> dict[str, list[dict[str, A
 
 
 _GLOBAL_PADDLE_OCR = None
+# Paddle predictors are not thread-safe and initialisation is slow: serialise both (the API may call from a thread pool).
+_PADDLE_LOCK = threading.RLock()
 
 class OCREngine:
     """Cascaded OCR and Layout Understanding Engine."""
@@ -199,14 +202,24 @@ class OCREngine:
         """Lazily initialize the sole raster OCR backend."""
         global _GLOBAL_PADDLE_OCR
         if _GLOBAL_PADDLE_OCR is None:
-            try:
-                os.environ.setdefault("PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK", "True")
-                from paddleocr import PaddleOCR
-                logger.info("initializing_paddleocr", language=settings.paddle_language, mkldnn=settings.paddle_enable_mkldnn)
-                _GLOBAL_PADDLE_OCR = PaddleOCR(lang=settings.paddle_language, use_doc_orientation_classify=False, use_doc_unwarping=False, use_textline_orientation=False, enable_mkldnn=settings.paddle_enable_mkldnn, cpu_threads=settings.paddle_cpu_threads)
-            except Exception as e:
-                logger.error("paddleocr_init_failed", error=str(e))
-                raise RuntimeError("PaddleOCR initialization failed") from e
+            with _PADDLE_LOCK:
+                if _GLOBAL_PADDLE_OCR is not None:
+                    return _GLOBAL_PADDLE_OCR
+                try:
+                    os.environ.setdefault("PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK", "True")
+                    from paddleocr import PaddleOCR
+                    logger.info("initializing_paddleocr", language=settings.paddle_language, mkldnn=settings.paddle_enable_mkldnn)
+                    options: dict[str, Any] = {"lang": settings.paddle_language, "use_doc_orientation_classify": False, "use_doc_unwarping": False, "use_textline_orientation": False, "enable_mkldnn": settings.paddle_enable_mkldnn, "cpu_threads": settings.paddle_cpu_threads}
+                    if settings.paddle_det_model:
+                        options["text_detection_model_name"] = settings.paddle_det_model
+                    if settings.paddle_rec_model:
+                        options["text_recognition_model_name"] = settings.paddle_rec_model
+                    if settings.paddle_det_limit_side_len > 0:
+                        options.update(text_det_limit_type="max", text_det_limit_side_len=settings.paddle_det_limit_side_len)
+                    _GLOBAL_PADDLE_OCR = PaddleOCR(**options)
+                except Exception as e:
+                    logger.error("paddleocr_init_failed", error=str(e))
+                    raise RuntimeError("PaddleOCR initialization failed") from e
         return _GLOBAL_PADDLE_OCR
 
     def _estimate_vector_token_confidence(self, token_text: str) -> float:
@@ -281,7 +294,9 @@ class OCREngine:
             ocr_input = cv2.resize(cv_img, (int(width * scale), int(height * scale)), interpolation=cv2.INTER_AREA)
 
         lines: list[OCRLine] = []
-        for result in self.paddle_ocr.predict(ocr_input):
+        with _PADDLE_LOCK:
+            results = list(self.paddle_ocr.predict(ocr_input))
+        for result in results:
             payload = _paddle_payload(result)
             for text, probability, box in zip(payload.get("rec_texts", []), payload.get("rec_scores", []), payload.get("rec_boxes", [])):
                 if not text.strip() or len(box) != 4:
