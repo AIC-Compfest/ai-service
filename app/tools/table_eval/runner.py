@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 import pymupdf
+import yaml
 
 from app.core.config import settings
 
@@ -28,7 +29,7 @@ def _providers():
 
     if "grid" not in _cache:
         _cache["grid"] = TokenGridTableProvider(CONFIG_DIR / "line_item_aliases.yaml", CONFIG_DIR / "abbreviations.yaml")
-        _cache["mupdf"] = PyMuPDFTableProvider()
+        _cache["mupdf"] = PyMuPDFTableProvider(yaml.safe_load((CONFIG_DIR / "table_resolution.yaml").read_text(encoding="utf-8")).get("pymupdf"))
         _cache["router"] = TableExtractor.from_config(CONFIG_DIR, settings.table_provider_order)
     return _cache
 

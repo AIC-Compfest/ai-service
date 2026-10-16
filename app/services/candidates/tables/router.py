@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
+from pathlib import Path
 from typing import Protocol
+
+import yaml
 
 from ..schema import Page, Table
 from .token_grid import TokenGridTableProvider
@@ -27,10 +30,12 @@ class TableExtractor:
 
     @classmethod
     def from_config(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
+        config_dir = Path(config_dir)
         provider = TokenGridTableProvider(config_dir / "line_item_aliases.yaml", config_dir / "abbreviations.yaml")
+        resolution = yaml.safe_load((config_dir / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
-        return cls([PyMuPDFTableProvider(), provider]).ordered(provider_order)
+        return cls([PyMuPDFTableProvider(resolution.get("pymupdf")), provider]).ordered(provider_order)
 
     def ordered(self, provider_order: Iterable[str]) -> "TableExtractor":
         requested = list(provider_order)

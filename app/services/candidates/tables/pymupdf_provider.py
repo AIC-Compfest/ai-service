@@ -11,24 +11,58 @@ from statistics import median
 from app.services.candidates.schema import Cell, Column, Page, Table, TableRow
 
 
+# Defaults are overridden by the ``pymupdf`` section of config/candidates/table_resolution.yaml.
+DEFAULT_OPTIONS: dict = {
+    "strategies": ["lines", "text"],
+    "merge_strategies": False,  # False: use the first strategy that yields an accepted table
+    "max_page_area_ratio": 1.0,  # reject tables covering more than this share of the page (1.0 = off)
+    "min_data_rows": 1,
+    "min_cols": 2,
+    "max_header_chars": 0,  # reject tables whose header cell holds a paragraph (0 = off)
+    "merge_overlap": 0.3,  # a later-strategy table overlapping an earlier one by more than this is dropped
+}
+
+
 class PyMuPDFTableProvider:
     """Normalize ``Page.find_tables`` results into the internal Table model."""
 
     name = "pymupdf_find_tables"
 
+    def __init__(self, options: dict | None = None):
+        self.options = {**DEFAULT_OPTIONS, **(options or {})}
+
     def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
         source = page.source_page
         if source is None or not hasattr(source, "find_tables"):
             return []
-        candidates = []
-        for strategy in ("lines", "text"):
+        accepted: list[Table] = []
+        for strategy in self.options["strategies"]:
             try:
-                candidates = source.find_tables(strategy=strategy).tables
+                found = source.find_tables(strategy=strategy).tables
             except Exception:
                 continue
-            if candidates:
-                break
-        return _normalize(candidates, page, document_id)
+            tables = _normalize(found, page, document_id, self.options, start=len(accepted) + 1)
+            if not tables:
+                continue
+            if not self.options["merge_strategies"]:
+                return tables
+            for table in tables:
+                if not any(_overlap(table.bbox, other.bbox) > self.options["merge_overlap"] for other in accepted):
+                    accepted.append(table)
+        for index, table in enumerate(accepted, start=1):
+            table.table_id = f"{document_id}-p{page.page_number}-t{index}"
+        return accepted
+
+
+def _area(box) -> float:
+    return max(0.0, box[2] - box[0]) * max(0.0, box[3] - box[1])
+
+
+def _overlap(a, b) -> float:
+    """Intersection area over the SMALLER table, so a small table inside a big one counts as overlapping."""
+    inter = _area((max(a[0], b[0]), max(a[1], b[1]), min(a[2], b[2]), min(a[3], b[3])))
+    smaller = min(_area(a), _area(b))
+    return inter / smaller if smaller else 0.0
 
 
 def _clean(value) -> str:
@@ -36,7 +70,8 @@ def _clean(value) -> str:
     return " ".join(str(value).split()) if value else ""
 
 
-def _normalize(found, page: Page, document_id: str) -> list[Table]:
+def _normalize(found, page: Page, document_id: str, options: dict | None = None, start: int = 1) -> list[Table]:
+    options = {**DEFAULT_OPTIONS, **(options or {})}
     width, height = float(page.source_page.rect.width), float(page.source_page.rect.height)
     output, seen = [], set()
     for found_table in found:
@@ -45,13 +80,13 @@ def _normalize(found, page: Page, document_id: str) -> list[Table]:
         if key in seen:
             continue
         seen.add(key)
-        built = _build_table(found_table, page, document_id, len(output) + 1, width, height)
+        built = _build_table(found_table, page, document_id, start + len(output), width, height, options)
         if built is not None:
             output.append(built)
     return output
 
 
-def _build_table(found_table, page: Page, document_id: str, ordinal: int, width: float, height: float) -> Table | None:
+def _build_table(found_table, page: Page, document_id: str, ordinal: int, width: float, height: float, options: dict) -> Table | None:
     grid = list(getattr(found_table, "rows", None) or [])
     if not grid:
         return None
@@ -69,11 +104,15 @@ def _build_table(found_table, page: Page, document_id: str, ordinal: int, width:
         header_texts = texts[0] + [""] * (n_cols - len(texts[0]))
         data_start = 1
     data_rows = list(range(data_start, len(grid)))
-    if n_cols < 2 or not data_rows:
+    if n_cols < options["min_cols"] or len(data_rows) < options["min_data_rows"]:
+        return None
+    if options["max_header_chars"] and any(len(text) > options["max_header_chars"] for text in header_texts):
         return None
 
     columns = _columns(grid, n_cols, header_texts, found_table.bbox, width)
     table_bbox = _norm_bbox(*found_table.bbox, width, height)
+    if _area(table_bbox) > options["max_page_area_ratio"]:
+        return None
     rows = []
     for out_index, grid_index in enumerate(data_rows):
         row_geometry = grid[grid_index]
