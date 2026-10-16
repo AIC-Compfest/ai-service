@@ -1,0 +1,5 @@
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+tables matched=52 skipped=0 cells compared=1627 wrong bbox=1574 (96.7%)
+example: ('invoice_10_Variasi_1.pdf', 1, 0, 0, 'Airwaybill')
+example: ('invoice_10_Variasi_1.pdf', 1, 0, 1, '888-47423110')
+example: ('invoice_10_Variasi_1.pdf', 1, 0, 2, 'Dokumen')

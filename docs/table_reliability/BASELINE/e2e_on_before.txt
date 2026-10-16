@@ -1,0 +1,210 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator TfidfTransformer from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator TfidfVectorizer from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2026-10-16 13:16:06 [info     ] ml_classifier_loaded           model_version=doc-classifier-v1
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+2026-10-16 13:16:06 [info     ] document_classified            best_type=INVOICE confidence=0.9269 document_id=on_invoice_12_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6833, 'SURAT_JALAN': 0.1194, 'POD': 0.0694, 'RATE_AGREEMENT': 0.0552, 'UNKNOWN': 0.0726}
+2026-10-16 13:16:06 [info     ] signature_detector.complete    document_id=on_invoice_12_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.95 stamp_present=True
+2026-10-16 13:16:06 [info     ] document_classified            best_type=INVOICE confidence=0.9269 document_id=on_invoice_12_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6833, 'SURAT_JALAN': 0.1194, 'POD': 0.0694, 'RATE_AGREEMENT': 0.0552, 'UNKNOWN': 0.0726}
+2026-10-16 13:16:06 [info     ] signature_detector.complete    document_id=on_invoice_12_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.95 stamp_present=True
+2026-10-16 13:16:06 [info     ] document_understanding_completed document_id=on_invoice_12_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9269}] time_ms=860.9
+2026-10-16 13:16:06 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:06 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:07 [info     ] document_classified            best_type=INVOICE confidence=0.9269 document_id=on_invoice_12_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7109, 'SURAT_JALAN': 0.0881, 'POD': 0.0747, 'RATE_AGREEMENT': 0.0504, 'UNKNOWN': 0.0759}
+2026-10-16 13:16:07 [info     ] signature_detector.complete    document_id=on_invoice_12_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.95 stamp_present=True
+2026-10-16 13:16:07 [info     ] document_classified            best_type=INVOICE confidence=0.9269 document_id=on_invoice_12_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7109, 'SURAT_JALAN': 0.0881, 'POD': 0.0747, 'RATE_AGREEMENT': 0.0504, 'UNKNOWN': 0.0759}
+2026-10-16 13:16:07 [info     ] signature_detector.complete    document_id=on_invoice_12_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.95 stamp_present=True
+2026-10-16 13:16:07 [info     ] document_understanding_completed document_id=on_invoice_12_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9269}] time_ms=643.63
+2026-10-16 13:16:07 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:07 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:08 [info     ] document_classified            best_type=INVOICE confidence=0.8717 document_id=on_invoice_13_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.5821, 'SURAT_JALAN': 0.1264, 'POD': 0.1224, 'RATE_AGREEMENT': 0.0608, 'UNKNOWN': 0.1083}
+2026-10-16 13:16:08 [info     ] signature_detector.complete    document_id=on_invoice_13_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:08 [info     ] document_classified            best_type=INVOICE confidence=0.8717 document_id=on_invoice_13_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.5821, 'SURAT_JALAN': 0.1264, 'POD': 0.1224, 'RATE_AGREEMENT': 0.0608, 'UNKNOWN': 0.1083}
+2026-10-16 13:16:08 [info     ] signature_detector.complete    document_id=on_invoice_13_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:08 [info     ] document_understanding_completed document_id=on_invoice_13_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8717}] time_ms=698.37
+2026-10-16 13:16:08 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:08 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:09 [info     ] document_classified            best_type=INVOICE confidence=0.8717 document_id=on_invoice_13_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.687, 'SURAT_JALAN': 0.0993, 'POD': 0.0883, 'RATE_AGREEMENT': 0.0517, 'UNKNOWN': 0.0736}
+2026-10-16 13:16:09 [info     ] signature_detector.complete    document_id=on_invoice_13_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.832 stamp_present=True
+2026-10-16 13:16:09 [info     ] document_classified            best_type=INVOICE confidence=0.8717 document_id=on_invoice_13_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.687, 'SURAT_JALAN': 0.0993, 'POD': 0.0883, 'RATE_AGREEMENT': 0.0517, 'UNKNOWN': 0.0736}
+2026-10-16 13:16:09 [info     ] signature_detector.complete    document_id=on_invoice_13_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.832 stamp_present=True
+2026-10-16 13:16:09 [info     ] document_understanding_completed document_id=on_invoice_13_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8717}] time_ms=1521.19
+2026-10-16 13:16:09 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:09 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:10 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_14_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.5752, 'SURAT_JALAN': 0.1227, 'POD': 0.1014, 'RATE_AGREEMENT': 0.0789, 'UNKNOWN': 0.1219}
+2026-10-16 13:16:11 [info     ] signature_detector.complete    document_id=on_invoice_14_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:11 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_14_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.5752, 'SURAT_JALAN': 0.1227, 'POD': 0.1014, 'RATE_AGREEMENT': 0.0789, 'UNKNOWN': 0.1219}
+2026-10-16 13:16:11 [info     ] signature_detector.complete    document_id=on_invoice_14_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:11 [info     ] document_understanding_completed document_id=on_invoice_14_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=1509.28
+2026-10-16 13:16:11 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:11 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:11 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_14_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.5717, 'SURAT_JALAN': 0.1285, 'POD': 0.0993, 'RATE_AGREEMENT': 0.0724, 'UNKNOWN': 0.1281}
+2026-10-16 13:16:11 [info     ] signature_detector.complete    document_id=on_invoice_14_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:11 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_14_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.5717, 'SURAT_JALAN': 0.1285, 'POD': 0.0993, 'RATE_AGREEMENT': 0.0724, 'UNKNOWN': 0.1281}
+2026-10-16 13:16:12 [info     ] signature_detector.complete    document_id=on_invoice_14_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:12 [info     ] document_understanding_completed document_id=on_invoice_14_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=771.37
+2026-10-16 13:16:12 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:12 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:12 [info     ] document_classified            best_type=INVOICE confidence=0.929 document_id=on_invoice_15_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7331, 'SURAT_JALAN': 0.0804, 'POD': 0.0616, 'RATE_AGREEMENT': 0.0481, 'UNKNOWN': 0.0768}
+2026-10-16 13:16:12 [info     ] signature_detector.complete    document_id=on_invoice_15_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.85 stamp_present=True
+2026-10-16 13:16:12 [info     ] document_classified            best_type=INVOICE confidence=0.929 document_id=on_invoice_15_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7331, 'SURAT_JALAN': 0.0804, 'POD': 0.0616, 'RATE_AGREEMENT': 0.0481, 'UNKNOWN': 0.0768}
+2026-10-16 13:16:12 [info     ] signature_detector.complete    document_id=on_invoice_15_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.85 stamp_present=True
+2026-10-16 13:16:12 [info     ] document_understanding_completed document_id=on_invoice_15_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.929}] time_ms=756.13
+2026-10-16 13:16:12 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:12 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=3
+2026-10-16 13:16:13 [info     ] document_classified            best_type=INVOICE confidence=0.929 document_id=on_invoice_15_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6535, 'SURAT_JALAN': 0.1019, 'POD': 0.0762, 'RATE_AGREEMENT': 0.0504, 'UNKNOWN': 0.1181}
+2026-10-16 13:16:13 [info     ] signature_detector.complete    document_id=on_invoice_15_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.841 stamp_present=True
+2026-10-16 13:16:13 [info     ] document_classified            best_type=INVOICE confidence=0.929 document_id=on_invoice_15_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6535, 'SURAT_JALAN': 0.1019, 'POD': 0.0762, 'RATE_AGREEMENT': 0.0504, 'UNKNOWN': 0.1181}
+2026-10-16 13:16:13 [info     ] signature_detector.complete    document_id=on_invoice_15_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.841 stamp_present=True
+2026-10-16 13:16:13 [info     ] document_understanding_completed document_id=on_invoice_15_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.929}] time_ms=696.31
+2026-10-16 13:16:13 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:13 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=4
+2026-10-16 13:16:13 [info     ] document_classified            best_type=INVOICE confidence=0.5347 document_id=on_invoice_16_variasi_1.pdf_p1 method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.5347, 'SURAT_JALAN': 0.2129, 'POD': 0.1145, 'RATE_AGREEMENT': 0.0613, 'UNKNOWN': 0.0766}
+2026-10-16 13:16:14 [info     ] signature_detector.complete    document_id=on_invoice_16_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:14 [info     ] document_classified            best_type=INVOICE confidence=0.5347 document_id=on_invoice_16_variasi_1.pdf method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.5347, 'SURAT_JALAN': 0.2129, 'POD': 0.1145, 'RATE_AGREEMENT': 0.0613, 'UNKNOWN': 0.0766}
+2026-10-16 13:16:14 [info     ] signature_detector.complete    document_id=on_invoice_16_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:14 [info     ] document_understanding_completed document_id=on_invoice_16_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.5347}] time_ms=695.13
+2026-10-16 13:16:14 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:14 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:14 [info     ] document_classified            best_type=INVOICE confidence=0.4936 document_id=on_invoice_16_variasi_2.pdf_p1 method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.4936, 'SURAT_JALAN': 0.195, 'POD': 0.134, 'RATE_AGREEMENT': 0.0819, 'UNKNOWN': 0.0955}
+2026-10-16 13:16:14 [info     ] signature_detector.complete    document_id=on_invoice_16_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:14 [info     ] document_classified            best_type=INVOICE confidence=0.4936 document_id=on_invoice_16_variasi_2.pdf method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.4936, 'SURAT_JALAN': 0.195, 'POD': 0.134, 'RATE_AGREEMENT': 0.0819, 'UNKNOWN': 0.0955}
+2026-10-16 13:16:14 [info     ] signature_detector.complete    document_id=on_invoice_16_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:14 [info     ] document_understanding_completed document_id=on_invoice_16_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.4936}] time_ms=712.91
+2026-10-16 13:16:14 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:14 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:15 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_17_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.4894, 'SURAT_JALAN': 0.1932, 'POD': 0.1559, 'RATE_AGREEMENT': 0.0653, 'UNKNOWN': 0.0963}
+2026-10-16 13:16:15 [info     ] signature_detector.complete    document_id=on_invoice_17_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.833 stamp_present=True
+2026-10-16 13:16:15 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_17_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.4894, 'SURAT_JALAN': 0.1932, 'POD': 0.1559, 'RATE_AGREEMENT': 0.0653, 'UNKNOWN': 0.0963}
+2026-10-16 13:16:15 [info     ] signature_detector.complete    document_id=on_invoice_17_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.833 stamp_present=True
+2026-10-16 13:16:15 [info     ] document_understanding_completed document_id=on_invoice_17_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=1011.2
+2026-10-16 13:16:15 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:15 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:16 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_17_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.5037, 'SURAT_JALAN': 0.1822, 'POD': 0.1392, 'RATE_AGREEMENT': 0.0694, 'UNKNOWN': 0.1055}
+2026-10-16 13:16:16 [info     ] signature_detector.complete    document_id=on_invoice_17_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.833 stamp_present=True
+2026-10-16 13:16:16 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_17_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.5037, 'SURAT_JALAN': 0.1822, 'POD': 0.1392, 'RATE_AGREEMENT': 0.0694, 'UNKNOWN': 0.1055}
+2026-10-16 13:16:16 [info     ] signature_detector.complete    document_id=on_invoice_17_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.833 stamp_present=True
+2026-10-16 13:16:16 [info     ] document_understanding_completed document_id=on_invoice_17_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=1027.98
+2026-10-16 13:16:16 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:16 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:17 [info     ] document_classified            best_type=INVOICE confidence=0.85 document_id=on_invoice_18_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.5566, 'SURAT_JALAN': 0.1498, 'POD': 0.1059, 'RATE_AGREEMENT': 0.0837, 'UNKNOWN': 0.1039}
+2026-10-16 13:16:17 [info     ] signature_detector.complete    document_id=on_invoice_18_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:17 [info     ] document_classified            best_type=INVOICE confidence=0.85 document_id=on_invoice_18_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.5566, 'SURAT_JALAN': 0.1498, 'POD': 0.1059, 'RATE_AGREEMENT': 0.0837, 'UNKNOWN': 0.1039}
+2026-10-16 13:16:17 [info     ] signature_detector.complete    document_id=on_invoice_18_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:17 [info     ] document_understanding_completed document_id=on_invoice_18_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.85}] time_ms=755.13
+2026-10-16 13:16:17 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:17 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:18 [info     ] document_classified            best_type=INVOICE confidence=0.85 document_id=on_invoice_18_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.4951, 'SURAT_JALAN': 0.2072, 'POD': 0.1022, 'RATE_AGREEMENT': 0.072, 'UNKNOWN': 0.1236}
+2026-10-16 13:16:18 [info     ] signature_detector.complete    document_id=on_invoice_18_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:18 [info     ] document_classified            best_type=INVOICE confidence=0.85 document_id=on_invoice_18_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.4951, 'SURAT_JALAN': 0.2072, 'POD': 0.1022, 'RATE_AGREEMENT': 0.072, 'UNKNOWN': 0.1236}
+2026-10-16 13:16:18 [info     ] signature_detector.complete    document_id=on_invoice_18_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:18 [info     ] document_understanding_completed document_id=on_invoice_18_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.85}] time_ms=786.67
+2026-10-16 13:16:18 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:18 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:19 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_19_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6177, 'SURAT_JALAN': 0.102, 'POD': 0.0927, 'RATE_AGREEMENT': 0.0665, 'UNKNOWN': 0.1212}
+2026-10-16 13:16:19 [info     ] signature_detector.complete    document_id=on_invoice_19_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.825 stamp_present=True
+2026-10-16 13:16:19 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_19_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6177, 'SURAT_JALAN': 0.102, 'POD': 0.0927, 'RATE_AGREEMENT': 0.0665, 'UNKNOWN': 0.1212}
+2026-10-16 13:16:19 [info     ] signature_detector.complete    document_id=on_invoice_19_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.825 stamp_present=True
+2026-10-16 13:16:19 [info     ] document_understanding_completed document_id=on_invoice_19_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=689.15
+2026-10-16 13:16:19 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:19 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:19 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_19_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6157, 'SURAT_JALAN': 0.1086, 'POD': 0.0898, 'RATE_AGREEMENT': 0.0625, 'UNKNOWN': 0.1233}
+2026-10-16 13:16:19 [info     ] signature_detector.complete    document_id=on_invoice_19_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.825 stamp_present=True
+2026-10-16 13:16:19 [info     ] document_classified            best_type=INVOICE confidence=0.8618 document_id=on_invoice_19_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6157, 'SURAT_JALAN': 0.1086, 'POD': 0.0898, 'RATE_AGREEMENT': 0.0625, 'UNKNOWN': 0.1233}
+2026-10-16 13:16:19 [info     ] signature_detector.complete    document_id=on_invoice_19_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.825 stamp_present=True
+2026-10-16 13:16:19 [info     ] document_understanding_completed document_id=on_invoice_19_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8618}] time_ms=716.81
+2026-10-16 13:16:19 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:19 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:20 [info     ] document_classified            best_type=INVOICE confidence=0.93 document_id=on_invoice_1_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7288, 'SURAT_JALAN': 0.0748, 'POD': 0.0589, 'RATE_AGREEMENT': 0.0475, 'UNKNOWN': 0.0899}
+2026-10-16 13:16:20 [info     ] signature_detector.complete    document_id=on_invoice_1_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:20 [info     ] document_classified            best_type=INVOICE confidence=0.93 document_id=on_invoice_1_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7288, 'SURAT_JALAN': 0.0748, 'POD': 0.0589, 'RATE_AGREEMENT': 0.0475, 'UNKNOWN': 0.0899}
+2026-10-16 13:16:20 [info     ] signature_detector.complete    document_id=on_invoice_1_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:20 [info     ] document_understanding_completed document_id=on_invoice_1_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.93}] time_ms=643.31
+2026-10-16 13:16:20 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:20 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=6
+2026-10-16 13:16:21 [info     ] document_classified            best_type=INVOICE confidence=0.93 document_id=on_invoice_1_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7501, 'SURAT_JALAN': 0.0668, 'POD': 0.053, 'RATE_AGREEMENT': 0.0523, 'UNKNOWN': 0.0779}
+2026-10-16 13:16:21 [info     ] signature_detector.complete    document_id=on_invoice_1_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.794 stamp_present=True
+2026-10-16 13:16:21 [info     ] document_classified            best_type=INVOICE confidence=0.93 document_id=on_invoice_1_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7501, 'SURAT_JALAN': 0.0668, 'POD': 0.053, 'RATE_AGREEMENT': 0.0523, 'UNKNOWN': 0.0779}
+2026-10-16 13:16:21 [info     ] signature_detector.complete    document_id=on_invoice_1_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.794 stamp_present=True
+2026-10-16 13:16:21 [info     ] document_understanding_completed document_id=on_invoice_1_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.93}] time_ms=745.95
+2026-10-16 13:16:21 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:21 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:22 [info     ] document_classified            best_type=INVOICE confidence=0.876 document_id=on_invoice_20_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.3634, 'SURAT_JALAN': 0.2267, 'POD': 0.1768, 'RATE_AGREEMENT': 0.0837, 'UNKNOWN': 0.1494}
+2026-10-16 13:16:22 [info     ] signature_detector.complete    document_id=on_invoice_20_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:22 [info     ] document_classified            best_type=INVOICE confidence=0.876 document_id=on_invoice_20_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.3634, 'SURAT_JALAN': 0.2267, 'POD': 0.1768, 'RATE_AGREEMENT': 0.0837, 'UNKNOWN': 0.1494}
+2026-10-16 13:16:22 [info     ] signature_detector.complete    document_id=on_invoice_20_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:22 [info     ] document_understanding_completed document_id=on_invoice_20_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.876}] time_ms=1091.84
+2026-10-16 13:16:22 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:22 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:23 [info     ] document_classified            best_type=INVOICE confidence=0.876 document_id=on_invoice_20_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.3439, 'SURAT_JALAN': 0.2165, 'POD': 0.1886, 'RATE_AGREEMENT': 0.0891, 'UNKNOWN': 0.1619}
+2026-10-16 13:16:23 [info     ] signature_detector.complete    document_id=on_invoice_20_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:23 [info     ] document_classified            best_type=INVOICE confidence=0.876 document_id=on_invoice_20_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.3439, 'SURAT_JALAN': 0.2165, 'POD': 0.1886, 'RATE_AGREEMENT': 0.0891, 'UNKNOWN': 0.1619}
+2026-10-16 13:16:23 [info     ] signature_detector.complete    document_id=on_invoice_20_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:23 [info     ] document_understanding_completed document_id=on_invoice_20_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.876}] time_ms=1390.21
+2026-10-16 13:16:23 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:23 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=8
+2026-10-16 13:16:25 [info     ] document_classified            best_type=INVOICE confidence=0.8871 document_id=on_invoice_2_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7245, 'SURAT_JALAN': 0.1003, 'POD': 0.0559, 'RATE_AGREEMENT': 0.049, 'UNKNOWN': 0.0702}
+2026-10-16 13:16:25 [info     ] signature_detector.complete    document_id=on_invoice_2_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:25 [info     ] document_classified            best_type=INVOICE confidence=0.8871 document_id=on_invoice_2_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7245, 'SURAT_JALAN': 0.1003, 'POD': 0.0559, 'RATE_AGREEMENT': 0.049, 'UNKNOWN': 0.0702}
+2026-10-16 13:16:25 [info     ] signature_detector.complete    document_id=on_invoice_2_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:25 [info     ] document_understanding_completed document_id=on_invoice_2_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8871}] time_ms=1610.76
+2026-10-16 13:16:25 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:25 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=7
+2026-10-16 13:16:25 [info     ] document_classified            best_type=INVOICE confidence=0.8871 document_id=on_invoice_2_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7998, 'SURAT_JALAN': 0.0651, 'POD': 0.0377, 'RATE_AGREEMENT': 0.0454, 'UNKNOWN': 0.052}
+2026-10-16 13:16:26 [info     ] signature_detector.complete    document_id=on_invoice_2_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:26 [info     ] document_classified            best_type=INVOICE confidence=0.8871 document_id=on_invoice_2_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7998, 'SURAT_JALAN': 0.0651, 'POD': 0.0377, 'RATE_AGREEMENT': 0.0454, 'UNKNOWN': 0.052}
+2026-10-16 13:16:26 [info     ] signature_detector.complete    document_id=on_invoice_2_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:26 [info     ] document_understanding_completed document_id=on_invoice_2_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.8871}] time_ms=863.76
+2026-10-16 13:16:26 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:26 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=6
+2026-10-16 13:16:26 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_3_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6872, 'SURAT_JALAN': 0.0897, 'POD': 0.0681, 'RATE_AGREEMENT': 0.063, 'UNKNOWN': 0.092}
+2026-10-16 13:16:26 [info     ] signature_detector.complete    document_id=on_invoice_3_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:27 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_3_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6872, 'SURAT_JALAN': 0.0897, 'POD': 0.0681, 'RATE_AGREEMENT': 0.063, 'UNKNOWN': 0.092}
+2026-10-16 13:16:27 [info     ] signature_detector.complete    document_id=on_invoice_3_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:27 [info     ] document_understanding_completed document_id=on_invoice_3_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9195}] time_ms=782.47
+2026-10-16 13:16:27 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:27 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=6
+2026-10-16 13:16:27 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_3_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7095, 'SURAT_JALAN': 0.0806, 'POD': 0.0692, 'RATE_AGREEMENT': 0.0594, 'UNKNOWN': 0.0814}
+2026-10-16 13:16:27 [info     ] signature_detector.complete    document_id=on_invoice_3_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:27 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_3_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7095, 'SURAT_JALAN': 0.0806, 'POD': 0.0692, 'RATE_AGREEMENT': 0.0594, 'UNKNOWN': 0.0814}
+2026-10-16 13:16:27 [info     ] signature_detector.complete    document_id=on_invoice_3_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:27 [info     ] document_understanding_completed document_id=on_invoice_3_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9195}] time_ms=744.06
+2026-10-16 13:16:27 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:27 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=5
+2026-10-16 13:16:28 [info     ] document_classified            best_type=INVOICE confidence=0.9327 document_id=on_invoice_4_variasi_1.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.7506, 'SURAT_JALAN': 0.073, 'POD': 0.0459, 'RATE_AGREEMENT': 0.0664, 'UNKNOWN': 0.0641}
+2026-10-16 13:16:28 [info     ] signature_detector.complete    document_id=on_invoice_4_variasi_1.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.828 stamp_present=True
+2026-10-16 13:16:28 [info     ] document_classified            best_type=INVOICE confidence=0.9327 document_id=on_invoice_4_variasi_1.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.7506, 'SURAT_JALAN': 0.073, 'POD': 0.0459, 'RATE_AGREEMENT': 0.0664, 'UNKNOWN': 0.0641}
+2026-10-16 13:16:28 [info     ] signature_detector.complete    document_id=on_invoice_4_variasi_1.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.828 stamp_present=True
+2026-10-16 13:16:28 [info     ] document_understanding_completed document_id=on_invoice_4_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9327}] time_ms=728.74
+2026-10-16 13:16:28 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:28 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=4
+2026-10-16 13:16:29 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_4_variasi_2.pdf_p1 method=ml_structural_ensemble probabilities={'INVOICE': 0.6382, 'SURAT_JALAN': 0.1077, 'POD': 0.076, 'RATE_AGREEMENT': 0.0796, 'UNKNOWN': 0.0985}
+2026-10-16 13:16:29 [info     ] signature_detector.complete    document_id=on_invoice_4_variasi_2.pdf_p1 requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.828 stamp_present=True
+2026-10-16 13:16:29 [info     ] document_classified            best_type=INVOICE confidence=0.9195 document_id=on_invoice_4_variasi_2.pdf method=ml_structural_ensemble probabilities={'INVOICE': 0.6382, 'SURAT_JALAN': 0.1077, 'POD': 0.076, 'RATE_AGREEMENT': 0.0796, 'UNKNOWN': 0.0985}
+2026-10-16 13:16:29 [info     ] signature_detector.complete    document_id=on_invoice_4_variasi_2.pdf requires_human_review=False signature_confidence=0.92 signature_present=True stamp_confidence=0.828 stamp_present=True
+2026-10-16 13:16:29 [info     ] document_understanding_completed document_id=on_invoice_4_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.9195}] time_ms=766.14
+2026-10-16 13:16:29 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:29 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=4
+2026-10-16 13:16:30 [info     ] document_classified            best_type=INVOICE confidence=0.5983 document_id=on_invoice_7_variasi_1.pdf_p1 method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.5983, 'SURAT_JALAN': 0.1366, 'POD': 0.0831, 'RATE_AGREEMENT': 0.0752, 'UNKNOWN': 0.1068}
+2026-10-16 13:16:30 [info     ] signature_detector.complete    document_id=on_invoice_7_variasi_1.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:30 [info     ] document_classified            best_type=INVOICE confidence=0.5983 document_id=on_invoice_7_variasi_1.pdf method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.5983, 'SURAT_JALAN': 0.1366, 'POD': 0.0831, 'RATE_AGREEMENT': 0.0752, 'UNKNOWN': 0.1068}
+2026-10-16 13:16:30 [info     ] signature_detector.complete    document_id=on_invoice_7_variasi_1.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:30 [info     ] document_understanding_completed document_id=on_invoice_7_variasi_1.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.5983}] time_ms=871.15
+2026-10-16 13:16:30 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:30 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+2026-10-16 13:16:31 [info     ] document_classified            best_type=INVOICE confidence=0.6713 document_id=on_invoice_7_variasi_2.pdf_p1 method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.6713, 'SURAT_JALAN': 0.1135, 'POD': 0.0684, 'RATE_AGREEMENT': 0.0627, 'UNKNOWN': 0.0841}
+2026-10-16 13:16:31 [info     ] signature_detector.complete    document_id=on_invoice_7_variasi_2.pdf_p1 requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:31 [info     ] document_classified            best_type=INVOICE confidence=0.6713 document_id=on_invoice_7_variasi_2.pdf method=ml_tfidf_logistic_regression probabilities={'INVOICE': 0.6713, 'SURAT_JALAN': 0.1135, 'POD': 0.0684, 'RATE_AGREEMENT': 0.0627, 'UNKNOWN': 0.0841}
+2026-10-16 13:16:31 [info     ] signature_detector.complete    document_id=on_invoice_7_variasi_2.pdf requires_human_review=True signature_confidence=0.55 signature_present=False stamp_confidence=0.0 stamp_present=False
+2026-10-16 13:16:31 [info     ] document_understanding_completed document_id=on_invoice_7_variasi_2.pdf pages=1 segment_count=1 segments=[{'type': 'INVOICE', 'pages': '1-1', 'conf': 0.6713}] time_ms=1038.18
+2026-10-16 13:16:31 [info     ] invoice_extractor.extract_called document_id=x
+2026-10-16 13:16:31 [info     ] invoice_extractor.complete     document_id=x total_fields=13 unknown_count=9
+flag on docs 28
+docs with tables: 28 | extracted line_items: 50 | GT line items: 77 | exact count match: 6

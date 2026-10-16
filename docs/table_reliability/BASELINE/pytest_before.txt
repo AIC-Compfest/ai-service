@@ -1,0 +1,77 @@
+D:\AIC\ai-service\.venv\Lib\site-packages\pytest_asyncio\plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+.....................................................................F.. [ 47%]
+........................................................................ [ 95%]
+.......                                                                  [100%]
+================================== FAILURES ===================================
+______________ TestPhase5Components.test_document_ingestion_jpg _______________
+
+self = <tests.unit.test_phase5_components.TestPhase5Components testMethod=test_document_ingestion_jpg>
+
+    def test_document_ingestion_jpg(self):
+        ingested = DocumentIngestionService.ingest_file(self.sample_pod)
+>       self.assertEqual(ingested.mime_type, "image/jpeg")
+E       AssertionError: 'image/png' != 'image/jpeg'
+E       - image/png
+E       ?        ^
+E       + image/jpeg
+E       ?       + ^
+
+tests\unit\test_phase5_components.py:49: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:40
+  D:\AIC\ai-service\.venv\Lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_e2e_multipage_pipeline.py::TestE2EMultiPagePipeline::test_10page_synthetic_fixture_segmentation
+tests/unit/test_phase5_components.py::TestPhase5Components::test_classifier_accuracy
+tests/unit/test_phase5_components.py::TestPhase5Components::test_ocr_and_layout_understanding
+tests/unit/test_phase5_components.py::TestPhase5Components::test_pipeline_end_to_end
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_invoice_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_pod_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_rate_agreement_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_surat_jalan_extraction_integration
+  D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+tests/test_e2e_multipage_pipeline.py::TestE2EMultiPagePipeline::test_10page_synthetic_fixture_segmentation
+tests/unit/test_phase5_components.py::TestPhase5Components::test_classifier_accuracy
+tests/unit/test_phase5_components.py::TestPhase5Components::test_ocr_and_layout_understanding
+tests/unit/test_phase5_components.py::TestPhase5Components::test_pipeline_end_to_end
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_invoice_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_pod_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_rate_agreement_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_surat_jalan_extraction_integration
+  D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator TfidfTransformer from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+tests/test_e2e_multipage_pipeline.py::TestE2EMultiPagePipeline::test_10page_synthetic_fixture_segmentation
+tests/unit/test_phase5_components.py::TestPhase5Components::test_classifier_accuracy
+tests/unit/test_phase5_components.py::TestPhase5Components::test_ocr_and_layout_understanding
+tests/unit/test_phase5_components.py::TestPhase5Components::test_pipeline_end_to_end
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_invoice_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_pod_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_rate_agreement_extraction_integration
+tests/unit/test_phase6_extraction.py::TestPhase6Integration::test_surat_jalan_extraction_integration
+  D:\AIC\ai-service\.venv\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator TfidfVectorizer from version 1.7.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+tests/test_e2e_multipage_pipeline.py::TestE2EMultiPagePipeline::test_10page_synthetic_fixture_segmentation
+  D:\AIC\ai-service\.venv\Lib\site-packages\pydantic\_internal\_fields.py:132: UserWarning: Field "model_kwargs" in TransformersEngineConfig has conflict with protected namespace "model_".
+  
+  You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+    warnings.warn(
+
+tests/test_e2e_multipage_pipeline.py::TestE2EMultiPagePipeline::test_10page_synthetic_fixture_segmentation
+  D:\AIC\ai-service\.venv\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+    warnings.warn(warning_message)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/unit/test_phase5_components.py::TestPhase5Components::test_document_ingestion_jpg
+1 failed, 150 passed, 27 warnings in 247.42s (0:04:07)

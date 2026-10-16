@@ -1,0 +1,7 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+pages: 159 digital: 159 raster_needed: 0
+INVOICE pages 40 | pymupdf(lines) pages>=1: 36 >=2: 12 | pymupdf(text) >=1: 40 >=2: 0 | grid(None) tables: 155 pages>=2: 36 | router(None) tables: 126
+POD pages 35 | pymupdf(lines) pages>=1: 16 >=2: 2 | pymupdf(text) >=1: 34 >=2: 0 | grid(None) tables: 118 pages>=2: 34 | router(None) tables: 99
+RATE_AGREEMENT pages 52 | pymupdf(lines) pages>=1: 28 >=2: 8 | pymupdf(text) >=1: 52 >=2: 0 | grid(None) tables: 145 pages>=2: 30 | router(None) tables: 127
+SURAT_JALAN pages 32 | pymupdf(lines) pages>=1: 26 >=2: 6 | pymupdf(text) >=1: 32 >=2: 0 | grid(None) tables: 108 pages>=2: 32 | router(None) tables: 70
