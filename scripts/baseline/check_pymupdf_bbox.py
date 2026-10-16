@@ -39,10 +39,14 @@ for pdf in sorted(INVOICE_PDF_DIR.glob("*.pdf")):
                 continue
             tables += 1
             ext = bool(getattr(ref.header, "external", False))
+            start = 0 if ext else 1  # first data row is rows[1] when the header is internal
+            texts = ref.extract()
+            # The provider omits rows whose cells are all empty (since Fase 2); pair rows the same way.
+            data_rows = [i for i in range(start, len(ref.rows)) if any(texts[i])]
             for r, row in enumerate(t.rows):
-                rr = r + (0 if ext else 1)  # first data row is rows[1] when the header is internal
-                if rr >= len(ref.rows):
+                if r >= len(data_rows):
                     continue
+                rr = data_rows[r]
                 for c, cell in enumerate(row.cells):
                     rc = ref.rows[rr].cells[c] if c < len(ref.rows[rr].cells) else None
                     if rc is None:
