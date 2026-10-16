@@ -13,33 +13,33 @@ from app.services.ocr.engine import OCREngine, to_evidence_json
 from app.services.candidates.pipeline import CandidatePipeline
 
 # Test files for comprehensive validation across all 4 categories in DATASET
-DEFAULT_DATASET_DIR = Path(r"d:\AIC\DATASET")
+DEFAULT_DATASET_DIR = Path(os.environ.get("VERIFLOW_DATASET_ROOT", Path(__file__).resolve().parents[2] / "DATASET" / "Dataset"))
 
 TARGET_TESTS = [
     {
         "category": "INVOICE",
         "doc_type": "INVOICE",
-        "rel_path": "invoice/Contoh-Template-Invoice-2.jpg"
+        "rel_path": "invoice/image/Contoh-Template-Invoice-2.jpg"
     },
     {
         "category": "INVOICE",
         "doc_type": "INVOICE",
-        "rel_path": "invoice/Contoh-Template-Invoice-1.jpg"
+        "rel_path": "invoice/image/Contoh-Template-Invoice-1.jpg"
     },
     {
         "category": "POD",
         "doc_type": "POD",
-        "rel_path": "PoD/contoh-surat-bukti-terima-1.png"
+        "rel_path": "PoD/image/contoh-surat-bukti-terima-1.png"
     },
     {
         "category": "RATE_AGREEMENT",
         "doc_type": "RATE_AGREEMENT",
-        "rel_path": "rate card/contoh-rate-card-1.png"
+        "rel_path": "rate card/image/contoh-rate-card-1.png"
     },
     {
         "category": "SURAT_JALAN",
         "doc_type": "SURAT_JALAN",
-        "rel_path": "surat jalan/contoh-surat-jalan-10.png"
+        "rel_path": "surat jalan/image/contoh-surat-jalan-10.png"
     }
 ]
 

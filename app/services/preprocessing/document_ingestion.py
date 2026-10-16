@@ -17,6 +17,8 @@ import fitz  # PyMuPDF
 from PIL import Image, ImageOps, ImageSequence
 import numpy as np
 
+from app.core.config import settings
+
 
 CANONICAL_DPI = 200
 
@@ -42,9 +44,9 @@ class IngestedDocument:
         self.pages = pages
 
 
-def render_canonical_pages(raw_bytes: bytes, source_filename: str, document_id: str, output_root: Path = Path("out/pages"), dpi: int = CANONICAL_DPI) -> list[DocumentPageAsset]:
+def render_canonical_pages(raw_bytes: bytes, source_filename: str, document_id: str, output_root: Path | None = None, dpi: int = CANONICAL_DPI) -> list[DocumentPageAsset]:
     """Create the immutable PNG coordinate space used by viewers and OCR evidence."""
-    target = output_root / document_id
+    target = Path(output_root if output_root is not None else settings.page_output_dir) / document_id
     target.mkdir(parents=True, exist_ok=True)
     is_pdf = raw_bytes.startswith(b"%PDF") or source_filename.lower().endswith(".pdf")
     pages: list[DocumentPageAsset] = []
@@ -83,7 +85,7 @@ class DocumentIngestionService:
         return DocumentIngestionService.ingest_bytes(raw_bytes, source_filename=p.name, document_id=document_id)
 
     @staticmethod
-    def ingest_bytes(raw_bytes: bytes, source_filename: str = "document.pdf", document_id: str | None = None, output_root: Path = Path("out/pages"), dpi: int = CANONICAL_DPI) -> IngestedDocument:
+    def ingest_bytes(raw_bytes: bytes, source_filename: str = "document.pdf", document_id: str | None = None, output_root: Path | None = None, dpi: int = CANONICAL_DPI) -> IngestedDocument:
         sha256 = hashlib.sha256(raw_bytes).hexdigest()
         doc_id = document_id or f"DOC-{sha256[:16]}"
         is_pdf = raw_bytes.startswith(b"%PDF") or source_filename.lower().endswith(".pdf")

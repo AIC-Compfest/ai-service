@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -71,7 +72,7 @@ def validate_candidates(rows: list[dict[str, Any]]) -> list[str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Comprehensive OCR and candidate audit for DATASET images.")
-    parser.add_argument("--dataset-dir", type=Path, default=Path(r"D:\AIC\DATASET"))
+    parser.add_argument("--dataset-dir", type=Path, default=Path(os.environ.get("VERIFLOW_DATASET_ROOT", Path(__file__).resolve().parents[2] / "DATASET" / "Dataset")))
     parser.add_argument("--out", type=Path, required=True, help="Output directory for report and optional artifacts.")
     parser.add_argument("--write-artifacts", action="store_true", help="Write evidence and candidate rows per source image.")
     parser.add_argument("--limit", type=int, help="Limit documents for a fast tuning iteration.")

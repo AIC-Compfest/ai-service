@@ -5,10 +5,11 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import json
+from pathlib import Path
 from app.services.ocr.engine import OCREngine
 
 def main():
-    img_path = r"d:\AIC\DATASET\invoice\Contoh-Template-Invoice-2.jpg"
+    img_path = str(Path(os.environ.get("VERIFLOW_DATASET_ROOT", Path(__file__).resolve().parents[2] / "DATASET" / "Dataset")) / "invoice" / "image" / "Contoh-Template-Invoice-2.jpg")
     if not os.path.exists(img_path):
         print(f"File tidak ditemukan: {img_path}")
         return

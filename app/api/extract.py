@@ -15,11 +15,11 @@ import uuid
 from fastapi import APIRouter, HTTPException, UploadFile
 
 from app.core.logging import get_logger
+from app.core.runtime import get_pipeline, purge_old_pages, read_upload
 from app.schemas.document_type import DocumentType
 from app.schemas.extraction import ExtractionResponse
 from app.services.extraction.ml.service import promote_ml_fields, run_ml_extraction
 from app.services.extraction.registry import get_extractor
-from app.services.pipeline import Phase5DocumentPipeline
 from app.services.validation.document import validate_extraction
 
 router = APIRouter(prefix="/v1/extract", tags=["extraction"])
@@ -27,21 +27,22 @@ logger = get_logger(__name__)
 
 
 @router.post("/understand/evidence")
-async def understand_document_evidence(file: UploadFile) -> dict:
+def understand_document_evidence(file: UploadFile) -> dict:
     """
     Phase 5 Evidence Endpoint.
     Returns full structured OCR evidence: lines, bboxes, layout regions, tables,
     classification result, and signature detection. No field extraction is performed.
     """
+    purge_old_pages()
     document_id = str(uuid.uuid4())
-    file_bytes = await file.read()
+    file_bytes = read_upload(file)
     logger.info("extract.evidence.request", document_id=document_id, filename=file.filename)
-    pipeline = Phase5DocumentPipeline()
+    pipeline = get_pipeline()
     return pipeline.process_document(file_bytes, filename=file.filename or "doc.pdf", document_id=document_id)
 
 
 @router.post("/pipeline/full")
-async def extract_full_pipeline(file: UploadFile) -> dict:
+def extract_full_pipeline(file: UploadFile) -> dict:
     """
     Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23).
 
@@ -53,13 +54,14 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
     If classification is UNKNOWN or confidence < 0.70 → returns
     REQUIRES_HUMAN_REVIEW status without attempting extraction (PRD §20, §60).
     """
+    purge_old_pages()
     document_id = str(uuid.uuid4())
-    file_bytes = await file.read()
+    file_bytes = read_upload(file)
     filename = file.filename or "doc.pdf"
 
     logger.info("extract.pipeline.request", document_id=document_id, filename=filename)
 
-    pipeline = Phase5DocumentPipeline()
+    pipeline = get_pipeline()
     evidence = pipeline.process_document(file_bytes, filename=filename, document_id=document_id)
 
     classification = evidence.get("classification", {})
@@ -222,7 +224,7 @@ async def extract_full_pipeline(file: UploadFile) -> dict:
 
 
 @router.post("/{document_type}", response_model=ExtractionResponse)
-async def extract_document(document_type: DocumentType, file: UploadFile) -> ExtractionResponse:
+def extract_document(document_type: DocumentType, file: UploadFile) -> ExtractionResponse:
     """
     Typed extraction endpoint. Caller specifies document type explicitly.
     Uses Phase 5 pipeline for OCR then Phase 6 extractor for field extraction.
@@ -234,8 +236,9 @@ async def extract_document(document_type: DocumentType, file: UploadFile) -> Ext
             detail="Cannot extract UNKNOWN document type; route to human review first (PRD §20).",
         )
 
+    purge_old_pages()
     document_id = str(uuid.uuid4())
-    file_bytes = await file.read()
+    file_bytes = read_upload(file)
     logger.info(
         "extract.typed.request",
         document_id=document_id,
@@ -244,7 +247,7 @@ async def extract_document(document_type: DocumentType, file: UploadFile) -> Ext
     )
 
     # Phase 5 pipeline
-    pipeline = Phase5DocumentPipeline()
+    pipeline = get_pipeline()
     evidence = pipeline.process_document(
         file_bytes, filename=file.filename or "doc.pdf", document_id=document_id
     )

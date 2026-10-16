@@ -13,7 +13,7 @@ from app.services.ocr.engine import OCREngine, to_evidence_json
 from app.services.candidates.pipeline import CandidatePipeline
 
 def test_hard_surat_jalan():
-    img_path = Path(r"d:\AIC\DATASET\surat jalan\contoh-surat-jalan-10.png")
+    img_path = Path(os.environ.get("VERIFLOW_DATASET_ROOT", Path(__file__).resolve().parents[2] / "DATASET" / "Dataset")) / "surat jalan" / "image" / "contoh-surat-jalan-10.png"
     if not img_path.exists():
         print(f"File tidak ditemukan: {img_path}")
         return
