@@ -1,0 +1,2 @@
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+tables matched=52 skipped=0 cells compared=1625 wrong bbox=0 (0.0%)

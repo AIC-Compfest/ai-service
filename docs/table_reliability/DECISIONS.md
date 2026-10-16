@@ -58,7 +58,7 @@ mengganti ini dengan sinyal nyata, perlu data yang sudah divalidasi.
 
 ---
 
-## D-005: Feature Flag Default
+## D-005: Feature Flag Default (CORRECTED by D-031: the statement "safe default = old behaviour" was false for tables)
 
 **Tanggal:** 2026-10-14  
 **Konteks:** Semua perilaku baru harus di balik feature flag.  
@@ -368,4 +368,16 @@ Evaluation of unreviewed gold requires `--allow-unreviewed` and every report is 
 row count exact >= 0.85, cell F1 >= 0.85, amount recall (in matched table) >= 0.95, summary separation >= 0.98, multi-table pages fully correct
 >= 0.80 (100% on non-adversarial constructed fixtures). Baseline (dev+val, best provider): detection F1 0.44, header exact 0.69, rows exact 0.66,
 cell F1 0.35-0.44, amount@table 0.49, multi-table 1/4 on fixtures. The gap is large; no target is relaxed. Raster targets stay open until Paddle is stable.
+
+## D-031: Table Feature Flag Reality and Plan (corrects D-005)
+
+**Date:** 2026-10-16
+**Context:** D-005 claimed the default flags preserve the old behaviour. For tables that is false: the old y-band heuristic
+(`_detect_tables`, y 0.32-0.76, confidence 0.94) was removed in commit `3e4326c` and `ENABLE_TABLE_EXTRACTOR=false` now returns `tables=[]`.
+Measured on 28 GT invoices (Fase 0): flag off = 0 documents with tables and 0 line items; flag on = tables on all 28 but only 50 of 77 GT rows.
+**Decision:** Do not restore the y-band heuristic (it was a page-band guess with a fixed 0.94 confidence). The default stays `false`
+until the type-aware path (Fase 4) passes the gate defined in K2 (val: no structural metric worse than the flag-off baseline and a clear
+improvement over the flag-on baseline). At that point the default becomes `true` and this decision is updated.
+`TABLE_PROVIDER_ORDER` default is `["pymupdf_find_tables", "token_grid"]` (config.py), not `["token_grid"]` as D-005 states.
+`PAGE_KIND_ROUTING` and `ENABLE_OCR_PREPROCESS` default to `false` as written in D-005.
 
