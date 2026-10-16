@@ -131,6 +131,8 @@ Ekstraksi tabel dan line item tidak andal karena:
 - [ ] Pre-label LLM dan gold nyata ditunda sampai inference DATASET stabil.
 - **Risk:** Belum ada dokumen nyata berformat gold yang sudah direview manusia;
   metrik evaluasi tidak boleh diklaim sebagai accuracy.
+- [x] Human-review, accuracy, and PaddleOCR Windows diagnostic protocol is
+  documented in `GOLD_REVIEW_AND_PADDLE_DIAGNOSTICS.md`.
 
 ### Langkah 9 — PP-Structure untuk Tabel pada Scan
 **File baru:** `app/services/candidates/tables/ppstructure_provider.py`

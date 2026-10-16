@@ -168,3 +168,10 @@ The negative PyMuPDF coordinate found in `invoice_14_variasi_1.pdf` is clipped
 at both vector-evidence and table-provider boundaries. It is covered by a
 regression test; corpus revalidation is required before publishing a new
 coverage count.
+
+## Review and diagnostic guide
+
+`GOLD_REVIEW_AND_PADDLE_DIAGNOSTICS.md` defines the reviewed-gold schema,
+manual review workflow, metric boundaries, Windows PaddleOCR diagnosis gate,
+batch protocol, and a transferable Gemini Antigravity handoff. It deliberately
+does not claim image OCR accuracy before a stable real-image inference exists.

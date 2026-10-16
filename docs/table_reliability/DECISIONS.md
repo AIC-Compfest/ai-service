@@ -322,3 +322,13 @@ document/vendor exception.
 **Decision:** Extraction evidence can create a draft only. `eval_tables.py`
 rejects any gold file without `reviewed=true` and reports exact normalized-row
 precision/recall/F1, not OCR or field accuracy.
+
+---
+
+## D-026: Accuracy Reporting Uses Reviewed Source-Grounded Gold
+
+**Date:** 2026-10-15
+**Decision:** Table presence, OCR confidence, and arithmetic consistency are
+reported independently from table/row/cell/OCR accuracy. Accuracy evaluation
+requires source-grounded, two-person reviewed gold and preserves illegible
+content rather than guessing it.
