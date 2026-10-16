@@ -19,9 +19,10 @@ class TokenGridTableProvider:
         self.abbreviations_path = abbreviations_path
         config = yaml.safe_load((Path(aliases_path).parent / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
         self.header_max_rows = int(config.get("token_grid", {}).get("header_max_rows", 1))
+        self._matchers: dict[str, FuzzyFieldMatcher] = {}  # one matcher per doc type; YAML is read once per type
 
     def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
-        matcher = FuzzyFieldMatcher(doc_type, self.aliases_path, self.abbreviations_path) if doc_type else None
+        matcher = self._matcher(doc_type)
         rows = _visual_rows(page.tokens)
         if len(rows) < 2:
             return []
@@ -38,6 +39,14 @@ class TokenGridTableProvider:
                 tables.append(table)
             start = end
         return tables
+
+
+    def _matcher(self, doc_type: str | None) -> FuzzyFieldMatcher | None:
+        if not doc_type:
+            return None
+        if doc_type not in self._matchers:
+            self._matchers[doc_type] = FuzzyFieldMatcher(doc_type, self.aliases_path, self.abbreviations_path)
+        return self._matchers[doc_type]
 
 
 def _build_table(rows, header_index, header_end, end, header_cells, page, document_id):

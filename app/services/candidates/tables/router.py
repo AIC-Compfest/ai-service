@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
+from functools import lru_cache
 from pathlib import Path
 from typing import Protocol
 
@@ -22,6 +23,11 @@ class TableProvider(Protocol):
     def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]: ...
 
 
+@lru_cache(maxsize=8)
+def _cached_extractor(config_dir: str, provider_order: tuple[str, ...]) -> "TableExtractor":
+    return TableExtractor.from_config(Path(config_dir), provider_order)
+
+
 class TableExtractor:
     """Select a provider by table structure, never merely provider order."""
 
@@ -36,6 +42,11 @@ class TableExtractor:
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
         return cls([PyMuPDFTableProvider(resolution.get("pymupdf")), provider]).ordered(provider_order)
+
+    @classmethod
+    def cached(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
+        """Process-wide extractor per (config dir, provider order): YAML is read once, not once per page (T-25)."""
+        return _cached_extractor(str(Path(config_dir).resolve()), tuple(provider_order))
 
     def ordered(self, provider_order: Iterable[str]) -> "TableExtractor":
         requested = list(provider_order)

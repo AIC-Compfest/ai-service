@@ -7,11 +7,19 @@ milik dirinya sendiri (port, log level, model path). Business threshold
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# <repo>/ai-service; independent of the process working directory (T-24, T-25).
+PACKAGE_ROOT = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+
+    # Directory that holds candidates/, training/ ... YAML. Override with CONFIG_DIR (e.g. in a container).
+    config_dir: Path = PACKAGE_ROOT / "config"
 
     app_env: str = "development"
     log_level: str = "INFO"
@@ -95,3 +103,8 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+
+def candidates_config_dir() -> Path:
+    """Directory of the candidate/table YAML files, resolved from settings (never from the CWD)."""
+    return Path(settings.config_dir) / "candidates"

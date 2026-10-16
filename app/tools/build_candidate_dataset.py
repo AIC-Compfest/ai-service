@@ -13,13 +13,14 @@ from app.services.candidates.line_items import LineItemBuilder
 from app.services.candidates.tables import TokenGridTableProvider
 from app.services.candidates.training_schema import classify_column, load_policy
 from app.services.candidates.version import candidate_pipeline_version
+from app.core.config import candidates_config_dir
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build deterministic candidate CSV datasets.")
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
-    parser.add_argument("--config", default="config/candidates", type=Path)
+    parser.add_argument("--config", default=candidates_config_dir(), type=Path)
     parser.add_argument("--limit", type=int)
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)

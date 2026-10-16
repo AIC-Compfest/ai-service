@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 
 from app.core.logging import get_logger
-from app.core.config import settings
+from app.core.config import candidates_config_dir, settings
 from ..preprocessing.image_preprocessor import ImagePreprocessor
 from ..preprocessing.ocr_prep import OCRPreprocessor, PreparedImage
 from ..preprocessing.page_kind import PageKind, PageKindResult, detect_page_kind
@@ -568,7 +568,7 @@ class OCREngine:
         from app.services.candidates.pipeline import table_evidence
         from app.services.candidates.tables import TableExtractor
         page = build_page({"page_number": page_number, "lines": [line.to_dict() for line in lines], "_source_page": source_page})
-        extractor = TableExtractor.from_config(Path("config/candidates"), settings.table_provider_order)
+        extractor = TableExtractor.cached(candidates_config_dir(), settings.table_provider_order)
         return [TableStructure(**_table_structure_args(table_evidence(table))) for table in extractor.extract(page, None, f"ocr-p{page_number}")]
 
 

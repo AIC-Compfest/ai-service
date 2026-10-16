@@ -6,14 +6,17 @@ from pathlib import Path
 import numpy as np
 import yaml
 
+from app.core.config import settings
+
 from .assemble import assemble
 from .bundle import save_bundle
 from .cv import make_group_folds
 from .metrics import binary_metrics
 
 
-def train_binary(candidate_dir: str | Path, output_dir: str | Path, doc_type: str, field: str, *, config_path: str | Path = "config/training/training.yaml") -> dict:
-    config = yaml.safe_load(Path(config_path).read_text(encoding="utf-8")) or {}
+def train_binary(candidate_dir: str | Path, output_dir: str | Path, doc_type: str, field: str, *, config_path: str | Path | None = None) -> dict:
+    config_path = Path(config_path) if config_path is not None else Path(settings.config_dir) / "training" / "training.yaml"
+    config = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
     data = assemble(candidate_dir, doc_type, field, include_ablate=config.get("feature_set", "full") == "full")
     try:
         from lightgbm import LGBMClassifier
