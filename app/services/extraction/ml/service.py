@@ -28,7 +28,9 @@ def _extractor(model_set_dir: str) -> MLFieldExtractor | None:
 
 
 def reset_cache() -> None:
-    _extractor.cache_clear()
+    clear = getattr(_extractor, "cache_clear", None)  # tests may replace _extractor with a plain function
+    if clear is not None:
+        clear()
 
 
 def run_ml_extraction(document_id: str, doc_type: str, evidence: dict[str, Any]) -> dict[str, Any]:
