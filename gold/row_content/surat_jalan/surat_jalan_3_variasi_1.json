@@ -1,0 +1,37 @@
+{
+  "document_id": "surat_jalan/surat_jalan_3_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.items",
+      "rows": [
+        [
+          "1",
+          "OFFICE COMPUTER SET",
+          "SET",
+          "8"
+        ],
+        [
+          "2",
+          "A4 COPY PAPER 80GSM",
+          "BOX",
+          "120"
+        ],
+        [
+          "3",
+          "LASER PRINTER HP-1200",
+          "UNIT",
+          "5"
+        ],
+        [
+          "4",
+          "USB FLASH DRIVE 256MB",
+          "PCS",
+          "40"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

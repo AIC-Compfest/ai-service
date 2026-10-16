@@ -1,0 +1,49 @@
+{
+  "document_id": "surat_jalan/surat_jalan_2_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Sofa lobby",
+          "12",
+          "set"
+        ],
+        [
+          "2",
+          "Lampu gantung dekoratif",
+          "18",
+          "pcs"
+        ],
+        [
+          "3",
+          "Material finishing",
+          "1",
+          "set"
+        ],
+        [
+          "4",
+          "Karpet ruangan",
+          "40",
+          "roll"
+        ],
+        [
+          "5",
+          "Panel dinding akustik",
+          "95",
+          "lembar"
+        ],
+        [
+          "6",
+          "Furnitur kamar tidur",
+          "1",
+          "set"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

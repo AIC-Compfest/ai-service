@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_4_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.berkas",
+      "rows": [
+        [
+          "1",
+          "Ijasah SMA asli",
+          "1"
+        ],
+        [
+          "2",
+          "KTP asli",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

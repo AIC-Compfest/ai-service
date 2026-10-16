@@ -1,0 +1,15 @@
+# Mapping of ground-truth line-item key names (4 GT families, ~43 invoice keys + other types) to canonical fields.
+# Used only for inventory/reporting and for deciding which GT values are amounts. It is SHAPE knowledge, not
+# vendor rules. A key listed under two canonical fields is ambiguous and reported as such.
+canonical_fields:
+  line_number: [no, item_no, stop_number]
+  description: [description, deskripsi, deskripsi_dokumen, description_detail, nama, nama_barang, nama_produk, deskripsi_produk, item, jenis_barang, material, muatan, spesifikasi, keterangan, calc, name, type, tipe]
+  quantity: [quantity, qty, kuantitas, jumlah_barang, banyaknya, jml, jumlah, units, ondol_qty, pasir_qty, jumlah_diretur]
+  unit: [unit, satuan, sat, uom, ukuran, jenis, merk]
+  weight: [weight_kg, net_weight_kg, berat, jml_berat]
+  unit_price: [unit_price, harga, harga_satuan, harga_satuan_rp, harga_unit, rate, per_usd]
+  line_total: [amount, total, line_total, amount_usd, cost_usd, subtotal_usd, ondol_value, pasir_value]
+  discount: [discount_percent]
+  date: [date, date_text, time]
+  code: [kode_barang, sku, kode_sku, pickup_del_number, company_address]
+  destination: [tujuan]

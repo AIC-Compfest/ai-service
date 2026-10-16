@@ -1,0 +1,28 @@
+{
+  "document_id": "pod/pod_4_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.berkas",
+      "rows": [
+        [
+          "1",
+          "Sertifikat Hak Milik (SHM) No. 4521/Cileunyi Asli",
+          "1"
+        ],
+        [
+          "2",
+          "Surat Pemberitahuan Pajak Terhutang (SPPT PBB) Tahun 2024",
+          "1"
+        ],
+        [
+          "3",
+          "Surat Setoran Pajak (SSP) PPH & BPHTB Asli",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

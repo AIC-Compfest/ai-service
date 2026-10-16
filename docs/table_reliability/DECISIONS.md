@@ -332,3 +332,40 @@ precision/recall/F1, not OCR or field accuracy.
 reported independently from table/row/cell/OCR accuracy. Accuracy evaluation
 requires source-grounded, two-person reviewed gold and preserves illegible
 content rather than guessing it.
+
+---
+
+## D-027: Canonical Dataset Is `DATASET/Dataset` (supersedes D-009)
+
+**Date:** 2026-10-16
+**Decision:** The canonical real-data population is `DATASET/Dataset/{invoice,PoD,rate card,surat jalan}/{pdf,image}`,
+declared in `gold/manifest.json` (path relative to the dataset root, SHA-256, type, template, variation, split, GT status).
+The four-file allow-list of D-009 is removed from `scripts/benchmark_tables.py`. Files absent from disk are reported, never substituted.
+The older copies directly under `DATASET/` are not used (SHA-256 comparison: identical except 2 PoD files). `ori/` PDFs and the 52 template
+images have no GT and are `smoke` only. Ground truth is SYNTHETIC; no metric derived from it is a human-gold accuracy claim.
+
+## D-028: Splits Are Template-Level and Deterministic
+
+**Date:** 2026-10-16
+**Decision:** `split = sha256("<doc_type>:<template>") % 100`: < 20 holdout, < 50 val, else dev. Variation 1 and 2 of one template never
+straddle splits. Thresholds and design decisions use dev, confirmed on val. The holdout is run once at the end of selected phases; the run
+counter is recorded in each report (run 1 = Fase 1 baseline, aggregate only).
+
+## D-029: Structural Gold Sources and Their Limits
+
+**Date:** 2026-10-16
+**Decision:** Three gold sources, never mixed in one number without a label:
+1. `constructed_exact` (`app/tools/table_eval/synthetic.py`): gold exact by construction, 18 fixtures, 4 multi-table pages.
+2. `synthetic_grounded` (`app/tools/table_eval/grounding.py`): derived from GT values + PDF words and drawn ruling lines; `reviewed=false`;
+   independent of the production providers (no imports). It is a DRAFT: columns without a GT key and tables without ruling may be incomplete.
+3. Human gold: not available. The owner spot-check package is `out/review/gold_check/` (non-blocking).
+Evaluation of unreviewed gold requires `--allow-unreviewed` and every report is stamped "bukan gold manusia".
+
+## D-030: Provisional Targets (K4) After Baseline
+
+**Date:** 2026-10-16
+**Decision:** K4 targets stay as set by the owner (digital PDF, holdout): detection F1 >= 0.90, header exact >= 0.90, column count exact >= 0.90,
+row count exact >= 0.85, cell F1 >= 0.85, amount recall (in matched table) >= 0.95, summary separation >= 0.98, multi-table pages fully correct
+>= 0.80 (100% on non-adversarial constructed fixtures). Baseline (dev+val, best provider): detection F1 0.44, header exact 0.69, rows exact 0.66,
+cell F1 0.35-0.44, amount@table 0.49, multi-table 1/4 on fixtures. The gap is large; no target is relaxed. Raster targets stay open until Paddle is stable.
+

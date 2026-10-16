@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_2_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.rincian_barang",
+      "rows": [
+        [
+          "1",
+          "Kardus Kemasan Polos Besar",
+          "500 Pcs"
+        ],
+        [
+          "2",
+          "Lakban Coklat 2 Inch",
+          "50 Roll"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

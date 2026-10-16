@@ -1,0 +1,397 @@
+{
+  "document_id": "invoice/invoice_1_variasi_2",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_1_variasi_2.pdf",
+    "sha256": "7daaeab87e0e5085ac7ef861da5d1cc9bfa7a256727d3116a05d7087caa03560",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_1_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.06,
+            0.443269,
+            0.94,
+            0.541409
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Jenis Jasa Service Type",
+              "normalized_text": "Jenis Jasa Service Type",
+              "bbox_norm": [
+                0.06,
+                0.443269,
+                0.130955,
+                0.468439
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Deskripsi Jasa / Produk Product / Service Description",
+              "normalized_text": "Deskripsi Jasa / Produk Product / Service Description",
+              "bbox_norm": [
+                0.33,
+                0.443269,
+                0.490413,
+                0.468439
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Qty / Pg Jmlh / Lbr",
+              "normalized_text": "Qty / Pg Jmlh / Lbr",
+              "bbox_norm": [
+                0.59,
+                0.443269,
+                0.644959,
+                0.468439
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Unit Price Hrga Lmbr",
+              "normalized_text": "Unit Price Hrga Lmbr",
+              "bbox_norm": [
+                0.679,
+                0.443269,
+                0.73735,
+                0.468439
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Jumlah Harga Total Price",
+              "normalized_text": "Jumlah Harga Total Price",
+              "bbox_norm": [
+                0.813,
+                0.443269,
+                0.895663,
+                0.468439
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Jasa Desain Website",
+                  "normalized_text": "Jasa Desain Website",
+                  "bbox_norm": [
+                    0.06,
+                    0.48167,
+                    0.172704,
+                    0.493328
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Company Profile/5 Halaman",
+                  "normalized_text": "Company Profile/5 Halaman",
+                  "bbox_norm": [
+                    0.33,
+                    0.48167,
+                    0.480048,
+                    0.493328
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.622664,
+                    0.48167,
+                    0.629336,
+                    0.493328
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 12.000.000",
+                  "normalized_text": "Rp 12.000.000",
+                  "bbox_norm": [
+                    0.71728,
+                    0.48167,
+                    0.796,
+                    0.493328
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 12.000.000",
+                  "normalized_text": "Rp 12.000.000",
+                  "bbox_norm": [
+                    0.86128,
+                    0.48167,
+                    0.94,
+                    0.493328
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Hosting & Domain",
+                  "normalized_text": "Hosting & Domain",
+                  "bbox_norm": [
+                    0.06,
+                    0.50571,
+                    0.156696,
+                    0.517368
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Paket Bisnis/1 Tahun",
+                  "normalized_text": "Paket Bisnis/1 Tahun",
+                  "bbox_norm": [
+                    0.33,
+                    0.50571,
+                    0.443388,
+                    0.517368
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.622664,
+                    0.50571,
+                    0.629336,
+                    0.517368
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 2.400.000",
+                  "normalized_text": "Rp 2.400.000",
+                  "bbox_norm": [
+                    0.723952,
+                    0.50571,
+                    0.796,
+                    0.517368
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 2.400.000",
+                  "normalized_text": "Rp 2.400.000",
+                  "bbox_norm": [
+                    0.867952,
+                    0.50571,
+                    0.94,
+                    0.517368
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Maintenance Bulanan",
+                  "normalized_text": "Maintenance Bulanan",
+                  "bbox_norm": [
+                    0.06,
+                    0.529751,
+                    0.176064,
+                    0.541409
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Basic/3 Bulan",
+                  "normalized_text": "Basic/3 Bulan",
+                  "bbox_norm": [
+                    0.33,
+                    0.529751,
+                    0.403368,
+                    0.541409
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.622664,
+                    0.529751,
+                    0.629336,
+                    0.541409
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 500.000",
+                  "normalized_text": "Rp 500.000",
+                  "bbox_norm": [
+                    0.73396,
+                    0.529751,
+                    0.796,
+                    0.541409
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 1.500.000",
+                  "normalized_text": "Rp 1.500.000",
+                  "bbox_norm": [
+                    0.867952,
+                    0.529751,
+                    0.94,
+                    0.541409
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Subtotal",
+                  "normalized_text": "Subtotal",
+                  "bbox_norm": [
+                    0.679,
+                    0.553572,
+                    0.729,
+                    0.565742
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 15,900,000.00",
+                  "normalized_text": "Rp 15,900,000.00",
+                  "bbox_norm": [
+                    0.839938,
+                    0.553572,
+                    0.94,
+                    0.565742
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pajak",
+                  "normalized_text": "Pajak",
+                  "bbox_norm": [
+                    0.679,
+                    0.577612,
+                    0.711663,
+                    0.589783
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 1,749,000.00",
+                  "normalized_text": "Rp 1,749,000.00",
+                  "bbox_norm": [
+                    0.846888,
+                    0.577612,
+                    0.94,
+                    0.589783
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s3",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Diskon",
+                  "normalized_text": "Diskon",
+                  "bbox_norm": [
+                    0.679,
+                    0.601653,
+                    0.720675,
+                    0.613823
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 500000",
+                  "normalized_text": "Rp 500000",
+                  "bbox_norm": [
+                    0.878163,
+                    0.601653,
+                    0.94,
+                    0.613823
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

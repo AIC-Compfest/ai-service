@@ -1,0 +1,39 @@
+{
+  "document_id": "rate_card/rate_card_7_variasi_2",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "POS Touchscreen Terminal",
+          "Intel Core i5, RAM 16GB, SSD 512GB, 15\" Capacitive Touch, Built-in Thermal Printer",
+          "12.500.000",
+          "10",
+          "125.000.000"
+        ],
+        [
+          "2",
+          "Mini PC Office Station",
+          "Intel Core i3 Gen 12, RAM 8GB, SSD 256GB, 22\" FHD Monitor, Windows 11 Home",
+          "6.500.000",
+          "10",
+          "65.000.000"
+        ],
+        [
+          "3",
+          "Barpad / Tablet Inventory",
+          "Octa-Core Processor, RAM 6GB, ROM 128GB, Barcode Scanner 2D, Rugged Case",
+          "3.500.000",
+          "10",
+          "35.000.000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "Rp225.000.000"
+  ]
+}

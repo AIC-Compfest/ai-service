@@ -1,0 +1,44 @@
+{
+  "document_id": "invoice/invoice_16_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Dried Seaweed Eucheuma Grade 1, Moisture 14%",
+          "500",
+          "40",
+          "20000",
+          "1.85",
+          "37000"
+        ],
+        [
+          "2",
+          "Dried Sea Cucumber Grade A, Moisture 12%",
+          "40",
+          "25",
+          "1000",
+          "42",
+          "42000"
+        ],
+        [
+          "3",
+          "Cashew Nuts W320 Grade 1, Moisture 5%",
+          "250",
+          "25",
+          "6250",
+          "6.8",
+          "42500"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "790",
+    "27250",
+    "121500"
+  ]
+}

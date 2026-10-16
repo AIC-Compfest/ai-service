@@ -1,0 +1,474 @@
+{
+  "document_id": "rate_card/rate_card_5_variasi_2",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_5_variasi_2.pdf",
+    "sha256": "ff97d954796dfeea1d3d04a0ba1aa4ffa792ddce96751d4c743dba3dce11924b",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_5_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.102944,
+            0.271932,
+            0.814956,
+            0.44658
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.102944,
+                0.271932,
+                0.122547,
+                0.28758
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.269596,
+                0.271932,
+                0.364391,
+                0.28758
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.560859,
+                0.271932,
+                0.612344,
+                0.28758
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Harga",
+              "normalized_text": "Harga",
+              "bbox_norm": [
+                0.773279,
+                0.271932,
+                0.814956,
+                0.28758
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.108657,
+                    0.294602,
+                    0.116833,
+                    0.310216
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Sarung Tangan Kulit Las Argon",
+                  "normalized_text": "Sarung Tangan Kulit Las Argon",
+                  "bbox_norm": [
+                    0.147059,
+                    0.294602,
+                    0.352235,
+                    0.310216
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 50 pasang",
+                  "normalized_text": "Minimal 50 pasang",
+                  "bbox_norm": [
+                    0.524895,
+                    0.294602,
+                    0.648307,
+                    0.310216
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 45.000 / pasang",
+                  "normalized_text": "Rp 45.000 / pasang",
+                  "bbox_norm": [
+                    0.686275,
+                    0.294602,
+                    0.814628,
+                    0.310216
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.108657,
+                    0.31733,
+                    0.116833,
+                    0.332943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Sarung Tangan Kulit Suede Kombinasi",
+                  "normalized_text": "Sarung Tangan Kulit Suede Kombinasi",
+                  "bbox_norm": [
+                    0.147059,
+                    0.31733,
+                    0.400456,
+                    0.332943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 50 pasang",
+                  "normalized_text": "Minimal 50 pasang",
+                  "bbox_norm": [
+                    0.524895,
+                    0.31733,
+                    0.648307,
+                    0.332943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 48.000 / pasang",
+                  "normalized_text": "Rp 48.000 / pasang",
+                  "bbox_norm": [
+                    0.686275,
+                    0.31733,
+                    0.814628,
+                    0.332943
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.108657,
+                    0.340057,
+                    0.116833,
+                    0.35567
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Apron Kulit Sapi Full Dada (Welder)",
+                  "normalized_text": "Apron Kulit Sapi Full Dada (Welder)",
+                  "bbox_norm": [
+                    0.147059,
+                    0.340057,
+                    0.379971,
+                    0.35567
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 20 pcs",
+                  "normalized_text": "Minimal 20 pcs",
+                  "bbox_norm": [
+                    0.537572,
+                    0.340057,
+                    0.635631,
+                    0.35567
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 125.000 / pcs",
+                  "normalized_text": "Rp 125.000 / pcs",
+                  "bbox_norm": [
+                    0.686275,
+                    0.340057,
+                    0.797451,
+                    0.35567
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.108657,
+                    0.362784,
+                    0.116833,
+                    0.378398
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Kacamata Safety Google Clear Anti Fog",
+                  "normalized_text": "Kacamata Safety Google Clear Anti Fog",
+                  "bbox_norm": [
+                    0.147059,
+                    0.362784,
+                    0.408618,
+                    0.378398
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 100 pcs",
+                  "normalized_text": "Minimal 100 pcs",
+                  "bbox_norm": [
+                    0.533484,
+                    0.362784,
+                    0.639719,
+                    0.378398
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 18.500 / pcs",
+                  "normalized_text": "Rp 18.500 / pcs",
+                  "bbox_norm": [
+                    0.686275,
+                    0.362784,
+                    0.789275,
+                    0.378398
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.108657,
+                    0.385511,
+                    0.116833,
+                    0.401125
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Ear Plug Peredam Suara Industri",
+                  "normalized_text": "Ear Plug Peredam Suara Industri",
+                  "bbox_norm": [
+                    0.147059,
+                    0.385511,
+                    0.362838,
+                    0.401125
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 200 box",
+                  "normalized_text": "Minimal 200 box",
+                  "bbox_norm": [
+                    0.533072,
+                    0.385511,
+                    0.640131,
+                    0.401125
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 35.000 / box",
+                  "normalized_text": "Rp 35.000 / box",
+                  "bbox_norm": [
+                    0.686275,
+                    0.385511,
+                    0.790098,
+                    0.401125
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.108657,
+                    0.408239,
+                    0.116833,
+                    0.423852
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Majun Benang Kaos Super",
+                  "normalized_text": "Majun Benang Kaos Super",
+                  "bbox_norm": [
+                    0.147059,
+                    0.408239,
+                    0.322809,
+                    0.423852
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 150 kg",
+                  "normalized_text": "Minimal 150 kg",
+                  "bbox_norm": [
+                    0.53716,
+                    0.408239,
+                    0.636042,
+                    0.423852
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 9.000 / kg",
+                  "normalized_text": "Rp 9.000 / kg",
+                  "bbox_norm": [
+                    0.686275,
+                    0.408239,
+                    0.773745,
+                    0.423852
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r7",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "7",
+                  "normalized_text": "7",
+                  "bbox_norm": [
+                    0.108657,
+                    0.430966,
+                    0.116833,
+                    0.44658
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Masker Respirator Half Mask Single Cartridge",
+                  "normalized_text": "Masker Respirator Half Mask Single Cartridge",
+                  "bbox_norm": [
+                    0.147059,
+                    0.430966,
+                    0.446147,
+                    0.44658
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Minimal 30 pcs",
+                  "normalized_text": "Minimal 30 pcs",
+                  "bbox_norm": [
+                    0.537572,
+                    0.430966,
+                    0.635631,
+                    0.44658
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 85.000 / pcs",
+                  "normalized_text": "Rp 85.000 / pcs",
+                  "bbox_norm": [
+                    0.686275,
+                    0.430966,
+                    0.789275,
+                    0.44658
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "7/7",
+            "columns": 4
+          }
+        }
+      ]
+    }
+  ]
+}

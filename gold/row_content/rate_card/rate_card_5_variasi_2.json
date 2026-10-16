@@ -1,0 +1,55 @@
+{
+  "document_id": "rate_card/rate_card_5_variasi_2",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "Sarung Tangan Kulit Las Argon",
+          "Minimal 50 pasang",
+          "Rp 45.000 / pasang"
+        ],
+        [
+          "2",
+          "Sarung Tangan Kulit Suede Kombinasi",
+          "Minimal 50 pasang",
+          "Rp 48.000 / pasang"
+        ],
+        [
+          "3",
+          "Apron Kulit Sapi Full Dada (Welder)",
+          "Minimal 20 pcs",
+          "Rp 125.000 / pcs"
+        ],
+        [
+          "4",
+          "Kacamata Safety Google Clear Anti Fog",
+          "Minimal 100 pcs",
+          "Rp 18.500 / pcs"
+        ],
+        [
+          "5",
+          "Ear Plug Peredam Suara Industri",
+          "Minimal 200 box",
+          "Rp 35.000 / box"
+        ],
+        [
+          "6",
+          "Majun Benang Kaos Super",
+          "Minimal 150 kg",
+          "Rp 9.000 / kg"
+        ],
+        [
+          "7",
+          "Masker Respirator Half Mask Single Cartridge",
+          "Minimal 30 pcs",
+          "Rp 85.000 / pcs"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

@@ -1,0 +1,210 @@
+{
+  "document_id": "pod/pod_4_variasi_2",
+  "source": {
+    "relative_path": "PoD/pdf/PoD_4_variasi_2.pdf",
+    "sha256": "efc9c7292bded6287202f164c7ab94ced17c3a13d3c8127e666deac60292a0cc",
+    "source_kind": "pdf"
+  },
+  "document_type": "POD",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "pod/pod_4_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.098228,
+            0.400646,
+            0.852786,
+            0.498094
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.098228,
+                0.400646,
+                0.120621,
+                0.417002
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Jenis Barang",
+              "normalized_text": "Jenis Barang",
+              "bbox_norm": [
+                0.380056,
+                0.400646,
+                0.485553,
+                0.417002
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.793973,
+                0.400646,
+                0.852786,
+                0.417002
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.104988,
+                    0.427951,
+                    0.113861,
+                    0.443455
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Sertifikat Hak Milik (SHM) No. 4521/Cileunyi Asli",
+                  "normalized_text": "Sertifikat Hak Milik (SHM) No. 4521/Cileunyi Asli",
+                  "bbox_norm": [
+                    0.153102,
+                    0.427951,
+                    0.49539,
+                    0.443455
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.818943,
+                    0.427951,
+                    0.827816,
+                    0.443455
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.104988,
+                    0.45527,
+                    0.113861,
+                    0.470775
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Surat Pemberitahuan Pajak Terhutang (SPPT PBB) Tahun 2024",
+                  "normalized_text": "Surat Pemberitahuan Pajak Terhutang (SPPT PBB) Tahun 2024",
+                  "bbox_norm": [
+                    0.153102,
+                    0.45527,
+                    0.608157,
+                    0.470775
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.818943,
+                    0.45527,
+                    0.827816,
+                    0.470775
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.104988,
+                    0.48259,
+                    0.113861,
+                    0.498094
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Surat Setoran Pajak (SSP) PPH & BPHTB Asli",
+                  "normalized_text": "Surat Setoran Pajak (SSP) PPH & BPHTB Asli",
+                  "bbox_norm": [
+                    0.153102,
+                    0.48259,
+                    0.483038,
+                    0.498094
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.818943,
+                    0.48259,
+                    0.827816,
+                    0.498094
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

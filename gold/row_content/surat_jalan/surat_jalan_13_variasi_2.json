@@ -1,0 +1,55 @@
+{
+  "document_id": "surat_jalan/surat_jalan_13_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Router TP-Link",
+          "40",
+          "unit",
+          "Archer C6, dual band"
+        ],
+        [
+          "2",
+          "Switch Hub 16 Port",
+          "15",
+          "unit",
+          "gigabit, metal case"
+        ],
+        [
+          "3",
+          "Kabel LAN Cat6",
+          "300",
+          "meter",
+          "warna biru"
+        ],
+        [
+          "4",
+          "CCTV Hikvision",
+          "24",
+          "unit",
+          "outdoor, 2 MP"
+        ],
+        [
+          "5",
+          "Hard Disk External",
+          "50",
+          "pcs",
+          "1 TB, USB 3.0"
+        ],
+        [
+          "6",
+          "Power Bank Anker",
+          "80",
+          "pcs",
+          "kapasitas 10000 mAh"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

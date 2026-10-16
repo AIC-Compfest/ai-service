@@ -1,0 +1,41 @@
+{
+  "document_id": "surat_jalan/surat_jalan_8_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Kertas A4 80gram",
+          "Rim",
+          "20",
+          "48.000"
+        ],
+        [
+          "2",
+          "Map folder",
+          "Pack",
+          "25",
+          "12.500"
+        ],
+        [
+          "3",
+          "Spidol permanen",
+          "Lusin",
+          "8",
+          "36.000"
+        ],
+        [
+          "4",
+          "Stapler besar",
+          "Buah",
+          "10",
+          "22.000"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

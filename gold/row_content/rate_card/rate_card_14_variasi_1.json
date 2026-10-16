@@ -1,0 +1,18 @@
+{
+  "document_id": "rate_card/rate_card_14_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.payment.items",
+      "rows": [
+        [
+          "Line Haul",
+          "Flat Rate",
+          "725.0"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

@@ -1,0 +1,48 @@
+{
+  "document_id": "surat_jalan/surat_jalan_13_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Laptop Asus",
+          "25",
+          "unit",
+          "seri Vivobook 14 tahun 2025"
+        ],
+        [
+          "2",
+          "Printer Canon",
+          "18",
+          "unit",
+          "Pixma G3010, tangki tinta"
+        ],
+        [
+          "3",
+          "Kabel HDMI",
+          "120",
+          "pcs",
+          "panjang 3 meter"
+        ],
+        [
+          "4",
+          "Keyboard Logitech",
+          "60",
+          "pcs",
+          "tipe K120, USB"
+        ],
+        [
+          "5",
+          "Webcam Full HD",
+          "35",
+          "pcs",
+          "1080p dengan mikrofon"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

@@ -1,0 +1,39 @@
+{
+  "document_id": "surat_jalan/surat_jalan_10_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Pulpen Gel 0.5mm Biru",
+          "12"
+        ],
+        [
+          "2",
+          "Buku Tulis Sinar Dunia",
+          "20",
+          "Isi 38 lembar"
+        ],
+        [
+          "3",
+          "Penghapus Putih",
+          "10"
+        ],
+        [
+          "4",
+          "Stapler Kecil",
+          "4"
+        ],
+        [
+          "5",
+          "Isi Staples No.10",
+          "15"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

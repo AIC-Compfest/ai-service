@@ -1,0 +1,282 @@
+{
+  "document_id": "surat_jalan/surat_jalan_15_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_15_variasi_2.pdf",
+    "sha256": "38fcfd2dba19afd95b0a23c84548a43373292dbe4dcfb37912cd437459ee31eb",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_15_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.13521,
+            0.272309,
+            0.715005,
+            0.422837
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Banyaknya",
+              "normalized_text": "Banyaknya",
+              "bbox_norm": [
+                0.13521,
+                0.272309,
+                0.21563,
+                0.288516
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.566456,
+                0.272309,
+                0.664636,
+                0.288516
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5 Buah",
+                  "normalized_text": "5 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.291731,
+                    0.199554,
+                    0.307902
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Tempat Tidur Pasien 2 Crank",
+                  "normalized_text": "Tempat Tidur Pasien 2 Crank",
+                  "bbox_norm": [
+                    0.516087,
+                    0.291731,
+                    0.715005,
+                    0.307902
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "8 Buah",
+                  "normalized_text": "8 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.310887,
+                    0.199554,
+                    0.327058
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Kursi Tunggu 3 Dudukan",
+                  "normalized_text": "Kursi Tunggu 3 Dudukan",
+                  "bbox_norm": [
+                    0.531311,
+                    0.310887,
+                    0.699782,
+                    0.327058
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3 Buah",
+                  "normalized_text": "3 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.330043,
+                    0.199554,
+                    0.346214
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Troli Medis Stainless",
+                  "normalized_text": "Troli Medis Stainless",
+                  "bbox_norm": [
+                    0.5453,
+                    0.330043,
+                    0.685792,
+                    0.346214
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1 Buah",
+                  "normalized_text": "1 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.349199,
+                    0.199554,
+                    0.36537
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Kulkas Vaksin 100 Liter",
+                  "normalized_text": "Kulkas Vaksin 100 Liter",
+                  "bbox_norm": [
+                    0.535971,
+                    0.349199,
+                    0.695121,
+                    0.36537
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "6 Buah",
+                  "normalized_text": "6 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.368354,
+                    0.199554,
+                    0.384526
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Lemari Obat Kaca",
+                  "normalized_text": "Lemari Obat Kaca",
+                  "bbox_norm": [
+                    0.554172,
+                    0.368354,
+                    0.67692,
+                    0.384526
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2 Buah",
+                  "normalized_text": "2 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.38751,
+                    0.199554,
+                    0.403682
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "AC Split 1 PK Panasonic",
+                  "normalized_text": "AC Split 1 PK Panasonic",
+                  "bbox_norm": [
+                    0.531737,
+                    0.38751,
+                    0.699355,
+                    0.403682
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r7",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1 Buah",
+                  "normalized_text": "1 Buah",
+                  "bbox_norm": [
+                    0.151287,
+                    0.406666,
+                    0.199554,
+                    0.422837
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Televisi LED 43 Inchi",
+                  "normalized_text": "Televisi LED 43 Inchi",
+                  "bbox_norm": [
+                    0.544021,
+                    0.406666,
+                    0.687071,
+                    0.422837
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "7/7",
+            "columns": 2
+          }
+        }
+      ]
+    }
+  ]
+}

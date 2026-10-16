@@ -1,0 +1,35 @@
+{
+  "document_id": "invoice/invoice_16_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Cloves Whole Grade A, Moisture 12%",
+          "300",
+          "50",
+          "15000",
+          "8.4",
+          "126000"
+        ],
+        [
+          "2",
+          "Nutmeg Whole ABCD Grade, Moisture 9%",
+          "150",
+          "40",
+          "6000",
+          "9.2",
+          "55200"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "450",
+    "21000",
+    "181200"
+  ]
+}

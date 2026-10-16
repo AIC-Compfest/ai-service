@@ -1,0 +1,51 @@
+{
+  "document_id": "surat_jalan/surat_jalan_5_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Kabel HDMI 2 meter",
+          "4",
+          "0.15",
+          "0.6"
+        ],
+        [
+          "2",
+          "Adaptor Charger 20W",
+          "2",
+          "0.2",
+          "0.4",
+          "Fragile"
+        ],
+        [
+          "3",
+          "Power Bank 10000mAh",
+          "3",
+          "0.25",
+          "0.75"
+        ],
+        [
+          "4",
+          "Headset Bluetooth",
+          "1",
+          "0.3",
+          "0.3"
+        ],
+        [
+          "5",
+          "Mouse Wireless",
+          "5",
+          "0.1",
+          "0.5"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "2.55 Kg"
+  ]
+}

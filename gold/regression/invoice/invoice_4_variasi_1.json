@@ -1,0 +1,589 @@
+{
+  "document_id": "invoice/invoice_4_variasi_1",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_4_variasi_1.pdf",
+    "sha256": "2d6788c260b6e68e6456a69e72ee017d609119e8804b4e09ec1b93689d9f4525",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_4_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.057407,
+            0.348106,
+            0.935185,
+            0.515493
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Email: sinarmotor@gmail.com Produk",
+              "normalized_text": "Email: sinarmotor@gmail.com Produk",
+              "bbox_norm": [
+                0.057407,
+                0.348106,
+                0.261366,
+                0.401871
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Deskripsi",
+              "normalized_text": "Deskripsi",
+              "bbox_norm": [
+                0.255556,
+                0.386545,
+                0.32642,
+                0.401871
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.440584,
+                0.386545,
+                0.466824,
+                0.401871
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Email: Harga",
+              "normalized_text": "Email: Harga",
+              "bbox_norm": [
+                0.524918,
+                0.348106,
+                0.610034,
+                0.401871
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "purchasing@armadalogistik.co.id Disc Pajak PPN",
+              "normalized_text": "purchasing@armadalogistik.co.id Disc Pajak PPN",
+              "bbox_norm": [
+                0.614281,
+                0.348106,
+                0.839507,
+                0.429728
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "Jumlah 10%",
+              "normalized_text": "Jumlah 10%",
+              "bbox_norm": [
+                0.742359,
+                0.386545,
+                0.90811,
+                0.429728
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Ganti oli mesin",
+                  "normalized_text": "Ganti oli mesin",
+                  "bbox_norm": [
+                    0.07037,
+                    0.422742,
+                    0.171402,
+                    0.437584
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Shell Helix 5W-30 (4 liter)",
+                  "normalized_text": "Shell Helix 5W-30 (4 liter)",
+                  "bbox_norm": [
+                    0.255556,
+                    0.422742,
+                    0.428729,
+                    0.437584
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.445209,
+                    0.422742,
+                    0.462198,
+                    0.437584
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "450,000.00",
+                  "normalized_text": "450,000.00",
+                  "bbox_norm": [
+                    0.52355,
+                    0.422742,
+                    0.6,
+                    0.437584
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "0% INCLUSIVE PPN",
+                  "normalized_text": "0% INCLUSIVE PPN",
+                  "bbox_norm": [
+                    0.627851,
+                    0.422742,
+                    0.78014,
+                    0.472938
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "5,400,000.00 10%",
+                  "normalized_text": "5,400,000.00 10%",
+                  "bbox_norm": [
+                    0.742359,
+                    0.422742,
+                    0.935185,
+                    0.472938
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Kampas rem depan",
+                  "normalized_text": "Kampas rem depan",
+                  "bbox_norm": [
+                    0.07037,
+                    0.465951,
+                    0.203684,
+                    0.480794
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Original Toyota, set",
+                  "normalized_text": "Original Toyota, set",
+                  "bbox_norm": [
+                    0.255556,
+                    0.465951,
+                    0.388014,
+                    0.480794
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.449457,
+                    0.465951,
+                    0.457951,
+                    0.480794
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "850,000.00",
+                  "normalized_text": "850,000.00",
+                  "bbox_norm": [
+                    0.52355,
+                    0.465951,
+                    0.6,
+                    0.480794
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "5% INCLUSIVE",
+                  "normalized_text": "5% INCLUSIVE",
+                  "bbox_norm": [
+                    0.627851,
+                    0.465951,
+                    0.78014,
+                    0.48865
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "4,845,000.00",
+                  "normalized_text": "4,845,000.00",
+                  "bbox_norm": [
+                    0.845994,
+                    0.465951,
+                    0.935185,
+                    0.480794
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Jasa service berkala",
+                  "normalized_text": "Jasa service berkala",
+                  "bbox_norm": [
+                    0.07037,
+                    0.50065,
+                    0.209612,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Tune up 10.000 km",
+                  "normalized_text": "Tune up 10.000 km",
+                  "bbox_norm": [
+                    0.255556,
+                    0.50065,
+                    0.387189,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "8",
+                  "normalized_text": "8",
+                  "bbox_norm": [
+                    0.449457,
+                    0.50065,
+                    0.457951,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "300,000.00",
+                  "normalized_text": "300,000.00",
+                  "bbox_norm": [
+                    0.52355,
+                    0.50065,
+                    0.6,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "0% -",
+                  "normalized_text": "0% -",
+                  "bbox_norm": [
+                    0.627851,
+                    0.50065,
+                    0.742359,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "2,400,000.00",
+                  "normalized_text": "2,400,000.00",
+                  "bbox_norm": [
+                    0.845994,
+                    0.50065,
+                    0.935185,
+                    0.515493
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Subtotal",
+                  "normalized_text": "Subtotal",
+                  "bbox_norm": [
+                    0.618519,
+                    0.549806,
+                    0.67963,
+                    0.564681
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 12,900,000.00",
+                  "normalized_text": "Rp 12,900,000.00",
+                  "bbox_norm": [
+                    0.813727,
+                    0.549752,
+                    0.935185,
+                    0.564595
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Keterangan",
+                  "normalized_text": "Keterangan",
+                  "bbox_norm": [
+                    0.07037,
+                    0.575097,
+                    0.15696,
+                    0.590423
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Total Diskon",
+                  "normalized_text": "Total Diskon",
+                  "bbox_norm": [
+                    0.587948,
+                    0.56912,
+                    0.67963,
+                    0.583995
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rp (255,000.00)",
+                  "normalized_text": "Rp (255,000.00)",
+                  "bbox_norm": [
+                    0.824788,
+                    0.569066,
+                    0.935185,
+                    0.583909
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s3",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Diskon Tambahan",
+                  "normalized_text": "Diskon Tambahan",
+                  "bbox_norm": [
+                    0.548042,
+                    0.588433,
+                    0.67963,
+                    0.603308
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp (0.00)",
+                  "normalized_text": "Rp (0.00)",
+                  "bbox_norm": [
+                    0.871507,
+                    0.588379,
+                    0.935185,
+                    0.603222
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s4",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pajak",
+                  "normalized_text": "Pajak",
+                  "bbox_norm": [
+                    0.639709,
+                    0.607747,
+                    0.67963,
+                    0.622622
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 0.00",
+                  "normalized_text": "Rp 0.00",
+                  "bbox_norm": [
+                    0.881682,
+                    0.607693,
+                    0.935185,
+                    0.622535
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s5",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "066.7788.990 a.n. Bengkel Sinar Motor.",
+                  "normalized_text": "066.7788.990 a.n. Bengkel Sinar Motor.",
+                  "bbox_norm": [
+                    0.07037,
+                    0.628316,
+                    0.340436,
+                    0.643158
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.643131,
+                    0.62706,
+                    0.67963,
+                    0.641935
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rp 12,645,000.00",
+                  "normalized_text": "Rp 12,645,000.00",
+                  "bbox_norm": [
+                    0.813727,
+                    0.627006,
+                    0.935185,
+                    0.641849
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s6",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pajak Included",
+                  "normalized_text": "Pajak Included",
+                  "bbox_norm": [
+                    0.572639,
+                    0.646374,
+                    0.67963,
+                    0.661249
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 931,363.64",
+                  "normalized_text": "Rp 931,363.64",
+                  "bbox_norm": [
+                    0.834963,
+                    0.64632,
+                    0.935185,
+                    0.661162
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s7",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Lunas",
+                  "normalized_text": "Lunas",
+                  "bbox_norm": [
+                    0.634637,
+                    0.665687,
+                    0.67963,
+                    0.680562
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 0.00",
+                  "normalized_text": "Rp 0.00",
+                  "bbox_norm": [
+                    0.881682,
+                    0.665633,
+                    0.935185,
+                    0.680476
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ]
+}

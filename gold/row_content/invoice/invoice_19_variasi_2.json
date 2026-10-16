@@ -1,0 +1,22 @@
+{
+  "document_id": "invoice/invoice_19_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Down Payment (Tanda Keseriusan) atas sewa menyewa Kapal Tunda dan Tongkang 1 unit @ Rp. 250.000.000,- dari PT. KARYA PESISIR MANDIRI",
+          "1",
+          "250000000",
+          "250000000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "250000000"
+  ]
+}

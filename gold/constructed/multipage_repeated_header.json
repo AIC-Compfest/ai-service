@@ -1,0 +1,1841 @@
+{
+  "document_id": "constructed/multipage_repeated_header",
+  "source": {
+    "relative_path": "constructed/multipage_repeated_header.pdf",
+    "sha256": "",
+    "source_kind": "pdf"
+  },
+  "document_type": "CONSTRUCTED",
+  "source_label": "constructed_exact",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.synthetic",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "One logical table over two pages with the header repeated."
+  },
+  "pages_exhaustive": true,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "multipage_repeated_header-p1-t1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.084034,
+            0.142043,
+            0.941176,
+            0.404513
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.084034,
+                0.142043,
+                0.134454,
+                0.162233
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Deskripsi",
+              "normalized_text": "Deskripsi",
+              "bbox_norm": [
+                0.134454,
+                0.142043,
+                0.487395,
+                0.162233
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.487395,
+                0.142043,
+                0.571429,
+                0.162233
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Harga Satuan",
+              "normalized_text": "Harga Satuan",
+              "bbox_norm": [
+                0.571429,
+                0.142043,
+                0.756303,
+                0.162233
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.756303,
+                0.142043,
+                0.941176,
+                0.162233
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.084034,
+                    0.162233,
+                    0.134454,
+                    0.182423
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 1",
+                  "normalized_text": "Pengiriman rute 1",
+                  "bbox_norm": [
+                    0.134454,
+                    0.162233,
+                    0.487395,
+                    0.182423
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.162233,
+                    0.571429,
+                    0.182423
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.162233,
+                    0.756303,
+                    0.182423
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.162233,
+                    0.941176,
+                    0.182423
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.084034,
+                    0.182423,
+                    0.134454,
+                    0.202613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 2",
+                  "normalized_text": "Pengiriman rute 2",
+                  "bbox_norm": [
+                    0.134454,
+                    0.182423,
+                    0.487395,
+                    0.202613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.182423,
+                    0.571429,
+                    0.202613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.182423,
+                    0.756303,
+                    0.202613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.182423,
+                    0.941176,
+                    0.202613
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.084034,
+                    0.202613,
+                    0.134454,
+                    0.222803
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 3",
+                  "normalized_text": "Pengiriman rute 3",
+                  "bbox_norm": [
+                    0.134454,
+                    0.202613,
+                    0.487395,
+                    0.222803
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.202613,
+                    0.571429,
+                    0.222803
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.202613,
+                    0.756303,
+                    0.222803
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.202613,
+                    0.941176,
+                    0.222803
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.084034,
+                    0.222803,
+                    0.134454,
+                    0.242993
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 4",
+                  "normalized_text": "Pengiriman rute 4",
+                  "bbox_norm": [
+                    0.134454,
+                    0.222803,
+                    0.487395,
+                    0.242993
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.222803,
+                    0.571429,
+                    0.242993
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.222803,
+                    0.756303,
+                    0.242993
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.222803,
+                    0.941176,
+                    0.242993
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.084034,
+                    0.242993,
+                    0.134454,
+                    0.263183
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 5",
+                  "normalized_text": "Pengiriman rute 5",
+                  "bbox_norm": [
+                    0.134454,
+                    0.242993,
+                    0.487395,
+                    0.263183
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.242993,
+                    0.571429,
+                    0.263183
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.242993,
+                    0.756303,
+                    0.263183
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.242993,
+                    0.941176,
+                    0.263183
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.084034,
+                    0.263183,
+                    0.134454,
+                    0.283373
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 6",
+                  "normalized_text": "Pengiriman rute 6",
+                  "bbox_norm": [
+                    0.134454,
+                    0.263183,
+                    0.487395,
+                    0.283373
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.263183,
+                    0.571429,
+                    0.283373
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.263183,
+                    0.756303,
+                    0.283373
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.263183,
+                    0.941176,
+                    0.283373
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r7",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "7",
+                  "normalized_text": "7",
+                  "bbox_norm": [
+                    0.084034,
+                    0.283373,
+                    0.134454,
+                    0.303563
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 7",
+                  "normalized_text": "Pengiriman rute 7",
+                  "bbox_norm": [
+                    0.134454,
+                    0.283373,
+                    0.487395,
+                    0.303563
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.283373,
+                    0.571429,
+                    0.303563
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.283373,
+                    0.756303,
+                    0.303563
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.283373,
+                    0.941176,
+                    0.303563
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r8",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "8",
+                  "normalized_text": "8",
+                  "bbox_norm": [
+                    0.084034,
+                    0.303563,
+                    0.134454,
+                    0.323753
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 8",
+                  "normalized_text": "Pengiriman rute 8",
+                  "bbox_norm": [
+                    0.134454,
+                    0.303563,
+                    0.487395,
+                    0.323753
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.303563,
+                    0.571429,
+                    0.323753
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.303563,
+                    0.756303,
+                    0.323753
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.303563,
+                    0.941176,
+                    0.323753
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r9",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "9",
+                  "normalized_text": "9",
+                  "bbox_norm": [
+                    0.084034,
+                    0.323753,
+                    0.134454,
+                    0.343943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 9",
+                  "normalized_text": "Pengiriman rute 9",
+                  "bbox_norm": [
+                    0.134454,
+                    0.323753,
+                    0.487395,
+                    0.343943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.323753,
+                    0.571429,
+                    0.343943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.323753,
+                    0.756303,
+                    0.343943
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.323753,
+                    0.941176,
+                    0.343943
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r10",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "10",
+                  "normalized_text": "10",
+                  "bbox_norm": [
+                    0.084034,
+                    0.343943,
+                    0.134454,
+                    0.364133
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 10",
+                  "normalized_text": "Pengiriman rute 10",
+                  "bbox_norm": [
+                    0.134454,
+                    0.343943,
+                    0.487395,
+                    0.364133
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.343943,
+                    0.571429,
+                    0.364133
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.343943,
+                    0.756303,
+                    0.364133
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.343943,
+                    0.941176,
+                    0.364133
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r11",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "11",
+                  "normalized_text": "11",
+                  "bbox_norm": [
+                    0.084034,
+                    0.364133,
+                    0.134454,
+                    0.384323
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 11",
+                  "normalized_text": "Pengiriman rute 11",
+                  "bbox_norm": [
+                    0.134454,
+                    0.364133,
+                    0.487395,
+                    0.384323
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.364133,
+                    0.571429,
+                    0.384323
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.364133,
+                    0.756303,
+                    0.384323
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.364133,
+                    0.941176,
+                    0.384323
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r12",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.084034,
+                    0.384323,
+                    0.134454,
+                    0.404513
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 12",
+                  "normalized_text": "Pengiriman rute 12",
+                  "bbox_norm": [
+                    0.134454,
+                    0.384323,
+                    0.487395,
+                    0.404513
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.384323,
+                    0.571429,
+                    0.404513
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.384323,
+                    0.756303,
+                    0.404513
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.384323,
+                    0.941176,
+                    0.404513
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": "mp1",
+          "quality": {
+            "header_found": true
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "tables": [
+        {
+          "table_id": "multipage_repeated_header-p2-t1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.084034,
+            0.095012,
+            0.941176,
+            0.357482
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.084034,
+                0.095012,
+                0.134454,
+                0.115202
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Deskripsi",
+              "normalized_text": "Deskripsi",
+              "bbox_norm": [
+                0.134454,
+                0.095012,
+                0.487395,
+                0.115202
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.487395,
+                0.095012,
+                0.571429,
+                0.115202
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Harga Satuan",
+              "normalized_text": "Harga Satuan",
+              "bbox_norm": [
+                0.571429,
+                0.095012,
+                0.756303,
+                0.115202
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.756303,
+                0.095012,
+                0.941176,
+                0.115202
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "13",
+                  "normalized_text": "13",
+                  "bbox_norm": [
+                    0.084034,
+                    0.115202,
+                    0.134454,
+                    0.135392
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 13",
+                  "normalized_text": "Pengiriman rute 13",
+                  "bbox_norm": [
+                    0.134454,
+                    0.115202,
+                    0.487395,
+                    0.135392
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.115202,
+                    0.571429,
+                    0.135392
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.115202,
+                    0.756303,
+                    0.135392
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.115202,
+                    0.941176,
+                    0.135392
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "14",
+                  "normalized_text": "14",
+                  "bbox_norm": [
+                    0.084034,
+                    0.135392,
+                    0.134454,
+                    0.155582
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 14",
+                  "normalized_text": "Pengiriman rute 14",
+                  "bbox_norm": [
+                    0.134454,
+                    0.135392,
+                    0.487395,
+                    0.155582
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.135392,
+                    0.571429,
+                    0.155582
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.135392,
+                    0.756303,
+                    0.155582
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.135392,
+                    0.941176,
+                    0.155582
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "15",
+                  "normalized_text": "15",
+                  "bbox_norm": [
+                    0.084034,
+                    0.155582,
+                    0.134454,
+                    0.175772
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 15",
+                  "normalized_text": "Pengiriman rute 15",
+                  "bbox_norm": [
+                    0.134454,
+                    0.155582,
+                    0.487395,
+                    0.175772
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.155582,
+                    0.571429,
+                    0.175772
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.155582,
+                    0.756303,
+                    0.175772
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.155582,
+                    0.941176,
+                    0.175772
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "16",
+                  "normalized_text": "16",
+                  "bbox_norm": [
+                    0.084034,
+                    0.175772,
+                    0.134454,
+                    0.195962
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 16",
+                  "normalized_text": "Pengiriman rute 16",
+                  "bbox_norm": [
+                    0.134454,
+                    0.175772,
+                    0.487395,
+                    0.195962
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.175772,
+                    0.571429,
+                    0.195962
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.175772,
+                    0.756303,
+                    0.195962
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.175772,
+                    0.941176,
+                    0.195962
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "17",
+                  "normalized_text": "17",
+                  "bbox_norm": [
+                    0.084034,
+                    0.195962,
+                    0.134454,
+                    0.216152
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 17",
+                  "normalized_text": "Pengiriman rute 17",
+                  "bbox_norm": [
+                    0.134454,
+                    0.195962,
+                    0.487395,
+                    0.216152
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.195962,
+                    0.571429,
+                    0.216152
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.195962,
+                    0.756303,
+                    0.216152
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.195962,
+                    0.941176,
+                    0.216152
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "18",
+                  "normalized_text": "18",
+                  "bbox_norm": [
+                    0.084034,
+                    0.216152,
+                    0.134454,
+                    0.236342
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 18",
+                  "normalized_text": "Pengiriman rute 18",
+                  "bbox_norm": [
+                    0.134454,
+                    0.216152,
+                    0.487395,
+                    0.236342
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.216152,
+                    0.571429,
+                    0.236342
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.216152,
+                    0.756303,
+                    0.236342
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.216152,
+                    0.941176,
+                    0.236342
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r7",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "19",
+                  "normalized_text": "19",
+                  "bbox_norm": [
+                    0.084034,
+                    0.236342,
+                    0.134454,
+                    0.256532
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 19",
+                  "normalized_text": "Pengiriman rute 19",
+                  "bbox_norm": [
+                    0.134454,
+                    0.236342,
+                    0.487395,
+                    0.256532
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.236342,
+                    0.571429,
+                    0.256532
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.236342,
+                    0.756303,
+                    0.256532
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.236342,
+                    0.941176,
+                    0.256532
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r8",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "20",
+                  "normalized_text": "20",
+                  "bbox_norm": [
+                    0.084034,
+                    0.256532,
+                    0.134454,
+                    0.276722
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 20",
+                  "normalized_text": "Pengiriman rute 20",
+                  "bbox_norm": [
+                    0.134454,
+                    0.256532,
+                    0.487395,
+                    0.276722
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.256532,
+                    0.571429,
+                    0.276722
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.256532,
+                    0.756303,
+                    0.276722
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.256532,
+                    0.941176,
+                    0.276722
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r9",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "21",
+                  "normalized_text": "21",
+                  "bbox_norm": [
+                    0.084034,
+                    0.276722,
+                    0.134454,
+                    0.296912
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 21",
+                  "normalized_text": "Pengiriman rute 21",
+                  "bbox_norm": [
+                    0.134454,
+                    0.276722,
+                    0.487395,
+                    0.296912
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.487395,
+                    0.276722,
+                    0.571429,
+                    0.296912
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.276722,
+                    0.756303,
+                    0.296912
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "200.000",
+                  "normalized_text": "200.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.276722,
+                    0.941176,
+                    0.296912
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r10",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "22",
+                  "normalized_text": "22",
+                  "bbox_norm": [
+                    0.084034,
+                    0.296912,
+                    0.134454,
+                    0.317102
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 22",
+                  "normalized_text": "Pengiriman rute 22",
+                  "bbox_norm": [
+                    0.134454,
+                    0.296912,
+                    0.487395,
+                    0.317102
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.487395,
+                    0.296912,
+                    0.571429,
+                    0.317102
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.296912,
+                    0.756303,
+                    0.317102
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "300.000",
+                  "normalized_text": "300.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.296912,
+                    0.941176,
+                    0.317102
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r11",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "23",
+                  "normalized_text": "23",
+                  "bbox_norm": [
+                    0.084034,
+                    0.317102,
+                    0.134454,
+                    0.337292
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 23",
+                  "normalized_text": "Pengiriman rute 23",
+                  "bbox_norm": [
+                    0.134454,
+                    0.317102,
+                    0.487395,
+                    0.337292
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.487395,
+                    0.317102,
+                    0.571429,
+                    0.337292
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.317102,
+                    0.756303,
+                    0.337292
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "400.000",
+                  "normalized_text": "400.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.317102,
+                    0.941176,
+                    0.337292
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r12",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "24",
+                  "normalized_text": "24",
+                  "bbox_norm": [
+                    0.084034,
+                    0.337292,
+                    0.134454,
+                    0.357482
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Pengiriman rute 24",
+                  "normalized_text": "Pengiriman rute 24",
+                  "bbox_norm": [
+                    0.134454,
+                    0.337292,
+                    0.487395,
+                    0.357482
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.487395,
+                    0.337292,
+                    0.571429,
+                    0.357482
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.571429,
+                    0.337292,
+                    0.756303,
+                    0.357482
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "100.000",
+                  "normalized_text": "100.000",
+                  "bbox_norm": [
+                    0.756303,
+                    0.337292,
+                    0.941176,
+                    0.357482
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.084034,
+                    0.357482,
+                    0.134454,
+                    0.377672
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.134454,
+                    0.357482,
+                    0.487395,
+                    0.377672
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.487395,
+                    0.357482,
+                    0.571429,
+                    0.377672
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.571429,
+                    0.357482,
+                    0.756303,
+                    0.377672
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "9.718.050",
+                  "normalized_text": "9.718.050",
+                  "bbox_norm": [
+                    0.756303,
+                    0.357482,
+                    0.941176,
+                    0.377672
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": "mp1",
+          "quality": {
+            "header_found": true
+          }
+        }
+      ]
+    }
+  ]
+}

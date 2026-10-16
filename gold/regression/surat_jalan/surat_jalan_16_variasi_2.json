@@ -1,0 +1,354 @@
+{
+  "document_id": "surat_jalan/surat_jalan_16_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_16_variasi_2.pdf",
+    "sha256": "3d5102603a33c83068e5526752c3dfa8fcf2357f2f4ce8cc91143a02c5180001",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_16_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.085522,
+            0.297748,
+            0.84658,
+            0.43836
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.085522,
+                0.297748,
+                0.099238,
+                0.318924
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Produk",
+              "normalized_text": "Nama Produk",
+              "bbox_norm": [
+                0.125076,
+                0.297748,
+                0.187115,
+                0.318924
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Deskripsi Produk",
+              "normalized_text": "Deskripsi Produk",
+              "bbox_norm": [
+                0.353847,
+                0.297748,
+                0.432106,
+                0.318924
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Kode SKU",
+              "normalized_text": "Kode SKU",
+              "bbox_norm": [
+                0.520614,
+                0.297748,
+                0.570183,
+                0.318924
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Kuantitas",
+              "normalized_text": "Kuantitas",
+              "bbox_norm": [
+                0.68952,
+                0.297748,
+                0.732544,
+                0.318924
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "Unit",
+              "normalized_text": "Unit",
+              "bbox_norm": [
+                0.79856,
+                0.297748,
+                0.818518,
+                0.318924
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.085522,
+                    0.344615,
+                    0.091134,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Tepung Terigu",
+                  "normalized_text": "Tepung Terigu",
+                  "bbox_norm": [
+                    0.125076,
+                    0.344615,
+                    0.192099,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Tepung Terigu Protein Sedang",
+                  "normalized_text": "Tepung Terigu Protein Sedang",
+                  "bbox_norm": [
+                    0.353847,
+                    0.344615,
+                    0.491956,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "TT/210-Mar/III/2025",
+                  "normalized_text": "TT/210-Mar/III/2025",
+                  "bbox_norm": [
+                    0.520614,
+                    0.344615,
+                    0.616631,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.68952,
+                    0.344615,
+                    0.695132,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Sak 25 Kg",
+                  "normalized_text": "Sak 25 Kg",
+                  "bbox_norm": [
+                    0.79856,
+                    0.344615,
+                    0.845951,
+                    0.365791
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.085522,
+                    0.380899,
+                    0.091134,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Telur Ayam",
+                  "normalized_text": "Telur Ayam",
+                  "bbox_norm": [
+                    0.125076,
+                    0.380899,
+                    0.179628,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Telur Ayam Ras Grade A",
+                  "normalized_text": "Telur Ayam Ras Grade A",
+                  "bbox_norm": [
+                    0.353847,
+                    0.380899,
+                    0.469181,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "TA/033-Mar/III/2025",
+                  "normalized_text": "TA/033-Mar/III/2025",
+                  "bbox_norm": [
+                    0.520614,
+                    0.380899,
+                    0.617877,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.68952,
+                    0.380899,
+                    0.700745,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Peti 15 Kg",
+                  "normalized_text": "Peti 15 Kg",
+                  "bbox_norm": [
+                    0.79856,
+                    0.380899,
+                    0.84658,
+                    0.402075
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.085522,
+                    0.417183,
+                    0.091134,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Beras",
+                  "normalized_text": "Beras",
+                  "bbox_norm": [
+                    0.125076,
+                    0.417183,
+                    0.150634,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Beras Pulen Premium",
+                  "normalized_text": "Beras Pulen Premium",
+                  "bbox_norm": [
+                    0.353847,
+                    0.417183,
+                    0.451749,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "BR/098-Mar/III/2025",
+                  "normalized_text": "BR/098-Mar/III/2025",
+                  "bbox_norm": [
+                    0.520614,
+                    0.417183,
+                    0.617888,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.68952,
+                    0.417183,
+                    0.695132,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "1,5 Ton",
+                  "normalized_text": "1,5 Ton",
+                  "bbox_norm": [
+                    0.79856,
+                    0.417183,
+                    0.833481,
+                    0.43836
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ]
+}

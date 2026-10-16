@@ -140,6 +140,9 @@ def evaluate_doc(gold: EvalDoc, pred: EvalDoc, *, view: str = "line_items", iou_
     pages = set(table.page for table in gold_all)
     if gold.pages_exhaustive:
         pages |= set(table.page for table in pred_all)
+    if not gold.pages_exhaustive:
+        # Gold lists only the tables it could ground; predictions on other pages are not scored, only counted.
+        result.counts["unscored_pred_tables"] += sum(1 for table in pred_all if table.page not in pages)
     for page in sorted(pages):
         gold_tables = [table for table in gold_all if table.page == page]
         pred_tables = [table for table in pred_all if table.page == page]
@@ -326,6 +329,7 @@ def summarize(counts: Counter, failures: Counter | None = None) -> dict:
         "amount_recall_on_page": ratio("amt_on_page", "amt_gold"),
         "summary_leak": {"leaked": c["sum_leak"], "summary_rows": c["sum_gold"], "separation_rate": None if not c["sum_gold"] else round(1 - c["sum_leak"] / c["sum_gold"], 6)},
         "item_rows_as_summary": c["item_as_summary"],
+        "unscored_pred_tables": c["unscored_pred_tables"],
         "multi_table_pages_fully_correct": ratio("multi_ok", "multi_pages"),
         "logical_tables_rows_exact": ratio("logical_ok", "logical_den"),
         "failures_pages": {code: (failures or {}).get(code, 0) for code in FAILURE_CODES},

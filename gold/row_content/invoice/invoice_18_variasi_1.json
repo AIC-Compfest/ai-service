@@ -1,0 +1,63 @@
+{
+  "document_id": "invoice/invoice_18_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "BEARING 6204-2RS",
+          "20",
+          "Pcs",
+          "3.85",
+          "77",
+          "0",
+          "0",
+          "77"
+        ],
+        [
+          "2",
+          "V-BELT B-52",
+          "15",
+          "Pcs",
+          "6.2",
+          "93",
+          "5",
+          "4.65",
+          "88.35"
+        ],
+        [
+          "3",
+          "OIL SEAL TC 35X52X7",
+          "30",
+          "Pcs",
+          "1.45",
+          "43.5",
+          "0",
+          "0",
+          "43.5"
+        ],
+        [
+          "4",
+          "GREASE SHELL ALVANIA",
+          "6",
+          "Kg",
+          "18.9",
+          "113.4",
+          "10",
+          "11.34",
+          "102.06"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "326.9",
+    "15.99",
+    "10",
+    "31.09",
+    "347"
+  ]
+}

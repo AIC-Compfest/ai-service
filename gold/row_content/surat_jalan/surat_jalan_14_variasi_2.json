@@ -1,0 +1,88 @@
+{
+  "document_id": "surat_jalan/surat_jalan_14_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.items",
+      "rows": [
+        [
+          "Kertas F4 70 gram",
+          "F4s",
+          "70 GRAM",
+          "SIDU",
+          "20",
+          "48,000",
+          "960,000.00"
+        ],
+        [
+          "Map Snelhecter",
+          "Folio",
+          "Biru",
+          "Bantex",
+          "50",
+          "14,500",
+          "725,000.00"
+        ],
+        [
+          "Spidol Whiteboard",
+          "Dus",
+          "Hitam",
+          "Joyko",
+          "12",
+          "9,000",
+          "108,000.00"
+        ],
+        [
+          "Stapler Besar",
+          "HD-50",
+          "Silver",
+          "Kenko",
+          "6",
+          "68,000",
+          "408,000.00"
+        ],
+        [
+          "Isi Staples",
+          "No. 10",
+          "Box",
+          "Max",
+          "30",
+          "4,500",
+          "135,000.00"
+        ],
+        [
+          "Buku Folio 200 lembar",
+          "Folio",
+          "Hard Cover",
+          "SIDU",
+          "15",
+          "32,000",
+          "480,000.00"
+        ],
+        [
+          "Lakban Bening",
+          "2 inch",
+          "Bening",
+          "Daimaru",
+          "24",
+          "11,500",
+          "276,000.00"
+        ],
+        [
+          "Tinta Stempel",
+          "Botol",
+          "Biru",
+          "Trodat",
+          "10",
+          "13,500",
+          "135,000.00"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "3,227,000.00",
+    "Rp 3,302,000.00"
+  ]
+}

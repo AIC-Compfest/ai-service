@@ -1,0 +1,438 @@
+{
+  "document_id": "surat_jalan/surat_jalan_5_variasi_1",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_5_variasi_1.pdf",
+    "sha256": "a398d6777d66b5b39e1310bf8fcd7e80de40eb14bf701c606393e08879ab8121",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_5_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.032258,
+            0.358081,
+            0.894562,
+            0.519169
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.219077,
+                0.358081,
+                0.297052,
+                0.382099
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.527014,
+                0.358081,
+                0.547179,
+                0.382099
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Berat",
+              "normalized_text": "Berat",
+              "bbox_norm": [
+                0.599863,
+                0.358081,
+                0.630782,
+                0.382099
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Jml Berat",
+              "normalized_text": "Jml Berat",
+              "bbox_norm": [
+                0.673244,
+                0.358081,
+                0.728369,
+                0.382099
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Keterangan",
+              "normalized_text": "Keterangan",
+              "bbox_norm": [
+                0.828018,
+                0.358081,
+                0.894562,
+                0.382099
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Kabel HDMI 2 meter",
+                  "normalized_text": "Kabel HDMI 2 meter",
+                  "bbox_norm": [
+                    0.032258,
+                    0.392878,
+                    0.141831,
+                    0.416843
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.533734,
+                    0.392878,
+                    0.54046,
+                    0.416843
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.15",
+                  "normalized_text": "0.15",
+                  "bbox_norm": [
+                    0.602746,
+                    0.392878,
+                    0.626286,
+                    0.416843
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "0.6",
+                  "normalized_text": "0.6",
+                  "bbox_norm": [
+                    0.691593,
+                    0.392878,
+                    0.708407,
+                    0.416843
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.751613,
+                    0.392878,
+                    0.970968,
+                    0.416843
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Adaptor Charger 20W",
+                  "normalized_text": "Adaptor Charger 20W",
+                  "bbox_norm": [
+                    0.032258,
+                    0.418459,
+                    0.149911,
+                    0.442424
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.533734,
+                    0.418459,
+                    0.54046,
+                    0.442424
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.2",
+                  "normalized_text": "0.2",
+                  "bbox_norm": [
+                    0.606109,
+                    0.418459,
+                    0.622923,
+                    0.442424
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "0.4",
+                  "normalized_text": "0.4",
+                  "bbox_norm": [
+                    0.691593,
+                    0.418459,
+                    0.708407,
+                    0.442424
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Fragile",
+                  "normalized_text": "Fragile",
+                  "bbox_norm": [
+                    0.758065,
+                    0.418459,
+                    0.795032,
+                    0.442424
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Power Bank 10000mAh",
+                  "normalized_text": "Power Bank 10000mAh",
+                  "bbox_norm": [
+                    0.032258,
+                    0.444041,
+                    0.159335,
+                    0.468006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.533734,
+                    0.444041,
+                    0.54046,
+                    0.468006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.25",
+                  "normalized_text": "0.25",
+                  "bbox_norm": [
+                    0.602746,
+                    0.444041,
+                    0.626286,
+                    0.468006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "0.75",
+                  "normalized_text": "0.75",
+                  "bbox_norm": [
+                    0.68823,
+                    0.444041,
+                    0.71177,
+                    0.468006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.751613,
+                    0.444041,
+                    0.970968,
+                    0.468006
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Headset Bluetooth",
+                  "normalized_text": "Headset Bluetooth",
+                  "bbox_norm": [
+                    0.032258,
+                    0.469622,
+                    0.131778,
+                    0.493587
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.533734,
+                    0.469622,
+                    0.54046,
+                    0.493587
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.3",
+                  "normalized_text": "0.3",
+                  "bbox_norm": [
+                    0.606109,
+                    0.469622,
+                    0.622923,
+                    0.493587
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "0.3",
+                  "normalized_text": "0.3",
+                  "bbox_norm": [
+                    0.691593,
+                    0.469622,
+                    0.708407,
+                    0.493587
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.751613,
+                    0.469622,
+                    0.970968,
+                    0.493587
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Mouse Wireless",
+                  "normalized_text": "Mouse Wireless",
+                  "bbox_norm": [
+                    0.032258,
+                    0.495203,
+                    0.11829,
+                    0.519169
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.533734,
+                    0.495203,
+                    0.54046,
+                    0.519169
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.1",
+                  "normalized_text": "0.1",
+                  "bbox_norm": [
+                    0.606109,
+                    0.495203,
+                    0.622923,
+                    0.519169
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "0.5",
+                  "normalized_text": "0.5",
+                  "bbox_norm": [
+                    0.691593,
+                    0.495203,
+                    0.708407,
+                    0.519169
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.751613,
+                    0.495203,
+                    0.970968,
+                    0.519169
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "5/5",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

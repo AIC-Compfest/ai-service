@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_3_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.rincian_barang",
+      "rows": [
+        [
+          "1",
+          "Alat Monitor Pasien (Patient Monitor)",
+          "5 Unit"
+        ],
+        [
+          "2",
+          "Infus Pump Otomatis",
+          "10 Unit"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

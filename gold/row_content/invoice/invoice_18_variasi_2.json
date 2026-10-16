@@ -1,0 +1,52 @@
+{
+  "document_id": "invoice/invoice_18_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "PNEUMATIC CYL. SC 63X100",
+          "4",
+          "Pcs",
+          "85.4",
+          "341.6",
+          "0",
+          "0",
+          "341.6"
+        ],
+        [
+          "2",
+          "SOLENOID VALVE 4V210-08",
+          "10",
+          "Pcs",
+          "12.8",
+          "128",
+          "5",
+          "6.4",
+          "121.6"
+        ],
+        [
+          "3",
+          "AIR FILTER REGULATOR AW30",
+          "6",
+          "Pcs",
+          "24.5",
+          "147",
+          "0",
+          "0",
+          "147"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "616.6",
+    "6.4",
+    "10",
+    "61.02",
+    "583.22"
+  ]
+}

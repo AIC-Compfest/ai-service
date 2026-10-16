@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_1_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.rincian_barang",
+      "rows": [
+        [
+          "1",
+          "Server Rackmount HP ProLiant DL360",
+          "2 Unit"
+        ],
+        [
+          "2",
+          "Cisco Catalyst Switch 24-Port",
+          "4 Unit"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

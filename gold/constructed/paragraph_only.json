@@ -1,0 +1,26 @@
+{
+  "document_id": "constructed/paragraph_only",
+  "source": {
+    "relative_path": "constructed/paragraph_only.pdf",
+    "sha256": "",
+    "source_kind": "pdf"
+  },
+  "document_type": "CONSTRUCTED",
+  "source_label": "constructed_exact",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.synthetic",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "A page of paragraphs. No table exists; any predicted table is a false positive."
+  },
+  "pages_exhaustive": true,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "document_id": "pod/pod_8_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.items",
+      "rows": [
+        [
+          "HW-RTR-901",
+          "Router Cisco Enterprise & Manual",
+          "2 Unit",
+          "Baru & Segel"
+        ],
+        [
+          "LIC-NET-2026",
+          "Sertifikat Lisensi Perangkat Lunak",
+          "1 Berkas",
+          "Aktif s/d 2028"
+        ],
+        [
+          "BA-TEST-008",
+          "Berita Acara Uji Coba Jaringan",
+          "2 Rangkap",
+          "Lolos QC"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

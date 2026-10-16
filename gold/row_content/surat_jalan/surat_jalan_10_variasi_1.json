@@ -1,0 +1,35 @@
+{
+  "document_id": "surat_jalan/surat_jalan_10_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Tinta Epson 003 Hitam",
+          "2",
+          "Segel utuh"
+        ],
+        [
+          "2",
+          "Kertas Foto A4 Glossy",
+          "5"
+        ],
+        [
+          "3",
+          "Gunting Kertas",
+          "3"
+        ],
+        [
+          "4",
+          "Lakban Bening 2 inch",
+          "6",
+          "Fragile"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

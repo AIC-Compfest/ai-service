@@ -1,0 +1,22 @@
+{
+  "document_id": "invoice/invoice_19_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Down Payment (Tanda Keseriusan) atas sewa menyewa Kapal Tunda dan Tongkang 1 unit @ Rp. 45.000.000,- dari PT. TAMBANG KARYA UTAMA",
+          "4",
+          "45000000",
+          "180000000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "180000000"
+  ]
+}

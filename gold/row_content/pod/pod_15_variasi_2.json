@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_15_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.items",
+      "rows": [
+        [
+          "4201-OAK",
+          "Executive Desk Oak",
+          "1"
+        ],
+        [
+          "7100-BLK",
+          "Ergonomic Office Chair Black",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

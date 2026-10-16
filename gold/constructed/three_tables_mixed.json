@@ -1,0 +1,450 @@
+{
+  "document_id": "constructed/three_tables_mixed",
+  "source": {
+    "relative_path": "constructed/three_tables_mixed.pdf",
+    "sha256": "",
+    "source_kind": "pdf"
+  },
+  "document_type": "CONSTRUCTED",
+  "source_label": "constructed_exact",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.synthetic",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Three independent tables on one page (stop list, charges, payment)."
+  },
+  "pages_exhaustive": true,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "three_tables_mixed-p1-t1",
+          "role": "other",
+          "bbox_norm": [
+            0.067227,
+            0.130166,
+            0.436975,
+            0.190736
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Stop",
+              "normalized_text": "Stop",
+              "bbox_norm": [
+                0.067227,
+                0.130166,
+                0.235294,
+                0.150356
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Alamat",
+              "normalized_text": "Alamat",
+              "bbox_norm": [
+                0.235294,
+                0.130166,
+                0.436975,
+                0.150356
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pickup",
+                  "normalized_text": "Pickup",
+                  "bbox_norm": [
+                    0.067227,
+                    0.150356,
+                    0.235294,
+                    0.170546
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Gudang A Cikarang",
+                  "normalized_text": "Gudang A Cikarang",
+                  "bbox_norm": [
+                    0.235294,
+                    0.150356,
+                    0.436975,
+                    0.170546
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Delivery",
+                  "normalized_text": "Delivery",
+                  "bbox_norm": [
+                    0.067227,
+                    0.170546,
+                    0.235294,
+                    0.190736
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "DC Surabaya",
+                  "normalized_text": "DC Surabaya",
+                  "bbox_norm": [
+                    0.235294,
+                    0.170546,
+                    0.436975,
+                    0.190736
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true
+          }
+        },
+        {
+          "table_id": "three_tables_mixed-p1-t2",
+          "role": "line_items",
+          "bbox_norm": [
+            0.067227,
+            0.248931,
+            0.605042,
+            0.329691
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Deskripsi",
+              "normalized_text": "Deskripsi",
+              "bbox_norm": [
+                0.067227,
+                0.248931,
+                0.319328,
+                0.269121
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Unit",
+              "normalized_text": "Unit",
+              "bbox_norm": [
+                0.319328,
+                0.248931,
+                0.453782,
+                0.269121
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Biaya (USD)",
+              "normalized_text": "Biaya (USD)",
+              "bbox_norm": [
+                0.453782,
+                0.248931,
+                0.605042,
+                0.269121
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Net Freight",
+                  "normalized_text": "Net Freight",
+                  "bbox_norm": [
+                    0.067227,
+                    0.269121,
+                    0.319328,
+                    0.289311
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.319328,
+                    0.269121,
+                    0.453782,
+                    0.289311
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3.425,00",
+                  "normalized_text": "3.425,00",
+                  "bbox_norm": [
+                    0.453782,
+                    0.269121,
+                    0.605042,
+                    0.289311
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel Surcharge",
+                  "normalized_text": "Fuel Surcharge",
+                  "bbox_norm": [
+                    0.067227,
+                    0.289311,
+                    0.319328,
+                    0.309501
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.319328,
+                    0.289311,
+                    0.453782,
+                    0.309501
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "210,00",
+                  "normalized_text": "210,00",
+                  "bbox_norm": [
+                    0.453782,
+                    0.289311,
+                    0.605042,
+                    0.309501
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Detention",
+                  "normalized_text": "Detention",
+                  "bbox_norm": [
+                    0.067227,
+                    0.309501,
+                    0.319328,
+                    0.329691
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.319328,
+                    0.309501,
+                    0.453782,
+                    0.329691
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "150,00",
+                  "normalized_text": "150,00",
+                  "bbox_norm": [
+                    0.453782,
+                    0.309501,
+                    0.605042,
+                    0.329691
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true
+          }
+        },
+        {
+          "table_id": "three_tables_mixed-p1-t3",
+          "role": "line_items",
+          "bbox_norm": [
+            0.067227,
+            0.365321,
+            0.605042,
+            0.425891
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Item",
+              "normalized_text": "Item",
+              "bbox_norm": [
+                0.067227,
+                0.365321,
+                0.319328,
+                0.385511
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Perhitungan",
+              "normalized_text": "Perhitungan",
+              "bbox_norm": [
+                0.319328,
+                0.365321,
+                0.453782,
+                0.385511
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Subtotal (USD)",
+              "normalized_text": "Subtotal (USD)",
+              "bbox_norm": [
+                0.453782,
+                0.365321,
+                0.605042,
+                0.385511
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Freight",
+                  "normalized_text": "Freight",
+                  "bbox_norm": [
+                    0.067227,
+                    0.385511,
+                    0.319328,
+                    0.405701
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1 x 3.425,00",
+                  "normalized_text": "1 x 3.425,00",
+                  "bbox_norm": [
+                    0.319328,
+                    0.385511,
+                    0.453782,
+                    0.405701
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3.425,00",
+                  "normalized_text": "3.425,00",
+                  "bbox_norm": [
+                    0.453782,
+                    0.385511,
+                    0.605042,
+                    0.405701
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel",
+                  "normalized_text": "Fuel",
+                  "bbox_norm": [
+                    0.067227,
+                    0.405701,
+                    0.319328,
+                    0.425891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1 x 210,00",
+                  "normalized_text": "1 x 210,00",
+                  "bbox_norm": [
+                    0.319328,
+                    0.405701,
+                    0.453782,
+                    0.425891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "210,00",
+                  "normalized_text": "210,00",
+                  "bbox_norm": [
+                    0.453782,
+                    0.405701,
+                    0.605042,
+                    0.425891
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true
+          }
+        }
+      ]
+    }
+  ]
+}

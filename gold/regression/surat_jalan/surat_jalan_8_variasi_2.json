@@ -1,0 +1,438 @@
+{
+  "document_id": "surat_jalan/surat_jalan_8_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_8_variasi_2.pdf",
+    "sha256": "612c57b7cfb81db4805b6e97a9db6a538aa03be6b11025b0ae6df40483fe812b",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_8_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.119718,
+            0.447205,
+            0.690091,
+            0.723215
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No .",
+              "normalized_text": "No .",
+              "bbox_norm": [
+                0.130986,
+                0.447205,
+                0.156803,
+                0.481215
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.191549,
+                0.447205,
+                0.308296,
+                0.467215
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Satuan",
+              "normalized_text": "Satuan",
+              "bbox_norm": [
+                0.391549,
+                0.447205,
+                0.449056,
+                0.467215
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Jml",
+              "normalized_text": "Jml",
+              "bbox_norm": [
+                0.461972,
+                0.447205,
+                0.4925,
+                0.467215
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Harga satuan (Rp)",
+              "normalized_text": "Harga satuan (Rp)",
+              "bbox_norm": [
+                0.535211,
+                0.447205,
+                0.690091,
+                0.467215
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1.",
+                  "normalized_text": "1.",
+                  "bbox_norm": [
+                    0.130986,
+                    0.478205,
+                    0.146831,
+                    0.498215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Tinta printer hitam",
+                  "normalized_text": "Tinta printer hitam",
+                  "bbox_norm": [
+                    0.191549,
+                    0.478205,
+                    0.351162,
+                    0.498215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Botol",
+                  "normalized_text": "Botol",
+                  "bbox_norm": [
+                    0.391549,
+                    0.478205,
+                    0.438514,
+                    0.498215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "30",
+                  "normalized_text": "30",
+                  "bbox_norm": [
+                    0.461972,
+                    0.478205,
+                    0.483098,
+                    0.498215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "65.000",
+                  "normalized_text": "65.000",
+                  "bbox_norm": [
+                    0.535211,
+                    0.478205,
+                    0.59331,
+                    0.498215
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2.",
+                  "normalized_text": "2.",
+                  "bbox_norm": [
+                    0.130986,
+                    0.495205,
+                    0.146831,
+                    0.515215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Kertas HVS F4",
+                  "normalized_text": "Kertas HVS F4",
+                  "bbox_norm": [
+                    0.191549,
+                    0.495205,
+                    0.321817,
+                    0.515215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rim",
+                  "normalized_text": "Rim",
+                  "bbox_norm": [
+                    0.391549,
+                    0.495205,
+                    0.427951,
+                    0.515215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "40",
+                  "normalized_text": "40",
+                  "bbox_norm": [
+                    0.461972,
+                    0.495205,
+                    0.483098,
+                    0.515215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "52.000",
+                  "normalized_text": "52.000",
+                  "bbox_norm": [
+                    0.535211,
+                    0.495205,
+                    0.59331,
+                    0.515215
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3.",
+                  "normalized_text": "3.",
+                  "bbox_norm": [
+                    0.130986,
+                    0.512205,
+                    0.146831,
+                    0.532215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Penggaris besi 30cm",
+                  "normalized_text": "Penggaris besi 30cm",
+                  "bbox_norm": [
+                    0.191549,
+                    0.512205,
+                    0.366415,
+                    0.532215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Lusin",
+                  "normalized_text": "Lusin",
+                  "bbox_norm": [
+                    0.391549,
+                    0.512205,
+                    0.439676,
+                    0.532215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.461972,
+                    0.512205,
+                    0.483098,
+                    0.532215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "45.000",
+                  "normalized_text": "45.000",
+                  "bbox_norm": [
+                    0.535211,
+                    0.512205,
+                    0.59331,
+                    0.532215
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4.",
+                  "normalized_text": "4.",
+                  "bbox_norm": [
+                    0.130986,
+                    0.529205,
+                    0.146831,
+                    0.549215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Lem kertas",
+                  "normalized_text": "Lem kertas",
+                  "bbox_norm": [
+                    0.191549,
+                    0.529205,
+                    0.286007,
+                    0.549215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Pack",
+                  "normalized_text": "Pack",
+                  "bbox_norm": [
+                    0.391549,
+                    0.529205,
+                    0.43262,
+                    0.549215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "18",
+                  "normalized_text": "18",
+                  "bbox_norm": [
+                    0.461972,
+                    0.529205,
+                    0.483098,
+                    0.549215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "28.500",
+                  "normalized_text": "28.500",
+                  "bbox_norm": [
+                    0.535211,
+                    0.529205,
+                    0.59331,
+                    0.549215
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5. Mohon Rizal",
+                  "normalized_text": "5. Mohon Rizal",
+                  "bbox_norm": [
+                    0.119718,
+                    0.546205,
+                    0.188261,
+                    0.723215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Gunting kantor kesediaannya untuk Pengantar, Fahmi",
+                  "normalized_text": "Gunting kantor kesediaannya untuk Pengantar, Fahmi",
+                  "bbox_norm": [
+                    0.143662,
+                    0.546205,
+                    0.353253,
+                    0.723215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Buah dicek kembali",
+                  "normalized_text": "Buah dicek kembali",
+                  "bbox_norm": [
+                    0.358535,
+                    0.546205,
+                    0.477648,
+                    0.616215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "24 sebelum",
+                  "normalized_text": "24 sebelum",
+                  "bbox_norm": [
+                    0.461972,
+                    0.546205,
+                    0.553345,
+                    0.616215
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "9.500 anda menerima Hormat Kami Taufik Hidayat",
+                  "normalized_text": "9.500 anda menerima Hormat Kami Taufik Hidayat",
+                  "bbox_norm": [
+                    0.521127,
+                    0.546205,
+                    0.688282,
+                    0.723215
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "5/5",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

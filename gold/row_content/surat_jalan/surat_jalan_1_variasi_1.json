@@ -1,0 +1,39 @@
+{
+  "document_id": "surat_jalan/surat_jalan_1_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Pupuk Organik",
+          "Granul",
+          "50 kg",
+          "200 karung",
+          "-"
+        ],
+        [
+          "2",
+          "Pupuk Kompos",
+          "Curah",
+          "25 kg",
+          "350 karung",
+          "-"
+        ],
+        [
+          "3",
+          "Benih Padi",
+          "Ciherang",
+          "5 kg",
+          "120 pak",
+          "Siap tanam"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "670 unit"
+  ]
+}

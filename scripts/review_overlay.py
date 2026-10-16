@@ -55,6 +55,23 @@ def draw_tables(image: Image.Image, tables: list[dict], *, title: str = "") -> I
     return canvas
 
 
+def gold_page_to_overlay(page_tables: list[dict]) -> list[dict]:
+    """Convert GOLD_REVIEW tables of one page into the overlay (evidence-like) format."""
+    result = []
+    for table in page_tables:
+        columns = [
+            {"idx": h["column_index"], "bbox_norm": h["bbox_norm"], "header": h.get("raw_text", "")}
+            for h in table.get("headers", [])
+        ]
+        cells = []
+        for r, row in enumerate(table.get("rows", [])):
+            for cell in row["cells"]:
+                cells.append({"row": r, "col": cell["column_index"], "text": cell["raw_text"], "bbox_norm": cell["bbox_norm"]})
+        summary = [cell for row in table.get("summary_rows", []) for cell in row["cells"]]
+        result.append({"bbox_norm": table["bbox_norm"], "provider": "GOLD", "role": table.get("role", ""), "columns": columns, "cells": cells, "summary_cells": summary})
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("pdf", type=Path)
@@ -62,7 +79,23 @@ def main() -> int:
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--dpi", type=int, default=100)
     parser.add_argument("--doc-type", default=None, help="Optional document type for alias-aware discovery")
+    parser.add_argument("--gold", type=Path, default=None, help="Draw this GOLD_REVIEW json instead of running the providers")
     args = parser.parse_args()
+
+    if args.gold is not None:
+        import json
+        from io import BytesIO
+
+        import pymupdf
+
+        gold = json.loads(args.gold.read_text(encoding="utf-8"))
+        page_tables = next((p["tables"] for p in gold["pages"] if p["page_number"] == args.page), [])
+        pix = pymupdf.open(args.pdf)[args.page - 1].get_pixmap(dpi=args.dpi)
+        image = Image.open(BytesIO(pix.tobytes("png")))
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        draw_tables(image, gold_page_to_overlay(page_tables), title=f"GOLD {args.pdf.name} p{args.page} tables={len(page_tables)}").save(args.out)
+        print(f"gold overlay -> {args.out}")
+        return 0
 
     import pymupdf
 

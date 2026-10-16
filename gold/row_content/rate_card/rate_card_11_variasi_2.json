@@ -1,0 +1,31 @@
+{
+  "document_id": "rate_card/rate_card_11_variasi_2",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.stops",
+      "rows": [
+        [
+          "1",
+          "PICK",
+          "GREENFIELD WAREHOUSE #12, 5001 Commerce Center Dr, LOUISVILLE, KY 40218",
+          "PU-7731",
+          "03/19/25",
+          "1:00 pm"
+        ],
+        [
+          "2",
+          "DROP",
+          "Harmon Office Interiors, 1400 Main St, Suite 100, KNOXVILLE, TN 37902",
+          "DL-5529",
+          "03/20/25",
+          "8:00 am appt"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "1120.0"
+  ]
+}

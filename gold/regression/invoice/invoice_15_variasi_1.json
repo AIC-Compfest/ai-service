@@ -1,0 +1,493 @@
+{
+  "document_id": "invoice/invoice_15_variasi_1",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_15_variasi_1.pdf",
+    "sha256": "329c912adad814aaeb54a63dff2f54e924d65dceefee9132347e3b7133f043e1",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_15_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.072266,
+            0.353823,
+            0.889649,
+            0.563518
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Bandung Email: No.",
+              "normalized_text": "Bandung Email: No.",
+              "bbox_norm": [
+                0.072266,
+                0.353823,
+                0.144139,
+                0.441001
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "40135 rizky.pratama@email.com Description",
+              "normalized_text": "40135 rizky.pratama@email.com Description",
+              "bbox_norm": [
+                0.127135,
+                0.353823,
+                0.334908,
+                0.441001
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.523923,
+                0.422174,
+                0.556156,
+                0.441001
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Unit Price",
+              "normalized_text": "Unit Price",
+              "bbox_norm": [
+                0.601354,
+                0.422174,
+                0.691614,
+                0.441001
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Total",
+              "normalized_text": "Total",
+              "bbox_norm": [
+                0.795263,
+                0.422174,
+                0.841456,
+                0.441001
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.087398,
+                    0.451826,
+                    0.098149,
+                    0.470611
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Laptop Lenovo IdeaPad 3",
+                  "normalized_text": "Laptop Lenovo IdeaPad 3",
+                  "bbox_norm": [
+                    0.146484,
+                    0.451826,
+                    0.367939,
+                    0.470611
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.532711,
+                    0.451826,
+                    0.543461,
+                    0.470611
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 7.850.000",
+                  "normalized_text": "Rp 7.850.000",
+                  "bbox_norm": [
+                    0.585343,
+                    0.452311,
+                    0.695907,
+                    0.470202
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 7.850.000",
+                  "normalized_text": "Rp 7.850.000",
+                  "bbox_norm": [
+                    0.766913,
+                    0.451413,
+                    0.889649,
+                    0.471135
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.087398,
+                    0.48262,
+                    0.098149,
+                    0.501406
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Mouse Wireless Logitech M331",
+                  "normalized_text": "Mouse Wireless Logitech M331",
+                  "bbox_norm": [
+                    0.146484,
+                    0.48262,
+                    0.416201,
+                    0.501406
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.532711,
+                    0.48262,
+                    0.543461,
+                    0.501406
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 185.000",
+                  "normalized_text": "Rp 185.000",
+                  "bbox_norm": [
+                    0.593022,
+                    0.483105,
+                    0.688228,
+                    0.500996
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 555.000",
+                  "normalized_text": "Rp 555.000",
+                  "bbox_norm": [
+                    0.783807,
+                    0.482207,
+                    0.889648,
+                    0.50193
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.087398,
+                    0.513415,
+                    0.098149,
+                    0.5322
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Flashdisk SanDisk 64GB",
+                  "normalized_text": "Flashdisk SanDisk 64GB",
+                  "bbox_norm": [
+                    0.146484,
+                    0.513415,
+                    0.360321,
+                    0.5322
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.532711,
+                    0.513415,
+                    0.543461,
+                    0.5322
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 75.000",
+                  "normalized_text": "Rp 75.000",
+                  "bbox_norm": [
+                    0.598141,
+                    0.5139,
+                    0.683109,
+                    0.53179
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 375.000",
+                  "normalized_text": "Rp 375.000",
+                  "bbox_norm": [
+                    0.783807,
+                    0.513001,
+                    0.889648,
+                    0.532724
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.087398,
+                    0.544209,
+                    0.098149,
+                    0.562994
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "JNE Reguler Shipping Cost",
+                  "normalized_text": "JNE Reguler Shipping Cost",
+                  "bbox_norm": [
+                    0.146484,
+                    0.544209,
+                    0.381822,
+                    0.562994
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.532711,
+                    0.544209,
+                    0.543461,
+                    0.562994
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Rp 50.000",
+                  "normalized_text": "Rp 50.000",
+                  "bbox_norm": [
+                    0.598141,
+                    0.544694,
+                    0.683109,
+                    0.562585
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 50.000",
+                  "normalized_text": "Rp 50.000",
+                  "bbox_norm": [
+                    0.79507,
+                    0.543796,
+                    0.889648,
+                    0.563518
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Subtotal",
+                  "normalized_text": "Subtotal",
+                  "bbox_norm": [
+                    0.582031,
+                    0.580386,
+                    0.647907,
+                    0.597829
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 8.830.000",
+                  "normalized_text": "Rp 8.830.000",
+                  "bbox_norm": [
+                    0.769702,
+                    0.579486,
+                    0.889649,
+                    0.59876
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Diskon",
+                  "normalized_text": "Diskon",
+                  "bbox_norm": [
+                    0.582031,
+                    0.608706,
+                    0.636901,
+                    0.626149
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 330.000",
+                  "normalized_text": "Rp 330.000",
+                  "bbox_norm": [
+                    0.786213,
+                    0.607806,
+                    0.889649,
+                    0.62708
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s3",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "PPN (10%)",
+                  "normalized_text": "PPN (10%)",
+                  "bbox_norm": [
+                    0.582031,
+                    0.637026,
+                    0.671823,
+                    0.65447
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 850.000",
+                  "normalized_text": "Rp 850.000",
+                  "bbox_norm": [
+                    0.786213,
+                    0.636126,
+                    0.889649,
+                    0.655401
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s4",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "GRAND TOTAL",
+                  "normalized_text": "GRAND TOTAL",
+                  "bbox_norm": [
+                    0.569336,
+                    0.668991,
+                    0.699993,
+                    0.686472
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 9.350.000",
+                  "normalized_text": "Rp 9.350.000",
+                  "bbox_norm": [
+                    0.764124,
+                    0.667546,
+                    0.889649,
+                    0.687716
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "4/4",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

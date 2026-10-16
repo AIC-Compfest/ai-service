@@ -1,0 +1,317 @@
+{
+  "document_id": "surat_jalan/surat_jalan_3_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_3_variasi_2.pdf",
+    "sha256": "35bbc3770997ca06a47baffaf1ce074fc26961074cd30a14450adbbc31259a97",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_3_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.065714,
+            0.717601,
+            0.86,
+            0.989487
+          ],
+          "headers": [],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.065714,
+                    0.717601,
+                    0.07191,
+                    0.741739
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "ELECTRICAL CONTROL PANEL *MAIN SWITCH 100A *CIRCUIT BREAKER *INSTALLATION MANUAL *TEST CERTIFICATE",
+                  "normalized_text": "ELECTRICAL CONTROL PANEL *MAIN SWITCH 100A *CIRCUIT BREAKER *INSTALLATION MANUAL *TEST CERTIFICATE",
+                  "bbox_norm": [
+                    0.122857,
+                    0.717601,
+                    0.288797,
+                    0.854352
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "UNIT",
+                  "normalized_text": "UNIT",
+                  "bbox_norm": [
+                    0.692857,
+                    0.717601,
+                    0.718853,
+                    0.741739
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.853805,
+                    0.717601,
+                    0.86,
+                    0.741739
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.065714,
+                    0.863998,
+                    0.07191,
+                    0.888136
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "CABLE 4 CORE 2.5MM",
+                  "normalized_text": "CABLE 4 CORE 2.5MM",
+                  "bbox_norm": [
+                    0.122857,
+                    0.863998,
+                    0.241127,
+                    0.888136
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "ROLL",
+                  "normalized_text": "ROLL",
+                  "bbox_norm": [
+                    0.692857,
+                    0.863998,
+                    0.721962,
+                    0.888136
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "25",
+                  "normalized_text": "25",
+                  "bbox_norm": [
+                    0.847609,
+                    0.863998,
+                    0.86,
+                    0.888136
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.065714,
+                    0.897782,
+                    0.07191,
+                    0.921919
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "LED TUBE LIGHT 18W",
+                  "normalized_text": "LED TUBE LIGHT 18W",
+                  "bbox_norm": [
+                    0.122857,
+                    0.897782,
+                    0.239267,
+                    0.921919
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "PCS",
+                  "normalized_text": "PCS",
+                  "bbox_norm": [
+                    0.692857,
+                    0.897782,
+                    0.715767,
+                    0.921919
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "200",
+                  "normalized_text": "200",
+                  "bbox_norm": [
+                    0.841414,
+                    0.897782,
+                    0.86,
+                    0.921919
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.065714,
+                    0.931565,
+                    0.07191,
+                    0.955703
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "DIGITAL MULTIMETER FLUKE",
+                  "normalized_text": "DIGITAL MULTIMETER FLUKE",
+                  "bbox_norm": [
+                    0.122857,
+                    0.931565,
+                    0.28074,
+                    0.955703
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "UNIT",
+                  "normalized_text": "UNIT",
+                  "bbox_norm": [
+                    0.692857,
+                    0.931565,
+                    0.718853,
+                    0.955703
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.853805,
+                    0.931565,
+                    0.86,
+                    0.955703
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.065714,
+                    0.965349,
+                    0.07191,
+                    0.989487
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "SAFETY HELMET",
+                  "normalized_text": "SAFETY HELMET",
+                  "bbox_norm": [
+                    0.122857,
+                    0.965349,
+                    0.214496,
+                    0.989487
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "PCS",
+                  "normalized_text": "PCS",
+                  "bbox_norm": [
+                    0.692857,
+                    0.965349,
+                    0.715767,
+                    0.989487
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "30",
+                  "normalized_text": "30",
+                  "bbox_norm": [
+                    0.847609,
+                    0.965349,
+                    0.86,
+                    0.989487
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": false,
+            "row_coverage_ok": "5/5",
+            "columns": 4
+          }
+        }
+      ]
+    }
+  ]
+}

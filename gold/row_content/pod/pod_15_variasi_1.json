@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_15_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.items",
+      "rows": [
+        [
+          "8501-WHT",
+          "sofa",
+          "1"
+        ],
+        [
+          "8501-WHT",
+          "loveseat",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

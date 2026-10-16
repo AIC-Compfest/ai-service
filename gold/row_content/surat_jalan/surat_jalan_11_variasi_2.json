@@ -1,0 +1,47 @@
+{
+  "document_id": "surat_jalan/surat_jalan_11_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Profil Perusahaan PT Bintang Samudera Prima",
+          "1",
+          "buku"
+        ],
+        [
+          "2",
+          "Sample Biskuit Kelapa Original",
+          "6",
+          "pak",
+          "Tanggal kedaluwarsa sudah tercetak pada kemasan."
+        ],
+        [
+          "3",
+          "Sample Kopi Instan Sachet Mocha",
+          "8",
+          "renteng",
+          "Kode produksi tertera di bagian belakang."
+        ],
+        [
+          "4",
+          "Sample Box Wafer Coklat Premium",
+          "3",
+          "box",
+          "Barcode belum ada, dan akan dicetak setelah persetujuan."
+        ],
+        [
+          "5",
+          "Sample Minuman Teh Botol 350 ml",
+          "12",
+          "botol",
+          "Disimpan dalam suhu ruang."
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

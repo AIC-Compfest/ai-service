@@ -1,0 +1,420 @@
+{
+  "document_id": "surat_jalan/surat_jalan_2_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_2_variasi_2.pdf",
+    "sha256": "4b26383c73e9fd6b9848f0c52ed3dcfa94e1fd09fa446ea4df6543765048291f",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_2_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.12031,
+            0.362278,
+            0.858412,
+            0.485689
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.12031,
+                0.362278,
+                0.141875,
+                0.379549
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.343104,
+                0.362278,
+                0.448492,
+                0.379549
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.669041,
+                0.362278,
+                0.725917,
+                0.379549
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Satuan",
+              "normalized_text": "Satuan",
+              "bbox_norm": [
+                0.805453,
+                0.362278,
+                0.858412,
+                0.379549
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.126681,
+                    0.37998,
+                    0.135504,
+                    0.396616
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Sofa lobby",
+                  "normalized_text": "Sofa lobby",
+                  "bbox_norm": [
+                    0.171429,
+                    0.37998,
+                    0.248387,
+                    0.396616
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.688655,
+                    0.37998,
+                    0.706303,
+                    0.396616
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "set",
+                  "normalized_text": "set",
+                  "bbox_norm": [
+                    0.82213,
+                    0.37998,
+                    0.841736,
+                    0.396616
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.126681,
+                    0.397795,
+                    0.135504,
+                    0.414431
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Lampu gantung dekoratif",
+                  "normalized_text": "Lampu gantung dekoratif",
+                  "bbox_norm": [
+                    0.171429,
+                    0.397795,
+                    0.350811,
+                    0.414431
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "18",
+                  "normalized_text": "18",
+                  "bbox_norm": [
+                    0.688655,
+                    0.397795,
+                    0.706303,
+                    0.414431
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "pcs",
+                  "normalized_text": "pcs",
+                  "bbox_norm": [
+                    0.820171,
+                    0.397795,
+                    0.843695,
+                    0.414431
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.126681,
+                    0.41561,
+                    0.135504,
+                    0.432245
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Material finishing",
+                  "normalized_text": "Material finishing",
+                  "bbox_norm": [
+                    0.171429,
+                    0.41561,
+                    0.298382,
+                    0.432245
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.693067,
+                    0.41561,
+                    0.701891,
+                    0.432245
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "set",
+                  "normalized_text": "set",
+                  "bbox_norm": [
+                    0.82213,
+                    0.41561,
+                    0.841736,
+                    0.432245
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.126681,
+                    0.433425,
+                    0.135504,
+                    0.45006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Karpet ruangan",
+                  "normalized_text": "Karpet ruangan",
+                  "bbox_norm": [
+                    0.171429,
+                    0.433425,
+                    0.280699,
+                    0.45006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "40",
+                  "normalized_text": "40",
+                  "bbox_norm": [
+                    0.688655,
+                    0.433425,
+                    0.706303,
+                    0.45006
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "roll",
+                  "normalized_text": "roll",
+                  "bbox_norm": [
+                    0.819677,
+                    0.433425,
+                    0.844189,
+                    0.45006
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "5",
+                  "normalized_text": "5",
+                  "bbox_norm": [
+                    0.126681,
+                    0.451239,
+                    0.135504,
+                    0.467875
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Panel dinding akustik",
+                  "normalized_text": "Panel dinding akustik",
+                  "bbox_norm": [
+                    0.171429,
+                    0.451239,
+                    0.324376,
+                    0.467875
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "95",
+                  "normalized_text": "95",
+                  "bbox_norm": [
+                    0.688655,
+                    0.451239,
+                    0.706303,
+                    0.467875
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "lembar",
+                  "normalized_text": "lembar",
+                  "bbox_norm": [
+                    0.80743,
+                    0.451239,
+                    0.856436,
+                    0.467875
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.126681,
+                    0.469054,
+                    0.135504,
+                    0.485689
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Furnitur kamar tidur",
+                  "normalized_text": "Furnitur kamar tidur",
+                  "bbox_norm": [
+                    0.171429,
+                    0.469054,
+                    0.315534,
+                    0.485689
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.693067,
+                    0.469054,
+                    0.701891,
+                    0.485689
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "set",
+                  "normalized_text": "set",
+                  "bbox_norm": [
+                    0.82213,
+                    0.469054,
+                    0.841736,
+                    0.485689
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "6/6",
+            "columns": 4
+          }
+        }
+      ]
+    }
+  ]
+}

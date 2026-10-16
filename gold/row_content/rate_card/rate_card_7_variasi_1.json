@@ -1,0 +1,39 @@
+{
+  "document_id": "rate_card/rate_card_7_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "Workstation Pro X9",
+          "AMD Ryzen Threadripper, RAM 64GB, SSD 2TB NVMe, RTX 4080 16GB, 27\" 4K Monitor, Windows 11 Pro",
+          "35.000.000",
+          "8",
+          "280.000.000"
+        ],
+        [
+          "2",
+          "Server Enterprise 500",
+          "Dual Intel Xeon Gold, RAM 128GB ECC, 4x 4TB SAS HDD, Redundant PSU, Rackmount 2U",
+          "80.000.000",
+          "3",
+          "240.000.000"
+        ],
+        [
+          "3",
+          "Laptop UltraBook Slim",
+          "Intel Core i7 Gen 13, RAM 32GB, SSD 1TB, 14\" OLED 2.8K, Windows 11 Pro",
+          "16.000.000",
+          "10",
+          "160.000.000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "Rp680.000.000"
+  ]
+}

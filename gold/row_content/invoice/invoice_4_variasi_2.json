@@ -1,0 +1,47 @@
+{
+  "document_id": "invoice/invoice_4_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Kopi Arabica Gayo",
+          "Roasted medium, 1 kg",
+          "40",
+          "185000",
+          "0",
+          "7400000"
+        ],
+        [
+          "2",
+          "Kopi Robusta Lampung",
+          "Roasted dark, 1 kg",
+          "30",
+          "120000",
+          "10",
+          "3240000"
+        ],
+        [
+          "3",
+          "Paper cup 8oz",
+          "Isi 50 pcs per pack",
+          "20",
+          "32500",
+          "0",
+          "650000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "11650000",
+    "360000",
+    "100000",
+    "1064000",
+    "12254000",
+    "0"
+  ]
+}

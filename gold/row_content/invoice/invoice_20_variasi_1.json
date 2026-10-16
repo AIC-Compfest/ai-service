@@ -1,0 +1,37 @@
+{
+  "document_id": "invoice/invoice_20_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Lithium-Ion Battery Pack used in a Portable Power Station. It contains the following components: BMS board, 18650 cells; HTS # 8507.60.; Manufactured in Vietnam.",
+          "8507.60",
+          "Vietnam",
+          "20",
+          "85.0",
+          "1700"
+        ],
+        [
+          "2",
+          "Aluminum Heat Sink Assembly for an LED Driver incorporating a cooling fan and a thermal pad; HTS # 8473.30.; Manufactured in Malaysia.",
+          "8473.30",
+          "Malaysia",
+          "5",
+          "40.0",
+          "200"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "25",
+    "48.0",
+    "44.5",
+    "1900",
+    "1975"
+  ]
+}

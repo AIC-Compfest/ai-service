@@ -1,0 +1,37 @@
+{
+  "document_id": "surat_jalan/surat_jalan_15_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "10 Buah",
+          "Meja Kerja Staf"
+        ],
+        [
+          "12 Buah",
+          "Kursi Lipat Chitose"
+        ],
+        [
+          "2 Buah",
+          "Lemari Arsip Besi 4 Pintu"
+        ],
+        [
+          "1 Buah",
+          "Proyektor Epson EB-X500"
+        ],
+        [
+          "3 Buah",
+          "Papan Tulis Whiteboard 120x240"
+        ],
+        [
+          "1 Buah",
+          "Printer Canon Pixma G3010"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

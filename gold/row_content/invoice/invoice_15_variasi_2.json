@@ -1,0 +1,54 @@
+{
+  "document_id": "invoice/invoice_15_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Meja Lipat Multifungsi",
+          "2",
+          "425000",
+          "850000"
+        ],
+        [
+          "2",
+          "Kursi Kantor Ergonomis",
+          "4",
+          "675000",
+          "2700000"
+        ],
+        [
+          "3",
+          "Lampu Meja LED",
+          "6",
+          "95000",
+          "570000"
+        ],
+        [
+          "4",
+          "Rak Buku 5 Susun",
+          "1",
+          "780000",
+          "780000"
+        ],
+        [
+          "5",
+          "Ongkos Kirim Cargo",
+          "1",
+          "150000",
+          "150000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "5050000",
+    "0",
+    "10",
+    "505000",
+    "5555000"
+  ]
+}

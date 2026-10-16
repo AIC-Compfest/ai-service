@@ -1,0 +1,43 @@
+{
+  "document_id": "surat_jalan/surat_jalan_3_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.items",
+      "rows": [
+        [
+          "1",
+          "ELECTRICAL CONTROL PANEL",
+          "UNIT",
+          "3"
+        ],
+        [
+          "2",
+          "CABLE 4 CORE 2.5MM",
+          "ROLL",
+          "25"
+        ],
+        [
+          "3",
+          "LED TUBE LIGHT 18W",
+          "PCS",
+          "200"
+        ],
+        [
+          "4",
+          "DIGITAL MULTIMETER FLUKE",
+          "UNIT",
+          "6"
+        ],
+        [
+          "5",
+          "SAFETY HELMET",
+          "PCS",
+          "30"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

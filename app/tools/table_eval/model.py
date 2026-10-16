@@ -140,6 +140,43 @@ def evidence_from_gold(gold: dict) -> dict:
     return {"document_id": gold.get("document_id", ""), "pages": pages}
 
 
+def gold_pages_from_evidence(evidence: dict) -> list[dict]:
+    """Convert pipeline evidence tables into GOLD_REVIEW ``pages[].tables[].rows[].cells[]`` (draft, unreviewed)."""
+    pages = []
+    for page in evidence.get("pages", []):
+        tables = []
+        for index, table in enumerate(page.get("tables", []), start=1):
+            rows = []
+            for r, row in enumerate(table.get("rows", [])):
+                cells = [
+                    {"column_index": c, "raw_text": str(value), "normalized_text": str(value), "bbox_norm": [0.0, 0.0, 0.0, 0.0], "legibility": "unreviewed"}
+                    for c, value in enumerate(row)
+                ]
+                rows.append({"row_id": f"r{r + 1}", "kind": "item", "cells": cells})
+            headers = [
+                {"column_index": c, "raw_text": str(value), "normalized_text": str(value), "bbox_norm": [0.0, 0.0, 0.0, 0.0]}
+                for c, value in enumerate(table.get("headers", []))
+            ]
+            summary = [
+                {"row_id": f"s{r + 1}", "kind": "summary", "cells": [{"column_index": c, "raw_text": str(v), "normalized_text": str(v), "bbox_norm": [0.0, 0.0, 0.0, 0.0], "legibility": "unreviewed"} for c, v in enumerate(row)]}
+                for r, row in enumerate(table.get("summary_rows", []))
+            ]
+            tables.append(
+                {
+                    "table_id": f"p{page.get('page_number', 1)}-t{index}",
+                    "role": table.get("role", "line_items"),
+                    "bbox_norm": list(table.get("bbox_norm", [0, 0, 1, 1])),
+                    "headers": headers,
+                    "rows": rows,
+                    "summary_rows": summary,
+                    "logical_id": None,
+                    "quality": {"header_found": bool(headers), "source_provider": table.get("provider", "")},
+                }
+            )
+        pages.append({"page_number": page.get("page_number", 1), "tables": tables})
+    return pages
+
+
 def prediction_from_evidence(evidence: dict, document_id: str | None = None) -> EvalDoc:
     """Adapt pipeline evidence (``pages[].tables[]``) or a flat ``{"tables": [...]}`` draft."""
     doc = EvalDoc(document_id=document_id or str(evidence.get("document_id", "")))
