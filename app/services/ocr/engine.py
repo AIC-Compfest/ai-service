@@ -109,13 +109,15 @@ class LayoutRegion:
 
 
 class TableStructure:
-    def __init__(self, bbox_norm: tuple[float, float, float, float], headers: list[str], rows: list[list[str]], confidence: float = 0.95, provider: str = "", reason: str = "", validation: dict | None = None, columns: list[dict] | None = None, cells: list[dict] | None = None):
+    def __init__(self, bbox_norm: tuple[float, float, float, float], headers: list[str], rows: list[list[str]], confidence: float = 0.95, provider: str = "", reason: str = "", validation: dict | None = None, columns: list[dict] | None = None, cells: list[dict] | None = None, role: str = "", role_reason: str = "", summary_rows: list[list[str]] | None = None, table_id: str = "", continued_from: str = ""):
         self.bbox_norm = bbox_norm
         self.headers = headers
         self.rows = rows
         self.confidence = confidence
         self.provider, self.reason, self.validation = provider, reason, validation or {}
         self.columns, self.cells = columns or [], cells or []
+        self.role, self.role_reason, self.summary_rows = role, role_reason, summary_rows or []
+        self.table_id, self.continued_from = table_id, continued_from
 
     def to_dict(self) -> dict:
         payload = {
@@ -128,6 +130,10 @@ class TableStructure:
         }
         if self.provider:
             payload.update({"provider": self.provider, "reason": self.reason, "validation": self.validation, "columns": self.columns, "cells": self.cells})
+            # Additive fields (K6): role/summary/identity of the table.
+            payload.update({"role": self.role, "role_reason": self.role_reason, "summary_rows": self.summary_rows, "table_id": self.table_id})
+            if self.continued_from:
+                payload["continued_from"] = self.continued_from
         return payload
 
 
@@ -338,7 +344,7 @@ class OCREngine:
                 token.row_idx = row
         return lines
 
-    def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict, canonical_image_bytes: bytes | None = None) -> PageOCREvidence:
+    def process_pdf_page(self, page: fitz.Page, page_number: int, quality: dict, canonical_image_bytes: bytes | None = None, discover_tables: bool = True) -> PageOCREvidence:
         """Extract high-precision vector text, coordinates and layout from PDF page.
         Falls back to PaddleOCR if page is scanned/image-based with insufficient digital text."""
         rect = page.rect
@@ -356,7 +362,7 @@ class OCREngine:
             logger.info("ocr.fallback_to_paddleocr", page_number=page_number, words_found=len(words_data), page_kind=page_kind.kind if page_kind else "legacy")
             pix = page.get_pixmap(dpi=200, alpha=False)
             img_bytes = canonical_image_bytes or pix.tobytes("png")
-            ocr_res = self.process_image(img_bytes, page_number, quality)
+            ocr_res = self.process_image(img_bytes, page_number, quality, discover_tables=discover_tables)
             ocr_res.fallback_used = True
             ocr_res.page_kind = page_kind
             return ocr_res
@@ -403,7 +409,7 @@ class OCREngine:
 
         ocr_lines = self._assign_row_indices(ocr_lines)
         regions = self._detect_layout_regions(ocr_lines, w, h)
-        tables = self._detect_tables(ocr_lines, page_number, page)
+        tables = self._detect_tables(ocr_lines, page_number, page) if discover_tables else []
 
         return PageOCREvidence(
             page_number=page_number,
@@ -436,6 +442,7 @@ class OCREngine:
         image_bytes: bytes | str | Path,
         page_number: int,
         quality: dict,
+        discover_tables: bool = True,
     ) -> PageOCREvidence:
         """Process raster image / scanned document using PaddleOCR."""
         if isinstance(image_bytes, (str, Path)):
@@ -475,7 +482,7 @@ class OCREngine:
             raise RuntimeError("PaddleOCR raster extraction failed") from e
 
         regions = self._detect_layout_regions(ocr_lines, w, h)
-        tables = self._detect_tables(ocr_lines, page_number)
+        tables = self._detect_tables(ocr_lines, page_number) if discover_tables else []
 
         return PageOCREvidence(
             page_number=page_number,
@@ -573,4 +580,4 @@ class OCREngine:
 
 
 def _table_structure_args(evidence: dict) -> dict:
-    return {"bbox_norm": tuple(evidence["bbox_norm"]), "headers": evidence["headers"], "rows": evidence["rows"], "confidence": evidence["confidence"], "provider": evidence["provider"], "reason": evidence["reason"], "validation": evidence["validation"], "columns": evidence["columns"], "cells": evidence["cells"]}
+    return {"bbox_norm": tuple(evidence["bbox_norm"]), "headers": evidence["headers"], "rows": evidence["rows"], "confidence": evidence["confidence"], "provider": evidence["provider"], "reason": evidence["reason"], "validation": evidence["validation"], "columns": evidence["columns"], "cells": evidence["cells"], "role": evidence.get("role", ""), "role_reason": evidence.get("role_reason", ""), "summary_rows": evidence.get("summary_rows", []), "table_id": evidence.get("table_id", "")}

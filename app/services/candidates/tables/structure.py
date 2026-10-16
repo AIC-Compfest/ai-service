@@ -96,3 +96,44 @@ def _build_table(lines: list[Line], header: Header, em_x: float, line_height: fl
     )
     table.validation["header_score"] = round(header.score, 4)
     return table, header.last + 1 + body.consumed
+
+
+def continue_table(page: Page, previous: Table, config: dict, document_id: str = "document") -> Table | None:
+    """Rows of a table that continues on this page WITHOUT repeating its header (Fase 4; targets F11).
+
+    The columns of ``previous`` are reused. The block must start near the top of the page, its first line must
+    line up with those columns and carry digits (a body row, not prose); rows are then cut by the usual row rules.
+    """
+    geometry = config.get("geometry", {})
+    labels = summary_pattern(config.get("summary_labels", []))
+    row_opts = {k: v for k, v in geometry.items() if k in ("continuation_pitch_factor", "sparse_share", "prose_width_share")}
+    rules = vertical_rules(page.source_page)
+    blocks, line_height = text_blocks(page.tokens, page.aspect, geometry, rules)
+    if not blocks or not previous.columns:
+        return None
+    ratio = page.aspect or geometry.get("default_aspect", 0.7071)
+    em_x = line_height / ratio
+    specs = [ColumnSpec(c.idx, c.x1, c.x2, c.header_text, [c.header_text], c.x1, c.x2) for c in previous.columns]
+    tolerance = 0.5 * em_x
+    for block in blocks:
+        first = block.lines[0]
+        if first.cy > 0.35:
+            break  # continuation rows sit at the top of the page, under at most a running header
+        under = sum(any(s.x0 >= c.ext0 - tolerance and s.x1 <= c.ext1 + tolerance or (s.cx >= c.ext0 and s.cx <= c.ext1) for c in specs) for s in first.segs)
+        digits = any(ch.isdigit() for s in first.segs for ch in s.text)
+        if len(first.segs) < 2 or under / len(first.segs) < 0.7 or not digits:
+            continue
+        body = segment_body(block.lines, specs, em_x, line_height, labels, row_opts)
+        if not body.rows:
+            return None
+        rows = [_row(draft, specs, i, "item") for i, draft in enumerate(body.rows)]
+        summary = [_row(draft, specs, i, "total_like") for i, draft in enumerate(body.summary)]
+        tokens = [t for draft in body.rows for toks in draft.cells.values() for t in toks]
+        table = Table(
+            f"{document_id}-p{page.page_number}-c1", page.page_number, page.page_number, "columnar", previous.source,
+            [Column(c.idx, c.x1, c.x2, c.header_text, list(c.header_lines)) for c in specs], rows, _union(tokens), conf=0.0,
+            stitched_pages=[page.page_number], reason="continuation", summary_rows=summary,
+        )
+        table.validation["continued_from"] = previous.table_id
+        return table
+    return None

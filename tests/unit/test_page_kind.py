@@ -60,7 +60,7 @@ def test_page_kind_is_added_to_evidence_and_routes_scan(monkeypatch):
     monkeypatch.setattr(settings, "page_kind_routing", True)
     calls: list[bytes] = []
 
-    def fake_process_image(image_bytes, page_number, quality):
+    def fake_process_image(image_bytes, page_number, quality, **_options):
         calls.append(image_bytes)
         from app.services.ocr.engine import PageOCREvidence
         return PageOCREvidence(page_number, 200, 200, "fake", True, [], [], [], quality)

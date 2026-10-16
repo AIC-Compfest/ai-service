@@ -31,10 +31,12 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from .preprocessing.document_ingestion import DocumentIngestionService, IngestedDocument
 from .preprocessing.image_preprocessor import ImagePreprocessor
 from .classification.classifier import DocumentClassifier
+from .candidates.table_runtime import candidate_page, discover_page_tables, link_segment_tables, tables_to_evidence
 from .ocr.engine import OCREngine, PageOCREvidence
 from .signature.detector import SignatureDetector
 from .segmentation.segmenter import (
@@ -85,6 +87,10 @@ class Phase5DocumentPipeline:
 
         # Per-page classification results for segmentation
         page_classifications: list[PageClassification] = []
+        # Table discovery is type-aware (K1): it runs AFTER page classification with the live PDF page, so OCR is told
+        # not to run its type-less discovery (that path stays for stand-alone OCR callers).
+        candidate_pages: dict[int, Any] = {}
+        page_tables: dict[int, list] = {}
 
         for p_asset in ingested.pages:
             # Quality estimation
@@ -100,9 +106,10 @@ class Phase5DocumentPipeline:
                 p_ocr = self.ocr_engine.process_pdf_page(
                     p_asset.pdf_page, p_asset.page_number, quality,
                     canonical_image_bytes=p_asset.image_bytes,
+                    discover_tables=False,
                 )
             else:
-                p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality)
+                p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality, discover_tables=False)
             # Evidence dimensions always describe the canonical PNG, including vector PDFs.
             p_ocr.width, p_ocr.height = p_asset.width, p_asset.height
 
@@ -140,6 +147,12 @@ class Phase5DocumentPipeline:
             page_dict = p_ocr.to_dict()
             page_dict["page_image"] = p_asset.page_image
             page_dict["coord_space"] = "page_image_normalized"
+            if settings.enable_table_extractor:
+                candidate = candidate_page(page_dict, p_asset.pdf_page if p_asset.is_pdf_page else None)
+                found = discover_page_tables(candidate, page_type_str, ingested.document_id)
+                candidate_pages[p_asset.page_number] = candidate
+                page_tables[p_asset.page_number] = found
+                page_dict["tables"] = tables_to_evidence(found)
             page_dict["classification"] = {
                 "document_type": page_type_str,
                 "confidence": page_classify_res.confidence,
@@ -162,6 +175,15 @@ class Phase5DocumentPipeline:
         # -----------------------------------------------------------------------
         segments = self.segmenter.segment(page_classifications)
         segments_dicts = [s.to_dict() for s in segments]
+
+        # 3b. Header-less continuations and multi-page tables per segment (additive evidence).
+        table_groups: list[dict] = []
+        if settings.enable_table_extractor and page_tables:
+            page_tables, table_groups = link_segment_tables(candidate_pages, page_tables, segments_dicts, ingested.document_id)
+            for page_dict in pages_evidence:
+                number = page_dict["page_number"]
+                if number in page_tables:
+                    page_dict["tables"] = tables_to_evidence(page_tables[number])
 
         # 4. Overall Document-Level Classification (for backward compat only)
         # NOTE: For multi-type PDFs this will be mixed signal — don't rely on it.
@@ -214,6 +236,7 @@ class Phase5DocumentPipeline:
                 "bbox": sig_res.bbox.model_dump() if sig_res and sig_res.bbox else None,
             },
             "pages": pages_evidence,
+            "table_groups": table_groups,
             "processing_metadata": {
                 "pipeline_version": "phase_5_v3_segment_aware",
                 "processing_time_ms": elapsed_ms,

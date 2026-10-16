@@ -127,7 +127,8 @@ class RateAgreementExtractor(BaseExtractor):
         all_tables: list[dict] = []
         for page in ocr_result.get("pages", []):
             all_lines.extend(page.get("lines", []))
-            all_tables.extend(page.get("tables", []))
+            # Only tables the pipeline classified as item tables feed this extractor (legacy tables carry no role).
+            all_tables.extend(t for t in page.get("tables", []) if t.get("role", "line_items") in ("line_items", "rate_matrix"))
 
         if not all_lines:
             return self._all_unknown(document_id)

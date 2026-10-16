@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import copy
+import re
+
 import hashlib
 import re
 import time
@@ -418,7 +421,8 @@ def _near_unit(page: Page, token: Token, units: set[str]) -> str:
 
 def table_evidence(table) -> dict[str, Any]:
     """Serialize additive table diagnostics while retaining the legacy fields."""
-    return {
+    payload = {
+        "table_id": table.table_id,
         "bbox_norm": list(table.bbox), "headers": [column.header_text for column in table.columns],
         "rows": [[cell.text for cell in row.cells] for row in table.rows],
         "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.conf,
@@ -428,14 +432,26 @@ def table_evidence(table) -> dict[str, Any]:
         "summary_rows": [[cell.text for cell in row.cells] for row in table.summary_rows],
         "role": table.role, "role_reason": table.role_reason,
     }
+    if table.validation.get("continued_from"):
+        payload["continued_from"] = table.validation["continued_from"]
+    return payload
+
+
+def _natural(table_id: str) -> list:
+    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", table_id)]
 
 
 def stitch_tables(tables):
-    """Join adjacent-page tables only when their provider and headers agree."""
-    stitched = []
-    for table in sorted(tables, key=lambda value: (value.page_start, value.table_id)):
-        previous = stitched[-1] if stitched else None
-        if previous and _same_table_segment(previous, table):
+    """Join tables of consecutive pages that are one logical table; the inputs are NOT modified.
+
+    Two tables join when the first has no summary rows (it did not end), they sit on consecutive pages, and either the
+    headers match or the second is a header-less continuation of the first. Ordering is by page, then natural id order
+    (t2 before t10).
+    """
+    stitched: list = []
+    for table in sorted((copy.deepcopy(t) for t in tables), key=lambda value: (value.page_start, _natural(value.table_id))):
+        previous = next((candidate for candidate in reversed(stitched) if candidate.page_end + 1 == table.page_start), None)
+        if previous is not None and _same_table_segment(previous, table):
             offset = len(previous.rows)
             for row in table.rows:
                 row.idx += offset
@@ -445,11 +461,16 @@ def stitch_tables(tables):
             previous.summary_rows.extend(table.summary_rows)
             previous.page_end = table.page_end
             previous.stitched_pages.extend(page for page in table.stitched_pages if page not in previous.stitched_pages)
-            previous.reason = "consecutive_page_header_match"
+            previous.reason = "consecutive_page_continuation" if table.reason == "continuation" else "consecutive_page_header_match"
+            previous.validation.setdefault("stitched_table_ids", [previous.table_id]).append(table.table_id)
         else:
             stitched.append(table)
     return stitched
 
 
 def _same_table_segment(left, right) -> bool:
-    return left.source == right.source and left.page_end + 1 == right.page_start and [norm_text(column.header_text) for column in left.columns] == [norm_text(column.header_text) for column in right.columns]
+    if left.summary_rows or left.page_end + 1 != right.page_start or len(left.columns) != len(right.columns):
+        return False
+    if right.reason == "continuation":
+        return right.validation.get("continued_from") in (left.table_id, *left.validation.get("stitched_table_ids", []))
+    return [norm_text(column.header_text) for column in left.columns] == [norm_text(column.header_text) for column in right.columns]
