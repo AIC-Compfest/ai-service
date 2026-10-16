@@ -226,6 +226,54 @@ def find_amount_near_keyword(
     return None, 0.0, None
 
 
+_HEADER_TOKEN = re.compile(r"[a-z0-9]+")
+_SHORT_ALIAS = 2  # aliases up to this many characters ("no", "kg") must match the whole header
+
+
+def _contains_run(haystack: list[str], needle: list[str]) -> bool:
+    return bool(needle) and any(haystack[i:i + len(needle)] == needle for i in range(len(haystack) - len(needle) + 1))
+
+
+def _header_score(header: str, alias: str) -> int:
+    """3 = identical tokens, 2 = alias is a whole-word run inside the header, 1 = header is a run inside the alias, 0 = no match.
+
+    Matching is token based (never a raw substring) and empty headers never match, so ``"" in alias`` and
+    ``"no" in "nomor"`` style accidents cannot happen (T-15).
+    """
+    h, a = _HEADER_TOKEN.findall(header.casefold()), _HEADER_TOKEN.findall(alias.casefold())
+    if not h or not a:
+        return 0
+    if h == a:
+        return 3
+    if len("".join(a)) <= _SHORT_ALIAS:
+        return 0
+    if _contains_run(h, a):
+        return 2
+    if len("".join(h)) >= 3 and _contains_run(a, h):
+        return 1
+    return 0
+
+
+def _map_headers(headers: list[str], column_mappings: dict[str, list[str]]) -> dict[str, int]:
+    """Assign each column to at most one canonical field (best score, then longest alias) and each field to one column.
+
+    Ties between columns keep the FIRST column; the previous behaviour let the last matching column overwrite.
+    """
+    best_per_column: dict[int, tuple[tuple[int, int], str]] = {}
+    for col_i, header in enumerate(headers):
+        for canonical, aliases in column_mappings.items():
+            for alias in aliases:
+                score = _header_score(header or "", alias)
+                if score and ((score, len(alias)) > best_per_column.get(col_i, ((0, 0), ""))[0]):
+                    best_per_column[col_i] = ((score, len(alias)), canonical)
+    chosen: dict[str, tuple[tuple[int, int], int]] = {}
+    for col_i in sorted(best_per_column):
+        key, canonical = best_per_column[col_i]
+        if canonical not in chosen or key > chosen[canonical][0]:
+            chosen[canonical] = (key, col_i)
+    return {canonical: col_i for canonical, (_, col_i) in chosen.items()}
+
+
 def parse_table_columns(
     tables: list[dict],
     column_mappings: dict[str, list[str]],
@@ -248,15 +296,7 @@ def parse_table_columns(
         if not headers or not rows:
             continue
 
-        # Build header index: normalized header text -> column index
-        header_index: dict[str, int] = {}
-        for col_i, hdr in enumerate(headers):
-            hdr_lower = hdr.lower().strip()
-            for canonical, aliases in column_mappings.items():
-                for alias in aliases:
-                    if alias.lower() in hdr_lower or hdr_lower in alias.lower():
-                        header_index[canonical] = col_i
-                        break
+        header_index = _map_headers(headers, column_mappings)
 
         for row in rows:
             row_dict: dict[str, Any] = {}
