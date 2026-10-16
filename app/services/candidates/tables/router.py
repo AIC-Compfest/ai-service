@@ -12,6 +12,8 @@ import yaml
 from ..schema import Page, Table
 from .token_grid import TokenGridTableProvider
 from .pymupdf_provider import PyMuPDFTableProvider
+from .rows import summary_pattern
+from .scoring import arbitrate, classify_role, table_quality
 from app.services.validation.arithmetic import validate_table
 
 
@@ -29,10 +31,17 @@ def _cached_extractor(config_dir: str, provider_order: tuple[str, ...]) -> "Tabl
 
 
 class TableExtractor:
-    """Select a provider by table structure, never merely provider order."""
+    """Collect tables from every provider, keep the best table of each overlapping group, classify roles.
 
-    def __init__(self, providers: Iterable[TableProvider]):
+    Arbitration is per TABLE, not per provider: a page may legitimately mix a ruled table found by PyMuPDF with an
+    unruled table found by token geometry. Provider order is only a deterministic tie-breaker.
+    """
+
+    def __init__(self, providers: Iterable[TableProvider], scoring: dict | None = None, summary_labels: Iterable[str] = ()):
         self.providers = {provider.name: provider for provider in providers}
+        self.order = list(self.providers)
+        self.scoring = scoring or {}
+        self.summary_pattern = summary_pattern(list(summary_labels)) if summary_labels else None
 
     @classmethod
     def from_config(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
@@ -41,7 +50,7 @@ class TableExtractor:
         resolution = yaml.safe_load((config_dir / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
-        return cls([PyMuPDFTableProvider(resolution.get("pymupdf")), provider]).ordered(provider_order)
+        return cls([PyMuPDFTableProvider(resolution.get("pymupdf")), provider], resolution.get("scoring"), resolution.get("summary_labels", ())).ordered(provider_order)
 
     @classmethod
     def cached(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
@@ -54,13 +63,10 @@ class TableExtractor:
         return self
 
     def extract(self, page: Page, doc_type: str | None, document_id: str = "document", *, arithmetic_validation: bool = False, relative_tolerance=None, absolute_tolerance=None) -> list[Table]:
-        candidates: list[tuple[float, int, list[Table]]] = []
+        candidates: list[Table] = []
         for position, name in enumerate(self.order):
-            tables = self.providers[name].tables(page, doc_type, document_id)
-            if not tables:
-                continue
-            for table in tables:
-                table.structural_score = structural_score(table)
+            for table in self.providers[name].tables(page, doc_type, document_id):
+                table.structural_score = table_quality(table, self.scoring) - position * 1e-6  # order breaks exact ties
                 table.reason = table.reason or "structural_score"
                 table.validation.setdefault("structural", {"score": round(table.structural_score, 6)})
                 if arithmetic_validation:
@@ -68,22 +74,17 @@ class TableExtractor:
                     table.validation["arithmetic"] = _json_validation(validation)
                     if validation["available"]:
                         table.structural_score = round(0.8 * table.structural_score + 0.2 * float(validation["score"]), 6)
-            candidates.append((sum(table.structural_score for table in tables) / len(tables), position, tables))
-        if not candidates:
-            return []
-        # Provider order is only a deterministic tie-breaker.
-        return max(candidates, key=lambda item: (item[0], -item[1]))[2]
+                candidates.append(table)
+        tables = arbitrate(candidates, self.scoring)
+        for number, table in enumerate(tables, start=1):
+            table.table_id = f"{document_id}-p{page.page_number}-t{number}"
+            table.role, table.role_reason = classify_role(table, self.summary_pattern, self.scoring)
+        return tables
 
 
 def structural_score(table: Table) -> float:
-    """Heuristic completeness score; it is not an accuracy probability."""
-    if not table.columns or not table.rows:
-        return 0.0
-    expected = len(table.columns) * len(table.rows)
-    filled = sum(bool(cell.text.strip()) for row in table.rows for cell in row.cells)
-    header_ratio = sum(bool(column.header_text.strip()) for column in table.columns) / len(table.columns)
-    fill_ratio = filled / expected if expected else 0.0
-    return round(0.45 * header_ratio + 0.55 * fill_ratio, 6)
+    """Structural plausibility score of one table (kept as the public name; see ``scoring.table_quality``)."""
+    return table_quality(table)
 
 
 def _json_validation(value):

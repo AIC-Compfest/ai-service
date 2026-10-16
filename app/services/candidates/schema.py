@@ -80,6 +80,8 @@ class Table:
     validation: dict[str, Any] = field(default_factory=dict)
     structural_score: float = 0.0
     summary_rows: list[TableRow] = field(default_factory=list)
+    role: str = ""  # line_items | summary | info | other (set by the router)
+    role_reason: str = ""
 
 
 @dataclass

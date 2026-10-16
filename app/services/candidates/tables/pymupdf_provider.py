@@ -44,6 +44,8 @@ class PyMuPDFTableProvider:
             tables = _normalize(found, page, document_id, self.options, start=len(accepted) + 1)
             if not tables:
                 continue
+            for table in tables:
+                table.reason = f"pymupdf_find_tables:{strategy}"
             if not self.options["merge_strategies"]:
                 return tables
             for table in tables:

@@ -19,11 +19,46 @@ pymupdf:
 geometry:
   # All distances are expressed relative to the text itself (em = median token height), so they hold for any DPI/page size.
   line_tolerance: 0.5          # tokens whose centres differ by <= this x median token height share a visual line
-  segment_gap_em: 0.8          # horizontal gap above this many em starts a new cell-like segment
-  block_gap_factor: 2.2        # vertical gap above this many median line heights separates two text blocks
+  segment_gap_em: 0.55         # horizontal gap above this many em starts a new cell-like segment
+  block_gap_factor: 2.2        # a vertical gap above this x the LOCAL line pitch (median of nearby gaps, >= 1 line height) separates two text blocks
+  block_pitch_window: 4        # number of neighbouring gaps on each side used for the local pitch
   side_gutter_min: 0.05        # minimum empty vertical gutter (share of page width) to even consider a side-by-side split
   side_header_lines: 4         # a split also needs repeated header words on one of the first lines of the block ...
   side_header_repeats: 2       # ... at least this many distinct non-numeric texts on both sides of the gutter
   side_header_jaccard: 0.5     # ... and those shared texts must be this share of all distinct texts on that line (rejects splits inside one table)
   side_min_lines: 3            # both sides need at least this many lines
   default_aspect: 0.7071       # page width / height when the evidence does not carry the page size (A4 portrait)
+# Whole-word labels that start a summary row (totals, tax, discount ...). Matched at the start of the first
+# non-empty cell of a sparse line (see rows.py). Add words here, not in code.
+summary_labels:
+  - total
+  - subtotal
+  - sub total
+  - sub-total
+  - grand total
+  - jumlah
+  - ppn
+  - pph
+  - dpp
+  - pajak
+  - vat
+  - tax
+  - diskon
+  - discount
+  - potongan
+  - pembulatan
+  - materai
+  - terbilang
+  - say
+  - amount due
+  - balance
+  - ongkos kirim
+scoring:
+  max_page_area_ratio: 0.5     # a table covering more of the page is treated as page-wide (see pymupdf section for the origin)
+  header_long_chars: 40        # average header length above which a "header" is probably a paragraph
+  overlap_same_table: 0.5      # overlap (over the smaller table) at which two provider candidates are one table
+  info_label_share: 0.5        # share of rows with a "Label:" cell that makes a 2-3 column table a key-value block
+  info_max_cols: 3
+  item_min_digit_share: 0.2    # a line-item table needs this share of body cells with digits
+  summary_label_share: 0.6
+  text_strategy_prior: 0.9     # PyMuPDF 'text' strategy tables are scored x0.9 (its column splits are character-gap based)

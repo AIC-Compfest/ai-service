@@ -426,6 +426,7 @@ def table_evidence(table) -> dict[str, Any]:
         "columns": [{"idx": column.idx, "bbox_norm": [column.x1, 0.0, column.x2, 1.0], "header": column.header_text} for column in table.columns],
         "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],
         "summary_rows": [[cell.text for cell in row.cells] for row in table.summary_rows],
+        "role": table.role, "role_reason": table.role_reason,
     }
 
 

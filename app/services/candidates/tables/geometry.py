@@ -14,8 +14,9 @@ from ..schema import Token
 
 DEFAULT_GEOMETRY = {
     "line_tolerance": 0.5,
-    "segment_gap_em": 0.8,
+    "segment_gap_em": 0.55,
     "block_gap_factor": 2.2,
+    "block_pitch_window": 4,
     "side_gutter_min": 0.05,
     "side_header_lines": 4,
     "side_header_repeats": 2,
@@ -99,8 +100,36 @@ def median_height(tokens: list[Token]) -> float:
     return median(token.bbox[3] - token.bbox[1] for token in tokens) if tokens else 0.0
 
 
-def build_lines(tokens: list[Token], aspect: float | None, options: dict | None = None) -> list[Line]:
-    """Cluster tokens into visual lines (by centre y against the running line centre) and split lines into segments."""
+def vertical_rules(source_page, min_length: float = 0.015) -> list[tuple[float, float, float]]:
+    """Drawn vertical rules ``(x, y0, y1)`` of a live PDF page, normalized to 0..1. Empty when unavailable."""
+    if source_page is None or not hasattr(source_page, "get_drawings"):
+        return []
+    try:
+        width, height = float(source_page.rect.width), float(source_page.rect.height)
+        rules: list[tuple[float, float, float]] = []
+
+        def add(x0, y0, x1, y1):
+            if abs(x1 - x0) <= 1.0 and abs(y1 - y0) / height >= min_length:
+                rules.append((((x0 + x1) / 2) / width, min(y0, y1) / height, max(y0, y1) / height))
+
+        for drawing in source_page.get_drawings():
+            for item in drawing["items"]:
+                if item[0] == "l":
+                    add(item[1].x, item[1].y, item[2].x, item[2].y)
+                elif item[0] == "re":
+                    rect = item[1]
+                    add(rect.x0, rect.y0, rect.x0, rect.y1)
+                    add(rect.x1, rect.y0, rect.x1, rect.y1)
+        return rules
+    except Exception:  # a drawing the library cannot parse must not break table discovery
+        return []
+
+
+def build_lines(tokens: list[Token], aspect: float | None, options: dict | None = None, rules: list[tuple[float, float, float]] | None = None) -> list[Line]:
+    """Cluster tokens into visual lines (by centre y against the running line centre) and split lines into segments.
+
+    Segments also split where a drawn vertical rule runs between two tokens (cells of a ruled table never merge).
+    """
     opts = {**DEFAULT_GEOMETRY, **(options or {})}
     tokens = [t for t in tokens if t.text.strip()]
     if not tokens:
@@ -122,7 +151,9 @@ def build_lines(tokens: list[Token], aspect: float | None, options: dict | None 
         em_x = median_height(cluster) / ratio  # one em measured in page-width units
         segs, current = [], [cluster[0]]
         for token in cluster[1:]:
-            if token.bbox[0] - max(t.bbox[2] for t in current) > opts["segment_gap_em"] * em_x:
+            left = max(t.bbox[2] for t in current)
+            ruled = any(left - 1e-4 <= x <= token.bbox[0] + 1e-4 and y0 <= centre <= y1 for x, y0, y1 in (rules or ()))
+            if ruled or token.bbox[0] - left > opts["segment_gap_em"] * em_x:
                 segs.append(Seg(current))
                 current = [token]
             else:
@@ -133,11 +164,24 @@ def build_lines(tokens: list[Token], aspect: float | None, options: dict | None 
 
 
 def split_blocks(lines: list[Line], height: float, options: dict | None = None) -> list[Block]:
-    """Group consecutive lines; a vertical gap above ``block_gap_factor`` line heights starts a new block."""
+    """Group consecutive lines into blocks.
+
+    A vertical gap starts a new block when it exceeds ``block_gap_factor`` times the LOCAL line pitch (median of the
+    neighbouring gaps, never less than one line height). A fixed multiple of the text height would split tables
+    whose rows are simply spaced widely.
+    """
     opts = {**DEFAULT_GEOMETRY, **(options or {})}
+    ordered = sorted(lines, key=lambda l: l.cy)
+    gaps = [b.cy - a.cy for a, b in zip(ordered, ordered[1:])]
+    window = opts["block_pitch_window"]
     blocks: list[Block] = []
-    for line in sorted(lines, key=lambda l: l.cy):
-        if blocks and line.cy - blocks[-1].lines[-1].cy <= opts["block_gap_factor"] * height:
+    for index, line in enumerate(ordered):
+        if index == 0:
+            blocks.append(Block([line]))
+            continue
+        near = gaps[max(0, index - 1 - window): index + window]
+        pitch = max(height, median(near))
+        if gaps[index - 1] <= opts["block_gap_factor"] * pitch:
             blocks[-1].lines.append(line)
         else:
             blocks.append(Block([line]))
@@ -205,10 +249,10 @@ def split_side_by_side(block: Block, height: float, options: dict | None = None,
     return [block]
 
 
-def text_blocks(tokens: list[Token], aspect: float | None, options: dict | None = None) -> tuple[list[Block], float]:
+def text_blocks(tokens: list[Token], aspect: float | None, options: dict | None = None, rules: list[tuple[float, float, float]] | None = None) -> tuple[list[Block], float]:
     """Visual lines -> vertical blocks -> side-by-side split. Returns the blocks and the median token height."""
     opts = {**DEFAULT_GEOMETRY, **(options or {})}
-    lines = build_lines(tokens, aspect, opts)
+    lines = build_lines(tokens, aspect, opts, rules)
     if not lines:
         return [], 0.0
     height = median_height([t for t in tokens if t.text.strip()])
