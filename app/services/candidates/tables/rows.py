@@ -29,6 +29,8 @@ DEFAULT_ROWS = {
     "sparse_share": 0.5,                # a summary line fills at most this share of the columns
     "prose_width_share": 0.6,           # a single cell wider than this share of the table width is prose, not a cell
     "anchor_scan_lines": 30,
+    "lead_line_rows": True,             # a description line above the numbers' line opens a row (two-line items)
+    "lead_gap_ratio": 0.7,              # ... when its gap to the line below is at most this x its gap to the line above
 }
 ROW_NUMBER = re.compile(r"^\d{1,3}[.)]?$")
 
@@ -83,6 +85,23 @@ def find_anchor(cells: list[dict[int, list[Token]]], n_cols: int, opts: dict) ->
     return None
 
 
+def _leads_next_row(body: list[Line], cells: list[dict[int, list[Token]]], index: int, anchor: int | None, start_fill: int, tight: float | None, opts: dict) -> bool:
+    """True when line ``index`` is a sparse description line directly above (tight gap) a line that fills the row."""
+    if index + 1 >= len(body):
+        return False
+    here, below = cells[index], cells[index + 1]
+    if anchor is not None and anchor in here:
+        return False
+    if len(here) >= start_fill or len(below) < start_fill:
+        return False
+    gap_below = body[index + 1].cy - body[index].cy
+    if index > 0:
+        # It belongs with what follows only if it sits clearly closer to the line below than to the line above;
+        # otherwise it is the wrapped tail of the previous row.
+        return gap_below <= opts["lead_gap_ratio"] * (body[index].cy - body[index - 1].cy)
+    return tight is None or gap_below <= opts["continuation_pitch_factor"] * tight
+
+
 def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_height: float, labels: re.Pattern, options: dict | None = None) -> Body:
     opts = {**DEFAULT_ROWS, **(options or {})}
     n_cols = len(columns)
@@ -97,6 +116,7 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
     rows: list[RowDraft] = []
     summary: list[RowDraft] = []
     current: RowDraft | None = None
+    lead_open = False
     consumed = 0
     for index, (line, line_cells) in enumerate(zip(body, cells)):
         filled = set(line_cells)
@@ -122,15 +142,31 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
         if summary:
             break
         gap = line.cy - body[index - 1].cy if index else None
-        if anchor_filled or len(filled) >= start_fill and (anchor is None or anchor not in filled or anchor_filled):
+        starts_row = anchor_filled or len(filled) >= start_fill and (anchor is None or anchor not in filled or anchor_filled)
+        if starts_row and lead_open and current is not None:
+            current.add(line, line_cells)  # the numbers of a row whose description line came first
+            lead_open = False
+            consumed = index + 1
+            continue
+        if starts_row:
             current = RowDraft()
             current.add(line, line_cells)
             rows.append(current)
             consumed = index + 1
             continue
+        leads = opts["lead_line_rows"] and _leads_next_row(body, cells, index, anchor, start_fill, tight, opts)
         tight_enough = gap is None or tight is None or gap <= opts["continuation_pitch_factor"] * tight
-        if current is not None and tight_enough and (anchor is None or anchor not in filled):
+        if current is not None and tight_enough and not leads and (anchor is None or anchor not in filled):
             current.add(line, line_cells)
+            consumed = index + 1
+            continue
+        if leads:
+            # A description line that precedes the line holding the numbers (two-line items, numbers centred between
+            # the description lines): it opens the next row instead of ending the table.
+            current = RowDraft()
+            current.add(line, line_cells)
+            rows.append(current)
+            lead_open = True
             consumed = index + 1
             continue
         break

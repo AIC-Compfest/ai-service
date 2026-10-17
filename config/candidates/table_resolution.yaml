@@ -24,6 +24,9 @@ geometry:
   segment_gap_em: 0.55         # horizontal gap above this many em starts a new cell-like segment
   block_gap_factor: 2.2        # a vertical gap above this x the LOCAL line pitch (median of nearby gaps, >= 1 line height) separates two text blocks
   block_pitch_window: 4        # number of neighbouring gaps on each side used for the local pitch
+  block_periodic_min: 2        # a large gap is row spacing (not a block break) when this many other large gaps of similar size are nearby; 0 disables
+  block_periodic_tolerance: 0.3  # "similar size" = within this share of the gap
+  block_periodic_window: 6     # how many gaps on each side are searched
   side_gutter_min: 0.05        # minimum empty vertical gutter (share of page width) to even consider a side-by-side split
   side_header_lines: 4         # a split also needs repeated header words on one of the first lines of the block ...
   side_header_repeats: 2       # ... at least this many distinct non-numeric texts on both sides of the gutter

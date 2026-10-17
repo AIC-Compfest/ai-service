@@ -17,6 +17,9 @@ DEFAULT_GEOMETRY = {
     "segment_gap_em": 0.55,
     "block_gap_factor": 2.2,
     "block_pitch_window": 4,
+    "block_periodic_min": 2,
+    "block_periodic_tolerance": 0.3,
+    "block_periodic_window": 6,
     "side_gutter_min": 0.05,
     "side_header_lines": 4,
     "side_header_repeats": 2,
@@ -163,6 +166,29 @@ def build_lines(tokens: list[Token], aspect: float | None, options: dict | None 
     return lines
 
 
+def _is_row_spacing(gaps: list[float], i: int, pitch: float, opts: dict, below: Line | None = None) -> bool:
+    """A large gap that repeats is the spacing BETWEEN multi-line rows, not the end of a block.
+
+    Items made of two text lines (description + wrapped description, with the numbers centred between them) have small
+    gaps inside a row and a larger, regular gap between rows; the local pitch only sees the small ones. A gap counts as
+    row spacing when at least ``block_periodic_min`` other large gaps of about the same size sit within
+    ``block_periodic_window`` gaps of it. A single large gap (a real break) never qualifies.
+    """
+    needed = int(opts["block_periodic_min"])
+    if needed <= 0:
+        return False
+    if below is not None and len(below.segs) >= 2 and not any(ch.isdigit() for seg in below.segs for ch in seg.text):
+        return False  # a multi-cell line without digits right after the gap is the header of ANOTHER table
+    large = opts["block_gap_factor"] * pitch
+    window = int(opts["block_periodic_window"])
+    tolerance = opts["block_periodic_tolerance"] * gaps[i]
+    similar = sum(
+        1 for j in range(max(0, i - window), min(len(gaps), i + window + 1))
+        if j != i and gaps[j] > large and abs(gaps[j] - gaps[i]) <= tolerance
+    )
+    return similar >= needed
+
+
 def split_blocks(lines: list[Line], height: float, options: dict | None = None) -> list[Block]:
     """Group consecutive lines into blocks.
 
@@ -181,7 +207,7 @@ def split_blocks(lines: list[Line], height: float, options: dict | None = None) 
             continue
         near = gaps[max(0, index - 1 - window): index + window]
         pitch = max(height, median(near))
-        if gaps[index - 1] <= opts["block_gap_factor"] * pitch:
+        if gaps[index - 1] <= opts["block_gap_factor"] * pitch or _is_row_spacing(gaps, index - 1, pitch, opts, line):
             blocks[-1].lines.append(line)
         else:
             blocks.append(Block([line]))

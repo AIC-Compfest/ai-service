@@ -3,6 +3,13 @@
 Run from ai-service:  .\\.venv\\Scripts\\python.exe scripts\\baseline\\measure_amount_recall.py
 GT is SYNTHETIC (not human gold). Metric is ROUGH: the digits of each GT amount must equal the digits of
 some produced table cell. This is not a cell/row metric.
+
+Two readings are printed:
+  items          cells of `rows` only (the original definition);
+  items+summary  also the cells of `summary_rows`.
+Since D-018, total/tax rows are NOT in `rows`, so the original reading under-counts totals. It also credits an amount
+found in ANY predicted table, wanted or not, so it rewards false-positive tables (the pre-fix router produced about
+twice as many tables). Use the evaluator (scripts/eval_tables.py) for real conclusions.
 """
 import cv2
 import fitz
@@ -26,8 +33,22 @@ providers = {
 router = TableExtractor.from_config(CONFIG_DIR, settings.table_provider_order)
 
 res = {k: [0, 0] for k in ("token_grid", "pymupdf", "router")}
+res_all = {k: [0, 0] for k in res}
+n_tables = {k: 0 for k in res}
 docs = pages = pagefull = pages_tab = 0
 missing_gt = []
+
+
+def collect(name: str, table, cells: dict, cells_all: dict) -> None:
+    n_tables[name] += 1
+    for row in table.rows:
+        for cell in row.cells:
+            cells[name].add(digits(cell.text))
+            cells_all[name].add(digits(cell.text))
+    for row in getattr(table, "summary_rows", []):
+        for cell in row.cells:
+            cells_all[name].add(digits(cell.text))
+
 
 for pdf in sorted(INVOICE_PDF_DIR.glob("*.pdf")):
     key = pdf_key(pdf.name)
@@ -37,6 +58,7 @@ for pdf in sorted(INVOICE_PDF_DIR.glob("*.pdf")):
     docs += 1
     amounts = gt_amounts(gt[key])
     cells = {k: set() for k in res}
+    cells_all = {k: set() for k in res}
     for pn, pg in enumerate(fitz.open(pdf), 1):
         png = pg.get_pixmap(dpi=100).tobytes("png")
         quality = prep.estimate_quality(cv2.imdecode(np.frombuffer(png, np.uint8), 1))
@@ -49,20 +71,20 @@ for pdf in sorted(INVOICE_PDF_DIR.glob("*.pdf")):
                     pages_tab += 1
                     if (t.bbox[2] - t.bbox[0]) * (t.bbox[3] - t.bbox[1]) > 0.6:
                         pagefull += 1
-                for r in t.rows:
-                    for c in r.cells:
-                        cells[name].add(digits(c.text))
+                collect(name, t, cells, cells_all)
         for t in router.extract(page, "INVOICE", "d"):
-            for r in t.rows:
-                for c in r.cells:
-                    cells["router"].add(digits(c.text))
+            collect("router", t, cells, cells_all)
     for name in res:
         for a in amounts:
             res[name][1] += 1
+            res_all[name][1] += 1
             if digits(a) in cells[name]:
                 res[name][0] += 1
+            if digits(a) in cells_all[name]:
+                res_all[name][0] += 1
 
 print("docs", docs, "pages", pages, "| PDFs without GT:", len(missing_gt))
 for k, (hit, n) in res.items():
-    print(k, f"{hit}/{n} = {hit / max(n, 1):.1%}")
+    h2, n2 = res_all[k]
+    print(k, f"items {hit}/{n} = {hit / max(n, 1):.1%} | items+summary {h2}/{n2} = {h2 / max(n2, 1):.1%} | tables produced: {n_tables[k]}")
 print("pymupdf tables covering >60% page:", pagefull, "of", pages_tab, "tables")
