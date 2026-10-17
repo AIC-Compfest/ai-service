@@ -1,5 +1,7 @@
 # Table & Line-Item Reliability — Report
 
+> **Pembaruan Fase 8 (2026-10-16):** dokumen ini adalah catatan historis. Status terkini, metrik, dan hal yang belum terverifikasi ada di `REPORT_FINAL.md`; keputusan di `DECISIONS.md`; hal di luar cakupan di `OUT_OF_SCOPE_NOTES.md`. Bagian yang terbukti keliru sudah dikoreksi di tempat dan ditandai **[dikoreksi Fase 8]**.
+
 ## Status
 
 Recon berjalan. Environment Python harus dijalankan dengan izin sandbox
@@ -71,11 +73,11 @@ metadata additive tentang operasi, skor, dan hasil yang dipilih. Tidak ada
 aturan berdasarkan nama dokumen, vendor, atau isi dataset.
 
 Test unit preprocessing lulus, termasuk inverse coordinate mapping dan
-rollback saat flag mati. Smoke pada gambar nyata pertama yang ditemukan di
-`D:\\AIC\\DATASET\\Dataset\\invoice\\image` memuat model Paddle, tetapi runner
-Windows berhenti tanpa mengembalikan evidence final. Karena itu belum ada
-benchmark atau klaim hasil DATASET untuk langkah ini. Inference gambar kosong
-tetap berhasil; masalah perlu didiagnosis sebelum evaluasi corpus image/pdf.
+rollback saat flag mati. Smoke pada gambar nyata pertama di `DATASET/Dataset/invoice/image` memuat model Paddle, tetapi runner
+Windows berhenti tanpa mengembalikan evidence final (catatan awal, 2026-10-15).
+**[dikoreksi Fase 8]** Pada Fase 6 (2026-10-16), `scripts/paddle_isolated_run.py` menjalankan 52 dari 52 PNG dataset di venv utama
+(model mobile, mkldnn mati) tanpa crash, timeout, atau halaman kosong; rata-rata 40.9 detik per gambar. Penyebab hang awal
+tidak diketahui. Lihat `REPORT_FASE_6.md`.
 
 ## Langkah 8 — gold draft dan evaluasi
 

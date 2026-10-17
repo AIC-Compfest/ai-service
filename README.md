@@ -33,7 +33,7 @@ menambah `ml_extraction`, `arithmetic_validation` dan `table_groups`; semuanya a
 | `ENABLE_ARITHMETIC_VALIDATION` | `false` | Campuran skor aritmetika pada pemilihan tabel (tidak berdampak terukur) |
 | `MAX_UPLOAD_SIZE_MB` | `25` | Di atasnya HTTP 413 |
 | `PAGE_OUTPUT_DIR` / `PAGE_RETENTION_HOURS` | `out/pages` / `24` | Lokasi PNG halaman dan masa simpan |
-| `PADDLE_DET_MODEL`, `PADDLE_REC_MODEL`, `PADDLE_DET_LIMIT_SIDE_LEN` | kosong | Model Paddle. Default server: sekitar 70 s per halaman scan di CPU 6 inti; model mobile sekitar 3 kali lebih cepat |
+| `PADDLE_DET_MODEL`, `PADDLE_REC_MODEL`, `PADDLE_DET_LIMIT_SIDE_LEN` | kosong | Model Paddle. Default PaddleOCR 3.7 untuk bahasa Inggris = PP-OCRv6 medium (sekitar 70 s per halaman scan di CPU 6 inti); PP-OCRv5 mobile sekitar 3 kali lebih cepat |
 
 ## Jalankan lokal
 ```bash

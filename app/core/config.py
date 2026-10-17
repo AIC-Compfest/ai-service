@@ -89,8 +89,8 @@ class Settings(BaseSettings):
     paddle_language: str = "en"
     paddle_enable_mkldnn: bool = False
     paddle_cpu_threads: int = 8
-    # Empty = PaddleOCR defaults (PP-OCRv5 SERVER models: ~70 s per page on a 6-core CPU without oneDNN, measured Fase 6).
-    # Set e.g. PADDLE_DET_MODEL=PP-OCRv5_mobile_det and PADDLE_REC_MODEL=en_PP-OCRv5_mobile_rec for the mobile models.
+    # Empty = PaddleOCR 3.7 defaults for lang=en: PP-OCRv6_medium_det + PP-OCRv6_medium_rec (~70 s per page on a 6-core CPU without oneDNN, measured Fase 6).
+    # Set e.g. PADDLE_DET_MODEL=PP-OCRv5_mobile_det and PADDLE_REC_MODEL=en_PP-OCRv5_mobile_rec for the smaller PP-OCRv5 mobile models.
     paddle_det_model: str = ""
     paddle_rec_model: str = ""
     paddle_det_limit_side_len: int = 0  # 0 = PaddleOCR default; >0 limits the longest side (limit type "max")

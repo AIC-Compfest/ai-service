@@ -1,5 +1,7 @@
 # Review Gold, Evaluasi Akurasi, dan Diagnostik PaddleOCR di Windows
 
+> **Pembaruan Fase 8 (2026-10-16):** dokumen ini adalah catatan historis. Status terkini, metrik, dan hal yang belum terverifikasi ada di `REPORT_FINAL.md`; keputusan di `DECISIONS.md`; hal di luar cakupan di `OUT_OF_SCOPE_NOTES.md`. Bagian yang terbukti keliru sudah dikoreksi di tempat dan ditandai **[dikoreksi Fase 8]**.
+
 ## Tujuan dan status saat ini
 
 Panduan ini menetapkan proses *human-review* yang dapat direproduksi (*reproducible*)
@@ -13,9 +15,9 @@ Fakta saat ini:
   Masing-masing memiliki folder sumber `image` dan `pdf`.
 - Deteksi keberadaan (*presence*) tabel/vektor PDF berhasil diukur setelah
   perbaikan koordinat. Namun, *presence* bukanlah akurasi.
-- PaddleOCR berhasil memuat modelnya, tetapi belum menghasilkan *evidence* untuk
-  gambar nyata di lingkungan Windows ini. Jangan melakukan anotasi kualitas output
-  model atau melaporkan metrik OCR sebelum kendala ini terselesaikan.
+- **[dikoreksi Fase 8]** PaddleOCR 3.7 + PaddlePaddle 3.3.1 (CPU, oneDNN mati) menghasilkan *evidence* untuk 52 dari 52
+  PNG dataset (`REPORT_FASE_6.md`). Kecepatan masih menjadi kendala (model default PP-OCRv6 medium sekitar 70 sampai 120 detik
+  per halaman). Akurasi OCR terhadap teks yang direview manusia belum diukur; jangan melaporkan metrik OCR sebelum ada gold teks.
 - `app/tools/prelabel_tables.py` dapat membuat draf yang belum direview (*unreviewed*).
   Draf ini bukan merupakan *source of truth*. Saat ini, `scripts/eval_tables.py`
   hanya mengevaluasi kecocokan baris persis (*exact rows*) dan menolak file gold

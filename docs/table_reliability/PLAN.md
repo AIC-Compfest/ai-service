@@ -2,7 +2,10 @@
 
 **Branch:** `feat/table-reliability`  
 **Dibuat:** 2026-10-14  
-**Status:** 🟡 Fase 0 — baseline verification in progress
+**Status:** 🟢 Fase 0 sampai 8 selesai (Fase 9 ditunda, lihat OS-009 dan OS-010). Lihat `REPORT_FINAL.md`.
+
+> **Pembaruan Fase 8 (2026-10-16):** dokumen ini adalah catatan historis. Status terkini, metrik, dan hal yang belum terverifikasi ada di `REPORT_FINAL.md`; keputusan di `DECISIONS.md`; hal di luar cakupan di `OUT_OF_SCOPE_NOTES.md`. Bagian yang terbukti keliru sudah dikoreksi di tempat dan ditandai **[dikoreksi Fase 8]**.
+
 
 ---
 
@@ -175,10 +178,10 @@ Langkah 8 bisa dimulai paralel dari awal sebagai tooling.
 
 ## 4. Asumsi
 
-1. Dataset gambar sampel ada di `D:\AIC\DATASET` (dari audit script argumen default).
+1. **[dikoreksi Fase 8]** Dataset kanonik adalah `DATASET/Dataset` (sejajar dengan `ai-service`, atau `VERIFLOW_DATASET_ROOT`), bukan `D:\AIC\DATASET` (D-027).
 2. PyMuPDF versi yang terpasang mendukung `get_images()` dan `get_text("words")`.
-3. Lingkungan Python 3.10.11 (ditemukan dari test run).
-4. `StrEnum` tidak tersedia (Python 3.10) — ini bug pre-existing, bukan dari perubahan kita.
+3. **[dikoreksi Fase 8]** Lingkungan Python 3.11.9 (`ENV_FACTS.md`); versi 3.10.11 pada draf awal salah.
+4. **[dikoreksi Fase 8]** `StrEnum` tersedia di Python 3.11; catatan ini tidak berlaku.
 
 ---
 

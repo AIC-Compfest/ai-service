@@ -107,3 +107,12 @@ atau `is_calculated=True`.
 ## OS-012: Model LightGBM belum berguna (D-037)
 **Temuan:** Hanya satu bundle (`POD.pihak_pertama_nama`, accepted 0). Label hanya untuk POD (34 dokumen, draf LLM). Nama field ML tidak sama dengan nama field extractor aturan, sehingga promosi nilai ML tidak pernah terpicu.
 **Rekomendasi:** Label manusia untuk INVOICE/SURAT_JALAN/RATE_AGREEMENT, latih ulang dengan split per-template, tambah pemetaan nama field ML -> extractor.
+
+---
+## OS-013: Tabel PyMuPDF dengan Sel Tergabung Masih Bisa Menang
+**Temuan:** `find_tables` strategi `lines` kadang mengembalikan tabel dengan satu sel berisi seluruh teks halaman dan baris yang menempel (mis. invoice_13 sebelum D-042). Penalti sel tergabung tidak membantu (D-043) karena penyebabnya tidak adanya kandidat lain, bukan skor. Setelah D-042 kandidat token-geometri ada dan menang pada dokumen itu; pada tata letak lain yang tidak dikenali token-geometri, tabel tergabung tetap bisa terpilih.
+**Rekomendasi:** pecah sel tergabung memakai posisi kata (kata PyMuPDF sudah punya bbox) alih-alih memakai teks sel, atau tolak tabel yang selnya memuat banyak kata dari kolom lain.
+
+## OS-014: Skrip Pengukuran Lama Perlu Dibaca dengan Hati-hati
+**Temuan:** `measure_amount_recall.py` membandingkan digit nominal dengan digit sel; nominal bertitik desimal ("5,400,000.00" menjadi 540000000) tidak pernah cocok dengan "5400000". Itu menjelaskan 6 miss yang konstan pada `invoice_4_variasi_1/2` sebelum dan sesudah perbaikan (dugaan, tidak diuji satu per satu). Skrip ini tidak boleh dipakai sebagai bukti akurasi.
+**Rekomendasi:** pakai `scripts/eval_tables.py`; perbaiki normalisasi desimal bila skrip lama masih dipakai.
