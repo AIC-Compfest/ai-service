@@ -6,6 +6,7 @@ Branch `fix/table-reliability-p0` (lokal dan `origin`), Fase 0 sampai 8. Fase 9 
 ## 1. Ringkasan
 Sebelum pekerjaan ini, pada dokumen nyata API tidak mengembalikan tabel sama sekali bila flag mati, dan bila hidup banyak tabel yang salah header, kolom, atau baris, atau menyatu dengan blok lain. Sekarang tabel ditemukan sadar-tipe setelah klasifikasi halaman, header/kolom/baris/ringkasan ditentukan dari geometri teks, beberapa tabel per halaman dipisah, tabel lanjutan antar-halaman disambung, extractor invoice membaca hanya tabel `line_items`, dan hasilnya disertai bukti aritmetika. Perbaikan nyata dan terukur, tetapi **target K4 pada data nyata belum tercapai** (bagian 3).
 
+> **Pembaruan 2026-10-17 (fokus PDF digital):** setelah laporan ini ditulis, ekstraksi PDF disempurnakan dan diuji pada halaman acak dengan banyak tabel; angka terbarunya ada di `REPORT_PDF_STRESS.md`. Ringkas: pada jalur API dev+val, F1 deteksi 0.670 -> 0.693 dan baris exact 51/60 -> 55/62; E2E invoice 63 -> 61 baris tetapi 16 -> 18 dokumen tepat; nominal di tabel 155 -> 152 (invoice_14). Holdout run 5: F1 0.692 (13 tabel). Pada uji stres (seed tak terpakai) router membaca 87% halaman sepenuhnya benar (sebelumnya 52%), PyMuPDF sendirian 25% (sebelumnya 8%). Kelemahan terbesar yang tersisa: tabel berdampingan tanpa garis (OS-015). `pytest`: 359 lulus, 1 dilewati. Tabel di bagian 2 sampai 3 di bawah belum diperbarui dan tetap menggambarkan kondisi sebelum perubahan itu.
 ## 2. Metrik sebelum dan sesudah
 Data nyata, dev+val (60 + 44 dokumen, 70 tabel gold, gold v2, IoU >= 0.5):
 

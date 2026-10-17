@@ -116,3 +116,14 @@ atau `is_calculated=True`.
 ## OS-014: Skrip Pengukuran Lama Perlu Dibaca dengan Hati-hati
 **Temuan:** `measure_amount_recall.py` membandingkan digit nominal dengan digit sel; nominal bertitik desimal ("5,400,000.00" menjadi 540000000) tidak pernah cocok dengan "5400000". Itu menjelaskan 6 miss yang konstan pada `invoice_4_variasi_1/2` sebelum dan sesudah perbaikan (dugaan, tidak diuji satu per satu). Skrip ini tidak boleh dipakai sebagai bukti akurasi.
 **Rekomendasi:** pakai `scripts/eval_tables.py`; perbaiki normalisasi desimal bila skrip lama masih dipakai.
+
+---
+## OS-015: Tabel Berdampingan Tanpa Garis dengan Header Berbeda Digabung
+**Temuan (stres, seed 1000-1239):** recall 0.47 pada halaman side_by_side, 14 halaman gagal dengan F4 (satu tabel prediksi menutup dua tabel gold). Celah di antara dua tabel sering hanya 3% lebar halaman; tabel tunggal dengan kolom pendek menghasilkan celah serupa, dan percobaan memisah berdasarkan "header di kedua sisi" merusak tabel tunggal (D-048). Tabel bergaris tidak terpengaruh karena PyMuPDF memisahnya.
+**Rekomendasi:** gunakan struktur baris (jumlah dan tinggi baris kiri dan kanan berbeda) atau garis tepi tabel; ukur pada PDF nyata yang punya tabel berdampingan (gold nyata saat ini tidak punya).
+## OS-016: PyMuPDF `find_tables` Tidak Menemukan Tabel Tanpa Garis
+**Temuan:** pada stres, recall 0.00 untuk halaman tanpa garis (96 halaman); pada tabel bergaris deteksi 0.99. Strategi `text` dihapus karena 1 sampai 5 detik per halaman (D-034). Tabel tanpa garis dibaca oleh provider token-geometri (recall 0.88).
+## OS-017: Header Dua Tingkat dengan Sub-label di Baris Pertama (invoice_14)
+**Temuan:** pada `invoice_14` sub-label "ONDOL"/"PASIR" berada di baris yang sama dengan nilai pertama sehingga sel pertama menjadi "ONDOL 480.000". Menyumbang -3 nominal di tabel (155 -> 152) dan -2 baris pada E2E setelah tabel PyMuPDF yang lama (berisi baris campur) tidak lagi menang.
+## OS-018: Label Grup Menempel pada Blok Key-Value
+**Temuan:** label di atas blok key-value ("Agreement") ikut ditempel ke header dua kolom pada rate card. Tidak berdampak pada gold (bukan tabel item) tetapi mengotori `headers` tabel `info`.

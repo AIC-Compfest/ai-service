@@ -54,6 +54,7 @@ pengguna non-root dan punya `HEALTHCHECK` ke `/healthz`. Model PaddleOCR diunduh
 pytest                                   # 300+ test, tanpa PaddleOCR nyata
 RUN_PADDLE_TESTS=1 pytest tests/unit/test_raster_path.py   # menjalankan PaddleOCR sungguhan (lambat)
 python scripts/eval_tables.py --help     # evaluator tabel; lihat docs/table_reliability/
+python scripts/stress_tables.py --pages 240 --first-seed 1000   # PDF acak 1-4 tabel per halaman: PyMuPDF vs router
 ```
 
 ## Status

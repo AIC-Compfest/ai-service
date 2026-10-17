@@ -458,3 +458,24 @@ Hasilnya muncul sebagai `arithmetic_validation` pada `/v1/extract/pipeline/full`
 ## D-043: Hasil Negatif, Penalti Sel Tergabung Dibatalkan
 **Date:** 2026-10-17
 **Decision:** Saya mencoba menurunkan skor tabel yang selnya memuat dua nominal atau lebih (tanda sel tergabung PyMuPDF). Tidak mengubah satu pun angka di dev+val maupun fixture (tidak ada alternatif bersih di dokumen yang terdampak), sehingga perubahan dan tesnya dibatalkan. Akar masalah invoice_13 ada di D-042.
+
+## D-044: Label Grup Header Ditempatkan Setelah Badan Tabel Memperluas Kolom
+**Date:** 2026-10-17
+**Context:** Uji stres (halaman PDF acak, gold eksak) menunjukkan header exact hanya 64% pada halaman berheader bertingkat: label grup ("Tarif" di atas "Per Kg" dan "Minimum") hanya menempel ke satu kolom atau hilang. Label berada di tengah SEL, sedangkan jangkar kolom awal hanya kata header (rata kiri/kanan di dalam sel), jadi batas sel tidak diketahui. Label juga bisa jatuh di celah antar-kata header sehingga tidak dianggap bagian header.
+**Decision:** (1) `columns.infer_columns` menempatkan label di atas baris header utama SETELAH badan tabel memperluas jangkar; label menempel ke dua kolom bila pusatnya dekat pusat gabungan kedua kolom (isi rata kiri) ATAU dekat batas keduanya (isi rata kanan/tengah), (2) `header._is_group_label`: satu label pendek di tengah rentang header ikut menjadi bagian header walau jatuh di celah. Header exact stres 90% -> 97% (router), kelompok bertingkat 64% -> 91%.
+**Batas:** hanya pasangan kolom bersebelahan; label tiga kolom tidak ditangani. Label yang menempel ke blok key-value (mis. "Agreement" pada rate card) ikut tertempel ke teks kolom; dampaknya hanya pada tabel non-gold (OS-018).
+## D-045: Pembersihan Tabel PyMuPDF (`tables/refine.py`)
+**Date:** 2026-10-17
+**Decision:** `find_tables` menjadikan setiap baris bergaris sebagai baris data dan baris pertama sebagai header. Diterapkan sebelum penskoran: (1) baris penutup yang labelnya ada di kosakata YAML `summary_labels`, atau yang hanya mengisi dua kolom terakhir dengan satu angka, dipindah ke `summary_rows` (aturan struktural hanya bila >= 60% baris punya sel kolom pertama, supaya item tanpa kolom pertama tidak ikut), (2) header yang berisi data (>= 2 sel angka dan >= 40%, atau kolom pertama bilangan bulat) menjadi baris data pertama dan header dikosongkan, (3) kotak tabel dipotong sampai baris item terakhir seperti provider token-geometri.
+**Hasil (stres, seed tak terpakai):** PyMuPDF sendirian: baris exact 40% -> 74%, halaman benar 8% -> 25%, kebocoran ringkasan F9 82 -> 15 halaman.
+## D-046: Baris Ringkasan Berlabel Asing dan Kolom Tidak Melebar oleh Total
+**Date:** 2026-10-17
+**Decision:** `rows.tail_summary_rows`: garis sparse yang hanya mengisi dua kolom terakhir dengan angka, di bawah >= 2 baris item yang mulai di kolom pertama, adalah baris ringkasan walau labelnya tidak ada di YAML. `Body.item_end`: kolom dihitung ulang hanya dari baris item (baris "Subtotal 88.871.000" satu segmen melintasi dua kolom dan sebelumnya menggeser batas kolom hingga urutan Qty dan Line Total tertukar).
+## D-047: Penemuan Tabel Tanpa Header
+**Date:** 2026-10-17
+**Decision:** `structure._headerless_tables` (config `geometry.headerless`, default hidup): di antara baris yang tidak dipakai tabel berheader, runtun baris "mirip grid" (>= 3 sel pendek, tanpa pola label:nilai, tanpa kalimat > 6 kata) dengan >= 2 baris, >= 3 kolom, >= 60% baris berangka, dan setidaknya satu kolom yang >= 80% angka murni dianggap tabel; kolom diturunkan dari baris terlebar. Dua penjaga ditambahkan setelah menemukan tabel palsu (kalimat catatan di sebelah blok total, baris "Diterima tgl : ..."). Tabel tanpa header di halaman lanjutan dengan jumlah kolom sama diadopsi sebagai lanjutan (`link_segment_tables`).
+**Hasil:** recall tabel tanpa header 0.68 -> 0.85 (stres); `multipage_no_header` (batas lama) kini lulus dan dikeluarkan dari `KNOWN_LIMITS`.
+**Batas:** pada holdout (13 tabel) satu tabel prediksi tambahan muncul (presisi 0.750 -> 0.692); tidak disetel dari hasil itu.
+## D-048: Hasil Negatif Uji Stres
+**Date:** 2026-10-17
+**Decision:** (a) Aturan "satu baris header di kedua sisi celah" untuk memisah tabel berdampingan dibatalkan: membelah tabel tunggal yang punya kolom pendek (F5 naik menjadi 156 halaman). Penjaga `repeated_header` asli dipertahankan. (b) Penalti sel tergabung (D-043) tetap dibatalkan.
