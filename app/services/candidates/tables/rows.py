@@ -30,6 +30,8 @@ DEFAULT_ROWS = {
     "prose_width_share": 0.6,           # a single cell wider than this share of the table width is prose, not a cell
     "anchor_scan_lines": 30,
     "lead_line_rows": True,             # a description line above the numbers' line opens a row (two-line items)
+    "tail_summary_rows": True,          # an amount with an unknown label in the last two columns, under item rows, is a summary row
+    "tail_summary_first_col": 0.6,      # ... if this share of the item rows so far has a first-column cell
     "lead_gap_ratio": 0.7,              # ... when its gap to the line below is at most this x its gap to the line above
 }
 ROW_NUMBER = re.compile(r"^\d{1,3}[.)]?$")
@@ -54,6 +56,7 @@ class Body:
     rows: list[RowDraft]
     summary: list[RowDraft]
     consumed: int  # number of body lines used (rows + summary rows + continuations)
+    item_end: int = 0  # number of leading body lines that belong to ITEM rows (summary lines excluded)
 
 
 def summary_pattern(labels: list[str]) -> re.Pattern:
@@ -118,6 +121,7 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
     current: RowDraft | None = None
     lead_open = False
     consumed = 0
+    item_end = 0
     for index, (line, line_cells) in enumerate(zip(body, cells)):
         filled = set(line_cells)
         first_text = _text(line_cells[min(filled)]) if filled else ""
@@ -131,8 +135,14 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
         if wide and not label_hit and len(filled) <= 1:
             break
         label_summary = label_hit and not anchor_filled and len(filled) < n_cols
+        # A label of unknown wording next to an amount in the LAST two columns, under item rows that start in the first column.
+        tail_summary = (
+            opts["tail_summary_rows"] and n_cols >= 3 and not anchor_filled and filled and min(filled) >= n_cols - 2 and len(filled) <= 2
+            and any(is_numeric(seg.text) for seg in line.segs) and len(rows) >= 2
+            and sum(0 in draft.cells for draft in rows) / len(rows) >= opts["tail_summary_first_col"]
+        )
         has_amount = any(is_numeric(seg.text) for seg in line.segs)
-        if label_summary or (summary and sparse and not anchor_filled and has_amount):
+        if label_summary or tail_summary or (summary and sparse and not anchor_filled and has_amount):
             draft = RowDraft()
             draft.add(line, line_cells)
             summary.append(draft)
@@ -146,19 +156,19 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
         if starts_row and lead_open and current is not None:
             current.add(line, line_cells)  # the numbers of a row whose description line came first
             lead_open = False
-            consumed = index + 1
+            consumed = item_end = index + 1
             continue
         if starts_row:
             current = RowDraft()
             current.add(line, line_cells)
             rows.append(current)
-            consumed = index + 1
+            consumed = item_end = index + 1
             continue
         leads = opts["lead_line_rows"] and _leads_next_row(body, cells, index, anchor, start_fill, tight, opts)
         tight_enough = gap is None or tight is None or gap <= opts["continuation_pitch_factor"] * tight
         if current is not None and tight_enough and not leads and (anchor is None or anchor not in filled):
             current.add(line, line_cells)
-            consumed = index + 1
+            consumed = item_end = index + 1
             continue
         if leads:
             # A description line that precedes the line holding the numbers (two-line items, numbers centred between
@@ -167,10 +177,10 @@ def segment_body(body: list[Line], columns: list[ColumnSpec], em_x: float, line_
             current.add(line, line_cells)
             rows.append(current)
             lead_open = True
-            consumed = index + 1
+            consumed = item_end = index + 1
             continue
         break
-    return Body(rows, summary, consumed)
+    return Body(rows, summary, consumed, item_end)
 
 
 def median_or(values: list[float], default: float) -> float:

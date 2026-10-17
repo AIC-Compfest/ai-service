@@ -29,7 +29,8 @@ def _providers():
 
     if "grid" not in _cache:
         _cache["grid"] = TokenGridTableProvider(CONFIG_DIR / "line_item_aliases.yaml", CONFIG_DIR / "abbreviations.yaml")
-        _cache["mupdf"] = PyMuPDFTableProvider(yaml.safe_load((CONFIG_DIR / "table_resolution.yaml").read_text(encoding="utf-8")).get("pymupdf"))
+        resolution = yaml.safe_load((CONFIG_DIR / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
+        _cache["mupdf"] = PyMuPDFTableProvider({**(resolution.get("pymupdf") or {}), "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")})
         _cache["router"] = TableExtractor.from_config(CONFIG_DIR, settings.table_provider_order)
     return _cache
 

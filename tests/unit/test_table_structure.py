@@ -168,7 +168,7 @@ ALL_FIXTURES = {f.name for f in build_all()}
 # Documented limits (see REPORT_FASE_3): info_block_beside has a 10 pt gutter (adversarial); multipage_no_header needs
 # geometry stitching (Fase 4); in phrase mode adjacent cells of blank_column / header_two_line / side_by_side are merged
 # into ONE OCR phrase box and cannot be separated from geometry alone.
-KNOWN_LIMITS = {"vector": {"info_block_beside", "multipage_no_header"}, "phrase": {"info_block_beside", "multipage_no_header", "blank_column", "header_two_line", "side_by_side"}}
+KNOWN_LIMITS = {"vector": {"info_block_beside"}, "phrase": {"info_block_beside", "multipage_no_header", "blank_column", "header_two_line", "side_by_side"}}
 
 
 def _failures(fixture, mode, view="line_items"):

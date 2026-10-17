@@ -49,7 +49,8 @@ class TableExtractor:
         resolution = yaml.safe_load((config_dir / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
-        return cls([PyMuPDFTableProvider(resolution.get("pymupdf")), provider], resolution.get("scoring"), resolution.get("summary_labels", ())).ordered(provider_order)
+        pymupdf_options = {**(resolution.get("pymupdf") or {}), "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")}
+        return cls([PyMuPDFTableProvider(pymupdf_options), provider], resolution.get("scoring"), resolution.get("summary_labels", ())).ordered(provider_order)
 
     @classmethod
     def cached(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":

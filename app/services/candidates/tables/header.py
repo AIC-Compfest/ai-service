@@ -104,6 +104,16 @@ def _short_words(line: Line, limit: int = 5, chars: int = 40) -> bool:
     return all(len(s.text.split()) <= limit and len(s.text) <= chars for s in line.segs)
 
 
+def _is_group_label(above: Line, header: Line) -> bool:
+    """One short label centred inside the header's horizontal extent: a group label over cells whose WORDS it does not touch
+    (it sits in the gap between two header words)."""
+    if len(above.segs) != 1 or len(header.segs) < 3:
+        return False
+    seg = above.segs[0]
+    span0, span1 = header.segs[0].x0, header.segs[-1].x1
+    return len(seg.text.split()) <= 3 and span0 <= seg.cx <= span1 and (seg.x1 - seg.x0) < 0.5 * (span1 - span0)
+
+
 def detect_header(lines: list[Line], start: int, em_x: float, line_height: float, matcher, options: dict | None = None) -> Header | None:
     """Best header among the first ``header_search_lines`` lines from ``start``; None when no candidate is convincing."""
     opts = {**DEFAULT_HEADER, **(options or {})}
@@ -144,7 +154,7 @@ def detect_header(lines: list[Line], start: int, em_x: float, line_height: float
             and not any(has_digit(s.text) for s in above.segs)
             and not _looks_like_key_value(above.segs)
             and _short_words(above)
-            and any(_lies_under(s, h, tolerance) for s in above.segs for h in lines[first].segs)
+            and (any(_lies_under(s, h, tolerance) for s in above.segs for h in lines[first].segs) or _is_group_label(above, lines[first]))
         ):
             first -= 1
             extra += 1

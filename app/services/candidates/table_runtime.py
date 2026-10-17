@@ -73,6 +73,17 @@ def link_segment_tables(pages: dict[int, Page], tables: dict[int, list[Table]], 
             segment.get("segment_number") == chain_segment.get("segment_number") or segment.get("document_type") in (None, "UNKNOWN")
         )
         if same_chain and _can_continue(tail, tables.get(tail.page_end, []), config.get("continuation", {})):
+            # A header-less table at the top of the page with the same number of columns IS the continuation (header-less
+            # discovery finds it before the geometric continuation is tried): give it the columns of the table it continues.
+            headerless_top = next((t for t in current if t.bbox[1] < 0.35 and len(t.columns) == len(tail.columns) and not any(c.header_text.strip() for c in t.columns)), None)
+            if headerless_top is not None:
+                for column, source in zip(headerless_top.columns, tail.columns):
+                    column.header_text, column.header_lines = source.header_text, list(source.header_lines)
+                headerless_top.reason = "continuation"
+                headerless_top.validation["continued_from"] = tail.table_id
+                headerless_top.role, headerless_top.role_reason = "line_items", "continuation"
+                members.extend(current)
+                continue
             has_top_table = any(t.bbox[1] < 0.35 and len(t.columns) == len(tail.columns) for t in current)
             if not has_top_table:
                 continued = continue_table(pages[number], tail, config, document_id)

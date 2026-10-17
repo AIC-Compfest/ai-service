@@ -131,21 +131,23 @@ def infer_columns(header: Header, body: list[Line], em_x: float, options: dict |
     primary = header.lines[header.primary - header.first]
     anchors = [ColumnSpec(i, s.x0, s.x1) for i, s in enumerate(primary.segs)]
 
-    # Header text: every header line contributes to each anchor it sits over, top to bottom.
+    # Header text: every header line contributes to each anchor it sits over, top to bottom. Labels ABOVE the primary header
+    # line (group labels, first half of a wrapped header) are placed after the body has extended the anchors, because a
+    # group label is centred over the CELLS and the header WORDS alone do not tell where the cell boundary is.
+    pending: list[tuple[Seg, list[ColumnSpec]]] = []
     for line_index, line in enumerate(header.lines):
         above_primary = header.first + line_index < header.primary
         for seg in line.segs:
             hit = [a for a in anchors if _lies_under(seg, Seg_like(a), tolerance)]
             if above_primary:
-                hit = _group_span(seg, anchors) or hit
+                pending.append((seg, hit))
+                continue
             if not hit and anchors:
                 nearest = min(anchors, key=lambda a: abs(seg.cx - (a.ext0 + a.ext1) / 2))
                 if abs(seg.cx - (nearest.ext0 + nearest.ext1) / 2) <= opts["orphan_attach_em"] * em_x:
                     hit = [nearest]
             for anchor in hit:
                 anchor.header_lines.append(seg.text)
-    for anchor in anchors:
-        anchor.header_text = " ".join(anchor.header_lines).strip()
 
     # Body cells extend anchors; cells under no anchor become candidates for header-less columns.
     orphans: list[tuple[int, Seg]] = []
@@ -164,6 +166,17 @@ def infer_columns(header: Header, body: list[Line], em_x: float, options: dict |
             if not spans_two:
                 a.ext0, a.ext1 = min(a.ext0, seg.x0), max(a.ext1, seg.x1)
             previous = (i, seg)
+
+    for seg, hit in reversed(pending):  # bottom-most label first, so each insert at the front keeps top-to-bottom order
+        hit = _group_span(seg, anchors) or hit
+        if not hit and anchors:
+            nearest = min(anchors, key=lambda a: abs(seg.cx - (a.ext0 + a.ext1) / 2))
+            if abs(seg.cx - (nearest.ext0 + nearest.ext1) / 2) <= opts["orphan_attach_em"] * em_x:
+                hit = [nearest]
+        for anchor in hit:
+            anchor.header_lines.insert(0, seg.text)
+    for anchor in anchors:
+        anchor.header_text = " ".join(anchor.header_lines).strip()
 
     # Cells under no header that overlap each other on several lines form a header-less column.
     groups: list[dict] = []
@@ -193,14 +206,25 @@ def infer_columns(header: Header, body: list[Line], em_x: float, options: dict |
 
 
 def _group_span(seg: Seg, anchors: list[ColumnSpec]) -> list[ColumnSpec]:
-    """A label above the header that is centred on the boundary of two neighbouring columns spans both of them."""
+    """A label above the header that is centred over the cells of two neighbouring columns spans both of them.
+
+    The anchors are extended by the body here, so they approximate the CELL contents. Text alignment moves the content
+    inside its cell, so two readings are accepted: the label centre is near the CENTRE of the union of the two columns
+    (left aligned content), or near the BOUNDARY between them (right or centre aligned content). A label over a single
+    column sits at that column's centre, which is far from both for every pair.
+    """
+    best: tuple[float, list[ColumnSpec]] | None = None
     for left, right in zip(anchors, anchors[1:]):
         union0, union1 = left.ext0, right.ext1
-        boundary = (left.ext1 + right.ext0) / 2
-        if (seg.x1 - seg.x0) < (union1 - union0) and abs(seg.cx - boundary) <= 0.2 * (union1 - union0) and seg.x0 >= union0 - 1e-9 and seg.x1 <= union1 + 1e-9:
-            return [left, right]
-    return []
-
+        width = union1 - union0
+        if width <= 0 or (seg.x1 - seg.x0) > 1.2 * width:
+            continue
+        to_centre = abs(seg.cx - (union0 + union1) / 2)
+        to_boundary = abs(seg.cx - (left.ext1 + right.ext0) / 2) if union0 <= seg.cx <= union1 else float("inf")
+        distance = min(to_centre / 0.12, to_boundary / 0.2) / width  # 1.0 or less = accepted by one of the readings
+        if distance <= 1.0 and (best is None or distance < best[0]):
+            best = (distance, [left, right])
+    return best[1] if best else []
 
 class Seg_like:  # minimal adapter so ``_lies_under`` can compare a Seg against an anchor extent
     def __init__(self, anchor: ColumnSpec):

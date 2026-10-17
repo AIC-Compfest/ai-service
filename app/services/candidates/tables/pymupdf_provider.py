@@ -10,6 +10,9 @@ from statistics import median
 
 from app.services.candidates.schema import Cell, Column, Page, Table, TableRow
 
+from .refine import refine_pymupdf_table
+from .rows import summary_pattern
+
 
 # Defaults are overridden by the ``pymupdf`` section of config/candidates/table_resolution.yaml.
 DEFAULT_OPTIONS: dict = {
@@ -30,6 +33,8 @@ class PyMuPDFTableProvider:
 
     def __init__(self, options: dict | None = None):
         self.options = {**DEFAULT_OPTIONS, **(options or {})}
+        labels = self.options.get("summary_labels") or []
+        self.summary = summary_pattern(list(labels)) if labels else None  # YAML vocabulary, handed over by the router
 
     def tables(self, page: Page, doc_type: str | None, document_id: str = "document") -> list[Table]:
         source = page.source_page
@@ -42,6 +47,8 @@ class PyMuPDFTableProvider:
             except Exception:
                 continue
             tables = _normalize(found, page, document_id, self.options, start=len(accepted) + 1)
+            for table in tables:
+                refine_pymupdf_table(table, self.summary, self.options.get("refine"))
             if not tables:
                 continue
             for table in tables:
