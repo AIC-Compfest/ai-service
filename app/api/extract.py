@@ -12,13 +12,14 @@ Endpoints:
 
 import uuid
 
-from fastapi import APIRouter, HTTPException, UploadFile
+from fastapi import APIRouter, HTTPException, Request, UploadFile
 
 from app.core.logging import get_logger
 from app.core.runtime import get_pipeline, purge_old_pages, read_upload
 from app.schemas.document_type import DocumentType
 from app.schemas.extraction import ExtractionResponse
 from app.services.extraction.ml.service import promote_ml_fields, run_ml_extraction
+from app.services.extraction.page_resolver import resolve_field_pages
 from app.services.extraction.registry import get_extractor
 from app.services.validation.document import validate_extraction
 
@@ -42,7 +43,7 @@ def understand_document_evidence(file: UploadFile) -> dict:
 
 
 @router.post("/pipeline/full")
-def extract_full_pipeline(file: UploadFile) -> dict:
+def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
     """
     Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23).
 
@@ -59,7 +60,7 @@ def extract_full_pipeline(file: UploadFile) -> dict:
     file_bytes = read_upload(file)
     filename = file.filename or "doc.pdf"
 
-    logger.info("extract.pipeline.request", document_id=document_id, filename=filename)
+    logger.info("extract.pipeline.request", document_id=document_id, filename=filename, correlation_id=request.headers.get("x-correlation-id", ""))
 
     pipeline = get_pipeline()
     evidence = pipeline.process_document(file_bytes, filename=filename, document_id=document_id)
@@ -116,6 +117,7 @@ def extract_full_pipeline(file: UploadFile) -> dict:
     main_type = doc_type if doc_type != DocumentType.UNKNOWN else first_type
     ml_extraction = run_ml_extraction(document_id, main_type.value, evidence)
     fields = promote_ml_fields(fields, ml_extraction, document_id)
+    resolve_field_pages(fields, evidence.get("pages", []))
     arithmetic_validation = validate_extraction(fields, evidence.get("pages", []))
 
     # Multi-document extraction across logical segments (ARCHITECTURE ROOT CAUSE A FIX)
@@ -139,6 +141,7 @@ def extract_full_pipeline(file: UploadFile) -> dict:
                 s_fields = s_extractor.extract(document_id, s_evidence)
                 s_ml = run_ml_extraction(document_id, seg_type_str, s_evidence)
                 s_fields = promote_ml_fields(s_fields, s_ml, document_id)
+                resolve_field_pages(s_fields, s_evidence["pages"], default_page=start_p)
                 s_arithmetic = validate_extraction(s_fields, s_evidence["pages"])
                 segment_extractions.append({
                     "segment_number": seg.get("segment_number"),
@@ -174,6 +177,7 @@ def extract_full_pipeline(file: UploadFile) -> dict:
                     p for p in evidence.get("pages", []) if p.get("page_number") in p_list
                 ]
                 l_fields = l_extractor.extract(document_id, l_evidence)
+                resolve_field_pages(l_fields, l_evidence["pages"], default_page=min(p_list))
                 logical_extractions[l_type_str] = [f.model_dump() for f in l_fields]
             except Exception as e:
                 logger.warning("logical_extraction_failed", doc_type=l_type_str, error=str(e))
@@ -207,6 +211,15 @@ def extract_full_pipeline(file: UploadFile) -> dict:
                 "signature_detection": p.get("signature_detection"),
                 "line_count": len(p.get("lines", [])),
                 "quality": p.get("quality"),
+                "engine_used": p.get("engine_used", ""),
+                "fallback_used": p.get("fallback_used", False),
+                # Geometry of the canonical page image the normalized bboxes refer to.
+                # Local filesystem path is intentionally not exposed.
+                "page_image": {
+                    k: (p.get("page_image") or {}).get(k)
+                    for k in ("width", "height", "dpi", "rotation_applied")
+                },
+                "coord_space": p.get("coord_space", "page_image_normalized"),
             }
             for p in evidence.get("pages", [])
         ],
