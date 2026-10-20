@@ -72,6 +72,19 @@ class Settings(BaseSettings):
     # tables only when their normalized headers and provider match.
     enable_table_stitching: bool = False
 
+    # Docling table provider (optional dependency: pip install docling; see requirements-docling.txt).
+    # False = perilaku lama. True = "docling" dicoba pertama oleh router tabel; PyMuPDF/token_grid hanya jadi
+    # fallback bila pemeriksaan tabel terlewat curiga (lihat config/candidates/table_resolution.yaml: docling).
+    enable_docling: bool = False
+    # TableFormer mode: "fast" (~7 s/page on 6 CPU threads, measured) or "accurate" (~150 s/page on the same CPU).
+    docling_table_mode: str = "fast"
+    # Explicit thread count: Docling's default oversubscribes the CPU (measured 20x slower than 6 threads).
+    docling_num_threads: int = 6
+    # Run Docling's OCR on pages routed as SCAN. False = scans are skipped by Docling (fallback providers only).
+    docling_ocr_scans: bool = True
+    # Directory with pre-downloaded Docling models (offline). Empty = Hugging Face cache.
+    docling_artifacts_path: str = ""
+
     # Langkah 3: Validasi aritmetika
     # False = tidak menjalankan validasi aritmetika (perilaku lama)
     # True  = jalankan validasi dan turunkan confidence berdasarkan hasil

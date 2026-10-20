@@ -1,0 +1,4 @@
+# Optional: Docling table provider (ENABLE_DOCLING=true). Install on top of requirements.txt.
+# Models (layout + TableFormer, ~1 GB) download from Hugging Face on first use; for offline hosts pre-download them and
+# set DOCLING_ARTIFACTS_PATH. CPU: set DOCLING_TABLE_MODE=fast and DOCLING_NUM_THREADS to the physical core count.
+docling==2.140.0

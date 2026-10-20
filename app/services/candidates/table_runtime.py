@@ -33,7 +33,10 @@ def discover_page_tables(page: Page, doc_type: str | None, document_id: str) -> 
     """Tables of one page for a known (or unknown) document type; empty when the extractor flag is off."""
     if not settings.enable_table_extractor:
         return []
-    extractor = TableExtractor.cached(candidates_config_dir(), settings.table_provider_order)
+    order = list(settings.table_provider_order)
+    if settings.enable_docling and "docling" not in order:
+        order.insert(0, "docling")
+    extractor = TableExtractor.cached(candidates_config_dir(), order)
     return extractor.extract(page, doc_type if doc_type in KNOWN_TYPES else None, document_id)
 
 

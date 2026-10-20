@@ -34,6 +34,7 @@ class Page:
     regions: list[dict[str, Any]] = field(default_factory=list)
     source_page: Any | None = None
     aspect: float | None = None  # page width / height; None when the evidence does not carry the page size
+    image_path: str | None = None  # canonical page PNG (evidence page_image.path); Docling reads scans from it
 
 
 @dataclass

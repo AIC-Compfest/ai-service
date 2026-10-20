@@ -18,6 +18,19 @@ pymupdf:
   min_data_rows: 1
   min_cols: 2
   max_header_chars: 0
+docling:
+  # Adapter: Docling tables with fewer columns are key-value blocks / header boxes, not line-item grids.
+  min_cols: 2
+  min_data_rows: 1
+  # Missed-table check (step 3). Docling is trusted when it passes; otherwise PyMuPDF + token_grid run as fallback.
+  # Distances are normalized page fractions; counts are lines of OCR/vector tokens.
+  fallback_always: false       # true = always run the other providers too (arbitration keeps the best table per area)
+  missed:
+    min_numeric_tokens: 2      # a line with at least this many digit-bearing tokens is a numeric line ...
+    min_line_tokens: 3         # ... if it also has at least this many tokens in total
+    cover_margin: 0.01         # a token this close to a Docling table box counts as covered
+    min_uncovered_lines: 3     # this many numeric lines in one uncovered vertical run = a probably missed table
+    max_run_gap_lines: 1       # blank/non-numeric lines allowed inside one run
 geometry:
   # All distances are expressed relative to the text itself (em = median token height), so they hold for any DPI/page size.
   line_tolerance: 0.5          # tokens whose centres differ by <= this x median token height share a visual line

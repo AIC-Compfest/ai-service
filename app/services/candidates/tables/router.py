@@ -12,6 +12,8 @@ import yaml
 from ..schema import Page, Table
 from .token_grid import TokenGridTableProvider
 from .pymupdf_provider import PyMuPDFTableProvider
+from .docling_provider import DoclingTableProvider
+from .missed import suspect_missed_tables
 from .rows import summary_pattern
 from .scoring import arbitrate, classify_role, table_quality
 
@@ -36,7 +38,8 @@ class TableExtractor:
     unruled table found by token geometry. Provider order is only a deterministic tie-breaker.
     """
 
-    def __init__(self, providers: Iterable[TableProvider], scoring: dict | None = None, summary_labels: Iterable[str] = ()):
+    def __init__(self, providers: Iterable[TableProvider], scoring: dict | None = None, summary_labels: Iterable[str] = (), docling: dict | None = None):
+        self.docling = docling or {}
         self.providers = {provider.name: provider for provider in providers}
         self.order = list(self.providers)
         self.scoring = scoring or {}
@@ -50,7 +53,10 @@ class TableExtractor:
         # Unknown providers intentionally remain unavailable until their optional
         # dependencies are installed and registered in later steps.
         pymupdf_options = {**(resolution.get("pymupdf") or {}), "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")}
-        return cls([PyMuPDFTableProvider(pymupdf_options), provider], resolution.get("scoring"), resolution.get("summary_labels", ())).ordered(provider_order)
+        docling = resolution.get("docling") or {}
+        docling_options = {**docling, "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")}
+        # Docling is registered but lazy: its models load on the first conversion, and only when it is in the provider order.
+        return cls([DoclingTableProvider(docling_options), PyMuPDFTableProvider(pymupdf_options), provider], resolution.get("scoring"), resolution.get("summary_labels", ()), docling).ordered(provider_order)
 
     @classmethod
     def cached(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
@@ -65,7 +71,8 @@ class TableExtractor:
     def extract(self, page: Page, doc_type: str | None, document_id: str = "document", *, arithmetic_validation: bool = False, relative_tolerance=None, absolute_tolerance=None) -> list[Table]:
         candidates: list[Table] = []
         for position, name in enumerate(self.order):
-            for table in self.providers[name].tables(page, doc_type, document_id):
+            found = self.providers[name].tables(page, doc_type, document_id)
+            for table in found:
                 table.structural_score = table_quality(table, self.scoring) - position * 1e-6  # order breaks exact ties
                 table.reason = table.reason or "structural_score"
                 table.validation.setdefault("structural", {"score": round(table.structural_score, 6)})
@@ -77,6 +84,13 @@ class TableExtractor:
                     if validation["available"]:
                         table.structural_score = round(0.8 * table.structural_score + 0.2 * float(validation["score"]), 6)
                 candidates.append(table)
+            if name == "docling" and found and not self.docling.get("fallback_always", False):
+                # Step 3: Docling passes -> skip the fallback providers; suspected missed table -> they run (step 3b).
+                suspect, why = suspect_missed_tables(page, found, self.docling.get("missed"))
+                if not suspect:
+                    break
+                for table in found:
+                    table.validation["missed_table_check"] = why
         tables = arbitrate(candidates, self.scoring)
         for number, table in enumerate(tables, start=1):
             table.table_id = f"{document_id}-p{page.page_number}-t{number}"
