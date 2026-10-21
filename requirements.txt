@@ -1,16 +1,204 @@
-# Runtime dependencies, pinned to the versions the test suite ran against (Fase 7). Paddle: requirements-paddle.txt.
+# Using Python 3.11.15 environment at: C:\Users\LENOVO\anaconda3\envs\aic_compfest
+accelerate==1.15.0
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.5
+aiosignal==1.4.0
+aistudio-sdk==0.3.9
+altair @ file:///C:/Users/task_178691227664711/croot/altair_1786912423697/work
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio @ file:///C:/Users/task_179007487920171/croot/anyio_1790075303713/work
+attrs @ file:///C:/Users/task_177495968274377/croot/attrs_1774959754711/work
+bce-python-sdk==0.9.79
+beautifulsoup4==4.15.0
+blinker==1.9.0
+brotlicffi @ file:///C:/Users/task_178644394889731/croot/brotlicffi_1786444036817/work
+cachetools==7.2.1
+certifi @ file:///C:/Users/task_DuwerqRfSL2rb_0/croot/certifi_1785412607861/work/certifi
+cffi @ file:///C:/Users/task_178669710197536/croot/cffi_1786697249889/work
+chardet==7.6.0
+charset-normalizer @ file:///C:/Users/task_cU6cRRWFQl6Bt_0/croot/charset-normalizer_1782917499173/work
+charset-normalizer==3.5.1
+click==8.4.2
+click @ file:///C:/Users/task_178851467923566/croot/click_1788515384014/work
+colorama==0.4.6
+colorlog==6.12.0
+coverage==7.15.4
+crc32c==2.9.post0
+cryptography==50.0.2
+defusedxml==0.7.1
+dill==0.4.1
+doclang==0.7.3
+docling==2.140.0
+docling-core==2.103.1
+docling-ibm-models==4.0.3
+docling-parse==7.22.3
+docling-slim==2.140.0
+easyocr==1.7.2
+et-xmlfile==2.0.0
+faker==40.37.0
 fastapi==0.115.0
-uvicorn[standard]==0.30.6
-pydantic==2.9.2
-pydantic-settings==2.16.0
-python-multipart==0.0.32
-structlog==24.4.0
+filelock==3.32.3
+filetype==1.2.0
+frozenlist==1.8.0
+fsspec==2026.7.0
+future==1.0.0
+gitdb==4.0.12
+gitpython==3.2.1
+h11 @ file:///C:/miniconda3/conda-bld/h11_1761931279881/work
+hf-xet==1.7.0
+httpcore==1.0.9
+httpcore2==2.13.1
+httptools @ file:///C:/Users/task_db_COf_kRDyMA_0/croot/httptools_1785915556344/work
+httpx==0.28.1
+httpx2==2.13.1
+huggingface-hub==1.33.0
+idna @ file:///C:/Users/task_179136521025160/croot/idna_1791365346791/work
+imageio==2.37.4
+imagesize==2.0.1
+iniconfig==2.3.0
+itsdangerous @ file:///C:/b/abs_c4vwgdr5yn/croot/itsdangerous_1716533399914/work
+jinja2 @ file:///C:/Users/task_178782650289977/croot/jinja2_1787826584596/work
+joblib==1.5.3
+jsonref==1.1.0
+jsonschema @ file:///C:/Users/task_178731923192660/croot/jsonschema_1787319327919/work
+jsonschema-specifications @ file:///C:/miniconda3/conda-bld/jsonschema-specifications_1762788559143/work
+langcodes==3.5.1
+latex2mathml==3.81.1
+lazy-loader==0.5
+lightgbm @ file:///C:/Users/task_178782364670299/croot/lightgbm_1787823967127/work
+lxml==6.1.3
+mail-parser==4.8.0
+markdown-it-py==4.2.0
+marko==2.2.4
+markupsafe @ file:///C:/Users/task_178239072175843/croot/markupsafe_1782390848574/work
+mdurl==0.1.2
+mkl-fft @ file:///C:/Users/task_179139589874204/croot/mkl_fft_1791396646977/work
+mkl-random @ file:///C:/Users/task_179140494281816/croot/mkl_random_1791405094654/work
+mkl-service @ file:///C:/Users/task_179140496097331/croot/mkl-service_1791405039685/work
+modelscope==1.40.2
+modelscope-hub==0.4.6
+mpire==2.10.2
+mpmath==1.3.0
+multidict==7.1.0
+multiprocess==0.70.19
+mypy==1.11.2
+mypy-extensions==1.1.0
+narwhals @ file:///C:/Users/task_P-jV7FdiT6S3y_0/croot/narwhals_1783944179793/work
+narwhals==2.25.0
+networkx==3.6.1
+ninja==1.13.0
 numpy==1.26.4
-pillow==10.4.0
+numpy @ file:///C:/Users/task_178034591057081/croot/numpy_and_numpy_base_1780346079163/work/dist/numpy-2.4.6-cp311-cp311-win_amd64.whl#sha256=9501c2a46e9ccccb98ecbd21aa6a17a625993614e227c6e4cca63c4166c16876
+olefile==0.47
+omegaconf==2.4.0
+opencv-contrib-python==4.10.0.84
 opencv-python-headless==4.10.0.84
+openpyxl==3.1.5
+opt-einsum==3.3.0
+packaging==26.3
+paddleocr==3.7.0
+paddlepaddle==3.3.1
+paddlex==3.7.2
+pandas==2.3.3
+pillow==10.4.0
+pillow @ file:///C:/b/abs_b50vowcrzo/croot/pillow_1738010273782/work
+pip @ file:///home/task_178229373358736/croot/pip_1782293756958/work
+pluggy==1.6.0
+polyfactory==3.3.0
+prettytable==3.18.0
+propcache==0.5.4
+protobuf @ file:///C:/Users/task_N0mcQuLATGi_b_0/croot/protobuf_1785888160826/work/bazel-bin/python/dist/protobuf-7.35.1-cp311-abi3-win_amd64.whl#sha256=b49189bb40cd7a3d3f01b89a3f824be9128286b6ca65ca2a0ad23024bca6a00b
+psutil==7.2.2
+py-cpuinfo==9.0.0
+pyarrow @ file:///C:/Users/task_178853375551403/croot/pyarrow_1788533916466/work/python
+pyclipper==1.4.0
+pycparser @ file:///C:/Users/task_177495971060608/croot/pycparser_1774959807716/work
+pycryptodome==4.0.0
+pydantic==2.9.2
+pydantic-core==2.23.4
+pydantic-settings==2.16.1
+pydeck==0.9.3
+pygments==2.21.0
+pylatexenc==2.11
 pymupdf==1.28.2
-PyYAML==6.0.2
+pypdfium2==5.14.0
+pysocks @ file:///C:/Users/task_179002186912327/croot/pysocks_1790022025292/work
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==5.0.0
+python-bidi==0.6.11
+python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
+python-docx==1.2.0
+python-dotenv==1.2.3
+python-multipart==0.0.9
+python-oxmsg==0.0.2
+python-pptx==1.0.2
+pytz==2026.5
+pywin32==312
+pyyaml==6.0.2
 rapidfuzz==3.14.6
-scikit-learn==1.5.2
-joblib==1.4.2
-lightgbm==4.7.0
+rapidocr==3.10.0
+referencing @ file:///C:/miniconda3/conda-bld/referencing_1762536905217/work
+regex==2026.9.29
+reportlab==5.0.1
+requests @ file:///C:/Users/task_179138605114046/croot/requests_1791386639098/work
+rich==15.0.0
+rpds-py @ file:///C:/miniconda3/conda-bld/rpds-py_1762366642821/work
+rpds-py==2026.6.3
+rtree==1.4.1
+ruamel-yaml==0.19.1
+ruff==0.6.9
+safetensors==0.8.0
+scikit-image==0.26.0
+scikit-learn==1.9.0
+scipy @ file:///C:/Users/task_177627760864069/croot/scipy_1776277716744/work/dist/scipy-1.17.1-cp311-cp311-win_amd64.whl#sha256=1f66ce922ca8c2ce42275b9e9f2edaee63373304c9e7a123c79294e2d50ff230
+semchunk==3.2.5
+setuptools==83.0.0
+shapely==2.1.2
+shellingham==1.5.4
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+smmap==5.0.3
+sniffio==1.3.1
+soupsieve==3.0.3
+starlette==0.38.6
+starlette @ file:///C:/Users/task_R0lKvLfuTa6wN_0/croot/starlette-recipe_1783948056864/work
+streamlit==1.56.0
+structlog==24.4.0
+sympy==1.14.0
+tabulate==0.10.0
+tenacity==9.2.1
+threadpoolctl==3.6.0
+tifffile==2026.3.3
+tokenizers==0.23.3
+toml @ file:///home/task_178056320169959/croot/toml_1780564005297/work
+torch==2.13.0
+torchvision==0.28.0
+tornado==6.5.10
+tqdm==4.70.1
+transformers==5.20.2
+tree-sitter==0.26.0
+tree-sitter-c==0.24.2
+tree-sitter-javascript==0.25.0
+tree-sitter-python==0.25.0
+tree-sitter-typescript==0.23.2
+truststore==0.10.5
+typer==0.26.8
+typing-extensions==4.16.0
+typing-inspection==0.4.4
+tzdata==2026.3
+tzdata @ file:///home/task_179086392456221/croot/python-tzdata_1790864057293/work
+ujson==6.0.0
+urllib3 @ file:///C:/Users/task_179070034242986/croot/urllib3_1790701139334/work
+uv==0.13.4
+uvicorn==0.30.6
+uvicorn @ file:///C:/Users/task_178714224537260/croot/uvicorn-split_1787142481615/work
+watchdog @ file:///C:/miniconda3/conda-bld/watchdog_1759775795953/work
+watchfiles==1.2.0
+wcwidth==0.9.2
+websockets @ file:///C:/Users/task_178247709333834/croot/websockets_1782477324153/work
+websockets==17.0.1
+wheel==0.47.0
+win-inet-pton @ file:///C:/miniconda3/conda-bld/win_inet_pton_1761746278197/work
+xlsxwriter==3.2.9
+yarl==1.25.1
