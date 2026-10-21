@@ -16,7 +16,7 @@ def build_page(page_data: dict) -> Page:
         tokens = [Token(str(item.get("text", "")), _bbox(item.get("bbox_norm", line.get("bbox_norm", [0, 0, 1, 1]))), float(item.get("confidence", line.get("confidence", 0))), line_idx, i, bool(item.get("_estimated", False)), int(item.get("row_idx", line.get("row_idx", line_idx)))) for i, item in enumerate(raw_tokens) if str(item.get("text", "")).strip()]
         lines.append(tokens)
         all_tokens.extend(tokens)
-    return Page(int(page_data.get("page_number", 1)), all_tokens, lines, str(page_data.get("engine_used", "")), page_data.get("quality") or {}, page_data.get("regions") or [], page_data.get("_source_page"), _aspect(page_data), (page_data.get("page_image") or {}).get("path"))
+    return Page(int(page_data.get("page_number", 1)), all_tokens, lines, str(page_data.get("engine_used", "")), page_data.get("quality") or {}, page_data.get("regions") or [], page_data.get("_source_page"), _aspect(page_data), (page_data.get("page_image") or {}).get("path"), page_data.get("_pdf_bytes"))
 
 
 def _aspect(page_data: dict) -> float | None:

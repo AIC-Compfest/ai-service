@@ -121,24 +121,30 @@ def good_table(source, y1=0.45, y2=0.7):
     return t
 
 
-def test_router_skips_fallbacks_when_docling_passes_and_runs_them_when_suspect():
+
+def test_router_from_config_registers_only_docling():
+    from app.core.config import candidates_config_dir
+
+    extractor = TableExtractor.from_config(candidates_config_dir(), ["docling"])
+    assert list(extractor.providers) == ["docling"] and extractor.order == ["docling"]
+
+
+def test_router_uses_the_docling_provider_only():
     page = page_with_numeric_lines(4)
-    docling, fallback = FakeProvider("docling", [good_table("docling")]), FakeProvider("token_grid", [good_table("token_grid", 0.1, 0.2)])
-    TableExtractor([docling, fallback], docling={}).ordered(["docling", "token_grid"]).extract(page, "INVOICE", "D")
-    assert (docling.calls, fallback.calls) == (1, 0)
-
-    covers_little = FakeProvider("docling", [good_table("docling", 0.45, 0.5)])
-    fallback2 = FakeProvider("token_grid", [good_table("token_grid", 0.1, 0.2)])
-    tables = TableExtractor([covers_little, fallback2], docling={}).ordered(["docling", "token_grid"]).extract(page, "INVOICE", "D")
-    assert fallback2.calls == 1
-    assert any(t.validation.get("missed_table_check") for t in tables if t.source == "docling")
+    docling = FakeProvider("docling", [good_table("docling")])
+    tables = TableExtractor([docling], docling={}).ordered(["docling"]).extract(page, "INVOICE", "D")
+    assert docling.calls == 1 and [t.source for t in tables] == ["docling"]
+    assert tables[0].table_id == "D-p1-t1"
+    empty = FakeProvider("docling", [])
+    assert TableExtractor([empty], docling={}).ordered(["docling"]).extract(page, None, "D") == []
 
 
-def test_router_fallback_always_and_empty_docling():
-    page = page_with_numeric_lines(4)
-    docling, fallback = FakeProvider("docling", [good_table("docling")]), FakeProvider("token_grid", [])
-    TableExtractor([docling, fallback], docling={"fallback_always": True}).ordered(["docling", "token_grid"]).extract(page, None, "D")
-    assert fallback.calls == 1
-    empty, fb = FakeProvider("docling", []), FakeProvider("token_grid", [])
-    TableExtractor([empty, fb], docling={}).ordered(["docling", "token_grid"]).extract(page, None, "D")
-    assert fb.calls == 1  # Docling found nothing -> fallback providers still run (legacy behaviour)
+def test_provider_routes_by_pdf_bytes():
+    from app.services.candidates.tables.docling_provider import DoclingTableProvider
+
+    provider = DoclingTableProvider()
+    pdf_page = Page(1, [], [], pdf_bytes=b"%PDF-one-page")
+    assert provider.route(pdf_page) == ("DIGITAL", b"%PDF-one-page", True, False)
+    kind, payload, is_pdf, ocr = provider.route(Page(1, [], []))  # image upload without a readable PNG
+    assert (kind, payload, is_pdf, ocr) == ("SCAN", None, False, True)
+    assert provider.tables(Page(1, [], []), None) == []

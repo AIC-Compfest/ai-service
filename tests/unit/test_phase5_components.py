@@ -14,7 +14,7 @@ import io
 from app.services.preprocessing.document_ingestion import DocumentIngestionService
 from app.services.preprocessing.image_preprocessor import ImagePreprocessor
 from app.services.classification.classifier import DocumentClassifier
-from app.services.ocr.engine import OCREngine
+
 from app.services.signature.detector import SignatureDetector
 from app.services.pipeline import Phase5DocumentPipeline
 from app.schemas.document_type import DocumentType
@@ -107,7 +107,7 @@ class TestPhase5Components(unittest.TestCase):
         p1 = evidence["pages"][0]
         self.assertGreater(len(p1["lines"]), 5)
         self.assertGreater(len(p1["regions"]), 1)
-        self.assertEqual(p1["engine_used"], "pymupdf_vector")
+        self.assertEqual(p1["engine_used"], "docling_vector")
         self.assertFalse(p1["fallback_used"])
 
         # Check that bounding boxes are normalized to [0, 1000]

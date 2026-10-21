@@ -25,18 +25,15 @@ def _config() -> dict:
     return yaml.safe_load((candidates_config_dir() / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
 
 
-def candidate_page(page_dict: dict, source_page: Any = None) -> Page:
-    return build_page({**page_dict, "_source_page": source_page})
+def candidate_page(page_dict: dict, source_page: Any = None, pdf_bytes: bytes | None = None) -> Page:
+    return build_page({**page_dict, "_source_page": source_page, "_pdf_bytes": pdf_bytes})
 
 
 def discover_page_tables(page: Page, doc_type: str | None, document_id: str) -> list[Table]:
     """Tables of one page for a known (or unknown) document type; empty when the extractor flag is off."""
     if not settings.enable_table_extractor:
         return []
-    order = list(settings.table_provider_order)
-    if settings.enable_docling and "docling" not in order:
-        order.insert(0, "docling")
-    extractor = TableExtractor.cached(candidates_config_dir(), order)
+    extractor = TableExtractor.cached(candidates_config_dir(), ["docling"])
     return extractor.extract(page, doc_type if doc_type in KNOWN_TYPES else None, document_id)
 
 

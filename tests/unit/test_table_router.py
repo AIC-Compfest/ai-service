@@ -61,8 +61,9 @@ def test_candidate_runtime_emits_router_diagnostics_only_when_flagged(monkeypatc
             {"text": "1", "bbox_norm": [.05, .25, .1, .27]}, {"text": "10", "bbox_norm": [.4, .25, .5, .27]}, {"text": "25", "bbox_norm": [.75, .25, .85, .27]}]},
     ]}]}
     pipeline = CandidatePipeline(Path("config/candidates"))
+    pipeline.table_extractor = TableExtractor([Provider("docling", [_table("docling")])]).ordered(["docling"])  # no Docling models in unit tests
     pipeline.generate("D1", "SURAT_JALAN", evidence)
-    assert pipeline.last_report["tables"][0]["provider"] == "token_grid"
+    assert pipeline.last_report["tables"][0]["provider"] == "docling"
 
 
 def test_stitching_joins_only_consecutive_tables_with_same_headers():

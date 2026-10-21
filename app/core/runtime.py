@@ -1,7 +1,7 @@
 """Process-wide runtime helpers: shared pipeline (K10), upload limit, page-image retention.
 
 The pipeline holds the classifier, OCR engine and detectors; building one per request reloaded the ML models every time.
-One instance is shared; per-call state is local to ``process_document`` and Paddle is serialised inside the OCR engine.
+One instance is shared; per-call state is local to ``process_document`` and Docling conversions are serialised inside the Docling runner.
 """
 from __future__ import annotations
 

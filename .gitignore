@@ -14,3 +14,5 @@ docs/*
 !docs/table_reliability/
 !docs/table_reliability/**
 out/
+docling.pdf
+docling_paper.txt

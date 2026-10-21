@@ -1,0 +1,215 @@
+"""Docling-based document understanding engine (the only OCR / text-extraction engine).
+
+* PDF page   : Docling reads the vector text layer directly (``ocr=False``)  -> ``engine_used = docling_vector``.
+* Image page : Docling runs RapidOCR internally (``ocr=True``)               -> ``engine_used = docling_rapidocr``.
+* PDF page without a text layer (scan inside a PDF) falls back to OCR on the canonical PNG, ``fallback_used = True``.
+
+The output keeps the public page-evidence contract: ``lines[]`` (text, confidence, ``bbox_norm`` in [0, 1], tokens),
+``regions[]`` and ``tables[]`` (filled later by the type-aware table discovery in the pipeline).
+
+Coordinates are normalized against the page size reported by Docling itself (PDF points / image pixels); the
+canonical PNG is a uniform rescale of the same page, so the normalized values are valid in the PNG space.
+"""
+from __future__ import annotations
+
+from typing import Any
+
+from app.core.logging import get_logger
+from app.services.docling.runner import DoclingResult, get_runner
+
+logger = get_logger(__name__)
+
+_DEFAULT_CONFIDENCE = 0.95
+
+
+class DoclingOCREngine:
+    """Processes one page (PDF or image) through Docling and returns the internal page-evidence dict."""
+
+    def process(
+        self,
+        raw_bytes: bytes,
+        *,
+        is_pdf: bool,
+        page_number: int,
+        quality: dict,
+        page_width: int,
+        page_height: int,
+        fallback_image_bytes: bytes | None = None,
+    ) -> dict:
+        """``raw_bytes`` is a single-page PDF (``is_pdf``) or a PNG. ``fallback_image_bytes`` lets a text-less PDF page
+        be OCR-ed from its canonical PNG."""
+        runner = get_runner()
+        if is_pdf:
+            result = runner.convert_page(pdf_bytes=raw_bytes, image_loader=lambda: fallback_image_bytes)
+        else:
+            result = runner.convert(raw_bytes, is_pdf=False, ocr=True)
+        if result is None:
+            raise RuntimeError(f"Docling conversion failed for page {page_number} (see docling.* log events)")
+
+        lines = _extract_lines(result)
+        regions = _detect_regions(lines)
+        return {
+            "page_number": page_number,
+            "width": page_width,
+            "height": page_height,
+            "engine_used": "docling_rapidocr" if result.used_ocr else "docling_vector",
+            "fallback_used": bool(is_pdf and result.used_ocr),
+            "average_confidence": _avg_conf(lines),
+            "quality": quality,
+            "coord_space": "page_image_normalized",
+            "lines": lines,
+            "regions": regions,
+            "tables": [],  # filled by discover_page_tables in the pipeline
+        }
+
+
+def _extract_lines(result: DoclingResult) -> list[dict]:
+    """Visual text lines (with word tokens) from Docling's parsed page; paragraph ``texts`` only as a fallback."""
+    lines = _lines_from_cells(result) if result.line_cells else _lines_from_texts(result)
+    lines.sort(key=lambda item: (item["bbox_norm"][1], item["bbox_norm"][0]))
+    _assign_row_indices(lines)
+    return lines
+
+
+def _lines_from_cells(result: DoclingResult) -> list[dict]:
+    words = [(cell, _norm_cell(cell, result)) for cell in result.word_cells]
+    words = [(cell, box) for cell, box in words if box is not None and str(cell.text).strip()]
+    lines: list[dict] = []
+    for cell in result.line_cells:
+        text = " ".join(str(cell.text).split())
+        box = _norm_cell(cell, result)
+        if not text or box is None:
+            continue
+        confidence = _confidence(cell)
+        inside = sorted(
+            (item for item in words if box[0] - 1e-3 <= (item[1][0] + item[1][2]) / 2 <= box[2] + 1e-3 and box[1] - 1e-3 <= (item[1][1] + item[1][3]) / 2 <= box[3] + 1e-3),
+            key=lambda item: item[1][0],
+        )
+        if inside and " ".join(" ".join(str(c.text).split()) for c, _ in inside) == text:
+            tokens = [_token(" ".join(str(c.text).split()), _confidence(c), b, estimated=False) for c, b in inside]
+        else:
+            tokens = _estimated_tokens(text, confidence, box)
+        lines.append({"text": text, "confidence": round(confidence, 3), "bbox_norm": _rounded(box), "tokens": tokens})
+    return lines
+
+
+def _lines_from_texts(result: DoclingResult) -> list[dict]:
+    lines: list[dict] = []
+    for item in result.texts:
+        text = " ".join(str(getattr(item, "text", "")).split())
+        prov = (getattr(item, "prov", None) or [None])[0]
+        box = _norm_bbox(getattr(prov, "bbox", None), result.page_width, result.page_height)
+        if not text or box is None:
+            continue
+        confidence = _confidence(item)
+        lines.append({"text": text, "confidence": round(confidence, 3), "bbox_norm": _rounded(box), "tokens": _estimated_tokens(text, confidence, box)})
+    return lines
+
+
+def _confidence(item: Any) -> float:
+    value = getattr(item, "confidence", None)
+    try:
+        return float(value) if value is not None else _DEFAULT_CONFIDENCE
+    except (TypeError, ValueError):
+        return _DEFAULT_CONFIDENCE
+
+
+def _norm_cell(cell: Any, result: DoclingResult) -> tuple[float, float, float, float] | None:
+    try:
+        bbox = cell.rect.to_bounding_box()
+    except AttributeError:
+        return None
+    return _norm_bbox(bbox, result.page_width, result.page_height)
+
+
+def _norm_bbox(bbox: Any, width: float, height: float) -> tuple[float, float, float, float] | None:
+    """Normalize a docling bbox to [0, 1] with a top-left origin (BOTTOMLEFT boxes are flipped)."""
+    if bbox is None or width <= 0 or height <= 0:
+        return None
+    try:
+        left, right, top, bottom = float(bbox.l), float(bbox.r), float(bbox.t), float(bbox.b)
+    except (AttributeError, TypeError, ValueError):
+        return None
+    origin = str(getattr(getattr(bbox, "coord_origin", None), "name", "")).upper()
+    if "BOTTOMLEFT" in origin:
+        top, bottom = height - top, height - bottom
+    x1, x2 = sorted((max(0.0, min(width, left)), max(0.0, min(width, right))))
+    y1, y2 = sorted((max(0.0, min(height, top)), max(0.0, min(height, bottom))))
+    if x2 <= x1 or y2 <= y1:
+        return None
+    return x1 / width, y1 / height, x2 / width, y2 / height
+
+
+def _rounded(box: tuple[float, float, float, float]) -> list[float]:
+    return [round(value, 6) for value in box]
+
+
+def _token(text: str, confidence: float, box: tuple[float, float, float, float], *, estimated: bool) -> dict:
+    return {"text": text, "confidence": round(confidence, 3), "bbox_norm": _rounded(box), "_estimated": estimated, "row_idx": 0}
+
+
+def _estimated_tokens(text: str, confidence: float, box: tuple[float, float, float, float]) -> list[dict]:
+    """Split a line box between its words in proportion to their length (OCR engines give line boxes only)."""
+    words = text.split()
+    total = sum(len(word) for word in words) + max(len(words) - 1, 0)
+    if not words or total <= 0:
+        return []
+    width, cursor, tokens = box[2] - box[0], box[0], []
+    for word in words:
+        span = width * len(word) / total
+        tokens.append(_token(word, confidence, (cursor, box[1], cursor + span, box[3]), estimated=True))
+        cursor += width * (len(word) + 1) / total
+    return tokens
+
+
+def _assign_row_indices(lines: list[dict]) -> None:
+    """Stable visual rows: lines whose vertical centres match share one ``row_idx`` on all their tokens."""
+    rows: list[tuple[float, float]] = []
+    for line in lines:
+        box = line["bbox_norm"]
+        center, height = (box[1] + box[3]) / 2, max(box[3] - box[1], 1e-6)
+        row = next((i for i, (cy, h) in enumerate(rows) if abs(center - cy) <= 0.6 * max(height, h)), None)
+        if row is None:
+            row = len(rows)
+            rows.append((center, height))
+        for token in line["tokens"]:
+            token["row_idx"] = row
+
+
+def _detect_regions(lines: list[dict]) -> list[dict]:
+    """Layout regions (header, metadata_block, table, totals, signature_block) from line position and keywords."""
+    regions: list[dict] = []
+    if not lines:
+        return regions
+
+    def has_keyword(line: dict, keywords: tuple[str, ...]) -> bool:
+        text = line["text"].casefold()
+        return any(keyword in text for keyword in keywords)
+
+    def add_region(region_type: str, region_lines: list[dict], confidence: float) -> None:
+        if not region_lines:
+            return
+        regions.append({
+            "region_type": region_type,
+            "bbox_norm": _rounded((
+                min(line["bbox_norm"][0] for line in region_lines),
+                min(line["bbox_norm"][1] for line in region_lines),
+                max(line["bbox_norm"][2] for line in region_lines),
+                max(line["bbox_norm"][3] for line in region_lines),
+            )),
+            "confidence": round(confidence, 3),
+            "text_snippet": " ".join(line["text"] for line in region_lines)[:100],
+        })
+
+    add_region("header", [l for l in lines if l["bbox_norm"][1] < 0.18 or (l["bbox_norm"][1] < 0.30 and has_keyword(l, ("invoice", "faktur", "surat jalan", "rate card")))], 0.95)
+    add_region("metadata_block", [l for l in lines if 0.15 <= l["bbox_norm"][1] < 0.38 or has_keyword(l, ("kepada", "billed to", "tanggal", "date", "nomor", "no."))], 0.92)
+    add_region("table", [l for l in lines if 0.35 <= l["bbox_norm"][1] < 0.75 or has_keyword(l, ("description", "quantity", "qty", "harga", "rate", "jumlah"))], 0.94)
+    add_region("totals", [l for l in lines if l["bbox_norm"][1] >= 0.60 and has_keyword(l, ("total", "subtotal", "tax", "ppn", "amount", "grand total"))], 0.95)
+    add_region("signature_block", [l for l in lines if l["bbox_norm"][1] >= 0.75 or (l["bbox_norm"][1] >= 0.55 and has_keyword(l, ("hormat kami", "signature", "tanda tangan", "penerima")))], 0.90)
+    return regions
+
+
+def _avg_conf(lines: list[dict]) -> float:
+    if not lines:
+        return 0.0
+    return round(sum(line["confidence"] for line in lines) / len(lines), 3)

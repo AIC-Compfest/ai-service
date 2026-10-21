@@ -37,7 +37,7 @@ from .preprocessing.document_ingestion import DocumentIngestionService, Ingested
 from .preprocessing.image_preprocessor import ImagePreprocessor
 from .classification.classifier import DocumentClassifier
 from .candidates.table_runtime import candidate_page, discover_page_tables, link_segment_tables, tables_to_evidence
-from .ocr.engine import OCREngine, PageOCREvidence
+from .ocr.docling_engine import DoclingOCREngine
 from .signature.detector import SignatureDetector
 from .segmentation.segmenter import (
     DocumentSegmentationService,
@@ -52,7 +52,7 @@ class Phase5DocumentPipeline:
         self.ingestion = DocumentIngestionService()
         self.preprocessor = ImagePreprocessor()
         self.classifier = DocumentClassifier()
-        self.ocr_engine = OCREngine()
+        self.ocr_engine = DoclingOCREngine()
         self.signature_detector = SignatureDetector()
         self.segmenter = DocumentSegmentationService()
 
@@ -97,23 +97,26 @@ class Phase5DocumentPipeline:
             cv_img = ImagePreprocessor.bytes_to_cv2(p_asset.image_bytes)
             quality = self.preprocessor.estimate_quality(cv_img)
 
-            # OCR & Layout
-            # OCR always consumes the canonical page raster. This keeps geometry,
-            # preprocessing, and the image shown to users in one coordinate system.
-            # Native PDF text is more accurate; its coordinates are normalized against
-            # the canonical rendered PNG dimensions passed here.
-            if p_asset.is_pdf_page and p_asset.pdf_page is not None:
-                p_ocr = self.ocr_engine.process_pdf_page(
-                    p_asset.pdf_page, p_asset.page_number, quality,
-                    canonical_image_bytes=p_asset.image_bytes,
-                    discover_tables=False,
-                )
+            # Text & layout via Docling: PDF pages are read from their text layer (one-page PDF), image pages are
+            # OCR-ed by RapidOCR from the canonical PNG. Coordinates are normalized [0, 1], so they are valid in the
+            # canonical PNG space that viewers use.
+            if p_asset.is_pdf_page and p_asset.pdf_bytes is not None:
+                page_payload, is_pdf = p_asset.pdf_bytes, True
             else:
-                p_ocr = self.ocr_engine.process_image(p_asset.image_bytes, p_asset.page_number, quality, discover_tables=False)
+                page_payload, is_pdf = p_asset.image_bytes, False
+            page_dict = self.ocr_engine.process(
+                page_payload,
+                is_pdf=is_pdf,
+                page_number=p_asset.page_number,
+                quality=quality,
+                page_width=p_asset.width,
+                page_height=p_asset.height,
+                fallback_image_bytes=p_asset.image_bytes,
+            )
             # Evidence dimensions always describe the canonical PNG, including vector PDFs.
-            p_ocr.width, p_ocr.height = p_asset.width, p_asset.height
+            page_dict["width"], page_dict["height"] = p_asset.width, p_asset.height
 
-            page_text = p_ocr.full_text()
+            page_text = "\n".join(line["text"] for line in page_dict["lines"])
             all_text += page_text + "\n"
 
             # Page-Level Classification (per PRD §18, §20)
@@ -144,11 +147,10 @@ class Phase5DocumentPipeline:
                 f"{ingested.document_id}_p{p_asset.page_number}", p_asset.image_bytes
             )
 
-            page_dict = p_ocr.to_dict()
             page_dict["page_image"] = p_asset.page_image
             page_dict["coord_space"] = "page_image_normalized"
             if settings.enable_table_extractor:
-                candidate = candidate_page(page_dict, p_asset.pdf_page if p_asset.is_pdf_page else None)
+                candidate = candidate_page(page_dict, pdf_bytes=p_asset.pdf_bytes if p_asset.is_pdf_page else None)
                 found = discover_page_tables(candidate, page_type_str, ingested.document_id)
                 candidate_pages[p_asset.page_number] = candidate
                 page_tables[p_asset.page_number] = found

@@ -44,26 +44,9 @@ class Settings(BaseSettings):
     # cukup dengan mengubah config ini kembali ke default.
     # -------------------------------------------------------------------------
 
-    # Langkah 1: Deteksi halaman digital vs scan per halaman
-    # False = pakai logika lama (len(words) < 5)
-    # True  = pakai PageKindDetector dari app/services/preprocessing/page_kind.py
-    page_kind_routing: bool = False
-
-    # Threshold untuk PageKindDetector (Langkah 1)
-    # Rasio luas union bbox kata terhadap luas halaman — di atas ini = DIGITAL
-    page_kind_word_coverage_min: float = 0.05
-    # Rasio luas gambar terhadap luas halaman — di atas ini bisa SCAN
-    page_kind_image_coverage_scan_threshold: float = 0.70
-    # Rasio satu gambar terhadap luas halaman untuk dianggap full-page scan.
-    page_kind_full_page_image_threshold: float = 0.90
-    # Legacy word-count is retained only as the final scan safety net.
-    page_kind_legacy_word_count_floor: int = 5
-
     # Langkah 2: Router provider tabel
-    # Urutan provider yang dicoba per halaman.
-    # Tersedia: "token_grid", "pymupdf_find_tables", "ppstructure"
-    # Digital PDF pages try PyMuPDF before geometry-only token-grid discovery.
-    table_provider_order: list[str] = ["pymupdf_find_tables", "token_grid"]
+    # Docling TableFormer is the only table provider.
+    table_provider_order: list[str] = ["docling"]
     # False keeps the legacy OCR evidence contract untouched. True routes
     # table discovery through the scored provider router.
     # Default true since Fase 4 (D-035): with false the API returns no tables and no invoice line items.
@@ -72,16 +55,11 @@ class Settings(BaseSettings):
     # tables only when their normalized headers and provider match.
     enable_table_stitching: bool = False
 
-    # Docling table provider (optional dependency: pip install docling; see requirements-docling.txt).
-    # False = perilaku lama. True = "docling" dicoba pertama oleh router tabel; PyMuPDF/token_grid hanya jadi
-    # fallback bila pemeriksaan tabel terlewat curiga (lihat config/candidates/table_resolution.yaml: docling).
-    enable_docling: bool = False
+    # Docling is the single document engine (text layer, RapidOCR for scans, TableFormer): see requirements-docling.txt.
     # TableFormer mode: "fast" (~7 s/page on 6 CPU threads, measured) or "accurate" (~150 s/page on the same CPU).
     docling_table_mode: str = "fast"
     # Explicit thread count: Docling's default oversubscribes the CPU (measured 20x slower than 6 threads).
     docling_num_threads: int = 6
-    # Run Docling's OCR on pages routed as SCAN. False = scans are skipped by Docling (fallback providers only).
-    docling_ocr_scans: bool = True
     # Directory with pre-downloaded Docling models (offline). Empty = Hugging Face cache.
     docling_artifacts_path: str = ""
 
@@ -98,16 +76,6 @@ class Settings(BaseSettings):
     # Toleransi absolut (Rupiah) untuk pembulatan
     arith_row_tolerance_absolute_idr: float = 1.0
 
-    # Langkah 6: PaddleOCR is the only raster OCR backend.
-    paddle_language: str = "en"
-    paddle_enable_mkldnn: bool = False
-    paddle_cpu_threads: int = 8
-    # Empty = PaddleOCR 3.7 defaults for lang=en: PP-OCRv6_medium_det + PP-OCRv6_medium_rec (~70 s per page on a 6-core CPU without oneDNN, measured Fase 6).
-    # Set e.g. PADDLE_DET_MODEL=PP-OCRv5_mobile_det and PADDLE_REC_MODEL=en_PP-OCRv5_mobile_rec for the smaller PP-OCRv5 mobile models.
-    paddle_det_model: str = ""
-    paddle_rec_model: str = ""
-    paddle_det_limit_side_len: int = 0  # 0 = PaddleOCR default; >0 limits the longest side (limit type "max")
-
     # Candidate generation + LightGBM scoring on the extraction path (additive, see extraction/ml/service.py).
     # Rule-based extractors stay primary; an ML value only replaces a rule field that is unknown AND has the same name,
     # and only when the model is "accepted" (score >= t_auto of its bundle).
@@ -122,13 +90,6 @@ class Settings(BaseSettings):
     invoice_table_max_y: float = 0.70
     invoice_row_y_tolerance: float = 0.025  # lines within this vertical distance belong to the same row
     rate_agreement_header_max_y: float = 0.20
-
-    # Langkah 7: Preprocessing untuk scan/foto
-    # False = tidak ada preprocessing tambahan (perilaku lama)
-    # True  = aktifkan deskew, perspective correction, adaptive upscale
-    enable_ocr_preprocess: bool = False
-    ocr_preprocess_min_side_for_upscale: int = 960
-    ocr_preprocess_max_upscale: float = 2.0
 
 
 settings = Settings()

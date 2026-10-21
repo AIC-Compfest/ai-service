@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -10,7 +11,6 @@ import yaml
 
 from app.services.candidates.pipeline import CandidatePipeline
 from app.services.candidates.line_items import LineItemBuilder
-from app.services.candidates.tables import TokenGridTableProvider
 from app.services.candidates.training_schema import classify_column, load_policy
 from app.services.candidates.version import candidate_pipeline_version
 from app.core.config import candidates_config_dir
@@ -62,11 +62,10 @@ def _write_line_items(args, manifests):
     for manifest in manifests:
         evidence = json.loads(Path(manifest["evidence_json_path"]).read_text(encoding="utf-8"))
         evidence = restrict_pages(evidence, manifest.get("page_start"), manifest.get("page_end"))
-        provider = TokenGridTableProvider(args.config / "line_item_aliases.yaml", args.config / "abbreviations.yaml")
+        # The token-geometry table provider was removed (Docling is the only provider and needs the page PDF/PNG, which
+        # stored evidence JSON does not carry), so offline line-item datasets are empty until they are rebuilt from Docling tables.
         tables = []
-        from app.services.candidates.context import build_page
-        for page_data in evidence.get("pages", []):
-            tables.extend(provider.tables(build_page(page_data), manifest["doc_type"], manifest["document_id"]))
+        print(f"warning: no table provider for stored evidence; line items skipped for {manifest['document_id']}", file=sys.stderr)
         result = LineItemBuilder(args.config).build(manifest["document_id"], manifest["doc_type"], tables)
         by_type.setdefault(manifest["doc_type"], {"columns": [], "cells": [], "rows": [], "previews": []})
         for key in by_type[manifest["doc_type"]]:

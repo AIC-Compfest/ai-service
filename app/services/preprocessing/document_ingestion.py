@@ -24,13 +24,13 @@ CANONICAL_DPI = 200
 
 
 class DocumentPageAsset:
-    def __init__(self, page_number: int, width: int, height: int, image_bytes: bytes, is_pdf_page: bool = False, pdf_page: fitz.Page | None = None, page_image: dict | None = None):
+    def __init__(self, page_number: int, width: int, height: int, image_bytes: bytes, is_pdf_page: bool = False, pdf_bytes: bytes | None = None, page_image: dict | None = None):
         self.page_number = page_number
         self.width = width
         self.height = height
         self.image_bytes = image_bytes
         self.is_pdf_page = is_pdf_page
-        self.pdf_page = pdf_page
+        self.pdf_bytes = pdf_bytes  # single-page PDF for Docling (None for image uploads)
         self.page_image = page_image or {}
 
 
@@ -51,12 +51,12 @@ def render_canonical_pages(raw_bytes: bytes, source_filename: str, document_id: 
     is_pdf = raw_bytes.startswith(b"%PDF") or source_filename.lower().endswith(".pdf")
     pages: list[DocumentPageAsset] = []
 
-    def add(page_number: int, image: Image.Image, pdf_page: fitz.Page | None = None, rotation: int = 0) -> None:
+    def add(page_number: int, image: Image.Image, pdf_bytes: bytes | None = None, rotation: int = 0) -> None:
         canonical = image.convert("RGB")
         path = target / f"page_{page_number:04d}.png"
         canonical.save(path, format="PNG")
         image_bytes = path.read_bytes()
-        pages.append(DocumentPageAsset(page_number, canonical.width, canonical.height, image_bytes, pdf_page is not None, pdf_page, {
+        pages.append(DocumentPageAsset(page_number, canonical.width, canonical.height, image_bytes, pdf_bytes is not None, pdf_bytes, {
             "path": path.as_posix(), "width": canonical.width, "height": canonical.height,
             "dpi": dpi, "rotation_applied": rotation, "sha256": hashlib.sha256(image_bytes).hexdigest(),
         }))
@@ -66,7 +66,11 @@ def render_canonical_pages(raw_bytes: bytes, source_filename: str, document_id: 
         for index, page in enumerate(doc):
             # get_pixmap applies the PDF display rotation and CropBox, matching viewers.
             pix = page.get_pixmap(dpi=dpi, alpha=False)
-            add(index + 1, Image.open(io.BytesIO(pix.tobytes("png"))), page, page.rotation)
+            # One-page PDF so Docling never re-parses the whole document for every page.
+            single = fitz.open()
+            single.insert_pdf(doc, from_page=index, to_page=index)
+            add(index + 1, Image.open(io.BytesIO(pix.tobytes("png"))), single.tobytes(), page.rotation)
+            single.close()
     else:
         with Image.open(io.BytesIO(raw_bytes)) as source:
             for index, frame in enumerate(ImageSequence.Iterator(source)):

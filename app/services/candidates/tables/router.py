@@ -1,4 +1,4 @@
-"""Feature-flagged, scored routing for internal table providers."""
+"""Scored routing for internal table providers (Docling TableFormer is the only provider)."""
 
 from __future__ import annotations
 
@@ -10,10 +10,7 @@ from typing import Protocol
 import yaml
 
 from ..schema import Page, Table
-from .token_grid import TokenGridTableProvider
-from .pymupdf_provider import PyMuPDFTableProvider
 from .docling_provider import DoclingTableProvider
-from .missed import suspect_missed_tables
 from .rows import summary_pattern
 from .scoring import arbitrate, classify_role, table_quality
 
@@ -32,10 +29,9 @@ def _cached_extractor(config_dir: str, provider_order: tuple[str, ...]) -> "Tabl
 
 
 class TableExtractor:
-    """Collect tables from every provider, keep the best table of each overlapping group, classify roles.
+    """Collect tables from the registered providers, keep the best table of each overlapping group, classify roles.
 
-    Arbitration is per TABLE, not per provider: a page may legitimately mix a ruled table found by PyMuPDF with an
-    unruled table found by token geometry. Provider order is only a deterministic tie-breaker.
+    Arbitration is per TABLE, not per provider; provider order is only a deterministic tie-breaker.
     """
 
     def __init__(self, providers: Iterable[TableProvider], scoring: dict | None = None, summary_labels: Iterable[str] = (), docling: dict | None = None):
@@ -48,15 +44,11 @@ class TableExtractor:
     @classmethod
     def from_config(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
         config_dir = Path(config_dir)
-        provider = TokenGridTableProvider(config_dir / "line_item_aliases.yaml", config_dir / "abbreviations.yaml")
         resolution = yaml.safe_load((config_dir / "table_resolution.yaml").read_text(encoding="utf-8")) or {}
-        # Unknown providers intentionally remain unavailable until their optional
-        # dependencies are installed and registered in later steps.
-        pymupdf_options = {**(resolution.get("pymupdf") or {}), "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")}
         docling = resolution.get("docling") or {}
         docling_options = {**docling, "summary_labels": resolution.get("summary_labels", ()), "refine": resolution.get("refine")}
-        # Docling is registered but lazy: its models load on the first conversion, and only when it is in the provider order.
-        return cls([DoclingTableProvider(docling_options), PyMuPDFTableProvider(pymupdf_options), provider], resolution.get("scoring"), resolution.get("summary_labels", ()), docling).ordered(provider_order)
+        # Docling is the only provider; its models load lazily on the first conversion.
+        return cls([DoclingTableProvider(docling_options)], resolution.get("scoring"), resolution.get("summary_labels", ()), docling).ordered(provider_order)
 
     @classmethod
     def cached(cls, config_dir, provider_order: Iterable[str]) -> "TableExtractor":
@@ -84,13 +76,7 @@ class TableExtractor:
                     if validation["available"]:
                         table.structural_score = round(0.8 * table.structural_score + 0.2 * float(validation["score"]), 6)
                 candidates.append(table)
-            if name == "docling" and found and not self.docling.get("fallback_always", False):
-                # Step 3: Docling passes -> skip the fallback providers; suspected missed table -> they run (step 3b).
-                suspect, why = suspect_missed_tables(page, found, self.docling.get("missed"))
-                if not suspect:
-                    break
-                for table in found:
-                    table.validation["missed_table_check"] = why
+
         tables = arbitrate(candidates, self.scoring)
         for number, table in enumerate(tables, start=1):
             table.table_id = f"{document_id}-p{page.page_number}-t{number}"
