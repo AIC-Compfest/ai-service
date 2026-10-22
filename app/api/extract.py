@@ -223,6 +223,14 @@ def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
             }
             for p in evidence.get("pages", [])
         ],
+        # Keep the complete Phase 5 evidence available to persistence/audit
+        # consumers. The compact pages projection above remains for clients
+        # that only need page-level metadata.
+        "evidence": {
+            "pages": evidence.get("pages", []),
+            "table_groups": evidence.get("table_groups", []),
+            "processing_metadata": evidence.get("processing_metadata", {}),
+        },
         "extracted_fields": [f.model_dump() for f in fields],
         "ml_extraction": ml_extraction,
         "arithmetic_validation": arithmetic_validation,
