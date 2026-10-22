@@ -6,7 +6,6 @@ from pathlib import Path
 
 from app.services.training.run import train_binary
 from app.services.candidates.registry import FieldRegistry
-from app.core.config import candidates_config_dir, settings
 
 
 def main() -> None:
@@ -18,11 +17,11 @@ def main() -> None:
     run.add_argument("--doc-type", default="POD")
     run.add_argument("--field", default="receiver_name")
     run.add_argument("--all-fields", action="store_true")
-    run.add_argument("--config", type=Path, default=Path(settings.config_dir) / "training" / "training.yaml")
+    run.add_argument("--config", type=Path, default=Path("config/training/training.yaml"))
     args = parser.parse_args()
     if args.command == "run":
         if args.all_fields:
-            registry = FieldRegistry.load(candidates_config_dir() / "field_registry.yaml")
+            registry = FieldRegistry.load(Path("config/candidates/field_registry.yaml"))
             results = []
             for field in registry.for_doc(args.doc_type):
                 try:

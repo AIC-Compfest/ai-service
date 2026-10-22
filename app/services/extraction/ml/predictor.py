@@ -2,8 +2,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-
-from app.core.config import candidates_config_dir
 from typing import Any
 
 import numpy as np
@@ -30,18 +28,17 @@ class MLExtractionResult:
 
 
 class MLFieldExtractor:
-    def __init__(self, model_set_dir: str | Path, candidate_config_dir: str | Path | None = None, *, allow_mismatch: bool = False):
+    def __init__(self, model_set_dir: str | Path, candidate_config_dir: str | Path = "config/candidates", *, allow_mismatch: bool = False):
         self.model_set_dir = Path(model_set_dir)
-        candidate_config_dir = Path(candidate_config_dir) if candidate_config_dir is not None else candidates_config_dir()
         self.pipeline = CandidatePipeline(candidate_config_dir)
-        self.registry = FieldRegistry.load(candidate_config_dir / "field_registry.yaml")
+        self.registry = FieldRegistry.load(Path(candidate_config_dir) / "field_registry.yaml")
         self.bundles = {}
         for path in self.model_set_dir.glob("*/bundle.json"):
             model, metadata = load_bundle(path.parent, allow_mismatch=allow_mismatch)
             self.bundles[(metadata["doc_type"], metadata["field"])] = (model, metadata)
 
     def extract(self, document_id: str, doc_type: str, ocr_result: dict[str, Any]) -> MLExtractionResult:
-        rows = self.pipeline.generate(document_id, doc_type, ocr_result, "inference", include_tables=False)
+        rows = self.pipeline.generate(document_id, doc_type, ocr_result, "inference")
         scores = {}
         thresholds = {}
         for (bundle_doc, field), (model, metadata) in self.bundles.items():

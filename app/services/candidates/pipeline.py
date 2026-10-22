@@ -1,8 +1,5 @@
 from __future__ import annotations
 
-import copy
-import re
-
 import hashlib
 import re
 import time
@@ -19,8 +16,6 @@ from .schema import Candidate, Page, Token
 from .text_norm import norm_alnum, norm_text, ocr_fold
 from .fuzzy_fields import _window_similarity
 from .version import candidate_pipeline_version
-from .tables import TableExtractor
-from app.core.config import settings
 
 
 class CandidatePipeline:
@@ -40,25 +35,12 @@ class CandidatePipeline:
         if generation.exists():
             self.caps.update((yaml.safe_load(generation.read_text(encoding="utf-8")) or {}).get("caps", {}))
         self.last_run_report: dict[str, Any] = {"cap_overflow": {}}
-        self.table_extractor = TableExtractor.from_config(config_dir, settings.table_provider_order)
 
-    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN", include_tables: bool = True) -> list[dict[str, Any]]:
+    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN") -> list[dict[str, Any]]:
         started = time.perf_counter()
         self.last_report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
         pages = [build_page(page) for page in ocr_result.get("pages", [])]
-        if settings.enable_table_extractor and include_tables:
-            tables = [
-                table
-                for page in pages
-                for table in self.table_extractor.extract(page, doc_type, document_id, arithmetic_validation=settings.enable_arithmetic_validation, relative_tolerance=Decimal(str(settings.arith_row_tolerance_relative)), absolute_tolerance=Decimal(str(settings.arith_row_tolerance_absolute_idr)))
-            ]
-            if settings.enable_table_stitching:
-                tables = stitch_tables(tables)
-            self.last_report["tables"] = [
-                table_evidence(table)
-                for table in tables
-            ]
         candidates: list[Candidate] = []
         for page in pages:
             if not page.lines:
@@ -79,6 +61,7 @@ class CandidatePipeline:
             candidate.features["m_overlap_types"] = "|".join(sorted(overlap_types))
         self.last_report["timings_ms"][f"{document_id}:{doc_type}"] = round((time.perf_counter() - started) * 1000, 3)
         return [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
+
     def _generate_type(self, page: Page, cand_type: str) -> list[Candidate]:
         if cand_type == "amount":
             return self._number_candidates(page, cand_type, amount=True)
@@ -417,60 +400,3 @@ def _near_unit(page: Page, token: Token, units: set[str]) -> str:
         if candidate.line_idx == token.line_idx and candidate.tok_idx == token.tok_idx + 1 and norm_text(candidate.text) in units:
             return norm_text(candidate.text)
     return "none"
-
-
-def table_evidence(table) -> dict[str, Any]:
-    """Serialize additive table diagnostics while retaining the legacy fields."""
-    payload = {
-        "table_id": table.table_id,
-        "bbox_norm": list(table.bbox), "headers": [column.header_text for column in table.columns],
-        "rows": [[cell.text for cell in row.cells] for row in table.rows],
-        "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.structural_score or table.conf, "confidence_source": "structural_score" if table.structural_score else "unscored",
-        "provider": table.source, "reason": table.reason, "validation": table.validation,
-        "columns": [{"idx": column.idx, "bbox_norm": [column.x1, 0.0, column.x2, 1.0], "header": column.header_text} for column in table.columns],
-        "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],
-        "summary_rows": [[cell.text for cell in row.cells] for row in table.summary_rows],
-        "role": table.role, "role_reason": table.role_reason,
-    }
-    if table.validation.get("continued_from"):
-        payload["continued_from"] = table.validation["continued_from"]
-    return payload
-
-
-def _natural(table_id: str) -> list:
-    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", table_id)]
-
-
-def stitch_tables(tables):
-    """Join tables of consecutive pages that are one logical table; the inputs are NOT modified.
-
-    Two tables join when the first has no summary rows (it did not end), they sit on consecutive pages, and either the
-    headers match or the second is a header-less continuation of the first. Ordering is by page, then natural id order
-    (t2 before t10).
-    """
-    stitched: list = []
-    for table in sorted((copy.deepcopy(t) for t in tables), key=lambda value: (value.page_start, _natural(value.table_id))):
-        previous = next((candidate for candidate in reversed(stitched) if candidate.page_end + 1 == table.page_start), None)
-        if previous is not None and _same_table_segment(previous, table):
-            offset = len(previous.rows)
-            for row in table.rows:
-                row.idx += offset
-                for cell in row.cells:
-                    cell.row_idx = row.idx
-            previous.rows.extend(table.rows)
-            previous.summary_rows.extend(table.summary_rows)
-            previous.page_end = table.page_end
-            previous.stitched_pages.extend(page for page in table.stitched_pages if page not in previous.stitched_pages)
-            previous.reason = "consecutive_page_continuation" if table.reason == "continuation" else "consecutive_page_header_match"
-            previous.validation.setdefault("stitched_table_ids", [previous.table_id]).append(table.table_id)
-        else:
-            stitched.append(table)
-    return stitched
-
-
-def _same_table_segment(left, right) -> bool:
-    if left.summary_rows or left.page_end + 1 != right.page_start or len(left.columns) != len(right.columns):
-        return False
-    if right.reason == "continuation":
-        return right.validation.get("continued_from") in (left.table_id, *left.validation.get("stitched_table_ids", []))
-    return [norm_text(column.header_text) for column in left.columns] == [norm_text(column.header_text) for column in right.columns]

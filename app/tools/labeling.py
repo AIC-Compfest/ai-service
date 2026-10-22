@@ -16,7 +16,6 @@ from app.services.labeling.schema import FieldStatus, FieldLabel, LabelSource, R
 from app.services.labeling.store import LabelStore
 from app.services.labeling.template_profile import build_template_profile
 from app.services.labeling.transfer import transfer_template
-from app.core.config import candidates_config_dir
 
 
 def main() -> None:
@@ -26,7 +25,7 @@ def main() -> None:
     prepare.add_argument("--source-dir", type=Path, default=Path("reports/POD_Training"))
     prepare.add_argument("--ground-truth", type=Path)
     prepare.add_argument("--out", type=Path, default=Path("data/phase2"))
-    prepare.add_argument("--config", type=Path, default=candidates_config_dir())
+    prepare.add_argument("--config", type=Path, default=Path("config/candidates"))
     prepare.add_argument("--limit", type=int)
     prepare.add_argument("--skip-ocr", action="store_true")
     base = sub.add_parser("llm-base")
@@ -37,7 +36,7 @@ def main() -> None:
     ground.add_argument("--truth-dir", type=Path, default=Path("data/labels/truth_llm"))
     ground.add_argument("--candidate-dir", type=Path, required=True)
     ground.add_argument("--labels", type=Path, default=Path("data/labels"))
-    ground.add_argument("--config", type=Path, default=candidates_config_dir())
+    ground.add_argument("--config", type=Path, default=Path("config/candidates"))
     export = sub.add_parser("export")
     export.add_argument("--candidate-dir", type=Path, required=True)
     export.add_argument("--labels", type=Path, default=Path("data/labels"))
