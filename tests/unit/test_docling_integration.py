@@ -148,3 +148,20 @@ def test_provider_routes_by_pdf_bytes():
     kind, payload, is_pdf, ocr = provider.route(Page(1, [], []))  # image upload without a readable PNG
     assert (kind, payload, is_pdf, ocr) == ("SCAN", None, False, True)
     assert provider.tables(Page(1, [], []), None) == []
+
+
+def test_build_page_preserves_docling_inputs():
+    from app.services.candidates.context import build_page
+
+    page = build_page({
+        "page_number": 1,
+        "width": 1000,
+        "height": 2000,
+        "page_image": {"path": "page.png"},
+        "lines": [],
+        "_pdf_bytes": b"%PDF-table-input",
+    })
+
+    assert page.pdf_bytes == b"%PDF-table-input"
+    assert page.image_path == "page.png"
+    assert page.aspect == 0.5

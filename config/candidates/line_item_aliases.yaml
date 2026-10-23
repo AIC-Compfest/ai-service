@@ -1,17 +1,17 @@
 INVOICE:
   fields:
     line_number: {dtype: int, aliases: [no, no., nomor, baris, line, urut, item]}
-    quantity: {dtype: decimal, aliases: [qty, quantity, kuantitas, jumlah, jml, jumlah koli, koli, pcs]}
+    quantity: {dtype: decimal, aliases: [qty, quantity, kuantitas, jumlah, jml, pg, lembar, lbr, jumlah koli, koli, pcs]}
     frequency: {dtype: decimal, aliases: [frequency, frekuensi, freq, rit, ritase, trip]}
     shipment_id: {dtype: id, aliases: [shipment id, shipment, no resi, nomor resi, resi, tracking no, reference no, ref]}
     awb_number: {dtype: id, aliases: [awb, awb no, airwaybill, no waybill]}
-    item_description: {dtype: text, aliases: [description, deskripsi barang, uraian barang, nama barang, item description, commodity]}
+    item_description: {dtype: text, aliases: [description, deskripsi, deskripsi barang, deskripsi jasa, produk, product service description, uraian barang, nama barang, item description, commodity]}
     destination: {dtype: city, aliases: [destination, tujuan, kota tujuan]}
     chargeable_weight: {dtype: weight, aliases: [chargeable weight, berat tertagih, berat kg, berat, weight, kg]}
-    base_rate: {dtype: amount, aliases: [base rate, tarif dasar, tarif, rate, harga, price, tarif kg, rate kg]}
+    base_rate: {dtype: amount, aliases: [base rate, unit price, harga satuan, hrga satuan, tarif dasar, tarif, rate, harga, price, tarif kg, rate kg]}
     fuel_surcharge: {dtype: amount, aliases: [fuel surcharge, fuel, bbm, surcharge bbm]}
     line_tax: {dtype: percent, aliases: [ppn, vat, tax, pajak, nilai ppn, ppn 11%]}
-    line_total: {dtype: amount, aliases: [total, jumlah, amount, subtotal, total harga]}
+    line_total: {dtype: amount, aliases: [total price, jumlah harga, total, jumlah, amount, subtotal, total harga]}
 SURAT_JALAN:
   fields:
     line_number: {dtype: int, aliases: [no, nomor, baris, line]}
@@ -35,7 +35,4 @@ RATE_AGREEMENT:
     weight_max_kg: {dtype: weight, aliases: [max weight, max kg, berat max, sampai kg, to kg]}
     base_rate_idr: {dtype: amount, aliases: [base rate, tarif dasar, tarif, rate, harga, tarif kg, rate kg]}
     rate_unit: {dtype: text, aliases: [per, satuan tarif, unit tarif]}
-_surcharge_types:
-  fuel: [fuel surcharge, fuel, bbm, bahan bakar]
-  handling: [handling fee, biaya penanganan, handling]
 ambiguous_ok: [jumlah, total, tujuan, asal, berat]
