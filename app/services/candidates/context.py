@@ -16,7 +16,21 @@ def build_page(page_data: dict) -> Page:
         tokens = [Token(str(item.get("text", "")), _bbox(item.get("bbox_norm", line.get("bbox_norm", [0, 0, 1, 1]))), float(item.get("confidence", line.get("confidence", 0))), line_idx, i, bool(item.get("_estimated", False)), int(item.get("row_idx", line.get("row_idx", line_idx)))) for i, item in enumerate(raw_tokens) if str(item.get("text", "")).strip()]
         lines.append(tokens)
         all_tokens.extend(tokens)
-    return Page(int(page_data.get("page_number", 1)), all_tokens, lines, str(page_data.get("engine_used", "")), page_data.get("quality") or {}, page_data.get("regions") or [], source_page=page_data)
+    page_image = page_data.get("page_image") or {}
+    width, height = page_data.get("width"), page_data.get("height")
+    aspect = float(width) / float(height) if width and height else None
+    return Page(
+        int(page_data.get("page_number", 1)),
+        all_tokens,
+        lines,
+        str(page_data.get("engine_used", "")),
+        page_data.get("quality") or {},
+        page_data.get("regions") or [],
+        source_page=page_data.get("_source_page") or page_data,
+        aspect=aspect,
+        image_path=str(page_image.get("path")) if page_image.get("path") else None,
+        pdf_bytes=page_data.get("_pdf_bytes"),
+    )
 
 
 def context_for(candidate: Candidate) -> dict[str, str]:

@@ -1,6 +1,9 @@
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
-pydantic==2.9.2
+# Docling 2.140's inherited computed OCR compatibility field requires the
+# post-2.10 Pydantic model-construction fixes; 2.9.2 fails at import time with
+# AttributeError: force_full_page_ocr.
+pydantic>=2.10.6,<3.0.0
 pydantic-settings==2.5.2
 python-multipart==0.0.9
 opencv-python-headless==4.10.0.84
