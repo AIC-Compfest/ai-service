@@ -97,9 +97,13 @@ class Candidate:
     reading_idx: int = 0
     features: dict[str, Any] = field(default_factory=dict)
     context: dict[str, str] = field(default_factory=dict)
+    table_meta: dict[str, Any] = field(default_factory=dict)
+    bbox_override: tuple[float, float, float, float] | None = None
 
     @property
     def bbox(self) -> tuple[float, float, float, float]:
+        if self.bbox_override is not None:
+            return self.bbox_override
         return (min(t.bbox[0] for t in self.tokens), min(t.bbox[1] for t in self.tokens), max(t.bbox[2] for t in self.tokens), max(t.bbox[3] for t in self.tokens))
 
     @property

@@ -1,0 +1,17 @@
+weights:
+  tb_header_fuzzy_frac: 2.0
+  tb_anchor_frac: 1.0
+  tb_has_seq_col: 0.5
+  tb_rel_product_frac: 1.5
+  tb_summary_matches_colsum: 1.0
+  tb_has_total_summary: 0.5
+  tb_frac_numeric_cols: 1.0
+  tb_n_amount_cols_capped: 0.5
+  tb_n_rows_capped: 1.0
+  tb_row_fill_mean: 0.5
+  tb_title_kw_items: 0.5
+  tb_kv_like_frac: -1.5
+  tb_text_only_frac: -1.0
+  tb_title_kw_terms: -0.5
+  tb_title_kw_totals: -0.25
+empty_value: 0.0

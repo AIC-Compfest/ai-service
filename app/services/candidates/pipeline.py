@@ -9,6 +9,8 @@ from typing import Any
 
 import yaml
 
+from app.services.evidence.docling_tables import normalize_docling_evidence
+
 from .context import build_page, context_for
 from .parsers import parse_date, parse_number, parse_time
 from .registry import FieldRegistry
@@ -40,7 +42,13 @@ class CandidatePipeline:
         started = time.perf_counter()
         self.last_report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
-        pages = [build_page(page) for page in ocr_result.get("pages", [])]
+        normalized, evidence_warnings = normalize_docling_evidence(ocr_result)
+        self._apply_table_groups(normalized)
+        self.last_report["evidence_warnings"] = evidence_warnings
+        for page in normalized.get("pages", []):
+            page["_doc_type"] = doc_type
+            page["_document_id"] = document_id
+        pages = [build_page(page) for page in normalized.get("pages", [])]
         candidates: list[Candidate] = []
         for page in pages:
             if not page.lines:
@@ -62,7 +70,26 @@ class CandidatePipeline:
         self.last_report["timings_ms"][f"{document_id}:{doc_type}"] = round((time.perf_counter() - started) * 1000, 3)
         return [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
 
+    @staticmethod
+    def _apply_table_groups(evidence: dict[str, Any]) -> None:
+        tables = {table.get("table_id"): (page, table) for page in evidence.get("pages", []) for table in page.get("tables", [])}
+        for group in evidence.get("table_groups", []) or []:
+            members = group.get("table_ids") or group.get("members") or []
+            members = [member.get("table_id") if isinstance(member, dict) else member for member in members]
+            resolved = [tables[member] for member in members if member in tables]
+            if len(resolved) < 2:
+                continue
+            first_page, first = resolved[0]
+            first["rows"] = [row for _, table in resolved for row in table.get("rows", [])]
+            first["row_count"] = len(first["rows"])
+            first["page_end"] = int(resolved[-1][0].get("page_number", first_page.get("page_number", 1)))
+            first["_group_members"] = members
+            for _, table in resolved[1:]:
+                table["_group_member"] = True
+
     def _generate_type(self, page: Page, cand_type: str) -> list[Candidate]:
+        if cand_type == "table":
+            return self._table_candidates(page)
         if cand_type == "amount":
             return self._number_candidates(page, cand_type, amount=True)
         if cand_type == "date":
@@ -90,6 +117,19 @@ class CandidatePipeline:
         if cand_type == "text":
             return self._text_candidates(page)
         return []
+
+    def _table_candidates(self, page: Page) -> list[Candidate]:
+        result = []
+        for table in (page.source_page or {}).get("tables", []):
+            if table.get("_group_member"):
+                continue
+            bbox = tuple(float(value) for value in table["bbox_norm"][:4])
+            headers = [str(value) for value in table.get("headers", [])]
+            rows = table.get("rows", [])
+            raw = " | ".join(headers) if headers else " | ".join(str(value) for value in (rows[0] if rows else []))
+            token = Token(raw or str(table.get("table_id", "table")), bbox, float(table.get("confidence", 0.0)), -1, -1)
+            result.append(Candidate("table", page, [token], raw, "", f"{int(table.get('row_count', len(rows)))}x{int(table.get('col_count', len(headers) or max((len(row) for row in rows), default=0)))}", table_meta=table, bbox_override=bbox))
+        return result
 
     def _enum_candidates(self, page: Page) -> list[Candidate]:
         values = {"rp": "IDR", "rp.": "IDR", "idr": "IDR", "rupiah": "IDR", "usd": "USD", "sgd": "SGD", "eur": "EUR", "$": "USD", "baik": "GOOD", "good": "GOOD", "ok": "GOOD", "lengkap": "GOOD", "complete": "GOOD", "rusak": "DAMAGED", "damaged": "DAMAGED", "pecah": "DAMAGED", "penyok": "DAMAGED", "kurang": "SHORTAGE", "shortage": "SHORTAGE"}
@@ -308,8 +348,11 @@ class CandidatePipeline:
         same = [item for item in all_candidates if item.cand_type == candidate.cand_type]
         values = [item for item in same if item.parsed_norm == candidate.parsed_norm]
         features: dict[str, Any] = {"g_x1": round(x1, 4), "g_y1": round(y1, 4), "g_x2": round(x2, 4), "g_y2": round(y2, 4), "g_cx": round((x1 + x2) / 2, 4), "g_cy": round((y1 + y2) / 2, 4), "g_w": round(x2 - x1, 4), "g_h": round(y2 - y1, 4), "q_conf_mean": round(sum(token.confidence for token in candidate.tokens) / len(candidate.tokens), 6), "q_box_estimated": int(any(token.box_estimated for token in candidate.tokens)), "q_is_vector": int(candidate.page.engine_used == "pymupdf_vector"), "d_n_same_type_doc": len(same), "d_n_same_type_page": sum(item.page.page_number == candidate.page.page_number for item in same), "d_dup_count_doc": len(values) - 1, "d_is_first_occurrence": int(values and values[0] is candidate), "d_rank_reading": candidate.reading_idx, "d_rank_reading_rel": (candidate.reading_idx - 1) / max(len(same) - 1, 1)}
+        features["q_is_vector"] = int(candidate.page.engine_used in {"docling_vector", "pymupdf_vector"})
         features.update(self._lexical_features(candidate))
-        if candidate.cand_type == "amount":
+        if candidate.cand_type == "table":
+            features.update(self._table_features(candidate, all_candidates))
+        elif candidate.cand_type == "amount":
             parsed = Decimal(candidate.parsed_value)
             features.update({"a_value": float(parsed), "a_log10": 0 if parsed == 0 else float(abs(parsed).ln() / Decimal(10).ln()), "a_ambiguous": int("." in candidate.raw_text or "," in candidate.raw_text), "a_n_tokens": len(candidate.tokens), "a_has_currency_sym": int(bool(re.search(r"(?:^|\s)(?:rp\.?|idr|usd|\$)(?:\s|$)", candidate.raw_text, re.I))), "a_is_max": int(parsed == max(Decimal(item.parsed_value) for item in same)), "a_rank_desc_doc": sorted((Decimal(item.parsed_value) for item in same), reverse=True).index(parsed) + 1})
         elif candidate.cand_type == "date":
@@ -355,6 +398,71 @@ class CandidatePipeline:
             features.update({"tx_n_tokens": len(raw.split()), "tx_n_chars": len(raw), "tx_n_lines": len(candidate.tokens), "tx_alpha_ratio": sum(char.isalpha() for char in raw) / max(len(raw.replace(" ", "")), 1), "tx_digit_ratio": sum(char.isdigit() for char in raw) / max(len(raw.replace(" ", "")), 1), "tx_upper_ratio": sum(char.isupper() for char in raw) / max(sum(char.isalpha() for char in raw), 1), "tx_has_amount": int(any(char.isdigit() for char in raw))})
         return features
 
+    def _table_features(self, candidate: Candidate, all_candidates: list[Candidate]) -> dict[str, Any]:
+        x1, y1, x2, y2 = candidate.bbox
+        table = candidate.table_meta
+        rows = [[str(value) for value in row] for row in table.get("rows", [])]
+        headers = [str(value) for value in table.get("headers", [])]
+        summary = [[str(value) for value in row] for row in table.get("summary_rows", [])]
+        n_rows, n_cols = int(table.get("row_count", len(rows))), int(table.get("col_count", len(headers[0]) if headers else max((len(row) for row in rows), default=0)))
+        n_cols = max(n_cols, max((len(row) for row in rows), default=0), len(headers))
+        cells = table.get("cells", [])
+        numeric = [[parse_number(value).value for value in row] for row in rows]
+        col_types = []
+        for col in range(n_cols):
+            values = [row[col] for row in rows if col < len(row) and str(row[col]).strip()]
+            parses = [parse_number(value).value for value in values]
+            ratio = sum(value is not None for value in parses) / max(len(values), 1)
+            if ratio >= .6 and any(re.search(r"(?:rp|idr|usd|\$)|[.,]\d{3}", value, re.I) for value in values):
+                kind = "amount"
+            elif ratio >= .6 and parses and all(value == int(value) for value in parses if value is not None):
+                kind = "int"
+            elif ratio >= .6 and sum(bool(parse_date(value).iso) for value in values) / max(len(values), 1) >= .6:
+                kind = "date"
+            elif ratio >= .6 and sum(bool(re.search(r"^[A-Za-z0-9][A-Za-z0-9./_-]{3,}$", value.strip())) for value in values) / max(len(values), 1) >= .6:
+                kind = "id"
+            else:
+                kind = "text"
+            col_types.append(kind)
+        header_matches = [self._header_match(candidate.page, header) for header in headers]
+        header_scores = [score for score, _ in header_matches]
+        header_hits = sum(score >= .8 for score, _ in header_matches)
+        row_fills = [sum(bool(str(value).strip()) for value in row) / max(n_cols, 1) for row in rows]
+        col_fills = [sum(bool(row[col].strip()) for row in rows if col < len(row)) / max(n_rows, 1) for col in range(n_cols)]
+        numeric_columns = [col for col, kind in enumerate(col_types) if kind in {"amount", "int"}]
+        text_only = sum(bool(re.fullmatch(r"[A-Za-z /&-]+", value.strip())) for row in rows for value in row) / max(sum(len(row) for row in rows), 1)
+        sequence_cols = [col for col in range(n_cols) if _is_sequence([numeric[row][col] for row in range(len(numeric)) if col < len(numeric[row])])]
+        product_frac = _relation_fraction(numeric, "product", numeric_columns)
+        sum_frac = _relation_fraction(numeric, "sum", numeric_columns)
+        colsum = _summary_matches_colsum(summary, rows, numeric_columns)
+        total_summary = any(_label_score(value, ("subtotal", "sub total", "total", "grand total", "jumlah", "pajak", "ppn", "tax", "diskon")) >= .8 for row in summary for value in row if value)
+        rate_match = _summary_rate_match(summary)
+        table_candidates = [item for item in all_candidates if item.cand_type == "table"]
+        score = self._table_score({"tb_header_fuzzy_frac": header_hits / max(n_cols, 1), "tb_anchor_frac": 0.0, "tb_has_seq_col": bool(sequence_cols), "tb_rel_product_frac": product_frac, "tb_summary_matches_colsum": colsum, "tb_has_total_summary": total_summary, "tb_frac_numeric_cols": len(numeric_columns) / max(n_cols, 1), "tb_n_amount_cols_capped": min(col_types.count("amount"), 3) / 3, "tb_n_rows_capped": min(n_rows, 3) / 3, "tb_row_fill_mean": sum(row_fills) / max(len(row_fills), 1), "tb_title_kw_items": self._table_title_score(candidate, "table_items_title"), "tb_kv_like_frac": _kv_like(rows), "tb_text_only_frac": text_only, "tb_title_kw_terms": self._table_title_score(candidate, "table_terms_title"), "tb_title_kw_totals": self._table_title_score(candidate, "table_totals_title")})
+        scores = {id(item): self._table_score(self._table_feature_seed(item)) if item is not candidate else score for item in table_candidates}
+        ordered = sorted(table_candidates, key=lambda item: (-scores[id(item)], item.page.page_number, item.bbox[1], item.bbox[0]))
+        rank = next((index for index, item in enumerate(ordered, 1) if item is candidate), len(ordered))
+        return {"tb_n_rows": n_rows, "tb_n_cols": n_cols, "tb_n_summary_rows": len(summary), "tb_has_summary": bool(summary), "tb_has_header": bool(headers), "tb_n_pages": 1, "tb_cut_by_segment": False, "tb_n_visual_rows": len({round(float(cell.get("bbox_norm", [0, 0, 0, 0])[1] + cell.get("bbox_norm", [0, 0, 0, 0])[3]) / 2, 3) for cell in cells}), "tb_row_pitch_cv": "", "tb_structural_score": float(table.get("confidence", 0.0)), "tb_page_digital": bool((table.get("validation") or {}).get("page_kind") == "DIGITAL"), "tb_row_fill_mean": sum(row_fills) / max(len(row_fills), 1), "tb_row_fill_min": min(row_fills, default=0.0), "tb_col_fill_min": min(col_fills, default=0.0), "tb_header_fuzzy_hits": header_hits, "tb_header_fuzzy_frac": header_hits / max(n_cols, 1) if headers else "", "tb_header_score_mean": sum(header_scores) / max(len(header_scores), 1) if headers else "", "tb_header_numeric_frac": sum(bool(re.fullmatch(r"[\d.,% -]+", value.strip())) for value in headers) / max(len(headers), 1) if headers else "", "tb_frac_numeric_cols": len(numeric_columns) / max(n_cols, 1), "tb_n_amount_cols": col_types.count("amount"), "tb_n_int_cols": col_types.count("int"), "tb_n_id_cols": col_types.count("id"), "tb_n_date_cols": col_types.count("date"), "tb_n_city_cols": 0, "tb_n_enum_cols": 0, "tb_n_text_cols": col_types.count("text"), "tb_text_only_frac": text_only, "tb_kv_like_frac": _kv_like(rows), "tb_mean_unique_ratio": sum(len({row[col] for row in rows if col < len(row) and row[col]}) / max(sum(bool(row[col]) for row in rows if col < len(row)), 1) for col in range(n_cols)) / max(n_cols, 1), "tb_has_seq_col": bool(sequence_cols), "tb_seq_len": max((_sequence_len([numeric[row][col] for row in range(len(numeric)) if col < len(numeric[row])] ) for col in sequence_cols), default=""), "tb_anchor_frac": len([row for row in rows if sequence_cols and row and str(row[sequence_cols[0]]).strip()]) / max(n_rows, 1), "tb_rel_product_frac": product_frac, "tb_rel_sum_frac": sum_frac, "tb_summary_matches_colsum": colsum, "tb_has_total_summary": total_summary, "tb_summary_rate_match": rate_match, "tb_x1": x1, "tb_y1": y1, "tb_x2": x2, "tb_y2": y2, "tb_width": x2 - x1, "tb_height": y2 - y1, "tb_area_frac": (x2 - x1) * (y2 - y1), "tb_y_center": (y1 + y2) / 2, "tb_is_last_block_on_page": int(not any(item is not candidate and item.page.page_number == candidate.page.page_number and item.bbox[1] > y2 for item in table_candidates)), "tb_title_kw_items": self._table_title_score(candidate, "table_items_title"), "tb_title_kw_totals": self._table_title_score(candidate, "table_totals_title"), "tb_title_kw_terms": self._table_title_score(candidate, "table_terms_title"), "tb_title_kw_rates": self._table_title_score(candidate, "table_rates_title"), "tb_heuristic_score": score, "tb_heuristic_rank": rank}
+
+    def _header_match(self, page: Page, header: str) -> tuple[float, str]:
+        from .fuzzy_fields import FuzzyFieldMatcher
+        matcher = FuzzyFieldMatcher((page.source_page or {}).get("_doc_type", "INVOICE"), self.config_dir / "line_item_aliases.yaml", self.config_dir / "abbreviations.yaml")
+        match = matcher.match(header)
+        return (match.candidates[0].score if match.candidates else 0.0, match.candidates[0].field if match.candidates else "")
+
+    def _table_title_score(self, candidate: Candidate, group: str) -> float:
+        return max((_window_similarity(phrase, candidate.context.get("ctx_above", "")) for phrase in self.lexicon.get(group, [])), default=0.0)
+
+    def _table_score(self, features: dict[str, Any]) -> float:
+        scoring = yaml.safe_load((self.config_dir / "table_scoring.yaml").read_text(encoding="utf-8")) if (self.config_dir / "table_scoring.yaml").exists() else {}
+        return round(sum(float(weight) * float(features.get(name) or 0) for name, weight in (scoring.get("weights", {}) or {}).items()), 6)
+
+    def _table_feature_seed(self, candidate: Candidate) -> dict[str, Any]:
+        table = candidate.table_meta
+        headers = table.get("headers", [])
+        rows = table.get("rows", [])
+        return {"tb_header_fuzzy_frac": sum(self._header_match(candidate.page, str(header))[0] >= .8 for header in headers) / max(len(headers), 1), "tb_frac_numeric_cols": 0, "tb_n_rows_capped": min(int(table.get("row_count", len(rows))), 3) / 3, "tb_row_fill_mean": 1 if rows else 0}
+
     def _lexical_features(self, candidate: Candidate) -> dict[str, Any]:
         features = {}
         windows = {"left": candidate.context.get("ctx_left", ""), "above": candidate.context.get("ctx_above", ""), "right": candidate.context.get("ctx_right", ""), "line": candidate.context.get("ctx_line", ""), "below": candidate.context.get("ctx_below", ""), "sent": candidate.context.get("ctx_sent", "")}
@@ -373,7 +481,9 @@ class CandidatePipeline:
     def _row(self, document_id: str, doc_type: str, run_id: str, vendor_group: str, template_group: str, candidate: Candidate) -> dict[str, Any]:
         x1, y1, x2, y2 = candidate.bbox
         candidate_id = hashlib.sha1(f"{document_id}|{candidate.page.page_number}|{candidate.cand_type}|{x1:.4f},{y1:.4f},{x2:.4f},{y2:.4f}|{candidate.raw_text}".encode()).hexdigest()[:16]
-        row = {"m_schema_version": "1.0.0", "m_pipeline_version": self.pipeline_version, "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": vendor_group or "UNKNOWN", "m_template_group": template_group or "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": candidate.line_idx, "m_tok_start": candidate.tokens[0].tok_idx, "m_tok_end": candidate.tokens[-1].tok_idx, "m_overlap_types": candidate.features.pop("m_overlap_types", ""), **candidate.features, **candidate.context}
+        row = {"m_schema_version": "1.0.0", "m_pipeline_version": self.pipeline_version, "m_run_id": run_id, "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id, "m_vendor_group": vendor_group or "UNKNOWN", "m_template_group": template_group or "UNKNOWN", "m_page": candidate.page.page_number, "m_cand_type": candidate.cand_type, "m_raw_text": candidate.raw_text, "m_parsed_value": candidate.parsed_value, "m_parsed_norm": candidate.parsed_norm, "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4), "m_line_idx": "" if candidate.cand_type == "table" else candidate.line_idx, "m_tok_start": "" if candidate.cand_type == "table" else candidate.tokens[0].tok_idx, "m_tok_end": "" if candidate.cand_type == "table" else candidate.tokens[-1].tok_idx, "m_overlap_types": candidate.features.pop("m_overlap_types", ""), **candidate.features, **candidate.context}
+        if candidate.cand_type == "table":
+            row.update({"m_page_end": candidate.table_meta.get("page_end", candidate.page.page_number), "m_table_id": candidate.table_meta.get("table_id", ""), "m_evidence_role": candidate.table_meta.get("role"), "m_evidence_role_reason": candidate.table_meta.get("role_reason")})
         for field in self.registry.fields_for_type(doc_type, candidate.cand_type):
             row[f"label__{field}"] = ""
         row.update({"label_status": "", "label_notes": ""})
@@ -400,3 +510,53 @@ def _near_unit(page: Page, token: Token, units: set[str]) -> str:
         if candidate.line_idx == token.line_idx and candidate.tok_idx == token.tok_idx + 1 and norm_text(candidate.text) in units:
             return norm_text(candidate.text)
     return "none"
+
+
+def _is_sequence(values: list[Decimal | None]) -> bool:
+    ints = [int(value) for value in values if value is not None and value == int(value)]
+    return len(ints) >= 2 and ints in (list(range(1, len(ints) + 1)), list(range(len(ints))))
+
+
+def _sequence_len(values: list[Decimal | None]) -> int:
+    ints = [int(value) for value in values if value is not None and value == int(value)]
+    best = current = 1 if ints else 0
+    for left, right in zip(ints, ints[1:]):
+        current = current + 1 if right == left + 1 else 1
+        best = max(best, current)
+    return best
+
+
+def _relation_fraction(values: list[list[Decimal | None]], relation: str, numeric_columns: list[int]) -> float | str:
+    if len(numeric_columns) < 3:
+        return ""
+    matched = 0
+    for row in values:
+        nums = [row[index] for index in numeric_columns if index < len(row) and row[index] is not None]
+        found = False
+        for target in nums:
+            others = [item for item in nums if item is not target]
+            for index, left in enumerate(others):
+                for right in others[index + 1:]:
+                    expected = left * right if relation == "product" else left + right
+                    if abs(target - expected) <= max(Decimal("1"), abs(target) * Decimal("0.000001")):
+                        found = True
+        matched += found
+    return matched / max(len(values), 1)
+
+
+def _summary_matches_colsum(summary: list[list[str]], rows: list[list[str]], numeric_columns: list[int]) -> bool:
+    sums = {sum((parse_number(row[col]).value or Decimal(0) for row in rows if col < len(row)), Decimal(0)) for col in numeric_columns}
+    return any(parse_number(value).value in sums for row in summary for value in row if parse_number(value).value is not None)
+
+
+def _summary_rate_match(summary: list[list[str]]) -> bool:
+    values = [parse_number(value).value for row in summary for value in row if parse_number(value).value is not None]
+    return any(abs(small - large * Decimal(rate) / 100) <= max(Decimal("1"), abs(small) * Decimal("0.000001")) for large in values for small in values if large and small and small != large for rate in range(2, 13))
+
+
+def _label_score(value: str, labels: tuple[str, ...]) -> float:
+    return max((_window_similarity(label, value) for label in labels), default=0.0)
+
+
+def _kv_like(rows: list[list[str]]) -> float:
+    return sum(bool(row and (row[0].strip().endswith(":") or _label_score(row[0], ("subtotal", "total", "date", "number", "address")) >= .8)) for row in rows) / max(len(rows), 1)
