@@ -1,0 +1,1814 @@
+[
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.020727118746320244,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.02110315793906382,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.02871176285256168,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.03209482476772495,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.03084076078191803,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.06396538011064375,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.12468165514767393,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_1",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.29409461185685654,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.020727118746320244,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.018365984158782024,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.02648478773952106,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.03145846269905299,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.03129143305623058,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.07046328777101939,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.03648510169860977,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_10_Variasi_2",
+    "template_group": "invoice--pdf--invoice_10",
+    "score": 0.6905880581535332,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_1",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.024010323527461876,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_1",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.20889780469772468,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_1",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.1360076632344597,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_1",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.11997459139994869,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.028722050022405698,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.0989580715617695,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.009955769931438192,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.19738324633424603,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.01041710423253368,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_11_Variasi_2",
+    "template_group": "invoice--pdf--invoice_11",
+    "score": 0.012404918320197598,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_1",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.02822063416558702,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_1",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.022707459823316754,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_1",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.03258438417750637,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_1",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.021200997697986133,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_1",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.23226655544096345,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_2",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.05487523722402907,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_2",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.028753251207923068,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_2",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.02180172779759592,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_12_variasi_2",
+    "template_group": "invoice--pdf--invoice_12",
+    "score": 0.24196970672210838,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.30751397178017775,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.01794706746784254,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.060995316111704244,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.014179194365752473,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.019318771300582665,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.014204270319837361,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.01807469337516784,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.14704396231335878,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.0631028325793702,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_1",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.3655382353886961,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.5231528372222001,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.018455679780848687,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.0698757511230239,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.013616092818779141,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.022893072902603662,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.01401195608981072,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.02040725256820247,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.054980874620066095,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.09516223096286239,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.4752451770185655,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_13_variasi_2",
+    "template_group": "invoice--pdf--invoice_13",
+    "score": 0.3402257650550647,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.028021281979661642,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.014601692564437295,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013403554205499577,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013137910302455556,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.02291755384660199,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013655695793447461,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.012930427077618179,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.01866234099417751,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.018585177004407736,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013928555116379467,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013191931823247429,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013455650927923387,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.014238055294999588,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.018382959555789436,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.01384583880145128,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.017399837493334236,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.03222860500416027,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.023123127666393642,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_1",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.11792430536806503,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.02710364083668083,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.01489648686424018,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013403554205499577,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.02198807148352034,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013385122514157858,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.014238055294999588,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.012930427077618179,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.0173479709676859,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013385122514157858,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.013350665242789463,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.021103176729347636,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.030849654271516244,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.021806390964330256,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_14_variasi_2",
+    "template_group": "invoice--pdf--invoice_14",
+    "score": 0.11040552891365757,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.02165632985674375,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.019942149579540547,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.07265090332195158,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.03423645454606632,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.03342542072138872,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.01864610810781259,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.02383487769142496,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.03803771841597187,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.016285065673406113,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.029576615265267295,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.0975312563819384,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.015481298702354563,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.17857260235504777,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_1",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.515456545465056,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.02207878758089598,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.019942149579540547,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.06208115393440364,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.014584754754284968,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.0777851230902227,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.013026309873963072,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.047418797111108794,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.026735705336052858,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.01588620360186366,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.03508213622361895,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.017323468415734733,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.029287323616781016,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.13407863331246342,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.14447766170132265,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_15_variasi_2",
+    "template_group": "invoice--pdf--invoice_15",
+    "score": 0.5082153356287011,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.026082466626220477,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.028122161509916675,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.2144568822907341,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.1322428984952488,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.09679474427792853,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.09557042157413383,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_1",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.6143829143689532,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.0284407513969366,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.042841994256624494,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.028122161509916675,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.11964957903166952,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.1062089122643093,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.09084580594271796,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.07888824915647055,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.09296989859864055,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_16_variasi_2",
+    "template_group": "invoice--pdf--invoice_16",
+    "score": 0.6007301046755898,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.0276490736128371,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.022881185732871335,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.024803862982476232,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.33011668617967904,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.026061896360247052,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.017285204216471128,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.06570623990133381,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.1015669762333162,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.050637332421068236,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.05018166351527812,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.05018166351527812,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.027100519270704834,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_1",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.02064324770914899,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.026591934449797697,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.022453922250455505,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.017789604951639212,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.028380624409847854,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.360150343176488,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.026207498760770918,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.043791921224917096,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.018724184193449213,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.04312505383822059,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.08178990134069662,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.01620623036387403,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.037736702686577694,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.01587141413285706,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.015749264377325167,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.015412848992073762,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.031750655122025385,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_17_variasi_2",
+    "template_group": "invoice--pdf--invoice_17",
+    "score": 0.02258042265134806,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_1",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.04766707477369684,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_1",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.047129601542263,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_1",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.1062984413699433,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_2",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.046877735322541886,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_2",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.09656878854260294,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_18_variasi_2",
+    "template_group": "invoice--pdf--invoice_18",
+    "score": 0.042837996744466825,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_19_variasi_1",
+    "template_group": "invoice--pdf--invoice_19",
+    "score": 0.43149486067504556,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_19_variasi_2",
+    "template_group": "invoice--pdf--invoice_19",
+    "score": 0.43149486067504556,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.07241605505658294,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.03112234576798293,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.046883295621919445,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.023563213482613136,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.08148105049229169,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.024718866217240662,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.02524341989712796,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_1",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.5799012896081528,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.038005437592144024,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.029230110585492422,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.07128755281745495,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.02624327033532139,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.03333616529297489,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.022743344573051147,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.07614377913826008,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.02087452043834492,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.01843320630737667,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_1_variasi_2",
+    "template_group": "invoice--pdf--invoice_1",
+    "score": 0.5626590320341094,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.021418322666633828,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.03446669373428812,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.019601112662008573,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.01990158128301178,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.08293249347830271,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.02847534194962281,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.013652675358185918,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_1",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.016346525711774345,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_2",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.03155344291155765,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_2",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.0502097113768491,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_2",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.08399165024286762,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_20_variasi_2",
+    "template_group": "invoice--pdf--invoice_20",
+    "score": 0.01950759532076199,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_1",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.0318546890654828,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_1",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.06202347580161958,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_1",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.029755368662381175,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_1",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.051392750004304315,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_1",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.49179109413172417,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.022557449972178865,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.05533267455377249,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.02739256550718996,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.04495173980296746,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.03312384075669176,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.02091037743467955,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_2_variasi_2",
+    "template_group": "invoice--pdf--invoice_2",
+    "score": 0.5194509212028721,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.18671050700254557,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.019120811175301598,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.018487664478977983,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.0350323438124992,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.020187823003613187,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.041594089851593435,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.02073720102728803,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.6830936453667703,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.0511042644325281,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_1",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.09950965286145322,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.13525056373763553,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.011652226215638084,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.032940878961644264,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.017679858906812278,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.010054163281673403,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.027836001386412783,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.018502310283672833,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.04358172387329406,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.0855338102033724,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.25563977331942106,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_3_variasi_2",
+    "template_group": "invoice--pdf--invoice_3",
+    "score": 0.34504353151134937,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.039422673006956566,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.03812253874057686,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.03432486373244474,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.060790729258128985,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.031009496644101988,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.05312143538607536,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.021688447930781604,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.026203782717942076,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.043645378271206826,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.4348257414344362,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.07353386977721574,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.04784550570289407,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_1",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.048266939162655155,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.02230597033741847,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.022134345256183862,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.03432486373244474,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.060790729258128985,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.031009496644101988,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.04926137398542593,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.013722932780989181,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.0452925913835046,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.06968439302849436,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.04692480268520025,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.7684917777250808,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.04900909250866996,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_4_variasi_2",
+    "template_group": "invoice--pdf--invoice_4",
+    "score": 0.051458589215336435,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_1",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.16292300416858715,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_1",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.432583155599408,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_1",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.04337309068115192,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_1",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.12127055031912708,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_1",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.6341241374877474,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.06121388706132198,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.3949334514576474,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.036581859343978944,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.16944646575645297,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.035294665097859126,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.15755429463354886,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_5_Variasi_2",
+    "template_group": "invoice--pdf--invoice_5",
+    "score": 0.6640823821333233,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_1",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.05571945942247408,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_1",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.14030862978694303,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_1",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.03730597428097755,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_2",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.5983987750501928,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_2",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.012687104582694708,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_2",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.012687104582694708,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_6_variasi_2",
+    "template_group": "invoice--pdf--invoice_6",
+    "score": 0.5216990956406998,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_1",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.03702731380839579,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_1",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.18368726772595542,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_1",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.4625705828380205,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_1",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.15913787940131846,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.03248542751082466,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.037824844738436884,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.02684716939046005,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.06749525890726367,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.02198778691242292,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_7_variasi_2",
+    "template_group": "invoice--pdf--invoice_7",
+    "score": 0.44819450682317374,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8 _Variasi_2",
+    "template_group": "invoice--pdf--invoice_8 ",
+    "score": 0.016011308018510015,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8 _Variasi_2",
+    "template_group": "invoice--pdf--invoice_8 ",
+    "score": 0.04629485682539338,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8 _Variasi_2",
+    "template_group": "invoice--pdf--invoice_8 ",
+    "score": 0.026168703158487464,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8 _Variasi_2",
+    "template_group": "invoice--pdf--invoice_8 ",
+    "score": 0.020678549586292796,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8 _Variasi_2",
+    "template_group": "invoice--pdf--invoice_8 ",
+    "score": 0.6414235992514762,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8_Variasi_1",
+    "template_group": "invoice--pdf--invoice_8",
+    "score": 0.09893617486732928,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8_Variasi_1",
+    "template_group": "invoice--pdf--invoice_8",
+    "score": 0.023672053036776077,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8_Variasi_1",
+    "template_group": "invoice--pdf--invoice_8",
+    "score": 0.03973193565153003,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8_Variasi_1",
+    "template_group": "invoice--pdf--invoice_8",
+    "score": 0.02737494073301741,
+    "label": 0
+  },
+  {
+    "document_id": "invoice--pdf--invoice_8_Variasi_1",
+    "template_group": "invoice--pdf--invoice_8",
+    "score": 0.5764896863062029,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_9_Variasi_1",
+    "template_group": "invoice--pdf--invoice_9",
+    "score": 0.7212944142887852,
+    "label": 1
+  },
+  {
+    "document_id": "invoice--pdf--invoice_9_Variasi_2",
+    "template_group": "invoice--pdf--invoice_9",
+    "score": 0.768619438155278,
+    "label": 1
+  }
+]

@@ -1,0 +1,326 @@
+[
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.11516173511049263,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.06709197587294645,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.11098370981615484,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.19930539530401187,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.19226331667427507,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.06950740598454151,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.11516173511049263,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.06361499391153552,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.09497668265719841,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.11577582053011695,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.12079969372143194,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.06950740598454151,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.07318888185782303,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.06647347889081365,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.07050969044008665,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.25683573757563455,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.3528330437366686,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.3528330437366686,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.15521742293595356,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.09968948216600723,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.05858563035806823,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_1",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.042993250273917885,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_2",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.04196883804537357,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.362781815975895,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.09895678945990008,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.06252709668930251,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_variasi_2",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.3217058259247013,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_variasi_2",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.09547851276377967,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.45521045827699347,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.4479075013255185,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.4418927186114794,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_1",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.04454764019352211,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_2",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.04454764019352211,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_2",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.0467394672594431,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_1",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.04454764019352211,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_1",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.05387439697890506,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_2",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.043622870045313816,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_2",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.09807464260681792,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.4486613762263643,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.31796903725747844,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.08850801868237762,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.44804199589733057,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.45478414014650664,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.31796903725747844,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.061901502442513086,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.05837439723776611,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.06571158022511353,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_1",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.14232151329653733,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_1",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.24337088936767576,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_1",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.04993667260546546,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_1",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.04993667260546546,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_2",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.18139832922897287,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_2",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.23091800787003122,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_2",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.17203543553414916,
+    "label": 0
+  }
+]

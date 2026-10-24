@@ -184,9 +184,13 @@ class CandidatePipeline:
                 continue
             text = norm_text(token.text)
             if amount:
-                if re.search(r"%$", token.text) or re.fullmatch(r"\d{4}", text) or (parsed.value < 1000 and not parsed.sym and not any(word in text for word in (".", ","))):
+                digits = sum(char.isdigit() for char in token.text)
+                phone_pattern = re.fullmatch(r"(?:\+?62|0)8\d{8,12}", re.sub(r"[\s().-]", "", token.text))
+                # Unformatted 9+ digit strings are phone/account/reference-like in this
+                # corpus. Manually labeled true amounts use separators or currency markers.
+                if phone_pattern or (digits >= 9 and not parsed.sym and not re.search(r"[.,]", token.text)):
                     continue
-                if re.fullmatch(r"(?:\+?62|0)8\d{8,12}", text):
+                if re.search(r"%$", token.text) or re.fullmatch(r"\d{4}", text) or (parsed.value < 1000 and not parsed.sym and not any(word in text for word in (".", ","))):
                     continue
             result.append(self._candidate(cand_type, page, [token], str(parsed.value), norm_alnum(token.text)))
         if amount:
@@ -304,7 +308,7 @@ class CandidatePipeline:
         kept: list[Candidate] = []
         overflow: dict[str, dict[str, int]] = {}
         for (page, cand_type), group in sorted(grouped.items()):
-            ranked = sorted(group, key=lambda item: (-sum(t.confidence for t in item.tokens) / len(item.tokens), item.bbox[1], item.bbox[0], item.raw_text))
+            ranked = sorted(group, key=lambda item: (-(_party_cap_priority(item) if cand_type == "party" else 0), -sum(t.confidence for t in item.tokens) / len(item.tokens), item.bbox[1], item.bbox[0], item.raw_text))
             cap = int(self.caps.get(cand_type, len(ranked)))
             kept.extend(ranked[:cap])
             if len(ranked) > cap:
@@ -359,7 +363,7 @@ class CandidatePipeline:
             letters = sum(char.isalpha() for char in raw)
             words = raw.split()
             legal = next((marker for marker in ("pt", "cv", "ud", "pd", "tbk", "koperasi", "yayasan") if marker in norm_text(raw).split()), "none")
-            features.update({"pt_n_tokens": len(words), "pt_n_chars": len(raw), "pt_upper_ratio": sum(char.isupper() for char in raw) / max(letters, 1), "pt_title_ratio": sum(bool(word) and word[0].isupper() for word in words) / max(len(words), 1), "pt_digit_ratio": sum(char.isdigit() for char in raw) / max(len(raw.replace(" ", "")), 1), "pt_alpha_ratio": letters / max(len(raw.replace(" ", "")), 1), "pt_legal_marker": legal, "pt_legal_pos": "prefix" if legal != "none" and norm_text(raw).split()[0] == legal else "suffix" if legal != "none" else "none", "pt_has_email": int("@" in raw), "pt_has_url": int(bool(re.search(r"https?://|www\.", raw, re.I))), "pt_has_phone": int(bool(re.search(r"(?:\+?62|0)8\d{8,12}", raw))), "pt_has_npwp": int(bool(re.search(r"\d{2}\.\d{3}", raw))), "pt_is_centered": int(abs((candidate.bbox[0] + candidate.bbox[2]) / 2 - .5) < .12), "pt_is_left_aligned": int(candidate.bbox[0] < .15), "pt_person_like": int(legal == "none" and all(word[:1].isupper() for word in words) and 1 <= len(words) <= 4)})
+            features.update({"pt_n_tokens": len(words), "pt_n_chars": len(raw), "pt_upper_ratio": sum(char.isupper() for char in raw) / max(letters, 1), "pt_title_ratio": sum(bool(word) and word[0].isupper() for word in words) / max(len(words), 1), "pt_digit_ratio": sum(char.isdigit() for char in raw) / max(len(raw.replace(" ", "")), 1), "pt_alpha_ratio": letters / max(len(raw.replace(" ", "")), 1), "pt_legal_marker": legal, "pt_legal_pos": "prefix" if legal != "none" and norm_text(raw).split()[0] == legal else "suffix" if legal != "none" else "none", "pt_has_email": int("@" in raw), "pt_has_url": int(bool(re.search(r"https?://|www\.", raw, re.I))), "pt_has_phone": int(bool(re.search(r"(?:\+?62|0)8\d{8,12}", raw))), "pt_has_npwp": int(bool(re.search(r"\d{2}\.\d{3}", raw))), "pt_is_centered": int(abs((candidate.bbox[0] + candidate.bbox[2]) / 2 - .5) < .12), "pt_is_left_aligned": int(candidate.bbox[0] < .15), "pt_person_like": int(legal == "none" and all(word[:1].isupper() for word in words) and 1 <= len(words) <= 4), **_party_role_features(candidate)})
         elif candidate.cand_type == "enum":
             features.update({"en_norm": candidate.parsed_value, "en_match_type": "exact", "en_in_signature_region": int(candidate.bbox[1] > .7), "en_symbol_vs_code": "symbol" if candidate.raw_text in {"Rp", "Rp.", "$"} else "code" if candidate.raw_text.upper() in {"IDR", "USD", "SGD", "EUR"} else "word"})
         elif candidate.cand_type == "text":
@@ -370,8 +374,18 @@ class CandidatePipeline:
     def _lexical_features(self, candidate: Candidate) -> dict[str, Any]:
         features = {}
         windows = {"left": candidate.context.get("ctx_left", ""), "above": candidate.context.get("ctx_above", ""), "right": candidate.context.get("ctx_right", ""), "line": candidate.context.get("ctx_line", ""), "below": candidate.context.get("ctx_below", ""), "sent": candidate.context.get("ctx_sent", "")}
+        relevant = {
+            "amount": {"subtotal", "tax_amount", "grand_total", "total_row", "table_end"},
+            "party": {"customer_name", "party_roles", "titles"},
+            "id": {"invoice_number", "titles"},
+            "date": {"invoice_date", "due_date"},
+            "table": {"total_row", "table_end", "titles"},
+            "address": {"party_roles"},
+            "city": {"party_roles"},
+            "enum": set(),
+        }.get(candidate.cand_type, set())
         for group, phrases in self.lexicon.items():
-            if group.startswith("_") or not isinstance(phrases, list):
+            if group.startswith("_") or group not in relevant or not isinstance(phrases, list):
                 continue
             for window, value in windows.items():
                 if window == "sent" and candidate.page.page_number < 0:
@@ -394,6 +408,45 @@ class CandidatePipeline:
 
 def _overlaps(left, right) -> bool:
     return left[0] < right[2] and right[0] < left[2] and left[1] < right[3] and right[1] < left[3]
+
+
+def _page_line_texts(page: Page) -> list[str]:
+    return [" ".join(token.text for token in line) for line in page.lines]
+
+
+def _party_cap_priority(candidate: Candidate) -> int:
+    """Keep party values near explicit name/role labels when a page hits its cap."""
+    lines = _page_line_texts(candidate.page)
+    index = candidate.line_idx
+    nearby = " ".join(lines[max(0, index - 2): min(len(lines), index + 3)])
+    current = norm_text(lines[index]) if 0 <= index < len(lines) else ""
+    priority = 0
+    if any(re.search(r"\bnama\b", norm_text(line)) for line in lines[max(0, index - 1): min(len(lines), index + 2)]):
+        priority += 5
+    if re.search(r"\b(?:pihak pertama|pihak kedua|yang menyerahkan|yang menerima|pengirim|penerima|sender|receiver|shipper|consignee)\b", norm_text(nearby)):
+        priority += 3
+    if current.startswith("(") and re.search(r"[A-Za-z]{3,}", current):
+        priority += 1
+    return priority
+
+
+def _party_role_features(candidate: Candidate) -> dict[str, Any]:
+    lines = _page_line_texts(candidate.page)
+    index = candidate.line_idx
+    normalized = [norm_text(line) for line in lines]
+    first_positions = [i for i, line in enumerate(normalized) if re.search(r"\bpihak pertama\b|\byang menyerahkan\b|\bpemberi\b|\bsender\b|\bshipper\b", line)]
+    second_positions = [i for i, line in enumerate(normalized) if re.search(r"\bpihak kedua\b|\byang menerima\b|\bpenerima\b|\breceiver\b|\bconsignee\b", line)]
+    name_window = normalized[max(0, index - 1): min(len(normalized), index + 2)]
+    n_lines = max(len(lines), 1)
+    return {
+        "pt_near_name_label": int(any(re.search(r"\bnama\b", line) for line in name_window)),
+        "pt_near_first_party_marker": int(any(abs(index - marker) <= 5 for marker in first_positions)),
+        "pt_near_second_party_marker": int(any(abs(index - marker) <= 5 for marker in second_positions)),
+        "pt_dist_first_party_marker": min((abs(index - marker) / n_lines for marker in first_positions), default=""),
+        "pt_dist_second_party_marker": min((abs(index - marker) / n_lines for marker in second_positions), default=""),
+        "pt_before_first_party_marker": int(bool(first_positions) and index < min(first_positions)),
+        "pt_before_second_party_marker": int(bool(second_positions) and index < min(second_positions)),
+    }
 
 
 def _table_candidate_rows(pipeline, document_id: str, doc_type: str, run_id: str, vendor_group: str, template_group: str, evidence: dict[str, Any]) -> list[dict[str, Any]]:

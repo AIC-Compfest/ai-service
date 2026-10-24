@@ -22,7 +22,6 @@ POD:
 RATE_AGREEMENT:
   load_number: {cand_type: id, cardinality: one}
   rate_card_date: {cand_type: date, cardinality: one}
-  destination: {cand_type: city, cardinality: one}
   line_items: {cand_type: table, cardinality: one}
   total: {cand_type: amount, cardinality: one}
   vendor_name: {cand_type: party, cardinality: one}

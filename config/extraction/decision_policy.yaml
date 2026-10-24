@@ -65,8 +65,8 @@ POD.pod_number:
 POD.line_items:
   mode: top1
 POD.pihak_pertama_nama:
-  mode: skip
-  note: "top-1 is usually right when a name exists, but 20 of 34 documents have no name and every answer is accepted; 62% of answers were wrong. Manual review or a first-party rule."
+  mode: top1
+  floor: 0.1        # grouped OOF: 14/17 accepted answers correct; 18 documents have a positive label
 POD.pihak_kedua_nama:
   mode: skip
   note: "top-1 is right only 3 times in 14 documents with a name. Use a second-party rule or manual review."
@@ -77,8 +77,8 @@ POD.pihak_kedua_alamat:
   mode: skip
   note: "no lift over random; manual review"
 POD.pod_date:
-  mode: skip
-  note: "no lift over random; needs a date rule"
+  mode: top1
+  floor: 0.6        # grouped OOF: 10/14 accepted answers correct; 20 documents have a positive label
 
 # Rate agreement fields
 RATE_AGREEMENT.currency:
@@ -86,8 +86,6 @@ RATE_AGREEMENT.currency:
   allowed: [IDR, USD, SGD]
   # Wrong 'IDR' answers had scores up to 0.5, so a floor does not help here.
   # The fix is to detect when a card states no currency. Until then, review these by hand.
-RATE_AGREEMENT.destination:
-  mode: top1
 RATE_AGREEMENT.line_items:
   mode: top1
 RATE_AGREEMENT.load_number:
