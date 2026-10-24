@@ -1,2 +1,2 @@
-caps: {amount: 80, date: 30, time: 20, id: 60, party: 40, address: 25, city: 40, qty: 40, weight: 30, percent: 20, days: 20, enum: 20, text: 25, table: 10}
+caps: {amount: 80, date: 30, time: 20, id: 60, party: 80, address: 25, city: 40, qty: 40, weight: 30, percent: 20, days: 20, enum: 20, text: 25, table: 10}
 tax_rates: [0.02, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12]

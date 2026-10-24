@@ -1,0 +1,1202 @@
+[
+  {
+    "document_id": "pod--pdf--PoD_10_variasi_1",
+    "template_group": "pod--pdf--pod_10",
+    "score": 0.015416872247476308,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_10_variasi_1",
+    "template_group": "pod--pdf--pod_10",
+    "score": 0.012013038047613772,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_10_variasi_2",
+    "template_group": "pod--pdf--pod_10",
+    "score": 0.015416872247476308,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.012919577829498353,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.01783129893667001,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.35898110723966764,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_1",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.012919577829498353,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.01783129893667001,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.35898110723966764,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_11_variasi_2",
+    "template_group": "pod--pdf--pod_11",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_1",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.01145240239723509,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_1",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.0213277558030976,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_1",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.04316281774907052,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_1",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.0213277558030976,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.010947459797181596,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.20408717682070823,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_12_variasi_2",
+    "template_group": "pod--pdf--pod_12",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_1",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.015232017376525717,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_1",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_1",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.012483960653748462,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_1",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_1",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.013047129126403696,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.015232017376525717,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.012483960653748462,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_13_variasi_2",
+    "template_group": "pod--pdf--pod_13",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.01365328578338951,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.06679142302578099,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012822841048570168,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.015158823492673166,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.015016180227164477,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.018497903970379023,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.015014767096168821,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.08136309977900892,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.013524614950041052,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.013524614950041052,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_1",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.01365328578338951,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.07363775568039779,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.01365328578338951,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.015158823492673166,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.015016180227164477,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.0953999108817461,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.013524614950041052,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.05804511225560321,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_14_variasi_2",
+    "template_group": "pod--pdf--pod_14",
+    "score": 0.013524614950041052,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.013578809684881257,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.013578809684881257,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.013578809684881257,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.013578809684881257,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.015232017376525717,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.012725393127396819,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.012725393127396819,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_1",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.013578809684881257,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.016508780212733314,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.015232017376525717,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.015366569045334174,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.012725393127396819,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01243000593021877,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.012725393127396819,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_15_variasi_2",
+    "template_group": "pod--pdf--pod_15",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.012819077815849891,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.017521116084675523,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.2889880428456502,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_1",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.02885599355413424,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.04779226021854855,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.2889880428456502,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.04779226021854855,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_16_variasi_2",
+    "template_group": "pod--pdf--pod_16",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_1",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.016460360466922383,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_1",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_1",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.012483960653748462,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_1",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_2",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01721898046257826,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_2",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_2",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_17_variasi_2",
+    "template_group": "pod--pdf--pod_17",
+    "score": 0.01232084543920406,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.31136411389806107,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.01791016615207603,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_Variasi_2",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.31136411389806107,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.01791016615207603,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_1_variasi_1",
+    "template_group": "pod--pdf--pod_1",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.5212644716765663,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016071502448762987,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016071502448762987,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016071502448762987,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016071502448762987,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016071502448762987,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.012701895680122597,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016413291751810926,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016413291751810926,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_Variasi_1",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.016413291751810926,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_2_variasi_2",
+    "template_group": "pod--pdf--pod_2",
+    "score": 0.5212644716765663,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010947459797181596,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010947459797181596,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.012562278543816542,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_1",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.012562278543816542,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.011541218775013419,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.013923534340973735,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.012562278543816542,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.012562278543816542,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_3_variasi_2",
+    "template_group": "pod--pdf--pod_3",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_1",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.012013038047613772,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_2",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.01213882745571395,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_4_variasi_2",
+    "template_group": "pod--pdf--pod_4",
+    "score": 0.015820720396356864,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_1",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_1",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.010947459797181596,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_1",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.2643596139142254,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_2",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_2",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.010947459797181596,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_2",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.2643596139142254,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_2",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.013208850621454446,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_5_variasi_2",
+    "template_group": "pod--pdf--pod_5",
+    "score": 0.010863162522566482,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_1",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.09033607417374591,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_6_variasi_2",
+    "template_group": "pod--pdf--pod_6",
+    "score": 0.2391479595084554,
+    "label": 1
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.01350821599638208,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.012573225907343657,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_1",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.012475386076693108,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.012819077815849891,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.011838306664621977,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_7_variasi_2",
+    "template_group": "pod--pdf--pod_7",
+    "score": 0.011931210483415871,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.015254581163955797,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.02310545613773386,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.014462238275734885,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.027370611035121218,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_1",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.010975654922137116,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.015254581163955797,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.4256232778226128,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.014462238275734885,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.027370611035121218,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.014309850424198793,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_8_variasi_2",
+    "template_group": "pod--pdf--pod_8",
+    "score": 0.0152435735594031,
+    "label": 0
+  },
+  {
+    "document_id": "pod--pdf--PoD_9_variasi_2",
+    "template_group": "pod--pdf--pod_9",
+    "score": 0.015192022517160517,
+    "label": 0
+  }
+]

@@ -1,0 +1,500 @@
+[
+  {
+    "document_id": "rate card--pdf--rate_card_12_variasi_1",
+    "template_group": "rate card--pdf--rate_card_12",
+    "score": 0.08944112915600909,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_12_variasi_2",
+    "template_group": "rate card--pdf--rate_card_12",
+    "score": 0.08972826057599874,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_1",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.13559422630195708,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_1",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.06996846739799102,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_1",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.45932243960924807,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_2",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.13559422630195708,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_2",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.06996846739799102,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_13_variasi_2",
+    "template_group": "rate card--pdf--rate_card_13",
+    "score": 0.45537605157280786,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_14_variasi_1",
+    "template_group": "rate card--pdf--rate_card_14",
+    "score": 0.09943419355495416,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_14_variasi_1",
+    "template_group": "rate card--pdf--rate_card_14",
+    "score": 0.13366440672881322,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_14_variasi_2",
+    "template_group": "rate card--pdf--rate_card_14",
+    "score": 0.11996188519980681,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_15_variasi_1",
+    "template_group": "rate card--pdf--rate_card_15",
+    "score": 0.18072616627777613,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_15_variasi_1",
+    "template_group": "rate card--pdf--rate_card_15",
+    "score": 0.1822858146559465,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_15_variasi_1",
+    "template_group": "rate card--pdf--rate_card_15",
+    "score": 0.40241907526785414,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_15_variasi_2",
+    "template_group": "rate card--pdf--rate_card_15",
+    "score": 0.1908690012699915,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_15_variasi_2",
+    "template_group": "rate card--pdf--rate_card_15",
+    "score": 0.25481920454095613,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_1_variasi_1",
+    "template_group": "rate card--pdf--rate_card_1",
+    "score": 0.1513085006770156,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_1_variasi_2",
+    "template_group": "rate card--pdf--rate_card_1",
+    "score": 0.10616290691686155,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_1",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.20549064593758706,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_1",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.14609436563611888,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_1",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.1414952263754622,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.13649129986123593,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.13649129986123593,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.18150949835289498,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.18150949835289498,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.2159380331094167,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_2_variasi_2",
+    "template_group": "rate card--pdf--rate_card_2",
+    "score": 0.19658860847371937,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_3_variasi_2",
+    "template_group": "rate card--pdf--rate_card_3",
+    "score": 0.1925988603177866,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.10920779666568983,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.137864359330804,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.265063137858309,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.22021344916917263,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.12102057979400123,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.22171610991723625,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_1",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.1188128795199293,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.1572588304307482,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.08797787687659853,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.11144725643567886,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.2613178596021832,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.07254726276376972,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.22021344916917263,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_4_variasi_2",
+    "template_group": "rate card--pdf--rate_card_4",
+    "score": 0.13341306998183372,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.47502738211511486,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.5234384484911603,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.4160144678503436,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.4382783460473573,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.3781839312892134,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.14147146666391197,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_1",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.1139669999708747,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.39701030915454555,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.3947521331477736,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.42163019911300564,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.46435293085202867,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.3960256727092722,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.16186968041044433,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_5_variasi_2",
+    "template_group": "rate card--pdf--rate_card_5",
+    "score": 0.10669038909275139,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_1",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.384758223111434,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_1",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.4234017139191781,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_1",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.3287551122828799,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_1",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.38067924726415187,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_1",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.18077620402575362,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_2",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.3414476494795978,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_2",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.3313429403991599,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_2",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.4202615409228468,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_2",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.20153764844314595,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_6_variasi_2",
+    "template_group": "rate card--pdf--rate_card_6",
+    "score": 0.1739738992524708,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_7_variasi_1",
+    "template_group": "rate card--pdf--rate_card_7",
+    "score": 0.06149430781521045,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_7_variasi_1",
+    "template_group": "rate card--pdf--rate_card_7",
+    "score": 0.06002275341818254,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_7_variasi_2",
+    "template_group": "rate card--pdf--rate_card_7",
+    "score": 0.06149430781521045,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_7_variasi_2",
+    "template_group": "rate card--pdf--rate_card_7",
+    "score": 0.06002275341818254,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.05052855038971122,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.048360262938712276,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.05052855038971122,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.05217502572580535,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.323168663592585,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_1",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.08686951546914337,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.04923656355021602,
+    "label": 1
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.05052855038971122,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.05089824110135755,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.054421866182189686,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.0477021711151386,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.33969680445972666,
+    "label": 0
+  },
+  {
+    "document_id": "rate card--pdf--rate_card_8_variasi_2",
+    "template_group": "rate card--pdf--rate_card_8",
+    "score": 0.07541286472214566,
+    "label": 0
+  }
+]

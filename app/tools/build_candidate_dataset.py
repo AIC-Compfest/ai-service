@@ -105,8 +105,10 @@ def _write_feature_manifest(output, config_dir, grouped, registry):
         for row in records:
             for name, value in row.items():
                 role, train_policy = classify_column(name, policy)
-                manifest.setdefault(name, {"name": name, "role": role, "train_policy": train_policy, "dtype": "bool" if isinstance(value, bool) else "float" if isinstance(value, float) else "int" if isinstance(value, int) else "cat" if isinstance(value, str) else "str", "nullable": value == "", "range": None, "vocab": [], "applies_to": ["*"], "description": "Generated candidate column"})
+                applies_to = [f"{field.doc_type}.{field.field}" for field in registry.for_doc(row.get("m_doc_type", "")) if field.cand_type == row.get("m_cand_type", "")]
+                manifest.setdefault(name, {"name": name, "role": role, "train_policy": train_policy, "dtype": "bool" if isinstance(value, bool) else "float" if isinstance(value, float) else "int" if isinstance(value, int) else "cat" if isinstance(value, str) else "str", "nullable": value == "", "range": None, "vocab": [], "applies_to": [], "description": "Generated candidate column"})
                 spec = manifest[name]
+                spec["applies_to"] = sorted(set(spec.get("applies_to", [])) | set(applies_to))
                 if spec["dtype"] == "cat" and value != "":
                     spec["vocab"] = sorted(set(spec.get("vocab", [])) | {str(value), "other"})
                 if spec["dtype"] in {"int", "float"} and value != "":
@@ -120,8 +122,9 @@ def _write_feature_manifest(output, config_dir, grouped, registry):
     doc_types = sorted({field.doc_type for field in registry.fields})
     for doc_type in doc_types:
         for field in registry.for_doc(doc_type):
-            keep = [name for name, spec in manifest.items() if spec["train_policy"] in {"keep", "ablate"} and spec["dtype"] in {"bool", "int", "float", "cat"}]
-            ablate = [name for name, spec in manifest.items() if spec["train_policy"] == "ablate"]
+            applicable = lambda spec: f"{doc_type}.{field.field}" in spec.get("applies_to", []) or "*" in spec.get("applies_to", [])
+            keep = [name for name, spec in manifest.items() if spec["train_policy"] in {"keep", "ablate"} and spec["dtype"] in {"bool", "int", "float", "cat"} and applicable(spec)]
+            ablate = [name for name, spec in manifest.items() if spec["train_policy"] == "ablate" and applicable(spec)]
             dropped = [name for name, spec in manifest.items() if spec["train_policy"] not in {"keep", "ablate"}]
             training[f"{doc_type}.{field.field}"] = {"source_csv": f"candidates_{doc_type}_{field.cand_type}.csv", "label_column": f"label__{field.field}", "feature_columns": keep, "ablate_columns": ablate, "dropped_columns": dropped, "group_column": "m_template_group"}
     (output / "training_schema.json").write_text(json.dumps(training, indent=2, sort_keys=True) + "\n", encoding="utf-8")
