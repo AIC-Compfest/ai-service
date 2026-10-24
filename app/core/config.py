@@ -80,7 +80,10 @@ class Settings(BaseSettings):
     # Rule-based extractors stay primary; an ML value only replaces a rule field that is unknown AND has the same name,
     # and only when the model is "accepted" (score >= t_auto of its bundle).
     enable_ml_extraction: bool = True
-    ml_model_set_dir: Path = PACKAGE_ROOT / "models" / "pod_phase2"
+    # `pod_phase2` is an old, empty staging directory in this repository.
+    # Point inference at the versioned bundle set that actually contains the
+    # production INVOICE, POD, SURAT_JALAN and RATE_AGREEMENT field models.
+    ml_model_set_dir: Path = PACKAGE_ROOT / "models" / "all_v3"
 
     # Layout zones for extractors, as FRACTIONS of the page (bbox_norm is 0..1). Legacy 0..1000 fixtures are
     # converted by ``to_unit_bbox`` before comparing. These replace pixel-like literals (T-13).

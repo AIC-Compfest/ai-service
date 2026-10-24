@@ -14,6 +14,8 @@ from __future__ import annotations
 
 from typing import Any
 
+import fitz
+
 from app.core.logging import get_logger
 from app.services.docling.runner import DoclingResult, get_runner
 
@@ -44,7 +46,29 @@ class DoclingOCREngine:
         else:
             result = runner.convert(raw_bytes, is_pdf=False, ocr=True)
         if result is None:
-            raise RuntimeError(f"Docling conversion failed for page {page_number} (see docling.* log events)")
+            # Do not make document ingestion unavailable because an optional
+            # layout engine cannot be imported.  Vector PDFs retain their
+            # text layer, which is enough for the field extractors and the
+            # reviewer mapping screen.  Scanned/image files still report a
+            # precise error because there is no text layer to recover.
+            if is_pdf:
+                fallback = _extract_pdf_text(raw_bytes, page_width, page_height)
+                if fallback:
+                    lines = fallback
+                    return {
+                        "page_number": page_number,
+                        "width": page_width,
+                        "height": page_height,
+                        "engine_used": "pymupdf_vector_fallback",
+                        "fallback_used": True,
+                        "average_confidence": _avg_conf(lines),
+                        "quality": quality,
+                        "coord_space": "page_image_normalized",
+                        "lines": lines,
+                        "regions": _detect_regions(lines),
+                        "tables": [],
+                    }
+            raise RuntimeError(f"No OCR/text extraction result for page {page_number}; Docling is unavailable and no PDF text layer was found")
 
         lines = _extract_lines(result)
         regions = _detect_regions(lines)
@@ -69,6 +93,53 @@ def _extract_lines(result: DoclingResult) -> list[dict]:
     lines.sort(key=lambda item: (item["bbox_norm"][1], item["bbox_norm"][0]))
     _assign_row_indices(lines)
     return lines
+
+
+def _extract_pdf_text(pdf_bytes: bytes, target_width: int, target_height: int) -> list[dict]:
+    """Recover positioned vector text when Docling cannot start.
+
+    The fallback deliberately uses the same normalized line/token contract as
+    Docling so downstream classification, mapping, confidence and HITL review
+    need no special handling.  It is only used for PDFs with an actual text
+    layer; it must not pretend that a scanned PDF has been OCRed.
+    """
+    try:
+        document = fitz.open(stream=pdf_bytes, filetype="pdf")
+        page = document[0]
+        source_width, source_height = float(page.rect.width), float(page.rect.height)
+        grouped: dict[tuple[int, int], list[tuple[float, float, float, float, str]]] = {}
+        for x0, y0, x1, y1, text, block, line, _word in page.get_text("words"):
+            value = " ".join(str(text).split())
+            if value:
+                grouped.setdefault((block, line), []).append((x0, y0, x1, y1, value))
+        lines: list[dict] = []
+        for words in grouped.values():
+            words.sort(key=lambda item: item[0])
+            x0 = min(item[0] for item in words)
+            y0 = min(item[1] for item in words)
+            x1 = max(item[2] for item in words)
+            y1 = max(item[3] for item in words)
+            box = _norm_bbox_from_values(x0, y0, x1, y1, source_width, source_height)
+            if box is None:
+                continue
+            tokens = []
+            for wx0, wy0, wx1, wy1, value in words:
+                word_box = _norm_bbox_from_values(wx0, wy0, wx1, wy1, source_width, source_height)
+                if word_box is not None:
+                    tokens.append(_token(value, _DEFAULT_CONFIDENCE, word_box, estimated=False))
+            lines.append({"text": " ".join(item[4] for item in words), "confidence": _DEFAULT_CONFIDENCE, "bbox_norm": _rounded(box), "tokens": tokens})
+        lines.sort(key=lambda item: (item["bbox_norm"][1], item["bbox_norm"][0]))
+        _assign_row_indices(lines)
+        return lines
+    except Exception as exc:
+        logger.warning("pdf_vector_fallback_failed", error=str(exc), target_width=target_width, target_height=target_height)
+        return []
+
+
+def _norm_bbox_from_values(x0: float, y0: float, x1: float, y1: float, width: float, height: float) -> tuple[float, float, float, float] | None:
+    if width <= 0 or height <= 0 or x1 <= x0 or y1 <= y0:
+        return None
+    return max(0.0, x0) / width, max(0.0, y0) / height, min(width, x1) / width, min(height, y1) / height
 
 
 def _lines_from_cells(result: DoclingResult) -> list[dict]:

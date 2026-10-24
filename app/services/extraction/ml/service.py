@@ -83,3 +83,32 @@ def promote_ml_fields(rule_fields: list[ExtractedField], ml: dict[str, Any], doc
             )
         result.append(field)
     return result
+
+
+def append_ml_only_fields(rule_fields: list[ExtractedField], ml: dict[str, Any], document_id: str) -> list[ExtractedField]:
+    """Expose valid model-only mappings to HITL instead of silently dropping them.
+
+    The current RATE_AGREEMENT bundles, for example, emit ``load_number`` and
+    ``total`` whereas the legacy rule extractor emits agreement-centric names.
+    They are different reviewable facts, so replacing one with the other would
+    be unsafe.  Keep rule fields intact and append model fields that have a
+    concrete candidate plus geometry; the UI can then show their score and a
+    reviewer can accept or correct them.
+    """
+    existing = {field.field for field in rule_fields}
+    extra: list[ExtractedField] = []
+    for item in ml.get("fields", []):
+        name, value, bbox = item.get("field"), item.get("value"), item.get("bbox_norm")
+        if not name or name in existing or value is None or not bbox or len(bbox) != 4:
+            continue
+        try:
+            x1, y1, x2, y2 = (float(part) for part in bbox)
+            page, score = int(item.get("page") or 1), float(item.get("score") or 0.0)
+        except (TypeError, ValueError):
+            continue
+        extra.append(ExtractedField(
+            field=name, value=value, confidence=min(max(score, 0.0), 1.0),
+            source=EvidenceSource(document_id=document_id, page=page, bbox=BoundingBox(x1=x1, y1=y1, x2=x2, y2=y2)),
+            method=ExtractionMethod.ML_MODEL, is_unknown=False,
+        ))
+    return [*rule_fields, *extra]

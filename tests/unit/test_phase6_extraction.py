@@ -380,6 +380,18 @@ class TestSuratJalanExtractor(unittest.TestCase):
         self.assertIsInstance(f.value, float)
         self.assertEqual(f.value, 15.0)
 
+    def test_missing_weight_remains_reviewable_instead_of_crashing(self):
+        """A valid delivery note may omit kg; return an unknown field for HITL."""
+        evidence = {"pages": [{"lines": [{
+            "text": "SURAT JALAN No. SJ-001 tanpa berat",
+            "confidence": 0.95,
+            "bbox_norm": [0.1, 0.1, 0.6, 0.15],
+        }]}]}
+        fields = self.extractor.extract("TEST-SJ-NO-WEIGHT", evidence)
+        weight = next(field for field in fields if field.field == "actual_weight_kg")
+        self.assertTrue(weight.is_unknown)
+        self.assertIsNone(weight.value)
+
     def test_origin_destination_extracted(self):
         origin = self.field_map.get("origin")
         dest = self.field_map.get("destination")

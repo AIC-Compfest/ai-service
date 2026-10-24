@@ -79,9 +79,15 @@ class DoclingRunner:
             return None
         try:
             from docling.datamodel.base_models import DocumentStream
-        except ImportError:
+        except Exception as exc:
+            # A dependency mismatch can also fail while Docling is imported
+            # (not only when the package is missing).  In particular, older
+            # Pydantic releases raise AttributeError while Docling builds its
+            # OCR option models.  Treat it exactly like an unavailable engine
+            # so the request can use the deterministic PDF fallback instead of
+            # returning a 500 to the upload flow.
             self._unavailable = True
-            logger.warning("docling.not_installed", hint="pip install -r requirements-docling.txt")
+            logger.warning("docling.unavailable", error=str(exc), hint="install the pinned AI-service dependencies")
             return None
         key = (hashlib.sha1(payload).hexdigest(), is_pdf, ocr)
         try:

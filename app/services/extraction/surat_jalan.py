@@ -388,6 +388,12 @@ class SuratJalanExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 12. Actual Weight (CRITICAL for reconciliation)
         # Scan all lines for physical weights (kg)
+        # Initialise the full field contract before trying any extraction path.
+        # Some valid Surat Jalan documents simply do not state a weight in kg;
+        # that must become a reviewable unknown field, never a 500 response.
+        parsed_weight: float | None = None
+        conf_w = 0.0
+        bbox_w = None
         found_weights: list[tuple[float, float, list[float]]] = []
         for line in all_lines:
             text = line.get("text", "")

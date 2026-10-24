@@ -12,13 +12,13 @@ Endpoints:
 
 import uuid
 
-from fastapi import APIRouter, HTTPException, Request, UploadFile
+from fastapi import APIRouter, Form, HTTPException, Request, UploadFile
 
 from app.core.logging import get_logger
 from app.core.runtime import get_pipeline, purge_old_pages, read_upload
 from app.schemas.document_type import DocumentType
 from app.schemas.extraction import ExtractionResponse
-from app.services.extraction.ml.service import promote_ml_fields, run_ml_extraction
+from app.services.extraction.ml.service import append_ml_only_fields, promote_ml_fields, run_ml_extraction
 from app.services.extraction.page_resolver import resolve_field_pages
 from app.services.extraction.registry import get_extractor
 from app.services.validation.document import validate_extraction
@@ -43,7 +43,11 @@ def understand_document_evidence(file: UploadFile) -> dict:
 
 
 @router.post("/pipeline/full")
-def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
+def extract_full_pipeline(
+    file: UploadFile,
+    request: Request,
+    document_type: DocumentType | None = Form(default=None),
+) -> dict:
     """
     Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23).
 
@@ -65,10 +69,17 @@ def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
     pipeline = get_pipeline()
     evidence = pipeline.process_document(file_bytes, filename=filename, document_id=document_id)
 
-    classification = evidence.get("classification", {})
+    classification = dict(evidence.get("classification", {}))
+    # A user-selected type is a reviewable routing instruction, not a model
+    # prediction. It lets the typed extractor run when the classifier is
+    # uncertain, while the original model confidence remains visible to HITL.
+    declared_type = document_type if document_type and document_type != DocumentType.UNKNOWN else None
+    if declared_type:
+        classification["document_type"] = declared_type.value
+        classification["classification_method"] = "USER_DECLARED"
     doc_type_str = classification.get("document_type", "UNKNOWN")
     confidence = float(classification.get("confidence", 0.0))
-    requires_review = classification.get("requires_human_review", True)
+    requires_review = classification.get("requires_human_review", True) and declared_type is None
 
     try:
         doc_type = DocumentType(doc_type_str)
@@ -117,6 +128,7 @@ def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
     main_type = doc_type if doc_type != DocumentType.UNKNOWN else first_type
     ml_extraction = run_ml_extraction(document_id, main_type.value, evidence)
     fields = promote_ml_fields(fields, ml_extraction, document_id)
+    fields = append_ml_only_fields(fields, ml_extraction, document_id)
     resolve_field_pages(fields, evidence.get("pages", []))
     arithmetic_validation = validate_extraction(fields, evidence.get("pages", []))
 
@@ -141,6 +153,7 @@ def extract_full_pipeline(file: UploadFile, request: Request) -> dict:
                 s_fields = s_extractor.extract(document_id, s_evidence)
                 s_ml = run_ml_extraction(document_id, seg_type_str, s_evidence)
                 s_fields = promote_ml_fields(s_fields, s_ml, document_id)
+                s_fields = append_ml_only_fields(s_fields, s_ml, document_id)
                 resolve_field_pages(s_fields, s_evidence["pages"], default_page=start_p)
                 s_arithmetic = validate_extraction(s_fields, s_evidence["pages"])
                 segment_extractions.append({
