@@ -1,0 +1,59 @@
+# Per-field decision policy used by app.tools.decide_documents.
+#
+# Keys are DOC.field. Anything not listed uses _default.
+# Modes: top1 | floor | margin | filter_top1 | amount_sum | skip
+#   floor: 0.3        accept top1 only if its score >= 0.3, otherwise flag for review
+#   margin: 0.1       accept top1 only if (top1 - runner-up) >= 0.1, otherwise flag
+#   allowed: [...]    for filter_top1: keep candidates whose parsed value is in this list
+#   equation: [a,b,c] for amount_sum: a + b must equal c within tolerance
+#
+# Floors and margins are left unset. Run `score` + `decide` once, compare the
+# top1 and policy accuracy columns in summary.csv, then add a floor only where it helps.
+
+_default:
+  mode: top1
+
+# Amounts: subtotal + tax_amount = grand_total must hold. Tolerance is in the document's currency
+# unit. Use 0.01 for documents with cents (USD) and 1 for IDR.
+INVOICE.subtotal:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  tolerance: 1
+INVOICE.tax_amount:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  tolerance: 1
+INVOICE.grand_total:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  tolerance: 1
+
+# Currency: restrict to currencies seen in the data (parsed values in the candidates).
+INVOICE.currency:
+  mode: filter_top1
+  allowed: [IDR, USD, SGD]
+RATE_AGREEMENT.currency:
+  mode: filter_top1
+  allowed: [IDR, USD, SGD]
+
+# Fields the earlier evaluation said to stop modelling. Replace with rules or manual review.
+RATE_AGREEMENT.destination:
+  mode: skip
+  note: "constant-like field; use a rule or manual review"
+POD.pihak_pertama_alamat:
+  mode: skip
+  note: "no lift over random; manual review"
+POD.pihak_kedua_alamat:
+  mode: skip
+  note: "no lift over random; manual review"
+SURAT_JALAN.receiver_address:
+  mode: skip
+  note: "no lift over random; manual review"
+POD.pod_date:
+  mode: skip
+  note: "no lift over random; needs a date rule"
+
+# Hold until the label check on the below-random AUC is done.
+SURAT_JALAN.line_items:
+  mode: skip
+  note: "AUC below random; labels under review"
