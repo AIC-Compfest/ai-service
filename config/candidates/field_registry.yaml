@@ -13,10 +13,10 @@ POD:
   pod_date: {cand_type: date, cardinality: one}
   pihak_pertama_nama: {cand_type: party, cardinality: one}
   pihak_pertama_alamat: {cand_type: address, cardinality: one}
-  pihak_pertama_jabatan: {cand_type: text, cardinality: one}
+  # pihak_pertama_jabatan: {cand_type: text, cardinality: one}
   pihak_kedua_nama: {cand_type: party, cardinality: one}
   pihak_kedua_alamat: {cand_type: address, cardinality: one}
-  pihak_kedua_jabatan: {cand_type: text, cardinality: one}
+  # pihak_kedua_jabatan: {cand_type: text, cardinality: one}
   line_items: {cand_type: table, cardinality: one}
   pod_number: {cand_type: id, cardinality: one}
 RATE_AGREEMENT:
