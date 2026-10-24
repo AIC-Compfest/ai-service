@@ -217,6 +217,7 @@ def decide_document(doc_type: str, fields: dict[str, list[dict[str, Any]]], all_
                 continue
             handled_groups.add(key)
             tolerance = float(spec.get("tolerance", 0.01))
+            optional = spec.get("optional")  # e.g. tax_amount: may be absent (then a == c)
             if spec.get("strategy", "confirm") == "search":
                 match = decide_sum(fields, equation, tolerance, k)
             else:
@@ -225,6 +226,15 @@ def decide_document(doc_type: str, fields: dict[str, list[dict[str, Any]]], all_
                 for member, candidate in match[1].items():
                     decisions[member] = {"status": "accepted", "choice": candidate, "margin": None, "reason": "amount sum matched"}
                 continue
+            if optional:
+                first, last = [m for m in equation if m != optional][0], equation[-1]
+                top_a, top_c = fields.get(first, [None])[0], fields.get(last, [None])[0]
+                if top_a and top_c and parse_number(top_a["value"]) is not None and parse_number(top_c["value"]) is not None \
+                        and abs(parse_number(top_a["value"]) - parse_number(top_c["value"])) <= tolerance:
+                    decisions[first] = {"status": "accepted", "choice": top_a, "margin": None, "reason": f"{optional} absent: {first} equals {last}"}
+                    decisions[last] = {"status": "accepted", "choice": top_c, "margin": None, "reason": f"{optional} absent: {first} equals {last}"}
+                    decisions[optional] = {"status": "abstain", "choice": None, "margin": None, "reason": "no tax: subtotal equals grand total"}
+                    continue
             singles = {member: decide_single(fields.get(member, []), {"mode": "top1"}) for member in equation}
             if spec.get("strategy", "confirm") == "confirm":
                 # The top-1 amounts do not add up, so at least one is wrong. Flag only the weakest.
@@ -246,6 +256,42 @@ def decide_document(doc_type: str, fields: dict[str, list[dict[str, Any]]], all_
         if field not in decisions:
             decisions[field] = decide_single(fields.get(field, []), spec)
     return decisions
+
+
+def floor_sweep(scored: list[dict[str, str]], floors: list[float], min_coverage: float) -> list[dict[str, Any]]:
+    """Exact accuracy of 'accept top-1 if score >= floor, else abstain' for every field, using all labeled candidates."""
+    by_doc: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(list)
+    for row in scored:
+        if row["label"] in ("0", "1"):
+            by_doc[(row["doc_type"], row["field"], row["document_id"])].append(dict(row, score=float(row["score"])))
+    per_field: dict[tuple[str, str], list[tuple[float, bool, bool]]] = defaultdict(list)
+    for (doc_type, field, _), candidates in by_doc.items():
+        top = max(candidates, key=lambda c: c["score"])
+        has_truth = any(c["label"] == "1" for c in candidates)
+        per_field[(doc_type, field)].append((top["score"], top["label"] == "1", has_truth))
+    results = []
+    for (doc_type, field), docs in sorted(per_field.items()):
+        best = None
+        for floor in floors:
+            correct = accepted = 0
+            for score, top_right, has_truth in docs:
+                if score >= floor:
+                    accepted += 1
+                    correct += int(top_right)
+                else:
+                    correct += int(not has_truth)
+            accuracy = correct / len(docs)
+            coverage = accepted / len(docs)
+            results.append({"doc_type": doc_type, "field": field, "floor": floor, "documents": len(docs),
+                            "accepted": accepted, "coverage": round(coverage, 3),
+                            "accepted_precision": round(sum(1 for s, t, _ in docs if s >= floor and t) / accepted, 3) if accepted else "",
+                            "doc_accuracy": round(accuracy, 3), "recommended": ""})
+            if coverage >= min_coverage and (best is None or accuracy > best[0] + 1e-9):
+                best = (accuracy, floor)
+        for row in results[-len(floors):]:
+            if best and row["floor"] == best[1]:
+                row["recommended"] = "best with coverage >= %.2f" % min_coverage
+    return results
 
 
 def cmd_decide(args: argparse.Namespace) -> int:
@@ -326,6 +372,12 @@ def cmd_decide(args: argparse.Namespace) -> int:
         })
 
     args.out.mkdir(parents=True, exist_ok=True)
+    if args.sweep:
+        floors = [round(0.1 * step, 1) for step in range(0, 10)]
+        sweep_rows = floor_sweep(scored, floors, args.min_coverage)
+        write_csv(args.out / "floor_sweep.csv", ["doc_type", "field", "floor", "documents", "accepted", "coverage",
+                                                  "accepted_precision", "doc_accuracy", "recommended"], sweep_rows)
+        print(f"Wrote {args.out / 'floor_sweep.csv'} (exact top-1 accuracy at each floor, using all labeled candidates)")
     write_csv(args.out / "decisions.csv", DECISION_COLUMNS, decision_rows)
     write_csv(args.out / "summary.csv", SUMMARY_COLUMNS, summary_rows)
     print(f"{'doc_type':14} {'field':24} {'mode':12} {'acc':>4} {'flag':>4} {'abst':>4} {'skip':>4} {'cov':>6} {'prec':>6} {'policy':>7} {'top1':>6} {'top1 hit*':>9}")
@@ -353,6 +405,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     decide.add_argument("--scored", type=Path, required=True)
     decide.add_argument("--policy", type=Path, default=Path("config/extraction/decision_policy.yaml"))
     decide.add_argument("--out", type=Path, help="output folder (default: folder of --scored)")
+    decide.add_argument("--sweep", action="store_true", help="also write floor_sweep.csv with exact accuracy per floor")
+    decide.add_argument("--min-coverage", type=float, default=0.5, help="coverage needed for a floor to be recommended (default 0.5)")
     decide.add_argument("--k", type=int, default=5, help="candidates per field tried in amount_sum combinations (default 5)")
     args = parser.parse_args(argv)
     if args.command == "decide":
