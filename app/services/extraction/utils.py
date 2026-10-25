@@ -74,6 +74,20 @@ def _midpoint_x(bbox_norm: list[float]) -> float:
     return (bbox_norm[0] + bbox_norm[2]) / 2.0
 
 
+def _coordinate_scale(lines: list[dict]) -> float:
+    """Return the evidence coordinate range (1 for normalized, 1000 for legacy)."""
+    for line in lines:
+        bbox = line.get("bbox_norm") or []
+        if bbox and max(abs(float(value)) for value in bbox) > 1.0:
+            return 1000.0
+    return 1.0
+
+
+def _spatial_tolerance(value: float, scale: float) -> float:
+    """Convert historical 0..1000-space tolerances to the evidence's coordinate range."""
+    return value if scale > 1.0 else value / 1000.0
+
+
 # ---------------------------------------------------------------------------
 # Core spatial parsers
 # ---------------------------------------------------------------------------
@@ -91,6 +105,9 @@ def find_key_value_horizontal(
     adjacent OCRLine at the same vertical level).
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    y_tolerance = _spatial_tolerance(y_tolerance, scale)
+    right_margin = _spatial_tolerance(10.0, scale)
 
     for i, line in enumerate(lines):
         line_text = line.get("text", "")
@@ -116,7 +133,7 @@ def find_key_value_horizontal(
             l for l in lines
             if l != line
             and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= y_tolerance
-            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - 10.0
+            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - right_margin
         ]
         if right_lines:
             # Sort by x1 (left to right)
@@ -141,6 +158,12 @@ def find_key_value_vertical(
     BELOW it, aligned on approximately the same X-axis.
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    x_tolerance = _spatial_tolerance(x_tolerance, scale)
+    max_y_gap = _spatial_tolerance(max_y_gap, scale)
+    anchor_y_margin = _spatial_tolerance(5.0, scale)
+    left_margin = _spatial_tolerance(20.0, scale)
+    right_margin = _spatial_tolerance(200.0, scale)
 
     for i, line in enumerate(lines):
         line_text = line.get("text", "")
@@ -159,11 +182,11 @@ def find_key_value_vertical(
             cand_x = _midpoint_x(cand_bbox)
             cand_y_start = cand_bbox[1]
 
-            if cand_y_start < anchor_y_end - 5.0:
+            if cand_y_start < anchor_y_end - anchor_y_margin:
                 continue
             if cand_y_start - anchor_y_end > max_y_gap:
                 break
-            if abs(cand_x - anchor_x) <= x_tolerance or (cand_bbox[0] >= anchor_bbox[0] - 20.0 and cand_bbox[2] <= anchor_bbox[2] + 200.0):
+            if abs(cand_x - anchor_x) <= x_tolerance or (cand_bbox[0] >= anchor_bbox[0] - left_margin and cand_bbox[2] <= anchor_bbox[2] + right_margin):
                 text = candidate.get("text", "").strip()
                 if text and not any(p in text.lower() for p in key_patterns_lower):
                     return text, float(candidate.get("confidence", 0.90)), cand_bbox
@@ -182,6 +205,10 @@ def find_amount_near_keyword(
     at the same Y level as a keyword anchor. Returns (parsed_float, confidence, bbox).
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    y_tolerance = _spatial_tolerance(y_tolerance, scale)
+    same_row_tolerance = _spatial_tolerance(10.0, scale)
+    right_margin = _spatial_tolerance(10.0, scale)
     SKIP_HEADER_PATTERNS = ["tax invoice", "faktur pajak", "pajak angkutan", "npwp", "page", "sr."]
 
     for line in lines:
@@ -208,8 +235,8 @@ def find_amount_near_keyword(
         same_row_lines = [
             l for l in lines
             if l != line
-            and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= 10.0
-            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - 10.0
+            and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= same_row_tolerance
+            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - right_margin
         ]
         # Sort by closest Y level first, then left to right
         same_row_lines.sort(key=lambda l: (

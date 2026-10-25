@@ -8,11 +8,10 @@ def decode(scores: dict[str, list[tuple[dict[str, Any], float]]], field_specs: d
     used = set()
     for field, values in scores.items():
         values = sorted(values, key=lambda item: (-item[1], int(item[0].get("m_page", 0)), int(item[0].get("m_line_idx", 0))))
-        threshold = thresholds.get(field, {}).get("t_unknown", 0.4)
         many = field_specs.get(field, {}).get("cardinality") == "many"
         selected = []
         for candidate, score in values:
-            if score < threshold or candidate["m_candidate_id"] in used:
+            if candidate["m_candidate_id"] in used:
                 continue
             selected.append((candidate, score))
             used.add(candidate["m_candidate_id"])

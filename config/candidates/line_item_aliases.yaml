@@ -14,9 +14,9 @@ INVOICE:
     line_total: {dtype: amount, aliases: [total price, jumlah harga, total, jumlah, amount, subtotal, total harga]}
 SURAT_JALAN:
   fields:
-    line_number: {dtype: int, aliases: [no, nomor, baris, line]}
-    item_description: {dtype: text, aliases: [nama barang, item description, deskripsi barang]}
-    quantity: {dtype: int, aliases: [qty, quantity, koli, jumlah]}
+    line_number: {dtype: int, aliases: [no, nomor, baris, line, kode barang, kode item, item code, product code, sku]}
+    item_description: {dtype: text, aliases: [nama barang, item description, deskripsi barang, description]}
+    quantity: {dtype: int, aliases: [qty, quantity, koli, jumlah, jumlah diretur, returned quantity, qty returned]}
     weight_kg: {dtype: weight, aliases: [berat, berat kg, weight, berat aktual]}
     remarks: {dtype: text, aliases: [remarks, catatan, keterangan, notes]}
 POD:

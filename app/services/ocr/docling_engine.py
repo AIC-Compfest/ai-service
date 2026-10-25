@@ -12,16 +12,28 @@ canonical PNG is a uniform rescale of the same page, so the normalized values ar
 """
 from __future__ import annotations
 
+from functools import lru_cache
 from typing import Any
 
 import fitz
+import yaml
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from app.services.docling.runner import DoclingResult, get_runner
 
 logger = get_logger(__name__)
 
 _DEFAULT_CONFIDENCE = 0.95
+
+
+@lru_cache(maxsize=1)
+def _line_construction_config() -> dict:
+    try:
+        policy = yaml.safe_load((settings.config_dir / "extraction" / "review_policy.yaml").read_text(encoding="utf-8")) or {}
+        return policy.get("line_construction", {})
+    except Exception:
+        return {}
 
 
 class DoclingOCREngine:
@@ -70,7 +82,7 @@ class DoclingOCREngine:
                     }
             raise RuntimeError(f"No OCR/text extraction result for page {page_number}; Docling is unavailable and no PDF text layer was found")
 
-        lines = _extract_lines(result)
+        lines, split_count = _split_merged_lines(_extract_lines(result))
         regions = _detect_regions(lines)
         return {
             "page_number": page_number,
@@ -81,6 +93,7 @@ class DoclingOCREngine:
             "average_confidence": _avg_conf(lines),
             "quality": quality,
             "coord_space": "page_image_normalized",
+            "line_split_count": split_count,
             "lines": lines,
             "regions": regions,
             "tables": [],  # filled by discover_page_tables in the pipeline
@@ -88,11 +101,106 @@ class DoclingOCREngine:
 
 
 def _extract_lines(result: DoclingResult) -> list[dict]:
-    """Visual text lines (with word tokens) from Docling's parsed page; paragraph ``texts`` only as a fallback."""
-    lines = _lines_from_cells(result) if result.line_cells else _lines_from_texts(result)
+    """Visual text rows from positioned words, with line/text cells as fallbacks.
+
+    Docling can merge multiple visual rows into one ``TextCell``. Word cells
+    retain their positions, so use them to construct the public line contract
+    whenever they are available instead of trusting a merged line cell.
+    """
+    lines = _lines_from_words(result) if result.word_cells else (_lines_from_cells(result) if result.line_cells else _lines_from_texts(result))
     lines.sort(key=lambda item: (item["bbox_norm"][1], item["bbox_norm"][0]))
     _assign_row_indices(lines)
     return lines
+
+
+def _split_merged_lines(lines: list[dict]) -> tuple[list[dict], int]:
+    """Split oversized merged line boxes at spatially separated word tokens."""
+    config = _line_construction_config()
+    width_floor = float(config.get("split_line_width_fraction", 0.60))
+    gap_floor = float(config.get("split_gap_fraction", 0.045))
+    median_multiple = float(config.get("split_height_median_multiple", 3.0))
+    heights = sorted(max(0.0, line["bbox_norm"][3] - line["bbox_norm"][1]) for line in lines if line.get("bbox_norm"))
+    median_height = heights[len(heights) // 2] if heights else 0.0
+    output, split_count = [], 0
+    for line in lines:
+        box = line.get("bbox_norm") or [0, 0, 0, 0]
+        tokens = list(line.get("tokens", []))
+        width, height = float(box[2]) - float(box[0]), float(box[3]) - float(box[1])
+        if width < width_floor or len(tokens) < 2:
+            output.append(line)
+            continue
+        tokens.sort(key=lambda token: (token.get("bbox_norm", [0, 0, 0, 0])[1], token.get("bbox_norm", [0, 0, 0, 0])[0]))
+        rows: list[list[dict]] = []
+        for token in tokens:
+            tbox = token.get("bbox_norm") or [0, 0, 0, 0]
+            center = (float(tbox[1]) + float(tbox[3])) / 2
+            tolerance = float(_line_construction_config().get("row_baseline_tolerance", 0.55))
+            row = next((row for row in rows if abs(center - sum((float(t["bbox_norm"][1]) + float(t["bbox_norm"][3])) / 2 for t in row) / len(row)) <= max(0.002, tolerance * (float(tbox[3]) - float(tbox[1])))), None)
+            if row is None: rows.append([token])
+            else: row.append(token)
+        split_groups = []
+        for row in rows:
+            row.sort(key=lambda token: token["bbox_norm"][0])
+            current = []
+            for token in row:
+                tbox = token["bbox_norm"]
+                prev_box = current[-1]["bbox_norm"] if current else None
+                gap = float(tbox[0]) - float(prev_box[2]) if prev_box else 0.0
+                if prev_box and gap >= gap_floor and (width >= width_floor or (median_height and height > median_multiple * median_height)):
+                    split_groups.append(current)
+                    current = []
+                current.append(token)
+            if current: split_groups.append(current)
+        if len(split_groups) <= 1:
+            output.append(line)
+            continue
+        split_count += len(split_groups) - 1
+        for group in split_groups:
+            boxes = [token["bbox_norm"] for token in group]
+            group_box = [min(b[0] for b in boxes), min(b[1] for b in boxes), max(b[2] for b in boxes), max(b[3] for b in boxes)]
+            output.append({**line, "text": " ".join(token["text"] for token in group), "bbox_norm": group_box, "tokens": group})
+    output.sort(key=lambda item: (item["bbox_norm"][1], item["bbox_norm"][0]))
+    _assign_row_indices(output)
+    return output, split_count
+
+
+def _lines_from_words(result: DoclingResult) -> list[dict]:
+    positioned = []
+    for cell in result.word_cells:
+        text = " ".join(str(cell.text).split())
+        box = _norm_cell(cell, result)
+        if text and box is not None:
+            positioned.append((text, box, _confidence(cell)))
+    positioned.sort(key=lambda item: ((item[1][1] + item[1][3]) / 2, item[1][0]))
+
+    rows: list[list[tuple[str, tuple[float, float, float, float], float]]] = []
+    for word in positioned:
+        _, box, _ = word
+        center = (box[1] + box[3]) / 2
+        height = box[3] - box[1]
+        row_index = next((i for i, row in enumerate(rows) if _same_visual_row(center, height, row)), None)
+        if row_index is None:
+            rows.append([word])
+        else:
+            rows[row_index].append(word)
+
+    lines = []
+    for row_index, row in enumerate(rows):
+        row.sort(key=lambda item: item[1][0])
+        box = (min(item[1][0] for item in row), min(item[1][1] for item in row), max(item[1][2] for item in row), max(item[1][3] for item in row))
+        confidence = sum(item[2] for item in row) / len(row)
+        tokens = [_token(text, conf, word_box, estimated=False) for text, word_box, conf in row]
+        for token in tokens:
+            token["row_idx"] = row_index
+        lines.append({"text": " ".join(item[0] for item in row), "confidence": round(confidence, 3), "bbox_norm": _rounded(box), "tokens": tokens})
+    return lines
+
+
+def _same_visual_row(center: float, height: float, row: list[tuple[str, tuple[float, float, float, float], float]]) -> bool:
+    row_center = sum((item[1][1] + item[1][3]) / 2 for item in row) / len(row)
+    row_height = max(item[1][3] - item[1][1] for item in row)
+    tolerance = max(0.002, float(_line_construction_config().get("row_baseline_tolerance", 0.55)) * max(height, row_height))
+    return abs(center - row_center) <= tolerance
 
 
 def _extract_pdf_text(pdf_bytes: bytes, target_width: int, target_height: int) -> list[dict]:

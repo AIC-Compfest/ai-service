@@ -30,6 +30,7 @@ SURAT_JALAN:
   receiver_name: {cand_type: party, cardinality: one}
   receiver_address: {cand_type: address, cardinality: one}
   shipment_date: {cand_type: date, cardinality: one}
+  shipment_id: {cand_type: id, cardinality: one}
   line_items: {cand_type: table, cardinality: one}
   sender_name: {cand_type: party, cardinality: one}
   sender_address: {cand_type: address, cardinality: one}

@@ -1,0 +1,34 @@
+version: 1
+status:
+  accepted_threshold: 0.9
+  warning_threshold: 0.7
+rule_scores:
+  rule_label_match: 0.8
+  rule_continuation: 0.6
+  rule_fallback: 0.5
+line_construction:
+  # Two word baselines within this fraction of their larger height form one visual row.
+  row_baseline_tolerance: 0.55
+  # Split unusually wide merged rows when adjacent word boxes have at least this page-relative gap.
+  split_gap_fraction: 0.045
+  split_line_width_fraction: 0.60
+  # Split a line box taller than this multiple of the page's median word height.
+  split_height_median_multiple: 3.0
+  table_row_y_tolerance: 0.006
+label_value:
+  continuation_max_vertical_gap: 0.045
+  continuation_x_tolerance: 0.25
+  same_row_center_tolerance: 0.6
+  adjacent_value_x_margin: 0.01
+field_limits:
+  scalar: 160
+  address: 240
+sanity:
+  address_markers: [jl, jalan, jln, street, road, rt, rw, kawasan, blok, kecamatan, kelurahan, kec]
+tables:
+  header_match_threshold: 0.55
+  max_rows: 500
+  header_weight: 0.65
+  row_count_weight: 0.15
+  role_weight: 0.20
+  text_table_confidence: 0.65

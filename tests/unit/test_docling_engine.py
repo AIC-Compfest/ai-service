@@ -89,6 +89,19 @@ def test_tokens_in_the_same_visual_row_share_row_idx(monkeypatch):
     assert rows[0] == rows[1] != rows[2]
 
 
+def test_positioned_words_split_a_merged_docling_line_cell(monkeypatch):
+    merged = [cell("Header No Surat Jalan Dari PT Gemilang", 30, 100, 570, 140)]
+    words = [
+        cell("No", 30, 100, 45, 112), cell("Surat", 48, 100, 78, 112), cell("Jalan", 81, 100, 111, 112),
+        cell("SDO12345", 180, 100, 235, 112),
+        cell("Dari", 30, 160, 55, 172), cell("PT", 180, 160, 195, 172), cell("Gemilang", 198, 160, 250, 172),
+    ]
+    page = run(monkeypatch, FakeRunner(vector=result(merged, words)), is_pdf=True)
+
+    assert [line["text"] for line in page["lines"]] == ["No Surat Jalan SDO12345", "Dari PT Gemilang"]
+    assert all(len(line["text"]) < 40 for line in page["lines"])
+
+
 def test_bottom_left_boxes_are_flipped_and_degenerate_boxes_dropped(monkeypatch):
     assert _norm_bbox(box(60, 700, 540, 500, Origin.BOTTOMLEFT), W, H) == (0.1, 0.125, 0.9, 0.375)
     assert _norm_bbox(box(10, 10, 10, 20), W, H) is None and _norm_bbox(None, W, H) is None
@@ -103,7 +116,7 @@ def test_paragraph_texts_are_the_fallback_when_no_line_cells(monkeypatch):
 
 
 def test_failed_conversion_raises(monkeypatch):
-    with pytest.raises(RuntimeError, match="Docling conversion failed"):
+    with pytest.raises(RuntimeError, match="Docling is unavailable"):
         run(monkeypatch, FakeRunner(), is_pdf=False)
 
 
@@ -119,3 +132,38 @@ def test_runner_caches_conversions_and_falls_back_to_ocr(monkeypatch):
     assert runner.convert_page(pdf_bytes=b"pdf", image_loader=lambda: b"png").used_ocr is True
     assert calls == [(True, False), (False, True)]
     assert runner.convert_page(pdf_bytes=None, image_loader=lambda: None) is None
+
+
+def test_runner_does_not_rasterize_vector_pdf_when_parser_unavailable(monkeypatch):
+    import fitz
+
+    document = fitz.open()
+    page = document.new_page(width=200, height=300)
+    page.insert_text((20, 40), "Dari: PT GEMILANG TIRTA ABADI")
+    pdf_bytes = document.tobytes()
+    document.close()
+
+    runner = runner_module.DoclingRunner()
+    monkeypatch.setattr(runner, "convert", lambda *_args, **_kwargs: None)
+    image_loader_called = False
+
+    def load_image():
+        nonlocal image_loader_called
+        image_loader_called = True
+        return b"page-image"
+
+    assert runner.convert_page(pdf_bytes=pdf_bytes, image_loader=load_image) is None
+    assert image_loader_called is False
+
+    monkeypatch.setattr("app.services.ocr.docling_engine.get_runner", lambda: runner)
+    page_result = DoclingOCREngine().process(
+        pdf_bytes,
+        is_pdf=True,
+        page_number=1,
+        quality={},
+        page_width=200,
+        page_height=300,
+        fallback_image_bytes=b"page-image",
+    )
+    assert page_result["engine_used"] == "pymupdf_vector_fallback"
+    assert any("PT GEMILANG TIRTA ABADI" in line["text"] for line in page_result["lines"])

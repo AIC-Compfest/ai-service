@@ -118,6 +118,11 @@ class DoclingRunner:
             result = self.convert(pdf_bytes, is_pdf=True, ocr=False)
             if result is not None and result.has_text:
                 return result
+            # A vector PDF can be recovered cheaply by the OCR engine's PyMuPDF
+            # fallback. Do not rasterize it and initialize all OCR/layout models
+            # just because the optional native Docling PDF backend is unavailable.
+            if _pdf_has_text(pdf_bytes):
+                return result
         image = image_loader()
         if image is None:
             return None
@@ -133,6 +138,17 @@ def _to_result(result: Any, ocr: bool) -> DoclingResult | None:
     lines = list(parsed.textline_cells) if parsed is not None else []
     words = list(parsed.word_cells) if parsed is not None else []
     return DoclingResult(list(document.tables), list(document.texts), float(page.size.width), float(page.size.height), ocr, lines, words)
+
+
+def _pdf_has_text(payload: bytes) -> bool:
+    """Check for a vector text layer before taking the expensive raster OCR path."""
+    try:
+        import fitz
+
+        document = fitz.open(stream=payload, filetype="pdf")
+        return any(page.get_text().strip() for page in document)
+    except Exception:
+        return False
 
 
 _RUNNER: DoclingRunner | None = None

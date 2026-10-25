@@ -19,6 +19,7 @@ from app.core.runtime import get_pipeline, purge_old_pages, read_upload
 from app.schemas.document_type import DocumentType
 from app.schemas.extraction import ExtractionResponse
 from app.services.extraction.ml.service import append_ml_only_fields, promote_ml_fields, run_ml_extraction
+from app.services.extraction.label_value import merge_review_fields
 from app.services.extraction.page_resolver import resolve_field_pages
 from app.services.extraction.registry import get_extractor
 from app.services.validation.document import validate_extraction
@@ -129,6 +130,7 @@ def extract_full_pipeline(
     ml_extraction = run_ml_extraction(document_id, main_type.value, evidence)
     fields = promote_ml_fields(fields, ml_extraction, document_id)
     fields = append_ml_only_fields(fields, ml_extraction, document_id)
+    fields = merge_review_fields(document_id, evidence, main_type.value, fields, ml_extraction)
     resolve_field_pages(fields, evidence.get("pages", []))
     arithmetic_validation = validate_extraction(fields, evidence.get("pages", []))
 
@@ -154,6 +156,7 @@ def extract_full_pipeline(
                 s_ml = run_ml_extraction(document_id, seg_type_str, s_evidence)
                 s_fields = promote_ml_fields(s_fields, s_ml, document_id)
                 s_fields = append_ml_only_fields(s_fields, s_ml, document_id)
+                s_fields = merge_review_fields(document_id, s_evidence, seg_type_str, s_fields, s_ml)
                 resolve_field_pages(s_fields, s_evidence["pages"], default_page=start_p)
                 s_arithmetic = validate_extraction(s_fields, s_evidence["pages"])
                 segment_extractions.append({
@@ -196,7 +199,7 @@ def extract_full_pipeline(
                 logger.warning("logical_extraction_failed", doc_type=l_type_str, error=str(e))
 
     unknown_fields = [f.field for f in fields if f.is_unknown]
-    final_requires_review = len(unknown_fields) > 0 or confidence < 0.95
+    final_requires_review = len(unknown_fields) > 0 or any(getattr(field, "review_status", "UNKNOWN") == "REVIEW" for field in fields) or confidence < 0.95
 
     logger.info(
         "extract.pipeline.complete",
@@ -246,6 +249,7 @@ def extract_full_pipeline(
         },
         "extracted_fields": [f.model_dump() for f in fields],
         "ml_extraction": ml_extraction,
+        "warnings": [f"ml_extraction:{item.get('document_type')}:{(item.get('ml_extraction') or {}).get('status', 'unknown')}" for item in segment_extractions if (item.get("ml_extraction") or {}).get("status") not in ("ok", "disabled")],
         "arithmetic_validation": arithmetic_validation,
         "table_groups": evidence.get("table_groups", []),
         "logical_extractions": logical_extractions,

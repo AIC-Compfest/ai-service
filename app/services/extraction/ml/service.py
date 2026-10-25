@@ -48,7 +48,9 @@ def run_ml_extraction(document_id: str, doc_type: str, evidence: dict[str, Any])
         fields = []
         for name in fields_with_bundle:
             entry = result.fields.get(name, {"status": "unknown", "candidates": [], "score": 0.0})
-            chosen = entry["candidates"][0][0] if entry.get("candidates") else None
+            candidates = entry.get("candidates", [])
+            chosen = candidates[0][0] if candidates else None
+            t_auto = float(extractor.bundles[(doc_type, name)][1].get("thresholds", {}).get("t_auto", 0.9))
             fields.append(
                 {
                     "field": name,
@@ -58,6 +60,17 @@ def run_ml_extraction(document_id: str, doc_type: str, evidence: dict[str, Any])
                     "raw_text": chosen.get("m_raw_text") if chosen else None,
                     "page": int(chosen.get("m_page", 1)) if chosen else None,
                     "bbox_norm": [float(chosen[k]) for k in ("m_x1", "m_y1", "m_x2", "m_y2")] if chosen else None,
+                    "top_candidates": [
+                        {
+                            "raw_text": candidate.get("m_raw_text"),
+                            "value": candidate.get("m_parsed_value"),
+                            "score": round(float(score), 6),
+                            "status": "accepted" if score >= t_auto else "review",
+                            "page": int(candidate.get("m_page", 1)),
+                            "bbox_norm": [float(candidate[k]) for k in ("m_x1", "m_y1", "m_x2", "m_y2")],
+                        }
+                        for candidate, score in candidates[:3]
+                    ],
                 }
             )
         return {"status": "ok", "doc_type": doc_type, "model_set": result.model_set_id, "fields": fields}

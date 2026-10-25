@@ -83,7 +83,7 @@ class Settings(BaseSettings):
     # `pod_phase2` is an old, empty staging directory in this repository.
     # Point inference at the versioned bundle set that actually contains the
     # production INVOICE, POD, SURAT_JALAN and RATE_AGREEMENT field models.
-    ml_model_set_dir: Path = PACKAGE_ROOT / "models" / "all_v3"
+    ml_model_set_dir: Path = PACKAGE_ROOT / "models" / "all_v4"
 
     # Layout zones for extractors, as FRACTIONS of the page (bbox_norm is 0..1). Legacy 0..1000 fixtures are
     # converted by ``to_unit_bbox`` before comparing. These replace pixel-like literals (T-13).
