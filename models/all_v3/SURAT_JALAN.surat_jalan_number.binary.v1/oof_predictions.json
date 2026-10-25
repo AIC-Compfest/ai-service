@@ -1,0 +1,1448 @@
+[
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.026712184503355416,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.034493795542876696,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.22338008215263114,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.14179570619242604,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.08716670453331304,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.026836052119120084,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.034652462699378876,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.21470090169856912,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.1357323861524524,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.0778504248066983,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.02984368561523754,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_10_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_10",
+    "score": 0.02132553172033096,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.057512472598251874,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.02423863467076599,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.027925119721447067,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.02929287696825483,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.02161599890549425,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.021093360804952516,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.0535120299204517,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.024765946824059578,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.028530286501220036,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.029926771954961462,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_11_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_11",
+    "score": 0.021553758903083836,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.0258496667610296,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.02629071837746452,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.23423298269672985,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.11611055520945956,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.036611244617204615,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.021392483848683138,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.036611244617204615,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.054595265205860714,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.034759937826689964,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.02629071837746452,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.21192164970582658,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.10798268053033609,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.03787556615366649,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.031216264654858397,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.023811295865503426,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.017457230306452676,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.03566679538283052,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.03566679538283052,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_12_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_12",
+    "score": 0.044987929828460636,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.6978298288479553,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.016693237246267104,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.052190463719678996,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.056135380095514074,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.03846993121178194,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.7478259979127098,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.01691674509501811,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.023196127862899294,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_13_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_13",
+    "score": 0.041386737986341404,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.19868363974616118,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.31717761761920893,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019183917731957073,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019356975018855995,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019183917731957073,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019356975018855995,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.02422607279209407,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.02042147975322451,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.021085215961916013,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.024335069036039273,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.3338477610442083,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.01910351137277023,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.01959799977468098,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019774717166097314,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.019374356426909503,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.01954909741194934,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.021531906532047666,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.02174675931499334,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_14_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_14",
+    "score": 0.043216821590572926,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.05599104761787852,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.4497174814321457,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.8226700354676125,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.05031294290355457,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.02451400423381186,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.026048278322248052,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.06048219356507574,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.4554945293118468,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_15_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_15",
+    "score": 0.8334662703191889,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.13710287924253478,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.27353396381045253,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.7533476780768541,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.4141028118523768,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.11941306943836165,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.31934796565430645,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.0317001350149569,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.7249521768251204,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.3273957639139188,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_16_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_16",
+    "score": 0.32464324403932443,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.2542388567427673,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.025925755355021965,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.026433491810887368,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.2576234762974735,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.025925755355021965,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_1_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_1",
+    "score": 0.026433491810887368,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_2_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_2",
+    "score": 0.7050794407028396,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_2_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_2",
+    "score": 0.7050794407028396,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.4903106741754493,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.02122372504236541,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.16750245717120976,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.10100382932500075,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.031263798650849176,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.06740633907393724,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.019059528617298812,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.02129558560373947,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.019093317780120404,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.07944508433567671,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.047821362489868124,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.07682343187806524,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.5071566715825153,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.02122372504236541,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.4479429430009537,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.10251205035540481,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.07233202638775711,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.04877032533863245,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.02037236835782827,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.019093317780120404,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.08530490122467775,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.050267819383779895,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.07304507974883633,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_3_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_3",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.02255357087468793,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.021580112382586895,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.625750540396054,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.02338690952443668,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.08583952023085979,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.01793478642776443,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.09244894525211655,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.03126438980215395,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.020316785263041606,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.6127666248307474,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.02235146180223584,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.4595151647580792,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.01905287797382882,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_4_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_4",
+    "score": 0.02014416323883225,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.0357719790583606,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.03670362591599239,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.2189999819142658,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.14179570619242604,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.031245973310923218,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.04365249702599412,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.2189999819142658,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_5_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_5",
+    "score": 0.14179570619242604,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.06586298037581192,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.1862394933514137,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.08671171715397492,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.01851991415880536,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.018329568715634962,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.018329568715634962,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.06898407348674056,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.196682536611455,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.01823144428304332,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.018329568715634962,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_6_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_6",
+    "score": 0.018329568715634962,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.02363401741500922,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.3022822962165133,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.019619791797399123,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.022995911262543658,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.030127089646573534,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.11124496867325152,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.15157792364084674,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.061592157258586494,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.028008702726354074,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.035999286169946146,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.03709742586891961,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.0193770080632729,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.02095971367870125,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.03709742586891961,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.03463474117541465,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.2678875197717794,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.02084070082295908,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.022995911262543658,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.030127089646573534,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.2110315583456515,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.15157792364084674,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.0401343107093136,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.036248237332707975,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.02976936922548327,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.03709742586891961,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.033077238527626875,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.03709742586891961,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_7_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_7",
+    "score": 0.035999286169946146,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.027925119721447067,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.027925119721447067,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.03801036506953009,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.7944332741957272,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.38651010181222534,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.026240607263626068,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.014722366923278177,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.027925119721447067,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.027925119721447067,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.0363224317654742,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.8091523495458238,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.44007291982351404,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.026800417026118753,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_8_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_8",
+    "score": 0.014311649794802168,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.48626207269812116,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.019600160763113522,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.041270730384560486,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.23419159803008557,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.018641765193256513,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.21133038582384708,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.24884008631695428,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.01937663830505484,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.2532943345266309,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.15831625824503967,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.018641765193256513,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.14135065480173864,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.25558400617897115,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.2332365172183451,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.022792785806967145,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.19875657939843916,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.23993572777320243,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.19882070007898056,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_1",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.025283180053794495,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.492181551848837,
+    "label": 1
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.019600160763113522,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.03494270020517846,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.23419159803008557,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.021488483717576955,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.21473686028870898,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.22374718076720224,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.02585638595012831,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.20692831239839407,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.21915833521408865,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.01937663830505484,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.20891612063785406,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.22123085537930276,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.024881999246483676,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.15400319622888595,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.223624474761943,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.2761634168996819,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.24246871531145722,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.02329567878784186,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.24246871531145722,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.18350197232409735,
+    "label": 0
+  },
+  {
+    "document_id": "surat jalan--pdf--surat_jalan_9_variasi_2",
+    "template_group": "surat jalan--pdf--surat_jalan_9",
+    "score": 0.03811201637928047,
+    "label": 0
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "document_id": "invoice/invoice_13_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Kabel NYM 3x2.5 (ROLL)",
+          "Panjang 50 meter",
+          "4",
+          "750000",
+          "3000000"
+        ],
+        [
+          "2",
+          "MCB 16A (PCS)",
+          "Merek Schneider",
+          "10",
+          "68000",
+          "680000"
+        ],
+        [
+          "3",
+          "Lampu LED 12W (BOX)",
+          "Isi 10 pcs",
+          "6",
+          "120000",
+          "720000"
+        ],
+        [
+          "4",
+          "Stop Kontak (PCS)",
+          "Warna Putih",
+          "20",
+          "18500",
+          "370000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "4770000",
+    "0",
+    "0",
+    "4770000"
+  ]
+}

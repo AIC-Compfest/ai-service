@@ -21,9 +21,11 @@ from __future__ import annotations
 
 import re
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import EvidenceSource, ExtractedField, ExtractionMethod
 from app.services.extraction.base import BaseExtractor
+from app.services.extraction.confidence import HEURISTIC_CONSTANT, table_derived_confidence
 from app.services.extraction.utils import (
     _bbox_norm_to_model,
     _midpoint_y,
@@ -35,9 +37,21 @@ from app.services.extraction.utils import (
     parse_amount,
     parse_date_string,
     parse_table_columns,
+    to_unit_bbox,
 )
 
 logger = get_logger(__name__)
+
+
+def _is_invoice_item_row(row: dict) -> bool:
+    """Reject header/vendor text by structure, never by a vendor-specific word."""
+    identifier = " ".join(
+        str(row.get(field) or "") for field in ("shipment_id", "awb_number")
+    ).strip()
+    line_total = row.get("line_total")
+    has_identifier = bool(re.search(r"\d", identifier)) and len(identifier) >= 4
+    has_total = parse_amount(line_total) is not None if line_total else False
+    return has_identifier or has_total
 
 # Canonical column aliases for invoice line-item tables (PRD §13, multi-vendor)
 INVOICE_TABLE_COLUMNS = {
@@ -135,7 +149,8 @@ class InvoiceExtractor(BaseExtractor):
         all_tables: list[dict] = []
         for page in ocr_result.get("pages", []):
             all_lines.extend(page.get("lines", []))
-            all_tables.extend(page.get("tables", []))
+            # Only tables the pipeline classified as item tables feed this extractor (legacy tables carry no role).
+            all_tables.extend(t for t in page.get("tables", []) if t.get("role", "line_items") in ("line_items",))
 
         if not all_lines:
             return self._all_unknown(document_id)
@@ -175,16 +190,16 @@ class InvoiceExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 3. Vendor name & vendor_id from header region (first ~15 lines)
         # ----------------------------------------------------------------
-        header_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] < 150]
+        header_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] < settings.invoice_header_max_y]
         vendor_name, vendor_id = self._extract_vendor_info(header_lines, all_lines)
         vendor_conf = 0.90 if vendor_name else 0.0
         vendor_bbox = header_lines[0].get("bbox_norm") if header_lines else None
         fields.append(build_field(
-            field="vendor_name", value=vendor_name, confidence=vendor_conf,
+            field="vendor_name", value=vendor_name, confidence=vendor_conf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=vendor_bbox, document_id=document_id, page=page_num,
         ))
         fields.append(build_field(
-            field="vendor_id", value=vendor_id, confidence=vendor_conf,
+            field="vendor_id", value=vendor_id, confidence=vendor_conf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=vendor_bbox, document_id=document_id, page=page_num,
         ))
 
@@ -236,7 +251,7 @@ class InvoiceExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 8. Subtotal
         # ----------------------------------------------------------------
-        summary_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] > 250] or all_lines
+        summary_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] > settings.invoice_summary_min_y] or all_lines
         subtotal, conf, bbox = find_amount_near_keyword(summary_lines, self._SUBTOTAL_KEYS)
         if not subtotal:
             subtotal, conf, bbox = find_amount_near_keyword(all_lines, self._SUBTOTAL_KEYS)
@@ -283,10 +298,12 @@ class InvoiceExtractor(BaseExtractor):
         # 11. Line items from table (PRD §13 — line_items[])
         # ----------------------------------------------------------------
         line_items = self._extract_line_items(all_tables, all_lines, document_id, page_num)
+        items_conf, items_source = table_derived_confidence(all_tables, bool(line_items))
         fields.append(build_field(
             field="line_items",
             value=line_items if line_items else None,
-            confidence=0.90 if line_items else 0.0,
+            confidence=items_conf,
+            confidence_source=items_source,
             bbox_norm=all_tables[0].get("bbox_norm") if all_tables else None,
             document_id=document_id,
             page=page_num,
@@ -325,7 +342,7 @@ class InvoiceExtractor(BaseExtractor):
                 break
 
             # Heuristic: lines with "PT " prefix are likely vendor names
-            if re.match(r"^PT\s+", text, re.IGNORECASE) and vendor_name is None:
+            if re.match(r"^PT\.?\s+", text, re.IGNORECASE) and vendor_name is None:
                 vendor_name = text.strip()
 
         # Pass 2: check all lines for 3PL-xxx vendor ID pattern
@@ -402,7 +419,7 @@ class InvoiceExtractor(BaseExtractor):
         Uses fuzzy table columns if available, or falls back to line-based AWB grouping.
         """
         rows = parse_table_columns(tables, INVOICE_TABLE_COLUMNS) if tables else []
-        valid_rows = [r for r in rows if any(r.get(k) for k in ["shipment_id", "awb_number", "line_total"]) and r.get("shipment_id") != "Logistik"]
+        valid_rows = [row for row in rows if _is_invoice_item_row(row)]
 
         if valid_rows:
             items = []
@@ -432,7 +449,7 @@ class InvoiceExtractor(BaseExtractor):
             return items
 
         # Fallback: scan lines in table area for AWB / SHP items
-        table_lines = [l for l in lines if 200 <= l.get("bbox_norm", [0, 0, 0, 0])[1] <= 700]
+        table_lines = [l for l in lines if settings.invoice_table_min_y <= to_unit_bbox(l.get("bbox_norm"))[1] <= settings.invoice_table_max_y]
         awb_lines = [l for l in table_lines if re.search(r"\bAWB[-/ ]?\d{7,10}\b", l.get("text", ""), re.IGNORECASE)]
 
         if awb_lines:
@@ -442,9 +459,9 @@ class InvoiceExtractor(BaseExtractor):
                 awb_match = re.search(r"\b(AWB[-/ ]?\d{7,10})\b", atext, re.IGNORECASE)
                 awb_val = awb_match.group(1).strip() if awb_match else None
 
-                ay = _midpoint_y(aline.get("bbox_norm", [0, 0, 0, 0]))
-                # Find lines on the same row (within +-25px Y)
-                row_lines = [l for l in table_lines if abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - ay) <= 25.0]
+                ay = _midpoint_y(to_unit_bbox(aline.get("bbox_norm")))
+                # Lines on the same row (within the configured fraction of the page height)
+                row_lines = [l for l in table_lines if abs(_midpoint_y(to_unit_bbox(l.get("bbox_norm"))) - ay) <= settings.invoice_row_y_tolerance]
                 row_text = " ".join(l.get("text", "") for l in row_lines)
 
                 shp_match = re.search(r"\b(SHP[-/]?\d{4,}[-\w]*)\b", row_text, re.IGNORECASE)

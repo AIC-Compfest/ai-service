@@ -1,0 +1,25 @@
+{
+  "document_id": "pod/pod_10_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.material",
+      "rows": [
+        [
+          "Ball valve 2.1/2 \" valmatic",
+          "1 unit"
+        ],
+        [
+          "Ball valve ½\" valmatic",
+          "2 unit"
+        ],
+        [
+          "Presure gauge c/w simphone",
+          "3 unit"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

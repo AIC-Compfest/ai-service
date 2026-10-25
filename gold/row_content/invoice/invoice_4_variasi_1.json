@@ -1,0 +1,47 @@
+{
+  "document_id": "invoice/invoice_4_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Ganti oli mesin",
+          "Shell Helix 5W-30 (4 liter)",
+          "12",
+          "450000",
+          "0",
+          "5400000"
+        ],
+        [
+          "2",
+          "Kampas rem depan",
+          "Original Toyota, set",
+          "6",
+          "850000",
+          "5",
+          "4845000"
+        ],
+        [
+          "3",
+          "Jasa service berkala",
+          "Tune up 10.000 km",
+          "8",
+          "300000",
+          "0",
+          "2400000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "12900000",
+    "255000",
+    "0",
+    "0",
+    "12645000",
+    "931363.64"
+  ]
+}

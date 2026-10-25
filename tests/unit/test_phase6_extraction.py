@@ -220,6 +220,31 @@ class TestExtractionUtils(unittest.TestCase):
         self.assertEqual(conf, 0.0)
         self.assertIsNone(bbox)
 
+    def test_spatial_helpers_respect_normalized_bbox_scale(self):
+        lines = [
+            _make_line("Dari", [0.02, 0.35, 0.05, 0.37]),
+            _make_line(": PT. GEMILANG TIRTA ABADI", [0.23, 0.35, 0.45, 0.37]),
+            _make_line("Alamat jauh", [0.23, 0.60, 0.45, 0.62]),
+        ]
+
+        value, confidence, bbox = find_key_value_horizontal(lines, ["dari"])
+
+        self.assertEqual(value, "PT. GEMILANG TIRTA ABADI")
+        self.assertEqual(confidence, 0.99)
+        self.assertEqual(bbox, lines[1]["bbox_norm"])
+
+    def test_vertical_helper_does_not_cross_distant_normalized_rows(self):
+        lines = [
+            _make_line("Pengirim", [0.10, 0.20, 0.25, 0.22]),
+            _make_line("PT Sumber Utama", [0.10, 0.24, 0.35, 0.26]),
+            _make_line("Disetujui oleh", [0.10, 0.55, 0.30, 0.57]),
+        ]
+
+        value, _, bbox = find_key_value_vertical(lines, ["pengirim"], max_y_gap=80.0)
+
+        self.assertEqual(value, "PT Sumber Utama")
+        self.assertEqual(bbox, lines[1]["bbox_norm"])
+
     def test_find_amount_near_keyword(self):
         amount, conf, bbox = find_amount_near_keyword(self.lines, ["grand total", "total"])
         self.assertIsNotNone(amount)
@@ -366,6 +391,28 @@ class TestSuratJalanExtractor(unittest.TestCase):
         self.assertFalse(f.is_unknown)
         self.assertIn("SJ", f.value)
 
+    def test_sender_name_uses_value_next_to_anchor_not_whole_page(self):
+        lines = [
+            _make_line("12/10/25, 14:36", [0.01, 0.01, 0.08, 0.03]),
+            _make_line("Dari", [0.02, 0.35, 0.05, 0.37]),
+            _make_line(": PT. GEMILANG TIRTA ABADI", [0.23, 0.35, 0.45, 0.37]),
+            _make_line("Disetujui oleh", [0.02, 0.58, 0.15, 0.60]),
+        ]
+        evidence = {"pages": [{"page_number": 1, "lines": lines}]}
+
+        fields = {field.field: field for field in self.extractor.extract("TEST-SJ-NORMALIZED", evidence)}
+
+        self.assertEqual(fields["sender_name"].value, "PT. GEMILANG TIRTA ABADI")
+        self.assertEqual(fields["sender_name"].source.bbox.x1, 0.23)
+
+    def test_shipment_id_is_not_synthesized_from_an_awb(self):
+        evidence = {"pages": [{"page_number": 1, "lines": [
+            _make_line("AWB: 12345678", [0.1, 0.2, 0.5, 0.22]),
+        ]}]}
+        fields = {field.field: field for field in self.extractor.extract("TEST-SJ-NO-SYNTH", evidence)}
+        self.assertIsNone(fields["shipment_id"].value)
+        self.assertTrue(fields["shipment_id"].is_unknown)
+
     def test_awb_extracted(self):
         f = self.field_map.get("awb")
         self.assertIsNotNone(f)
@@ -379,6 +426,18 @@ class TestSuratJalanExtractor(unittest.TestCase):
         self.assertFalse(f.is_unknown, "actual_weight_kg should be extracted from synthetic data")
         self.assertIsInstance(f.value, float)
         self.assertEqual(f.value, 15.0)
+
+    def test_missing_weight_remains_reviewable_instead_of_crashing(self):
+        """A valid delivery note may omit kg; return an unknown field for HITL."""
+        evidence = {"pages": [{"lines": [{
+            "text": "SURAT JALAN No. SJ-001 tanpa berat",
+            "confidence": 0.95,
+            "bbox_norm": [0.1, 0.1, 0.6, 0.15],
+        }]}]}
+        fields = self.extractor.extract("TEST-SJ-NO-WEIGHT", evidence)
+        weight = next(field for field in fields if field.field == "actual_weight_kg")
+        self.assertTrue(weight.is_unknown)
+        self.assertIsNone(weight.value)
 
     def test_origin_destination_extracted(self):
         origin = self.field_map.get("origin")
@@ -559,8 +618,9 @@ class TestPhase6Integration(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.root_dir = Path(__file__).resolve().parent.parent.parent.parent
-        cls.dataset_dir = cls.root_dir / "synthetic-data" / "dataset" / "v4_pilot_20"
+        from tests.support.paths import SYNTHETIC_DATA_ROOT
+
+        cls.dataset_dir = SYNTHETIC_DATA_ROOT / "dataset" / "v4_pilot_20"
         cls.skip = not cls.dataset_dir.exists()
 
     def _run_pipeline(self, file_path: Path) -> dict:

@@ -1,0 +1,163 @@
+{
+  "document_id": "rate_card/rate_card_8_variasi_1",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_8_variasi_1.pdf",
+    "sha256": "b78b99a8322ee6f2780c15f8c698b1861d07e48346f7b44174cd323d9cf43a73",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_8_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.086275,
+            0.747986,
+            0.913726,
+            0.808219
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Description",
+              "normalized_text": "Description",
+              "bbox_norm": [
+                0.086275,
+                0.747986,
+                0.162677,
+                0.762765
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Cost",
+              "normalized_text": "Cost",
+              "bbox_norm": [
+                0.882864,
+                0.747986,
+                0.913725,
+                0.762765
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Net Freight Charges",
+                  "normalized_text": "Net Freight Charges",
+                  "bbox_norm": [
+                    0.086275,
+                    0.770713,
+                    0.219011,
+                    0.785492
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "USD 3,425.00",
+                  "normalized_text": "USD 3,425.00",
+                  "bbox_norm": [
+                    0.826489,
+                    0.770713,
+                    0.913726,
+                    0.785492
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel Surcharge",
+                  "normalized_text": "Fuel Surcharge",
+                  "bbox_norm": [
+                    0.086275,
+                    0.793441,
+                    0.187386,
+                    0.808219
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "USD 210.00",
+                  "normalized_text": "USD 210.00",
+                  "bbox_norm": [
+                    0.838073,
+                    0.793441,
+                    0.913726,
+                    0.808219
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total Cost",
+                  "normalized_text": "Total Cost",
+                  "bbox_norm": [
+                    0.086275,
+                    0.816168,
+                    0.154177,
+                    0.830946
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "USD 3,635.00",
+                  "normalized_text": "USD 3,635.00",
+                  "bbox_norm": [
+                    0.826489,
+                    0.816168,
+                    0.913726,
+                    0.830946
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 2
+          }
+        }
+      ]
+    }
+  ]
+}

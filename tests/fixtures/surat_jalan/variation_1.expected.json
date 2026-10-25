@@ -1,0 +1,33 @@
+{
+  "source_file": "surat_jalan_7_variasi_1.pdf",
+  "document_type": "SURAT_JALAN",
+  "description": "Hand-labelled expectations for the reference variation. Used only as ONE fixture. Production code must not contain any of these literals.",
+  "fields": {
+    "surat_jalan_number": { "equals": "SDO202508000117", "review_status_in": ["ACCEPTED", "REVIEW"] },
+    "sender_name": { "equals": "PT. GEMILANG TIRTA ABADI", "review_status_in": ["ACCEPTED", "REVIEW"] },
+    "sender_address": { "contains": "JL. RAYA BEKASI KM. 27", "not_equals_any": ["Disetujui oleh"] },
+    "shipment_date": { "equals": "2025-10-12", "review_status_in": ["ACCEPTED", "REVIEW"] },
+    "shipment_id": { "equals": "PO-2025-0388", "review_status": "REVIEW" },
+    "receiver_name": { "one_of": ["Gudang Rungkut", "PENJUALAN"], "review_status": "REVIEW" },
+    "line_items": {
+      "kind": "table",
+      "role": "line_items",
+      "headers": ["Kode Barang", "Nama Barang", "Jumlah Diretur"],
+      "row_count": 2,
+      "rows_cells": [
+        ["0000000003412", "Epson L3210 Printer", "2.00"],
+        ["0000000003587", "Logitech Mouse M170", "5.00"]
+      ]
+    }
+  },
+  "not_asserted": ["receiver_address"],
+  "legacy_fields_persisted_but_hidden": ["awb", "origin", "destination", "quantity", "actual_weight_kg", "item_description"],
+  "global": {
+    "forbidden_substrings_in_scalar_values": ["12/10/25, 14:36", "Sales Return DO", "RINCIAN SURAT JALAN", "TANDA TANGAN", "[map["],
+    "max_scalar_length": 160,
+    "no_newline_in_scalar_values": true,
+    "every_value_has_numeric_score_and_review_status": true,
+    "every_value_has_source_span": true,
+    "no_value_without_candidate_is_null_but_candidate_exists": true
+  }
+}

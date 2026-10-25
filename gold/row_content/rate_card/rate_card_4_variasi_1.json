@@ -1,0 +1,39 @@
+{
+  "document_id": "rate_card/rate_card_4_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "Kursi Direktur Chairman EC 3000\nh. 110 x w. 65 x d. 60",
+          "Rp 1.850.000",
+          "2",
+          "Rp 3.700.000"
+        ],
+        [
+          "2",
+          "Meja Meeting Oval Orbitrend 8 Seater\nw. 240 x d. 120 x h. 75",
+          "Rp 4.200.000",
+          "1",
+          "Rp 4.200.000"
+        ],
+        [
+          "3",
+          "Credenza Kantor / Lemari Arsip 2 Pintu\nh. 90 x w. 120 x d. 45",
+          "Rp 1.450.000",
+          "2",
+          "Rp 2.900.000"
+        ],
+        [
+          "4",
+          "Biaya Kirim & Instalasi Area Jakarta",
+          "Rp 750.000"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

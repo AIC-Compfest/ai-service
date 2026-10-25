@@ -1,0 +1,210 @@
+{
+  "document_id": "surat_jalan/surat_jalan_7_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_7_variasi_2.pdf",
+    "sha256": "654d4f4ca0990eba4e41ef19a75fc607da0e8373ce98cd14d4d3155353b44f9f",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_7_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.032692,
+            0.686714,
+            0.893312,
+            0.847346
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Kode Barang",
+              "normalized_text": "Kode Barang",
+              "bbox_norm": [
+                0.074481,
+                0.686714,
+                0.167826,
+                0.711124
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.420886,
+                0.686714,
+                0.517576,
+                0.711124
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jumlah Diretur",
+              "normalized_text": "Jumlah Diretur",
+              "bbox_norm": [
+                0.787457,
+                0.686714,
+                0.893312,
+                0.711124
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "0000000007021",
+                  "normalized_text": "0000000007021",
+                  "bbox_norm": [
+                    0.032692,
+                    0.732079,
+                    0.141112,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "HP LaserJet Pro M404dn",
+                  "normalized_text": "HP LaserJet Pro M404dn",
+                  "bbox_norm": [
+                    0.330769,
+                    0.732079,
+                    0.499174,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "1.00",
+                  "normalized_text": "1.00",
+                  "bbox_norm": [
+                    0.82579,
+                    0.732079,
+                    0.85498,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "0000000007144",
+                  "normalized_text": "0000000007144",
+                  "bbox_norm": [
+                    0.032692,
+                    0.777534,
+                    0.141112,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Brother Toner TN-2360",
+                  "normalized_text": "Brother Toner TN-2360",
+                  "bbox_norm": [
+                    0.330769,
+                    0.777534,
+                    0.485824,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "10.00",
+                  "normalized_text": "10.00",
+                  "bbox_norm": [
+                    0.82162,
+                    0.777534,
+                    0.85915,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "0000000007260",
+                  "normalized_text": "0000000007260",
+                  "bbox_norm": [
+                    0.032692,
+                    0.822989,
+                    0.141112,
+                    0.847346
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "TP-Link Router Archer C6",
+                  "normalized_text": "TP-Link Router Archer C6",
+                  "bbox_norm": [
+                    0.330769,
+                    0.822989,
+                    0.503314,
+                    0.847346
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "3.00",
+                  "normalized_text": "3.00",
+                  "bbox_norm": [
+                    0.82579,
+                    0.822989,
+                    0.85498,
+                    0.847346
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

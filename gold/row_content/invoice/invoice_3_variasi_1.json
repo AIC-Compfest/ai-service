@@ -1,0 +1,33 @@
+{
+  "document_id": "invoice/invoice_3_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Printer Epson L3210",
+          "Original/Hitam",
+          "2850000",
+          "2",
+          "5700000"
+        ],
+        [
+          "2",
+          "Tinta Epson 003",
+          "Original/Cyan",
+          "95000",
+          "4",
+          "380000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "6080000",
+    "668800",
+    "6748800"
+  ]
+}

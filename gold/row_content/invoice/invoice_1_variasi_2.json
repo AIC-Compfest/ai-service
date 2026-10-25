@@ -1,0 +1,42 @@
+{
+  "document_id": "invoice/invoice_1_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Jasa Desain Website",
+          "Company Profile/5 Halaman",
+          "1",
+          "12000000",
+          "12000000"
+        ],
+        [
+          "2",
+          "Hosting & Domain",
+          "Paket Bisnis/1 Tahun",
+          "1",
+          "2400000",
+          "2400000"
+        ],
+        [
+          "3",
+          "Maintenance Bulanan",
+          "Basic/3 Bulan",
+          "3",
+          "500000",
+          "1500000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "15900000",
+    "1749000",
+    "500000",
+    "17149000"
+  ]
+}

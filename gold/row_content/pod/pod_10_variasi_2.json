@@ -1,0 +1,25 @@
+{
+  "document_id": "pod/pod_10_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.material",
+      "rows": [
+        [
+          "Centrifugal Transfer Pump 15 HP KSB",
+          "2 unit"
+        ],
+        [
+          "Gate Valve 4\" Flange ANSI 150",
+          "4 unit"
+        ],
+        [
+          "Digital Flow Meter Endress+Hauser 3\"",
+          "1 unit"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

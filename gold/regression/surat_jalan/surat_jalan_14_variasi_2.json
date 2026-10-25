@@ -1,0 +1,883 @@
+{
+  "document_id": "surat_jalan/surat_jalan_14_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_14_variasi_2.pdf",
+    "sha256": "2ee937e3e99dfec6bf8dbceadc28d3dc991659947795d3db446c907a0156be9a",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_14_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.064076,
+            0.395313,
+            0.932773,
+            0.542928
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "ALAT TULIS & ARSIP",
+              "normalized_text": "ALAT TULIS & ARSIP",
+              "bbox_norm": [
+                0.064076,
+                0.395365,
+                0.202911,
+                0.409895
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Jenis",
+              "normalized_text": "Jenis",
+              "bbox_norm": [
+                0.341785,
+                0.395365,
+                0.376702,
+                0.409895
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Type",
+              "normalized_text": "Type",
+              "bbox_norm": [
+                0.453602,
+                0.395365,
+                0.485474,
+                0.409895
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Merk",
+              "normalized_text": "Merk",
+              "bbox_norm": [
+                0.551291,
+                0.395365,
+                0.583163,
+                0.409895
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "",
+              "normalized_text": "",
+              "bbox_norm": [
+                0.597689,
+                0,
+                0.642857,
+                0
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "",
+              "normalized_text": "",
+              "bbox_norm": [
+                0.642857,
+                0,
+                0.740546,
+                0
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 6,
+              "raw_text": "-",
+              "normalized_text": "-",
+              "bbox_norm": [
+                0.928226,
+                0.395313,
+                0.932773,
+                0.409811
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Kertas F4 70 gram",
+                  "normalized_text": "Kertas F4 70 gram",
+                  "bbox_norm": [
+                    0.064076,
+                    0.411952,
+                    0.177156,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "F4s",
+                  "normalized_text": "F4s",
+                  "bbox_norm": [
+                    0.347862,
+                    0.411952,
+                    0.370625,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "70 GRAM",
+                  "normalized_text": "70 GRAM",
+                  "bbox_norm": [
+                    0.439564,
+                    0.411952,
+                    0.499511,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "SIDU",
+                  "normalized_text": "SIDU",
+                  "bbox_norm": [
+                    0.550915,
+                    0.411952,
+                    0.583538,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "20",
+                  "normalized_text": "20",
+                  "bbox_norm": [
+                    0.624521,
+                    0.411952,
+                    0.639706,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "48,000",
+                  "normalized_text": "48,000",
+                  "bbox_norm": [
+                    0.694586,
+                    0.411952,
+                    0.736344,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "960,000.00",
+                  "normalized_text": "960,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.411952,
+                    0.932773,
+                    0.426451
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Map Snelhecter",
+                  "normalized_text": "Map Snelhecter",
+                  "bbox_norm": [
+                    0.064076,
+                    0.428592,
+                    0.159705,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Folio",
+                  "normalized_text": "Folio",
+                  "bbox_norm": [
+                    0.344448,
+                    0.428592,
+                    0.374039,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Biru",
+                  "normalized_text": "Biru",
+                  "bbox_norm": [
+                    0.457398,
+                    0.428592,
+                    0.481677,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Bantex",
+                  "normalized_text": "Bantex",
+                  "bbox_norm": [
+                    0.545972,
+                    0.428592,
+                    0.588482,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "50",
+                  "normalized_text": "50",
+                  "bbox_norm": [
+                    0.624521,
+                    0.428592,
+                    0.639706,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "14,500",
+                  "normalized_text": "14,500",
+                  "bbox_norm": [
+                    0.694586,
+                    0.428592,
+                    0.736344,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "725,000.00",
+                  "normalized_text": "725,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.428592,
+                    0.932773,
+                    0.44309
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Spidol Whiteboard",
+                  "normalized_text": "Spidol Whiteboard",
+                  "bbox_norm": [
+                    0.064076,
+                    0.445231,
+                    0.175641,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Dus",
+                  "normalized_text": "Dus",
+                  "bbox_norm": [
+                    0.347104,
+                    0.445231,
+                    0.371383,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Hitam",
+                  "normalized_text": "Hitam",
+                  "bbox_norm": [
+                    0.451711,
+                    0.445231,
+                    0.487365,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Joyko",
+                  "normalized_text": "Joyko",
+                  "bbox_norm": [
+                    0.549393,
+                    0.445231,
+                    0.585061,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.624521,
+                    0.445231,
+                    0.639706,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "9,000",
+                  "normalized_text": "9,000",
+                  "bbox_norm": [
+                    0.702178,
+                    0.445231,
+                    0.736344,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "108,000.00",
+                  "normalized_text": "108,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.445231,
+                    0.932773,
+                    0.45973
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Stapler Besar",
+                  "normalized_text": "Stapler Besar",
+                  "bbox_norm": [
+                    0.064076,
+                    0.461871,
+                    0.1468,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "HD-50",
+                  "normalized_text": "HD-50",
+                  "bbox_norm": [
+                    0.339518,
+                    0.461871,
+                    0.378969,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Silver",
+                  "normalized_text": "Silver",
+                  "bbox_norm": [
+                    0.452468,
+                    0.461871,
+                    0.486607,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Kenko",
+                  "normalized_text": "Kenko",
+                  "bbox_norm": [
+                    0.54787,
+                    0.461871,
+                    0.586584,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "6",
+                  "normalized_text": "6",
+                  "bbox_norm": [
+                    0.632113,
+                    0.461871,
+                    0.639706,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "68,000",
+                  "normalized_text": "68,000",
+                  "bbox_norm": [
+                    0.694586,
+                    0.461871,
+                    0.736344,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "408,000.00",
+                  "normalized_text": "408,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.461871,
+                    0.932773,
+                    0.476369
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Isi Staples",
+                  "normalized_text": "Isi Staples",
+                  "bbox_norm": [
+                    0.064076,
+                    0.478511,
+                    0.127068,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "No. 10",
+                  "normalized_text": "No. 10",
+                  "bbox_norm": [
+                    0.339129,
+                    0.478511,
+                    0.379358,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Box",
+                  "normalized_text": "Box",
+                  "bbox_norm": [
+                    0.457774,
+                    0.478511,
+                    0.481302,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Max",
+                  "normalized_text": "Max",
+                  "bbox_norm": [
+                    0.554329,
+                    0.478511,
+                    0.580124,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "30",
+                  "normalized_text": "30",
+                  "bbox_norm": [
+                    0.624521,
+                    0.478511,
+                    0.639706,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "4,500",
+                  "normalized_text": "4,500",
+                  "bbox_norm": [
+                    0.702178,
+                    0.478511,
+                    0.736344,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "135,000.00",
+                  "normalized_text": "135,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.478511,
+                    0.932773,
+                    0.493009
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r6",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Buku Folio 200 lembar",
+                  "normalized_text": "Buku Folio 200 lembar",
+                  "bbox_norm": [
+                    0.064076,
+                    0.49515,
+                    0.200685,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Folio",
+                  "normalized_text": "Folio",
+                  "bbox_norm": [
+                    0.344448,
+                    0.49515,
+                    0.374039,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Hard Cover",
+                  "normalized_text": "Hard Cover",
+                  "bbox_norm": [
+                    0.434634,
+                    0.49515,
+                    0.504441,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "SIDU",
+                  "normalized_text": "SIDU",
+                  "bbox_norm": [
+                    0.550915,
+                    0.49515,
+                    0.583538,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "15",
+                  "normalized_text": "15",
+                  "bbox_norm": [
+                    0.624521,
+                    0.49515,
+                    0.639706,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "32,000",
+                  "normalized_text": "32,000",
+                  "bbox_norm": [
+                    0.694586,
+                    0.49515,
+                    0.736344,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "480,000.00",
+                  "normalized_text": "480,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.49515,
+                    0.932773,
+                    0.509649
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r7",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Lakban Bening",
+                  "normalized_text": "Lakban Bening",
+                  "bbox_norm": [
+                    0.064076,
+                    0.51179,
+                    0.155171,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "2 inch",
+                  "normalized_text": "2 inch",
+                  "bbox_norm": [
+                    0.341027,
+                    0.51179,
+                    0.37746,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Bening",
+                  "normalized_text": "Bening",
+                  "bbox_norm": [
+                    0.448283,
+                    0.51179,
+                    0.490792,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Daimaru",
+                  "normalized_text": "Daimaru",
+                  "bbox_norm": [
+                    0.541432,
+                    0.51179,
+                    0.593022,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "24",
+                  "normalized_text": "24",
+                  "bbox_norm": [
+                    0.624521,
+                    0.51179,
+                    0.639706,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "11,500",
+                  "normalized_text": "11,500",
+                  "bbox_norm": [
+                    0.694586,
+                    0.51179,
+                    0.736344,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "276,000.00",
+                  "normalized_text": "276,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.51179,
+                    0.932773,
+                    0.526288
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r8",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Tinta Stempel",
+                  "normalized_text": "Tinta Stempel",
+                  "bbox_norm": [
+                    0.064076,
+                    0.528429,
+                    0.148316,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Botol",
+                  "normalized_text": "Botol",
+                  "bbox_norm": [
+                    0.343683,
+                    0.528429,
+                    0.374804,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Biru",
+                  "normalized_text": "Biru",
+                  "bbox_norm": [
+                    0.457398,
+                    0.528429,
+                    0.481677,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Trodat",
+                  "normalized_text": "Trodat",
+                  "bbox_norm": [
+                    0.547495,
+                    0.528429,
+                    0.586959,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "10",
+                  "normalized_text": "10",
+                  "bbox_norm": [
+                    0.624521,
+                    0.528429,
+                    0.639706,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "13,500",
+                  "normalized_text": "13,500",
+                  "bbox_norm": [
+                    0.694586,
+                    0.528429,
+                    0.736344,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 6,
+                  "raw_text": "135,000.00",
+                  "normalized_text": "135,000.00",
+                  "bbox_norm": [
+                    0.864441,
+                    0.528429,
+                    0.932773,
+                    0.542928
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "SUBTOTAL",
+                  "normalized_text": "SUBTOTAL",
+                  "bbox_norm": [
+                    0.643907,
+                    0.564144,
+                    0.715995,
+                    0.578642
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "3,227,000.00",
+                  "normalized_text": "3,227,000.00",
+                  "bbox_norm": [
+                    0.853052,
+                    0.564144,
+                    0.932773,
+                    0.578642
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "8/8",
+            "columns": 7
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "document_id": "surat_jalan/surat_jalan_9_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.detail_order",
+      "rows": [
+        [
+          "1",
+          "Laptop Kerja 14\" (LK1402)",
+          "3",
+          "Rp 8.750.000.-",
+          "Rp 26.250.000.-"
+        ],
+        [
+          "2",
+          "Monitor LED 24\" (ML2406)",
+          "6",
+          "Rp 1.890.000.-",
+          "Rp 11.340.000.-"
+        ],
+        [
+          "3",
+          "Printer Laser (PL7310)",
+          "2",
+          "Rp 3.240.000.-",
+          "Rp 6.480.000.-"
+        ],
+        [
+          "4",
+          "Router Wi-Fi 6 (RW6055)",
+          "8",
+          "Rp 865.000.-",
+          "Rp 6.920.000.-"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "Rp 50.990.000.-",
+    "Rp 56.598.900.-"
+  ]
+}

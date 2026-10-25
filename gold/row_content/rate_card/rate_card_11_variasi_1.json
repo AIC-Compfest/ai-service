@@ -1,0 +1,29 @@
+{
+  "document_id": "rate_card/rate_card_11_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.stops",
+      "rows": [
+        [
+          "1",
+          "PICK",
+          "HOME SUPPLY OUTLET (OCALA), FL, 3320 SW College Rd, OCALA, FL 34474",
+          "10/06/24",
+          "9:00 am"
+        ],
+        [
+          "2",
+          "DROP",
+          "Coastal Cabinets and Design, 745 Harbor Dr, SARASOTA, FL 34236",
+          "10/06/24",
+          "by 3:00 pm"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "475.0"
+  ]
+}

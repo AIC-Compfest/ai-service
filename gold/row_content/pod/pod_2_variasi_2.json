@@ -1,0 +1,23 @@
+{
+  "document_id": "pod/pod_2_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.rincian_barang",
+      "rows": [
+        [
+          "1",
+          "Palet Kayu Standar Ekspor",
+          "25 Unit"
+        ],
+        [
+          "2",
+          "Plastic Stretch Film Roll",
+          "30 Roll"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

@@ -1,0 +1,157 @@
+{
+  "document_id": "invoice/invoice_7_variasi_1",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_7_variasi_1.pdf",
+    "sha256": "1b849ebf5c6531a531c65a0b907c92d7ed5424c6431d24eb5e58e53c71379a2c",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_7_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.02875,
+            0.308822,
+            0.8275,
+            0.356696
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No.",
+              "normalized_text": "No.",
+              "bbox_norm": [
+                0.02875,
+                0.308822,
+                0.056942,
+                0.325861
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Description",
+              "normalized_text": "Description",
+              "bbox_norm": [
+                0.225616,
+                0.308822,
+                0.321884,
+                0.325861
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Charges IDR",
+              "normalized_text": "Charges IDR",
+              "bbox_norm": [
+                0.70625,
+                0.308822,
+                0.811268,
+                0.325861
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1.",
+                  "normalized_text": "1.",
+                  "bbox_norm": [
+                    0.02875,
+                    0.339695,
+                    0.043345,
+                    0.356696
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "A/F CAN-JKT SPARE PARTS; 210 KG X RP 185.000/KG",
+                  "normalized_text": "A/F CAN-JKT SPARE PARTS; 210 KG X RP 185.000/KG",
+                  "bbox_norm": [
+                    0.065,
+                    0.341744,
+                    0.540875,
+                    0.356647
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rp 38,850,000",
+                  "normalized_text": "Rp 38,850,000",
+                  "bbox_norm": [
+                    0.69125,
+                    0.341744,
+                    0.8275,
+                    0.356647
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total Charges",
+                  "normalized_text": "Total Charges",
+                  "bbox_norm": [
+                    0.365,
+                    0.484644,
+                    0.4749,
+                    0.501646
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 38,850,000",
+                  "normalized_text": "Rp 38,850,000",
+                  "bbox_norm": [
+                    0.69125,
+                    0.486693,
+                    0.8275,
+                    0.501596
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "1/1",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

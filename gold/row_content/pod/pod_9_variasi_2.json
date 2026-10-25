@@ -1,0 +1,28 @@
+{
+  "document_id": "pod/pod_9_variasi_2",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.logistik_items",
+      "rows": [
+        [
+          "Tinta Sidik Jari Kedap Air",
+          "2",
+          "Botol"
+        ],
+        [
+          "Segel Stiker Plastik Box",
+          "12",
+          "Keping"
+        ],
+        [
+          "Surat Suara Tersegel + Cadangan",
+          "600",
+          "Lembar"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

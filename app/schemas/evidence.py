@@ -47,3 +47,10 @@ class ExtractedField(BaseModel):
     source: EvidenceSource
     method: ExtractionMethod
     is_unknown: bool = False  # true jika evidence tidak cukup (INSUFFICIENT_EVIDENCE)
+    raw_text: str | None = None
+    confidence_source: str | None = None
+    review_status: str = "UNKNOWN"
+    low_confidence: bool = False
+    source_kind: str = "rule"
+    alternatives: list[dict[str, Any]] = Field(default_factory=list)
+    decoder_metadata: dict[str, Any] = Field(default_factory=dict)

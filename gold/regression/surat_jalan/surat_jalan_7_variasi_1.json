@@ -1,0 +1,168 @@
+{
+  "document_id": "surat_jalan/surat_jalan_7_variasi_1",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_7_variasi_1.pdf",
+    "sha256": "16ca142f50383d9a58ba852e9c7d3a7bad41c189a5c56cfde2be2bc28d44617d",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_7_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.032692,
+            0.686714,
+            0.85498,
+            0.801891
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Kode Barang",
+              "normalized_text": "Kode Barang",
+              "bbox_norm": [
+                0.074481,
+                0.686714,
+                0.167826,
+                0.711124
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.420886,
+                0.686714,
+                0.517576,
+                0.711124
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.787457,
+                0.686714,
+                0.839972,
+                0.711124
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "0000000003412",
+                  "normalized_text": "0000000003412",
+                  "bbox_norm": [
+                    0.032692,
+                    0.732079,
+                    0.141112,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Epson L3210 Printer",
+                  "normalized_text": "Epson L3210 Printer",
+                  "bbox_norm": [
+                    0.330769,
+                    0.732079,
+                    0.467509,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "2.00",
+                  "normalized_text": "2.00",
+                  "bbox_norm": [
+                    0.82579,
+                    0.732079,
+                    0.85498,
+                    0.756437
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "0000000003587",
+                  "normalized_text": "0000000003587",
+                  "bbox_norm": [
+                    0.032692,
+                    0.777534,
+                    0.141112,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Logitech Mouse M170",
+                  "normalized_text": "Logitech Mouse M170",
+                  "bbox_norm": [
+                    0.330769,
+                    0.777534,
+                    0.478339,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "5.00",
+                  "normalized_text": "5.00",
+                  "bbox_norm": [
+                    0.82579,
+                    0.777534,
+                    0.85498,
+                    0.801891
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

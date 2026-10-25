@@ -163,7 +163,8 @@ class TestPhase10SignatureDetection:
         draw_curved_handwritten_signature(img, color=(80, 80, 80), center=(600, 760))
         # Apply heavy Gaussian blur + salt/pepper noise
         blurred = cv2.GaussianBlur(img, (21, 21), 0)
-        noise = np.random.normal(0, 25, img.shape).astype(np.uint8)
+        # Seeded generator keeps this test deterministic (D-010).
+        noise = np.random.default_rng(1234).normal(0, 25, img.shape).astype(np.uint8)
         noisy_img = cv2.add(blurred, noise)
 
         res = self.detector.detect("DOC-TEST-006", img_to_bytes(noisy_img))

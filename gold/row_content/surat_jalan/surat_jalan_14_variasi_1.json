@@ -1,0 +1,70 @@
+{
+  "document_id": "surat_jalan/surat_jalan_14_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.items",
+      "rows": [
+        [
+          "Flashdisk 32 GB",
+          "USB 3.0",
+          "Cruzer",
+          "SanDisk",
+          "12",
+          "85,000",
+          "1,020,000.00"
+        ],
+        [
+          "Mouse Wireless",
+          "M185",
+          "Black",
+          "Logitech",
+          "8",
+          "125,000",
+          "1,000,000.00"
+        ],
+        [
+          "Keyboard USB",
+          "K120",
+          "Black",
+          "Logitech",
+          "8",
+          "135,000",
+          "1,080,000.00"
+        ],
+        [
+          "Harddisk External 1TB",
+          "Elements",
+          "Black",
+          "WD",
+          "3",
+          "1,050,000",
+          "3,150,000.00"
+        ],
+        [
+          "Kabel HDMI 5 meter",
+          "HDMI",
+          "Black",
+          "Vention",
+          "6",
+          "95,000",
+          "570,000.00"
+        ],
+        [
+          "Tinta Printer 003",
+          "L3210",
+          "Black",
+          "Epson",
+          "10",
+          "98,000",
+          "980,000.00"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "7,800,000.00",
+    "Rp 7,950,000.00"
+  ]
+}

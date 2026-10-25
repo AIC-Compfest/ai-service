@@ -164,19 +164,6 @@ class SuratJalanExtractor(BaseExtractor):
                     bbox = line.get("bbox_norm")
                     break
 
-        # Fallback 2: reconstruct from AWB number if only AWB is printed on waybill (PRD §14)
-        if not raw:
-            for line in all_lines:
-                m_awb = re.search(r"\b(?:AWB[-/ ]?|No:\s*|Resi\s*:\s*|Consignment\s*:\s*|Consignment\s+Note\s*:\s*)(\d{6,8})\b", line.get("text", ""), re.IGNORECASE)
-                if not m_awb:
-                    m_awb = re.search(r"\b(100\d{5})\b", line.get("text", ""))
-                if m_awb:
-                    digits = m_awb.group(1)
-                    raw = f"SHP-2026-{digits[-6:].zfill(6)}"
-                    conf = float(line.get("confidence", 0.85))
-                    bbox = line.get("bbox_norm")
-                    break
-
         fields.append(build_field(
             field="shipment_id", value=raw, confidence=conf,
             bbox_norm=bbox, document_id=document_id, page=page_num,
@@ -388,6 +375,12 @@ class SuratJalanExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 12. Actual Weight (CRITICAL for reconciliation)
         # Scan all lines for physical weights (kg)
+        # Initialise the full field contract before trying any extraction path.
+        # Some valid Surat Jalan documents simply do not state a weight in kg;
+        # that must become a reviewable unknown field, never a 500 response.
+        parsed_weight: float | None = None
+        conf_w = 0.0
+        bbox_w = None
         found_weights: list[tuple[float, float, list[float]]] = []
         for line in all_lines:
             text = line.get("text", "")

@@ -1,0 +1,31 @@
+{
+  "document_id": "pod/pod_8_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.items",
+      "rows": [
+        [
+          "DOC-CIV-091",
+          "Cetak Biru Denah A3",
+          "3 Lembar",
+          "Revisi Final"
+        ],
+        [
+          "SPK-BM-2026",
+          "Surat Perintah Kerja",
+          "1 Ekspl",
+          "Asli Ttd Direksi"
+        ],
+        [
+          "JAL-88211",
+          "Surat Jalan Material",
+          "2 Rangkap",
+          "Putih & Merah"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

@@ -1,0 +1,24 @@
+SURAT_JALAN:
+  _stop_labels: [status, catatan, disetujui oleh, asal, tujuan, origin, destination]
+  surat_jalan_number:
+    labels: [no surat jalan, nomor surat jalan, surat jalan no, delivery note number, delivery note no]
+    kind: id
+  shipment_id:
+    labels: [no pesanan, nomor pesanan, purchase order, po number, shipment id, reference number]
+    kind: id
+  shipment_date:
+    labels: [tanggal pengiriman, tanggal kirim, tanggal, ship date, dispatch date]
+    kind: date
+  sender_name:
+    labels: [dari, pengirim, shipper, sender]
+    kind: party
+  sender_address:
+    labels: [dari, pengirim, shipper, sender]
+    kind: address
+    continuation_only: true
+  receiver_name:
+    labels: [dikembalikan ke, dikirim ke, diterima oleh, kepada, penerima, consignee, receiver]
+    kind: party
+  receiver_address:
+    labels: [alamat penerima, alamat tujuan, receiver address, consignee address]
+    kind: address

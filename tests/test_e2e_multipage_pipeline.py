@@ -17,13 +17,14 @@ from pathlib import Path
 from app.services.pipeline import Phase5DocumentPipeline
 from app.api.extract import get_extractor
 from app.schemas.document_type import DocumentType
+from tests.support.paths import SAMPLE_DATASETS_ROOT, SYNTHETIC_DATA_ROOT
 
 
 class TestE2EMultiPagePipeline(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.pipeline = Phase5DocumentPipeline()
-        cls.sample_dir = Path("d:/AIC/sample_datasets")
+        cls.sample_dir = SAMPLE_DATASETS_ROOT
         cls.bundle_clean = cls.sample_dir / "01_CLEAN_MATCH_Cepat_Logistik_Nusantara.pdf"
         cls.bundle_overcharge = cls.sample_dir / "02_RATE_OVERCHARGE_Trans_Express_Indonesia.pdf"
         cls.bundle_exception = cls.sample_dir / "03_WEIGHT_FUEL_EXCEPTION_Kargo_Andalan.pdf"
@@ -140,7 +141,7 @@ class TestE2EMultiPagePipeline(unittest.TestCase):
 
     def test_10page_synthetic_fixture_segmentation(self):
         """Test segmentation on the 10-page synthetic test fixture."""
-        fixture_path = Path("d:/AIC/synthetic-data/test_fixtures/synthetic_3pl_test_10pages.pdf")
+        fixture_path = SYNTHETIC_DATA_ROOT / "test_fixtures" / "synthetic_3pl_test_10pages.pdf"
         if not fixture_path.exists():
             self.skipTest("10-page fixture PDF not found")
 

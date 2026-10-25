@@ -30,7 +30,6 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
-import fitz  # PyMuPDF for PDF rendering
 import numpy as np
 
 try:
@@ -225,8 +224,8 @@ class BBoxCropVerifier:
 
         cropped = img.crop((px1, py1, px2, py2))
 
-        # We can't run full EasyOCR here (too slow for verification).
-        # Instead, use PyMuPDF fitz text extraction if original PDF page is available.
+        # We cannot run the full OCR engine here (too slow for verification).
+        # Instead, rely on the Docling text already extracted for the page.
         # For image crops, we do a simple text density check as a proxy.
         # In production, this would call a lightweight OCR (e.g., Tesseract on the crop).
         # For now, return a placeholder that callers can use to detect "no text".

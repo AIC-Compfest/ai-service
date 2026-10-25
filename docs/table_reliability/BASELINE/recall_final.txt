@@ -1,0 +1,5 @@
+docs 28 pages 28 | PDFs without GT: 12
+token_grid items 49/55 = 89.1% | items+summary 49/55 = 89.1% | tables produced: 40
+pymupdf items 40/55 = 72.7% | items+summary 40/55 = 72.7% | tables produced: 36
+router items 49/55 = 89.1% | items+summary 49/55 = 89.1% | tables produced: 48
+pymupdf tables covering >60% page: 5 of 36 tables

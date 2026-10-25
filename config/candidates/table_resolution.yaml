@@ -1,0 +1,89 @@
+ambiguous_headers:
+  jumlah:
+    quantity_field: quantity
+    amount_field: line_total
+    rate_fields: [base_rate, base_rate_idr]
+    amount_value_floor: "1000"
+token_grid:
+  header_max_rows: 2
+pymupdf:
+  # Strategies are tried in order; the first strategy that yields an ACCEPTED table wins (merge_strategies: false).
+  # 'text' is NOT used in production: it costs 1-5 s per dense page and, with token-geometry discovery arbitrated per
+  # table, it adds no tables on dev+val (router F1 0.586 with it, 0.589 without; measured Fase 3).
+  strategies: [lines]
+  merge_strategies: false
+  # Reject page-wide tables (F7). Origin: on dev+val structural gold the largest table covers 0.298 of the page
+  # (p90 0.22); 0.5 keeps >1.6x margin. Chosen on dev, confirmed on val (scripts/experiments/pymupdf_variants.py).
+  max_page_area_ratio: 0.5
+  min_data_rows: 1
+  min_cols: 2
+  max_header_chars: 0
+docling:
+  # Adapter: Docling tables with fewer columns are key-value blocks / header boxes, not line-item grids.
+  min_cols: 2
+  min_data_rows: 1
+  # Missed-table check (step 3). Docling is trusted when it passes; otherwise PyMuPDF + token_grid run as fallback.
+  # Distances are normalized page fractions; counts are lines of OCR/vector tokens.
+  fallback_always: false       # true = always run the other providers too (arbitration keeps the best table per area)
+  missed:
+    min_numeric_tokens: 2      # a line with at least this many digit-bearing tokens is a numeric line ...
+    min_line_tokens: 3         # ... if it also has at least this many tokens in total
+    cover_margin: 0.01         # a token this close to a Docling table box counts as covered
+    min_uncovered_lines: 3     # this many numeric lines in one uncovered vertical run = a probably missed table
+    max_run_gap_lines: 1       # blank/non-numeric lines allowed inside one run
+geometry:
+  # All distances are expressed relative to the text itself (em = median token height), so they hold for any DPI/page size.
+  line_tolerance: 0.5          # tokens whose centres differ by <= this x median token height share a visual line
+  segment_gap_em: 0.55         # horizontal gap above this many em starts a new cell-like segment
+  block_gap_factor: 2.2        # a vertical gap above this x the LOCAL line pitch (median of nearby gaps, >= 1 line height) separates two text blocks
+  block_pitch_window: 4        # number of neighbouring gaps on each side used for the local pitch
+  block_periodic_min: 2        # a large gap is row spacing (not a block break) when this many other large gaps of similar size are nearby; 0 disables
+  block_periodic_tolerance: 0.3  # "similar size" = within this share of the gap
+  block_periodic_window: 6     # how many gaps on each side are searched
+  side_gutter_min: 0.05        # minimum empty vertical gutter (share of page width) to even consider a side-by-side split
+  side_header_lines: 4         # a split also needs repeated header words on one of the first lines of the block ...
+  side_header_repeats: 2       # ... at least this many distinct non-numeric texts on both sides of the gutter
+  side_header_jaccard: 0.5     # ... and those shared texts must be this share of all distinct texts on that line (rejects splits inside one table)
+  side_min_lines: 3            # both sides need at least this many lines
+  default_aspect: 0.7071       # page width / height when the evidence does not carry the page size (A4 portrait)
+continuation:
+  # A header-less table on the next page continues a table only when that table is a real data table (not a key-value
+  # block) and the last table of its page. Found on the rate-card documents: 1-row key-value blocks were "continued".
+  min_tail_rows: 3
+  min_tail_columns: 3
+  bottom_tolerance: 0.02       # the tail must end within this normalized distance of the lowest table of its page
+
+# Whole-word labels that start a summary row (totals, tax, discount ...). Matched at the start of the first
+# non-empty cell of a sparse line (see rows.py). Add words here, not in code.
+summary_labels:
+  - total
+  - subtotal
+  - sub total
+  - sub-total
+  - grand total
+  - jumlah
+  - ppn
+  - pph
+  - dpp
+  - pajak
+  - vat
+  - tax
+  - diskon
+  - discount
+  - potongan
+  - pembulatan
+  - materai
+  - terbilang
+  - say
+  - amount due
+  - balance
+  - ongkos kirim
+scoring:
+  max_page_area_ratio: 0.5     # a table covering more of the page is treated as page-wide (see pymupdf section for the origin)
+  header_long_chars: 40        # average header length above which a "header" is probably a paragraph
+  overlap_same_table: 0.5      # overlap (over the smaller table) at which two provider candidates are one table
+  info_label_share: 0.5        # share of rows with a "Label:" cell that makes a 2-3 column table a key-value block
+  info_max_cols: 3
+  item_min_digit_share: 0.2    # a line-item table needs this share of body cells with digits
+  summary_label_share: 0.6
+  text_strategy_prior: 0.9     # PyMuPDF 'text' strategy tables are scored x0.9 (its column splits are character-gap based)

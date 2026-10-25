@@ -1,0 +1,24 @@
+{
+  "document_id": "invoice/invoice_7_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "A/F CAN-JKT SPARE PARTS; 210 KG X RP 185.000/KG",
+          "210",
+          "185000",
+          "38850000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "38850000",
+    "0",
+    "38850000"
+  ]
+}

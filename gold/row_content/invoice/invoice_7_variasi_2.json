@@ -1,0 +1,29 @@
+{
+  "document_id": "invoice/invoice_7_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "A/F PVG-JKT PANEL; 340 KG X RP 175.000/KG",
+          "340",
+          "175000",
+          "59500000"
+        ],
+        [
+          "2",
+          "HANDLING & DOCUMENT FEE",
+          "1500000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "61000000",
+    "671000",
+    "61671000"
+  ]
+}

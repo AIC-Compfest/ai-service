@@ -1,0 +1,43 @@
+{
+  "document_id": "surat_jalan/surat_jalan_2_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Meja kerja staf",
+          "24",
+          "unit"
+        ],
+        [
+          "2",
+          "Kursi ergonomis",
+          "30",
+          "pcs"
+        ],
+        [
+          "3",
+          "Lemari arsip besi",
+          "8",
+          "unit"
+        ],
+        [
+          "4",
+          "Partisi kantor",
+          "1",
+          "set"
+        ],
+        [
+          "5",
+          "Rak buku kayu",
+          "6",
+          "unit"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

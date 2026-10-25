@@ -1,0 +1,40 @@
+{
+  "document_id": "surat_jalan/surat_jalan_11_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Katalog Produk PT Mitra Cakra Distribusi",
+          "2",
+          "buku"
+        ],
+        [
+          "2",
+          "Sample Hand Sanitizer Gel 100 ml",
+          "5",
+          "pcs",
+          "Label produk sudah terpasang pada kemasan."
+        ],
+        [
+          "3",
+          "Sample Masker Medis 3 Ply",
+          "3",
+          "box",
+          "Sertifikat izin edar dilampirkan dalam paket."
+        ],
+        [
+          "4",
+          "Sample Sabun Cuci Tangan Antiseptik",
+          "4",
+          "pcs",
+          "Kemasan sudah dilengkapi segel pengaman."
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

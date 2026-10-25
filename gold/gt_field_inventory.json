@@ -1,0 +1,278 @@
+{
+  "distinct_line_item_keys": 90,
+  "paths": {
+    "INVOICE:line_items": {
+      "tables": 28,
+      "rows": 77,
+      "keys": {
+        "no": 77,
+        "description": 61,
+        "quantity": 52,
+        "amount": 46,
+        "unit_price": 41,
+        "discount_percent": 13,
+        "net_weight_kg": 11,
+        "date": 10,
+        "date_text": 10,
+        "ondol_qty": 10,
+        "pasir_qty": 10,
+        "ondol_value": 10,
+        "pasir_value": 10,
+        "total": 9,
+        "name": 7,
+        "uom": 7,
+        "gross_amount": 7,
+        "discount_amount": 7,
+        "net_amount": 7,
+        "product": 6,
+        "hs_code": 6,
+        "country_of_origin": 6,
+        "unit": 6,
+        "gross_weight_kg": 6,
+        "unit_price_usd": 6,
+        "total_value_usd": 6,
+        "service_type": 5,
+        "item": 5,
+        "service": 5,
+        "unit_cost": 5,
+        "quantity_bags": 5,
+        "kg_per_bag": 5,
+        "unit_price_usd_per_kg": 5,
+        "total_usd": 5,
+        "hts_code": 4,
+        "country_of_manufacture": 4,
+        "quantity_pcs": 4,
+        "unit_value_usd": 4,
+        "subtotal_usd": 4,
+        "weight_kg": 2,
+        "rate_per_kg": 2
+      }
+    },
+    "POD:fields.berkas": {
+      "tables": 2,
+      "rows": 5,
+      "keys": {
+        "no": 5,
+        "jenis_barang": 5,
+        "jumlah": 5
+      }
+    },
+    "POD:fields.items": {
+      "tables": 4,
+      "rows": 10,
+      "keys": {
+        "kode_barang": 6,
+        "deskripsi_dokumen": 6,
+        "jumlah": 6,
+        "status": 6,
+        "sku": 4,
+        "description": 4,
+        "qty": 4
+      }
+    },
+    "POD:fields.logistik_items": {
+      "tables": 2,
+      "rows": 6,
+      "keys": {
+        "nama": 6,
+        "jumlah": 6,
+        "satuan": 6
+      }
+    },
+    "POD:fields.material": {
+      "tables": 2,
+      "rows": 6,
+      "keys": {
+        "material": 6,
+        "jumlah": 6
+      }
+    },
+    "POD:fields.rincian_barang": {
+      "tables": 6,
+      "rows": 12,
+      "keys": {
+        "no": 12,
+        "nama_barang": 12,
+        "jumlah": 12
+      }
+    },
+    "RATE_AGREEMENT:fields.carrier_fees": {
+      "tables": 2,
+      "rows": 5,
+      "keys": {
+        "description": 5,
+        "cost_usd": 5
+      }
+    },
+    "RATE_AGREEMENT:fields.charges": {
+      "tables": 2,
+      "rows": 5,
+      "keys": {
+        "description": 5,
+        "units": 5,
+        "per_usd": 5,
+        "amount_usd": 5
+      }
+    },
+    "RATE_AGREEMENT:fields.payment.items": {
+      "tables": 4,
+      "rows": 8,
+      "keys": {
+        "item": 8,
+        "calc": 8,
+        "subtotal_usd": 8
+      }
+    },
+    "RATE_AGREEMENT:fields.rate_details": {
+      "tables": 2,
+      "rows": 3,
+      "keys": {
+        "description": 3,
+        "units": 3,
+        "rate": 3,
+        "amount_usd": 3
+      }
+    },
+    "RATE_AGREEMENT:fields.stops": {
+      "tables": 2,
+      "rows": 4,
+      "keys": {
+        "stop_number": 4,
+        "type": 4,
+        "company_address": 4,
+        "date": 4,
+        "time": 4,
+        "pickup_del_number": 2
+      }
+    },
+    "RATE_AGREEMENT:items": {
+      "tables": 8,
+      "rows": 40,
+      "keys": {
+        "no": 32,
+        "harga": 26,
+        "qty": 24,
+        "nama": 22,
+        "jumlah": 22,
+        "sat": 12,
+        "tujuan": 12,
+        "muatan": 12,
+        "harga_satuan": 12,
+        "tipe": 6,
+        "spesifikasi": 6,
+        "harga_total": 6,
+        "unit": 4
+      }
+    },
+    "SURAT_JALAN:ground_truth.barang": {
+      "tables": 18,
+      "rows": 86,
+      "keys": {
+        "nama_barang": 86,
+        "no": 73,
+        "satuan": 47,
+        "keterangan": 38,
+        "jumlah": 38,
+        "qty": 19,
+        "banyaknya": 13,
+        "berat": 10,
+        "jml_berat": 10,
+        "jml": 9,
+        "harga_satuan_rp": 9,
+        "jenis": 7,
+        "ukuran": 7,
+        "jumlah_barang": 7,
+        "kode": 7
+      }
+    },
+    "SURAT_JALAN:ground_truth.daftar_barang": {
+      "tables": 2,
+      "rows": 5,
+      "keys": {
+        "kode_barang": 5,
+        "nama_barang": 5,
+        "jumlah_diretur": 5
+      }
+    },
+    "SURAT_JALAN:ground_truth.detail_order": {
+      "tables": 2,
+      "rows": 7,
+      "keys": {
+        "item_no": 7,
+        "deskripsi": 7,
+        "kuantitas": 7,
+        "harga_unit": 7,
+        "total": 7
+      }
+    },
+    "SURAT_JALAN:ground_truth.items": {
+      "tables": 4,
+      "rows": 23,
+      "keys": {
+        "qty": 23,
+        "item": 14,
+        "jenis": 14,
+        "type": 14,
+        "merk": 14,
+        "unit_price": 14,
+        "total": 14,
+        "item_no": 9,
+        "description": 9,
+        "uom": 9
+      }
+    },
+    "SURAT_JALAN:ground_truth.produk": {
+      "tables": 2,
+      "rows": 5,
+      "keys": {
+        "no": 5,
+        "nama_produk": 5,
+        "deskripsi_produk": 5,
+        "kode_sku": 5,
+        "kuantitas": 5,
+        "unit": 5
+      }
+    }
+  },
+  "canonical_counts": {
+    "line_number": 20,
+    "description": 374,
+    "quantity": 291,
+    "unit": 138,
+    "weight": 33,
+    "unit_price": 117,
+    "line_total": 121,
+    "discount": 13,
+    "date": 28,
+    "code": 26,
+    "destination": 12
+  },
+  "unmapped_keys": [
+    "country_of_manufacture",
+    "country_of_origin",
+    "discount_amount",
+    "gross_amount",
+    "gross_weight_kg",
+    "harga_total",
+    "hs_code",
+    "hts_code",
+    "kg_per_bag",
+    "kode",
+    "net_amount",
+    "no",
+    "product",
+    "quantity_bags",
+    "quantity_pcs",
+    "rate_per_kg",
+    "service",
+    "service_type",
+    "status",
+    "total_usd",
+    "total_value_usd",
+    "unit_cost",
+    "unit_price_usd",
+    "unit_price_usd_per_kg",
+    "unit_value_usd"
+  ],
+  "ambiguous_keys": []
+}

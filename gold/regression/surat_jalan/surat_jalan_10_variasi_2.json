@@ -1,0 +1,294 @@
+{
+  "document_id": "surat_jalan/surat_jalan_10_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_10_variasi_2.pdf",
+    "sha256": "4b0152f1d510bb9b3abdbee0092d5d19ec2632710aee50dd008a2d84e8c80846",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_10_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.024096,
+            0.350465,
+            0.826964,
+            0.528666
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.217058,
+                0.350465,
+                0.298604,
+                0.375831
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Qty",
+              "normalized_text": "Qty",
+              "bbox_norm": [
+                0.539456,
+                0.350465,
+                0.560544,
+                0.375831
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Keterangan",
+              "normalized_text": "Keterangan",
+              "bbox_norm": [
+                0.757373,
+                0.350465,
+                0.826964,
+                0.375831
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pulpen Gel 0.5mm Biru",
+                  "normalized_text": "Pulpen Gel 0.5mm Biru",
+                  "bbox_norm": [
+                    0.024096,
+                    0.381952,
+                    0.154866,
+                    0.407262
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "12",
+                  "normalized_text": "12",
+                  "bbox_norm": [
+                    0.542364,
+                    0.381952,
+                    0.556431,
+                    0.407262
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.6,
+                    0.381952,
+                    0.984337,
+                    0.407262
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Buku Tulis Sinar Dunia",
+                  "normalized_text": "Buku Tulis Sinar Dunia",
+                  "bbox_norm": [
+                    0.024096,
+                    0.412303,
+                    0.152753,
+                    0.437613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "20",
+                  "normalized_text": "20",
+                  "bbox_norm": [
+                    0.542364,
+                    0.412303,
+                    0.556431,
+                    0.437613
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Isi 38 lembar",
+                  "normalized_text": "Isi 38 lembar",
+                  "bbox_norm": [
+                    0.608434,
+                    0.412303,
+                    0.680846,
+                    0.437613
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Penghapus Putih",
+                  "normalized_text": "Penghapus Putih",
+                  "bbox_norm": [
+                    0.024096,
+                    0.442654,
+                    0.120443,
+                    0.467964
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "10",
+                  "normalized_text": "10",
+                  "bbox_norm": [
+                    0.542364,
+                    0.442654,
+                    0.556431,
+                    0.467964
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.6,
+                    0.442654,
+                    0.984337,
+                    0.467964
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Stapler Kecil",
+                  "normalized_text": "Stapler Kecil",
+                  "bbox_norm": [
+                    0.024096,
+                    0.473004,
+                    0.095104,
+                    0.498315
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.545881,
+                    0.473004,
+                    0.552914,
+                    0.498315
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.6,
+                    0.473004,
+                    0.984337,
+                    0.498315
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r5",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Isi Staples No.10",
+                  "normalized_text": "Isi Staples No.10",
+                  "bbox_norm": [
+                    0.024096,
+                    0.503355,
+                    0.119722,
+                    0.528666
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "15",
+                  "normalized_text": "15",
+                  "bbox_norm": [
+                    0.542364,
+                    0.503355,
+                    0.556431,
+                    0.528666
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "",
+                  "normalized_text": "",
+                  "bbox_norm": [
+                    0.6,
+                    0.503355,
+                    0.984337,
+                    0.528666
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "4/5",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

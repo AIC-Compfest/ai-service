@@ -1,0 +1,52 @@
+{
+  "document_id": "surat_jalan/surat_jalan_5_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Gamis Brokat Premium",
+          "6",
+          "0.55",
+          "3.3",
+          "Size M"
+        ],
+        [
+          "2",
+          "Hijab Pashmina Silk",
+          "12",
+          "0.12",
+          "1.44"
+        ],
+        [
+          "3",
+          "Tunik Katun Motif",
+          "8",
+          "0.35",
+          "2.8",
+          "Size L"
+        ],
+        [
+          "4",
+          "Rok Plisket Panjang",
+          "5",
+          "0.4",
+          "2"
+        ],
+        [
+          "5",
+          "Outer Rajut Wanita",
+          "3",
+          "0.5",
+          "1.5"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "11.04 Kg"
+  ]
+}

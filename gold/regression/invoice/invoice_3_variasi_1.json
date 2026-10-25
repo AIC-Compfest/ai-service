@@ -1,0 +1,331 @@
+{
+  "document_id": "invoice/invoice_3_variasi_1",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_3_variasi_1.pdf",
+    "sha256": "4cf5dbbd1362e7f8500f63eece0bd4233ea204c7cce3717ffb3634acab93ef21",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_3_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.06,
+            0.385934,
+            0.94,
+            0.517255
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Layanan",
+              "normalized_text": "Layanan",
+              "bbox_norm": [
+                0.06,
+                0.385934,
+                0.112741,
+                0.411251
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Keterangan",
+              "normalized_text": "Keterangan",
+              "bbox_norm": [
+                0.267,
+                0.385934,
+                0.338513,
+                0.411251
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Unit Cost",
+              "normalized_text": "Unit Cost",
+              "bbox_norm": [
+                0.604228,
+                0.385934,
+                0.662,
+                0.411251
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.684244,
+                0.385934,
+                0.729757,
+                0.411251
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Tarif",
+              "normalized_text": "Tarif",
+              "bbox_norm": [
+                0.911829,
+                0.385934,
+                0.94,
+                0.411251
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Printer Epson L3210",
+                  "normalized_text": "Printer Epson L3210",
+                  "bbox_norm": [
+                    0.06,
+                    0.441165,
+                    0.164834,
+                    0.463512
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Original/Hitam",
+                  "normalized_text": "Original/Hitam",
+                  "bbox_norm": [
+                    0.267,
+                    0.441165,
+                    0.339841,
+                    0.463512
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rp 2.850.000",
+                  "normalized_text": "Rp 2.850.000",
+                  "bbox_norm": [
+                    0.595956,
+                    0.441692,
+                    0.662,
+                    0.463067
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.703942,
+                    0.441692,
+                    0.710058,
+                    0.463067
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 5.700.000",
+                  "normalized_text": "Rp 5.700.000",
+                  "bbox_norm": [
+                    0.873956,
+                    0.441692,
+                    0.94,
+                    0.463067
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Tinta Epson 003",
+                  "normalized_text": "Tinta Epson 003",
+                  "bbox_norm": [
+                    0.06,
+                    0.494908,
+                    0.143743,
+                    0.517255
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Original/Cyan",
+                  "normalized_text": "Original/Cyan",
+                  "bbox_norm": [
+                    0.267,
+                    0.494908,
+                    0.336656,
+                    0.517255
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rp 95.000",
+                  "normalized_text": "Rp 95.000",
+                  "bbox_norm": [
+                    0.611246,
+                    0.495435,
+                    0.662,
+                    0.51681
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.703942,
+                    0.495435,
+                    0.710058,
+                    0.51681
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Rp 380.000",
+                  "normalized_text": "Rp 380.000",
+                  "bbox_norm": [
+                    0.88313,
+                    0.495435,
+                    0.94,
+                    0.51681
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Subtotal",
+                  "normalized_text": "Subtotal",
+                  "bbox_norm": [
+                    0.593,
+                    0.5491,
+                    0.643,
+                    0.573443
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 6,080,000.00",
+                  "normalized_text": "Rp 6,080,000.00",
+                  "bbox_norm": [
+                    0.807,
+                    0.550592,
+                    0.888334,
+                    0.571967
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Pajak",
+                  "normalized_text": "Pajak",
+                  "bbox_norm": [
+                    0.593,
+                    0.604257,
+                    0.625662,
+                    0.6286
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 668,800.00",
+                  "normalized_text": "Rp 668,800.00",
+                  "bbox_norm": [
+                    0.807,
+                    0.605749,
+                    0.87916,
+                    0.627125
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s3",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.593,
+                    0.659414,
+                    0.622862,
+                    0.683758
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp 6,748,800.00",
+                  "normalized_text": "Rp 6,748,800.00",
+                  "bbox_norm": [
+                    0.807,
+                    0.660906,
+                    0.888334,
+                    0.682282
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

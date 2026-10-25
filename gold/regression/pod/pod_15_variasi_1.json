@@ -1,0 +1,168 @@
+{
+  "document_id": "pod/pod_15_variasi_1",
+  "source": {
+    "relative_path": "PoD/pdf/PoD_15_variasi_1.pdf",
+    "sha256": "e24e130cebfaee5430c827716ad803b9a00a5c4d951114d9c15095aacf660129",
+    "source_kind": "pdf"
+  },
+  "document_type": "POD",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "pod/pod_15_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.066587,
+            0.248732,
+            0.69669,
+            0.311432
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Sku",
+              "normalized_text": "Sku",
+              "bbox_norm": [
+                0.066587,
+                0.248732,
+                0.092775,
+                0.262635
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Description",
+              "normalized_text": "Description",
+              "bbox_norm": [
+                0.200979,
+                0.248732,
+                0.279528,
+                0.262635
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Unit Price Qty",
+              "normalized_text": "Unit Price Qty",
+              "bbox_norm": [
+                0.581176,
+                0.248732,
+                0.69669,
+                0.262635
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "8501-WHT",
+                  "normalized_text": "8501-WHT",
+                  "bbox_norm": [
+                    0.066587,
+                    0.271799,
+                    0.139673,
+                    0.286488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "[8501-WHT] sofa",
+                  "normalized_text": "[8501-WHT] sofa",
+                  "bbox_norm": [
+                    0.200979,
+                    0.271799,
+                    0.315249,
+                    0.286488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.00 1",
+                  "normalized_text": "0.00 1",
+                  "bbox_norm": [
+                    0.618409,
+                    0.271799,
+                    0.688991,
+                    0.286488
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "8501-WHT",
+                  "normalized_text": "8501-WHT",
+                  "bbox_norm": [
+                    0.066587,
+                    0.296743,
+                    0.139673,
+                    0.311432
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "[8501-WHT] loveseat",
+                  "normalized_text": "[8501-WHT] loveseat",
+                  "bbox_norm": [
+                    0.200979,
+                    0.296743,
+                    0.342977,
+                    0.311432
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0.00 1",
+                  "normalized_text": "0.00 1",
+                  "bbox_norm": [
+                    0.618409,
+                    0.296743,
+                    0.688991,
+                    0.311432
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

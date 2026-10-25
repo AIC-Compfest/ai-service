@@ -1,0 +1,41 @@
+{
+  "document_id": "invoice/invoice_3_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Jasa Instalasi CCTV",
+          "8 Kamera/Outdoor",
+          "9500000",
+          "1",
+          "9500000"
+        ],
+        [
+          "2",
+          "Kabel & Aksesoris",
+          "Paket Lengkap",
+          "1750000",
+          "1",
+          "1750000"
+        ],
+        [
+          "3",
+          "Maintenance Bulanan",
+          "Basic/6 Bulan",
+          "450000",
+          "6",
+          "2700000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "13950000",
+    "1534500",
+    "15484500"
+  ]
+}

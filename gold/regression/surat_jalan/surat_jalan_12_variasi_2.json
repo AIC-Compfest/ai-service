@@ -1,0 +1,432 @@
+{
+  "document_id": "surat_jalan/surat_jalan_12_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_12_variasi_2.pdf",
+    "sha256": "435a1161d90257e95dc930bfab6b89d8de5c3025e38e564ce72a4ed890f99d18",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_12_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.048889,
+            0.489644,
+            0.900904,
+            0.706092
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.048889,
+                0.489644,
+                0.074687,
+                0.509341
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.12,
+                0.489644,
+                0.246076,
+                0.509341
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Kode",
+              "normalized_text": "Kode",
+              "bbox_norm": [
+                0.391111,
+                0.489644,
+                0.439202,
+                0.509341
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Jumlah",
+              "normalized_text": "Jumlah",
+              "bbox_norm": [
+                0.551111,
+                0.489644,
+                0.619152,
+                0.509341
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Satuan",
+              "normalized_text": "Satuan",
+              "bbox_norm": [
+                0.684444,
+                0.489644,
+                0.747799,
+                0.509341
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "Keterangan",
+              "normalized_text": "Keterangan",
+              "bbox_norm": [
+                0.788889,
+                0.489644,
+                0.895605,
+                0.509341
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1.",
+                  "normalized_text": "1.",
+                  "bbox_norm": [
+                    0.048889,
+                    0.534426,
+                    0.064722,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Router Industri 5G",
+                  "normalized_text": "Router Industri 5G",
+                  "bbox_norm": [
+                    0.12,
+                    0.534426,
+                    0.279494,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "RI-5G1",
+                  "normalized_text": "RI-5G1",
+                  "bbox_norm": [
+                    0.391111,
+                    0.534426,
+                    0.455605,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.551111,
+                    0.534426,
+                    0.561667,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Unit",
+                  "normalized_text": "Unit",
+                  "bbox_norm": [
+                    0.684444,
+                    0.534426,
+                    0.72198,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Kondisi Baik",
+                  "normalized_text": "Kondisi Baik",
+                  "bbox_norm": [
+                    0.788889,
+                    0.534426,
+                    0.900904,
+                    0.553397
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2.",
+                  "normalized_text": "2.",
+                  "bbox_norm": [
+                    0.048889,
+                    0.585324,
+                    0.064722,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Kabel LAN Cat6 305m",
+                  "normalized_text": "Kabel LAN Cat6 305m",
+                  "bbox_norm": [
+                    0.12,
+                    0.585324,
+                    0.3176,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "KL-C6",
+                  "normalized_text": "KL-C6",
+                  "bbox_norm": [
+                    0.391111,
+                    0.585324,
+                    0.450919,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "10",
+                  "normalized_text": "10",
+                  "bbox_norm": [
+                    0.551111,
+                    0.585324,
+                    0.572222,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Roll",
+                  "normalized_text": "Roll",
+                  "bbox_norm": [
+                    0.684444,
+                    0.585324,
+                    0.720819,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Kondisi Baik",
+                  "normalized_text": "Kondisi Baik",
+                  "bbox_norm": [
+                    0.788889,
+                    0.585324,
+                    0.900904,
+                    0.604296
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3.",
+                  "normalized_text": "3.",
+                  "bbox_norm": [
+                    0.048889,
+                    0.636222,
+                    0.064722,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Switch 24 Port PoE",
+                  "normalized_text": "Switch 24 Port PoE",
+                  "bbox_norm": [
+                    0.12,
+                    0.636222,
+                    0.285975,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "SW-24P",
+                  "normalized_text": "SW-24P",
+                  "bbox_norm": [
+                    0.391111,
+                    0.636222,
+                    0.462657,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.551111,
+                    0.636222,
+                    0.561667,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Unit",
+                  "normalized_text": "Unit",
+                  "bbox_norm": [
+                    0.684444,
+                    0.636222,
+                    0.72198,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Kondisi Baik",
+                  "normalized_text": "Kondisi Baik",
+                  "bbox_norm": [
+                    0.788889,
+                    0.636222,
+                    0.900904,
+                    0.655194
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4.",
+                  "normalized_text": "4.",
+                  "bbox_norm": [
+                    0.048889,
+                    0.687121,
+                    0.064722,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rak Server 42U",
+                  "normalized_text": "Rak Server 42U",
+                  "bbox_norm": [
+                    0.12,
+                    0.687121,
+                    0.256019,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "RS-42U",
+                  "normalized_text": "RS-42U",
+                  "bbox_norm": [
+                    0.391111,
+                    0.687121,
+                    0.460313,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.551111,
+                    0.687121,
+                    0.561667,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Set",
+                  "normalized_text": "Set",
+                  "bbox_norm": [
+                    0.684444,
+                    0.687121,
+                    0.711424,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Segel Utuh",
+                  "normalized_text": "Segel Utuh",
+                  "bbox_norm": [
+                    0.788889,
+                    0.687121,
+                    0.883298,
+                    0.706092
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "4/4",
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ]
+}

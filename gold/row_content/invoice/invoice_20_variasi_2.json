@@ -1,0 +1,37 @@
+{
+  "document_id": "invoice/invoice_20_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Industrial Pressure Sensor used in a Hydraulic Control System. It contains the following components: strain gauge, ASIC; HTS # 9026.20.; Manufactured in Germany.",
+          "9026.20",
+          "Germany",
+          "8",
+          "120.0",
+          "960"
+        ],
+        [
+          "2",
+          "Stainless Steel Valve Body for a Chemical Pump incorporating a sealing ring and a mounting flange; HTS # 8481.80.; Manufactured in Mexico.",
+          "8481.80",
+          "Mexico",
+          "4",
+          "62.5",
+          "250"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "12",
+    "31.0",
+    "28.5",
+    "1210",
+    "1300"
+  ]
+}

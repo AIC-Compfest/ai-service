@@ -1,0 +1,122 @@
+# Per-field decision policy used by app.tools.decide_documents.
+#
+# Keys are DOC.field. Anything not listed uses _default.
+# Modes: top1 | filter_top1 | amount_sum | skip
+# Parameters that can be added to any field:
+#   floor: 0.3        accept top1 only if its score >= 0.3, otherwise flag for review
+#   margin: 0.1       accept top1 only if (top1 - runner-up) >= 0.1, otherwise flag
+# Other parameters:
+#   allowed: [...]          filter_top1: keep candidates whose parsed value is in this list
+#   equation: [a, b, c]     amount_sum: a + b must equal c within tolerance
+#   optional: field         amount_sum: this addend may be absent (then a must equal c)
+#   tolerance: 1            amount_sum: 1 for IDR, 0.01 for USD with cents
+#
+# Floors below were chosen from the first run's accepted answers (summary.csv / decisions.csv).
+# Rule used: a field stays automatic only if its answers above the floor are at least 60% right.
+# They are provisional. Run `decide --sweep` on the scored file to get exact floors, and
+# check them on documents that were not used to choose them.
+
+_default:
+  mode: top1
+
+# Amounts: subtotal + tax_amount = grand_total. Tax may be absent (then subtotal = grand_total).
+# With tax absent, tax_amount is left blank on purpose. A blank tax on a no-tax invoice is correct.
+INVOICE.subtotal:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  optional: tax_amount
+  tolerance: 1
+INVOICE.tax_amount:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  optional: tax_amount
+  tolerance: 1
+INVOICE.grand_total:
+  mode: amount_sum
+  equation: [subtotal, tax_amount, grand_total]
+  optional: tax_amount
+  tolerance: 1
+
+# Invoice fields
+INVOICE.currency:
+  mode: filter_top1
+  allowed: [IDR, USD, SGD]
+INVOICE.customer_name:
+  mode: top1
+  floor: 0.2        # first run: 12 of 15 answers at score >= 0.2 correct, 6 of 25 below
+INVOICE.vendor_name:
+  mode: top1
+  floor: 0.3        # first run: 12 of 19 answers at score >= 0.3 correct, 5 of 21 below
+INVOICE.due_date:
+  mode: top1
+  floor: 0.3        # first run: 7 of 8 answers at score >= 0.3 correct; small sample
+INVOICE.invoice_date:
+  mode: top1
+  floor: 0.6        # first run: 21 of 26 answers at score >= 0.6 correct, 6 of 10 below
+INVOICE.invoice_number:
+  mode: top1        # a floor did not improve accuracy
+INVOICE.line_items:
+  mode: top1
+
+# POD fields
+POD.pod_number:
+  mode: top1
+  floor: 0.2        # first run: 9 of 13 answers at score >= 0.2 correct, 1 of 20 below
+POD.line_items:
+  mode: top1
+POD.pihak_pertama_nama:
+  mode: top1
+  floor: 0.1        # grouped OOF: 14/17 accepted answers correct; 18 documents have a positive label
+POD.pihak_kedua_nama:
+  mode: skip
+  note: "top-1 is right only 3 times in 14 documents with a name. Use a second-party rule or manual review."
+POD.pihak_pertama_alamat:
+  mode: skip
+  note: "no lift over random; manual review"
+POD.pihak_kedua_alamat:
+  mode: skip
+  note: "no lift over random; manual review"
+POD.pod_date:
+  mode: top1
+  floor: 0.6        # grouped OOF: 10/14 accepted answers correct; 20 documents have a positive label
+
+# Rate agreement fields
+RATE_AGREEMENT.currency:
+  mode: filter_top1
+  allowed: [IDR, USD, SGD]
+  # Wrong 'IDR' answers had scores up to 0.5, so a floor does not help here.
+  # The fix is to detect when a card states no currency. Until then, review these by hand.
+RATE_AGREEMENT.line_items:
+  mode: top1
+RATE_AGREEMENT.load_number:
+  mode: top1
+  floor: 0.3        # first run: 5 of 8 answers at score >= 0.3 correct, 3 of 22 below
+RATE_AGREEMENT.rate_card_date:
+  mode: top1
+  floor: 0.3        # first run: 2 of 2 answers at score >= 0.3 correct; very small sample
+RATE_AGREEMENT.total:
+  mode: top1
+RATE_AGREEMENT.vendor_name:
+  mode: skip
+  note: "no score range gives reliable answers (1 of 11 correct at score 0, 4 of 15 at 0.1)"
+
+# Surat jalan fields
+SURAT_JALAN.sender_name:
+  mode: skip
+  note: "even with a floor, only 5 of 10 answers were right (score >= 0.2). Manual review."
+SURAT_JALAN.sender_address:
+  mode: skip
+  note: "even with a floor, only 5 of 11 answers were right (score >= 0.4). Manual review."
+SURAT_JALAN.receiver_name:
+  mode: skip
+  note: "4 of 32 answers correct overall; 0 of 9 correct above score 0.0. Manual review or a rule."
+SURAT_JALAN.receiver_address:
+  mode: skip
+  note: "no lift over random; manual review"
+SURAT_JALAN.surat_jalan_number:
+  mode: top1
+  floor: 0.2        # first run: 22 of 28 answers at score >= 0.2 correct, 0 of 4 below
+SURAT_JALAN.shipment_date:
+  mode: top1        # already accurate without a floor
+SURAT_JALAN.line_items:
+  mode: top1        # labels still under review; see the evaluation notes

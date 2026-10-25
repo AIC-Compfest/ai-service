@@ -1,0 +1,277 @@
+{
+  "document_id": "rate_card/rate_card_11_variasi_1",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_11_variasi_1.pdf",
+    "sha256": "941aff217d494588924b0a843537b8f868007ff52821ee4a0c54ce368d08b38b",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_11_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.056863,
+            0.433971,
+            0.931806,
+            0.5623
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Stop#",
+              "normalized_text": "Stop#",
+              "bbox_norm": [
+                0.056863,
+                0.433971,
+                0.095446,
+                0.448749
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Type",
+              "normalized_text": "Type",
+              "bbox_norm": [
+                0.120275,
+                0.433971,
+                0.152691,
+                0.448749
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Company Name, Address, City, State and Zip Code Pickup/Del.#",
+              "normalized_text": "Company Name, Address, City, State and Zip Code Pickup/Del.#",
+              "bbox_norm": [
+                0.183686,
+                0.433971,
+                0.719225,
+                0.448749
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Date",
+              "normalized_text": "Date",
+              "bbox_norm": [
+                0.763451,
+                0.433971,
+                0.793548,
+                0.448749
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Time",
+              "normalized_text": "Time",
+              "bbox_norm": [
+                0.863098,
+                0.433971,
+                0.895515,
+                0.448749
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.056863,
+                    0.454751,
+                    0.064585,
+                    0.469497
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "PICK",
+                  "normalized_text": "PICK",
+                  "bbox_norm": [
+                    0.120275,
+                    0.454751,
+                    0.152691,
+                    0.469497
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "HOME SUPPLY OUTLET (OCALA), FL, 3320 SW College Rd, OCALA, FL 34474 Phone: Qty Description 3 Boxed cabinet doors",
+                  "normalized_text": "HOME SUPPLY OUTLET (OCALA), FL, 3320 SW College Rd, OCALA, FL 34474 Phone: Qty Description 3 Boxed cabinet doors",
+                  "bbox_norm": [
+                    0.183686,
+                    0.454804,
+                    0.568061,
+                    0.539412
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "10/06/24",
+                  "normalized_text": "10/06/24",
+                  "bbox_norm": [
+                    0.763451,
+                    0.454751,
+                    0.817507,
+                    0.469497
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "9:00 am Weight 450",
+                  "normalized_text": "9:00 am Weight 450",
+                  "bbox_norm": [
+                    0.863098,
+                    0.454751,
+                    0.913279,
+                    0.539412
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.056863,
+                    0.547554,
+                    0.064585,
+                    0.5623
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "DROP",
+                  "normalized_text": "DROP",
+                  "bbox_norm": [
+                    0.120275,
+                    0.547554,
+                    0.1604,
+                    0.5623
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Coastal Cabinets and Design, 745 Harbor Dr, SARASOTA, FL 34236",
+                  "normalized_text": "Coastal Cabinets and Design, 745 Harbor Dr, SARASOTA, FL 34236",
+                  "bbox_norm": [
+                    0.183686,
+                    0.547607,
+                    0.60902,
+                    0.562139
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "10/06/24",
+                  "normalized_text": "10/06/24",
+                  "bbox_norm": [
+                    0.763451,
+                    0.547554,
+                    0.817507,
+                    0.5623
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "by 3:00 pm",
+                  "normalized_text": "by 3:00 pm",
+                  "bbox_norm": [
+                    0.863098,
+                    0.547554,
+                    0.931806,
+                    0.5623
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Flat Rate: $475.00 + Flat Miles Charge: $0.00 + Accessorials: $0.00 - Payment(s): $0.00",
+                  "normalized_text": "Flat Rate: $475.00 + Flat Miles Charge: $0.00 + Accessorials: $0.00 - Payment(s): $0.00",
+                  "bbox_norm": [
+                    0.376526,
+                    0.581645,
+                    0.943138,
+                    0.596477
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "TOTAL AMOUNT: $475.00",
+                  "normalized_text": "TOTAL AMOUNT: $475.00",
+                  "bbox_norm": [
+                    0.773359,
+                    0.602532,
+                    0.943137,
+                    0.61731
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 5
+          }
+        }
+      ]
+    }
+  ]
+}

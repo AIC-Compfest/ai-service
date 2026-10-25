@@ -1,0 +1,48 @@
+{
+  "document_id": "surat_jalan/surat_jalan_8_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Tinta printer hitam",
+          "Botol",
+          "30",
+          "65.000"
+        ],
+        [
+          "2",
+          "Kertas HVS F4",
+          "Rim",
+          "40",
+          "52.000"
+        ],
+        [
+          "3",
+          "Penggaris besi 30cm",
+          "Lusin",
+          "12",
+          "45.000"
+        ],
+        [
+          "4",
+          "Lem kertas",
+          "Pack",
+          "18",
+          "28.500"
+        ],
+        [
+          "5",
+          "Gunting kantor",
+          "Buah",
+          "24",
+          "9.500"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

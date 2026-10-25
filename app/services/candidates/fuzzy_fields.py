@@ -100,6 +100,19 @@ class FuzzyFieldMatcher:
 
     @lru_cache(maxsize=4096)
     def _match_cached(self, header_raw: str) -> HeaderMatch:
+        segments = [part.strip() for part in re.split(r"[/|()]", header_raw or "") if part.strip()]
+        if len(segments) > 1:
+            results = [self._match_single(segment) for segment in [header_raw, *segments]]
+            best_by_field: dict[str, FieldScore] = {}
+            for result in results:
+                for score in result.candidates:
+                    if score.field not in best_by_field or score.score > best_by_field[score.field].score:
+                        best_by_field[score.field] = FieldScore(score.field, score.score, f"{score.match_type}:segmented", score.alias, score.alias_tokens)
+            ordered = sorted(best_by_field.values(), key=lambda item: (-item.score, -item.alias_tokens, self.field_order[item.field]))[:self.top_k]
+            return HeaderMatch(header_raw, self._normalize(header_raw)[0], self._normalize(header_raw)[1], self._normalize(header_raw)[2], self._normalize(header_raw)[3], ordered, ordered[0].score - ordered[1].score if len(ordered) > 1 else (ordered[0].score if ordered else 0.0))
+        return self._match_single(header_raw)
+
+    def _match_single(self, header_raw: str) -> HeaderMatch:
         original, expanded, unit_hint, header_pct = self._normalize(header_raw)
         if not original:
             return HeaderMatch(header_raw, "", "", unit_hint, header_pct, [], 0.0)

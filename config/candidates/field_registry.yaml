@@ -1,61 +1,37 @@
-fields:
-  - {doc_type: INVOICE, field: invoice_number, cand_type: id}
-  - {doc_type: INVOICE, field: invoice_date, cand_type: date}
-  - {doc_type: INVOICE, field: vendor_name, cand_type: party}
-  - {doc_type: INVOICE, field: vendor_id, cand_type: id}
-  - {doc_type: INVOICE, field: customer_name, cand_type: party}
-  - {doc_type: INVOICE, field: billing_period_start, cand_type: date}
-  - {doc_type: INVOICE, field: billing_period_end, cand_type: date}
-  - {doc_type: INVOICE, field: due_date, cand_type: date}
-  - {doc_type: INVOICE, field: currency, cand_type: enum}
-  - {doc_type: INVOICE, field: subtotal, cand_type: amount}
-  - {doc_type: INVOICE, field: tax_amount, cand_type: amount}
-  - {doc_type: INVOICE, field: grand_total, cand_type: amount}
-  - {doc_type: INVOICE, field: line_items, cand_type: table, cardinality: many, model: none}
-  - {doc_type: SURAT_JALAN, field: surat_jalan_number, cand_type: id}
-  - {doc_type: SURAT_JALAN, field: shipment_id, cand_type: id}
-  - {doc_type: SURAT_JALAN, field: awb, cand_type: id}
-  - {doc_type: SURAT_JALAN, field: shipment_date, cand_type: date}
-  - {doc_type: SURAT_JALAN, field: sender_name, cand_type: party}
-  - {doc_type: SURAT_JALAN, field: sender_address, cand_type: address}
-  - {doc_type: SURAT_JALAN, field: receiver_name, cand_type: party}
-  - {doc_type: SURAT_JALAN, field: receiver_address, cand_type: address}
-  - {doc_type: SURAT_JALAN, field: origin, cand_type: city}
-  - {doc_type: SURAT_JALAN, field: destination, cand_type: city}
-  - {doc_type: SURAT_JALAN, field: quantity, cand_type: qty}
-  - {doc_type: SURAT_JALAN, field: actual_weight_kg, cand_type: weight}
-  - {doc_type: SURAT_JALAN, field: item_description, cand_type: text}
-  - {doc_type: SURAT_JALAN, field: line_items, cand_type: table, cardinality: many, model: none}
-  - {doc_type: POD, field: pod_number, cand_type: id}
-  - {doc_type: POD, field: shipment_id, cand_type: id}
-  - {doc_type: POD, field: awb, cand_type: id}
-  - {doc_type: POD, field: delivery_date, cand_type: date}
-  - {doc_type: POD, field: delivery_time, cand_type: time}
-  - {doc_type: POD, field: receiver_name, cand_type: party}
-  - {doc_type: POD, field: receiver_company, cand_type: party}
-  - {doc_type: POD, field: quantity_received, cand_type: qty}
-  - {doc_type: POD, field: goods_condition, cand_type: enum}
-  - {doc_type: POD, field: line_items, cand_type: table, cardinality: many, model: none}
-  - {doc_type: POD, field: stamp_present, cand_type: none, model: none}
-  - {doc_type: POD, field: signature_present, cand_type: none, model: none}
-  - {doc_type: POD, field: signature_confidence, cand_type: none, model: none}
-  - {doc_type: POD, field: signature_bbox, cand_type: none, model: none}
-  - {doc_type: POD, field: nomor_berita_acara, cand_type: id}
-  - {doc_type: POD, field: hari, cand_type: enum}
-  - {doc_type: POD, field: tanggal, cand_type: date}
-  - {doc_type: POD, field: pihak_pertama_nama, cand_type: party}
-  - {doc_type: POD, field: pihak_pertama_jabatan, cand_type: text}
-  - {doc_type: POD, field: pihak_pertama_alamat, cand_type: address}
-  - {doc_type: POD, field: pihak_kedua_nama, cand_type: party}
-  - {doc_type: POD, field: pihak_kedua_jabatan, cand_type: text}
-  - {doc_type: POD, field: pihak_kedua_alamat, cand_type: address}
-  - {doc_type: RATE_AGREEMENT, field: agreement_id, cand_type: id}
-  - {doc_type: RATE_AGREEMENT, field: vendor_name, cand_type: party}
-  - {doc_type: RATE_AGREEMENT, field: vendor_id, cand_type: id}
-  - {doc_type: RATE_AGREEMENT, field: effective_from, cand_type: date}
-  - {doc_type: RATE_AGREEMENT, field: effective_to, cand_type: date}
-  - {doc_type: RATE_AGREEMENT, field: minimum_charge, cand_type: amount}
-  - {doc_type: RATE_AGREEMENT, field: dispute_window_days, cand_type: days}
-  - {doc_type: RATE_AGREEMENT, field: surcharge_percent, cand_type: percent, cardinality: many}
-  - {doc_type: RATE_AGREEMENT, field: surcharge_amount, cand_type: amount, cardinality: many}
-  - {doc_type: RATE_AGREEMENT, field: line_items, cand_type: table, cardinality: many, model: none}
+INVOICE:
+  line_items: {cand_type: table, cardinality: one}
+  currency: {cand_type: enum, cardinality: one}
+  grand_total: {cand_type: amount, cardinality: one}
+  subtotal: {cand_type: amount, cardinality: one}
+  tax_amount: {cand_type: amount, cardinality: one}
+  invoice_date: {cand_type: date, cardinality: one}
+  invoice_number: {cand_type: id, cardinality: one}
+  vendor_name: {cand_type: party, cardinality: one}
+  customer_name: {cand_type: party, cardinality: one}
+  due_date: {cand_type: date, cardinality: one}
+POD:
+  pod_date: {cand_type: date, cardinality: one}
+  pihak_pertama_nama: {cand_type: party, cardinality: one}
+  pihak_pertama_alamat: {cand_type: address, cardinality: one}
+  # pihak_pertama_jabatan: {cand_type: text, cardinality: one}
+  pihak_kedua_nama: {cand_type: party, cardinality: one}
+  pihak_kedua_alamat: {cand_type: address, cardinality: one}
+  # pihak_kedua_jabatan: {cand_type: text, cardinality: one}
+  line_items: {cand_type: table, cardinality: one}
+  pod_number: {cand_type: id, cardinality: one}
+RATE_AGREEMENT:
+  load_number: {cand_type: id, cardinality: one}
+  rate_card_date: {cand_type: date, cardinality: one}
+  line_items: {cand_type: table, cardinality: one}
+  total: {cand_type: amount, cardinality: one}
+  vendor_name: {cand_type: party, cardinality: one}
+  currency: {cand_type: enum, cardinality: one}
+SURAT_JALAN:
+  receiver_name: {cand_type: party, cardinality: one}
+  receiver_address: {cand_type: address, cardinality: one}
+  shipment_date: {cand_type: date, cardinality: one}
+  shipment_id: {cand_type: id, cardinality: one}
+  line_items: {cand_type: table, cardinality: one}
+  sender_name: {cand_type: party, cardinality: one}
+  sender_address: {cand_type: address, cardinality: one}
+  surat_jalan_number: {cand_type: id, cardinality: one}

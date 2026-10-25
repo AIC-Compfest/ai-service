@@ -54,12 +54,38 @@ def find_token_bbox_for_value(line: dict, value_substr: str) -> list[float] | No
     return line.get("bbox_norm")
 
 
+def to_unit_bbox(bbox) -> list[float]:
+    """Return ``bbox`` on the canonical 0..1 scale.
+
+    Production evidence is already 0..1; legacy fixtures use 0..1000 and are detected the same way as
+    ``_bbox_norm_to_model`` does (any coordinate above 1.0).
+    """
+    if not bbox or len(bbox) < 4:
+        return [0.0, 0.0, 0.0, 0.0]
+    scale = 1000.0 if max(bbox) > 1.0 else 1.0
+    return [float(value) / scale for value in bbox[:4]]
+
+
 def _midpoint_y(bbox_norm: list[float]) -> float:
     return (bbox_norm[1] + bbox_norm[3]) / 2.0
 
 
 def _midpoint_x(bbox_norm: list[float]) -> float:
     return (bbox_norm[0] + bbox_norm[2]) / 2.0
+
+
+def _coordinate_scale(lines: list[dict]) -> float:
+    """Return the evidence coordinate range (1 for normalized, 1000 for legacy)."""
+    for line in lines:
+        bbox = line.get("bbox_norm") or []
+        if bbox and max(abs(float(value)) for value in bbox) > 1.0:
+            return 1000.0
+    return 1.0
+
+
+def _spatial_tolerance(value: float, scale: float) -> float:
+    """Convert historical 0..1000-space tolerances to the evidence's coordinate range."""
+    return value if scale > 1.0 else value / 1000.0
 
 
 # ---------------------------------------------------------------------------
@@ -79,6 +105,9 @@ def find_key_value_horizontal(
     adjacent OCRLine at the same vertical level).
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    y_tolerance = _spatial_tolerance(y_tolerance, scale)
+    right_margin = _spatial_tolerance(10.0, scale)
 
     for i, line in enumerate(lines):
         line_text = line.get("text", "")
@@ -104,7 +133,7 @@ def find_key_value_horizontal(
             l for l in lines
             if l != line
             and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= y_tolerance
-            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - 10.0
+            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - right_margin
         ]
         if right_lines:
             # Sort by x1 (left to right)
@@ -129,6 +158,12 @@ def find_key_value_vertical(
     BELOW it, aligned on approximately the same X-axis.
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    x_tolerance = _spatial_tolerance(x_tolerance, scale)
+    max_y_gap = _spatial_tolerance(max_y_gap, scale)
+    anchor_y_margin = _spatial_tolerance(5.0, scale)
+    left_margin = _spatial_tolerance(20.0, scale)
+    right_margin = _spatial_tolerance(200.0, scale)
 
     for i, line in enumerate(lines):
         line_text = line.get("text", "")
@@ -147,11 +182,11 @@ def find_key_value_vertical(
             cand_x = _midpoint_x(cand_bbox)
             cand_y_start = cand_bbox[1]
 
-            if cand_y_start < anchor_y_end - 5.0:
+            if cand_y_start < anchor_y_end - anchor_y_margin:
                 continue
             if cand_y_start - anchor_y_end > max_y_gap:
                 break
-            if abs(cand_x - anchor_x) <= x_tolerance or (cand_bbox[0] >= anchor_bbox[0] - 20.0 and cand_bbox[2] <= anchor_bbox[2] + 200.0):
+            if abs(cand_x - anchor_x) <= x_tolerance or (cand_bbox[0] >= anchor_bbox[0] - left_margin and cand_bbox[2] <= anchor_bbox[2] + right_margin):
                 text = candidate.get("text", "").strip()
                 if text and not any(p in text.lower() for p in key_patterns_lower):
                     return text, float(candidate.get("confidence", 0.90)), cand_bbox
@@ -170,6 +205,10 @@ def find_amount_near_keyword(
     at the same Y level as a keyword anchor. Returns (parsed_float, confidence, bbox).
     """
     key_patterns_lower = [p.lower() for p in key_patterns]
+    scale = _coordinate_scale(lines)
+    y_tolerance = _spatial_tolerance(y_tolerance, scale)
+    same_row_tolerance = _spatial_tolerance(10.0, scale)
+    right_margin = _spatial_tolerance(10.0, scale)
     SKIP_HEADER_PATTERNS = ["tax invoice", "faktur pajak", "pajak angkutan", "npwp", "page", "sr."]
 
     for line in lines:
@@ -196,8 +235,8 @@ def find_amount_near_keyword(
         same_row_lines = [
             l for l in lines
             if l != line
-            and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= 10.0
-            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - 10.0
+            and abs(_midpoint_y(l.get("bbox_norm", [0, 0, 0, 0])) - anchor_y) <= same_row_tolerance
+            and l.get("bbox_norm", [0, 0, 0, 0])[0] >= anchor_x2 - right_margin
         ]
         # Sort by closest Y level first, then left to right
         same_row_lines.sort(key=lambda l: (
@@ -212,6 +251,54 @@ def find_amount_near_keyword(
                 return ramt, float(rline.get("confidence", 0.90)), rline.get("bbox_norm")
 
     return None, 0.0, None
+
+
+_HEADER_TOKEN = re.compile(r"[a-z0-9]+")
+_SHORT_ALIAS = 2  # aliases up to this many characters ("no", "kg") must match the whole header
+
+
+def _contains_run(haystack: list[str], needle: list[str]) -> bool:
+    return bool(needle) and any(haystack[i:i + len(needle)] == needle for i in range(len(haystack) - len(needle) + 1))
+
+
+def _header_score(header: str, alias: str) -> int:
+    """3 = identical tokens, 2 = alias is a whole-word run inside the header, 1 = header is a run inside the alias, 0 = no match.
+
+    Matching is token based (never a raw substring) and empty headers never match, so ``"" in alias`` and
+    ``"no" in "nomor"`` style accidents cannot happen (T-15).
+    """
+    h, a = _HEADER_TOKEN.findall(header.casefold()), _HEADER_TOKEN.findall(alias.casefold())
+    if not h or not a:
+        return 0
+    if h == a:
+        return 3
+    if len("".join(a)) <= _SHORT_ALIAS:
+        return 0
+    if _contains_run(h, a):
+        return 2
+    if len("".join(h)) >= 3 and _contains_run(a, h):
+        return 1
+    return 0
+
+
+def _map_headers(headers: list[str], column_mappings: dict[str, list[str]]) -> dict[str, int]:
+    """Assign each column to at most one canonical field (best score, then longest alias) and each field to one column.
+
+    Ties between columns keep the FIRST column; the previous behaviour let the last matching column overwrite.
+    """
+    best_per_column: dict[int, tuple[tuple[int, int], str]] = {}
+    for col_i, header in enumerate(headers):
+        for canonical, aliases in column_mappings.items():
+            for alias in aliases:
+                score = _header_score(header or "", alias)
+                if score and ((score, len(alias)) > best_per_column.get(col_i, ((0, 0), ""))[0]):
+                    best_per_column[col_i] = ((score, len(alias)), canonical)
+    chosen: dict[str, tuple[tuple[int, int], int]] = {}
+    for col_i in sorted(best_per_column):
+        key, canonical = best_per_column[col_i]
+        if canonical not in chosen or key > chosen[canonical][0]:
+            chosen[canonical] = (key, col_i)
+    return {canonical: col_i for canonical, (_, col_i) in chosen.items()}
 
 
 def parse_table_columns(
@@ -236,15 +323,7 @@ def parse_table_columns(
         if not headers or not rows:
             continue
 
-        # Build header index: normalized header text -> column index
-        header_index: dict[str, int] = {}
-        for col_i, hdr in enumerate(headers):
-            hdr_lower = hdr.lower().strip()
-            for canonical, aliases in column_mappings.items():
-                for alias in aliases:
-                    if alias.lower() in hdr_lower or hdr_lower in alias.lower():
-                        header_index[canonical] = col_i
-                        break
+        header_index = _map_headers(headers, column_mappings)
 
         for row in rows:
             row_dict: dict[str, Any] = {}
@@ -471,6 +550,7 @@ def build_field(
     document_id: str,
     page: int,
     method: ExtractionMethod = ExtractionMethod.OCR,
+    confidence_source: str | None = None,
 ) -> ExtractedField:
     """
     Build an ExtractedField with full EvidenceSource (PRD §18).
@@ -491,4 +571,5 @@ def build_field(
         ),
         method=method,
         is_unknown=is_unknown,
+        confidence_source=None if is_unknown else confidence_source,
     )

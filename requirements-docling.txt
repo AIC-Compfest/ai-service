@@ -1,0 +1,12 @@
+# Docling is the single document engine: PDF text layer, RapidOCR for scans/images, TableFormer for tables.
+# Install on top of requirements.txt.
+# Models (layout + TableFormer, ~1 GB) download from Hugging Face on first use; for offline hosts pre-download them and
+# set DOCLING_ARTIFACTS_PATH. CPU: set DOCLING_TABLE_MODE=fast and DOCLING_NUM_THREADS to the physical core count.
+docling==2.140.0
+# Keep the native PDF text/layout backend explicit instead of relying on the
+# Docling meta-package's optional standard extra to provide it transitively.
+docling-parse>=7.22.1,<8.0.0
+# RapidOCR backend used by Docling's RapidOcrOptions. Docling 2.140 imports the `rapidocr` package (v3.x), NOT the
+# legacy `rapidocr-onnxruntime`; the range is the one Docling itself checks at runtime.
+rapidocr>=3.9.1,<4.0.0
+onnxruntime>=1.17,<2.0.0

@@ -1,0 +1,168 @@
+{
+  "document_id": "rate_card/rate_card_12_variasi_1",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_12_variasi_1.pdf",
+    "sha256": "4851fe1a8ca02874c95793687e6ba73992918ffe58a6e2c2f1a53460fa1a47f5",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_12_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.062745,
+            0.761514,
+            0.762459,
+            0.817022
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "ITEM",
+              "normalized_text": "ITEM",
+              "bbox_norm": [
+                0.062745,
+                0.761514,
+                0.095145,
+                0.775945
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "CALC",
+              "normalized_text": "CALC",
+              "bbox_norm": [
+                0.420392,
+                0.761514,
+                0.458054,
+                0.775945
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "SUBTOTAL",
+              "normalized_text": "SUBTOTAL",
+              "bbox_norm": [
+                0.688627,
+                0.761514,
+                0.762459,
+                0.775945
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Line Haul",
+                  "normalized_text": "Line Haul",
+                  "bbox_norm": [
+                    0.062745,
+                    0.782042,
+                    0.120031,
+                    0.796442
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Flat Rate",
+                  "normalized_text": "Flat Rate",
+                  "bbox_norm": [
+                    0.420392,
+                    0.782042,
+                    0.475414,
+                    0.796442
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$1,185.00",
+                  "normalized_text": "$1,185.00",
+                  "bbox_norm": [
+                    0.688627,
+                    0.782042,
+                    0.748952,
+                    0.796442
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel Surcharge",
+                  "normalized_text": "Fuel Surcharge",
+                  "bbox_norm": [
+                    0.062745,
+                    0.802623,
+                    0.155456,
+                    0.817022
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Flat Rate",
+                  "normalized_text": "Flat Rate",
+                  "bbox_norm": [
+                    0.420392,
+                    0.802623,
+                    0.475414,
+                    0.817022
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$65.00",
+                  "normalized_text": "$65.00",
+                  "bbox_norm": [
+                    0.688627,
+                    0.802623,
+                    0.7301,
+                    0.817022
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

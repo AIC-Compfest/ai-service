@@ -1,0 +1,481 @@
+# DECISIONS.md — Keputusan Teknis dan Asumsi
+
+Dokumen ini mencatat semua keputusan teknis yang diambil untuk mengatasi
+ambiguitas selama implementasi `feat/table-reliability`.
+
+---
+
+## D-001: StrEnum Pre-existing Bug (Python 3.10)
+
+**Tanggal:** 2026-10-14  
+**Konteks:** `tests/unit/test_labeling_phase2.py` gagal import karena `StrEnum`
+hanya tersedia di Python 3.11+, sedangkan environment memakai Python 3.10.11.  
+**Keputusan:** Catat sebagai pre-existing bug. Jangan perbaiki dalam scope ini
+karena mengubah `labeling/schema.py` di luar lingkup tugas.  
+**Dampak:** Test tersebut akan tetap di-skip / diabaikan dengan flag
+`--ignore=tests/unit/test_labeling_phase2.py` di semua test run kita.  
+**Lokasi:** `app/services/labeling/schema.py:4`
+
+---
+
+## D-002: Lokasi Dataset Gambar Sampel
+
+**Tanggal:** 2026-10-14  
+**Konteks:** `scripts/audit_ocr_candidate_dataset.py` argumen default
+`--dataset-dir D:\AIC\DATASET`. Perlu konfirmasi keberadaan folder.  
+**Keputusan:** Jika folder tidak ada, buat fixture sintetis dari PDF generator
+(`fitz`) untuk menguji pipeline. Tidak menghentikan pekerjaan.  
+**Dampak:** Benchmark baseline akan memakai dokumen sintetis jika dataset
+nyata tidak tersedia; akan ditandai jelas di laporan.
+
+---
+
+## D-003: Representasi Uang — Decimal bukan float
+
+**Tanggal:** 2026-10-14  
+**Konteks:** PRD mengharuskan tidak pakai `float` untuk uang. Kode lama
+(`parse_amount` di `extraction/utils.py`) mengembalikan `float`.  
+**Keputusan:** Modul baru (validasi aritmetika, Langkah 3) WAJIB memakai
+`Decimal`. Kode lama (`parse_amount`) tidak diubah dalam scope ini karena
+itu perubahan API yang lebih luas; catat sebagai limitation. Jika terpaksa
+menyentuh kode lama di Langkah 3, konversi ke `Decimal` secara lokal.  
+**Lokasi:** `app/services/extraction/utils.py` (kode lama)
+
+---
+
+## D-004: Confidence Hardcoded vs Heuristik Berlabel
+
+**Tanggal:** 2026-10-14  
+**Konteks:** Banyak confidence hardcoded (0.90, 0.94, 0.95, dll.). Untuk
+mengganti ini dengan sinyal nyata, perlu data yang sudah divalidasi.  
+**Keputusan:** 
+- Semua confidence hardcoded akan diganti dengan formula yang
+  didokumentasikan di `CONFIDENCE.md`.
+- Bila belum ada data gold, formula tetap menghasilkan nilai heuristik
+  TAPI diberi label eksplisit `confidence_source: "structural_heuristic"`,
+  bukan berpura-pura lebih akurat dari yang sebenarnya.
+- Validasi aritmetika (Langkah 3) menjadi sinyal confidence utama.
+
+---
+
+## D-005: Feature Flag Default (CORRECTED by D-031: the statement "safe default = old behaviour" was false for tables)
+
+**Tanggal:** 2026-10-14  
+**Konteks:** Semua perilaku baru harus di balik feature flag.  
+**Keputusan:** Default semua flag aman (perilaku lama), kecuali:
+- `TABLE_PROVIDER_ORDER` default ke `["token_grid"]` (tidak mengubah behavior
+  saat ini, karena PyMuPDF provider belum ada sebelumnya).
+- `PAGE_KIND_ROUTING` default ke `false` (pakai logika lama `len(words) < 5`).
+- Raster OCR sekarang memakai PaddleOCR secara eksklusif (lihat D-023).
+- `ENABLE_OCR_PREPROCESS` default ke `false`.
+
+---
+
+## D-006: Stitching Antar Halaman
+
+**Tanggal:** 2026-10-14  
+**Konteks:** Stitching tabel lintas halaman harus terjadi di tahap
+candidate/segment, bukan di tahap OCR per halaman.  
+**Keputusan:** Implementasikan stitching di `CandidatePipeline.generate()`
+setelah segmentasi, bukan di `OCREngine`. Field `stitched_pages` di `Table`
+schema akan diisi di sana.
+
+---
+
+## D-007: Alias Ambigu "jumlah"
+
+**Tanggal:** 2026-10-14  
+**Konteks:** `jumlah` terdaftar sebagai alias untuk `quantity` DAN `line_total`
+di `line_item_aliases.yaml`. Ini bisa menyebabkan salah assign kolom.  
+**Keputusan:** Resolusi berbasis konteks posisi: jika kolom `jumlah` berada
+**setelah** kolom harga/rate dan berisi nilai besar (> threshold dari config),
+anggap sebagai `line_total`. Jika berada **sebelum** kolom harga dan berisi
+nilai kecil, anggap `quantity`. Tambahkan ke `ambiguous_ok` list dengan
+resolusi eksplisit.
+
+---
+
+## D-008: Kota dengan `ok=True` di `_parse_cell`
+
+**Tanggal:** 2026-10-14  
+**Konteks:** `_parse_cell` untuk kota selalu mengembalikan `ok=True`, bahkan
+untuk teks yang tidak cocok di gazetteer.  
+**Keputusan:** Ubah menjadi: return `ok=True` hanya jika teks cocok dengan
+`gazetteer_cities.csv`, sinon return `ok=False` dengan `value_type="city_unknown"`.
+Gazetteer perlu diperluas bila ada kota yang valid tapi belum terdaftar.
+
+---
+
+## D-009: Canonical Benchmark Dataset Boundary
+
+**Date:** 2026-10-15  
+**Context:** The user clarified that the only valid real dataset population is
+four documents in `D:\\AIC\\DATASET`, one representative each for Invoice,
+POD, Rate Agreement, and Surat Jalan. The directory also contains variants,
+archives, exports, and unreviewed examples.
+**Decision:** `benchmark_tables.py` uses an explicit four-file allow-list in
+`CANONICAL_DATASET_DOCUMENTS`. It never discovers every file in the four
+directories. Synthetic fixtures require `--synthetic`; the harness never
+silently falls back to them.
+**Impact:** A benchmark is incomplete when an allow-listed file is absent;
+it must not substitute another file. Any manifest change requires a documented
+human decision before metrics are compared.
+
+---
+
+## D-010: Baseline Test Failures Outside Table Reliability
+
+**Date:** 2026-10-15
+**Context:** The first complete baseline run after rebuilding Python reported
+`114 passed, 2 failed`.
+**Decision:** Do not change either failure in this feature branch because both
+are outside the requested scope:
+
+1. `test_noisy_scan_signature_low_confidence` creates unseeded random noise,
+   so the signature score varies between runs.
+2. `test_document_ingestion_jpg` selects a PNG POD fixture but asserts a JPEG
+   MIME type.
+
+**Impact:** Subsequent table-reliability tests must pass. Full-suite reporting
+will preserve these two baseline failures until their owning components are
+fixed separately.
+
+---
+
+## D-011: Project Python Requires Sandbox Elevation
+
+**Date:** 2026-10-15
+**Context:** The project virtual environment's launcher references Python 3.11.9
+under the user's profile. It is available, but the restricted sandbox cannot
+execute it (`Access is denied`). It runs successfully when the command is
+approved outside the sandbox.
+**Decision:** Use the documented `.venv` with explicit elevation only for
+verification and installation commands. Do not recreate or retarget it.
+**Impact:** PyMuPDF 1.28.2 and the target table tests are now verified. Package
+availability and benchmark claims still require their respective commands.
+
+---
+
+## D-012: Canonical Baseline Is a Capability Measurement, Not Accuracy
+
+**Date:** 2026-10-15
+**Context:** The first run without EasyOCR produced a zero-output availability
+artifact. EasyOCR 1.7.2 (Torch 2.14.1+cpu) was then installed and imported,
+and the required four-file benchmark completed.
+**Decision:** Preserve both JSON files as diagnostic artifacts, but report only
+the EasyOCR run as the real-data capability baseline. It measures emitted
+tables/line items, OCR confidence, and latency; it is not accuracy because no
+reviewed gold or arithmetic validation is present.
+**Impact:** `out/benchmarks/20261015T010604Z_baseline-easyocr.json` is not
+committed. Its 4/4 table and line-item presence must not be interpreted as
+correct extraction.
+
+---
+
+## D-013: Page-Kind Safety-Net Precedes DIGITAL Classification
+
+**Date:** 2026-10-15
+**Context:** A deterministic near-empty footer PDF had only two words but its
+word boxes covered more than a low synthetic threshold. Classifying on coverage
+first incorrectly returned `DIGITAL`.
+**Decision:** Evaluate full-page image and invisible OCR-layer signals first,
+then apply the configurable legacy word-count safety net before the DIGITAL
+coverage rule. The default remains five words.
+**Impact:** Pages containing only a footer cannot bypass scan routing due to a
+misleading bbox-area ratio. This applies only when `PAGE_KIND_ROUTING=true`.
+
+---
+
+## D-014: Invoice Line Items Must Not Depend on a Vendor Name
+
+**Date:** 2026-10-15
+**Decision:** Replace the literal `shipment_id != "Logistik"` exception with a
+structural row predicate: a row needs an identifier containing a digit or a
+parseable line total. This keeps header/vendor text out without encoding a
+specific company name.
+
+---
+
+## D-015: Table Discovery Does Not Invent a Document Type
+
+**Date:** 2026-10-15
+**Context:** OCR engine runs before document classification, whereas header
+aliases are document-type specific.
+**Decision:** The table router accepts `doc_type: str | None`. At OCR time it
+uses geometry-only token-grid discovery; CandidatePipeline supplies the known
+document type for alias-aware discovery. The router selects a non-empty
+provider result by structural completeness score, with configured order used
+only as a deterministic tie-breaker.
+**Impact:** `ENABLE_TABLE_EXTRACTOR` defaults to false. Existing evidence
+fields remain unchanged; `provider`, `reason`, `validation`, `columns`, and
+`cells` are additive only when router output is present. Arithmetic validation
+is deliberately deferred to Step 3.
+
+---
+
+## D-016: Arithmetic Validation Is an Additive Signal
+
+**Date:** 2026-10-15
+**Decision:** Arithmetic checks use `Decimal` end-to-end and only append
+validation evidence. A failed check exposes `suggested_value` for review but
+never changes an OCR cell or a public extracted field. Router scoring includes
+the arithmetic signal only when `ENABLE_ARITHMETIC_VALIDATION=true`.
+
+---
+
+## D-017: PyMuPDF Provider Receives the Live PDF Page Only at OCR Time
+
+**Date:** 2026-10-15
+**Decision:** The internal candidate `Page` may carry a non-serializable live
+PyMuPDF page solely during OCR-time discovery. Persisted OCR evidence remains
+JSON-only. CandidatePipeline has no live PDF object and therefore naturally
+falls back to token-grid.
+
+---
+
+## D-018: Token-Grid Summary Rows Are Not Line Items
+
+**Date:** 2026-10-15
+**Decision:** Rows beginning with total/subtotal/PPN-like labels are stored as
+`summary_rows` and excluded from the normal table rows consumed by line-item
+building. Repeated detected headers delimit independent tables on the page.
+
+---
+
+## D-019: City Cells Require Gazetteer Evidence
+
+**Date:** 2026-10-15
+**Decision:** Line-item city values are canonicalized only through
+`gazetteer_cities.csv`. Unrecognized text retains its raw uppercase value with
+`value_type=city_unknown` and `parse_ok=false`.
+
+---
+
+## D-020: Ambiguous Headers Are Resolved by Configuration
+
+**Date:** 2026-10-15
+**Decision:** `jumlah` mapping is controlled by
+`config/candidates/table_resolution.yaml`, not code constants. Its configured
+value floor and rate-field list determine whether it represents a quantity or
+a line total.
+
+---
+
+## D-021: Multi-Line Header Limit Is Configured
+
+**Date:** 2026-10-15
+**Decision:** `token_grid.header_max_rows` in table-resolution configuration
+controls header joining. A valid single header takes precedence, preventing a
+first line item from being swallowed as a second header line.
+
+---
+
+## D-022: Cross-Page Stitching Requires Structural Continuity
+
+**Date:** 2026-10-15
+**Decision:** Candidate runtime stitches only adjacent-page tables from the
+same provider with identical normalized header sequences. The behavior is
+feature-flagged off by default; it does not infer continuity from vendor data.
+
+---
+
+## D-023: PaddleOCR Is the Sole Raster OCR Backend
+
+**Date:** 2026-10-15
+**Context:** The requested migration explicitly replaces EasyOCR rather than
+adding an alternative runtime. PaddleOCR 3.7.0 and PaddlePaddle 3.3.1 are
+installed in the project environment.
+**Decision:** `OCREngine` initializes only PaddleOCR and adapts its public v3
+result JSON (`rec_texts`, `rec_scores`, and `rec_boxes`) into the existing OCR
+line/token evidence contract. EasyOCR is removed from `requirements.txt` and
+there is no backend-selection fallback.
+**Operational compatibility:** `pandas` is constrained below major version 3
+because the installed PaddleX dependency fails to import with pandas 3.0. CPU
+MKLDNN defaults to disabled because the installed Paddle runtime raised a
+oneDNN PIR attribute conversion error during real inference when it was
+enabled. Both language and CPU settings remain application configuration, not
+document-specific constants.
+**Impact:** A Paddle initialization or model-availability failure is explicit;
+the service does not silently switch OCR engines. Existing vector PDF
+extraction remains PyMuPDF-based.
+
+---
+
+## D-024: OCR Preprocessing Is Geometry-Aware and Conservative
+
+**Date:** 2026-10-15
+**Decision:** The opt-in preprocessing path evaluates raw and prepared images,
+then keeps the result with the greater `(mean OCR confidence, line count)`
+tuple. Ties retain raw OCR. Deskew and adaptive upscale carry an inverse
+homography so all selected OCR boxes are restored to the source-image
+coordinate system before evidence or table discovery.
+**Scope boundary:** Perspective correction and stamp-color filtering are not
+enabled without a validated detector. Applying either broadly would risk
+removing document content or corrupting coordinates. This is explicitly not a
+document/vendor exception.
+
+---
+
+## D-025: Table Evaluation Requires Human-Reviewed Gold
+
+**Date:** 2026-10-15
+**Decision:** Extraction evidence can create a draft only. `eval_tables.py`
+rejects any gold file without `reviewed=true` and reports exact normalized-row
+precision/recall/F1, not OCR or field accuracy.
+
+---
+
+## D-026: Accuracy Reporting Uses Reviewed Source-Grounded Gold
+
+**Date:** 2026-10-15
+**Decision:** Table presence, OCR confidence, and arithmetic consistency are
+reported independently from table/row/cell/OCR accuracy. Accuracy evaluation
+requires source-grounded, two-person reviewed gold and preserves illegible
+content rather than guessing it.
+
+---
+
+## D-027: Canonical Dataset Is `DATASET/Dataset` (supersedes D-009)
+
+**Date:** 2026-10-16
+**Decision:** The canonical real-data population is `DATASET/Dataset/{invoice,PoD,rate card,surat jalan}/{pdf,image}`,
+declared in `gold/manifest.json` (path relative to the dataset root, SHA-256, type, template, variation, split, GT status).
+The four-file allow-list of D-009 is removed from `scripts/benchmark_tables.py`. Files absent from disk are reported, never substituted.
+The older copies directly under `DATASET/` are not used (SHA-256 comparison: identical except 2 PoD files). `ori/` PDFs and the 52 template
+images have no GT and are `smoke` only. Ground truth is SYNTHETIC; no metric derived from it is a human-gold accuracy claim.
+
+## D-028: Splits Are Template-Level and Deterministic
+
+**Date:** 2026-10-16
+**Decision:** `split = sha256("<doc_type>:<template>") % 100`: < 20 holdout, < 50 val, else dev. Variation 1 and 2 of one template never
+straddle splits. Thresholds and design decisions use dev, confirmed on val. The holdout is run once at the end of selected phases; the run
+counter is recorded in each report (run 1 = Fase 1 baseline, aggregate only).
+
+## D-029: Structural Gold Sources and Their Limits
+
+**Date:** 2026-10-16
+**Decision:** Three gold sources, never mixed in one number without a label:
+1. `constructed_exact` (`app/tools/table_eval/synthetic.py`): gold exact by construction, 18 fixtures, 4 multi-table pages.
+2. `synthetic_grounded` (`app/tools/table_eval/grounding.py`): derived from GT values + PDF words and drawn ruling lines; `reviewed=false`;
+   independent of the production providers (no imports). It is a DRAFT: columns without a GT key and tables without ruling may be incomplete.
+3. Human gold: not available. The owner spot-check package is `out/review/gold_check/` (non-blocking).
+Evaluation of unreviewed gold requires `--allow-unreviewed` and every report is stamped "bukan gold manusia".
+
+## D-030: Provisional Targets (K4) After Baseline
+
+**Date:** 2026-10-16
+**Decision:** K4 targets stay as set by the owner (digital PDF, holdout): detection F1 >= 0.90, header exact >= 0.90, column count exact >= 0.90,
+row count exact >= 0.85, cell F1 >= 0.85, amount recall (in matched table) >= 0.95, summary separation >= 0.98, multi-table pages fully correct
+>= 0.80 (100% on non-adversarial constructed fixtures). Baseline (dev+val, best provider): detection F1 0.44, header exact 0.69, rows exact 0.66,
+cell F1 0.35-0.44, amount@table 0.49, multi-table 1/4 on fixtures. The gap is large; no target is relaxed. Raster targets stay open until Paddle is stable.
+
+## D-031: Table Feature Flag Reality and Plan (corrects D-005)
+
+**Date:** 2026-10-16
+**Context:** D-005 claimed the default flags preserve the old behaviour. For tables that is false: the old y-band heuristic
+(`_detect_tables`, y 0.32-0.76, confidence 0.94) was removed in commit `3e4326c` and `ENABLE_TABLE_EXTRACTOR=false` now returns `tables=[]`.
+Measured on 28 GT invoices (Fase 0): flag off = 0 documents with tables and 0 line items; flag on = tables on all 28 but only 50 of 77 GT rows.
+**Decision:** Do not restore the y-band heuristic (it was a page-band guess with a fixed 0.94 confidence). The default stays `false`
+until the type-aware path (Fase 4) passes the gate defined in K2 (val: no structural metric worse than the flag-off baseline and a clear
+improvement over the flag-on baseline). At that point the default becomes `true` and this decision is updated.
+`TABLE_PROVIDER_ORDER` default is `["pymupdf_find_tables", "token_grid"]` (config.py), not `["token_grid"]` as D-005 states.
+`PAGE_KIND_ROUTING` and `ENABLE_OCR_PREPROCESS` default to `false` as written in D-005.
+
+## D-032: Table Discovery Is Geometry-First, Arbitrated Per Table (supersedes D-018, D-021, D-022 mechanics)
+
+**Date:** 2026-10-16
+**Decision:** `token_grid` no longer clusters rows over the whole page. Pipeline: text blocks (local-pitch vertical gaps; side-by-side split only
+with a repeated header) -> header scored among all lines of the block (first convincing header opens a table; key-value lines, prose, digit-heavy
+lines rejected; wrapped headers and group labels joined) -> columns from header cells AND data extents (ruling lines when they enclose the header)
+-> rows (summary labels tested BEFORE continuation; end of table at prose, notes or a non-summary line after the summary block) -> role.
+All thresholds live in `table_resolution.yaml` (`geometry`, `scoring`, `summary_labels`). The router collects tables from every provider and keeps the best
+of each overlapping group (`scoring.arbitrate`); provider order is only a tie-breaker. Summary rows remain outside `rows` (D-018 kept).
+`header_max_rows` (D-021) is replaced by `header_max_extra_lines`.
+
+## D-033: Gold v2 (header lines)
+
+**Date:** 2026-10-16
+**Decision:** In `grounding.py`, header lines must not contain contact data, `label:value` pairs, digits (unruled tables) or running text. Gold v1 swallowed
+adjacent address/contact/sentence lines into headers (found by overlay inspection, not by looking at provider output). All earlier prediction sets were
+re-scored against v2 so before/after are comparable; numbers in METRICS_AFTER_ALGO.md use v2. METRICS_BASELINE.md and METRICS_AFTER_P0.md keep their v1 numbers.
+
+## D-034: PyMuPDF `text` Strategy Removed From Production Config
+
+**Date:** 2026-10-16
+**Decision:** `pymupdf.strategies: [lines]`. The `text` strategy takes 1-5 s per dense page and, once token-geometry tables are arbitrated per table, adds no
+tables on dev+val (router F1 0.586 with it, 0.589 without). It remains selectable in the YAML and is covered by a test.
+
+
+## D-035: Table Extractor Default Becomes `true` (closes K2, updates D-031)
+**Date:** 2026-10-16
+**Decision:** `ENABLE_TABLE_EXTRACTOR` default is now `true`. Gate (D-031): no structural metric worse than the flag-off baseline and a clear gain over the flag-on baseline.
+Flag off returns no tables and no invoice line items (0/28 documents), so no metric can be worse. Against the flag-on baseline (old router, typed; gold v2) on dev+val:
+detection F1 0.456 -> 0.641, rows exact 23/36 -> 49/58, header exact 27/34 -> 41/56, cols exact 33/36 -> 53/58, amount@table 93/181 -> 141/181; E2E invoice line items 50/77 -> 56/77, exact row count 6/28 -> 14/28.
+**Caveat (read before trusting the gate):** the exact-match RATIOS of header (0.79 -> 0.73) and columns (0.92 -> 0.91) are slightly lower because the matched set grew (34 -> 56 tables);
+absolute counts rose. No paired per-table comparison exists, so this is a judgement call, not a proof. Reverting is one setting: `ENABLE_TABLE_EXTRACTOR=false`.
+Targets K4 are NOT met (see REPORT_FASE_4.md); the flag flip does not claim they are.
+## D-036: Continuation Only For Data Tables That End The Page
+**Date:** 2026-10-16
+**Context:** Rate-card documents showed 1-row key-value blocks "continued" onto the next page (3 extra false tables in dev+val).
+**Decision:** `continuation` in `table_resolution.yaml`: the tail must have >= 3 rows and >= 3 columns, no summary rows, and be the lowest table of its page (tolerance 0.02). Fixtures (24-row two-page tables) unaffected.
+A page whose segment is UNKNOWN may continue a table of the previous known segment (continuation pages carry no document cues and the classifier rejects them, conf 0.35). Known limit:
+the segmenter still puts that page in a separate UNKNOWN segment, so the rule-based extractor does not read its rows (OS-011).
+## D-037: Candidate Generation + LightGBM Stay On The Extraction Path (shadow, conservative)
+**Date:** 2026-10-16
+**Context:** Owner requirement: candidate generation and LightGBM must remain in use. Before this change nothing on the API path called `MLFieldExtractor`.
+**Decision:** `extraction/ml/service.py`: `/v1/extract/pipeline/full` runs candidate generation (without a second table pass) and the LightGBM bundles of the document type for the whole document and for each segment.
+Output is additive (`ml_extraction`, per segment and top-level). Rule-based extractors stay primary; an ML value replaces a rule field only if that field is unknown, has the SAME name, and the decoder status is `accepted` (score >= t_auto).
+Failures never break the response. Settings: `ENABLE_ML_EXTRACTION` (true), `ML_MODEL_SET_DIR` (`models/pod_phase2`).
+**Honest status:** the only bundle is `POD.pihak_pertama_nama` (bundle metrics accepted 0, precision 0). A retraining try for the POD registry fields on `data/pod_phase2` (output kept only in the terminal tail, so only the last 9 fields were read): every field read had `accepted = 0` except `tanggal` (4 accepted, precision 0.0); two fields were skipped for a single positive sample. The models were discarded.
+Labels exist only for POD (34 documents, LLM draft). ML field names (`pihak_pertama_nama`) differ from rule field names (`receiver_name`), so promotion cannot fire today. The path is exercised and measured, not yet useful.
+
+## D-038: Aritmetika Deterministik Sebagai Bukti Aditif, Bukan Pengubah Nilai
+**Date:** 2026-10-16
+**Decision:** Aturan di `config/validation/arithmetic.yaml` (qty x rate, weight x rate, qty x rate = gross, gross - discount = net, subtotal = jumlah total baris, grand total = subtotal + pajak - PPh). Toleransi mutlak per mata uang (IDR 1, USD 0.01), tanpa toleransi relatif (K3). `suggested_value` hanya bila selisih satu karakter. Aturan produk dilewati bila ada kolom diskon/pajak. Kolom persen tidak pernah mengambil peran uang.
+Hasilnya muncul sebagai `arithmetic_validation` pada `/v1/extract/pipeline/full` (`ENABLE_ARITHMETIC_EVIDENCE`, default true). Nilai ekstraksi dan konfidensi tidak diubah.
+`ENABLE_ARITHMETIC_VALIDATION` (campuran skor pada pemilihan tabel di router) tetap `false`: diukur pada dev+val, hasil identik dengan flag mati (F1 0.641, header 41/56, baris 49/58), jadi tidak ada alasan menyalakannya.
+**Batas:** grand total yang diturunkan extractor dari subtotal dan pajak (OS-008) membuat pengecekannya sirkular; diskon dan PPh tingkat dokumen tidak dimodelkan.
+## D-039: Sumber Konfidensi
+**Date:** 2026-10-16
+**Decision:** `ExtractedField.confidence_source` (aditif). `line_items` dan `rate_matrix` dari tabel memakai skor struktural terlemah (maks 0.95); baris teks 0.50; konstanta lain diberi label `heuristic_constant` atau didaftar di CONFIDENCE.md. Konfidensi tabel di evidence kini skor struktural (dulu 0.0 untuk semua tabel).
+
+## D-040: Model PaddleOCR Dapat Diatur, Default Tidak Diubah
+**Date:** 2026-10-16
+**Decision:** `PADDLE_DET_MODEL`, `PADDLE_REC_MODEL`, `PADDLE_DET_LIMIT_SIDE_LEN` ditambahkan; default kosong tetap memakai default PaddleOCR 3.7 untuk lang=en (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, 59.4 + 73.3 MB); pengganti yang diuji adalah PP-OCRv5_mobile_det (4.7 MB) + en_PP-OCRv5_mobile_rec (7.6 MB). Model mobile 3 kali lebih cepat (106 -> 38 detik per halaman, 3 gambar) dengan kesepakatan angka 0.99, tetapi tidak ada gold OCR untuk mengukur akurasi, jadi mengganti default adalah keputusan pemilik. oneDNN tetap mati (galat PIR pada Paddle 3.3.1).
+## D-041: Pipeline Bersama dan Endpoint Sinkron
+**Date:** 2026-10-16
+**Decision:** Satu `Phase5DocumentPipeline` untuk seluruh proses (`runtime.get_pipeline`), endpoint unggah berupa `def` (threadpool FastAPI), predictor Paddle diserialisasi dengan kunci. Batas unggah ditegakkan (413). PNG halaman dihapus setelah `PAGE_RETENTION_HOURS` (default 24). Dependensi runtime dipin ke versi yang diuji; Paddle terpisah.
+
+## D-042: Item Dua Baris dengan Angka di Tengah (invoice_13)
+**Date:** 2026-10-17
+**Context:** `scripts/baseline/measure_amount_recall.py` menunjukkan router turun dari 49/55 (89.1%) ke 42/55 (76.4%) setelah Fase 3. Awalnya saya menduga artefak metrik (baris ringkasan tidak dihitung, atau tabel palsu menggelembungkan angka lama). Kedua dugaan terbukti SALAH: menghitung `summary_rows` tidak mengubah hasil, dan router lama justru menghasilkan lebih sedikit tabel (32 vs 49). Diagnosis per dokumen (`scripts/experiments/recall_misses.py`, dijalankan pada worktree tag baseline dan kode sekarang) menemukan kemunduran nyata pada `invoice_13_variasi_1/2`: setiap item terdiri dari tiga baris teks (deskripsi, baris angka di tengah, lanjutan deskripsi) dengan jarak antar-item yang lebar.
+**Penyebab:** (1) `split_blocks` memotong blok di setiap jarak antar-item karena pitch lokal hanya melihat jarak kecil di dalam item, sehingga header terpisah dari item dan tiap item menjadi blok sendiri; (2) `segment_body` tidak punya cara membuka baris dari baris deskripsi yang mendahului baris angka, sehingga tabel kosong. Akibatnya PyMuPDF `find_tables` yang menempelkan sel (satu sel berisi seluruh teks halaman) menjadi satu-satunya kandidat dan menang.
+**Decision:** dua aturan, keduanya digerakkan config/default dan masing-masing wajib (dimatikan satu per satu, test regresi gagal):
+1. `geometry.block_periodic_*`: jarak besar yang berulang (setidaknya dua jarak besar sejenis, toleransi 30%, jendela 6) adalah jarak antar-baris, bukan batas blok; tidak berlaku bila baris tepat setelah jarak itu adalah baris multi-sel tanpa angka (header tabel LAIN). Penjaga terakhir ditambahkan setelah fixture `three_tables_mixed` (mode phrase) sempat tergabung.
+2. `rows.lead_line_rows` + `lead_gap_ratio` 0.7: baris deskripsi sparse yang jauh lebih dekat ke baris di bawahnya (yang mengisi baris) daripada ke baris di atasnya membuka baris baru; baris angka bergabung ke baris itu.
+**Hasil (dev+val, jalur API):** deteksi F1 0.641 -> 0.670; nominal di tabel 141/181 -> 155/181 (invoice 90/116 -> 104/116); kolom exact 53/58 -> 55/60; header 41/56 -> 42/56; E2E invoice 56/77 -> 63/77 baris dan 14/28 -> 16/28 tepat; skrip lama kembali ke 49/55. Fixture vector dan phrase tidak berubah. Holdout (run 4, kode akhir) identik dengan run 3: tidak membantu dan tidak merugikan. Tidak ada angka yang membaik atau memburuk pada POD dan surat jalan; rate card header 11/14 -> 12/14 dan cell F1 0.576 -> 0.560.
+**Batas:** pola jarak berulang sengaja ketat; dua tabel bertumpuk dengan jarak sama dan header satu-sel tidak dikenali sebagai tabel terpisah. Tidak ada tabel nyata semacam itu di gold, tetapi tidak dibuktikan tidak ada.
+## D-043: Hasil Negatif, Penalti Sel Tergabung Dibatalkan
+**Date:** 2026-10-17
+**Decision:** Saya mencoba menurunkan skor tabel yang selnya memuat dua nominal atau lebih (tanda sel tergabung PyMuPDF). Tidak mengubah satu pun angka di dev+val maupun fixture (tidak ada alternatif bersih di dokumen yang terdampak), sehingga perubahan dan tesnya dibatalkan. Akar masalah invoice_13 ada di D-042.
+
+## D-044: Label Grup Header Ditempatkan Setelah Badan Tabel Memperluas Kolom
+**Date:** 2026-10-17
+**Context:** Uji stres (halaman PDF acak, gold eksak) menunjukkan header exact hanya 64% pada halaman berheader bertingkat: label grup ("Tarif" di atas "Per Kg" dan "Minimum") hanya menempel ke satu kolom atau hilang. Label berada di tengah SEL, sedangkan jangkar kolom awal hanya kata header (rata kiri/kanan di dalam sel), jadi batas sel tidak diketahui. Label juga bisa jatuh di celah antar-kata header sehingga tidak dianggap bagian header.
+**Decision:** (1) `columns.infer_columns` menempatkan label di atas baris header utama SETELAH badan tabel memperluas jangkar; label menempel ke dua kolom bila pusatnya dekat pusat gabungan kedua kolom (isi rata kiri) ATAU dekat batas keduanya (isi rata kanan/tengah), (2) `header._is_group_label`: satu label pendek di tengah rentang header ikut menjadi bagian header walau jatuh di celah. Header exact stres 90% -> 97% (router), kelompok bertingkat 64% -> 91%.
+**Batas:** hanya pasangan kolom bersebelahan; label tiga kolom tidak ditangani. Label yang menempel ke blok key-value (mis. "Agreement" pada rate card) ikut tertempel ke teks kolom; dampaknya hanya pada tabel non-gold (OS-018).
+## D-045: Pembersihan Tabel PyMuPDF (`tables/refine.py`)
+**Date:** 2026-10-17
+**Decision:** `find_tables` menjadikan setiap baris bergaris sebagai baris data dan baris pertama sebagai header. Diterapkan sebelum penskoran: (1) baris penutup yang labelnya ada di kosakata YAML `summary_labels`, atau yang hanya mengisi dua kolom terakhir dengan satu angka, dipindah ke `summary_rows` (aturan struktural hanya bila >= 60% baris punya sel kolom pertama, supaya item tanpa kolom pertama tidak ikut), (2) header yang berisi data (>= 2 sel angka dan >= 40%, atau kolom pertama bilangan bulat) menjadi baris data pertama dan header dikosongkan, (3) kotak tabel dipotong sampai baris item terakhir seperti provider token-geometri.
+**Hasil (stres, seed tak terpakai):** PyMuPDF sendirian: baris exact 40% -> 74%, halaman benar 8% -> 25%, kebocoran ringkasan F9 82 -> 15 halaman.
+## D-046: Baris Ringkasan Berlabel Asing dan Kolom Tidak Melebar oleh Total
+**Date:** 2026-10-17
+**Decision:** `rows.tail_summary_rows`: garis sparse yang hanya mengisi dua kolom terakhir dengan angka, di bawah >= 2 baris item yang mulai di kolom pertama, adalah baris ringkasan walau labelnya tidak ada di YAML. `Body.item_end`: kolom dihitung ulang hanya dari baris item (baris "Subtotal 88.871.000" satu segmen melintasi dua kolom dan sebelumnya menggeser batas kolom hingga urutan Qty dan Line Total tertukar).
+## D-047: Penemuan Tabel Tanpa Header
+**Date:** 2026-10-17
+**Decision:** `structure._headerless_tables` (config `geometry.headerless`, default hidup): di antara baris yang tidak dipakai tabel berheader, runtun baris "mirip grid" (>= 3 sel pendek, tanpa pola label:nilai, tanpa kalimat > 6 kata) dengan >= 2 baris, >= 3 kolom, >= 60% baris berangka, dan setidaknya satu kolom yang >= 80% angka murni dianggap tabel; kolom diturunkan dari baris terlebar. Dua penjaga ditambahkan setelah menemukan tabel palsu (kalimat catatan di sebelah blok total, baris "Diterima tgl : ..."). Tabel tanpa header di halaman lanjutan dengan jumlah kolom sama diadopsi sebagai lanjutan (`link_segment_tables`).
+**Hasil:** recall tabel tanpa header 0.68 -> 0.85 (stres); `multipage_no_header` (batas lama) kini lulus dan dikeluarkan dari `KNOWN_LIMITS`.
+**Batas:** pada holdout (13 tabel) satu tabel prediksi tambahan muncul (presisi 0.750 -> 0.692); tidak disetel dari hasil itu.
+## D-048: Hasil Negatif Uji Stres
+**Date:** 2026-10-17
+**Decision:** (a) Aturan "satu baris header di kedua sisi celah" untuk memisah tabel berdampingan dibatalkan: membelah tabel tunggal yang punya kolom pendek (F5 naik menjadi 156 halaman). Penjaga `repeated_header` asli dipertahankan. (b) Penalti sel tergabung (D-043) tetap dibatalkan.

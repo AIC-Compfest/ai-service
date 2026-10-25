@@ -1,0 +1,41 @@
+{
+  "document_id": "surat_jalan/surat_jalan_15_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "5 Buah",
+          "Tempat Tidur Pasien 2 Crank"
+        ],
+        [
+          "8 Buah",
+          "Kursi Tunggu 3 Dudukan"
+        ],
+        [
+          "3 Buah",
+          "Troli Medis Stainless"
+        ],
+        [
+          "1 Buah",
+          "Kulkas Vaksin 100 Liter"
+        ],
+        [
+          "6 Buah",
+          "Lemari Obat Kaca"
+        ],
+        [
+          "2 Buah",
+          "AC Split 1 PK Panasonic"
+        ],
+        [
+          "1 Buah",
+          "Televisi LED 43 Inchi"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

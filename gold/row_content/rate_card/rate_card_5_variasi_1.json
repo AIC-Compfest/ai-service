@@ -1,0 +1,55 @@
+{
+  "document_id": "rate_card/rate_card_5_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "Sarung tangan rajut A1 white cotton",
+          "Minimal 500 lsn",
+          "Rp 17.500 / lsn"
+        ],
+        [
+          "2",
+          "Sarung tangan rajut A2 white cotton",
+          "Minimal 500 lsn",
+          "Rp 18.500 / lsn"
+        ],
+        [
+          "3",
+          "Sarung tangan rajut A3 heavy duty",
+          "Minimal 300 lsn",
+          "Rp 21.000 / lsn"
+        ],
+        [
+          "4",
+          "Sarung tangan anti slip karet latex",
+          "Minimal 200 lsn",
+          "Rp 28.000 / lsn"
+        ],
+        [
+          "5",
+          "Sarung tangan kanvas safety proyek",
+          "Minimal 100 lsn",
+          "Rp 15.000 / lsn"
+        ],
+        [
+          "6",
+          "Majun Potong Putih Bersih",
+          "Minimal 200 kg",
+          "Rp 7.500 / kg"
+        ],
+        [
+          "7",
+          "Masker Kain Disposable 3 Ply",
+          "Minimal 500 lsn",
+          "Rp 8.000 / lsn"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

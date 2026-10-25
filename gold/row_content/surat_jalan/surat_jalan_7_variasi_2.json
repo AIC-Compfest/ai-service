@@ -1,0 +1,28 @@
+{
+  "document_id": "surat_jalan/surat_jalan_7_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.daftar_barang",
+      "rows": [
+        [
+          "0000000007021",
+          "HP LaserJet Pro M404dn",
+          "1.00"
+        ],
+        [
+          "0000000007144",
+          "Brother Toner TN-2360",
+          "10.00"
+        ],
+        [
+          "0000000007260",
+          "TP-Link Router Archer C6",
+          "3.00"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

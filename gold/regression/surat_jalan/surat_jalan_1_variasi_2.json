@@ -1,0 +1,432 @@
+{
+  "document_id": "surat_jalan/surat_jalan_1_variasi_2",
+  "source": {
+    "relative_path": "surat jalan/pdf/surat_jalan_1_variasi_2.pdf",
+    "sha256": "a6f309e296de622d4f5ba82a7763e62245b76231b0567d596d97b6bb0e267799",
+    "source_kind": "pdf"
+  },
+  "document_type": "SURAT_JALAN",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "surat_jalan/surat_jalan_1_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.08125,
+            0.499826,
+            0.956252,
+            0.673731
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No",
+              "normalized_text": "No",
+              "bbox_norm": [
+                0.088717,
+                0.499826,
+                0.106283,
+                0.524177
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Nama Barang",
+              "normalized_text": "Nama Barang",
+              "bbox_norm": [
+                0.220282,
+                0.499826,
+                0.299718,
+                0.524177
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Jenis",
+              "normalized_text": "Jenis",
+              "bbox_norm": [
+                0.46375,
+                0.499826,
+                0.4925,
+                0.524177
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Ukuran",
+              "normalized_text": "Ukuran",
+              "bbox_norm": [
+                0.60782,
+                0.499826,
+                0.65093,
+                0.524177
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Jumlah Barang",
+              "normalized_text": "Jumlah Barang",
+              "bbox_norm": [
+                0.739181,
+                0.499826,
+                0.825819,
+                0.524177
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "Keterangan",
+              "normalized_text": "Keterangan",
+              "bbox_norm": [
+                0.889998,
+                0.499826,
+                0.956252,
+                0.524177
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.08125,
+                    0.542767,
+                    0.087813,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Bibit Cabai",
+                  "normalized_text": "Bibit Cabai",
+                  "bbox_norm": [
+                    0.13125,
+                    0.542767,
+                    0.191415,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Rawit",
+                  "normalized_text": "Rawit",
+                  "bbox_norm": [
+                    0.40625,
+                    0.542767,
+                    0.437606,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "15 cm",
+                  "normalized_text": "15 cm",
+                  "bbox_norm": [
+                    0.5675,
+                    0.542767,
+                    0.599945,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "8.000 batang",
+                  "normalized_text": "8.000 batang",
+                  "bbox_norm": [
+                    0.70875,
+                    0.542767,
+                    0.776554,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Siap tanam",
+                  "normalized_text": "Siap tanam",
+                  "bbox_norm": [
+                    0.87375,
+                    0.542767,
+                    0.932445,
+                    0.565001
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.08125,
+                    0.579011,
+                    0.087813,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Bibit Tomat",
+                  "normalized_text": "Bibit Tomat",
+                  "bbox_norm": [
+                    0.13125,
+                    0.579011,
+                    0.195064,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Servo",
+                  "normalized_text": "Servo",
+                  "bbox_norm": [
+                    0.40625,
+                    0.579011,
+                    0.436871,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "20 cm",
+                  "normalized_text": "20 cm",
+                  "bbox_norm": [
+                    0.5675,
+                    0.579011,
+                    0.599945,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "12.500 batang",
+                  "normalized_text": "12.500 batang",
+                  "bbox_norm": [
+                    0.70875,
+                    0.579011,
+                    0.783116,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "-",
+                  "normalized_text": "-",
+                  "bbox_norm": [
+                    0.87375,
+                    0.579011,
+                    0.878121,
+                    0.601244
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.08125,
+                    0.615254,
+                    0.087813,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Bibit Jeruk",
+                  "normalized_text": "Bibit Jeruk",
+                  "bbox_norm": [
+                    0.13125,
+                    0.615254,
+                    0.189223,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Keprok",
+                  "normalized_text": "Keprok",
+                  "bbox_norm": [
+                    0.40625,
+                    0.615254,
+                    0.445612,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "40 cm",
+                  "normalized_text": "40 cm",
+                  "bbox_norm": [
+                    0.5675,
+                    0.615254,
+                    0.599945,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "2.000 batang",
+                  "normalized_text": "2.000 batang",
+                  "bbox_norm": [
+                    0.70875,
+                    0.615254,
+                    0.776554,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Okulasi",
+                  "normalized_text": "Okulasi",
+                  "bbox_norm": [
+                    0.87375,
+                    0.615254,
+                    0.914582,
+                    0.637488
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r4",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "4",
+                  "normalized_text": "4",
+                  "bbox_norm": [
+                    0.08125,
+                    0.651498,
+                    0.087813,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Bibit Mangga",
+                  "normalized_text": "Bibit Mangga",
+                  "bbox_norm": [
+                    0.13125,
+                    0.651498,
+                    0.203805,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Arumanis",
+                  "normalized_text": "Arumanis",
+                  "bbox_norm": [
+                    0.40625,
+                    0.651498,
+                    0.458015,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "50 cm",
+                  "normalized_text": "50 cm",
+                  "bbox_norm": [
+                    0.5675,
+                    0.651498,
+                    0.599945,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "1.500 batang",
+                  "normalized_text": "1.500 batang",
+                  "bbox_norm": [
+                    0.70875,
+                    0.651498,
+                    0.776554,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Okulasi",
+                  "normalized_text": "Okulasi",
+                  "bbox_norm": [
+                    0.87375,
+                    0.651498,
+                    0.914582,
+                    0.673731
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "4/4",
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ]
+}

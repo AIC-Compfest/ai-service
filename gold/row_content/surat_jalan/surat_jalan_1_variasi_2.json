@@ -1,0 +1,47 @@
+{
+  "document_id": "surat_jalan/surat_jalan_1_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Bibit Cabai",
+          "Rawit",
+          "15 cm",
+          "8.000 batang",
+          "Siap tanam"
+        ],
+        [
+          "2",
+          "Bibit Tomat",
+          "Servo",
+          "20 cm",
+          "12.500 batang",
+          "-"
+        ],
+        [
+          "3",
+          "Bibit Jeruk",
+          "Keprok",
+          "40 cm",
+          "2.000 batang",
+          "Okulasi"
+        ],
+        [
+          "4",
+          "Bibit Mangga",
+          "Arumanis",
+          "50 cm",
+          "1.500 batang",
+          "Okulasi"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "24.000 batang"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "document_id": "invoice/invoice_15_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Laptop Lenovo IdeaPad 3",
+          "1",
+          "7850000",
+          "7850000"
+        ],
+        [
+          "2",
+          "Mouse Wireless Logitech M331",
+          "3",
+          "185000",
+          "555000"
+        ],
+        [
+          "3",
+          "Flashdisk SanDisk 64GB",
+          "5",
+          "75000",
+          "375000"
+        ],
+        [
+          "4",
+          "JNE Reguler Shipping Cost",
+          "1",
+          "50000",
+          "50000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "8830000",
+    "330000",
+    "10",
+    "850000",
+    "9350000"
+  ]
+}

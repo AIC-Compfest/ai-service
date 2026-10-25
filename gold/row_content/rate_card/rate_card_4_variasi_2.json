@@ -1,0 +1,39 @@
+{
+  "document_id": "rate_card/rate_card_4_variasi_2",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "Workstation Staff Partition 4 Staff\nw. 240 x d. 120 x h. 120",
+          "Rp 5.500.000",
+          "2",
+          "Rp 11.000.000"
+        ],
+        [
+          "2",
+          "Kursi Staff Indachi D-300 Hydrolic\nh. 95 x w. 55 x d. 55",
+          "Rp 480.000",
+          "8",
+          "Rp 3.840.000"
+        ],
+        [
+          "3",
+          "Mobile Drawer 3 Susun Besi\nh. 60 x w. 40 x d. 50",
+          "Rp 950.000",
+          "4",
+          "Rp 3.800.000"
+        ],
+        [
+          "4",
+          "Biaya Kirim & Perakitan Bandung Raya",
+          "Rp 1.200.000"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

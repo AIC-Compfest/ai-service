@@ -1,7 +1,11 @@
 from __future__ import annotations
 
+import copy
+import re
+
 import hashlib
 import re
+import statistics
 import time
 from decimal import Decimal
 from pathlib import Path
@@ -10,6 +14,7 @@ from typing import Any
 import yaml
 
 from .context import build_page, context_for
+from app.services.evidence.docling_tables import normalize_docling_evidence
 from .parsers import parse_date, parse_number, parse_time
 from .registry import FieldRegistry
 from .schema import Candidate, Page, Token
@@ -36,11 +41,19 @@ class CandidatePipeline:
             self.caps.update((yaml.safe_load(generation.read_text(encoding="utf-8")) or {}).get("caps", {}))
         self.last_run_report: dict[str, Any] = {"cap_overflow": {}}
 
-    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN") -> list[dict[str, Any]]:
+    def generate(self, document_id: str, doc_type: str, ocr_result: dict[str, Any], run_id: str = "", vendor_group: str = "UNKNOWN", template_group: str = "UNKNOWN", include_tables: bool = True) -> list[dict[str, Any]]:
         started = time.perf_counter()
         self.last_report = {"empty_pages": [], "cap_overflows": [], "timings_ms": {}}
         enabled = {field.cand_type for field in self.registry.for_doc(doc_type)}
-        pages = [build_page(page) for page in ocr_result.get("pages", [])]
+        evidence, table_warnings = normalize_docling_evidence(ocr_result)
+        pages = [build_page(page) for page in evidence.get("pages", [])]
+        table_rows = _table_candidate_rows(self, document_id, doc_type, run_id, vendor_group, template_group, evidence) if include_tables else []
+        self.last_report["tables"] = [
+            {key: value for key, value in row.items() if key not in {"m_candidate_id"}}
+            for row in table_rows
+        ]
+        if table_warnings:
+            self.last_report["table_warnings"] = table_warnings
         candidates: list[Candidate] = []
         for page in pages:
             if not page.lines:
@@ -60,8 +73,7 @@ class CandidatePipeline:
             overlap_types.update(other.cand_type for other in candidates if other is not candidate and _overlaps(candidate.bbox, other.bbox))
             candidate.features["m_overlap_types"] = "|".join(sorted(overlap_types))
         self.last_report["timings_ms"][f"{document_id}:{doc_type}"] = round((time.perf_counter() - started) * 1000, 3)
-        return [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
-
+        return table_rows + [self._row(document_id, doc_type, run_id, vendor_group, template_group, candidate) for candidate in candidates]
     def _generate_type(self, page: Page, cand_type: str) -> list[Candidate]:
         if cand_type == "amount":
             return self._number_candidates(page, cand_type, amount=True)
@@ -172,9 +184,13 @@ class CandidatePipeline:
                 continue
             text = norm_text(token.text)
             if amount:
-                if re.search(r"%$", token.text) or re.fullmatch(r"\d{4}", text) or (parsed.value < 1000 and not parsed.sym and not any(word in text for word in (".", ","))):
+                digits = sum(char.isdigit() for char in token.text)
+                phone_pattern = re.fullmatch(r"(?:\+?62|0)8\d{8,12}", re.sub(r"[\s().-]", "", token.text))
+                # Unformatted 9+ digit strings are phone/account/reference-like in this
+                # corpus. Manually labeled true amounts use separators or currency markers.
+                if phone_pattern or (digits >= 9 and not parsed.sym and not re.search(r"[.,]", token.text)):
                     continue
-                if re.fullmatch(r"(?:\+?62|0)8\d{8,12}", text):
+                if re.search(r"%$", token.text) or re.fullmatch(r"\d{4}", text) or (parsed.value < 1000 and not parsed.sym and not any(word in text for word in (".", ","))):
                     continue
             result.append(self._candidate(cand_type, page, [token], str(parsed.value), norm_alnum(token.text)))
         if amount:
@@ -292,7 +308,7 @@ class CandidatePipeline:
         kept: list[Candidate] = []
         overflow: dict[str, dict[str, int]] = {}
         for (page, cand_type), group in sorted(grouped.items()):
-            ranked = sorted(group, key=lambda item: (-sum(t.confidence for t in item.tokens) / len(item.tokens), item.bbox[1], item.bbox[0], item.raw_text))
+            ranked = sorted(group, key=lambda item: (-(_party_cap_priority(item) if cand_type == "party" else 0), -sum(t.confidence for t in item.tokens) / len(item.tokens), item.bbox[1], item.bbox[0], item.raw_text))
             cap = int(self.caps.get(cand_type, len(ranked)))
             kept.extend(ranked[:cap])
             if len(ranked) > cap:
@@ -347,7 +363,7 @@ class CandidatePipeline:
             letters = sum(char.isalpha() for char in raw)
             words = raw.split()
             legal = next((marker for marker in ("pt", "cv", "ud", "pd", "tbk", "koperasi", "yayasan") if marker in norm_text(raw).split()), "none")
-            features.update({"pt_n_tokens": len(words), "pt_n_chars": len(raw), "pt_upper_ratio": sum(char.isupper() for char in raw) / max(letters, 1), "pt_title_ratio": sum(bool(word) and word[0].isupper() for word in words) / max(len(words), 1), "pt_digit_ratio": sum(char.isdigit() for char in raw) / max(len(raw.replace(" ", "")), 1), "pt_alpha_ratio": letters / max(len(raw.replace(" ", "")), 1), "pt_legal_marker": legal, "pt_legal_pos": "prefix" if legal != "none" and norm_text(raw).split()[0] == legal else "suffix" if legal != "none" else "none", "pt_has_email": int("@" in raw), "pt_has_url": int(bool(re.search(r"https?://|www\.", raw, re.I))), "pt_has_phone": int(bool(re.search(r"(?:\+?62|0)8\d{8,12}", raw))), "pt_has_npwp": int(bool(re.search(r"\d{2}\.\d{3}", raw))), "pt_is_centered": int(abs((candidate.bbox[0] + candidate.bbox[2]) / 2 - .5) < .12), "pt_is_left_aligned": int(candidate.bbox[0] < .15), "pt_person_like": int(legal == "none" and all(word[:1].isupper() for word in words) and 1 <= len(words) <= 4)})
+            features.update({"pt_n_tokens": len(words), "pt_n_chars": len(raw), "pt_upper_ratio": sum(char.isupper() for char in raw) / max(letters, 1), "pt_title_ratio": sum(bool(word) and word[0].isupper() for word in words) / max(len(words), 1), "pt_digit_ratio": sum(char.isdigit() for char in raw) / max(len(raw.replace(" ", "")), 1), "pt_alpha_ratio": letters / max(len(raw.replace(" ", "")), 1), "pt_legal_marker": legal, "pt_legal_pos": "prefix" if legal != "none" and norm_text(raw).split()[0] == legal else "suffix" if legal != "none" else "none", "pt_has_email": int("@" in raw), "pt_has_url": int(bool(re.search(r"https?://|www\.", raw, re.I))), "pt_has_phone": int(bool(re.search(r"(?:\+?62|0)8\d{8,12}", raw))), "pt_has_npwp": int(bool(re.search(r"\d{2}\.\d{3}", raw))), "pt_is_centered": int(abs((candidate.bbox[0] + candidate.bbox[2]) / 2 - .5) < .12), "pt_is_left_aligned": int(candidate.bbox[0] < .15), "pt_person_like": int(legal == "none" and all(word[:1].isupper() for word in words) and 1 <= len(words) <= 4), **_party_role_features(candidate)})
         elif candidate.cand_type == "enum":
             features.update({"en_norm": candidate.parsed_value, "en_match_type": "exact", "en_in_signature_region": int(candidate.bbox[1] > .7), "en_symbol_vs_code": "symbol" if candidate.raw_text in {"Rp", "Rp.", "$"} else "code" if candidate.raw_text.upper() in {"IDR", "USD", "SGD", "EUR"} else "word"})
         elif candidate.cand_type == "text":
@@ -358,8 +374,18 @@ class CandidatePipeline:
     def _lexical_features(self, candidate: Candidate) -> dict[str, Any]:
         features = {}
         windows = {"left": candidate.context.get("ctx_left", ""), "above": candidate.context.get("ctx_above", ""), "right": candidate.context.get("ctx_right", ""), "line": candidate.context.get("ctx_line", ""), "below": candidate.context.get("ctx_below", ""), "sent": candidate.context.get("ctx_sent", "")}
+        relevant = {
+            "amount": {"subtotal", "tax_amount", "grand_total", "total_row", "table_end"},
+            "party": {"customer_name", "party_roles", "titles"},
+            "id": {"invoice_number", "titles"},
+            "date": {"invoice_date", "due_date"},
+            "table": {"total_row", "table_end", "titles"},
+            "address": {"party_roles"},
+            "city": {"party_roles"},
+            "enum": set(),
+        }.get(candidate.cand_type, set())
         for group, phrases in self.lexicon.items():
-            if group.startswith("_") or not isinstance(phrases, list):
+            if group.startswith("_") or group not in relevant or not isinstance(phrases, list):
                 continue
             for window, value in windows.items():
                 if window == "sent" and candidate.page.page_number < 0:
@@ -384,6 +410,187 @@ def _overlaps(left, right) -> bool:
     return left[0] < right[2] and right[0] < left[2] and left[1] < right[3] and right[1] < left[3]
 
 
+def _page_line_texts(page: Page) -> list[str]:
+    return [" ".join(token.text for token in line) for line in page.lines]
+
+
+def _party_cap_priority(candidate: Candidate) -> int:
+    """Keep party values near explicit name/role labels when a page hits its cap."""
+    lines = _page_line_texts(candidate.page)
+    index = candidate.line_idx
+    nearby = " ".join(lines[max(0, index - 2): min(len(lines), index + 3)])
+    current = norm_text(lines[index]) if 0 <= index < len(lines) else ""
+    priority = 0
+    if any(re.search(r"\bnama\b", norm_text(line)) for line in lines[max(0, index - 1): min(len(lines), index + 2)]):
+        priority += 5
+    if re.search(r"\b(?:pihak pertama|pihak kedua|yang menyerahkan|yang menerima|pengirim|penerima|sender|receiver|shipper|consignee)\b", norm_text(nearby)):
+        priority += 3
+    if current.startswith("(") and re.search(r"[A-Za-z]{3,}", current):
+        priority += 1
+    return priority
+
+
+def _party_role_features(candidate: Candidate) -> dict[str, Any]:
+    lines = _page_line_texts(candidate.page)
+    index = candidate.line_idx
+    normalized = [norm_text(line) for line in lines]
+    first_positions = [i for i, line in enumerate(normalized) if re.search(r"\bpihak pertama\b|\byang menyerahkan\b|\bpemberi\b|\bsender\b|\bshipper\b", line)]
+    second_positions = [i for i, line in enumerate(normalized) if re.search(r"\bpihak kedua\b|\byang menerima\b|\bpenerima\b|\breceiver\b|\bconsignee\b", line)]
+    name_window = normalized[max(0, index - 1): min(len(normalized), index + 2)]
+    n_lines = max(len(lines), 1)
+    return {
+        "pt_near_name_label": int(any(re.search(r"\bnama\b", line) for line in name_window)),
+        "pt_near_first_party_marker": int(any(abs(index - marker) <= 5 for marker in first_positions)),
+        "pt_near_second_party_marker": int(any(abs(index - marker) <= 5 for marker in second_positions)),
+        "pt_dist_first_party_marker": min((abs(index - marker) / n_lines for marker in first_positions), default=""),
+        "pt_dist_second_party_marker": min((abs(index - marker) / n_lines for marker in second_positions), default=""),
+        "pt_before_first_party_marker": int(bool(first_positions) and index < min(first_positions)),
+        "pt_before_second_party_marker": int(bool(second_positions) and index < min(second_positions)),
+    }
+
+
+def _table_candidate_rows(pipeline, document_id: str, doc_type: str, run_id: str, vendor_group: str, template_group: str, evidence: dict[str, Any]) -> list[dict[str, Any]]:
+    """Build table candidates from serialized Docling evidence only.
+
+    Table detection belongs to evidence production.  Candidate generation must
+    not reopen page images or invoke a table provider; ``pages[].tables[]`` is
+    the table source of truth here.
+    """
+    matcher = None
+    aliases = pipeline.config_dir / "line_item_aliases.yaml"
+    abbreviations = pipeline.config_dir / "abbreviations.yaml"
+    if aliases.exists() and abbreviations.exists():
+        from .fuzzy_fields import FuzzyFieldMatcher
+        matcher = FuzzyFieldMatcher(doc_type, aliases, abbreviations)
+    pages = {int(page.get("page_number", 1)): page for page in evidence.get("pages", [])}
+    candidates: list[dict[str, Any]] = []
+    for page_number in sorted(pages):
+        page = pages[page_number]
+        for ordinal, table in enumerate(page.get("tables", []), start=1):
+            candidates.append(_make_table_candidate(pipeline, document_id, doc_type, run_id, vendor_group, template_group, page, table, matcher, ordinal))
+    scores = sorted(((float(row.get("tb_heuristic_score", 0.0)), index) for index, row in enumerate(candidates)), key=lambda item: (-item[0], item[1]))
+    for rank, (_, index) in enumerate(scores, start=1):
+        candidates[index]["tb_heuristic_rank"] = rank
+    for left_index, left in enumerate(candidates):
+        overlaps = {"table"}
+        for right_index, right in enumerate(candidates):
+            if left_index == right_index:
+                continue
+            if left["m_page"] == right["m_page"] and _overlaps((left["m_x1"], left["m_y1"], left["m_x2"], left["m_y2"]), (right["m_x1"], right["m_y1"], right["m_x2"], right["m_y2"])):
+                overlaps.add("table")
+        left["m_overlap_types"] = "|".join(sorted(overlaps)) if len(overlaps) > 1 else "table"
+    return candidates
+
+
+def _make_table_candidate(pipeline, document_id, doc_type, run_id, vendor_group, template_group, page, table, matcher, ordinal):
+    bbox = [float(value) for value in table.get("bbox_norm", [0, 0, 1, 1])[:4]]
+    headers = [str(value or "") for value in table.get("headers", [])]
+    rows = [[str(value or "") for value in row] for row in table.get("rows", [])]
+    summary_rows = [[str(value or "") for value in row] for row in table.get("summary_rows", [])]
+    n_rows = int(table.get("row_count", len(rows)) or 0)
+    n_cols = int(table.get("col_count", len(headers) or max((len(row) for row in rows), default=0)) or 0)
+    raw_text = " | ".join(headers) if any(headers) else (" | ".join(rows[0]) if rows else "")
+    features = _table_features(pipeline, doc_type, page, table, headers, rows, summary_rows, n_rows, n_cols, matcher)
+    x1, y1, x2, y2 = bbox
+    candidate_id = hashlib.sha1(f"{document_id}|{page.get('page_number', 1)}|table|{x1:.4f},{y1:.4f},{x2:.4f},{y2:.4f}|{raw_text}".encode()).hexdigest()[:16]
+    row = {
+        "m_schema_version": "1.0.0", "m_pipeline_version": pipeline.pipeline_version, "m_run_id": run_id,
+        "m_candidate_id": candidate_id, "m_doc_type": doc_type, "m_document_id": document_id,
+        "m_vendor_group": vendor_group or "UNKNOWN", "m_template_group": template_group or "UNKNOWN",
+        "m_page": int(page.get("page_number", 1)), "m_page_end": int(table.get("page_end", page.get("page_number", 1)) or page.get("page_number", 1)),
+        "m_table_id": str(table.get("table_id") or f"{document_id}-p{page.get('page_number', 1)}-t{ordinal}"),
+        "m_cand_type": "table", "m_raw_text": raw_text, "m_parsed_value": "", "m_parsed_norm": f"{n_rows}x{n_cols}",
+        "m_x1": round(x1, 4), "m_y1": round(y1, 4), "m_x2": round(x2, 4), "m_y2": round(y2, 4),
+        "m_line_idx": "", "m_tok_start": "", "m_tok_end": "", "m_evidence_role": table.get("role") or "", "m_evidence_role_reason": table.get("role_reason") or "",
+        "label_status": "", "label_notes": "",
+        **features,
+    }
+    for field in pipeline.registry.fields_for_type(doc_type, "table"):
+        row[f"label__{field}"] = ""
+    return row
+
+
+def _table_features(pipeline, doc_type, page, table, headers, rows, summary_rows, n_rows, n_cols, matcher):
+    nonempty = lambda value: bool(str(value).strip())
+    fills = [sum(nonempty(value) for value in row[:n_cols]) / max(n_cols, 1) for row in rows]
+    col_values = [[row[index] if index < len(row) else "" for row in rows] for index in range(n_cols)]
+    numeric = []
+    amount_cols = integer_cols = 0
+    for values in col_values:
+        parsed = [number for value in values if nonempty(value) for number in [_number(value)] if number is not None]
+        ratio = len(parsed) / max(sum(nonempty(value) for value in values), 1)
+        numeric.append(ratio >= .6)
+        if ratio >= .6 and parsed:
+            if all(value == value.to_integral_value() for value in parsed):
+                integer_cols += 1
+            if any(re.search(r"(?:rp|idr|usd|\$|[.,]\d{3})", value, re.I) for value in values):
+                amount_cols += 1
+    header_scores = [matcher.best_score(header) if matcher and header else 0.0 for header in headers]
+    cells = table.get("cells", [])
+    y_centers = sorted({round((float(cell.get("bbox_norm", [0, 0, 0, 0])[1]) + float(cell.get("bbox_norm", [0, 0, 0, 0])[3])) / 2, 4) for cell in cells if len(cell.get("bbox_norm", [])) >= 4})
+    row_gaps = [right - left for left, right in zip(y_centers, y_centers[1:]) if right > left]
+    rel_product = _relation_fraction(rows, "product")
+    summary_match = _summary_column_match(rows, summary_rows)
+    total_summary = int(any(_total_label(cell) for row in summary_rows for cell in row if nonempty(cell)))
+    score_inputs = {
+        "tb_header_fuzzy_frac": sum(score >= .8 for score in header_scores) / max(n_cols, 1),
+        "tb_anchor_frac": 0.0, "tb_has_seq_col": 0, "tb_rel_product_frac": rel_product,
+        "tb_summary_matches_colsum": summary_match, "tb_has_total_summary": total_summary,
+        "tb_frac_numeric_cols": sum(numeric) / max(n_cols, 1), "tb_n_amount_cols_capped": min(amount_cols, 3) / 3,
+        "tb_n_rows_capped": min(n_rows, 3) / 3, "tb_row_fill_mean": sum(fills) / max(len(fills), 1),
+        "tb_title_kw_items": 0.0, "tb_kv_like_frac": 0.0, "tb_text_only_frac": sum(bool(re.fullmatch(r"[A-Za-zÀ-ÿ /&-]+", value.strip())) for row in rows for value in row if value.strip()) / max(sum(nonempty(value) for row in rows for value in row), 1),
+        "tb_title_kw_terms": 0.0, "tb_title_kw_totals": 0.0,
+    }
+    score = score_inputs["tb_header_fuzzy_frac"] * 2 + score_inputs["tb_rel_product_frac"] * 1.5 + score_inputs["tb_summary_matches_colsum"] + score_inputs["tb_has_total_summary"] * .5 + score_inputs["tb_frac_numeric_cols"] + score_inputs["tb_n_amount_cols_capped"] * .5 + score_inputs["tb_n_rows_capped"] + score_inputs["tb_row_fill_mean"] * .5 - score_inputs["tb_text_only_frac"] - score_inputs["tb_kv_like_frac"] * 1.5
+    return {
+        "tb_n_rows": n_rows, "tb_n_cols": n_cols, "tb_n_summary_rows": len(summary_rows), "tb_has_summary": int(bool(summary_rows)), "tb_has_header": int(bool(headers)),
+        "tb_n_pages": int(table.get("page_end", page.get("page_number", 1)) or page.get("page_number", 1)) - int(page.get("page_number", 1)) + 1, "tb_cut_by_segment": 0,
+        "tb_n_visual_rows": len(y_centers), "tb_row_pitch_cv": (statistics.pstdev(row_gaps) / statistics.mean(row_gaps) if len(row_gaps) >= 2 and statistics.mean(row_gaps) else ""),
+        "tb_structural_score": float(table.get("confidence", 0) or 0), "tb_page_digital": int((table.get("validation") or {}).get("page_kind") == "DIGITAL"),
+        "tb_row_fill_mean": score_inputs["tb_row_fill_mean"], "tb_row_fill_min": min(fills) if fills else 0.0, "tb_col_fill_min": min((sum(nonempty(value) for value in values) / max(len([item for item in values if nonempty(item)]), 1) for values in col_values), default=0.0),
+        "tb_header_fuzzy_hits": sum(score >= .8 for score in header_scores), "tb_header_fuzzy_frac": score_inputs["tb_header_fuzzy_frac"], "tb_header_score_mean": sum(header_scores) / max(len(header_scores), 1), "tb_header_numeric_frac": 0.0,
+        "tb_frac_numeric_cols": score_inputs["tb_frac_numeric_cols"], "tb_n_amount_cols": amount_cols, "tb_n_int_cols": integer_cols, "tb_n_id_cols": 0, "tb_n_date_cols": 0, "tb_n_city_cols": 0, "tb_n_enum_cols": 0, "tb_n_text_cols": n_cols - sum(numeric), "tb_text_only_frac": score_inputs["tb_text_only_frac"], "tb_kv_like_frac": 0.0, "tb_mean_unique_ratio": 0.0,
+        "tb_has_seq_col": 0, "tb_seq_len": "", "tb_anchor_frac": 0.0, "tb_rel_product_frac": rel_product, "tb_rel_sum_frac": "", "tb_summary_matches_colsum": summary_match, "tb_has_total_summary": total_summary, "tb_summary_rate_match": 0,
+        "tb_x1": round(table.get("bbox_norm", [0, 0, 1, 1])[0], 4), "tb_y1": round(table.get("bbox_norm", [0, 0, 1, 1])[1], 4), "tb_x2": round(table.get("bbox_norm", [0, 0, 1, 1])[2], 4), "tb_y2": round(table.get("bbox_norm", [0, 0, 1, 1])[3], 4), "tb_width": round(table.get("bbox_norm", [0, 0, 1, 1])[2] - table.get("bbox_norm", [0, 0, 1, 1])[0], 4), "tb_height": round(table.get("bbox_norm", [0, 0, 1, 1])[3] - table.get("bbox_norm", [0, 0, 1, 1])[1], 4), "tb_area_frac": round((table.get("bbox_norm", [0, 0, 1, 1])[2] - table.get("bbox_norm", [0, 0, 1, 1])[0]) * (table.get("bbox_norm", [0, 0, 1, 1])[3] - table.get("bbox_norm", [0, 0, 1, 1])[1]), 4), "tb_y_center": round((table.get("bbox_norm", [0, 0, 1, 1])[1] + table.get("bbox_norm", [0, 0, 1, 1])[3]) / 2, 4), "tb_is_last_block_on_page": 1,
+        **score_inputs, "tb_heuristic_score": round(score, 6), "tb_heuristic_rank": "",
+        "g_x1": round(table.get("bbox_norm", [0, 0, 1, 1])[0], 4), "g_y1": round(table.get("bbox_norm", [0, 0, 1, 1])[1], 4), "g_x2": round(table.get("bbox_norm", [0, 0, 1, 1])[2], 4), "g_y2": round(table.get("bbox_norm", [0, 0, 1, 1])[3], 4),
+    }
+
+
+def _number(value):
+    from .parsers import parse_number
+    parsed = parse_number(str(value).replace("Rp", "").strip())
+    return parsed.value
+
+
+def _relation_fraction(rows, kind):
+    valid = matches = 0
+    for row in rows:
+        values = [_number(value) for value in row]
+        values = [value for value in values if value is not None]
+        if len(values) < 3:
+            continue
+        valid += 1
+        for left in values:
+            rest = [value for value in values if value is not left]
+            if any(abs(left - (a * b if kind == "product" else a + b)) <= max(Decimal("1"), abs(left) * Decimal("0.000001")) for index, a in enumerate(rest) for b in rest[index + 1:]):
+                matches += 1
+                break
+    return matches / valid if valid else 0.0
+
+
+def _summary_column_match(rows, summary_rows):
+    columns = []
+    for index in range(max((len(row) for row in rows), default=0)):
+        values = [_number(row[index]) for row in rows if index < len(row) and _number(row[index]) is not None]
+        columns.append(sum(values, Decimal(0)) if values else None)
+    return int(any(_number(value) is not None and any(abs(_number(value) - total) <= max(Decimal("1"), abs(total) * Decimal("0.000001")) for total in columns if total is not None) for row in summary_rows for value in row))
+
+
+def _total_label(value):
+    return bool(re.search(r"\b(?:subtotal|sub total|total|grand total|jumlah|pajak|ppn|tax|diskon)\b", norm_text(value)))
+
+
 def _shape_compact(value: str) -> str:
     classes = []
     for char in value:
@@ -400,3 +607,60 @@ def _near_unit(page: Page, token: Token, units: set[str]) -> str:
         if candidate.line_idx == token.line_idx and candidate.tok_idx == token.tok_idx + 1 and norm_text(candidate.text) in units:
             return norm_text(candidate.text)
     return "none"
+
+
+def table_evidence(table) -> dict[str, Any]:
+    """Serialize additive table diagnostics while retaining the legacy fields."""
+    payload = {
+        "table_id": table.table_id,
+        "bbox_norm": list(table.bbox), "headers": [column.header_text for column in table.columns],
+        "rows": [[cell.text for cell in row.cells] for row in table.rows],
+        "row_count": len(table.rows), "col_count": len(table.columns), "confidence": table.structural_score or table.conf, "confidence_source": "structural_score" if table.structural_score else "unscored",
+        "provider": table.source, "reason": table.reason, "validation": table.validation,
+        "columns": [{"idx": column.idx, "bbox_norm": [column.x1, 0.0, column.x2, 1.0], "header": column.header_text} for column in table.columns],
+        "cells": [{"row": cell.row_idx, "col": cell.col_idx, "text": cell.text, "bbox_norm": list(cell.bbox)} for row in table.rows for cell in row.cells],
+        "summary_rows": [[cell.text for cell in row.cells] for row in table.summary_rows],
+        "role": table.role, "role_reason": table.role_reason,
+    }
+    if table.validation.get("continued_from"):
+        payload["continued_from"] = table.validation["continued_from"]
+    return payload
+
+
+def _natural(table_id: str) -> list:
+    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", table_id)]
+
+
+def stitch_tables(tables):
+    """Join tables of consecutive pages that are one logical table; the inputs are NOT modified.
+
+    Two tables join when the first has no summary rows (it did not end), they sit on consecutive pages, and either the
+    headers match or the second is a header-less continuation of the first. Ordering is by page, then natural id order
+    (t2 before t10).
+    """
+    stitched: list = []
+    for table in sorted((copy.deepcopy(t) for t in tables), key=lambda value: (value.page_start, _natural(value.table_id))):
+        previous = next((candidate for candidate in reversed(stitched) if candidate.page_end + 1 == table.page_start), None)
+        if previous is not None and _same_table_segment(previous, table):
+            offset = len(previous.rows)
+            for row in table.rows:
+                row.idx += offset
+                for cell in row.cells:
+                    cell.row_idx = row.idx
+            previous.rows.extend(table.rows)
+            previous.summary_rows.extend(table.summary_rows)
+            previous.page_end = table.page_end
+            previous.stitched_pages.extend(page for page in table.stitched_pages if page not in previous.stitched_pages)
+            previous.reason = "consecutive_page_continuation" if table.reason == "continuation" else "consecutive_page_header_match"
+            previous.validation.setdefault("stitched_table_ids", [previous.table_id]).append(table.table_id)
+        else:
+            stitched.append(table)
+    return stitched
+
+
+def _same_table_segment(left, right) -> bool:
+    if left.summary_rows or left.page_end + 1 != right.page_start or len(left.columns) != len(right.columns):
+        return False
+    if right.reason == "continuation":
+        return right.validation.get("continued_from") in (left.table_id, *left.validation.get("stitched_table_ids", []))
+    return [norm_text(column.header_text) for column in left.columns] == [norm_text(column.header_text) for column in right.columns]

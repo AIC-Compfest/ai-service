@@ -1,0 +1,162 @@
+{
+  "document_id": "rate_card/rate_card_13_variasi_1",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_13_variasi_1.pdf",
+    "sha256": "c6e003bdd9667a516bf4aeb315c96c258debd86f3859d1df8229c71ac4b9f3b7",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 3,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_13_variasi_1-p3-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.072549,
+            0.241521,
+            0.511765,
+            0.276202
+          ],
+          "headers": [],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel Surcharge",
+                  "normalized_text": "Fuel Surcharge",
+                  "bbox_norm": [
+                    0.072549,
+                    0.241521,
+                    0.164142,
+                    0.255747
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "298.00",
+                  "normalized_text": "298.00",
+                  "bbox_norm": [
+                    0.284314,
+                    0.241521,
+                    0.325287,
+                    0.255747
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$0.520 $154.96",
+                  "normalized_text": "$0.520 $154.96",
+                  "bbox_norm": [
+                    0.354902,
+                    0.241521,
+                    0.511765,
+                    0.255747
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Flat Rate",
+                  "normalized_text": "Flat Rate",
+                  "bbox_norm": [
+                    0.072549,
+                    0.261976,
+                    0.126908,
+                    0.276202
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1.00",
+                  "normalized_text": "1.00",
+                  "bbox_norm": [
+                    0.284314,
+                    0.261976,
+                    0.310388,
+                    0.276202
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$545.040 $545.04",
+                  "normalized_text": "$545.040 $545.04",
+                  "bbox_norm": [
+                    0.354902,
+                    0.261976,
+                    0.511765,
+                    0.276202
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.072549,
+                    0.296029,
+                    0.103787,
+                    0.310949
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "$700.00",
+                  "normalized_text": "$700.00",
+                  "bbox_norm": [
+                    0.46098,
+                    0.296029,
+                    0.511765,
+                    0.310949
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": false,
+            "row_coverage_ok": "2/2",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

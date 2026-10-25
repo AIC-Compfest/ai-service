@@ -50,7 +50,11 @@ class FieldRegistry:
         valid_docs = {"INVOICE", "SURAT_JALAN", "POD", "RATE_AGREEMENT"}
         valid_types = {"amount", "date", "time", "id", "party", "address", "city", "qty", "weight", "percent", "days", "enum", "text", "table", "none"}
         errors = []
+        seen: set[tuple[str, str]] = set()
         for field in self.fields:
+            if (field.doc_type, field.field) in seen:
+                errors.append(f"duplicate field: {field.doc_type}.{field.field}")
+            seen.add((field.doc_type, field.field))
             if field.doc_type not in valid_docs:
                 errors.append(f"unknown document type: {field.doc_type}")
             if field.cand_type not in valid_types:

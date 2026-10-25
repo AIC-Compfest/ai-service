@@ -1,0 +1,28 @@
+{
+  "document_id": "invoice/invoice_12_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Biaya Kirim Genset 50 KVA Surabaya - Makassar Via Laut / Express KM. Lambelu",
+          "4500000"
+        ],
+        [
+          "2",
+          "Biaya Handling & Packing Kayu",
+          "750000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "5250000",
+    "11",
+    "577500",
+    "5827500"
+  ]
+}

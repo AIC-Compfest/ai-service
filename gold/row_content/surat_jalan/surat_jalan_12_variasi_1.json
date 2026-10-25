@@ -1,0 +1,37 @@
+{
+  "document_id": "surat_jalan/surat_jalan_12_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Printer Laser A4",
+          "PL-A4X",
+          "6",
+          "Unit",
+          "Kondisi Baik"
+        ],
+        [
+          "2",
+          "Kertas HVS 80gr",
+          "KH-80G",
+          "40",
+          "Rim",
+          "Kondisi Baik"
+        ],
+        [
+          "3",
+          "Toner Cartridge Hitam",
+          "TN-BLK",
+          "12",
+          "Pcs",
+          "Segel Utuh"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

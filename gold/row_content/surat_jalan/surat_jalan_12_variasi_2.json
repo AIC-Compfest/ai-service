@@ -1,0 +1,45 @@
+{
+  "document_id": "surat_jalan/surat_jalan_12_variasi_2",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.barang",
+      "rows": [
+        [
+          "1",
+          "Router Industri 5G",
+          "RI-5G1",
+          "4",
+          "Unit",
+          "Kondisi Baik"
+        ],
+        [
+          "2",
+          "Kabel LAN Cat6 305m",
+          "KL-C6",
+          "10",
+          "Roll",
+          "Kondisi Baik"
+        ],
+        [
+          "3",
+          "Switch 24 Port PoE",
+          "SW-24P",
+          "3",
+          "Unit",
+          "Kondisi Baik"
+        ],
+        [
+          "4",
+          "Rak Server 42U",
+          "RS-42U",
+          "2",
+          "Set",
+          "Segel Utuh"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

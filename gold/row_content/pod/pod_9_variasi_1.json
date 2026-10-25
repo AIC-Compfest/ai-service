@@ -1,0 +1,28 @@
+{
+  "document_id": "pod/pod_9_variasi_1",
+  "doc_type": "POD",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "fields.logistik_items",
+      "rows": [
+        [
+          "Tinta",
+          "1",
+          "Botol"
+        ],
+        [
+          "Segel",
+          "10",
+          "Keping"
+        ],
+        [
+          "Surat Suara ditambah Cadangan 2%",
+          "450",
+          "Lembar"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

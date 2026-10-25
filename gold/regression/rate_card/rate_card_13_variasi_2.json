@@ -1,0 +1,204 @@
+{
+  "document_id": "rate_card/rate_card_13_variasi_2",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_13_variasi_2.pdf",
+    "sha256": "eb3c6121d3de9d21d914bfe2da272d8027425c02d3201b24deb5f839b1d8284b",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 3,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_13_variasi_2-p3-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.072549,
+            0.241521,
+            0.511765,
+            0.309535
+          ],
+          "headers": [],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Fuel Surcharge",
+                  "normalized_text": "Fuel Surcharge",
+                  "bbox_norm": [
+                    0.072549,
+                    0.241521,
+                    0.164142,
+                    0.255747
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "682.00",
+                  "normalized_text": "682.00",
+                  "bbox_norm": [
+                    0.284314,
+                    0.241521,
+                    0.325287,
+                    0.255747
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$0.480 $327.36 $1,472.64",
+                  "normalized_text": "$0.480 $327.36 $1,472.64",
+                  "bbox_norm": [
+                    0.354902,
+                    0.241521,
+                    0.511765,
+                    0.276202
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Flat Rate",
+                  "normalized_text": "Flat Rate",
+                  "bbox_norm": [
+                    0.072549,
+                    0.274855,
+                    0.126908,
+                    0.289081
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1.00",
+                  "normalized_text": "1.00",
+                  "bbox_norm": [
+                    0.284314,
+                    0.274855,
+                    0.310388,
+                    0.289081
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "0 $1,472.64",
+                  "normalized_text": "0 $1,472.64",
+                  "bbox_norm": [
+                    0.354902,
+                    0.274855,
+                    0.511765,
+                    0.289081
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Layover",
+                  "normalized_text": "Layover",
+                  "bbox_norm": [
+                    0.072549,
+                    0.295309,
+                    0.120208,
+                    0.309535
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "1.00",
+                  "normalized_text": "1.00",
+                  "bbox_norm": [
+                    0.284314,
+                    0.295309,
+                    0.310388,
+                    0.309535
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "$150.000 $150.00",
+                  "normalized_text": "$150.000 $150.00",
+                  "bbox_norm": [
+                    0.354902,
+                    0.295309,
+                    0.511765,
+                    0.309535
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.072549,
+                    0.329362,
+                    0.103787,
+                    0.344282
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "$1,950.00",
+                  "normalized_text": "$1,950.00",
+                  "bbox_norm": [
+                    0.44926,
+                    0.329362,
+                    0.511765,
+                    0.344282
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": false,
+            "row_coverage_ok": "3/3",
+            "columns": 3
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "document_id": "invoice/invoice_12_variasi_2",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Biaya Kirim Sparepart Pompa Surabaya - Banjarmasin Via Laut / Express KM. Dharma Kartika",
+          "1850000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "1850000",
+    "11",
+    "203500",
+    "2053500"
+  ]
+}

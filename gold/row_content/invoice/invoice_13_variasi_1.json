@@ -1,0 +1,42 @@
+{
+  "document_id": "invoice/invoice_13_variasi_1",
+  "doc_type": "INVOICE",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "line_items",
+      "rows": [
+        [
+          "1",
+          "Kertas A3 (BOX)",
+          "Ukuran A3, 80 gsm",
+          "6",
+          "85000",
+          "510000"
+        ],
+        [
+          "2",
+          "Tinta Printer (BOTOL)",
+          "Warna Hitam",
+          "12",
+          "45000",
+          "540000"
+        ],
+        [
+          "3",
+          "Stapler Kenko (PCS)",
+          "Ukuran Besar",
+          "5",
+          "32000",
+          "160000"
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    "1210000",
+    "11",
+    "133100",
+    "1343100"
+  ]
+}

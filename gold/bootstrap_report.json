@@ -1,0 +1,1553 @@
+{
+  "summary": {
+    "ok": 83,
+    "failed": 9
+  },
+  "documents": [
+    {
+      "id": "invoice/invoice_12_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_12_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_13_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_13_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_14_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_14_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_15_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_15_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_16_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_16_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_17_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_17_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_18_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_18_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_19_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_19_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_1_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_1_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_20_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "failed",
+          "reason": "weak_coverage 1/2"
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_20_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "failed",
+          "reason": "weak_coverage 1/2"
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_2_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_2_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_3_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_3_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_4_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_4_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "val",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_7_variasi_1",
+      "doc_type": "INVOICE",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "invoice/invoice_7_variasi_2",
+      "doc_type": "INVOICE",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "line_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_10_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.material",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_10_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.material",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_11_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_11_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_12_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_12_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_13_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_13_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_14_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_14_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_15_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_15_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_16_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_16_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_17_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_17_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_1_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "rows_unanchored 0/2"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_1_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "single_column"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_2_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "rows_unanchored 0/2"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_2_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "rows_unanchored 0/2"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_3_variasi_1",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "rows_unanchored 0/2"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_3_variasi_2",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.rincian_barang",
+          "status": "failed",
+          "reason": "rows_unanchored 0/2"
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_4_variasi_1",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.berkas",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_4_variasi_2",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.berkas",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_5_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_5_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_6_variasi_1",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_6_variasi_2",
+      "doc_type": "POD",
+      "split": "holdout",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_7_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_7_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "pod/pod_8_variasi_1",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_8_variasi_2",
+      "doc_type": "POD",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_9_variasi_1",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.logistik_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "pod/pod_9_variasi_2",
+      "doc_type": "POD",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.logistik_items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_10_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_10_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_11_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.stops",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_11_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "fields.stops",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_12_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.payment.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_12_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.payment.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_13_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.charges",
+          "status": "ok",
+          "pages": [
+            3
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_13_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": [
+        {
+          "path": "fields.charges",
+          "status": "ok",
+          "pages": [
+            3
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_14_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.payment.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_14_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.payment.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_15_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.rate_details",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_15_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.rate_details",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_1_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_1_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_2_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_2_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_3_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_3_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_4_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_4_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_5_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 7
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_5_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 7
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_6_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_6_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_7_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_7_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "val",
+      "tables": [
+        {
+          "path": "items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_8_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.carrier_fees",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_8_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "fields.carrier_fees",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "rate_card/rate_card_9_variasi_1",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": []
+    },
+    {
+      "id": "rate_card/rate_card_9_variasi_2",
+      "doc_type": "RATE_AGREEMENT",
+      "split": "holdout",
+      "tables": []
+    },
+    {
+      "id": "surat_jalan/surat_jalan_10_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "failed",
+          "reason": "weak_coverage 3/4"
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_10_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_11_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_11_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_12_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_12_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_13_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_13_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_14_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_14_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 8
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_15_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_15_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 7
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_16_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.produk",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_16_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.produk",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_1_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_1_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_2_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_2_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 6
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_3_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "ground_truth.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_3_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "holdout",
+      "tables": [
+        {
+          "path": "ground_truth.items",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_4_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "surat_jalan/surat_jalan_4_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": []
+    },
+    {
+      "id": "surat_jalan/surat_jalan_5_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_5_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_6_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "surat_jalan/surat_jalan_6_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": []
+    },
+    {
+      "id": "surat_jalan/surat_jalan_7_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.daftar_barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_7_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.daftar_barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_8_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_8_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "dev",
+      "tables": [
+        {
+          "path": "ground_truth.barang",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_9_variasi_1",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.detail_order",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "surat_jalan/surat_jalan_9_variasi_2",
+      "doc_type": "SURAT_JALAN",
+      "split": "val",
+      "tables": [
+        {
+          "path": "ground_truth.detail_order",
+          "status": "ok",
+          "pages": [
+            1
+          ],
+          "rows": 4
+        }
+      ]
+    }
+  ]
+}

@@ -20,9 +20,11 @@ from __future__ import annotations
 
 import re
 
+from app.core.config import settings
 from app.core.logging import get_logger
 from app.schemas.evidence import ExtractedField
 from app.services.extraction.base import BaseExtractor
+from app.services.extraction.confidence import HEURISTIC_CONSTANT, table_derived_confidence
 from app.services.extraction.utils import (
     build_field,
     extract_regex_with_bbox,
@@ -33,6 +35,7 @@ from app.services.extraction.utils import (
     parse_date_string,
     parse_integer,
     parse_table_columns,
+    to_unit_bbox,
 )
 
 logger = get_logger(__name__)
@@ -125,7 +128,8 @@ class RateAgreementExtractor(BaseExtractor):
         all_tables: list[dict] = []
         for page in ocr_result.get("pages", []):
             all_lines.extend(page.get("lines", []))
-            all_tables.extend(page.get("tables", []))
+            # Only tables the pipeline classified as item tables feed this extractor (legacy tables carry no role).
+            all_tables.extend(t for t in page.get("tables", []) if t.get("role", "line_items") in ("line_items", "rate_matrix"))
 
         if not all_lines:
             return self._all_unknown(document_id)
@@ -156,16 +160,16 @@ class RateAgreementExtractor(BaseExtractor):
         # ----------------------------------------------------------------
         # 2. Vendor Name & Vendor ID
         # ----------------------------------------------------------------
-        header_lines = [l for l in all_lines if l.get("bbox_norm", [0, 0, 0, 0])[1] < 200]
+        header_lines = [l for l in all_lines if to_unit_bbox(l.get("bbox_norm"))[1] < settings.rate_agreement_header_max_y]
         vendor_name, vendor_id = self._extract_vendor_info(header_lines, all_lines)
         vconf = 0.88 if vendor_name else 0.0
         fields.append(build_field(
-            field="vendor_name", value=vendor_name, confidence=vconf,
+            field="vendor_name", value=vendor_name, confidence=vconf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=header_lines[0].get("bbox_norm") if header_lines else None,
             document_id=document_id, page=page_num,
         ))
         fields.append(build_field(
-            field="vendor_id", value=vendor_id, confidence=vconf,
+            field="vendor_id", value=vendor_id, confidence=vconf, confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=None, document_id=document_id, page=page_num,
         ))
 
@@ -244,7 +248,8 @@ class RateAgreementExtractor(BaseExtractor):
         fields.append(build_field(
             field="rate_matrix",
             value=rate_matrix if rate_matrix else None,
-            confidence=0.90 if rate_matrix else 0.0,
+            confidence=table_derived_confidence(all_tables, bool(rate_matrix))[0],
+            confidence_source=table_derived_confidence(all_tables, bool(rate_matrix))[1],
             bbox_norm=all_tables[0].get("bbox_norm") if all_tables else None,
             document_id=document_id,
             page=page_num,
@@ -258,6 +263,7 @@ class RateAgreementExtractor(BaseExtractor):
             field="surcharge_rules",
             value=surcharges if surcharges else None,
             confidence=0.88 if surcharges else 0.0,
+            confidence_source=HEURISTIC_CONSTANT,
             bbox_norm=None,
             document_id=document_id,
             page=page_num,

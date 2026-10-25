@@ -32,6 +32,10 @@ class Page:
     engine_used: str = ""
     quality: dict[str, Any] = field(default_factory=dict)
     regions: list[dict[str, Any]] = field(default_factory=list)
+    source_page: Any | None = None
+    aspect: float | None = None  # page width / height; None when the evidence does not carry the page size
+    image_path: str | None = None  # canonical page PNG (evidence page_image.path); Docling reads scans from it
+    pdf_bytes: bytes | None = None  # one-page PDF (PDF uploads only); Docling reads its text layer directly
 
 
 @dataclass
@@ -74,6 +78,12 @@ class Table:
     bbox: tuple[float, float, float, float]
     conf: float = 0.0
     stitched_pages: list[int] = field(default_factory=list)
+    reason: str = ""
+    validation: dict[str, Any] = field(default_factory=dict)
+    structural_score: float = 0.0
+    summary_rows: list[TableRow] = field(default_factory=list)
+    role: str = ""  # line_items | summary | info | other (set by the router)
+    role_reason: str = ""
 
 
 @dataclass
@@ -87,9 +97,13 @@ class Candidate:
     reading_idx: int = 0
     features: dict[str, Any] = field(default_factory=dict)
     context: dict[str, str] = field(default_factory=dict)
+    table_meta: dict[str, Any] = field(default_factory=dict)
+    bbox_override: tuple[float, float, float, float] | None = None
 
     @property
     def bbox(self) -> tuple[float, float, float, float]:
+        if self.bbox_override is not None:
+            return self.bbox_override
         return (min(t.bbox[0] for t in self.tokens), min(t.bbox[1] for t in self.tokens), max(t.bbox[2] for t in self.tokens), max(t.bbox[3] for t in self.tokens))
 
     @property

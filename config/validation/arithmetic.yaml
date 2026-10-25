@@ -1,0 +1,41 @@
+# Deterministic arithmetic checks (Fase 5). Add headers and rules HERE, not in code.
+# K3: tolerances are absolute per currency; there is NO relative tolerance by default (a relative one hides real errors).
+tolerance:
+  absolute:          # in the units of the document currency (strings: parsed as Decimal)
+    IDR: "1"
+    USD: "0.01"
+    default: "1"
+  relative: "0"
+suggestion:
+  max_edit_distance: 1   # a corrected value is suggested only when it differs from the observed one by one character
+
+# Normalized header (lower case, accents/punctuation removed) -> role. Several roles may list a word; the longest
+# matching alias wins (see arithmetic.assign_roles). Columns whose header marks a percentage (%, persen, percent, pct)
+# never take a role. Headers that fit several roles go under `ambiguous` and are resolved by position.
+roles:
+  quantity: [qty, quantity, koli, volume, pcs, jumlah barang, kuantitas]
+  rate: [rate, harga, price, tarif, unit price, base rate, harga satuan, unit cost, unit value, rate per kg]
+  weight: [weight, berat, chargeable weight, net weight, gross weight, berat kg]
+  line_total: [total, amount, line total, subtotal, jumlah harga, nilai, total price, total amount]
+  gross: [gross amount, gross, bruto]
+  discount: [discount, diskon, discount amount, disc, potongan]
+  tax: [tax, pajak, ppn, vat]
+  net: [net amount, net, nett, netto]
+ambiguous:
+  jumlah: [line_total, quantity]   # first role that is still free once the clear headers are assigned; with a rate column present: line_total
+
+# target = op(terms). `product`: target = t1 * t2. `difference`: target = t1 - t2.
+# `unless`: the rule is skipped when one of these roles exists, because the total then also contains that component
+# (qty * price is not the total of a row that has a discount or a tax column).
+row_rules:
+  - {id: qty_x_rate, target: line_total, op: product, terms: [quantity, rate], unless: [discount, tax]}
+  - {id: weight_x_rate, target: line_total, op: product, terms: [weight, rate], unless: [discount, tax]}
+  - {id: qty_x_rate_gross, target: gross, op: product, terms: [quantity, rate]}
+  - {id: gross_minus_discount, target: net, op: difference, terms: [gross, discount]}
+
+# Fields of the extraction response used for the document level checks.
+document:
+  subtotal_field: subtotal
+  tax_field: tax_amount
+  grand_total_field: grand_total
+  currency_field: currency

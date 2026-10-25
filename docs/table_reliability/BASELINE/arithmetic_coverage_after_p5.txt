@@ -1,0 +1,7 @@
+
+documents 28 | with any rule applicable: 7
+rows total 132 | rows evaluated 21 | checks PASS 21 of 21
+subtotal {'-': 12, 'FAIL': 4, 'PASS': 6, 'SKIPPED': 6}
+grand_total {'-': 12, 'FAIL': 9, 'PASS': 7}
+GT: quantity * unit_price = amount holds in 23 of 25 items
+

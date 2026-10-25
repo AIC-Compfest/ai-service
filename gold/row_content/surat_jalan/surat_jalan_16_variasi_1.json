@@ -1,0 +1,29 @@
+{
+  "document_id": "surat_jalan/surat_jalan_16_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.produk",
+      "rows": [
+        [
+          "1",
+          "Gula Pasir",
+          "Gula Pasir Kristal Putih",
+          "GP/045-Sep/IX/2024",
+          "5",
+          "Karung 50 Kg"
+        ],
+        [
+          "2",
+          "Minyak Goreng",
+          "Minyak Goreng Kemasan Jerigen",
+          "MG/071-Sep/IX/2024",
+          "40",
+          "Jerigen 5 Liter"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

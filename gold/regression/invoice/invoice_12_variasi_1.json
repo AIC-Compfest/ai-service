@@ -1,0 +1,259 @@
+{
+  "document_id": "invoice/invoice_12_variasi_1",
+  "source": {
+    "relative_path": "invoice/pdf/invoice_12_variasi_1.pdf",
+    "sha256": "180a25a6b07baa995f9e629cf3c84d236a6c4f994d46bab6c7a23dae6e397b58",
+    "source_kind": "pdf"
+  },
+  "document_type": "INVOICE",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "invoice/invoice_12_variasi_1-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.0875,
+            0.301551,
+            0.9225,
+            0.432184
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
+              "normalized_text": "Surat Keterangan Bebas PPh (SKB) DGT Form / Certificate of Domicile (CoD) Surat Keterangan Non PKP URAIAN DESCRIPTION",
+              "bbox_norm": [
+                0.10125,
+                0.301551,
+                0.46787,
+                0.379153
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "JUMLAH UANG AMOUNT",
+              "normalized_text": "JUMLAH UANG AMOUNT",
+              "bbox_norm": [
+                0.790987,
+                0.350162,
+                0.894013,
+                0.379153
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Biaya Kirim Genset 50 KVA Surabaya - Makassar Via Laut / Express KM. Lambelu",
+                  "normalized_text": "Biaya Kirim Genset 50 KVA Surabaya - Makassar Via Laut / Express KM. Lambelu",
+                  "bbox_norm": [
+                    0.0875,
+                    0.398774,
+                    0.613194,
+                    0.412739
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "4.500.000",
+                  "normalized_text": "4.500.000",
+                  "bbox_norm": [
+                    0.85856,
+                    0.398774,
+                    0.9225,
+                    0.412739
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Biaya Handling & Packing Kayu",
+                  "normalized_text": "Biaya Handling & Packing Kayu",
+                  "bbox_norm": [
+                    0.0875,
+                    0.418218,
+                    0.289641,
+                    0.432184
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "750.000",
+                  "normalized_text": "750.000",
+                  "bbox_norm": [
+                    0.870549,
+                    0.418218,
+                    0.9225,
+                    0.432184
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [
+            {
+              "row_id": "s1",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "SubTotal",
+                  "normalized_text": "SubTotal",
+                  "bbox_norm": [
+                    0.388002,
+                    0.591501,
+                    0.449498,
+                    0.605497
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp.",
+                  "normalized_text": "Rp.",
+                  "bbox_norm": [
+                    0.72,
+                    0.591501,
+                    0.743158,
+                    0.605497
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "5.250.000",
+                  "normalized_text": "5.250.000",
+                  "bbox_norm": [
+                    0.85856,
+                    0.59145,
+                    0.9225,
+                    0.605416
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s2",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "PPN 11%",
+                  "normalized_text": "PPN 11%",
+                  "bbox_norm": [
+                    0.387592,
+                    0.60741,
+                    0.449908,
+                    0.621406
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp.",
+                  "normalized_text": "Rp.",
+                  "bbox_norm": [
+                    0.72,
+                    0.60741,
+                    0.743158,
+                    0.621406
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "577.500",
+                  "normalized_text": "577.500",
+                  "bbox_norm": [
+                    0.870549,
+                    0.607359,
+                    0.9225,
+                    0.621325
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "s3",
+              "kind": "summary",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "Total",
+                  "normalized_text": "Total",
+                  "bbox_norm": [
+                    0.401579,
+                    0.623319,
+                    0.435921,
+                    0.637315
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Rp.",
+                  "normalized_text": "Rp.",
+                  "bbox_norm": [
+                    0.72,
+                    0.623319,
+                    0.743158,
+                    0.637315
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "5.827.500",
+                  "normalized_text": "5.827.500",
+                  "bbox_norm": [
+                    0.85856,
+                    0.623319,
+                    0.9225,
+                    0.637315
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "2/2",
+            "columns": 2
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "document_id": "rate_card/rate_card_2_variasi_1",
+  "doc_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "items",
+      "rows": [
+        [
+          "1",
+          "FUSO",
+          "UNIT",
+          "1",
+          "SURABAYA - DENPASAR",
+          "BARANG KELONTONG / MULTI UP 15 TON",
+          "Rp. 12.500.000"
+        ],
+        [
+          "UNIT",
+          "1",
+          "SURABAYA - MALANG",
+          "BARANG KELONTONG / MULTI UP 10 TON",
+          "Rp. 4.500.000"
+        ],
+        [
+          "UNIT",
+          "1",
+          "SURABAYA - JEMBER",
+          "BARANG KELONTONG / MULTI UP 12 TON",
+          "Rp. 6.000.000"
+        ],
+        [
+          "UNIT",
+          "1",
+          "JAKARTA - SEMARANG",
+          "ELEKTRONIK / CONSUMABLES",
+          "Rp. 5.800.000"
+        ],
+        [
+          "UNIT",
+          "1",
+          "BANDUNG - SURABAYA",
+          "TEKSTIL / GARMENT UP 8 TON",
+          "Rp. 7.500.000"
+        ],
+        [
+          "2",
+          "TRITON",
+          "UNIT",
+          "1",
+          "SURABAYA - MALANG",
+          "EKSPEDISI KILAT / DOKUMEN",
+          "Rp. 2.200.000"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

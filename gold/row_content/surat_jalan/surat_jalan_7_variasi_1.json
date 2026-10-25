@@ -1,0 +1,23 @@
+{
+  "document_id": "surat_jalan/surat_jalan_7_variasi_1",
+  "doc_type": "SURAT_JALAN",
+  "source_label": "synthetic_gt_row_content",
+  "tables": [
+    {
+      "path": "ground_truth.daftar_barang",
+      "rows": [
+        [
+          "0000000003412",
+          "Epson L3210 Printer",
+          "2.00"
+        ],
+        [
+          "0000000003587",
+          "Logitech Mouse M170",
+          "5.00"
+        ]
+      ]
+    }
+  ],
+  "totals": []
+}

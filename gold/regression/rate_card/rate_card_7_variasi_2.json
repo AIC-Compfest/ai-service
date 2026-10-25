@@ -1,0 +1,354 @@
+{
+  "document_id": "rate_card/rate_card_7_variasi_2",
+  "source": {
+    "relative_path": "rate card/pdf/rate_card_7_variasi_2.pdf",
+    "sha256": "ac79012e7635ef8b9c768ef33c8e64e3c98597e12648258f3fff3642e481481d",
+    "source_kind": "pdf"
+  },
+  "document_type": "RATE_AGREEMENT",
+  "source_label": "synthetic_grounded",
+  "reviewed": false,
+  "review": {
+    "schema_version": "1",
+    "prepared_by": "table_eval.grounding",
+    "prepared_at_utc": "",
+    "approved_by": "",
+    "approved_at_utc": "",
+    "notes": "Bootstrapped from GT values and PDF words; not human reviewed."
+  },
+  "pages_exhaustive": false,
+  "pages": [
+    {
+      "page_number": 1,
+      "tables": [
+        {
+          "table_id": "rate_card/rate_card_7_variasi_2-p1-g1",
+          "role": "line_items",
+          "bbox_norm": [
+            0.076231,
+            0.399501,
+            0.923203,
+            0.482376
+          ],
+          "headers": [
+            {
+              "column_index": 0,
+              "raw_text": "No.",
+              "normalized_text": "No.",
+              "bbox_norm": [
+                0.076231,
+                0.399501,
+                0.098606,
+                0.41428
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 1,
+              "raw_text": "Tipe Komputer",
+              "normalized_text": "Tipe Komputer",
+              "bbox_norm": [
+                0.136458,
+                0.399501,
+                0.234458,
+                0.41428
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 2,
+              "raw_text": "Spesifikasi",
+              "normalized_text": "Spesifikasi",
+              "bbox_norm": [
+                0.365676,
+                0.399501,
+                0.438245,
+                0.41428
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 3,
+              "raw_text": "Harga Satuan (Rp)",
+              "normalized_text": "Harga Satuan (Rp)",
+              "bbox_norm": [
+                0.549718,
+                0.399501,
+                0.670871,
+                0.41428
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 4,
+              "raw_text": "Quantity",
+              "normalized_text": "Quantity",
+              "bbox_norm": [
+                0.696507,
+                0.399501,
+                0.75284,
+                0.41428
+              ],
+              "legibility": "clear"
+            },
+            {
+              "column_index": 5,
+              "raw_text": "Harga Total (Rp)",
+              "normalized_text": "Harga Total (Rp)",
+              "bbox_norm": [
+                0.797293,
+                0.399501,
+                0.905321,
+                0.41428
+              ],
+              "legibility": "clear"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "r1",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "1",
+                  "normalized_text": "1",
+                  "bbox_norm": [
+                    0.083557,
+                    0.422175,
+                    0.091279,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "POS Touchscreen Terminal",
+                  "normalized_text": "POS Touchscreen Terminal",
+                  "bbox_norm": [
+                    0.117647,
+                    0.422175,
+                    0.288994,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Intel Core i5, RAM 16GB, SSD 512GB, 15\"",
+                  "normalized_text": "Intel Core i5, RAM 16GB, SSD 512GB, 15\"",
+                  "bbox_norm": [
+                    0.272876,
+                    0.422175,
+                    0.537181,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "Capacitive 12.500.000 Touch, Built-in",
+                  "normalized_text": "Capacitive 12.500.000 Touch, Built-in",
+                  "bbox_norm": [
+                    0.541043,
+                    0.422175,
+                    0.698501,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Thermal 10",
+                  "normalized_text": "Thermal 10",
+                  "bbox_norm": [
+                    0.702362,
+                    0.422175,
+                    0.753293,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Printer 125.000.000",
+                  "normalized_text": "Printer 125.000.000",
+                  "bbox_norm": [
+                    0.757154,
+                    0.422175,
+                    0.923203,
+                    0.436921
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r2",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "2",
+                  "normalized_text": "2",
+                  "bbox_norm": [
+                    0.083557,
+                    0.444902,
+                    0.091279,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Mini PC Office Station",
+                  "normalized_text": "Mini PC Office Station",
+                  "bbox_norm": [
+                    0.117647,
+                    0.444902,
+                    0.253494,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "Intel Core i3 Gen 12, RAM 8GB, SSD 256GB,",
+                  "normalized_text": "Intel Core i3 Gen 12, RAM 8GB, SSD 256GB,",
+                  "bbox_norm": [
+                    0.272876,
+                    0.444902,
+                    0.55464,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "22\" FHD 6.500.000 Monitor,",
+                  "normalized_text": "22\" FHD 6.500.000 Monitor,",
+                  "bbox_norm": [
+                    0.558501,
+                    0.444902,
+                    0.669935,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "Windows 10 11 Home",
+                  "normalized_text": "Windows 10 11 Home",
+                  "bbox_norm": [
+                    0.669168,
+                    0.444902,
+                    0.78571,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "65.000.000",
+                  "normalized_text": "65.000.000",
+                  "bbox_norm": [
+                    0.853703,
+                    0.444902,
+                    0.923203,
+                    0.459648
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            },
+            {
+              "row_id": "r3",
+              "kind": "item",
+              "cells": [
+                {
+                  "column_index": 0,
+                  "raw_text": "3",
+                  "normalized_text": "3",
+                  "bbox_norm": [
+                    0.083557,
+                    0.467629,
+                    0.091279,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 1,
+                  "raw_text": "Barpad / Tablet",
+                  "normalized_text": "Barpad / Tablet",
+                  "bbox_norm": [
+                    0.117647,
+                    0.467629,
+                    0.212605,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 2,
+                  "raw_text": "InventoryOcta-Core Processor, RAM 6GB, ROM",
+                  "normalized_text": "InventoryOcta-Core Processor, RAM 6GB, ROM",
+                  "bbox_norm": [
+                    0.216467,
+                    0.467629,
+                    0.513668,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 3,
+                  "raw_text": "128GB, Barcode 3.500.000 Scanner",
+                  "normalized_text": "128GB, Barcode 3.500.000 Scanner",
+                  "bbox_norm": [
+                    0.517529,
+                    0.467629,
+                    0.675793,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 4,
+                  "raw_text": "2D, Rugged 10",
+                  "normalized_text": "2D, Rugged 10",
+                  "bbox_norm": [
+                    0.679654,
+                    0.467629,
+                    0.753765,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                },
+                {
+                  "column_index": 5,
+                  "raw_text": "Case 35.000.000",
+                  "normalized_text": "Case 35.000.000",
+                  "bbox_norm": [
+                    0.757626,
+                    0.467629,
+                    0.923203,
+                    0.482376
+                  ],
+                  "legibility": "clear"
+                }
+              ]
+            }
+          ],
+          "summary_rows": [],
+          "logical_id": null,
+          "quality": {
+            "header_found": true,
+            "row_coverage_ok": "3/3",
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ]
+}
