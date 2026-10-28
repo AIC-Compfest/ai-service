@@ -3,11 +3,10 @@ FROM python:3.11-slim AS builder
 ENV PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-COPY requirements.txt requirements-docling.txt ./
-# CPU-only torch first, so later installs don't pull CUDA wheels
+COPY requirements.lock.txt ./
+# Install CPU-only torch first, so later installs don't pull CUDA wheels
 RUN pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
-RUN pip install -r requirements.txt -r requirements-docling.txt \
- && find /opt/venv -name __pycache__ -type d -prune -exec rm -rf {} +
+RUN pip install -r requirements.lock.txt
 
 FROM python:3.11-slim
 RUN apt-get update && apt-get install -y --no-install-recommends libglib2.0-0 libgomp1 \
