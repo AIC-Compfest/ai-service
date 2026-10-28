@@ -1,4 +1,5 @@
-from app.services.extraction.label_value import extract_label_values
+from app.schemas.evidence import EvidenceSource, ExtractedField, ExtractionMethod
+from app.services.extraction.label_value import extract_label_values, merge_review_fields
 
 
 def _line(text, bbox):
@@ -66,3 +67,18 @@ def test_table_field_recovers_positioned_text_grid_when_layout_provider_has_no_t
         ["0000000003587", "Logitech Mouse M170", "5.00"],
     ]
     assert evidence["pages"][0]["tables"][0]["source"] == "pymupdf_positioned_text"
+
+
+def test_review_merge_keeps_typed_extractor_value_when_label_policy_is_unknown():
+    # The invoice typed extractor can identify a value with geometry/regex even
+    # when the label policy finds no matching label. That value must remain
+    # reviewable instead of being replaced by a synthetic UNKNOWN mapping.
+    evidence = {"pages": [{"page_number": 1, "lines": []}]}
+    typed = ExtractedField(
+        field="invoice_number", value="INV-2026-001", confidence=0.92,
+        source=EvidenceSource(document_id="doc", page=1),
+        method=ExtractionMethod.RULE_BASED, is_unknown=False, raw_text="INV-2026-001",
+    )
+    fields = {item.field: item for item in merge_review_fields("doc", evidence, "INVOICE", [typed], {"fields": []})}
+    assert fields["invoice_number"].value == "INV-2026-001"
+    assert not fields["invoice_number"].is_unknown
