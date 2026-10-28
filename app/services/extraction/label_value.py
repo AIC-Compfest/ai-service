@@ -77,6 +77,16 @@ def extract_label_values(document_id: str, evidence: dict[str, Any], document_ty
 def merge_review_fields(document_id: str, evidence: dict[str, Any], document_type: str, rule_fields: list[ExtractedField], ml: dict[str, Any]) -> list[ExtractedField]:
     """Combine registry values from label rules and ML without hiding suggestions."""
     selected = {field.field: field for field in extract_label_values(document_id, evidence, document_type)}
+    # The label policy is an additive review aid, not the source of truth for
+    # extraction. It intentionally returns UNKNOWN when a label is absent. In
+    # that case the typed extractor has often already found a value from OCR
+    # geometry/regex/table analysis. Previously the pre-created UNKNOWN entry
+    # shadowed that real value, producing empty HITL mappings even though the
+    # evidence lines and line-items table were present.
+    for extracted in rule_fields:
+        current = selected.get(extracted.field)
+        if current is not None and current.is_unknown and extracted.value is not None:
+            selected[extracted.field] = extracted
     ml_fields = {item.get("field"): item for item in ml.get("fields", []) if isinstance(item, dict) and item.get("field")}
     label_config = yaml.safe_load((Path(settings.config_dir) / "extraction" / "labels.yaml").read_text(encoding="utf-8")) or {}
     field_specs = label_config.get(document_type, {})
