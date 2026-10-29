@@ -6,7 +6,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY requirements.lock.txt ./
 # Install CPU-only torch first, so later installs don't pull CUDA wheels
 RUN pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
-RUN pip install -r requirements.lock.txt
+RUN pip install -r requirements.lock.txt \
+ && python -c "import torch, torchvision, docling, rapidocr, onnxruntime, lightgbm, cv2; print('imports ok')"
 
 FROM python:3.11-slim
 RUN apt-get update && apt-get install -y --no-install-recommends libglib2.0-0 libgomp1 \
