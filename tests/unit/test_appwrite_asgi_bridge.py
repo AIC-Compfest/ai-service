@@ -1,5 +1,7 @@
 """Tests for deploy/appwrite/asgi_bridge.py. Standard library and asyncio only; no network."""
 
+import asyncio
+
 from deploy.appwrite.asgi_bridge import ASGIRunner, LifespanStartupError
 
 
@@ -142,3 +144,21 @@ def test_requests_after_close_are_rejected():
         assert "closed" in str(error)
     else:
         raise AssertionError("expected a RuntimeError after close()")
+
+
+def test_request_works_when_the_caller_is_already_inside_a_running_event_loop():
+    # Appwrite's runtime calls the function from a running loop. The bridge must not
+    # try to start a second loop on the same thread.
+    app = RecordingApp()
+    runner = ASGIRunner(app)
+
+    async def caller():
+        return runner.request("POST", "/", body=b"abc")
+
+    try:
+        response = asyncio.run(caller())
+    finally:
+        runner.close()
+
+    assert response.body == b"cba"
+    assert app.startups == 1
