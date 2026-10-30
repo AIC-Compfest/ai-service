@@ -38,6 +38,11 @@ class BridgeResponse:
 class ASGIRunner:
     """Feeds requests to one ASGI application on a private event loop.
 
+    The loop runs on its own thread. The caller may already be inside a running
+    event loop (Appwrite's runtime calls the function from one), and asyncio
+    cannot run a second loop on the same thread, so the caller only submits
+    coroutines and waits for the result.
+
     Lifespan startup runs once, on the first request, so expensive setup such as
     model loading is paid once per process. An application without lifespan
     support is served without it, as uvicorn does by default.
@@ -47,6 +52,10 @@ class ASGIRunner:
         self._app = app
         self._client = client
         self._loop = asyncio.new_event_loop()
+        self._thread = threading.Thread(
+            target=self._loop.run_forever, name="asgi-runner", daemon=True
+        )
+        self._thread.start()
         self._lock = threading.Lock()
         self._started = False
         self._closed = False
@@ -66,8 +75,8 @@ class ASGIRunner:
         with self._lock:
             if self._closed:
                 raise RuntimeError("ASGIRunner has been closed")
-            self._loop.run_until_complete(self._ensure_started())
-            return self._loop.run_until_complete(
+            self._call(self._ensure_started())
+            return self._call(
                 self._dispatch(method, path, query_string, dict(headers or {}), body)
             )
 
@@ -78,9 +87,16 @@ class ASGIRunner:
                 return
             self._closed = True
             try:
-                self._loop.run_until_complete(self._shutdown())
+                self._call(self._shutdown())
             finally:
-                self._loop.close()
+                self._loop.call_soon_threadsafe(self._loop.stop)
+                self._thread.join(timeout=_SHUTDOWN_TIMEOUT_SECONDS)
+                if not self._thread.is_alive():
+                    self._loop.close()
+
+    def _call(self, coro: Awaitable[Any]) -> Any:
+        """Run a coroutine on the runner's loop thread and return its result."""
+        return asyncio.run_coroutine_threadsafe(coro, self._loop).result()  # type: ignore[arg-type]
 
     async def _ensure_started(self) -> None:
         if self._started:
