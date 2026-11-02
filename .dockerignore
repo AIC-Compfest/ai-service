@@ -1,15 +1,21 @@
+# VCS, editors, tool caches
 .git
 .gitignore
 .gitattributes
+.github
+.agents
+.vscode
 .venv
 .venv-exp
-.vscode
 .pytest_cache
+.pytest-tmp*
 .mypy_cache
 .ruff_cache
-__pycache__
-*.pyc
+**/__pycache__
+**/*.pyc
 .env
+
+# Not needed at runtime
 out
 data
 docs
@@ -18,3 +24,9 @@ reports
 tests
 scripts
 *.md
+
+# Experiment and old model versions (keep only the live one)
+models/all_v3
+models/phase2_smoke
+models/pod_phase2
+**/evaluation

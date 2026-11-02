@@ -1,0 +1,20 @@
+{
+  "projectId": "6ae2fcaa00359ab612e7",
+  "endpoint": "https://sgp.cloud.appwrite.io/v1",
+  "functions": [
+    {
+      "$id": "ai-service-pipeline",
+      "name": "ai-service pipeline",
+      "runtime": "python-ml-3.11",
+      "path": ".",
+      "entrypoint": "deploy/appwrite/main.py",
+      "commands": "sh deploy/appwrite/build.sh",
+      "execute": ["any"],
+      "enabled": true,
+      "logging": true,
+      "timeout": 900,
+      "buildSpecification": "s-4vcpu-4gb",
+      "runtimeSpecification": "s-4vcpu-4gb"
+    }
+  ]
+}
