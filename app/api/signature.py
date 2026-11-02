@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 
 
 @router.post("/detect", response_model=SignatureDetectionResponse)
-def detect_signature(file: UploadFile) -> SignatureDetectionResponse:
+async def detect_signature(file: UploadFile) -> SignatureDetectionResponse:
     document_id = str(uuid.uuid4())
     file_bytes = read_upload(file)
     logger.info("signature.request", document_id=document_id, filename=file.filename)

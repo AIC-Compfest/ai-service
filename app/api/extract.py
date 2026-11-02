@@ -29,7 +29,7 @@ logger = get_logger(__name__)
 
 
 @router.post("/understand/evidence")
-def understand_document_evidence(file: UploadFile) -> dict:
+async def understand_document_evidence(file: UploadFile) -> dict:
     """
     Phase 5 Evidence Endpoint.
     Returns full structured OCR evidence: lines, bboxes, layout regions, tables,
@@ -44,7 +44,7 @@ def understand_document_evidence(file: UploadFile) -> dict:
 
 
 @router.post("/pipeline/full")
-def extract_full_pipeline(
+async def extract_full_pipeline(
     file: UploadFile,
     request: Request,
     document_type: DocumentType | None = Form(default=None),
@@ -262,7 +262,7 @@ def extract_full_pipeline(
 
 
 @router.post("/{document_type}", response_model=ExtractionResponse)
-def extract_document(document_type: DocumentType, file: UploadFile) -> ExtractionResponse:
+async def extract_document(document_type: DocumentType, file: UploadFile) -> ExtractionResponse:
     """
     Typed extraction endpoint. Caller specifies document type explicitly.
     Uses Phase 5 pipeline for OCR then Phase 6 extractor for field extraction.

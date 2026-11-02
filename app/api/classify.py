@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 
 
 @router.post("", response_model=ClassifyResponse)
-def classify_document(file: UploadFile) -> ClassifyResponse:
+async def classify_document(file: UploadFile) -> ClassifyResponse:
     document_id = str(uuid.uuid4())
     file_bytes = read_upload(file)
     logger.info("classify.request", document_id=document_id, filename=file.filename)
