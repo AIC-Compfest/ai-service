@@ -76,7 +76,8 @@ async def extract_full_pipeline(
         logger.info("extract.pipeline.request", document_id=document_id, filename=filename, correlation_id=request.headers.get("x-correlation-id", ""))
 
         pipeline = get_pipeline()
-        evidence = pipeline.process_document(file_bytes, filename=filename, document_id=document_id)
+        # Run CPU-bound pipeline in thread pool to avoid blocking async event loop
+        evidence = await asyncio.to_thread(pipeline.process_document, file_bytes, filename=filename, document_id=document_id)
 
         classification = dict(evidence.get("classification", {}))
         # A user-selected type is a reviewable routing instruction, not a model
