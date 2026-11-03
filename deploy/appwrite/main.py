@@ -15,6 +15,7 @@ backend's API error responses. Requests without the right password get 401. If
 
 from __future__ import annotations
 
+import asyncio
 import atexit
 import base64
 import hmac
