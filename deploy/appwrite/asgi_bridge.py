@@ -62,7 +62,7 @@ class ASGIRunner:
         self._lifespan_queue: asyncio.Queue[Message] | None = None
         self._lifespan_task: asyncio.Task[None] | None = None
 
-    def request(
+    async def request(
         self,
         method: str,
         path: str,
@@ -75,28 +75,28 @@ class ASGIRunner:
         with self._lock:
             if self._closed:
                 raise RuntimeError("ASGIRunner has been closed")
-            self._call(self._ensure_started())
-            return self._call(
+            await self._call(self._ensure_started())
+            return await self._call(
                 self._dispatch(method, path, query_string, dict(headers or {}), body)
             )
 
-    def close(self) -> None:
+    async def close(self) -> None:
         """Run the application's shutdown lifespan and release the event loop."""
         with self._lock:
             if self._closed:
                 return
             self._closed = True
             try:
-                self._call(self._shutdown())
+                await self._call(self._shutdown())
             finally:
                 self._loop.call_soon_threadsafe(self._loop.stop)
                 self._thread.join(timeout=_SHUTDOWN_TIMEOUT_SECONDS)
                 if not self._thread.is_alive():
                     self._loop.close()
 
-    def _call(self, coro: Awaitable[Any]) -> Any:
-        """Run a coroutine on the runner's loop thread and return its result."""
-        return asyncio.run_coroutine_threadsafe(coro, self._loop).result()  # type: ignore[arg-type]
+    async def _call(self, coro: Awaitable[Any]) -> Any:
+        """Run a coroutine on the runner's loop thread and await its result."""
+        return await asyncio.wrap_future(asyncio.run_coroutine_threadsafe(coro, self._loop))
 
     async def _ensure_started(self) -> None:
         if self._started:

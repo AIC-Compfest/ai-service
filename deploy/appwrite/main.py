@@ -74,7 +74,7 @@ _runner: ASGIRunner | None = None
 _runner_lock = threading.Lock()
 
 
-def main(context: Any) -> Any:
+async def main(context: Any) -> Any:
     secret = os.environ.get(SECRET_ENV, "").strip()
     if not secret:
         return _error(context, 503, f"{SECRET_ENV} is not set; all requests are refused")
@@ -89,7 +89,7 @@ def main(context: Any) -> Any:
         headers = _forward_headers(req.headers or {})
         query_string = str(getattr(req, "query_string", "") or "")
         with _runner_lock:
-            response = _get_runner().request(
+            response = await _get_runner().request(
                 str(req.method),
                 str(req.path or "/"),
                 query_string=query_string,
@@ -174,7 +174,18 @@ def _close_runner() -> None:
     global _runner
     with _runner_lock:
         if _runner is not None:
-            _runner.close()
+            # Since _call is now async, we need to run it in a way that works during shutdown
+            # Use a new event loop for the blocking call
+            try:
+                asyncio.run(_runner.close())
+            except RuntimeError:
+                # If event loop already exists, use it
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                try:
+                    loop.run_until_complete(_runner.close())
+                finally:
+                    loop.close()
             _runner = None
 
 
