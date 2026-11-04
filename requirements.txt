@@ -26,3 +26,6 @@ lightgbm>=4.0
 pandas>=2.0
 # streamlit>=1.30
 
+# Supabase client for job queue and storage
+supabase>=2.0.0
+
