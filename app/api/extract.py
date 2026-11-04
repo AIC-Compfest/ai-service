@@ -11,6 +11,7 @@ Endpoints:
 """
 
 import asyncio
+import os
 import uuid
 
 from fastapi import APIRouter, Form, HTTPException, Request, UploadFile
@@ -27,6 +28,31 @@ from app.services.validation.document import validate_extraction
 
 router = APIRouter(prefix="/v1/extract", tags=["extraction"])
 logger = get_logger(__name__)
+
+
+@router.get("/health/queue")
+async def check_queue_health() -> dict:
+    """
+    Health check endpoint for job queue status.
+    Useful for debugging deployment issues.
+    """
+    try:
+        from app.services import job_queue
+        
+        return {
+            "queue_enabled": job_queue.is_job_queue_enabled(),
+            "supabase_available": job_queue.SUPABASE_AVAILABLE,
+            "has_supabase_url": bool(os.getenv("SUPABASE_URL")),
+            "has_service_role_key": bool(os.getenv("SUPABASE_SERVICE_ROLE_KEY")),
+            "supabase_url": os.getenv("SUPABASE_URL", "NOT_SET")[:50] + "..." if os.getenv("SUPABASE_URL") else "NOT_SET",
+            "mode": "ASYNC_QUEUE" if job_queue.is_job_queue_enabled() else "SYNC_FALLBACK",
+        }
+    except Exception as e:
+        return {
+            "queue_enabled": False,
+            "error": str(e),
+            "mode": "SYNC_FALLBACK",
+        }
 
 
 @router.get("/pipeline/status/{job_id}")
@@ -130,7 +156,14 @@ async def extract_full_pipeline(
         from app.services import job_queue
         
         # Check if job queue is available
-        if job_queue.is_job_queue_enabled():
+        queue_enabled = job_queue.is_job_queue_enabled()
+        logger.info("extract.job_queue.check", 
+                   enabled=queue_enabled, 
+                   supabase_available=job_queue.SUPABASE_AVAILABLE,
+                   has_url=bool(os.getenv("SUPABASE_URL")),
+                   has_key=bool(os.getenv("SUPABASE_SERVICE_ROLE_KEY")))
+        
+        if queue_enabled:
             # ASYNC MODE: Queue job and return immediately
             purge_old_pages()
             job_id = str(uuid.uuid4())
