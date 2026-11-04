@@ -26,10 +26,21 @@ _supabase_client: Optional[Client] = None
 def is_job_queue_enabled() -> bool:
     """Check if job queue is available and configured"""
     if not SUPABASE_AVAILABLE:
+        logger.warning("job_queue.disabled", reason="supabase_not_installed", 
+                      message="Supabase package not available. Install: pip install supabase>=2.0.0")
         return False
     url = os.getenv("SUPABASE_URL")
     key = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
-    return bool(url and key)
+    if not url:
+        logger.warning("job_queue.disabled", reason="missing_supabase_url",
+                      message="SUPABASE_URL environment variable not set")
+        return False
+    if not key:
+        logger.warning("job_queue.disabled", reason="missing_service_role_key",
+                      message="SUPABASE_SERVICE_ROLE_KEY environment variable not set")
+        return False
+    logger.info("job_queue.enabled", supabase_url=url[:50]+"...")
+    return True
 
 
 def get_supabase_client() -> Client:
