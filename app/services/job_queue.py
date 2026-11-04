@@ -7,7 +7,14 @@ import os
 import uuid
 from datetime import datetime
 from typing import Optional, Dict, Any
-from supabase import create_client, Client
+
+try:
+    from supabase import create_client, Client
+    SUPABASE_AVAILABLE = True
+except ImportError:
+    SUPABASE_AVAILABLE = False
+    Client = None
+
 from app.core.logging import get_logger
 
 logger = get_logger(__name__)
@@ -16,8 +23,20 @@ logger = get_logger(__name__)
 _supabase_client: Optional[Client] = None
 
 
+def is_job_queue_enabled() -> bool:
+    """Check if job queue is available and configured"""
+    if not SUPABASE_AVAILABLE:
+        return False
+    url = os.getenv("SUPABASE_URL")
+    key = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+    return bool(url and key)
+
+
 def get_supabase_client() -> Client:
     """Get or create Supabase client"""
+    if not SUPABASE_AVAILABLE:
+        raise RuntimeError("Supabase package not installed. Run: pip install supabase>=2.0.0")
+    
     global _supabase_client
     if _supabase_client is None:
         url = os.getenv("SUPABASE_URL")

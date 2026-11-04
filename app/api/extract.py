@@ -113,60 +113,97 @@ async def extract_full_pipeline(
     document_type: DocumentType | None = Form(default=None),
 ) -> dict:
     """
-    Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23) - ASYNC VERSION.
+    Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23) - HYBRID VERSION.
 
-    Queues document for background processing and returns immediately with job_id.
-    Client must poll /pipeline/status/{job_id} for results.
+    If job queue is enabled (Supabase configured):
+      - Queues document for background processing
+      - Returns immediately with job_id
+      - Client polls /pipeline/status/{job_id} for results
+      - Avoids 30-second Appwrite HTTP timeout
     
-    This avoids the 30-second synchronous execution timeout in Appwrite Functions.
+    If job queue disabled (fallback):
+      - Processes synchronously
+      - Returns full extraction result immediately
+      - Subject to 30-second timeout (may fail for complex docs)
     """
     try:
         from app.services import job_queue
         
-        purge_old_pages()
-        job_id = str(uuid.uuid4())
-        document_id = str(uuid.uuid4())
-        file_bytes = read_upload(file)
-        filename = file.filename or "doc.pdf"
-        mime_type = file.content_type or "application/octet-stream"
-        file_size = len(file_bytes)
-        
-        logger.info("extract.queue.request", 
-                   job_id=job_id, 
-                   document_id=document_id, 
-                   filename=filename, 
-                   correlation_id=request.headers.get("x-correlation-id", ""))
+        # Check if job queue is available
+        if job_queue.is_job_queue_enabled():
+            # ASYNC MODE: Queue job and return immediately
+            purge_old_pages()
+            job_id = str(uuid.uuid4())
+            document_id = str(uuid.uuid4())
+            file_bytes = read_upload(file)
+            filename = file.filename or "doc.pdf"
+            mime_type = file.content_type or "application/octet-stream"
+            file_size = len(file_bytes)
+            
+            logger.info("extract.queue.request", 
+                       job_id=job_id, 
+                       document_id=document_id, 
+                       filename=filename, 
+                       mode="async",
+                       correlation_id=request.headers.get("x-correlation-id", ""))
 
-        # Store file in Supabase Storage temporarily
-        storage_path = f"processing/{job_id}/{filename}"
-        await job_queue.upload_file_to_storage("documents", storage_path, file_bytes)
+            # Store file in Supabase Storage temporarily
+            storage_path = f"processing/{job_id}/{filename}"
+            await job_queue.upload_file_to_storage("documents", storage_path, file_bytes)
+            
+            # Create job record
+            await job_queue.create_job(
+                job_id=job_id,
+                document_id=document_id,
+                filename=filename,
+                file_size=file_size,
+                mime_type=mime_type,
+                storage_path=storage_path,
+                declared_document_type=document_type.value if document_type else None,
+                correlation_id=request.headers.get("x-correlation-id"),
+            )
+            
+            # Return immediately - processing happens in background
+            return {
+                "job_id": job_id,
+                "document_id": document_id,
+                "status": "QUEUED",
+                "message": "Document queued for processing. Poll /v1/extract/pipeline/status/{job_id} for results.",
+                "estimated_time_seconds": 90,
+            }
         
-        # Create job record
-        await job_queue.create_job(
-            job_id=job_id,
-            document_id=document_id,
-            filename=filename,
-            file_size=file_size,
-            mime_type=mime_type,
-            storage_path=storage_path,
-            declared_document_type=document_type.value if document_type else None,
-            correlation_id=request.headers.get("x-correlation-id"),
-        )
-        
-        # Return immediately - processing happens in background
-        return {
-            "job_id": job_id,
-            "document_id": document_id,
-            "status": "QUEUED",
-            "message": "Document queued for processing. Poll /v1/extract/pipeline/status/{job_id} for results.",
-            "estimated_time_seconds": 90,
-        }
-        
-    except HTTPException:
-        raise
+        else:
+            # SYNC MODE FALLBACK: Process immediately (original logic)
+            logger.warning("extract.sync.fallback", 
+                          reason="job_queue_disabled",
+                          message="Job queue not available, processing synchronously (30s timeout risk)")
+            # Fall through to original sync processing below
+            pass
+            
     except Exception as e:
         logger.error("extract.queue.error", error=str(e), error_type=type(e).__name__)
-        raise HTTPException(status_code=500, detail=f"Failed to queue document: {str(e)}")
+        logger.warning("extract.sync.fallback", reason="queue_error", error=str(e))
+        # Fall through to sync processing on queue errors
+    
+    # SYNC MODE: Original synchronous processing
+    # This code runs when:
+    # 1. Job queue is disabled/unavailable (SUPABASE_AVAILABLE=False)
+    # 2. Job queue raised an exception (fallback)
+    # WARNING: Subject to 30-second Appwrite HTTP timeout for complex documents
+    
+    try:
+        purge_old_pages()
+        document_id = str(uuid.uuid4())
+        file_bytes = read_upload(file)
+        logger.info("extract.sync.request", 
+                   document_id=document_id, 
+                   filename=file.filename,
+                   mode="sync",
+                   correlation_id=request.headers.get("x-correlation-id", ""))
+
+        # Phase 5 pipeline: OCR + classification
+        pipeline = get_pipeline()
+        evidence = pipeline.process_document(file_bytes, filename=file.filename or "doc.pdf", document_id=document_id)
 
         classification = dict(evidence.get("classification", {}))
         # A user-selected type is a reviewable routing instruction, not a model
