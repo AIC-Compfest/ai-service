@@ -29,6 +29,62 @@ router = APIRouter(prefix="/v1/extract", tags=["extraction"])
 logger = get_logger(__name__)
 
 
+@router.get("/pipeline/status/{job_id}")
+async def get_pipeline_status(job_id: str) -> dict:
+    """
+    Get status of queued processing job.
+    
+    Returns:
+        - status: QUEUED, PROCESSING, COMPLETED, FAILED
+        - result: Extraction result (if COMPLETED)
+        - error: Error message (if FAILED)
+        - progress: Estimated progress info
+    """
+    try:
+        from app.services import job_queue
+        
+        job = await job_queue.get_job(job_id)
+        
+        if not job:
+            raise HTTPException(status_code=404, detail=f"Job {job_id} not found")
+        
+        response = {
+            "job_id": job_id,
+            "document_id": job["document_id"],
+            "status": job["status"],
+            "created_at": job["created_at"],
+            "filename": job["filename"],
+        }
+        
+        if job["status"] == "PROCESSING":
+            response["started_at"] = job.get("started_at")
+            response["message"] = "Processing in progress..."
+            
+        elif job["status"] == "COMPLETED":
+            response["completed_at"] = job.get("completed_at")
+            response["result"] = job.get("result")
+            response["message"] = "Processing completed successfully"
+            
+        elif job["status"] == "FAILED":
+            response["completed_at"] = job.get("completed_at")
+            response["error"] = job.get("error_message")
+            response["error_detail"] = job.get("error_detail")
+            response["retry_count"] = job.get("retry_count", 0)
+            response["message"] = "Processing failed"
+            
+        elif job["status"] == "QUEUED":
+            response["message"] = "Waiting in queue..."
+            response["estimated_wait_seconds"] = 30
+        
+        return response
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("status.error", job_id=job_id, error=str(e))
+        raise HTTPException(status_code=500, detail=f"Failed to get job status: {str(e)}")
+
+
 @router.post("/understand/evidence")
 async def understand_document_evidence(file: UploadFile) -> dict:
     """
@@ -57,27 +113,60 @@ async def extract_full_pipeline(
     document_type: DocumentType | None = Form(default=None),
 ) -> dict:
     """
-    Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23).
+    Phase 6 Unified Auto-Classify + Extract Endpoint (PRD §23) - ASYNC VERSION.
 
-    1. Runs Phase 5: document ingestion, OCR, layout understanding, classification,
-       signature detection.
-    2. Routes to correct Phase 6 extractor based on classification result.
-    3. Returns structured extracted fields with full EvidenceSource (PRD §18).
-
-    If classification is UNKNOWN or confidence < 0.70 → returns
-    REQUIRES_HUMAN_REVIEW status without attempting extraction (PRD §20, §60).
+    Queues document for background processing and returns immediately with job_id.
+    Client must poll /pipeline/status/{job_id} for results.
+    
+    This avoids the 30-second synchronous execution timeout in Appwrite Functions.
     """
     try:
+        from app.services import job_queue
+        
         purge_old_pages()
+        job_id = str(uuid.uuid4())
         document_id = str(uuid.uuid4())
         file_bytes = read_upload(file)
         filename = file.filename or "doc.pdf"
+        mime_type = file.content_type or "application/octet-stream"
+        file_size = len(file_bytes)
+        
+        logger.info("extract.queue.request", 
+                   job_id=job_id, 
+                   document_id=document_id, 
+                   filename=filename, 
+                   correlation_id=request.headers.get("x-correlation-id", ""))
 
-        logger.info("extract.pipeline.request", document_id=document_id, filename=filename, correlation_id=request.headers.get("x-correlation-id", ""))
-
-        pipeline = get_pipeline()
-        # Run CPU-bound pipeline in thread pool to avoid blocking async event loop
-        evidence = await asyncio.to_thread(pipeline.process_document, file_bytes, filename=filename, document_id=document_id)
+        # Store file in Supabase Storage temporarily
+        storage_path = f"processing/{job_id}/{filename}"
+        await job_queue.upload_file_to_storage("documents", storage_path, file_bytes)
+        
+        # Create job record
+        await job_queue.create_job(
+            job_id=job_id,
+            document_id=document_id,
+            filename=filename,
+            file_size=file_size,
+            mime_type=mime_type,
+            storage_path=storage_path,
+            declared_document_type=document_type.value if document_type else None,
+            correlation_id=request.headers.get("x-correlation-id"),
+        )
+        
+        # Return immediately - processing happens in background
+        return {
+            "job_id": job_id,
+            "document_id": document_id,
+            "status": "QUEUED",
+            "message": "Document queued for processing. Poll /v1/extract/pipeline/status/{job_id} for results.",
+            "estimated_time_seconds": 90,
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("extract.queue.error", error=str(e), error_type=type(e).__name__)
+        raise HTTPException(status_code=500, detail=f"Failed to queue document: {str(e)}")
 
         classification = dict(evidence.get("classification", {}))
         # A user-selected type is a reviewable routing instruction, not a model
